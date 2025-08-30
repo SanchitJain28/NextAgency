@@ -5,12 +5,18 @@ import {
   Flame,
   Globe,
   LineChart,
+  Linkedin,
+  Mail,
+  Phone,
   Plug,
   Rocket,
+  Twitter,
 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { Work_Sans } from "next/font/google";
+import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
+import DottedSeparator from "@/components/seperators/DottedSeperator";
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -29,6 +35,8 @@ export default function page() {
       <CaseStudySection />
       <ServicesSection />
       <BlogPostSection />
+      <TestimonialsSection />
+      <CTAFooterSection/>
     </div>
   );
 }
@@ -37,9 +45,9 @@ const HeroSection = () => {
   return (
     <section
       aria-labelledby="hero-heading"
-      className="bg-white text-[#333333] border border-[#E2E8F0]"
+      className="bg-white text-[#333333] "
     >
-      <div className="mx-auto max-w-7xl px-6 py-6 sm:py-20">
+      <div className="mx-auto max-w-7xl px-6 pt-8 sm:py-20">
         <header className="space-y-2">
           <h1
             id="hero-heading"
@@ -171,10 +179,10 @@ const ProblemSolutionSection = () => {
   return (
     <section
       aria-labelledby="slow-store-heading"
-      className="w-full border-t"
-      style={{ borderColor: "#F1F5F9", backgroundColor: "#FFFFFF" }}
+      className="w-full bg-[#FFFFFF]"
     >
-      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 py-6 md:py-16">
+      <DottedSeparator />
+      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 md:py-16">
         <h2
           id="slow-store-heading"
           className="text-pretty text-2xl md:text-3xl font-semibold"
@@ -288,7 +296,8 @@ const BenefitsSection = () => {
         aria-labelledby="benefits-heading"
         className="bg-white text-[#333333]"
       >
-        <div className="mx-auto max-w-7xl px-6 py-10 md:py-12">
+        <DottedSeparator />
+        <div className="mx-auto max-w-7xl px-6  md:py-12 ">
           <header className="space-y-2">
             <h2
               id="benefits-heading"
@@ -412,7 +421,8 @@ const CaseStudySection = () => {
         aria-labelledby="case-studies"
         className="bg-white text-[#333333]"
       >
-        <div className="mx-auto max-w-7xl px-6 py-12 md:py-14">
+        <DottedSeparator />
+        <div className="mx-auto max-w-7xl px-6  md:py-14">
           <header className="mb-6 md:mb-8">
             <h2
               id="case-studies"
@@ -600,7 +610,8 @@ const CaseStudySection = () => {
 const ServicesSection = () => {
   return (
     <section aria-labelledby="services-heading" className="w-full bg-white">
-      <div className="mx-auto max-w-6xl px-4 py-12 md:py-14">
+      <DottedSeparator />
+      <div className="mx-auto max-w-7xl px-4  md:py-14">
         <header className="max-w-3xl">
           <h2
             id="services-heading"
@@ -931,57 +942,244 @@ const BlogPostSection = () => {
       href: "/blog",
     },
   ];
-  return <div className="">
-    <section aria-labelledby="insights-heading" className="bg-white">
-      <div className="mx-auto w-full max-w-screen-lg px-6 py-10 md:py-12">
-        <header className="mb-6 md:mb-8">
-          <h2 id="insights-heading" className="text-balance text-xl font-semibold text-[#333333] md:text-2xl">
-            Learn How to Transform Your eCommerce Store
+  return (
+    <div className="">
+      <section aria-labelledby="insights-heading" className="bg-white">
+        <DottedSeparator />
+        <div className="mx-auto max-w-7xl  px-6  md:py-12">
+          <header className="mb-6 md:mb-8">
+            <h2
+              id="insights-heading"
+              className="text-balance text-xl font-semibold text-[#333333] md:text-2xl"
+            >
+              Learn How to Transform Your eCommerce Store
+            </h2>
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-[#333333]">
+              Stay ahead in 2025 with our expert insights on headless
+              WooCommerce Next.js development, WooCommerce–Shopify hybrid
+              performance, and Next.js eCommerce tips. Whether you’re fixing a
+              slow WooCommerce store or planning a Shopify headless frontend
+              migration, our blog shows you proven ways to boost speed,
+              scalability, and SEO.
+            </p>
+          </header>
+
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
+            {posts.map((post) => (
+              <article
+                key={post.title}
+                className="flex h-full flex-col rounded-lg border border-[#F1F5F9] bg-white p-4"
+              >
+                <div className="mb-3">
+                  <span className="inline-flex items-center rounded-full bg-[#F1F5F9] px-2 py-0.5 text-xs font-medium text-[#16A34A]">
+                    Featured
+                  </span>
+                </div>
+                <h3 className="text-pretty text-base font-semibold leading-6 text-[#333333]">
+                  <Link
+                    href={post.href}
+                    className="hover:underline focus:outline-none focus-visible:underline"
+                  >
+                    {post.title}
+                  </Link>
+                </h3>
+                <p className="mt-2 flex-1 text-sm leading-6 text-[#333333]">
+                  {post.description}
+                </p>
+                <div className="mt-4">
+                  <Link
+                    href={post.href}
+                    className="text-sm font-medium text-[#F97316] hover:underline focus:outline-none focus-visible:underline"
+                    aria-label={`Read article: ${post.title}`}
+                  >
+                    Read article →
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-8 flex items-center justify-center">
+            <Link
+              href="/blog"
+              className="inline-flex items-center justify-center rounded-md bg-[#F97316] px-4 py-2 text-sm font-semibold text-black transition-opacity hover:opacity-90 focus:outline-none"
+              aria-label="Read more insights on our blog"
+            >
+              Read More Insights
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+const TestimonialsSection = () => {
+  type Testimonial = {
+    quote: string;
+    name: string;
+    designation?: string;
+    src?: string;
+  };
+
+  const testimonials: Testimonial[] = [
+    {
+      quote:
+        "Migrating our 1,000-product WooCommerce store to Next.js with Sell Alpha cut load times by 60%. Their WooCommerce migration reviews are true — speed and SEO improved instantly!",
+      name: "Books Store Owner",
+      src: "https://miro.medium.com/v2/resize:fit:1400/1*s_BUOauMhzRZL0dBiCExww.png",
+    },
+    {
+      quote:
+        "Shopify with Sell Alpha and a Next.js headless frontend boosted our sales by 15%. It feels like the perfect Shopify–WooCommerce hybrid solution.",
+      name: "Fashion Retail Brand",
+    },
+    {
+      quote:
+        "We trusted Sell Alpha for our WooCommerce to Next.js migration. Our conversion rates jumped 22%, proving why they’re the go-to for Shopify Next.js testimonials.",
+      name: "Electronics Store Founder",
+    },
+    {
+      quote:
+        "Sell Alpha built our WooCommerce Shopify hybrid frontend. Customers noticed faster checkout immediately, and SEO rankings improved within weeks.",
+      name: "Health & Fitness Brand",
+    },
+    {
+      quote:
+        "The team helped us migrate from a slow WooCommerce site to a lightning-fast Next.js eCommerce frontend. Honestly, one of the best investments we’ve made.",
+      name: "Home Decor Store Owner",
+    },
+    {
+      quote:
+        "We wanted scalable growth beyond Shopify’s limits. Sell Alpha gave us a WooCommerce Next.js migration that feels seamless. Our store now handles 10x more traffic without breaking.",
+      name: "Beauty & Skincare Entrepreneur",
+    },
+  ];
+  return (
+    <section
+      aria-labelledby="testimonials-title"
+      className="py-10 md:py-12"
+      style={{ backgroundColor: "#FFFFFF", color: "#333333" }}
+    >
+      <DottedSeparator />
+      <div className="mx-auto w-full max-w-7xl px-6">
+        <header className="md:mb-8">
+          <h2
+            id="testimonials-title"
+            className="text-xl md:text-2xl font-semibold text-pretty"
+          >
+            What Our Clients Say
           </h2>
-          <p className="mt-2 max-w-2xl text-sm leading-6 text-[#333333]">
-            Stay ahead in 2025 with our expert insights on headless WooCommerce Next.js development, WooCommerce–Shopify
-            hybrid performance, and Next.js eCommerce tips. Whether you’re fixing a slow WooCommerce store or planning a
-            Shopify headless frontend migration, our blog shows you proven ways to boost speed, scalability, and SEO.
+          <p className="mt-2 text-sm md:text-base leading-6 text-pretty">
+            Our clients love how WooCommerce migration with Next.js and Shopify
+            Next.js solutions transformed their eCommerce stores. Here’s what
+            they say about working with Sell Alpha:
           </p>
         </header>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
-          {posts.map((post) => (
-            <article key={post.title} className="flex h-full flex-col rounded-lg border border-[#F1F5F9] bg-white p-4">
-              <div className="mb-3">
-                <span className="inline-flex items-center rounded-full bg-[#F1F5F9] px-2 py-0.5 text-xs font-medium text-[#16A34A]">
-                  Featured
-                </span>
-              </div>
-              <h3 className="text-pretty text-base font-semibold leading-6 text-[#333333]">
-                <Link href={post.href} className="hover:underline focus:outline-none focus-visible:underline">
-                  {post.title}
-                </Link>
-              </h3>
-              <p className="mt-2 flex-1 text-sm leading-6 text-[#333333]">{post.description}</p>
-              <div className="mt-4">
-                <Link
-                  href={post.href}
-                  className="text-sm font-medium text-[#F97316] hover:underline focus:outline-none focus-visible:underline"
-                  aria-label={`Read article: ${post.title}`}
-                >
-                  Read article →
-                </Link>
-              </div>
-            </article>
-          ))}
+        <div className="">
+          <AnimatedTestimonials testimonials={testimonials} />
         </div>
 
-        <div className="mt-8 flex items-center justify-center">
-          <Link
-            href="/blog"
-            className="inline-flex items-center justify-center rounded-md bg-[#F97316] px-4 py-2 text-sm font-semibold text-black transition-opacity hover:opacity-90 focus:outline-none"
-            aria-label="Read more insights on our blog"
+        <div className="mt-6 md:mt-8">
+          <a
+            href="#contact"
+            className="text-sm font-medium underline underline-offset-4"
+            style={{ color: "#F97316" }}
           >
-            Read More Insights
-          </Link>
+            Join Our Happy Clients
+          </a>
         </div>
       </div>
     </section>
-  </div>;
+  );
 };
+
+const CTAFooterSection = ()=>{
+  return (
+     <section id="cta-footer" aria-labelledby="cta-footer-heading" className="bg-white">
+      <DottedSeparator/>
+      <div className="mx-auto max-w-7xl px-4  md:py-12">
+        <h2
+          id="cta-footer-heading"
+          className=" text-2xl md:text-3xl font-semibold text-[#333333] text-balance"
+        >
+          Ready to Make Your Store Faster and More Profitable?
+        </h2>
+
+        <p className="mt-3 text-sm md:text-base leading-relaxed text-[#333333]">
+          Get a free WooCommerce speed audit or a Shopify headless consultation today. Our team at [Your Agency Name]
+          specializes in transforming online stores with a Next.js headless frontend and boosting conversions using Sell
+          Alpha. Whether you’re running WooCommerce or Shopify, we’ll show you how to unlock faster performance and
+          higher sales.
+        </p>
+
+        <div className="mt-6 flex flex-col sm:flex-row  gap-3">
+          <Button
+            asChild
+            className="bg-[#F97316] text-black hover:opacity-90 focus-visible:ring-2 focus-visible:ring-[#16A34A]"
+          >
+            <a href="#contact" aria-label="Schedule your free audit">
+              Schedule Your Free Audit
+            </a>
+          </Button>
+          <Button
+            asChild
+            variant="outline"
+            className="border-[#F97316] text-[#333333] hover:bg-[#F1F5F9] focus-visible:ring-2 focus-visible:ring-[#16A34A] bg-transparent"
+          >
+            <a href="/sell-alpha" aria-label="Try Sell Alpha">
+              Try Sell Alpha
+            </a>
+          </Button>
+        </div>
+
+        <div className="mt-8 pt-6 border-t border-[#F1F5F9]">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div className="flex flex-col gap-2">
+              <a
+                href="mailto:hello@[youragency].com"
+                className="inline-flex items-center gap-2 text-sm text-[#333333] hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#16A34A] rounded"
+              >
+                <Mail className="h-4 w-4 text-[#333333]" aria-hidden="true" />
+                <span className="sr-only">Email</span>
+                <span>hello@[youragency].com</span>
+              </a>
+              <a
+                href="tel:+91XXXXXXXXXX"
+                className="inline-flex items-center gap-2 text-sm text-[#333333] hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#16A34A] rounded"
+              >
+                <Phone className="h-4 w-4 text-[#333333]" aria-hidden="true" />
+                <span className="sr-only">Phone</span>
+                <span>+91-XXXXXXXXXX</span>
+              </a>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <a
+                href="https://x.com/youragency"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit us on X"
+                className="inline-flex items-center gap-2 text-sm text-[#333333] hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#16A34A] rounded"
+              >
+                <Twitter className="h-4 w-4 text-[#333333]" aria-hidden="true" />
+                <span>X</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/youragency"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit us on LinkedIn"
+                className="inline-flex items-center gap-2 text-sm text-[#333333] hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#16A34A] rounded"
+              >
+                <Linkedin className="h-4 w-4 text-[#333333]" aria-hidden="true" />
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
