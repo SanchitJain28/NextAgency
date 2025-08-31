@@ -7,9 +7,9 @@ import { cn } from "@/lib/utils"
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
+  { href: "/about-us", label: "About Us" },
   { href: "/contact", label: "Contact Us" },
-  { href: "/blogs", label: "Blogs" },
+  { href: "/blog", label: "Blogs" },
   { href: "/pricing", label: "Pricing" },
 ]
 
@@ -24,6 +24,7 @@ export function Header() {
 
   return (
     <header className="w-full border-b bg-[#FFFFFF] border border-zinc-300">
+      
       <div className="mx-auto max-w-5xl px-4">
         <div className="flex h-14 items-center justify-between">
           <Link href="/" className="flex items-center gap-2" aria-label="Go to homepage" onClick={() => setOpen(false)}>
