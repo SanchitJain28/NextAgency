@@ -1,5 +1,6 @@
 import Header from "@/components/header-footer/Header"
 import { BlogCard } from "./BlogCard"
+import Footer from "@/components/header-footer/Footer"
 
 const blogs = [
   {
@@ -37,6 +38,7 @@ export default function BlogIndexPage() {
           ))}
         </div>
       </section>
+      <Footer/>
     </main>
   )
 }

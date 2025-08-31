@@ -1,3 +1,4 @@
+import Footer from "@/components/header-footer/Footer";
 import Header from "@/components/header-footer/Header";
 import { MovingReviews } from "@/components/reviews/MovingReviews";
 
@@ -69,12 +70,11 @@ export default function AboutPage() {
             </p>
           </div>
         </section>
-
-        
       </div>
       <div className="pb-12">
-          <MovingReviews />
-        </div>
+        <MovingReviews />
+      </div>
+      <Footer/>
     </main>
   );
 }

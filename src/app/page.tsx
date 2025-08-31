@@ -135,7 +135,7 @@ const HeroSection = () => {
             asChild
             className="bg-[#F97316] text-black hover:opacity-90 focus-visible:ring-offset-2 focus-visible:outline-none"
           >
-            <Link href="#audit" aria-describedby="audit-desc">
+            <Link href="/contact-us" aria-describedby="audit-desc">
               {"👉 Get a Free Speed Audit"}
             </Link>
           </Button>
@@ -149,7 +149,7 @@ const HeroSection = () => {
             variant="outline"
             className="border-[#F97316] text-[#333333] hover:bg-[#F1F5F9] focus-visible:ring-offset-2 bg-transparent"
           >
-            <Link href="#contact">{"📞 Talk to Our Headless Experts"}</Link>
+            <Link href="/contact-us">{"📞 Talk to Our Headless Experts"}</Link>
           </Button>
         </div>
       </div>
@@ -248,7 +248,7 @@ const ProblemSolutionSection = () => {
 
         <div className="mt-8">
           <Link
-            href="/blog/ultimate-guide-to-headless-woocommerce"
+            href="/blog/headless-woocommerce-with-nextjs"
             className="inline-flex items-center gap-1.5 text-sm font-medium underline decoration-2 underline-offset-4 hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 rounded"
             style={{ color: "#F97316" }}
           >
@@ -400,13 +400,13 @@ const BenefitsSection = () => {
           </div>
 
           <div className="mt-6 border-t border-[#F1F5F9] pt-4">
-            <a
-              href="/blogs"
+            <Link
+              href="/blog/best-of-woo-and-shopify"
               className="font-sans text-sm md:text-base text-[#F97316] underline underline-offset-4 hover:opacity-90"
             >
               See the Benefits in Action – Read how a headless Next.js frontend
               can transform your WooCommerce store
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -593,13 +593,13 @@ const CaseStudySection = () => {
 
           {/* CTA */}
           <div className="mt-6 md:mt-8">
-            <a
-              href="/contact"
+            <Link
+              href="/contact-us"
               className="inline-flex items-center gap-2 text-[#F97316] underline underline-offset-4 hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F97316] rounded-sm"
             >
               Get Your Success Story: Ready to scale your WooCommerce or Shopify
               website with headless Next.js? Contact us today
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -901,12 +901,12 @@ const ServicesSection = () => {
             WooCommerce Next.js migration and Shopify headless pricing
             solutions.
           </p>
-          <a
-            href="#contact"
+          <Link
+            href="/contact-us"
             className="inline-flex items-center justify-center rounded-md bg-[#F97316] px-4 py-2 text-sm font-semibold text-black transition-opacity hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#16A34A] focus:ring-offset-2"
           >
             Request a Quote
-          </a>
+          </Link>
         </div>
       </div>
     </section>
@@ -925,21 +925,21 @@ const BlogPostSection = () => {
         "Ultimate Guide to Headless WooCommerce with Next.js: Boost Speed and SEO in 2025",
       description:
         "Discover how headless eCommerce helps you optimize WooCommerce speed, scale beyond 500+ products, and improve search rankings.",
-      href: "/blog",
+      href: "/blog/headless-woocommerce-with-nextjs",
     },
     {
       title:
         "Why a Next.js Headless Frontend is the Best Way to Scale Your Large WooCommerce Store (500+ Products)",
       description:
         "Learn the best WooCommerce SEO optimization with Next.js strategies to improve speed, conversions, and long‑term growth.",
-      href: "/blog",
+      href: "/blog/nextjs-headless-frontend",
     },
     {
       title:
         "How a Headless Next.js Frontend Gives Your WooCommerce Store the Best of WooCommerce and Shopify",
       description:
         "Explore how a WooCommerce–Shopify hybrid gives you Shopify‑like speed with WooCommerce flexibility.",
-      href: "/blog",
+      href: "/blog/best-of-woo-and-shopify",
     },
   ];
   return (
@@ -1119,18 +1119,18 @@ const CTAFooterSection = ()=>{
             asChild
             className="bg-[#F97316] text-black hover:opacity-90 focus-visible:ring-2 focus-visible:ring-[#16A34A]"
           >
-            <a href="#contact" aria-label="Schedule your free audit">
+            <Link href="/contact-us" aria-label="Schedule your free audit">
               Schedule Your Free Audit
-            </a>
+            </Link>
           </Button>
           <Button
             asChild
             variant="outline"
             className="border-[#F97316] text-[#333333] hover:bg-[#F1F5F9] focus-visible:ring-2 focus-visible:ring-[#16A34A] bg-transparent"
           >
-            <a href="/sell-alpha" aria-label="Try Sell Alpha">
+            <Link href="/contact-us" aria-label="Try Sell Alpha">
               Try Sell Alpha
-            </a>
+            </Link>
           </Button>
         </div>
 
@@ -1151,7 +1151,7 @@ const CTAFooterSection = ()=>{
               >
                 <Phone className="h-4 w-4 text-[#333333]" aria-hidden="true" />
                 <span className="sr-only">Phone</span>
-                <span>+91-XXXXXXXXXX</span>
+                <span>+91-9650296375</span>
               </a>
             </div>
 
