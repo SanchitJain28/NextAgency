@@ -14,20 +14,292 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import { Work_Sans } from "next/font/google";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import DottedSeparator from "@/components/seperators/DottedSeperator";
+import { Metadata } from "next";
 
-const workSans = Work_Sans({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  display: "swap",
-  variable: "--font-work-sans",
-});
+// SEO Metadata for the page
+export const metadata: Metadata = {
+  title:
+    "Headless WooCommerce Next.js Development Agency | Fast eCommerce Migration Services India",
+  description:
+    "Expert Next.js development agency specializing in headless WooCommerce & Shopify migrations. Speed optimization, SEO-friendly eCommerce solutions. Get 3x faster sites with our headless CMS approach.",
+  keywords: [
+    "headless WooCommerce Next.js",
+    "WooCommerce speed optimization",
+    "Shopify headless frontend",
+    "WooCommerce Next.js migration",
+    "Next.js eCommerce development",
+    "WooCommerce Shopify hybrid",
+    "headless eCommerce India",
+    "WooCommerce frontend performance",
+    "Next.js for eCommerce scalability",
+    "Shopify speed optimization India",
+  ],
+  authors: [{ name: "Your Agency Name" }],
+  creator: "Your Agency Name",
+  publisher: "Your Agency Name",
+  category: "Web Development",
+  openGraph: {
+    title:
+      "Headless WooCommerce Next.js Development Agency | Fast eCommerce Migration",
+    description:
+      "Transform your slow WooCommerce or Shopify store into a lightning-fast headless eCommerce site with Next.js. Expert migration services in India.",
+    url: "https://yourdomain.com",
+    siteName: "Your Agency Name",
+    images: [
+      {
+        url: "https://yourdomain.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Headless WooCommerce Next.js Development Services",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Headless WooCommerce Next.js Development Agency",
+    description:
+      "Expert headless eCommerce development services. Migrate from WooCommerce/Shopify to Next.js for 3x faster performance.",
+    images: ["https://yourdomain.com/twitter-image.jpg"],
+    creator: "@youragencyhandle",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
+  },
+  alternates: {
+    canonical: "https://yourdomain.com",
+  },
+};
+
+function StructuredData() {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Your Agency Name",
+    description:
+      "Expert Next.js development agency specializing in headless WooCommerce and Shopify migrations for faster eCommerce performance",
+    url: "https://yourdomain.com",
+    logo: "https://yourdomain.com/logo.png",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+91-XXXXXXXXXX",
+      contactType: "Customer Service",
+      areaServed: "IN",
+      availableLanguage: ["English", "Hindi"],
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Delhi",
+      addressRegion: "Delhi",
+      addressCountry: "IN",
+    },
+    sameAs: [
+      "https://linkedin.com/company/youragency",
+      "https://twitter.com/youragency",
+    ],
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Headless WooCommerce Next.js Development",
+    description:
+      "Professional headless eCommerce development services including WooCommerce to Next.js migration, Shopify headless frontend development, and eCommerce speed optimization",
+    provider: {
+      "@type": "Organization",
+      name: "Your Agency Name",
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "India",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "eCommerce Development Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Headless WooCommerce Development",
+            description:
+              "Convert your WooCommerce store to a headless setup with Next.js frontend for 3x faster performance",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Shopify Headless Migration",
+            description:
+              "Migrate your Shopify store to a headless architecture using Next.js for improved speed and SEO",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "eCommerce Speed Optimization",
+            description:
+              "Optimize your WooCommerce or Shopify store for faster loading times and better user experience",
+          },
+        },
+      ],
+    },
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How to make WooCommerce faster with Next.js?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "By implementing a headless architecture where Next.js serves as the frontend and WooCommerce as the headless CMS backend, you can achieve 3x faster loading speeds through static site generation, optimized images, and reduced server response times.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the best headless CMS for WooCommerce in 2025?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Next.js paired with WooCommerce REST API or GraphQL provides the best headless CMS solution in 2025, offering superior performance, SEO benefits, and developer experience for eCommerce stores.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is the Shopify Next.js migration cost in India?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Shopify to Next.js migration costs in India typically range from ₹50,000 to ₹2,00,000 depending on store complexity, custom features, and data migration requirements. Contact us for a detailed quote based on your specific needs.",
+        },
+      },
+    ],
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://yourdomain.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Headless eCommerce Development",
+        item: "https://yourdomain.com",
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+    </>
+  );
+}
+
+function SEOContent() {
+  return (
+    <div className="hidden">
+      {/* Hidden content for SEO - contains target keywords naturally */}
+      <h1>Headless WooCommerce Next.js Development Agency in India</h1>
+      <h2>WooCommerce Speed Optimization with Next.js Frontend</h2>
+      <h2>Shopify Headless Migration Services</h2>
+      <h2>Next.js eCommerce Development for Scalability</h2>
+      
+      <section>
+        <h3>How to Make WooCommerce Faster with Next.js</h3>
+        <p>
+          Transform your slow WooCommerce store into a lightning-fast eCommerce site using our headless WooCommerce Next.js solution. 
+          Our WooCommerce speed optimization techniques can improve your site performance by up to 300%, leading to better user experience and higher conversion rates.
+        </p>
+      </section>
+
+      <section>
+        <h3>Best Headless CMS for WooCommerce in 2025</h3>
+        <p>
+          Next.js combined with WooCommerce as a headless CMS provides the ultimate solution for modern eCommerce development. 
+          Our expert team specializes in WooCommerce Next.js migration, ensuring your store maintains all functionality while gaining significant performance improvements.
+        </p>
+      </section>
+
+      <section>
+        <h3>Shopify Next.js Migration Cost in India</h3>
+        <p>
+          Looking for affordable Shopify headless frontend development? Our Shopify Next.js migration services in India offer cost-effective solutions 
+          for businesses wanting to upgrade their eCommerce performance. We provide transparent pricing for Shopify speed optimization projects.
+        </p>
+      </section>
+
+      <section>
+        <h3>WooCommerce SEO Optimization with Next.js</h3>
+        <p>
+          Our headless eCommerce solutions include comprehensive WooCommerce SEO optimization, ensuring your migrated store ranks higher in search results. 
+          Next.js for eCommerce scalability provides better Core Web Vitals scores and improved search engine visibility.
+        </p>
+      </section>
+
+      <section>
+        <h3>WooCommerce 500+ Products Site Optimization</h3>
+        <p>
+          Handling large catalogs? Our WooCommerce frontend performance optimization is perfect for stores with 500+ products. 
+          We implement advanced caching strategies and optimize product loading for massive eCommerce sites using our proven WooCommerce Shopify hybrid approach.
+        </p>
+      </section>
+    </div>
+  );
+}
+
 
 export default function page() {
   return (
     <div>
+      <StructuredData/>
+      <SEOContent/>
       <Header />
       <HeroSection />
       <ProblemSolutionSection />
@@ -36,7 +308,7 @@ export default function page() {
       <ServicesSection />
       <BlogPostSection />
       <TestimonialsSection />
-      <CTAFooterSection/>
+      <CTAFooterSection />
     </div>
   );
 }
@@ -1095,10 +1367,14 @@ const TestimonialsSection = () => {
   );
 };
 
-const CTAFooterSection = ()=>{
+const CTAFooterSection = () => {
   return (
-     <section id="cta-footer" aria-labelledby="cta-footer-heading" className="bg-white">
-      <DottedSeparator/>
+    <section
+      id="cta-footer"
+      aria-labelledby="cta-footer-heading"
+      className="bg-white"
+    >
+      <DottedSeparator />
       <div className="mx-auto max-w-7xl px-4  md:py-12">
         <h2
           id="cta-footer-heading"
@@ -1108,10 +1384,12 @@ const CTAFooterSection = ()=>{
         </h2>
 
         <p className="mt-3 text-sm md:text-base leading-relaxed text-[#333333]">
-          Get a free WooCommerce speed audit or a Shopify headless consultation today. Our team at [Your Agency Name]
-          specializes in transforming online stores with a Next.js headless frontend and boosting conversions using Sell
-          Alpha. Whether you’re running WooCommerce or Shopify, we’ll show you how to unlock faster performance and
-          higher sales.
+          Get a free WooCommerce speed audit or a Shopify headless consultation
+          today. Our team at [Your Agency Name] specializes in transforming
+          online stores with a Next.js headless frontend and boosting
+          conversions using Sell Alpha. Whether you’re running WooCommerce or
+          Shopify, we’ll show you how to unlock faster performance and higher
+          sales.
         </p>
 
         <div className="mt-6 flex flex-col sm:flex-row  gap-3">
@@ -1163,7 +1441,10 @@ const CTAFooterSection = ()=>{
                 aria-label="Visit us on X"
                 className="inline-flex items-center gap-2 text-sm text-[#333333] hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#16A34A] rounded"
               >
-                <Twitter className="h-4 w-4 text-[#333333]" aria-hidden="true" />
+                <Twitter
+                  className="h-4 w-4 text-[#333333]"
+                  aria-hidden="true"
+                />
                 <span>X</span>
               </a>
               <a
@@ -1173,7 +1454,10 @@ const CTAFooterSection = ()=>{
                 aria-label="Visit us on LinkedIn"
                 className="inline-flex items-center gap-2 text-sm text-[#333333] hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#16A34A] rounded"
               >
-                <Linkedin className="h-4 w-4 text-[#333333]" aria-hidden="true" />
+                <Linkedin
+                  className="h-4 w-4 text-[#333333]"
+                  aria-hidden="true"
+                />
                 <span>LinkedIn</span>
               </a>
             </div>
@@ -1181,5 +1465,5 @@ const CTAFooterSection = ()=>{
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
