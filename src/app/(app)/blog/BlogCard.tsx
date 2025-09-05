@@ -10,7 +10,7 @@ type Blog = {
 export function BlogCard({ blog }: { blog: Blog }) {
   // Normalize leading slash to avoid double slashes when linking to /blog/{href}
   const normalized = blog.href.replace(/^\/+/, "")
-  const to = `/blog/${normalized}`
+  const to = `/${normalized}`
 
   return (
     <article>
