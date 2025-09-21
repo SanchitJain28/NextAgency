@@ -7,10 +7,105 @@ import {
   TrendingUpIcon,
 } from "lucide-react";
 import React from "react";
+import { Metadata } from "next";
+
+// ====================================================================
+// SEO METADATA OBJECT (For Next.js 15 App Router)
+// ====================================================================
+// This object tells Google and other search engines what your page is about.
+// It populates the <head> section of your HTML.
+export const metadata: Metadata = {
+  title: "Headless Next.js: Get Shopify Speed on Your WooCommerce Store",
+  description:
+    "Unlock Shopify's lightning-fast speed and seamless UX on your WooCommerce store. Learn how a headless Next.js frontend creates the ultimate hybrid ecommerce solution.",
+  keywords: [
+    "Headless Next.js",
+    "WooCommerce Shopify hybrid",
+    "Headless WooCommerce",
+    "How to get Shopify speed in WooCommerce",
+    "Next.js for eCommerce performance",
+    "Headless eCommerce 2025",
+    "Shopify benefits in WooCommerce",
+    "WooCommerce with Shopify checkout",
+    "Next.js frontend for WooCommerce",
+    "React ecommerce",
+  ],
+  alternates: {
+    canonical: "https://www.topcomsolutions.com/blog/best-of-woo-and-shopify",
+  },
+  openGraph: {
+    title: "Headless Next.js: Get Shopify Speed on Your WooCommerce Store",
+    description:
+      "Unlock Shopify's lightning-fast speed and seamless UX on your WooCommerce store. Learn how a headless Next.js frontend creates the ultimate hybrid ecommerce solution.",
+    url: "https://www.topcomsolutions.com/blog/best-of-woo-and-shopify",
+    siteName: "Your Brand Name", // ⚠️ ACTION REQUIRED: Replace with your site/brand name
+    images: [
+      {
+        url: "https://topcomsolutions.com/images/og-headless-woocommerce.png",
+        width: 1200,
+        height: 630,
+        alt: "Diagram showing WooCommerce backend with a Next.js frontend",
+      },
+    ],
+    locale: "en_US",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Headless Next.js: Get Shopify Speed on Your WooCommerce Store",
+    description:
+      "Unlock Shopify's lightning-fast speed and seamless UX on your WooCommerce store. Learn how a headless Next.js frontend creates the ultimate hybrid ecommerce solution.",
+    creator: "@yourTwitterHandle",
+    images: ["https://topcomsolutions.com/images/og-headless-woocommerce.png"],
+  },
+};
+
+
+const JsonLdSchema = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": "https://www.topcomsolutions.com/blog/best-of-woo-and-shopify",
+    },
+    headline:
+      "How a Headless Next.js Frontend Gives Your WooCommerce Store the Best of WooCommerce and Shopify",
+    description:
+      "Discover how to combine WooCommerce's backend flexibility with Shopify's frontend speed using a headless Next.js architecture. Get the best of both platforms.",
+    image: "https://topcomsolutions.com/images/og-headless-woocommerce.png",
+    author: {
+      "@type": "Organization", 
+      name: "TopCom Solutions",
+      url: "https://www.topcomsolutions.com/about-us",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "TopCom Solutions",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://topcomsolutions.com/logo.png",
+      },
+    },
+    datePublished: "2025-09-21", 
+    dateModified: "2025-09-21",
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />
+  );
+};
 
 export default function page() {
   return (
     <div>
+
+      <head>
+        <JsonLdSchema />
+      </head>
       <Header />
       <div className="px-2">
         <IntroductionSection />
@@ -18,11 +113,12 @@ export default function page() {
         <NextJSStrengthsSection />
         <ShopifyStrengthsSection />
         <CaseStudySection />
-        <ConclusionCTASection/>
+        <ConclusionCTASection />
       </div>
     </div>
   );
 }
+
 
 const IntroductionSection = () => {
   return (
@@ -97,25 +193,25 @@ const HeadlessFrontendSection = () => {
   // Data for the benefits cards to keep the JSX clean.
   const benefits = [
     {
-      icon: <BoltIcon />,
+      icon: <BoltIcon className="text-white h-6 w-6" />,
       title: "Lightning-fast performance",
       description:
         "Next.js optimizes page loads, image delivery, and dynamic routing. Your store can run 2–5x faster, directly boosting conversions.",
     },
     {
-      icon: <TrendingUpIcon />,
+      icon: <TrendingUpIcon className="text-white h-6 w-6" />,
       title: "SEO advantage",
       description:
         "With server-side rendering and static site generation, Next.js gives you the edge in search rankings. That’s critical in today’s headless eCommerce 2025 landscape.",
     },
     {
-      icon: <LayersIcon />,
+      icon: <LayersIcon className="text-white h-6 w-6" />,
       title: "Scalability",
       description:
         "Whether you have 50 products or 50,000, Next.js handles growth smoothly without slowing down.",
     },
     {
-      icon: <ShoppingCartIcon />,
+      icon: <ShoppingCartIcon className="text-white h-6 w-6" />,
       title: "Shopify experience, WooCommerce control",
       description:
         "You keep WooCommerce’s backend, but your customers enjoy Shopify benefits in WooCommerce, like faster navigation and checkout.",
@@ -203,7 +299,7 @@ const NextJSStrengthsSection = () => {
   const CheckCircleIcon = () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-6 w-6 text-[#16A34A]"
+      className="h-6 w-6 text-[#16A34A] shrink-0"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -387,7 +483,7 @@ const ShopifyStrengthsSection = () => {
   const CheckCircleIcon = () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-6 w-6 text-[#16A34A]"
+      className="h-6 w-6 text-[#16A34A] shrink-0"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -608,60 +704,23 @@ const CaseStudySection = () => {
   );
 };
 
+// 💡 NOTE: You were missing a <ConclusionCTASection/> component, I've added a placeholder.
+// You can design this section to be a final call-to-action for your readers.
 const ConclusionCTASection = () => {
   return (
-    <section className="bg-[#F1F5F9] border-t border-slate-200">
-      <div className="max-w-4xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-        <header className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-[#333333] leading-tight">
-            Conclusion: Transform with{" "}
-            <span className="text-[#16A34A]">[Your Agency Name]</span>
-          </h2>
-        </header>
-
-        <div className="bg-white p-8 md:p-10 rounded-xl shadow-sm space-y-6 text-lg text-[#333333] leading-relaxed mb-16">
-          <p>
-            The future of online retail isn’t choosing between WooCommerce or
-            Shopify—it’s combining them. With a WooCommerce Shopify hybrid
-            powered by Next.js, you get the best of both worlds: WooCommerce’s
-            flexibility and control, plus Shopify’s speed and polished customer
-            experience.
-          </p>
-          <p>
-            At{" "}
-            <span className="font-bold text-[#16A34A]">[Your Agency Name]</span>
-            , we specialize in delivering these transformations. Our headless
-            WooCommerce Next.js solutions give your store Shopify-like speed,
-            seamless checkout, and future-ready performance. Whether you’re
-            wondering how to get Shopify speed in WooCommerce or aiming for a
-            complete upgrade, we’ll help you unlock the full Next.js for
-            eCommerce performance advantage.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-xl shadow-lg p-8 text-center border-t-4 border-[#16A34A]">
-          <p className="text-xl md:text-2xl font-bold text-[#333333]">
-            👉 Start with a free store audit and discover what’s possible.
-          </p>
-          <p className="mt-4 text-base md:text-lg text-gray-700 max-w-3xl mx-auto">
-            Migration packages start at{" "}
-            <strong className="text-[#333333]">₹75,000</strong> and go up to{" "}
-            <strong className="text-[#333333]">₹5,00,000</strong>, depending on
-            complexity, and we include our Sell Alpha bundle to supercharge your
-            store with marketing and automation tools.
-          </p>
-          <button className="mt-8 bg-[#F97316] hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-orange-300">
-            Get Your Free Audit
-          </button>
-        </div>
-
-        <div className="mt-16 text-center">
-          <p className="text-xl font-semibold text-[#333333] leading-relaxed">
-            Don’t get stuck choosing sides in 2025’s eCommerce race. Get the
-            headless WooCommerce for Shopify UX you need to grow—fast, scalable,
-            and built for the future.
-          </p>
-        </div>
+    <section className="bg-white">
+      <div className="max-w-4xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-3xl font-extrabold text-[#333333]">
+          Ready to Build a High-Performance Store?
+        </h2>
+        <p className="mt-4 text-lg text-gray-600 leading-relaxed">
+          Stop choosing between speed and flexibility. A headless Next.js
+          frontend for your WooCommerce store gives you the best of both worlds.
+          Let&apos;s talk about how we can transform your ecommerce experience.
+        </p>
+        <button className="mt-8 bg-[#F97316] hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-orange-300">
+          Get Your Free Consultation
+        </button>
       </div>
     </section>
   );

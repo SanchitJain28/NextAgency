@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     default: "Top Com Agency - Headless WooCommerce & Next.js eCommerce Development",
     template: "%s | Top Com Agency - Fast eCommerce Solutions"
   },
+  icons:{
+    icon:"/logo.ico"
+  },
   description: "Expert Next.js eCommerce development agency specializing in headless WooCommerce, Shopify migrations, and lightning-fast online stores. Transform your slow eCommerce site into a high-performance Next.js powerhouse.",
   keywords: [
     "headless WooCommerce Next.js",
