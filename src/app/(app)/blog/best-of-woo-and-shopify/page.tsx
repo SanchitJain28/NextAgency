@@ -60,7 +60,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 const JsonLdSchema = () => {
   const structuredData = {
     "@context": "https://schema.org",

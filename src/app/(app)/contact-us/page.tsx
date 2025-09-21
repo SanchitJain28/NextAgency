@@ -93,7 +93,7 @@ export default function ContactPage() {
                 "@type": "PostalAddress",
                 "addressCountry": "IN"
               },
-              "url": "https://topcomagency.com/contact",
+              "url": "https://topcomsolutions.com/contact-us",
               "sameAs": [
                 "https://wa.me/919650296375"
               ]

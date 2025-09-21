@@ -1,18 +1,322 @@
 import Header from "@/components/header-footer/Header";
-import React from "react"
+import React from "react";
 import { StatCard } from "./StatCard";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    default:
+      "Headless WooCommerce with Next.js 2025: Ultimate Migration Guide | 5x Faster Performance",
+    template: "%s | Headless WooCommerce Next.js Guide",
+  },
+  description:
+    "Complete guide to headless WooCommerce with Next.js in 2025. Boost your store's speed 5x, improve SEO rankings, and achieve 23% higher conversions. Step-by-step migration tutorial included.",
+  keywords: [
+    "headless WooCommerce",
+    "Next.js ecommerce",
+    "WooCommerce migration",
+    "headless commerce 2025",
+    "WooCommerce performance",
+    "Next.js WooCommerce",
+    "ecommerce SEO",
+    "WooCommerce vs Shopify",
+    "headless ecommerce guide",
+    "WooCommerce optimization",
+    "Next.js storefront",
+    "GraphQL WooCommerce",
+    "WooCommerce speed optimization",
+    "headless commerce benefits",
+    "ecommerce performance 2025",
+    "WooCommerce Next.js tutorial",
+    "headless ecommerce migration",
+    "WooCommerce headless setup",
+    "Next.js ecommerce development",
+    "WooCommerce performance optimization",
+  ],
+  authors: [{ name: "Topcom Solutions" }],
+  creator: "Topcom Solutions",
+  publisher: "Topcom Solutions",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://www.topcomsolutions.com/"),
+  alternates: {
+    canonical:
+      "https://www.topcomsolutions.com/blog/headless-woocommerce-with-nextjs",
+  },
+  openGraph: {
+    title: "Headless WooCommerce with Next.js 2025: Ultimate Migration Guide",
+    description:
+      "Transform your WooCommerce store with Next.js for 5x faster performance and 23% higher conversions. Complete migration guide with real case studies.",
+    url: "https://www.topcomsolutions.com/blog/headless-woocommerce-with-nextjs",
+    siteName: "Topcom Solutions",
+    images: [
+      {
+        url: "https://www.topcomsolutions.com/images/og-headless-woocommerce.png",
+        width: 1200,
+        height: 630,
+        alt: "Headless WooCommerce with Next.js Migration Guide - 5x Faster Performance",
+      },
+      {
+        url: "https://www.topcomsolutions.com/images/og-headless-woocommerce.png",
+        width: 800,
+        height: 800,
+        alt: "Headless WooCommerce Next.js Guide Square Image",
+      },
+    ],
+    locale: "en_US",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Headless WooCommerce with Next.js 2025: Ultimate Migration Guide",
+    description:
+      "Transform your WooCommerce store with Next.js for 5x faster performance and 23% higher conversions. Complete migration guide included.",
+    images: [
+      "https://www.topcomsolutions.com/images/og-headless-woocommerce.png",
+    ],
+    creator: "@topcomsolutions",
+    site: "@topcomsolutions",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  category: "ecommerce development",
+  classification: "Business",
+  other: {
+    "article:author": "Topcom Solutions",
+    "article:section": "E-commerce Development",
+    "article:tag":
+      "headless commerce, WooCommerce, Next.js, ecommerce optimization",
+    "article:published_time": "2025-01-01T00:00:00.000Z",
+    "article:modified_time": new Date().toISOString(),
+    "og:article:author": "Your Agency Name",
+    "og:article:section": "E-commerce Development",
+    "og:article:tag": "headless WooCommerce, Next.js, ecommerce performance",
+  },
+};
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Headless WooCommerce with Next.js 2025: Ultimate Migration Guide",
+  description:
+    "Complete guide to headless WooCommerce with Next.js in 2025. Boost your store's speed 5x, improve SEO rankings, and achieve 23% higher conversions.",
+  author: {
+    "@type": "Organization",
+    name: "Topcom Solutions",
+    url: "https://www.topcomsolutions.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Topcom Solutions",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://topcomsolutions.com/images/logo.png",
+    },
+  },
+  datePublished: "2025-01-01",
+  dateModified: new Date().toISOString().split("T")[0],
+  image: ["https://www.topcomsolutions.com/images/og-headless-woocommerce.png"],
+  url: "https://topcomsolutions.com/blog/headless-woocommerce-with-nextjs",
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": "https://topcomsolutions.com/blog/headless-woocommerce-with-nextjs",
+  },
+  articleSection: "E-commerce Development",
+  keywords:
+    "headless WooCommerce, Next.js ecommerce, WooCommerce migration, headless commerce 2025, ecommerce SEO",
+  wordCount: 3500,
+  articleBody:
+    "Complete guide covering headless WooCommerce setup with Next.js, migration steps, performance benefits, and real case studies showing 5x speed improvements and 23% conversion increases.",
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://topcomsolutions.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Guides",
+      item: "https://topcomsolutions.com/about-us",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Headless WooCommerce with Next.js Guide",
+      item: "https://topcomsolutions.com/blog/headless-woocommerce-with-nextjs",
+    },
+  ],
+};
+
+const howToJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to Migrate WooCommerce to Headless Next.js Setup",
+  description:
+    "Step-by-step guide to migrating your WooCommerce store to a headless Next.js frontend for better performance and SEO.",
+  image: "https://www.topcomsolutions.com/images/og-headless-woocommerce.png",
+  estimatedCost: {
+    "@type": "MonetaryAmount",
+    currency: "INR",
+    value: "75000-500000",
+  },
+  supply: [
+    {
+      "@type": "HowToSupply",
+      name: "WooCommerce Store",
+    },
+    {
+      "@type": "HowToSupply",
+      name: "Next.js Knowledge",
+    },
+    {
+      "@type": "HowToSupply",
+      name: "GraphQL Understanding",
+    },
+  ],
+  tool: [
+    {
+      "@type": "HowToTool",
+      name: "WPGraphQL Plugin",
+    },
+    {
+      "@type": "HowToTool",
+      name: "Next.js Framework",
+    },
+    {
+      "@type": "HowToTool",
+      name: "Vercel Hosting",
+    },
+  ],
+  step: [
+    {
+      "@type": "HowToStep",
+      name: "Pre-Migration Checklist",
+      text: "Audit your store, create backups, and choose proper hosting setup.",
+      image: "https://yourdomain.com/images/step-1-checklist.jpg",
+    },
+    {
+      "@type": "HowToStep",
+      name: "Install WPGraphQL",
+      text: "Install WPGraphQL and WooCommerce extension to expose your store data via GraphQL endpoints.",
+      image: "https://yourdomain.com/images/step-2-wpgraphql.jpg",
+    },
+    {
+      "@type": "HowToStep",
+      name: "Build Next.js App",
+      text: "Create new Next.js project and connect to WooCommerce GraphQL endpoint.",
+      image: "https://yourdomain.com/images/step-3-nextjs.jpg",
+    },
+    {
+      "@type": "HowToStep",
+      name: "Fetch WooCommerce Data",
+      text: "Use GraphQL queries to fetch products, categories, and store data in your Next.js frontend.",
+      image: "https://yourdomain.com/images/step-4-data-fetching.jpg",
+    },
+    {
+      "@type": "HowToStep",
+      name: "Optimize for SEO & Speed",
+      text: "Implement image optimization, meta tags, and caching for maximum performance.",
+      image: "https://yourdomain.com/images/step-5-optimization.jpg",
+    },
+    {
+      "@type": "HowToStep",
+      name: "Test Compatibility",
+      text: "Test dashboard functionality, checkout process, and overall user experience.",
+      image: "https://yourdomain.com/images/step-6-testing.jpg",
+    },
+  ],
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is headless WooCommerce with Next.js?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Headless WooCommerce with Next.js is a setup where you use WooCommerce as the backend for managing products and orders, while Next.js powers the frontend that customers interact with. This separation provides better performance, SEO, and scalability.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much faster is headless WooCommerce with Next.js?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Headless WooCommerce with Next.js can be 2-5x faster than traditional WooCommerce sites, with page load times often under 1.2 seconds. This speed improvement can lead to 18-23% higher conversion rates.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I lose WooCommerce functionality with headless setup?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No, you keep all WooCommerce backend functionality including product management, order processing, inventory tracking, and the admin dashboard. Only the frontend (what customers see) changes to Next.js.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the cost of migrating to headless WooCommerce?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Migration costs typically range from ₹75,000 to ₹5,00,000 depending on store size and complexity. The investment pays off through improved performance, SEO rankings, and higher conversion rates.",
+      },
+    },
+  ],
+};
 
 export default function page() {
   return (
-    <div>
-      <Header />
-      <IntroductionSection />
-      <WhatIsHeadlessCommerce />
-      <MigrationSegment />
-      <BenefitsSection />
-      <CaseStudySection/>
-      <CTASection/>
-    </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <div>
+        <Header />
+        <IntroductionSection />
+        <WhatIsHeadlessCommerce />
+        <MigrationSegment />
+        <BenefitsSection />
+        <CaseStudySection />
+        <CTASection />
+      </div>
+    </>
   );
 }
 
@@ -827,16 +1131,24 @@ const CTASection = () => {
     <div className="bg-white font-sans">
       <div className="container mx-auto px-4 py-16 sm:py-24">
         <div className="max-w-7xl mx-auto">
-          
           {/* Section Header */}
           <h2 className="text-3xl font-bold tracking-tight text-[#333333] sm:text-4xl">
-            Conclusion: Transform with <span className="text-[#16A34A]">[Your Agency Name]</span>
+            Conclusion: Transform with{" "}
+            <span className="text-[#16A34A]">[Your Agency Name]</span>
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            If your WooCommerce store feels sluggish, or you’ve been eyeing Shopify’s speed but don’t want to give up WooCommerce’s flexibility, a headless WooCommerce setup with Next.js is the solution. It’s the smartest way to unlock Shopify-level performance, boost SEO, and future-proof your online store in 2025.
+            If your WooCommerce store feels sluggish, or you’ve been eyeing
+            Shopify’s speed but don’t want to give up WooCommerce’s flexibility,
+            a headless WooCommerce setup with Next.js is the solution. It’s the
+            smartest way to unlock Shopify-level performance, boost SEO, and
+            future-proof your online store in 2025.
           </p>
           <p className="mt-4 text-lg leading-8 text-gray-600">
-            At <strong className="font-semibold">[Your Agency Name]</strong>, we specialize in building high-performance, headless eCommerce stores. Our team can handle everything—from auditing your current site to migrating you onto a lightning-fast Next.js frontend—without disrupting your existing WooCommerce operations.
+            At <strong className="font-semibold">[Your Agency Name]</strong>, we
+            specialize in building high-performance, headless eCommerce stores.
+            Our team can handle everything—from auditing your current site to
+            migrating you onto a lightning-fast Next.js frontend—without
+            disrupting your existing WooCommerce operations.
           </p>
 
           {/* Highlighted Offer Card */}
@@ -845,13 +1157,22 @@ const CTASection = () => {
               💡 Here’s our offer:
             </p>
             <p className="mt-4 text-lg text-gray-700">
-              Get a <strong className="font-semibold">free performance audit</strong> of your WooCommerce store today. If you’re ready to move forward, migration packages start from <strong className="font-semibold text-[#16A34A]">₹75,000 to ₹5,00,000</strong>, depending on the size and complexity of your store.
+              Get a{" "}
+              <strong className="font-semibold">free performance audit</strong>{" "}
+              of your WooCommerce store today. If you’re ready to move forward,
+              migration packages start from{" "}
+              <strong className="font-semibold text-[#16A34A]">
+                ₹75,000 to ₹5,00,000
+              </strong>
+              , depending on the size and complexity of your store.
             </p>
           </div>
 
           {/* Final CTA */}
           <p className="mt-12 text-lg leading-8 text-gray-600">
-            Don’t let slow load times cost you customers. Partner with us, and let’s transform your WooCommerce store into a scalable, SEO-friendly powerhouse built for growth.
+            Don’t let slow load times cost you customers. Partner with us, and
+            let’s transform your WooCommerce store into a scalable, SEO-friendly
+            powerhouse built for growth.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
@@ -861,7 +1182,6 @@ const CTASection = () => {
               Get Your Free Audit Now
             </a>
           </div>
-
         </div>
       </div>
     </div>
