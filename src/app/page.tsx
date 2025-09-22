@@ -21,9 +21,9 @@ import { Metadata } from "next";
 // SEO Metadata for the page
 export const metadata: Metadata = {
   title:
-    "Headless WooCommerce Next.js Development Agency | Fast eCommerce Migration Services India",
+    "Headless WooCommerce Next.js Agency | Fast eCommerce Migrations India",
   description:
-    "Expert Next.js development agency specializing in headless WooCommerce & Shopify migrations. Speed optimization, SEO-friendly eCommerce solutions. Get 3x faster sites with our headless CMS approach.",
+    "Expert Next.js agency for headless WooCommerce & Shopify migrations. Speed optimization & SEO-friendly eCommerce solutions.",
   keywords: [
     "headless WooCommerce Next.js",
     "WooCommerce speed optimization",
@@ -36,20 +36,20 @@ export const metadata: Metadata = {
     "Next.js for eCommerce scalability",
     "Shopify speed optimization India",
   ],
-  authors: [{ name: "Your Agency Name" }],
-  creator: "Your Agency Name",
-  publisher: "Your Agency Name",
+  authors: [{ name: "TopCom solutions" }],
+  creator: "TopCom solutions",
+  publisher: "TopCom solutions",
   category: "Web Development",
   openGraph: {
     title:
       "Headless WooCommerce Next.js Development Agency | Fast eCommerce Migration",
     description:
       "Transform your slow WooCommerce or Shopify store into a lightning-fast headless eCommerce site with Next.js. Expert migration services in India.",
-    url: "https://yourdomain.com",
-    siteName: "Your Agency Name",
+    url: "https://topcomsolutions.com",
+    siteName: "TopCom solutions",
     images: [
       {
-        url: "https://yourdomain.com/og-image.jpg",
+        url: "https://topcomsolutions.com/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Headless WooCommerce Next.js Development Services",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     title: "Headless WooCommerce Next.js Development Agency",
     description:
       "Expert headless eCommerce development services. Migrate from WooCommerce/Shopify to Next.js for 3x faster performance.",
-    images: ["https://yourdomain.com/twitter-image.jpg"],
+    images: ["https://topcomsolutions.com/twitter-image.jpg"],
     creator: "@youragencyhandle",
   },
   robots: {
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
   },
   alternates: {
-    canonical: "https://yourdomain.com",
+    canonical: "https://topcomsolutions.com",
   },
 };
 
@@ -321,14 +321,14 @@ const HeroSection = () => {
     >
       <div className="mx-auto max-w-7xl px-6 pt-8 sm:py-20">
         <header className="space-y-2">
-          <h1
+          <h2
             id="hero-heading"
             className="text-pretty text-3xl font-bold leading-tight tracking-tight md:text-4xl"
           >
             {
               "⚡ Supercharge Your WooCommerce & Shopify with Next.js Headless Frontend"
             }
-          </h1>
+          </h2>
 
           <p className="max-w-3xl text-pretty text-base leading-normal md:text-lg">
             {
@@ -455,13 +455,13 @@ const ProblemSolutionSection = () => {
     >
       <DottedSeparator />
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 md:py-16">
-        <h2
+        <h3
           id="slow-store-heading"
           className="text-pretty text-2xl md:text-3xl font-semibold"
           style={{ color: "#333333" }}
         >
           Is Your eCommerce Store Slow and Losing Sales?
-        </h2>
+        </h3>
 
         <p
           className="mt-4 text-base leading-relaxed"
@@ -696,12 +696,12 @@ const CaseStudySection = () => {
         <DottedSeparator />
         <div className="mx-auto max-w-7xl px-6  md:py-14">
           <header className="mb-6 md:mb-8">
-            <h2
+            <h3
               id="case-studies"
               className="text-pretty text-2xl md:text-3xl font-semibold"
             >
               Real Stores, Real Results
-            </h2>
+            </h3>
             <p className="mt-2 text-sm md:text-base leading-relaxed">
               When it comes to headless WooCommerce and Shopify websites with
               Next.js, results speak louder than promises. Here’s how we’ve
@@ -885,12 +885,12 @@ const ServicesSection = () => {
       <DottedSeparator />
       <div className="mx-auto max-w-7xl px-4  md:py-14">
         <header className="max-w-3xl">
-          <h2
+          <h3
             id="services-heading"
             className="text-balance text-2xl font-semibold text-[#333333] md:text-3xl"
           >
             Our Headless Next.js Solutions for WooCommerce and Shopify
-          </h2>
+          </h3>
           <p className="mt-3 text-pretty text-sm leading-relaxed text-[#333333] md:text-base">
             Looking to take your online store to the next level? We specialize
             in WooCommerce Next.js migration and Shopify headless development,
@@ -1336,12 +1336,12 @@ const TestimonialsSection = () => {
       <DottedSeparator />
       <div className="mx-auto w-full max-w-7xl px-6">
         <header className="md:mb-8">
-          <h2
+          <h3
             id="testimonials-title"
             className="text-xl md:text-2xl font-semibold text-pretty"
           >
             What Our Clients Say
-          </h2>
+          </h3>
           <p className="mt-2 text-sm md:text-base leading-6 text-pretty">
             Our clients love how WooCommerce migration with Next.js and Shopify
             Next.js solutions transformed their eCommerce stores. Here’s what
@@ -1376,12 +1376,12 @@ const CTAFooterSection = () => {
     >
       <DottedSeparator />
       <div className="mx-auto max-w-7xl px-4  md:py-12">
-        <h2
+        <h3
           id="cta-footer-heading"
           className=" text-2xl md:text-3xl font-semibold text-[#333333] text-balance"
         >
           Ready to Make Your Store Faster and More Profitable?
-        </h2>
+        </h3>
 
         <p className="mt-3 text-sm md:text-base leading-relaxed text-[#333333]">
           Get a free WooCommerce speed audit or a Shopify headless consultation
