@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Top Com Agency - Fast eCommerce Solutions"
   },
   icons:{
-    icon:"/logo.ico"
+    icon:"/logo.icoP"
   },
   description: "Expert Next.js eCommerce development agency specializing in headless WooCommerce, Shopify migrations, and lightning-fast online stores. Transform your slow eCommerce site into a high-performance Next.js powerhouse.",
   keywords: [
