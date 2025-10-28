@@ -1,4 +1,5 @@
 "use client";
+import ShopifyHeader from "@/components/header-footer/ShopifyHeader";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -41,41 +42,7 @@ export default function LandingPage() {
     <div className={`${font_className}`}>
       <div className="min-h-screen bg-black text-white">
         {/* Navigation */}
-        <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-white/10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                  <Sparkles className="w-5 h-5 text-black" />
-                </div>
-                <span className="text-lg font-bold">Recommendations AI</span>
-              </div>
-              <div className="hidden md:flex items-center space-x-8">
-                <a
-                  href="#features"
-                  className="text-gray-400 hover:text-white transition"
-                >
-                  Features
-                </a>
-                <a
-                  href="#how-it-works"
-                  className="text-gray-400 hover:text-white transition"
-                >
-                  How It Works
-                </a>
-                <a
-                  href="#pricing"
-                  className="text-gray-400 hover:text-white transition"
-                >
-                  Pricing
-                </a>
-                <button className="px-6 py-2 bg-white text-black rounded-full hover:bg-gray-200 transition font-semibold text-sm">
-                  Get Started
-                </button>
-              </div>
-            </div>
-          </div>
-        </nav>
+        <ShopifyHeader/>
         <div className="pt-16">
           <MarqueSection />
         </div>
