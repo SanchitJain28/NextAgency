@@ -1,5 +1,6 @@
 import { Sparkles } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function ShopifyHeader() {
@@ -18,30 +19,41 @@ export default function ShopifyHeader() {
                   className="bg-white rounded-full "
                 />
               </div>
-              <span className="text-lg font-bold text-white">Recommendations AI</span>
+              <span className="text-lg font-bold text-white">
+                Recommendations AI
+              </span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a
+              <Link
                 href="/solllid#features"
                 className="text-gray-400 hover:text-white transition"
               >
                 Features
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/solllid#how-it-works"
                 className="text-gray-400 hover:text-white transition"
               >
                 How It Works
-              </a>
+              </Link>
               <a
-                href="/solllid#pricing"
+                href="https://apps.shopify.com/solid-ai-related-products"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition"
               >
                 Pricing
               </a>
-              <button className="px-6 py-2 bg-white text-black rounded-full hover:bg-gray-200 transition font-semibold text-sm">
-                Get Started
-              </button>
+              <a
+                href="https://apps.shopify.com/solid-ai-related-products"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition"
+              >
+                <button className="px-6 py-2 bg-white text-black rounded-full hover:bg-gray-200 transition font-semibold text-sm">
+                  Get Started
+                </button>
+              </a>
             </div>
           </div>
         </div>

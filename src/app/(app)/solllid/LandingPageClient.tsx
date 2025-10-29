@@ -16,7 +16,7 @@ import {
 import { Bitcount_Grid_Single } from "next/font/google";
 import Image from "next/image";
 
-const bitcount_Grid_Single = Bitcount_Grid_Single({
+export const bitcount_Grid_Single = Bitcount_Grid_Single({
   subsets: ["latin"],
   weight: ["300"],
 });
