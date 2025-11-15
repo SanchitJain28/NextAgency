@@ -9,115 +9,246 @@ import {
 import React from "react";
 import { Metadata } from "next";
 
-// ====================================================================
-// SEO METADATA OBJECT (For Next.js 15 App Router)
-// ====================================================================
-// This object tells Google and other search engines what your page is about.
-// It populates the <head> section of your HTML.
 export const metadata: Metadata = {
-  title: "Headless Next.js: Get Shopify Speed on Your WooCommerce Store",
+  title: "Headless WooCommerce with Next.js: Get Shopify Speed & Performance",
   description:
-    "Unlock Shopify's lightning-fast speed and seamless UX on your WooCommerce store. Learn how a headless Next.js frontend creates the ultimate hybrid ecommerce solution.",
+    "Transform your WooCommerce store with a headless Next.js frontend. Achieve 2-5x faster page loads, Shopify-like UX, and better SEO while keeping WooCommerce's flexibility. Learn how the best of both platforms combine.",
   keywords: [
-    "Headless Next.js",
+    "headless WooCommerce",
+    "Next.js ecommerce",
+    "WooCommerce Next.js",
+    "headless ecommerce 2025",
     "WooCommerce Shopify hybrid",
-    "Headless WooCommerce",
-    "How to get Shopify speed in WooCommerce",
-    "Next.js for eCommerce performance",
-    "Headless eCommerce 2025",
-    "Shopify benefits in WooCommerce",
+    "Next.js for ecommerce performance",
     "WooCommerce with Shopify checkout",
-    "Next.js frontend for WooCommerce",
-    "React ecommerce",
+    "headless WooCommerce for Shopify UX",
+    "how to get Shopify speed in WooCommerce",
+    "WooCommerce performance optimization",
   ],
+  authors: [{ name: "Real AI Related Products" }],
+  creator: "Real AI Related Products",
+  publisher: "Real AI Related Products",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://topcomsolutions.com"),
   alternates: {
-    canonical: "https://www.topcomsolutions.com/blog/best-of-woo-and-shopify",
+    canonical: "/blog/best-of-woo-and-shopify",
   },
   openGraph: {
-    title: "Headless Next.js: Get Shopify Speed on Your WooCommerce Store",
+    title: "Headless WooCommerce + Next.js: Shopify Speed, WooCommerce Control",
     description:
-      "Unlock Shopify's lightning-fast speed and seamless UX on your WooCommerce store. Learn how a headless Next.js frontend creates the ultimate hybrid ecommerce solution.",
-    url: "https://www.topcomsolutions.com/blog/best-of-woo-and-shopify",
-    siteName: "Your Brand Name", // ⚠️ ACTION REQUIRED: Replace with your site/brand name
+      "Get 2-5x faster page loads and Shopify-like UX for your WooCommerce store using Next.js. Real case study shows 28% less cart abandonment and <1.5s load times.",
+    url: "/blog/best-of-woo-and-shopify",
+    siteName: "Real AI Related Products",
     images: [
       {
-        url: "https://topcomsolutions.com/images/og-headless-woocommerce.png",
+        url: "/blog/best-of-woo-and-shopify/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Diagram showing WooCommerce backend with a Next.js frontend",
+        alt: "Headless WooCommerce with Next.js - Best of Both Worlds",
       },
     ],
     locale: "en_US",
     type: "article",
+    publishedTime: "2025-01-15T00:00:00.000Z",
+    modifiedTime: "2025-01-15T00:00:00.000Z",
+    authors: ["Real AI Related Products"],
+    tags: [
+      "WooCommerce",
+      "Next.js",
+      "Headless Commerce",
+      "Ecommerce Performance",
+      "Web Development",
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Headless Next.js: Get Shopify Speed on Your WooCommerce Store",
+    title: "Headless WooCommerce + Next.js: Best of Both Worlds",
     description:
-      "Unlock Shopify's lightning-fast speed and seamless UX on your WooCommerce store. Learn how a headless Next.js frontend creates the ultimate hybrid ecommerce solution.",
-    creator: "@yourTwitterHandle",
-    images: ["https://topcomsolutions.com/images/og-headless-woocommerce.png"],
+      "Transform WooCommerce with Next.js for 2-5x faster speeds and Shopify-like UX. Keep control, gain performance.",
+    images: ["/blog/best-of-woo-and-shopify/og-image.png"],
+    creator: "@topcomsolutions",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
   },
 };
 
-const JsonLdSchema = () => {
-  const structuredData = {
+export default function Page() {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": "https://www.topcomsolutions.com/blog/best-of-woo-and-shopify",
-    },
+    "@type": "TechArticle",
     headline:
       "How a Headless Next.js Frontend Gives Your WooCommerce Store the Best of WooCommerce and Shopify",
     description:
-      "Discover how to combine WooCommerce's backend flexibility with Shopify's frontend speed using a headless Next.js architecture. Get the best of both platforms.",
-    image: "https://topcomsolutions.com/images/og-headless-woocommerce.png",
+      "Comprehensive technical guide on implementing a headless WooCommerce architecture with Next.js frontend to achieve Shopify-level performance while maintaining WooCommerce flexibility.",
+    image:
+      "https://topcomsolutions.com/blog/best-of-woo-and-shopify/og-image.png",
+    datePublished: "2025-01-15T00:00:00.000Z",
+    dateModified: "2025-01-15T00:00:00.000Z",
     author: {
-      "@type": "Organization", 
-      name: "TopCom Solutions",
-      url: "https://www.topcomsolutions.com/about-us",
+      "@type": "Organization",
+      name: "Real AI Related Products",
+      url: "https://topcomsolutions.com",
     },
     publisher: {
       "@type": "Organization",
-      name: "TopCom Solutions",
+      name: "Real AI Related Products",
       logo: {
         "@type": "ImageObject",
         url: "https://topcomsolutions.com/logo.png",
       },
     },
-    datePublished: "2025-09-21", 
-    dateModified: "2025-09-21",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": "https://topcomsolutions.com/blog/best-of-woo-and-shopify",
+    },
+    articleSection: "Ecommerce Technology",
+    keywords:
+      "headless WooCommerce, Next.js, ecommerce performance, JAMstack, headless commerce, WooCommerce optimization",
+    proficiencyLevel: "Intermediate",
   };
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-    />
-  );
-};
+  // FAQ Schema - aligned with actual content
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is a headless WooCommerce setup with Next.js?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "A headless setup separates your WooCommerce backend (product management, orders) from the frontend (customer interface). Next.js serves as the modern React-based frontend, fetching data from WooCommerce via APIs. This gives you WooCommerce's flexibility with Shopify-like speed and user experience.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How much faster is Next.js compared to traditional WooCommerce?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Next.js can make your WooCommerce store 2-5x faster through server-side rendering, static site generation, and optimized asset delivery. Real-world implementations show page load times dropping from 4+ seconds to under 1.5 seconds.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can I keep my WooCommerce backend with a Next.js frontend?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, absolutely. You continue managing products, inventory, orders, and plugins through your familiar WooCommerce/WordPress dashboard. Next.js only replaces the customer-facing frontend, connecting to WooCommerce via REST API or GraphQL.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What are the main benefits of headless WooCommerce with Next.js?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Key benefits include: 2-5x faster page loads, significantly better SEO through server-side rendering, Shopify-like checkout experience, improved scalability, better mobile performance, and modern React-based UI capabilities—all while maintaining WooCommerce's open-source flexibility.",
+        },
+      },
+    ],
+  };
 
-export default function page() {
-  return (
-    <div>
+  // Breadcrumb Schema
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://topcomsolutions.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: "https://topcomsolutions.com/blog",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Headless WooCommerce with Next.js",
+        item: "https://topcomsolutions.com/blog/best-of-woo-and-shopify",
+      },
+    ],
+  };
 
-      <head>
-        <JsonLdSchema />
-      </head>
+  // HowTo Schema for technical implementation
+  const howToJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Implement Headless WooCommerce with Next.js",
+    description:
+      "Step-by-step guide to transforming your WooCommerce store with a Next.js frontend for improved performance and user experience.",
+    step: [
+      {
+        "@type": "HowToStep",
+        name: "Keep WooCommerce as Backend",
+        text: "Continue using WooCommerce for product management, inventory, orders, and payment processing. Your WordPress admin remains unchanged.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Set Up Next.js Frontend",
+        text: "Create a Next.js application that will serve as your customer-facing storefront with optimized performance.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Connect via WooCommerce API",
+        text: "Use WooCommerce REST API or GraphQL to fetch products, categories, and handle cart operations from your Next.js frontend.",
+      },
+      {
+        "@type": "HowToStep",
+        name: "Optimize with Next.js Features",
+        text: "Leverage server-side rendering, static site generation, and Next.js image optimization for maximum performance.",
+      },
+    ],
+  };
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
+      />
       <Header />
-      <div className="px-2">
+      <article className="px-2">
         <IntroductionSection />
         <HeadlessFrontendSection />
         <NextJSStrengthsSection />
         <ShopifyStrengthsSection />
         <CaseStudySection />
         <ConclusionCTASection />
-      </div>
-    </div>
+      </article>
+    </>
   );
 }
-
 
 const IntroductionSection = () => {
   return (

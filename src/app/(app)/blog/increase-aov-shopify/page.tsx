@@ -1,5 +1,6 @@
 import ShopifyHeader from "@/components/header-footer/ShopifyHeader";
-import { Bitcount_Grid_Single, Bricolage_Grotesque } from "next/font/google";
+import { Metadata } from "next";
+import {  Bricolage_Grotesque } from "next/font/google";
 import Image from "next/image";
 import React from "react";
 
@@ -9,16 +10,195 @@ const bricolage = Bricolage_Grotesque({
   display: "swap",
 });
 
- const bitcount_Grid_Single = Bitcount_Grid_Single({
-  subsets: ["latin"],
-  weight: ["300"],
-});
+export const metadata: Metadata = {
+  title: "How to Increase AOV on Shopify: 15 Proven Strategies for 2025",
+  description:
+    "Discover 15 battle-tested strategies to increase Average Order Value (AOV) on Shopify. Learn how AI-powered recommendations boost AOV by 20-35% with real case studies and actionable tactics.",
+  keywords: [
+    "increase AOV Shopify",
+    "Shopify average order value",
+    "ecommerce AOV strategies",
+    "AI product recommendations",
+    "Shopify upselling",
+    "cross-selling tactics",
+    "Shopify revenue optimization",
+    "product bundling strategies",
+    "Shopify conversion optimization",
+    "AI recommendations Shopify",
+  ],
+  authors: [{ name: "Real AI Related Products" }],
+  creator: "Real AI Related Products",
+  publisher: "Real AI Related Products",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://topcomsolutions.com"), // Replace with your actual domain
+  alternates: {
+    canonical: "/blog/increase-aov-shopify",
+  },
+  openGraph: {
+    title: "How to Increase AOV on Shopify: 15 Proven Strategies That Work",
+    description:
+      "Boost your Shopify revenue by 20-35% without increasing traffic. Learn AI-powered tactics to increase Average Order Value with real case studies.",
+    url: "/blog/increase-aov-shopify",
+    siteName: "Your Company Name",
+    images: [
+      {
+        url: "/blog/increase-aov-shopify/og-image.png", // Create this image 1200x630px
+        width: 1200,
+        height: 630,
+        alt: "How to Increase AOV on Shopify Guide",
+      },
+    ],
+    locale: "en_US",
+    type: "article",
+    publishedTime: "2025-01-15T00:00:00.000Z", // Update with actual date
+    modifiedTime: "2025-01-15T00:00:00.000Z", // Update when modified
+    authors: ["Real AI Related Products"],
+    tags: [
+      "Shopify",
+      "AOV",
+      "Ecommerce",
+      "AI Recommendations",
+      "Revenue Growth",
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "15 Proven Strategies to Increase AOV on Shopify",
+    description:
+      "Boost Shopify revenue by 20-35% with AI-powered AOV tactics. Real case studies included.",
+    images: ["/blog/increase-aov-shopify/og-image.png"],
+    creator: "@YourTwitterHandle", // Replace with your Twitter handle
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code", // Add your Google Search Console verification
+    // yandex: 'your-yandex-verification-code',
+    // bing: 'your-bing-verification-code',
+  },
+};
+
 
 export default function Page() {
+  // JSON-LD Structured Data for SEO
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "How to Increase AOV on Shopify: 15 Proven Strategies for 2025",
+    description:
+      "Comprehensive guide on increasing Average Order Value on Shopify using AI-powered recommendations and proven ecommerce strategies.",
+    image: "https://topcomsolutions.com/blog/increase-aov-shopify/og-image.png",
+    datePublished: "2025-01-15T00:00:00.000Z",
+    dateModified: "2025-01-15T00:00:00.000Z",
+    author: {
+      "@type": "Organization",
+      name: "Your Company Name",
+      url: "https://topcomsolutions.com",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Real AI Related Products",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://topcomsolutions.com/logo.png",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": "https://topcomsolutions.com/blog/increase-aov-shopify",
+    },
+    articleSection: "Ecommerce",
+    keywords:
+      "Shopify, AOV, Average Order Value, AI Recommendations, Upselling, Cross-selling",
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is Average Order Value (AOV) in Shopify?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Average Order Value (AOV) represents the average amount customers spend per transaction in your Shopify store. It's calculated by dividing total revenue by the number of orders.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How can AI recommendations increase AOV?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "AI-powered recommendations analyze semantic relationships between products to suggest genuinely relevant items. This results in 3-5x higher conversion rates compared to manual recommendations, directly boosting AOV by 20-35%.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What are the best strategies to increase AOV on Shopify?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The most effective strategies include smart product bundling, free shipping thresholds, AI-powered recommendations, volume discounts, cart page upsells, and frequently bought together widgets.",
+        },
+      },
+    ],
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://topcomsolutions.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: "https://topcomsolutions.com/blog",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Increase AOV on Shopify",
+        item: "https://topcomsolutions.com/blog/increase-aov-shopify",
+      },
+    ],
+  };
+
   return (
     <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       <ShopifyHeader />
-      <div
+      <article
         className={
           "lg:max-w-7xl lg:mx-auto pb-8 px-4 mt-20" + " " + bricolage.className
         }
@@ -27,8 +207,8 @@ export default function Page() {
         <ProvenStudiesShopify />
         <AIBeatsTraditional />
         <CaseStudyShopify />
-        <Conclusion/>
-      </div>
+        <Conclusion />
+      </article>
     </>
   );
 }

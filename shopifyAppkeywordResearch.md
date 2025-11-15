@@ -375,3 +375,24 @@ This keyword strategy targets 150+ relevant keywords across all funnel stages. B
 2. Create content calendar for next 12 weeks  
 3. Set up rank tracking for all primary keywords
 4. Begin with comparison and educational content first
+
+
+## reddit
+
+Here's what actually works for Shopify apps:
+
+Get your app store listing optimized like crazy. Most merchants discover apps through the Shopify app store search, not through your cold emails. Reviews, keywords, screenshots, and clear value props matter way more than cold outreach.
+
+Content marketing targeting ecommerce pain points. Write about customer retention, improving conversion rates, whatever problems your AI actually solves. Merchants searching for solutions find your content and discover your app.
+
+Partner with Shopify agencies and consultants. They recommend apps to clients all the time. A few agencies using and recommending your solution beats cold calling individual merchants.
+
+Join ecommerce communities where merchants actually hang out. Facebook groups, Reddit, Slack for DTC brands. Be genuinely helpful without being salesy. People will check out your solution naturally.
+
+Run case studies showing real ROI. "We increased repeat purchase rate by 23%" is way more compelling than "AI customer insights." Merchants care about making more money, not the technology.
+
+The problem with cold outreach to Shopify merchants is they get hammered constantly by app developers and service providers. Unless you've got something genuinely differentiated, you're just noise.
+
+Also make sure your contact data is actually good. Ecommerce contact info decays fast and high bounce rates mean you're not even reaching the right people.
+
+After 18 months, you should have some customers. Figure out which acquisition channels are actually working and double down on those instead of spreading effort across channels that aren't converting.
