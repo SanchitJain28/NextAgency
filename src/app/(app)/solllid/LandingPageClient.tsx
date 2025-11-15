@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { Bitcount_Grid_Single } from "next/font/google";
 import Image from "next/image";
+import BlogSection from "./BlogsSection";
 
 export const bitcount_Grid_Single = Bitcount_Grid_Single({
   subsets: ["latin"],
@@ -565,6 +566,8 @@ export default function LandingPage() {
             </motion.div>
           </div>
         </section>
+
+        <BlogSection/>
 
         {/* Footer */}
         <footer className="bg-black border-t border-white/10 text-gray-400 py-12 px-4 sm:px-6 lg:px-8">
