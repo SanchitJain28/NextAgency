@@ -934,35 +934,31 @@ function PlacementFive() {
           />
           <div className="lg:flex lg:flex-col space-y-6">
             <h2 className="text-3xl font-bold">
-              Placement #4 - Post-Purchase Thank You Page (The Hidden Goldmine)
+              Placement #5 - Homepage & Collection Pages (Capturing Browse
+              Intent)
             </h2>
 
             <h3 className="text-2xl font-bold text-red-500">
-              The 47% Conversion Rate You Didn't Know Existed
+              The First Impression That Drives 40% More Engagement
             </h3>
 
             <div className="space-y-4 leading-relaxed">
               <p>
-                Most merchants treat the thank you page as an afterthought—a
-                simple order confirmation and tracking info. But here's what the
-                data reveals: customers on the thank you page convert at 10-15X
-                higher rates than on any other page.
+                Your homepage gets the most traffic, but visitors arrive with
+                zero purchase intent. They're exploring, not buying. Collection
+                pages sit somewhere in between—customers browsing categories,
+                comparing options, building wish lists.
               </p>
 
               <p className="font-semibold">
-                Why? Because they've already completed checkout. Their credit
-                card info is saved. The buying friction is eliminated.
+                These "discovery zones" need a fundamentally different
+                recommendation strategy than product or cart pages.
               </p>
 
-              <p>The Psychology: The Euphoria Window</p>
+              <p>The Psychology: Exploration & Curation</p>
               <p>
-                Immediately after purchase, customers experience a brief
-                psychological phenomenon called "post-purchase euphoria"—a
-                feel-good moment where buyer's remorse hasn't kicked in yet and
-                they're still in shopping mode.
-              </p>
-              <p>
-                This 30-60 second window is pure gold for one-click upsells.
+                Homepage and collection page visitors are in research mode. They
+                want to:
               </p>
             </div>
           </div>
@@ -975,92 +971,118 @@ function PlacementFive() {
       <section className="space-y-4 text-gray-700 leading-relaxed">
         <BlogList
           items={[
-            "Payment info already stored",
-            "Trust barrier eliminated",
-            "Dopamine from initial purchase still flowing",
-            "Shipping threshold already met (free add-ons)",
+            "See what's popular or trending",
+            "Discover products they didn't know existed",
+            "Get inspired by curated selections",
+            "Build confidence in your brand",
           ]}
-          heading={`Key advantages:`}
+          footer={`Pushing direct sales here backfires. Instead, focus on engagement and discovery.`}
         />
-        <p className="font-bold">The Winning Strategy: The One-Click Upsell</p>
-        <p>
-          Thank you page offers must be effortless additions. No cart, no
-          checkout, just one click to add to their existing order.
+        <p className="font-bold">
+          The Winning Strategy: Social Proof + Personalization
         </p>
+        <p>Homepage Recommendations (3 Sections):</p>
 
         <BlogList
-          heading={"What Converts Best:"}
+          heading={`1. "Trending Now" / "Best Sellers`}
           items={[
-            "Discounted complementary products (20-30% off)",
-            `"Add to your order" with single-button acceptance`,
-            "Time-limited offers (10-minute countdown)",
-            `Free/discounted shipping since order is being packed anyway`,
+            "Placement: Above the fold, after hero banner",
+            `Shows 6-8 top products with ratings`,
+            "Builds trust through social proof",
+            `Increases product page visits by 35-45%`,
           ]}
         />
 
         <BlogList
-          heading={"Format : A centered popup or banner showing:"}
+          heading={`2. "Recommended For You`}
           items={[
-            "Single product recommendation",
-            "Clear discount (exclusive to this page)",
-            `One big "Add to My Order" button`,
-            `Small "No thanks" link`,
+            "Placement: Mid-page",
+            "AI-powered personalization based on browsing history",
+            `Shows diverse product categories`,
+            `Boosts return visitor engagement by 60%`,
           ]}
         />
 
         <BlogList
-          heading={"Example: Fashion store thank you page:"}
+          heading={`3. "Recently Viewed`}
           items={[
-            `"Complete Your Look!"
-Add these sunglasses to your order for 25% off
-Regular $40 → Today: $30
-[Add to My Order] | No thanks`,
+            `Placement: Bottom section`,
+            `Helps visitors pick up where they left off`,
+            `Reduces homepage bounce rate by 22%`,
           ]}
-        />
-
-        <p className="font-bold">The Numbers That Matter</p>
-
-        <BlogList
-          heading={`When implemented correctly:`}
-          items={[
-            "15-25% accept rate on thank you page offers",
-            `$15-35 average addition to order value`,
-            "Zero cart abandonment risk (they've already bought)",
-            "High-value carts → Show premium shipping",
-          ]}
-          footer={
-            "A store doing 100 orders/day at $80 AOV can generate an extra $45,000-75,000 annually from this single placement."
-          }
         />
 
         <BlogList
-          heading={`The AI Advantage: Perfect Pairing`}
+          heading={`Example: A home decor store homepage shows:`}
           items={[
-            "Bought running shoes → Show moisture-wicking socks",
-            `Bought camera → Show memory card bundle`,
-            "Bought skincare set → Show matching moisturizer",
+            "Trending: Top-rated wall art and mirrors",
+            `For You: Items matching previous browsing (modern minimalist style)`,
+            "Recently Viewed: The products they looked at last visit",
           ]}
-          footer={`Not random cross-sells, but intelligent pairings that feel like "of course I need that."`}
         />
 
-        <p className="font-bold">Implementation Best Practices</p>
+        <p className="font-bold">Collection Page Strategy: Smart Filtering</p>
         <p className="">
-          DO: ✓ Show only ONE product (no choice paralysis) ✓ Offer 20-30%
-          discount (exclusive incentive) ✓ Use urgent language ("Add now while
-          we pack your order") ✓ Make "no thanks" option small but visible
-        </p>
-        <p className="">
-          DON'T: ✗ Show expensive items (keep it $10-40 range) ✗ Redirect to
-          product pages (kills conversion) ✗ Show multiple options (decision
-          fatigue) ✗ Make it hard to decline (breeds resentment)
+          Collection pages are where AI recommendations truly shine. Instead of
+          showing static product lists, use intelligent recommendations to:
         </p>
 
-        <p className="font-bold">Quick Win</p>
+        <BlogList
+          heading={`"You Might Like" Sidebar:`}
+          items={[
+            "Shows 4-6 products matching the collection theme",
+            `Uses AI to understand style preferences from browsing`,
+            "Updates dynamically as they scroll",
+          ]}
+        />
+        <BlogList
+          heading={`"Complete the Set" Bundles:`}
+          items={[
+            "Groups related collection items into discounted sets",
+            `Placed at the top of collection pages`,
+            "Increases multi-item purchases by 28%",
+          ]}
+        />
+
+        <p className="font-bold">The AI Difference: Understanding Intent</p>
         <p className="">
-          Even a basic implementation adding one complementary product at 25%
-          off typically gets 12-18% acceptance. That's instant revenue from
-          existing traffic.
+          Traditional recommendation engines show "popular in this category." AI
+          text-embedding goes deeper:
         </p>
+
+        <BlogList
+          heading={`Start Simple:`}
+          items={[
+            `Add "Best Sellers" to homepage (static, easy to implement)`,
+            `Enable "Recently Viewed" across all pages`,
+            `Upgrade to AI-powered "Recommended For You" for returning visitors`,
+          ]}
+        />
+
+        <BlogList
+          heading={`Advanced:`}
+          items={[
+            `Dynamic collection page sidebars`,
+            `Style-based filtering across categories`,
+            `Personalized homepage layouts for repeat customers`,
+          ]}
+        />
+
+        <p className="font-bold">Conversion Impact</p>
+        <p className="">
+          While homepage recommendations don't directly drive sales, they create
+          the discovery that leads to purchases:
+        </p>
+
+        <BlogList
+          footer={`These are high-intent visitors in the making.
+`}
+          items={[
+            `43% longer site sessions`,
+            `2.3X more product pages viewed`,
+            `18% higher eventual conversion rate`,
+          ]}
+        />
       </section>
     </div>
   );
