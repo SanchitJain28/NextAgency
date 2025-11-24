@@ -398,7 +398,8 @@ const FinalCTASection = () => {
           Ready to get started?
         </h2>
         <p className="text-lg opacity-90 max-w-2xl mx-auto">
-          Let's transform your Shopify store into a high-performing revenue machine.
+          Let&apos;s transform your Shopify store into a high-performing revenue
+          machine.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
