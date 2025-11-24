@@ -15,11 +15,10 @@ import {
   Sparkles,
 } from "lucide-react";
 import Link from "next/link";
-import React from "react";
 // Using MagicUI Globe component with interactive features
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import { InteractiveGlobe } from "@/components/InteractiveGlobe";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "ScaleFront - Elite Shopify Development Agency",
@@ -69,11 +68,11 @@ export default function HomePage() {
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-16 pb-24 md:pt-24 md:pb-32">
+    <section className="relative pt-20 pb-28 md:pt-32 md:pb-40">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side: Text content */}
-          <div className="space-y-6">
+          <div className="space-y-8">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary">
               <Sparkles className="h-3.5 w-3.5" />
@@ -81,27 +80,35 @@ const HeroSection = () => {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-tight text-balance">
               Build Shopify stores that convert
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Custom development, headless commerce, and performance optimization for ambitious Shopify brands.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
+              Custom development, headless commerce, and performance
+              optimization for ambitious Shopify brands.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 pt-2">
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                asChild
+              >
                 <Link href="/contact-us" className="flex items-center gap-2">
                   Start a project
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
-              <Button variant="outline" className="border-border hover:bg-secondary hover:text-secondary-foreground" asChild>
-                <Link href="#services">
-                  View services
-                </Link>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-border hover:bg-secondary hover:text-secondary-foreground bg-transparent"
+                asChild
+              >
+                <Link href="#services">View services</Link>
               </Button>
             </div>
 
@@ -141,15 +148,17 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="py-16 border-y border-border bg-secondary">
+    <section className="py-20 border-y border-border bg-secondary/30">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+              <div className="text-3xl md:text-5xl font-bold text-primary mb-2">
                 {stat.value}
               </div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
+              <div className="text-sm md:text-base text-muted-foreground">
+                {stat.label}
+              </div>
             </div>
           ))}
         </div>
@@ -193,32 +202,33 @@ const ServicesOverview = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-background">
+    <section id="services" className="py-24 md:py-32 bg-background">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance">
             Our services
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            From custom apps to headless commerce—we build Shopify solutions that drive results.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            From custom apps to headless commerce—we build Shopify solutions
+            that drive results.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service) => {
             const Icon = service.icon;
             return (
               <div
                 key={service.title}
-                className="group rounded-lg border bg-card p-6 hover:border-primary/50 hover:shadow-lg transition-all"
+                className="group rounded-xl border bg-card p-8 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
               >
-                <div className="inline-flex rounded-lg bg-primary/10 p-3 mb-4">
+                <div className="inline-flex rounded-lg bg-primary/10 p-3 mb-4 group-hover:bg-primary/20 transition-colors">
                   <Icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-semibold text-lg text-card-foreground mb-2">
+                <h3 className="font-semibold text-lg md:text-xl text-card-foreground mb-2">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -226,8 +236,12 @@ const ServicesOverview = () => {
           })}
         </div>
 
-        <div className="mt-12 text-center">
-          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
+        <div className="mt-16 text-center">
+          <Button
+            size="lg"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            asChild
+          >
             <Link href="/contact-us">
               View all services
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -264,17 +278,22 @@ const WhyChooseSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-secondary">
+    <section className="py-24 md:py-32 bg-secondary/30">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance">
               Why work with us
             </h2>
-            <p className="text-lg text-muted-foreground">
-              We build revenue-generating Shopify stores optimized for growth and scale.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              We build revenue-generating Shopify stores optimized for growth
+              and scale.
             </p>
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              asChild
+            >
               <Link href="/about-us">
                 Learn more
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -282,19 +301,23 @@ const WhyChooseSection = () => {
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {reasons.map((reason) => {
               const Icon = reason.icon;
               return (
                 <div
                   key={reason.title}
-                  className="bg-card border border-border rounded-lg p-5 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all"
+                  className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
                 >
                   <div className="rounded-lg bg-primary/10 p-2.5 w-fit mb-3">
                     <Icon className="h-5 w-5 text-primary" />
                   </div>
-                  <h3 className="font-semibold text-base mb-1.5">{reason.title}</h3>
-                  <p className="text-sm text-muted-foreground">{reason.description}</p>
+                  <h3 className="font-semibold text-base md:text-lg mb-1.5">
+                    {reason.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {reason.description}
+                  </p>
                 </div>
               );
             })}
@@ -325,25 +348,32 @@ const ResultsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 md:py-32 bg-background">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance">
             Real results
           </h2>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            Proven track record of delivering measurable growth
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {results.map((result) => (
             <div
               key={result.title}
-              className="bg-card border rounded-lg p-6 hover:shadow-md transition-all"
+              className="bg-card border rounded-xl p-8 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
             >
-              <div className="text-4xl font-bold text-primary mb-3">
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-4">
                 {result.metric}
               </div>
-              <h3 className="text-lg font-semibold mb-2">{result.title}</h3>
-              <p className="text-sm text-muted-foreground">{result.description}</p>
+              <h3 className="text-lg md:text-xl font-semibold mb-2">
+                {result.title}
+              </h3>
+              <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                {result.description}
+              </p>
             </div>
           ))}
         </div>
@@ -376,15 +406,18 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 md:py-32 bg-secondary/30">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance">
             What clients say
           </h2>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            Don&apos;t just take our word for it
+          </p>
         </div>
 
-        <AnimatedTestimonials testimonials={testimonials} />
+        <AnimatedTestimonials testimonials={testimonials} autoplay />
       </div>
     </section>
   );
@@ -392,17 +425,17 @@ const TestimonialsSection = () => {
 
 const FinalCTASection = () => {
   return (
-    <section className="py-24 bg-primary text-primary-foreground">
-      <div className="mx-auto max-w-4xl px-6 text-center space-y-6">
-        <h2 className="text-3xl md:text-4xl font-bold">
+    <section className="py-24 md:py-32 bg-primary text-primary-foreground">
+      <div className="mx-auto max-w-4xl px-6 text-center space-y-8">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-balance">
           Ready to get started?
         </h2>
-        <p className="text-lg opacity-90 max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto leading-relaxed">
           Let&apos;s transform your Shopify store into a high-performing revenue
           machine.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
           <Button
             size="lg"
             variant="secondary"
@@ -418,7 +451,7 @@ const FinalCTASection = () => {
             size="lg"
             variant="outline"
             asChild
-            className="border-2 border-background text-primary-foreground hover:bg-background hover:text-foreground"
+            className="border-2 border-background text-primary-foreground hover:bg-background hover:text-foreground bg-transparent"
           >
             <Link href="/pricing">View pricing</Link>
           </Button>

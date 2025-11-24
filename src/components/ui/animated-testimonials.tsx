@@ -1,59 +1,59 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react"
-import { motion, AnimatePresence } from "framer-motion"
+import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
+import { motion } from "framer-motion";
 
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 type Testimonial = {
-  quote: string
-  name: string
-  designation?: string
-  src?: string
-}
+  quote: string;
+  name: string;
+  designation?: string;
+  src?: string;
+};
 export const AnimatedTestimonials = ({
   testimonials,
   autoplay = false,
 }: {
-  testimonials: Testimonial[]
-  autoplay?: boolean
+  testimonials: Testimonial[];
+  autoplay?: boolean;
 }) => {
-  const [active, setActive] = useState(0)
-  const [isHover, setIsHover] = useState(false)
+  const [active, setActive] = useState(0);
+  const [isHover, setIsHover] = useState(false);
 
   const handleNext = () => {
-    setActive((prev) => (prev + 1) % testimonials.length)
-  }
+    setActive((prev) => (prev + 1) % testimonials.length);
+  };
 
   const handlePrev = () => {
-    setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
+    setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
 
   const isActive = (index: number) => {
-    return index === active
-  }
+    return index === active;
+  };
 
   useEffect(() => {
     if (autoplay && !isHover) {
-      const interval = setInterval(handleNext, 5000)
-      return () => clearInterval(interval)
+      const interval = setInterval(handleNext, 5000);
+      return () => clearInterval(interval);
     }
-  }, [autoplay, isHover])
+  }, [autoplay, isHover]);
 
   const randomRotateY = () => {
-    return Math.floor(Math.random() * 21) - 10
-  }
+    return Math.floor(Math.random() * 21) - 10;
+  };
 
   const onKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
-    if (e.key === "ArrowRight") handleNext()
-    if (e.key === "ArrowLeft") handlePrev()
-  }
+    if (e.key === "ArrowRight") handleNext();
+    if (e.key === "ArrowLeft") handlePrev();
+  };
 
   return (
     <div
-      className="mx-auto mt-6 max-w-sm md:max-w-7xl px-4 md:px-8 lg:px-12 py-6 font-sans antialiased bg-[#FFFFFF] text-[#333333] border border-[#F1F5F9] rounded-lg shadow-lg"
+      className="mx-auto mt-6 max-w-sm md:max-w-4xl px-6 md:px-8 lg:px-12 py-8 font-sans antialiased bg-card text-card-foreground border border-border rounded-xl shadow-sm hover:shadow-md transition-shadow"
       role="region"
       aria-roledescription="carousel"
       aria-label="Testimonials"
@@ -62,7 +62,7 @@ export const AnimatedTestimonials = ({
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
-      <div className="relative grid grid-cols-1 gap-10 md:gap-16 md:grid-cols-2">
+      <div className="relative grid grid-cols-1 gap-10 md:gap-16">
         {/* <div className="relative h-80 w-full">
           <AnimatePresence>
             {testimonials.map((testimonial, index) => (
@@ -115,11 +115,15 @@ export const AnimatedTestimonials = ({
             transition={{ duration: 0.2, ease: "easeInOut" }}
             aria-live="polite"
           >
-            <h3 className="text-2xl font-semibold text-[#333333]">{testimonials[active].name}</h3>
+            <h3 className="text-2xl font-semibold text-foreground">
+              {testimonials[active].name}
+            </h3>
             {testimonials[active].designation ? (
-              <p className="text-sm text-[#333333]/70">{testimonials[active].designation}</p>
+              <p className="text-sm text-muted-foreground">
+                {testimonials[active].designation}
+              </p>
             ) : null}
-            <motion.p className="mt-6 text-base leading-relaxed text-[#333333]">
+            <motion.p className="mt-6 text-base leading-relaxed text-foreground/90">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
@@ -142,21 +146,25 @@ export const AnimatedTestimonials = ({
               <button
                 onClick={handlePrev}
                 aria-label="Previous testimonial"
-                className="group/button flex h-9 w-9 items-center justify-center rounded-full bg-[#F97316] text-white outline-none ring-offset-2 ring-offset-[#FFFFFF] focus:ring-2 focus:ring-[#16A34A] hover:opacity-90 transition"
+                className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground outline-none ring-offset-2 ring-offset-background focus:ring-2 focus:ring-ring hover:bg-primary/90 transition-colors"
               >
-                <IconArrowLeft className="h-5 w-5 text-white transition-transform duration-300 group-hover/button:rotate-12" />
+                <IconArrowLeft className="h-5 w-5 transition-transform duration-300 group-hover/button:rotate-12" />
               </button>
               <button
                 onClick={handleNext}
                 aria-label="Next testimonial"
-                className="group/button flex h-9 w-9 items-center justify-center rounded-full bg-[#F97316] text-white outline-none ring-offset-2 ring-offset-[#FFFFFF] focus:ring-2 focus:ring-[#16A34A] hover:opacity-90 transition"
+                className="group/button flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground outline-none ring-offset-2 ring-offset-background focus:ring-2 focus:ring-ring hover:bg-primary/90 transition-colors"
               >
-                <IconArrowRight className="h-5 w-5 text-white transition-transform duration-300 group-hover/button:-rotate-12" />
+                <IconArrowRight className="h-5 w-5 transition-transform duration-300 group-hover/button:-rotate-12" />
               </button>
             </div>
-            <div className="flex flex-wrap items-center gap-2" role="tablist" aria-label="Testimonial indicators">
+            <div
+              className="flex flex-wrap items-center gap-2"
+              role="tablist"
+              aria-label="Testimonial indicators"
+            >
               {testimonials.map((t, i) => {
-                const activeDot = isActive(i)
+                const activeDot = isActive(i);
                 return (
                   <button
                     key={`${t.name}-${i}`}
@@ -164,16 +172,18 @@ export const AnimatedTestimonials = ({
                     aria-label={`Go to testimonial ${i + 1} ${t.name ? "by " + t.name : ""}`}
                     onClick={() => setActive(i)}
                     className={[
-                      "h-2.5 w-2.5 rounded-full transition",
-                      activeDot ? "bg-[#16A34A]" : "bg-[#F1F5F9] hover:opacity-80",
+                      "h-2.5 w-2.5 rounded-full transition-all",
+                      activeDot
+                        ? "bg-primary w-8"
+                        : "bg-muted hover:bg-muted-foreground/30",
                     ].join(" ")}
                   />
-                )
+                );
               })}
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
