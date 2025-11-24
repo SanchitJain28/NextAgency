@@ -209,8 +209,9 @@ export default function Page() {
         <PlacementTwo />
         <PlacementThree />
         <PlacementFour />
-        <PlacementFive/>
-        <Conclusion />
+        <PlacementFive />
+        <PlacementSixAndSeven />
+        <Conclusion/>
       </article>
     </>
   );
@@ -237,27 +238,27 @@ function Introduction() {
               <p>
                 Every day, thousands of Shopify store owners watch potential
                 revenue slip through their fingers—not because their products
-                aren't good enough, but because they're showing the right
-                products in the wrong places.
+                aren&apos;t good enough, but because they&apos;re showing the
+                right products in the wrong places.
               </p>
 
               <p className="font-semibold">
-                Here's a sobering statistic: the average e-commerce store
+                Here&apos;s a sobering statistic: the average e-commerce store
                 converts at just 2-3%. But stores that strategically place
-                AI-powered product recommendations? They're seeing conversion
-                rates 15-30% higher and average order values that jump by $40-80
-                per transaction.
+                AI-powered product recommendations? They&apos;re seeing
+                conversion rates 15-30% higher and average order values that
+                jump by $40-80 per transaction.
               </p>
 
-              <p>The difference isn't magic. It's placement.</p>
+              <p>The difference isn&apos;t magic. It&apos;s placement.</p>
 
               <p className="font-bold">Why Most Product Recommendations Fail</p>
 
               <p>
-                If you've installed a product recommendation app and been
-                disappointed by the results, you're not alone. Most merchants
-                make the same critical mistake: they treat all recommendation
-                placements as equal.
+                If you&apos;ve installed a product recommendation app and been
+                disappointed by the results, you&apos;re not alone. Most
+                merchants make the same critical mistake: they treat all
+                recommendation placements as equal.
               </p>
             </div>
           </div>
@@ -276,23 +277,23 @@ function Introduction() {
       {/* Section 2: Why AOV Matters */}
       <section className="space-y-6 text-gray-700 leading-relaxed">
         <p>
-          They slap a "You May Also Like" widget on their product page, add a
-          "Customers Also Bought" section to their cart, and wonder why their
-          conversion rates barely budge.
+          They slap a &quot;You May Also Like&quot; widget on their product
+          page, add a &quot;Customers Also Bought&quot; section to their cart,
+          and wonder why their conversion rates barely budge.
         </p>
 
         <p>
-          The truth is, your customer's mindset changes dramatically as they
-          move through your store. Someone browsing a product page is in
-          discovery mode—they're evaluating options and comparing features.
-          Someone at checkout is in commitment mode—they're ready to buy but
-          might need one final nudge.
+          The truth is, your customer&apos;s mindset changes dramatically as
+          they move through your store. Someone browsing a product page is in
+          discovery mode—they&apos;re evaluating options and comparing features.
+          Someone at checkout is in commitment mode—they&apos;re ready to buy
+          but might need one final nudge.
         </p>
 
         <p>
           Showing the same recommendations in both places is like using the same
           sales pitch for a window shopper and someone with their credit card
-          already out. It doesn't work.
+          already out. It doesn&apos;t work.
         </p>
 
         <p className="font-semibold">
@@ -301,22 +302,24 @@ function Introduction() {
 
         <p>
           This is where modern AI-powered recommendation engines change the
-          game. Unlike basic "frequently bought together" algorithms that simply
-          match products based on historical purchase data, AI text-embedding
-          technology understands the semantic relationships between products.
+          game. Unlike basic &quot;frequently bought together&quot; algorithms
+          that simply match products based on historical purchase data, AI
+          text-embedding technology understands the semantic relationships
+          between products.
         </p>
 
         <p>What does this mean in practice? Instead of just knowing that:</p>
 
         <ul className="list-disc list-inside space-y-1">
           <li>
-            A customer viewing an "eco-friendly bamboo yoga mat" might be
-            interested in "sustainable activewear" or "natural cork yoga blocks"
+            A customer viewing an &quot;eco-friendly bamboo yoga mat&quot; might
+            be interested in &quot;sustainable activewear&quot; or &quot;natural
+            cork yoga blocks&quot;
           </li>
           <li>
-            Someone buying a "beginner's yoga mat" needs different
-            recommendations than someone purchasing a "professional 6mm thick
-            mat"
+            Someone buying a &quot;beginner&apos;s yoga mat&quot; needs
+            different recommendations than someone purchasing a
+            &quot;professional 6mm thick mat&quot;
           </li>
           <li>
             The context of their journey (browsing, adding to cart, checking
@@ -329,13 +332,13 @@ function Introduction() {
           suggestions into conversion-driving recommendations.
         </p>
 
-        <p className="font-bold">What You'll Learn in This Guide</p>
+        <p className="font-bold">What You&apos;ll Learn in This Guide</p>
 
         <p>
-          In this comprehensive guide, we're going to break down the 7 most
+          In this comprehensive guide, we&apos;re going to break down the 7 most
           effective product recommendation placements that top-converting
           Shopify stores use to maximize their revenue. For each placement,
-          you'll discover:
+          you&apos;ll discover:
         </p>
 
         <ul className="list-disc list-inside space-y-1">
@@ -350,9 +353,10 @@ function Introduction() {
         </ul>
 
         <p>
-          By the end, you'll have a complete blueprint for placing AI-powered
-          product recommendations throughout your store in a way that feels
-          natural to customers and dramatically increases your bottom line.
+          By the end, you&apos;ll have a complete blueprint for placing
+          AI-powered product recommendations throughout your store in a way that
+          feels natural to customers and dramatically increases your bottom
+          line.
         </p>
       </section>
     </div>
@@ -391,17 +395,17 @@ function PlacementOne() {
 
               <p className="font-semibold">
                 The opportunity: Product pages are where customers are most
-                engaged and curious. They're actively exploring, which makes
-                them incredibly receptive to discovering complementary or
+                engaged and curious. They&apos;re actively exploring, which
+                makes them incredibly receptive to discovering complementary or
                 alternative products.
               </p>
 
               <p>The Psychology: Discovery Mode</p>
 
               <p className="font-bold">
-                When someone lands on a product page, they're in exploration
-                mode. They might love what they see, or they might be uncertain.
-                Either way, they're open to options.
+                When someone lands on a product page, they&apos;re in
+                exploration mode. They might love what they see, or they might
+                be uncertain. Either way, they&apos;re open to options.
               </p>
             </div>
 
@@ -464,9 +468,9 @@ function PlacementOne() {
 
         <p className="font-bold">Why AI Text-Embedding Changes Everything</p>
         <p>
-          Traditional "frequently bought together" logic fails here because it
-          only knows historical data. AI-powered recommendations understand
-          product relationships semantically.
+          Traditional &quot;frequently bought together&quot; logic fails here
+          because it only knows historical data. AI-powered recommendations
+          understand product relationships semantically.
         </p>
 
         <BlogList
@@ -484,14 +488,16 @@ function PlacementOne() {
         <p>Quick Win Implementation</p>
 
         <p className="font-bold">
-          Start with just ONE section: place "Complete Your Look" cross-sells
-          below your Add to Cart button. Use AI-powered matching to ensure
-          relevance. This single change typically adds $8-15 to every order.
+          Start with just ONE section: place &quot;Complete Your Look&quot;
+          cross-sells below your Add to Cart button. Use AI-powered matching to
+          ensure relevance. This single change typically adds $8-15 to every
+          order.
         </p>
       </section>
     </div>
   );
 }
+
 function PlacementTwo() {
   return (
     <div className="space-y-10">
@@ -507,15 +513,15 @@ function PlacementTwo() {
             </h2>
 
             <h3 className="text-2xl font-bold text-red-500">
-              The $67 Opportunity You're Missing
+              The $67 Opportunity You&apos;re Missing
             </h3>
 
             <div className="space-y-4 leading-relaxed">
               <p>
-                Here's a fact that should change how you think about your cart
-                page: customers who reach the cart are 65% more likely to
-                purchase than those still browsing. They've made a decision.
-                Your product is already in their basket.
+                Here&apos;s a fact that should change how you think about your
+                cart page: customers who reach the cart are 65% more likely to
+                purchase than those still browsing. They&apos;ve made a
+                decision. Your product is already in their basket.
               </p>
 
               <p className="font-semibold">
@@ -554,7 +560,7 @@ function PlacementTwo() {
         <p className="font-bold">The Winning Strategy: Low-Friction Add-Ons</p>
         <p>
           Cart page recommendations should focus on quick-add, low-consideration
-          items that complement what's already in the cart.
+          items that complement what&apos;s already in the cart.
         </p>
 
         <BlogList
@@ -621,13 +627,15 @@ function PlacementTwo() {
 
         <p className="font-bold">
           Never show alternatives to items already in the cart. Someone added a
-          blue phone case? Don't suggest a red one—they'll second-guess their
-          choice. Show screen protectors and charging cables instead.
+          blue phone case? Don&apos;t suggest a red one—they&apos;ll
+          second-guess their choice. Show screen protectors and charging cables
+          instead.
         </p>
       </section>
     </div>
   );
 }
+
 function PlacementThree() {
   return (
     <div className="space-y-10">
@@ -745,10 +753,10 @@ function PlacementThree() {
 
         <p className="font-bold">Critical Warning</p>
         <p className="">
-          Never show product alternatives at checkout. Don't suggest "customers
-          who bought X also liked Y." This creates decision paralysis and
-          triggers cart abandonment. Checkout recommendations must be pure
-          additions, never substitutions.
+          Never show product alternatives at checkout. Don&apos;t suggest
+          &quot;customers who bought X also liked Y.&quot; This creates decision
+          paralysis and triggers cart abandonment. Checkout recommendations must
+          be pure additions, never substitutions.
         </p>
 
         <BlogList
@@ -791,28 +799,29 @@ function PlacementFour() {
             </h2>
 
             <h3 className="text-2xl font-bold text-red-500">
-              The 47% Conversion Rate You Didn't Know Existed
+              The 47% Conversion Rate You Didn&apos;t Know Existed
             </h3>
 
             <div className="space-y-4 leading-relaxed">
               <p>
                 Most merchants treat the thank you page as an afterthought—a
-                simple order confirmation and tracking info. But here's what the
-                data reveals: customers on the thank you page convert at 10-15X
-                higher rates than on any other page.
+                simple order confirmation and tracking info. But here&apos;s
+                what the data reveals: customers on the thank you page convert
+                at 10-15X higher rates than on any other page.
               </p>
 
               <p className="font-semibold">
-                Why? Because they've already completed checkout. Their credit
-                card info is saved. The buying friction is eliminated.
+                Why? Because they&apos;ve already completed checkout. Their
+                credit card info is saved. The buying friction is eliminated.
               </p>
 
               <p>The Psychology: The Euphoria Window</p>
               <p>
                 Immediately after purchase, customers experience a brief
-                psychological phenomenon called "post-purchase euphoria"—a
-                feel-good moment where buyer's remorse hasn't kicked in yet and
-                they're still in shopping mode.
+                psychological phenomenon called &quot;post-purchase
+                euphoria&quot;—a feel-good moment where buyer&apos;s remorse
+                hasn&apos;t kicked in yet and they&apos;re still in shopping
+                mode.
               </p>
               <p>
                 This 30-60 second window is pure gold for one-click upsells.
@@ -899,25 +908,27 @@ Regular $40 → Today: $30
         <p className="font-bold">Implementation Best Practices</p>
         <p className="">
           DO: ✓ Show only ONE product (no choice paralysis) ✓ Offer 20-30%
-          discount (exclusive incentive) ✓ Use urgent language ("Add now while
-          we pack your order") ✓ Make "no thanks" option small but visible
+          discount (exclusive incentive) ✓ Use urgent language (&quot;Add now
+          while we pack your order&quot;) ✓ Make &quot;no thanks&quot; option
+          small but visible
         </p>
         <p className="">
-          DON'T: ✗ Show expensive items (keep it $10-40 range) ✗ Redirect to
-          product pages (kills conversion) ✗ Show multiple options (decision
+          DON&apos;T: ✗ Show expensive items (keep it $10-40 range) ✗ Redirect
+          to product pages (kills conversion) ✗ Show multiple options (decision
           fatigue) ✗ Make it hard to decline (breeds resentment)
         </p>
 
         <p className="font-bold">Quick Win</p>
         <p className="">
           Even a basic implementation adding one complementary product at 25%
-          off typically gets 12-18% acceptance. That's instant revenue from
+          off typically gets 12-18% acceptance. That&apos;s instant revenue from
           existing traffic.
         </p>
       </section>
     </div>
   );
 }
+
 function PlacementFive() {
   return (
     <div className="space-y-10">
@@ -945,13 +956,13 @@ function PlacementFive() {
             <div className="space-y-4 leading-relaxed">
               <p>
                 Your homepage gets the most traffic, but visitors arrive with
-                zero purchase intent. They're exploring, not buying. Collection
-                pages sit somewhere in between—customers browsing categories,
-                comparing options, building wish lists.
+                zero purchase intent. They&apos;re exploring, not buying.
+                Collection pages sit somewhere in between—customers browsing
+                categories, comparing options, building wish lists.
               </p>
 
               <p className="font-semibold">
-                These "discovery zones" need a fundamentally different
+                These &quot;discovery zones&quot; need a fundamentally different
                 recommendation strategy than product or cart pages.
               </p>
 
@@ -1046,8 +1057,8 @@ function PlacementFive() {
 
         <p className="font-bold">The AI Difference: Understanding Intent</p>
         <p className="">
-          Traditional recommendation engines show "popular in this category." AI
-          text-embedding goes deeper:
+          Traditional recommendation engines show &quot;popular in this
+          category.&quot; AI text-embedding goes deeper:
         </p>
 
         <BlogList
@@ -1070,8 +1081,8 @@ function PlacementFive() {
 
         <p className="font-bold">Conversion Impact</p>
         <p className="">
-          While homepage recommendations don't directly drive sales, they create
-          the discovery that leads to purchases:
+          While homepage recommendations don&apos;t directly drive sales, they
+          create the discovery that leads to purchases:
         </p>
 
         <BlogList
@@ -1088,89 +1099,266 @@ function PlacementFive() {
   );
 }
 
-
-function Conclusion() {
+function PlacementSixAndSeven() {
   return (
-    <div className="space-y-4 mt-12">
+    <div className="space-y-10">
       {/* Section 1: Intro */}
-      <section>
-        <div className="lg:flex gap-8">
+      <section className="space-y-6">
+        <div className="lg:flex gap-10">
+          {/* Text */}
           <Image
-            src="/blog/reducing-cart-abondonment/image7.png"
+            src="/blog/proven-product-recommendation-placements/image6.png"
             height={1200}
-            width={1200}
+            width={900}
             alt="Reducing Cart Abandonment"
-            className="mb-8 border lg:rounded-xl w-full self-start"
+            className="mb-8 border mx-auto rounded-xl self-start"
           />
-          <div className="lg:flex lg:flex-col lg:px-0 px-4">
-            <h2 className="text-3xl text-red-600 font-bold mb-4">
-              Your Next Steps (Keep It Simple) Here&apos;s what I want you to do
-              this week
+          <div className="lg:flex lg:flex-col space-y-6">
+            <h2 className="text-3xl font-bold">
+              Placement #6 & #7 - Exit-Intent Popups & Email Recommendations
+              (The Recovery Strategy)
             </h2>
-            <div className="space-y-3 mb-4"></div>
-            <div className="space-y-3 mb-4">
-              <h3 className="text-2xl font-bold mb-4">Step 1</h3>
+
+            <h3 className="text-2xl font-bold text-red-500">
+              Capturing the 98% Who Don&apos;t Buy (Yet)
+            </h3>
+
+            <div className="space-y-4 leading-relaxed">
               <p>
-                Install an AI-powered product recommendation app that uses text
-                embeddings (not just basic tag matching).
+                Here&apos;s the harsh reality: only 2-3% of first-time visitors
+                make a purchase. The other 97-98%? They leave. Browse
+                competitors. Forget about you.
               </p>
-            </div>
-            <div className="space-y-3 mb-4">
-              <h3 className="text-2xl font-bold mb-4">Step 2</h3>
-              <p>
-                Set up recommendations on your top 5 best-selling product pages
-                first. Don&apos;t try to do everything at once.
+
+              <p className="font-semibold">
+                Unless you capture them at two critical moments: the exit, and
+                the inbox.
               </p>
-            </div>{" "}
-            <div className="space-y-3 mb-4">
-              <h3 className="text-2xl font-bold mb-4">Step 3</h3>
+
+              <p>Placement #6: Exit-Intent Popups (The Last Chance)</p>
+
+              <p>The Psychology: Loss Aversion</p>
               <p>
-                Add a &quot;Frequently Bought Together&quot; widget to your cart
-                page.
-              </p>
-            </div>{" "}
-            <div className="space-y-3 mb-4">
-              <h3 className="text-2xl font-bold mb-4">Step 4</h3>
-              <p>
-                Track your baseline cart abandonment rate and AOV today, so you
-                have something to compare against in 30 days.
-              </p>
-            </div>
-            <div className="space-y-3 mb-4">
-              <p>
-                That&apos;s it. Start there. Once you see results, expand to
-                more products and pages. But honestly? Just implementing
-                recommendations on your top products and cart page will capture
-                70% of the potential value.
-              </p>
-            </div>{" "}
-            <div className="space-y-3 mb-4">
-              <p>
-                I&apos;ve been doing this for years now, and I still get excited
-                when I see a store owner message me saying, &quot;We just had
-                our first $10K day, and the average order had 2.3 products
-                instead of 1.1.&quot; That&apos;s the power of smart
-                recommendations—turning single-item purchases into complete
-                solutions.
-              </p>
-            </div>
-            <div className="space-y-3 mb-4">
-              <p>
-                Your customers want to buy more from you. They want complete
-                solutions. They just need a little help discovering what they
-                didn&apos;t know they needed. Give them that help with
-                intelligent recommendations, and watch both your revenue and
-                customer satisfaction soar.
-              </p>
-            </div>
-            <div className="space-y-3 mb-4">
-              <p>
-                Now go implement this, track your results, and thank me later
-                when your cart abandonment drops and your revenue climbs.
-                You&apos;ve got this.
+                When someone moves their mouse to close the tab, they&apos;re
+                about to abandon potential value. An exit-intent popup creates a
+                pattern interrupt—a final chance to keep them engaged.
               </p>
             </div>
           </div>
+
+          {/* Image */}
+        </div>
+      </section>
+
+      {/* Section 2: Why AOV Matters */}
+      <section className="space-y-4 text-gray-700 leading-relaxed">
+        <BlogList
+          heading={"What Works:"}
+          items={[
+            "Discount codes (10-15% off first purchase)",
+            "Free shipping thresholds",
+            "Product recommendations based on viewed items",
+          ]}
+          footer={`The Smart Approach:
+Instead of generic "Wait! Here's 10% off," show:`}
+        />
+        <p className="font-bold">
+          &quot;Don&apos;t Leave Without These!&quot; Based on what you viewed:
+          [3 product thumbnails of items they browsed] Plus get 10% off your
+          first order [Email signup field]
+        </p>
+
+        <BlogList
+          heading={`Key Stats:`}
+          items={[
+            "8-12% capture rate on exit popups",
+            `25-30% of captured emails convert within 30 days`,
+            "$12-18 average order value increase when showing recommendations",
+          ]}
+        />
+
+        <p className="font-semibold">The AI Advantage: Personalized Recovery</p>
+
+        <BlogList
+          heading={`AI tracks their session and shows the most relevant products:`}
+          items={[
+            "Viewed 1 product → Show that + 2 complementary items",
+            "Browsed category → Show 3 best from that category",
+            `Viewed multiple → Show the highest-engagement items`,
+          ]}
+          footer={"This beats generic popups by 3-4X in engagement."}
+        />
+
+        <p>Placement #7: Email Recommendations (The Long Game)</p>
+
+        <p>The Strategy: Abandoned Browse Recovery</p>
+        <p>
+          Most stores only send abandoned cart emails. Smart stores send
+          abandoned browse emails with AI-powered recommendations.
+        </p>
+
+        <BlogList
+          heading={`1. Abandoned Browse (24 hours later)`}
+          items={[
+            `Subject: "Still thinking about these?"`,
+            `Shows 3-4 products they viewed`,
+            `Includes discount incentive`,
+            `18-25% open rate, 8-12% click rate`,
+          ]}
+        />
+
+        <BlogList
+          heading={`2. Back-in-Stock Alerts`}
+          items={[
+            "Automated when viewed out-of-stock items return",
+            `Includes similar alternatives`,
+            "35-40% open rate, 22-28% conversion",
+          ]}
+        />
+        <BlogList
+          heading={`3. Personalized Weekly Digest
+
+`}
+          items={[
+            `"Picked for you" based on browsing history`,
+            `6-8 AI-recommended products`,
+            "15-20% open rate, growing loyalty",
+          ]}
+        />
+
+        <p className="font-bold">Email Recommendation Best Practices</p>
+
+        <BlogList
+          heading={`Visual Format:`}
+          items={[
+            "Hero product (their most-viewed item)",
+            `3-4 supporting recommendations in grid`,
+            `Single clear CTA: "View Your Picks`,
+          ]}
+        />
+        <BlogList
+          heading={`AI Personalization:`}
+          items={[
+            "Match their browsing style/price range",
+            `Show new arrivals in their preferred categories`,
+            "Avoid products already purchased",
+            `Time recommendations to their browsing patterns`,
+          ]}
+        />
+
+        <p className="font-bold">Example: Activewear store email:</p>
+        <p className="">
+          &quot;Your Workout Gear Awaits&quot; You were looking at: [Running
+          shoes image] We also picked these for you: [Compression leggings]
+          [Sports bra] [Gym bag] Get 15% off your first order
+        </p>
+
+        <p className="font-bold">The Combined Power</p>
+
+        <BlogList
+          heading={`When used together, exit-intent + email recommendations create a conversion funnel:`}
+          items={[
+            `Exit popup captures email (8-12% of visitors)`,
+            `Abandoned browse email sent next day (25% open rate)`,
+            `Weekly recommendations keep them engaged (15% open rate)`,
+          ]}
+        />
+
+        <BlogList
+          heading={`Real Results: Stores implementing both see:`}
+          items={[
+            `42% recovery of browse abandoners within 30 days`,
+            `$28-45 average order from email-driven sales`,
+            `3.2X lifetime value vs non-engaged visitors`,
+          ]}
+        />
+
+        <p className="font-bold">Implementation Priority</p>
+        <p className="">
+          Week 1: Set up exit-intent popup with email capture Week 2: Add
+          abandoned browse email automation Week 3: Enable AI-powered product
+          recommendations in both Week 4: Launch weekly personalized digest
+        </p>
+
+        <BlogList
+          footer={`Common Mistakes to Avoid.`}
+          items={[
+            `✗ Showing too many products (stick to 3-4)`,
+            `✗ Generic recommendations (use AI personalization)`,
+            `✗ Aggressive discount stacking (devalues your brand)`,
+            `✗ Too frequent emails (weekly maximum for digests)`,
+          ]}
+        />
+      </section>
+    </div>
+  );
+}
+
+function Conclusion() {
+  return (
+    <div className="space-y-10">
+      {/* Section 1: Intro */}
+      <section className="space-y-6">
+        <div className="lg:flex gap-10">
+          {/* Text */}
+          <Image
+            src="/blog/proven-product-recommendation-placements/image6.png"
+            height={1200}
+            width={900}
+            alt="Reducing Cart Abandonment"
+            className="mb-8 border mx-auto rounded-xl self-start"
+          />
+          <div className="lg:flex lg:flex-col space-y-6">
+            <h2 className="text-3xl font-bold">
+              Your 30-Day Implementation Roadmap
+            </h2>
+
+            <h3 className="text-2xl font-bold text-red-500">
+              From Strategy to Sales
+            </h3>
+
+            <div className="space-y-4 leading-relaxed">
+              <p>
+                You now have the complete blueprint for product recommendation
+                placements that actually convert. Here&apos;s your action plan:
+              </p>
+
+              <p className="">
+                Week 1-2: Start with product pages and cart
+                recommendations—these drive immediate ROI with minimal setup.
+              </p>
+
+              <p>
+                Week 3: Add thank you page upsells for instant post-purchase
+                revenue.
+              </p>
+
+              <p>
+                Week 4: Implement exit-intent and email automation for long-term
+                growth.
+              </p>
+              <p className="font-bold">The AI Advantage</p>
+              <p>
+                Manual product matching is time-consuming and inaccurate.
+                AI-powered text-embedding recommendations understand semantic
+                relationships between products, automatically showing the most
+                relevant suggestions at each placement—no manual curation
+                needed.
+              </p>
+              <p>
+                Ready to transform your store? Implementing even 2-3 of these
+                placements typically increases revenue by 18-32% within the
+                first month.
+              </p>
+              <p>
+                The best time to start was yesterday. The second best time is
+                now.
+              </p>
+              <p>Start converting more browsers into buyers today.Retry</p>
+            </div>
+          </div>
+
+          {/* Image */}
         </div>
       </section>
     </div>
