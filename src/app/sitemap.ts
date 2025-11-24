@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.topcomsolutions.com'
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://scalefront.io'
   const lastModified = new Date()
 
   return [

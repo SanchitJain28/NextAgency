@@ -16,58 +16,58 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Top Com Agency - Headless WooCommerce & Next.js eCommerce Development",
-    template: "%s | Top Com Agency - Fast eCommerce Solutions"
+    default: "ScaleFront - Elite Shopify Development Agency | Custom Apps & Themes",
+    template: "%s | ScaleFront - Expert Shopify Solutions"
   },
   icons:{
-    icon:"/logo.icoP"
+    icon:"/logo.ico"
   },
-  description: "Expert Next.js eCommerce development agency specializing in headless WooCommerce, Shopify migrations, and lightning-fast online stores. Transform your slow eCommerce site into a high-performance Next.js powerhouse.",
+  description: "Elite Shopify development agency specializing in headless commerce, custom apps, theme development, and performance optimization. Transform your Shopify store with cutting-edge solutions.",
   keywords: [
-    "headless WooCommerce Next.js",
-    "WooCommerce speed optimization", 
-    "Shopify headless frontend",
-    "WooCommerce Next.js migration",
-    "Next.js eCommerce development",
-    "WooCommerce Shopify hybrid",
-    "headless eCommerce India",
-    "WooCommerce frontend performance",
-    "Next.js for eCommerce scalability",
-    "Shopify speed optimization India",
-    "how to make WooCommerce faster with Next.js",
-    "best headless CMS for WooCommerce 2025",
-    "WooCommerce SEO optimization Next.js",
-    "eCommerce website speed optimization"
+    "Shopify development agency",
+    "custom Shopify apps",
+    "Shopify theme development",
+    "headless Shopify commerce",
+    "Shopify Plus migration",
+    "Shopify performance optimization",
+    "Shopify mobile apps",
+    "Shopify API development",
+    "Shopify conversion optimization",
+    "Shopify third-party integrations",
+    "Shopify store audit",
+    "Shopify consulting services",
+    "Shopify backend development",
+    "custom Shopify features"
   ],
-  authors: [{ name: "Top Com Agency" }],
-  creator: "Top Com Agency",
-  publisher: "Top Com Agency",
-  metadataBase: new URL("https://topcomagency.com"), // Replace with your actual domain
+  authors: [{ name: "ScaleFront" }],
+  creator: "ScaleFront",
+  publisher: "ScaleFront",
+  metadataBase: new URL("https://scalefront.io"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://topcomagency.com", // Replace with your actual domain
-    siteName: "Top Com Agency",
-    title: "Top Com Agency - Headless WooCommerce & Next.js eCommerce Experts",
-    description: "Transform your slow WooCommerce or Shopify store into a lightning-fast Next.js eCommerce website. Expert headless development, migrations, and performance optimization.",
+    url: "https://scalefront.io",
+    siteName: "ScaleFront",
+    title: "ScaleFront - Elite Shopify Development Agency",
+    description: "Transform your Shopify store with expert development services: custom apps, headless commerce, theme customization, and performance optimization.",
     images: [
       {
-        url: "/og-image.jpg", // Add your OG image
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Top Com Agency - Fast Next.js eCommerce Development",
+        alt: "ScaleFront - Elite Shopify Development Agency",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Top Com Agency - Headless WooCommerce & Next.js eCommerce Development",
-    description: "Expert Next.js eCommerce development. Make your WooCommerce/Shopify store 10x faster with headless architecture.",
-    images: ["/twitter-image.jpg"], // Add your Twitter image
-    creator: "@topcomagency", // Replace with your actual Twitter handle
+    title: "ScaleFront - Elite Shopify Development Agency",
+    description: "Expert Shopify development: custom apps, headless commerce, theme development, and performance optimization for growing brands.",
+    images: ["/twitter-image.jpg"],
+    creator: "@scalefront",
   },
   robots: {
     index: true,
@@ -81,17 +81,15 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code", // Add your Google Search Console verification
-    // yandex: "your-yandex-verification-code",
-    // yahoo: "your-yahoo-verification-code",
+    google: "your-google-verification-code",
   },
   category: "technology",
-  classification: "eCommerce Development Agency",
+  classification: "Shopify Development Agency",
   other: {
     "geo.region": "IN",
     "geo.country": "India",
     "geo.placename": "India",
-    "contact": "contact@topcomagency.com", // Replace with your actual email
+    "contact": "hello@scalefront.io",
     "distribution": "global",
     "rating": "general",
     "robots": "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1",
@@ -117,15 +115,15 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Top Com Agency",
-              "description": "Expert Next.js eCommerce development agency specializing in headless WooCommerce and Shopify solutions",
-              "url": "https://topcomagency.com",
-              "logo": "https://topcomagency.com/logo.png",
+              "name": "ScaleFront",
+              "description": "Elite Shopify development agency specializing in custom apps, headless commerce, theme development, and performance optimization",
+              "url": "https://scalefront.io",
+              "logo": "https://scalefront.io/logo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+91-XXXXXXXXXX", // Add your phone number
+                "telephone": "+919650296375",
                 "contactType": "customer service",
-                "email": "contact@topcomagency.com",
+                "email": "hello@scalefront.io",
                 "availableLanguage": ["English", "Hindi"]
               },
               "address": {
@@ -134,35 +132,53 @@ export default function RootLayout({
                 "addressRegion": "India"
               },
               "sameAs": [
-                "https://linkedin.com/company/topcomagency", // Add your social profiles
-                "https://twitter.com/topcomagency",
-                "https://github.com/topcomagency"
+                "https://linkedin.com/company/scalefront",
+                "https://twitter.com/scalefront",
+                "https://github.com/scalefront"
               ],
-              "offers": {
-                "@type": "Service",
-                "serviceType": "eCommerce Development",
-                "description": "Headless WooCommerce and Shopify development with Next.js"
-              }
+              "makesOffer": [
+                {
+                  "@type": "Service",
+                  "serviceType": "Headless Commerce Development",
+                  "description": "Custom headless Shopify solutions for enterprise-level performance"
+                },
+                {
+                  "@type": "Service",
+                  "serviceType": "Custom Shopify App Development",
+                  "description": "Tailored Shopify apps to extend your store's functionality"
+                },
+                {
+                  "@type": "Service",
+                  "serviceType": "Shopify Theme Development",
+                  "description": "Custom theme development and optimization"
+                },
+                {
+                  "@type": "Service",
+                  "serviceType": "Shopify Plus Migration",
+                  "description": "Seamless migration to Shopify Plus"
+                }
+              ]
             })
           }}
         />
-        
-        {/* Additional service-specific structured data */}
+
+        {/* Professional Services structured data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Service",
-              "name": "Headless WooCommerce Next.js Development",
-              "description": "Transform your slow WooCommerce store into a lightning-fast Next.js eCommerce website",
-              "provider": {
-                "@type": "Organization",
-                "name": "Top Com Agency"
+              "@type": "ProfessionalService",
+              "name": "ScaleFront",
+              "image": "https://scalefront.io/logo.png",
+              "description": "Expert Shopify development agency offering custom apps, headless commerce, and performance optimization",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "IN"
               },
-              "areaServed": "India",
-              "serviceType": "Web Development",
-              "category": "eCommerce Development"
+              "priceRange": "$$",
+              "telephone": "+919650296375",
+              "url": "https://scalefront.io"
             })
           }}
         />

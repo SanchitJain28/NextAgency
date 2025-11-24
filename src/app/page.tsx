@@ -1,1467 +1,426 @@
 import { Header } from "@/components/header-footer/Header";
 import { Button } from "@/components/ui/button";
 import {
+  ArrowRight,
   CheckCircle2,
-  Flame,
-  Globe,
-  LineChart,
-  Linkedin,
-  Mail,
-  Phone,
-  Plug,
+  Zap,
+  Code2,
+  Palette,
+  TrendingUp,
   Rocket,
-  Twitter,
+  Users,
+  Award,
+  Star,
+  Globe2,
+  Sparkles,
 } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+// Using MagicUI Globe component with interactive features
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
-import DottedSeparator from "@/components/seperators/DottedSeperator";
+import { InteractiveGlobe } from "@/components/InteractiveGlobe";
 import { Metadata } from "next";
 
-// SEO Metadata for the page
 export const metadata: Metadata = {
-  title:
-    "Headless WooCommerce Next.js Agency | Fast eCommerce Migrations India",
+  title: "ScaleFront - Elite Shopify Development Agency",
   description:
-    "Expert Next.js agency for headless WooCommerce & Shopify migrations. Speed optimization & SEO-friendly eCommerce solutions.",
+    "Transform your Shopify store with expert development. Custom apps, headless commerce, and performance optimization that drives real results.",
   keywords: [
-    "headless WooCommerce Next.js",
-    "WooCommerce speed optimization",
-    "Shopify headless frontend",
-    "WooCommerce Next.js migration",
-    "Next.js eCommerce development",
-    "WooCommerce Shopify hybrid",
-    "headless eCommerce India",
-    "WooCommerce frontend performance",
-    "Next.js for eCommerce scalability",
-    "Shopify speed optimization India",
+    "Shopify development agency",
+    "custom Shopify apps",
+    "Shopify theme development",
+    "headless Shopify",
   ],
-  authors: [{ name: "TopCom solutions" }],
-  creator: "TopCom solutions",
-  publisher: "TopCom solutions",
-  category: "Web Development",
   openGraph: {
-    title:
-      "Headless WooCommerce Next.js Development Agency | Fast eCommerce Migration",
+    title: "ScaleFront - Elite Shopify Development Agency",
     description:
-      "Transform your slow WooCommerce or Shopify store into a lightning-fast headless eCommerce site with Next.js. Expert migration services in India.",
-    url: "https://topcomsolutions.com",
-    siteName: "TopCom solutions",
+      "Expert Shopify development that drives growth. Custom apps, headless commerce, and performance optimization.",
+    url: "https://scalefront.io",
+    siteName: "ScaleFront",
     images: [
       {
-        url: "https://topcomsolutions.com/og-image.jpg",
+        url: "https://scalefront.io/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Headless WooCommerce Next.js Development Services",
+        alt: "ScaleFront",
       },
     ],
-    locale: "en_IN",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Headless WooCommerce Next.js Development Agency",
-    description:
-      "Expert headless eCommerce development services. Migrate from WooCommerce/Shopify to Next.js for 3x faster performance.",
-    images: ["https://topcomsolutions.com/twitter-image.jpg"],
-    creator: "@youragencyhandle",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  verification: {
-    google: "your-google-verification-code",
-  },
   alternates: {
-    canonical: "https://topcomsolutions.com",
+    canonical: "https://scalefront.io",
   },
 };
 
-function StructuredData() {
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Your Agency Name",
-    description:
-      "Expert Next.js development agency specializing in headless WooCommerce and Shopify migrations for faster eCommerce performance",
-    url: "https://yourdomain.com",
-    logo: "https://yourdomain.com/logo.png",
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+91-XXXXXXXXXX",
-      contactType: "Customer Service",
-      areaServed: "IN",
-      availableLanguage: ["English", "Hindi"],
-    },
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Delhi",
-      addressRegion: "Delhi",
-      addressCountry: "IN",
-    },
-    sameAs: [
-      "https://linkedin.com/company/youragency",
-      "https://twitter.com/youragency",
-    ],
-  };
-
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: "Headless WooCommerce Next.js Development",
-    description:
-      "Professional headless eCommerce development services including WooCommerce to Next.js migration, Shopify headless frontend development, and eCommerce speed optimization",
-    provider: {
-      "@type": "Organization",
-      name: "Your Agency Name",
-    },
-    areaServed: {
-      "@type": "Country",
-      name: "India",
-    },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "eCommerce Development Services",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Headless WooCommerce Development",
-            description:
-              "Convert your WooCommerce store to a headless setup with Next.js frontend for 3x faster performance",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Shopify Headless Migration",
-            description:
-              "Migrate your Shopify store to a headless architecture using Next.js for improved speed and SEO",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "eCommerce Speed Optimization",
-            description:
-              "Optimize your WooCommerce or Shopify store for faster loading times and better user experience",
-          },
-        },
-      ],
-    },
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "How to make WooCommerce faster with Next.js?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "By implementing a headless architecture where Next.js serves as the frontend and WooCommerce as the headless CMS backend, you can achieve 3x faster loading speeds through static site generation, optimized images, and reduced server response times.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What is the best headless CMS for WooCommerce in 2025?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Next.js paired with WooCommerce REST API or GraphQL provides the best headless CMS solution in 2025, offering superior performance, SEO benefits, and developer experience for eCommerce stores.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What is the Shopify Next.js migration cost in India?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Shopify to Next.js migration costs in India typically range from ₹50,000 to ₹2,00,000 depending on store complexity, custom features, and data migration requirements. Contact us for a detailed quote based on your specific needs.",
-        },
-      },
-    ],
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://yourdomain.com",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Headless eCommerce Development",
-        item: "https://yourdomain.com",
-      },
-    ],
-  };
-
+export default function HomePage() {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
-      />
-    </>
-  );
-}
-
-function SEOContent() {
-  return (
-    <div className="hidden">
-      {/* Hidden content for SEO - contains target keywords naturally */}
-      <h1>Headless WooCommerce Next.js Development Agency in India</h1>
-      <h2>WooCommerce Speed Optimization with Next.js Frontend</h2>
-      <h2>Shopify Headless Migration Services</h2>
-      <h2>Next.js eCommerce Development for Scalability</h2>
-      
-      <section>
-        <h3>How to Make WooCommerce Faster with Next.js</h3>
-        <p>
-          Transform your slow WooCommerce store into a lightning-fast eCommerce site using our headless WooCommerce Next.js solution. 
-          Our WooCommerce speed optimization techniques can improve your site performance by up to 300%, leading to better user experience and higher conversion rates.
-        </p>
-      </section>
-
-      <section>
-        <h3>Best Headless CMS for WooCommerce in 2025</h3>
-        <p>
-          Next.js combined with WooCommerce as a headless CMS provides the ultimate solution for modern eCommerce development. 
-          Our expert team specializes in WooCommerce Next.js migration, ensuring your store maintains all functionality while gaining significant performance improvements.
-        </p>
-      </section>
-
-      <section>
-        <h3>Shopify Next.js Migration Cost in India</h3>
-        <p>
-          Looking for affordable Shopify headless frontend development? Our Shopify Next.js migration services in India offer cost-effective solutions 
-          for businesses wanting to upgrade their eCommerce performance. We provide transparent pricing for Shopify speed optimization projects.
-        </p>
-      </section>
-
-      <section>
-        <h3>WooCommerce SEO Optimization with Next.js</h3>
-        <p>
-          Our headless eCommerce solutions include comprehensive WooCommerce SEO optimization, ensuring your migrated store ranks higher in search results. 
-          Next.js for eCommerce scalability provides better Core Web Vitals scores and improved search engine visibility.
-        </p>
-      </section>
-
-      <section>
-        <h3>WooCommerce 500+ Products Site Optimization</h3>
-        <p>
-          Handling large catalogs? Our WooCommerce frontend performance optimization is perfect for stores with 500+ products. 
-          We implement advanced caching strategies and optimize product loading for massive eCommerce sites using our proven WooCommerce Shopify hybrid approach.
-        </p>
-      </section>
-    </div>
-  );
-}
-
-
-export default function page() {
-  return (
-    <div>
-      <StructuredData/>
-      <SEOContent/>
+    <div className="min-h-screen bg-background overflow-hidden">
       <Header />
       <HeroSection />
-      <ProblemSolutionSection />
-      <BenefitsSection />
-      <CaseStudySection />
-      <ServicesSection />
-      <BlogPostSection />
+      <StatsSection />
+      <ServicesOverview />
+      <WhyChooseSection />
+      <ResultsSection />
       <TestimonialsSection />
-      <CTAFooterSection />
+      <FinalCTASection />
     </div>
   );
 }
 
 const HeroSection = () => {
   return (
-    <section
-      aria-labelledby="hero-heading"
-      className="bg-white text-[#333333] "
-    >
-      <div className="mx-auto max-w-7xl px-6 pt-8 sm:py-20">
-        <header className="space-y-2">
-          <h2
-            id="hero-heading"
-            className="text-pretty text-3xl font-bold leading-tight tracking-tight md:text-4xl"
-          >
-            {
-              "⚡ Supercharge Your WooCommerce & Shopify with Next.js Headless Frontend"
-            }
-          </h2>
+    <section className="relative pt-16 pb-24 md:pt-24 md:pb-32">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left side: Text content */}
+          <div className="space-y-6">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary">
+              <Sparkles className="h-3.5 w-3.5" />
+              <span>Trusted by 50+ brands worldwide</span>
+            </div>
 
-          <p className="max-w-3xl text-pretty text-base leading-normal md:text-lg">
-            {
-              "Struggling with a slow WooCommerce or Shopify store? We help brands migrate to headless WooCommerce with Next.js and build lightning-fast, SEO-optimized Next.js eCommerce websites that scale."
-            }
-          </p>
-        </header>
+            {/* Main Headline */}
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground">
+              Build Shopify stores that convert
+            </h1>
 
-        {/* Benefit bullets */}
-        <div className="mt-5 rounded-md bg-[#F1F5F9] p-4 sm:p-5">
-          <ul className="grid gap-2 sm:grid-cols-2">
-            <li className="flex items-start gap-2">
-              <span className="mt-0.5 rounded bg-white p-1.5">
-                <Rocket className="h-4 w-4 text-[#16A34A]" aria-hidden="true" />
-              </span>
-              <p className="text-sm leading-relaxed">
-                <span className="font-semibold">
-                  WooCommerce Speed Optimization
-                </span>{" "}
-                – Make your store load in under 2 seconds.
-              </p>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-0.5 rounded bg-white p-1.5">
-                <Flame className="h-4 w-4 text-[#16A34A]" aria-hidden="true" />
-              </span>
-              <p className="text-sm leading-relaxed">
-                <span className="font-semibold">Shopify Headless Frontend</span>{" "}
-                – Modern, fast, and conversion-focused.
-              </p>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-0.5 rounded bg-white p-1.5">
-                <Globe className="h-4 w-4 text-[#16A34A]" aria-hidden="true" />
-              </span>
-              <p className="text-sm leading-relaxed">
-                <span className="font-semibold">
-                  Next.js for eCommerce Scalability
-                </span>{" "}
-                – Handle 500+ products without slowdown.
-              </p>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-0.5 rounded bg-white p-1.5">
-                <LineChart
-                  className="h-4 w-4 text-[#16A34A]"
-                  aria-hidden="true"
-                />
-              </span>
-              <p className="text-sm leading-relaxed">
-                <span className="font-semibold">
-                  WooCommerce SEO Optimization with Next.js
-                </span>{" "}
-                – Rank higher, get more clicks.
-              </p>
-            </li>
-            <li className="flex items-start gap-2 sm:col-span-2">
-              <span className="mt-0.5 rounded bg-white p-1.5">
-                <Plug className="h-4 w-4 text-[#16A34A]" aria-hidden="true" />
-              </span>
-              <p className="text-sm leading-relaxed">
-                <span className="font-semibold">
-                  WooCommerce & Shopify Hybrid Solutions
-                </span>{" "}
-                – Best of both worlds.
-              </p>
-            </li>
-          </ul>
-        </div>
+            {/* Subheadline */}
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Custom development, headless commerce, and performance optimization for ambitious Shopify brands.
+            </p>
 
-        {/* CTAs */}
-        <div className="mt-5 flex flex-col gap-2 sm:flex-row sm:items-center">
-          <Button
-            variant="outline"
-            size="sm"
-            asChild
-            className="bg-[#F97316] text-black hover:opacity-90 focus-visible:ring-offset-2 focus-visible:outline-none"
-          >
-            <Link href="/contact-us" aria-describedby="audit-desc">
-              {"👉 Get a Free Speed Audit"}
-            </Link>
-          </Button>
-          <p id="audit-desc" className="sr-only">
-            Free performance evaluation of your WooCommerce or Shopify store.
-          </p>
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
+                <Link href="/contact-us" className="flex items-center gap-2">
+                  Start a project
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+              <Button variant="outline" className="border-border hover:bg-secondary hover:text-secondary-foreground" asChild>
+                <Link href="#services">
+                  View services
+                </Link>
+              </Button>
+            </div>
 
-          <Button
-            asChild
-            size="sm"
-            variant="outline"
-            className="border-[#F97316] text-[#333333] hover:bg-[#F1F5F9] focus-visible:ring-offset-2 bg-transparent"
-          >
-            <Link href="/contact-us">{"📞 Talk to Our Headless Experts"}</Link>
-          </Button>
+            {/* Trust indicators */}
+            <div className="flex flex-wrap items-center gap-6 pt-6 text-sm text-muted-foreground">
+              <div className="flex items-center gap-1.5">
+                <Star className="h-4 w-4 fill-primary text-primary" />
+                <span>4.9/5 rating</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="h-4 w-4 text-primary" />
+                <span>100+ projects</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Globe2 className="h-4 w-4 text-primary" />
+                <span>Global clients</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right side: Interactive Globe */}
+          <div className="hidden lg:flex lg:items-center lg:justify-center relative h-[600px]">
+            <InteractiveGlobe />
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-const ProblemSolutionSection = () => {
-  const items = [
-    {
-      title: "WooCommerce speed optimization",
-      desc: "Pages that load under 2 seconds.",
-    },
-    {
-      title: "Custom UI freedom for Shopify",
-      desc: "No more cookie-cutter themes.",
-    },
-    {
-      title: "Scalability for 500+ products",
-      desc: "Optimized product pages, lightning-fast filtering, and seamless checkout.",
-    },
-    {
-      title: "Smart Sell Alpha AI",
-      desc: "Recommendations to boost conversions.",
-    },
+const StatsSection = () => {
+  const stats = [
+    { value: "250%", label: "Avg. revenue increase" },
+    { value: "60%", label: "Faster page loads" },
+    { value: "50+", label: "Happy clients" },
+    { value: "99%", label: "Client satisfaction" },
   ];
+
   return (
-    <section
-      aria-labelledby="slow-store-heading"
-      className="w-full bg-[#FFFFFF]"
-    >
-      <DottedSeparator />
-      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 md:py-16">
-        <h3
-          id="slow-store-heading"
-          className="text-pretty text-2xl md:text-3xl font-semibold"
-          style={{ color: "#333333" }}
-        >
-          Is Your eCommerce Store Slow and Losing Sales?
-        </h3>
-
-        <p
-          className="mt-4 text-base leading-relaxed"
-          style={{ color: "#333333" }}
-        >
-          If your WooCommerce store with 500+ products takes 5 seconds or more
-          to load, you’re already losing up to 20% of customers who won’t wait.
-          On the other hand, Shopify websites often feel fast but come with
-          frustrating limits on customization—making it hard to build a unique
-          brand experience.
-        </p>
-
-        <p
-          className="mt-4 text-base leading-relaxed"
-          style={{ color: "#333333" }}
-        >
-          This is exactly where our Headless WooCommerce with Next.js frontend
-          comes in. By migrating your WooCommerce or Shopify store to a Next.js
-          eCommerce setup, you get:
-        </p>
-
-        <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {items.map((it) => (
-            <li key={it.title} className="flex items-start gap-3">
-              <span
-                className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full"
-                aria-hidden="true"
-                style={{ backgroundColor: "#16A34A" }}
-              >
-                <svg viewBox="0 0 20 20" className="h-4 w-4 mx-1" fill="none">
-                  <path
-                    d="M5 10.5l3 3 7-7"
-                    stroke="#FFFFFF"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </span>
-              <p className="text-sm font-medium" style={{ color: "#333333" }}>
-                {it.title} <span className="font-normal">→ {it.desc}</span>
-              </p>
-            </li>
+    <section className="py-16 border-y border-border bg-secondary">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          {stats.map((stat) => (
+            <div key={stat.label} className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                {stat.value}
+              </div>
+              <div className="text-sm text-muted-foreground">{stat.label}</div>
+            </div>
           ))}
-        </ul>
-
-        <p
-          className="mt-6 text-base leading-relaxed"
-          style={{ color: "#333333" }}
-        >
-          In short: whether you’re searching for how to make a WooCommerce
-          website fast or how to make Shopify faster, our solution bridges the
-          gap—speed like Shopify, flexibility like WooCommerce, powered by
-          Next.js.
-        </p>
-
-        <div className="mt-8">
-          <Link
-            href="/blog/headless-woocommerce-with-nextjs"
-            className="inline-flex items-center gap-1.5 text-sm font-medium underline decoration-2 underline-offset-4 hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 rounded"
-            style={{ color: "#F97316" }}
-          >
-            <span>Learn How We Fix Slow Stores</span>
-            <span aria-hidden="true">→</span>
-          </Link>
         </div>
       </div>
     </section>
   );
 };
 
-const BenefitsSection = () => {
-  function IconCheck(props: React.SVGProps<SVGSVGElement>) {
-    return (
-      <svg
-        aria-hidden="true"
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        className="shrink-0"
-        {...props}
-      >
-        <path
-          d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
-          stroke="#16A34A"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M22 4 12 14.01l-3-3"
-          stroke="#16A34A"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    );
-  }
-  return (
-    <div>
-      <section
-        aria-labelledby="benefits-heading"
-        className="bg-white text-[#333333]"
-      >
-        <DottedSeparator />
-        <div className="mx-auto max-w-7xl px-6  md:py-12 ">
-          <header className="space-y-2">
-            <h2
-              id="benefits-heading"
-              className="font-sans text-pretty text-2xl md:text-3xl font-semibold leading-tight"
-            >
-              Get the Best of WooCommerce and Shopify with Headless Next.js
-            </h2>
-            <p className="font-sans text-sm md:text-base leading-relaxed">
-              Tired of choosing between WooCommerce’s control and Shopify’s
-              speed? With our headless Next.js eCommerce solution, you don’t
-              have to pick one—you get both. If you’ve ever searched “how to
-              make a WooCommerce website fast” or “how to make a Shopify website
-              fast,” this is the answer you’ve been looking for.
-            </p>
-          </header>
-
-          <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-            <article className="rounded-lg border border-[#F1F5F9] bg-white p-4 md:p-5">
-              <div className="flex items-start gap-3">
-                <IconCheck />
-                <div className="space-y-1">
-                  <h3 className="font-sans text-base font-medium">
-                    Speed That Sells
-                  </h3>
-                  <p className="font-sans text-sm leading-relaxed">
-                    WooCommerce sites with 500+ products often crawl at 5+
-                    seconds per load. Our Next.js frontend brings that down to
-                    under 1 second with SSR/SSG, making your store 2–5x faster.
-                    Faster speed = higher conversions.
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <article className="rounded-lg border border-[#F1F5F9] bg-white p-4 md:p-5">
-              <div className="flex items-start gap-3">
-                <IconCheck />
-                <div className="space-y-1">
-                  <h3 className="font-sans text-base font-medium">
-                    SEO That Dominates
-                  </h3>
-                  <p className="font-sans text-sm leading-relaxed">
-                    Google loves speed and server-side rendering. With a
-                    headless WooCommerce or Shopify frontend, your dynamic
-                    product pages rank higher, bringing in more traffic without
-                    extra ad spend.
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <article className="rounded-lg border border-[#F1F5F9] bg-white p-4 md:p-5">
-              <div className="flex items-start gap-3">
-                <IconCheck />
-                <div className="space-y-1">
-                  <h3 className="font-sans text-base font-medium">
-                    Scalable & Reliable
-                  </h3>
-                  <p className="font-sans text-sm leading-relaxed">
-                    Whether you have 500 products or 50,000, Next.js scales
-                    effortlessly. Handle 10,000+ visitors at once without
-                    crashing—perfect for sales seasons and ad campaigns.
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <article className="rounded-lg border border-[#F1F5F9] bg-white p-4 md:p-5">
-              <div className="flex items-start gap-3">
-                <IconCheck />
-                <div className="space-y-1">
-                  <h3 className="font-sans text-base font-medium">
-                    Customization Without Limits
-                  </h3>
-                  <p className="font-sans text-sm leading-relaxed">
-                    Shopify often limits design flexibility, while WooCommerce
-                    slows down with heavy themes. With our Next.js frontend, you
-                    get Shopify-level speed + WooCommerce’s open-source freedom
-                    to design exactly what you want.
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <article className="rounded-lg border border-[#F1F5F9] bg-white p-4 md:p-5 md:col-span-2">
-              <div className="flex items-start gap-3">
-                <IconCheck />
-                <div className="space-y-1">
-                  <h3 className="font-sans text-base font-medium">
-                    Smarter Sales with Sell Alpha
-                  </h3>
-                  <p className="font-sans text-sm leading-relaxed">
-                    For Shopify stores, we add Sell Alpha AI
-                    recommendations—increasing average order value by 10–20%
-                    automatically.
-                  </p>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div className="mt-6 border-t border-[#F1F5F9] pt-4">
-            <Link
-              href="/blog/best-of-woo-and-shopify"
-              className="font-sans text-sm md:text-base text-[#F97316] underline underline-offset-4 hover:opacity-90"
-            >
-              See the Benefits in Action – Read how a headless Next.js frontend
-              can transform your WooCommerce store
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-const CaseStudySection = () => {
-  return (
-    <div>
-      <section
-        aria-labelledby="case-studies"
-        className="bg-white text-[#333333]"
-      >
-        <DottedSeparator />
-        <div className="mx-auto max-w-7xl px-6  md:py-14">
-          <header className="mb-6 md:mb-8">
-            <h3
-              id="case-studies"
-              className="text-pretty text-2xl md:text-3xl font-semibold"
-            >
-              Real Stores, Real Results
-            </h3>
-            <p className="mt-2 text-sm md:text-base leading-relaxed">
-              When it comes to headless WooCommerce and Shopify websites with
-              Next.js, results speak louder than promises. Here’s how we’ve
-              helped real businesses transform speed, conversions, and user
-              experience:
-            </p>
-          </header>
-
-          {/* WooCommerce Case Study */}
-          <article
-            aria-labelledby="woo-cs-title"
-            className="border-t border-[#F1F5F9] pt-6 md:pt-8"
-          >
-            <h3 id="woo-cs-title" className="text-lg md:text-xl font-semibold">
-              WooCommerce Case Study
-            </h3>
-            <p className="mt-2 text-sm md:text-base leading-relaxed">
-              A growing bookstore with 500+ products was stuck at 5-second load
-              times. After migrating to a headless WooCommerce frontend with
-              Next.js, the site now loads in just 1 second—a 5x performance
-              boost. The result?
-            </p>
-
-            <ul className="mt-3 grid gap-2">
-              <li className="flex items-start gap-2 text-sm">
-                <CheckCircle2
-                  className="h-4 w-4 mt-0.5 shrink-0 text-[#16A34A]"
-                  aria-hidden="true"
-                />
-                <span>20% more sales</span>
-              </li>
-              <li className="flex items-start gap-2 text-sm">
-                <CheckCircle2
-                  className="h-4 w-4 mt-0.5 shrink-0 text-[#16A34A]"
-                  aria-hidden="true"
-                />
-                <span>Higher Google rankings</span>
-              </li>
-              <li className="flex items-start gap-2 text-sm">
-                <CheckCircle2
-                  className="h-4 w-4 mt-0.5 shrink-0 text-[#16A34A]"
-                  aria-hidden="true"
-                />
-                <span>Happier customers</span>
-              </li>
-            </ul>
-
-            <div
-              aria-label="WooCommerce Quick Stats"
-              className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3"
-            >
-              <div className="rounded-lg border border-zinc-300 bg-white p-4">
-                <p className="text-xs font-medium">Load time</p>
-                <p className="mt-1 text-lg md:text-xl font-semibold">5s → 1s</p>
-              </div>
-              <div className="rounded-lg border border-zinc-300 bg-white p-4">
-                <p className="text-xs font-medium">Sales growth</p>
-                <p className="mt-1 text-lg md:text-xl font-semibold">+20%</p>
-              </div>
-              <div className="rounded-lg border border-zinc-300 bg-white p-4">
-                <p className="text-xs font-medium">Products</p>
-                <p className="mt-1 text-lg md:text-xl font-semibold">500+</p>
-              </div>
-            </div>
-          </article>
-
-          {/* Shopify Case Study */}
-          <article
-            aria-labelledby="shopify-cs-title"
-            className="border-t border-[#F1F5F9] pt-6 md:pt-8 mt-6 md:mt-8"
-          >
-            <h3
-              id="shopify-cs-title"
-              className="text-lg md:text-xl font-semibold"
-            >
-              Shopify Case Study
-            </h3>
-            <p className="mt-2 text-sm md:text-base leading-relaxed">
-              A fashion brand on Shopify wanted faster speeds and smarter
-              upselling. We built a custom Next.js Shopify storefront, powered
-              by Sell Alpha AI product recommendations. The results?
-            </p>
-
-            <ul className="mt-3 grid gap-2">
-              <li className="flex items-start gap-2 text-sm">
-                <CheckCircle2
-                  className="h-4 w-4 mt-0.5 shrink-0 text-[#16A34A]"
-                  aria-hidden="true"
-                />
-                <span>15% more conversions</span>
-              </li>
-              <li className="flex items-start gap-2 text-sm">
-                <CheckCircle2
-                  className="h-4 w-4 mt-0.5 shrink-0 text-[#16A34A]"
-                  aria-hidden="true"
-                />
-                <span>Higher average order value</span>
-              </li>
-              <li className="flex items-start gap-2 text-sm">
-                <CheckCircle2
-                  className="h-4 w-4 mt-0.5 shrink-0 text-[#16A34A]"
-                  aria-hidden="true"
-                />
-                <span>Smoother checkout</span>
-              </li>
-            </ul>
-
-            <div
-              aria-label="Shopify Quick Stats"
-              className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3"
-            >
-              <div className="rounded-lg border border-zinc-300 bg-white p-4">
-                <p className="text-xs font-medium">Conversions</p>
-                <p className="mt-1 text-lg md:text-xl font-semibold">+15%</p>
-              </div>
-              <div className="rounded-lg border border-zinc-300 bg-white p-4">
-                <p className="text-xs font-medium">Avg. order value</p>
-                <p className="mt-1 text-lg md:text-xl font-semibold">+12%</p>
-              </div>
-              <div className="rounded-lg border border-zinc-300 bg-white p-4">
-                <p className="text-xs font-medium">Page loads</p>
-                <p className="mt-1 text-lg md:text-xl font-semibold">
-                  60% faster
-                </p>
-              </div>
-            </div>
-          </article>
-
-          {/* Why It Works */}
-          <article
-            aria-labelledby="why-works"
-            className="border-t border-[#F1F5F9] pt-6 md:pt-8 mt-6 md:mt-8"
-          >
-            <h3 id="why-works" className="text-lg md:text-xl font-semibold">
-              Why It Works
-            </h3>
-            <ul className="mt-3 grid gap-2">
-              <li className="flex items-start gap-2 text-sm">
-                <CheckCircle2
-                  className="h-4 w-4 mt-0.5 shrink-0 text-[#16A34A]"
-                  aria-hidden="true"
-                />
-                <span>18–23% higher conversions</span>
-              </li>
-              <li className="flex items-start gap-2 text-sm">
-                <CheckCircle2
-                  className="h-4 w-4 mt-0.5 shrink-0 text-[#16A34A]"
-                  aria-hidden="true"
-                />
-                <span>Up to 60% faster load times</span>
-              </li>
-              <li className="flex items-start gap-2 text-sm">
-                <CheckCircle2
-                  className="h-4 w-4 mt-0.5 shrink-0 text-[#16A34A]"
-                  aria-hidden="true"
-                />
-                <span>SEO-optimized, scalable stores</span>
-              </li>
-            </ul>
-          </article>
-
-          {/* CTA */}
-          <div className="mt-6 md:mt-8">
-            <Link
-              href="/contact-us"
-              className="inline-flex items-center gap-2 text-[#F97316] underline underline-offset-4 hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F97316] rounded-sm"
-            >
-              Get Your Success Story: Ready to scale your WooCommerce or Shopify
-              website with headless Next.js? Contact us today
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-const ServicesSection = () => {
-  return (
-    <section aria-labelledby="services-heading" className="w-full bg-white">
-      <DottedSeparator />
-      <div className="mx-auto max-w-7xl px-4  md:py-14">
-        <header className="max-w-3xl">
-          <h3
-            id="services-heading"
-            className="text-balance text-2xl font-semibold text-[#333333] md:text-3xl"
-          >
-            Our Headless Next.js Solutions for WooCommerce and Shopify
-          </h3>
-          <p className="mt-3 text-pretty text-sm leading-relaxed text-[#333333] md:text-base">
-            Looking to take your online store to the next level? We specialize
-            in WooCommerce Next.js migration and Shopify headless development,
-            built for speed, scalability, and sales growth.
-          </p>
-        </header>
-
-        {/* Services: 3 Cards */}
-        <div className="mt-8 grid grid-cols-1 gap-4 md:mt-10 md:grid-cols-3 md:gap-6">
-          {/* Migration */}
-          <article className="rounded-lg border border-[#F1F5F9] bg-white p-4">
-            <div className="flex items-center gap-2">
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded-sm bg-[#16A34A]/10">
-                {/* check icon */}
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                  className="text-[#16A34A]"
-                >
-                  <path
-                    d="M7.629 13.233L3.9 9.504l1.414-1.414 2.315 2.315 6.06-6.06 1.414 1.414-7.474 7.474z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </span>
-              <h3 className="text-sm font-semibold text-[#333333]">
-                Migration
-              </h3>
-            </div>
-            <p className="mt-3 text-sm leading-relaxed text-[#333333]">
-              Transform your store with a headless Next.js frontend while
-              keeping the backend you know. For WooCommerce, keep your familiar
-              dashboard with Shopify-like performance. For Shopify, get a
-              lightning-fast custom storefront.
-            </p>
-            <p className="mt-3 text-sm font-medium text-[#333333]">
-              Pricing starts at ₹75,000 and goes up to ₹5,00,000, depending on
-              features and scale.
-            </p>
-            <p className="sr-only">
-              SEO keyword: WooCommerce Next.js migration cost
-            </p>
-          </article>
-
-          {/* Maintenance */}
-          <article className="rounded-lg border border-[#F1F5F9] bg-white p-4">
-            <div className="flex items-center gap-2">
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded-sm bg-[#16A34A]/10">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                  className="text-[#16A34A]"
-                >
-                  <path
-                    d="M7.629 13.233L3.9 9.504l1.414-1.414 2.315 2.315 6.06-6.06 1.414 1.414-7.474 7.474z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </span>
-              <h3 className="text-sm font-semibold text-[#333333]">
-                Maintenance
-              </h3>
-            </div>
-            <p className="mt-3 text-sm leading-relaxed text-[#333333]">
-              A high-performing store needs ongoing care. We provide eCommerce
-              maintenance in India to keep your site secure, optimized, and
-              blazing fast.
-            </p>
-            <p className="mt-3 text-sm font-medium text-[#333333]">
-              Plans start at ₹5,000/month and go up to ₹30,000/month, based on
-              your support needs.
-            </p>
-          </article>
-
-          {/* Sell Alpha for Shopify */}
-          <article className="rounded-lg border border-[#F1F5F9] bg-white p-4">
-            <div className="flex items-center gap-2">
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded-sm bg-[#16A34A]/10">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                  className="text-[#16A34A]"
-                >
-                  <path
-                    d="M7.629 13.233L3.9 9.504l1.414-1.414 2.315 2.315 6.06-6.06 1.414 1.414-7.474 7.474z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </span>
-              <h3 className="text-sm font-semibold text-[#333333]">
-                Sell Alpha for Shopify
-              </h3>
-            </div>
-            <p className="mt-3 text-sm leading-relaxed text-[#333333]">
-              Boost conversions with Sell Alpha AI—Shopify plugins for related
-              products, “Frequently Bought Together,” and AI-powered search.
-            </p>
-            <p className="mt-3 text-sm font-medium text-[#333333]">
-              With Shopify headless migrations, we include 3 months of Sell
-              Alpha free.
-            </p>
-          </article>
-        </div>
-
-        {/* Pricing table */}
-        <div className="mt-10 rounded-xl border border-[#F1F5F9]">
-          <div className="grid grid-cols-1 divide-y divide-[#F1F5F9] md:grid-cols-3 md:divide-x md:divide-y-0">
-            {/* Basic */}
-            <div className="p-5">
-              <div className="flex items-center justify-between">
-                <h3 className="text-sm font-semibold text-[#333333]">Basic</h3>
-              </div>
-              <p className="mt-3 text-2xl font-semibold text-[#333333]">
-                ₹75,000
-              </p>
-              <p className="text-xs text-[#333333]">Migration</p>
-              <p className="mt-2 text-base font-semibold text-[#333333]">
-                ₹5,000<span className="text-sm font-normal">/month</span>
-              </p>
-              <p className="text-xs text-[#333333]">Maintenance</p>
-              <ul className="mt-4 space-y-2 text-sm text-[#333333]">
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 inline-flex h-4 w-4 items-center justify-center rounded-[3px] bg-[#16A34A]/10">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 20 20"
-                      className="text-[#16A34A]"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M7.629 13.233L3.9 9.504l1.414-1.414 2.315 2.315 6.06-6.06 1.414 1.414-7.474 7.474z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
-                  Headless Next.js storefront
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 inline-flex h-4 w-4 items-center justify-center rounded-[3px] bg-[#16A34A]/10">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 20 20"
-                      className="text-[#16A34A]"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M7.629 13.233L3.9 9.504l1.414-1.414 2.315 2.315 6.06-6.06 1.414 1.414-7.474 7.474z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
-                  Core pages & speed optimization
-                </li>
-              </ul>
-            </div>
-
-            {/* Standard */}
-            <div className="p-5">
-              <div className="flex items-center justify-between">
-                <h3 className="text-sm font-semibold text-[#333333]">
-                  Standard
-                </h3>
-                <span className="rounded-md bg-[#16A34A]/10 px-2 py-0.5 text-xs font-medium text-[#16A34A]">
-                  Popular
-                </span>
-              </div>
-              <p className="mt-3 text-2xl font-semibold text-[#333333]">
-                ₹2,50,000
-              </p>
-              <p className="text-xs text-[#333333]">Migration</p>
-              <p className="mt-2 text-base font-semibold text-[#333333]">
-                ₹15,000<span className="text-sm font-normal">/month</span>
-              </p>
-              <p className="text-xs text-[#333333]">Maintenance</p>
-              <ul className="mt-4 space-y-2 text-sm text-[#333333]">
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 inline-flex h-4 w-4 items-center justify-center rounded-[3px] bg-[#16A34A]/10">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 20 20"
-                      className="text-[#16A34A]"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M7.629 13.233L3.9 9.504l1.414-1.414 2.315 2.315 6.06-6.06 1.414 1.414-7.474 7.474z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
-                  Enhanced pages + SEO setup
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 inline-flex h-4 w-4 items-center justify-center rounded-[3px] bg-[#16A34A]/10">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 20 20"
-                      className="text-[#16A34A]"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M7.629 13.233L3.9 9.504l1.414-1.414 2.315 2.315 6.06-6.06 1.414 1.414-7.474 7.474z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
-                  Performance & analytics
-                </li>
-              </ul>
-            </div>
-
-            {/* Premium */}
-            <div className="p-5">
-              <div className="flex items-center justify-between">
-                <h3 className="text-sm font-semibold text-[#333333]">
-                  Premium
-                </h3>
-              </div>
-              <p className="mt-3 text-2xl font-semibold text-[#333333]">
-                ₹5,00,000
-              </p>
-              <p className="text-xs text-[#333333]">Migration</p>
-              <p className="mt-2 text-base font-semibold text-[#333333]">
-                ₹30,000<span className="text-sm font-normal">/month</span>
-              </p>
-              <p className="text-xs text-[#333333]">Maintenance</p>
-              <ul className="mt-4 space-y-2 text-sm text-[#333333]">
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 inline-flex h-4 w-4 items-center justify-center rounded-[3px] bg-[#16A34A]/10">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 20 20"
-                      className="text-[#16A34A]"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M7.629 13.233L3.9 9.504l1.414-1.414 2.315 2.315 6.06-6.06 1.414 1.414-7.474 7.474z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
-                  Advanced SEO & personalization
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 inline-flex h-4 w-4 items-center justify-center rounded-[3px] bg-[#16A34A]/10">
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 20 20"
-                      className="text-[#16A34A]"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M7.629 13.233L3.9 9.504l1.414-1.414 2.315 2.315 6.06-6.06 1.414 1.414-7.474 7.474z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </span>
-                  Complex catalogs & integrations
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA line */}
-        <div className="mt-8 flex flex-col items-start justify-between gap-3 rounded-lg border border-[#F1F5F9] bg-white p-4 md:flex-row md:items-center">
-          <p className="text-pretty text-sm leading-relaxed text-[#333333] md:text-base">
-            Request a Quote today and discover why businesses trust us for
-            WooCommerce Next.js migration and Shopify headless pricing
-            solutions.
-          </p>
-          <Link
-            href="/contact-us"
-            className="inline-flex items-center justify-center rounded-md bg-[#F97316] px-4 py-2 text-sm font-semibold text-black transition-opacity hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#16A34A] focus:ring-offset-2"
-          >
-            Request a Quote
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-const BlogPostSection = () => {
-  type Post = {
-    title: string;
-    description: string;
-    href: string;
-  };
-  const posts: Post[] = [
+const ServicesOverview = () => {
+  const services = [
     {
-      title:
-        "Ultimate Guide to Headless WooCommerce with Next.js: Boost Speed and SEO in 2025",
-      description:
-        "Discover how headless eCommerce helps you optimize WooCommerce speed, scale beyond 500+ products, and improve search rankings.",
-      href: "/blog/headless-woocommerce-with-nextjs",
+      icon: Zap,
+      title: "Headless Commerce",
+      description: "Lightning-fast storefronts with Next.js",
     },
     {
-      title:
-        "Why a Next.js Headless Frontend is the Best Way to Scale Your Large WooCommerce Store (500+ Products)",
-      description:
-        "Learn the best WooCommerce SEO optimization with Next.js strategies to improve speed, conversions, and long‑term growth.",
-      href: "/blog/nextjs-headless-frontend",
+      icon: Code2,
+      title: "Custom Apps",
+      description: "Tailored solutions for your business",
     },
     {
-      title:
-        "How a Headless Next.js Frontend Gives Your WooCommerce Store the Best of WooCommerce and Shopify",
-      description:
-        "Explore how a WooCommerce–Shopify hybrid gives you Shopify‑like speed with WooCommerce flexibility.",
-      href: "/blog/best-of-woo-and-shopify",
+      icon: Palette,
+      title: "Theme Development",
+      description: "Beautiful, high-converting themes",
+    },
+    {
+      icon: TrendingUp,
+      title: "Conversion Optimization",
+      description: "Features that boost revenue",
+    },
+    {
+      icon: Rocket,
+      title: "Performance",
+      description: "Core Web Vitals optimization",
+    },
+    {
+      icon: Award,
+      title: "Shopify Plus",
+      description: "Enterprise-level solutions",
     },
   ];
-  return (
-    <div className="">
-      <section aria-labelledby="insights-heading" className="bg-white">
-        <DottedSeparator />
-        <div className="mx-auto max-w-7xl  px-6  md:py-12">
-          <header className="mb-6 md:mb-8">
-            <h2
-              id="insights-heading"
-              className="text-balance text-xl font-semibold text-[#333333] md:text-2xl"
-            >
-              Learn How to Transform Your eCommerce Store
-            </h2>
-            <p className="mt-2 max-w-2xl text-sm leading-6 text-[#333333]">
-              Stay ahead in 2025 with our expert insights on headless
-              WooCommerce Next.js development, WooCommerce–Shopify hybrid
-              performance, and Next.js eCommerce tips. Whether you’re fixing a
-              slow WooCommerce store or planning a Shopify headless frontend
-              migration, our blog shows you proven ways to boost speed,
-              scalability, and SEO.
-            </p>
-          </header>
 
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
-            {posts.map((post) => (
-              <article
-                key={post.title}
-                className="flex h-full flex-col rounded-lg border border-[#F1F5F9] bg-white p-4"
+  return (
+    <section id="services" className="py-24 bg-background">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="text-center space-y-4 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            Our services
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            From custom apps to headless commerce—we build Shopify solutions that drive results.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service) => {
+            const Icon = service.icon;
+            return (
+              <div
+                key={service.title}
+                className="group rounded-lg border bg-card p-6 hover:border-primary/50 hover:shadow-lg transition-all"
               >
-                <div className="mb-3">
-                  <span className="inline-flex items-center rounded-full bg-[#F1F5F9] px-2 py-0.5 text-xs font-medium text-[#16A34A]">
-                    Featured
-                  </span>
+                <div className="inline-flex rounded-lg bg-primary/10 p-3 mb-4">
+                  <Icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-pretty text-base font-semibold leading-6 text-[#333333]">
-                  <Link
-                    href={post.href}
-                    className="hover:underline focus:outline-none focus-visible:underline"
-                  >
-                    {post.title}
-                  </Link>
+                <h3 className="font-semibold text-lg text-card-foreground mb-2">
+                  {service.title}
                 </h3>
-                <p className="mt-2 flex-1 text-sm leading-6 text-[#333333]">
-                  {post.description}
+                <p className="text-muted-foreground text-sm">
+                  {service.description}
                 </p>
-                <div className="mt-4">
-                  <Link
-                    href={post.href}
-                    className="text-sm font-medium text-[#F97316] hover:underline focus:outline-none focus-visible:underline"
-                    aria-label={`Read article: ${post.title}`}
-                  >
-                    Read article →
-                  </Link>
-                </div>
-              </article>
-            ))}
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="mt-12 text-center">
+          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
+            <Link href="/contact-us">
+              View all services
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const WhyChooseSection = () => {
+  const reasons = [
+    {
+      icon: Users,
+      title: "Expert team",
+      description: "Deep Shopify knowledge and proven results",
+    },
+    {
+      icon: Award,
+      title: "100+ projects",
+      description: "Successful launches across all industries",
+    },
+    {
+      icon: Zap,
+      title: "Fast delivery",
+      description: "Agile development, rapid deployment",
+    },
+    {
+      icon: CheckCircle2,
+      title: "Quality code",
+      description: "Clean, scalable, maintainable solutions",
+    },
+  ];
+
+  return (
+    <section className="py-24 bg-secondary">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              Why work with us
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              We build revenue-generating Shopify stores optimized for growth and scale.
+            </p>
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
+              <Link href="/about-us">
+                Learn more
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </div>
 
-          <div className="mt-8 flex items-center justify-center">
-            <Link
-              href="/blog"
-              className="inline-flex items-center justify-center rounded-md bg-[#F97316] px-4 py-2 text-sm font-semibold text-black transition-opacity hover:opacity-90 focus:outline-none"
-              aria-label="Read more insights on our blog"
-            >
-              Read More Insights
-            </Link>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {reasons.map((reason) => {
+              const Icon = reason.icon;
+              return (
+                <div
+                  key={reason.title}
+                  className="bg-card border border-border rounded-lg p-5 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all"
+                >
+                  <div className="rounded-lg bg-primary/10 p-2.5 w-fit mb-3">
+                    <Icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-base mb-1.5">{reason.title}</h3>
+                  <p className="text-sm text-muted-foreground">{reason.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+  );
+};
+
+const ResultsSection = () => {
+  const results = [
+    {
+      metric: "+250%",
+      title: "Revenue growth",
+      description: "Fashion brand after headless migration",
+    },
+    {
+      metric: "3.2s",
+      title: "Page load time",
+      description: "Reduced from 8.5s with optimization",
+    },
+    {
+      metric: "+85%",
+      title: "Mobile conversions",
+      description: "Custom mobile app impact",
+    },
+  ];
+
+  return (
+    <section className="py-24 bg-background">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="text-center space-y-4 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            Real results
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {results.map((result) => (
+            <div
+              key={result.title}
+              className="bg-card border rounded-lg p-6 hover:shadow-md transition-all"
+            >
+              <div className="text-4xl font-bold text-primary mb-3">
+                {result.metric}
+              </div>
+              <h3 className="text-lg font-semibold mb-2">{result.title}</h3>
+              <p className="text-sm text-muted-foreground">{result.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 
 const TestimonialsSection = () => {
-  type Testimonial = {
-    quote: string;
-    name: string;
-    designation?: string;
-    src?: string;
-  };
-
-  const testimonials: Testimonial[] = [
+  const testimonials = [
     {
       quote:
-        "Migrating our 1,000-product WooCommerce store to Next.js with Sell Alpha cut load times by 60%. Their WooCommerce migration reviews are true — speed and SEO improved instantly!",
-      name: "Books Store Owner",
-      src: "https://miro.medium.com/v2/resize:fit:1400/1*s_BUOauMhzRZL0dBiCExww.png",
+        "ScaleFront transformed our store with a custom headless solution. Page loads dropped by 60% and conversions increased by 25%. Absolutely stellar work!",
+      name: "Sarah Johnson",
+      designation: "CEO, Fashion Forward",
+      src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400",
     },
     {
       quote:
-        "Shopify with Sell Alpha and a Next.js headless frontend boosted our sales by 15%. It feels like the perfect Shopify–WooCommerce hybrid solution.",
-      name: "Fashion Retail Brand",
+        "The custom app they built revolutionized our inventory management. The team's expertise in Shopify development is unmatched.",
+      name: "Michael Chen",
+      designation: "CTO, TechGear",
     },
     {
       quote:
-        "We trusted Sell Alpha for our WooCommerce to Next.js migration. Our conversion rates jumped 22%, proving why they’re the go-to for Shopify Next.js testimonials.",
-      name: "Electronics Store Founder",
-    },
-    {
-      quote:
-        "Sell Alpha built our WooCommerce Shopify hybrid frontend. Customers noticed faster checkout immediately, and SEO rankings improved within weeks.",
-      name: "Health & Fitness Brand",
-    },
-    {
-      quote:
-        "The team helped us migrate from a slow WooCommerce site to a lightning-fast Next.js eCommerce frontend. Honestly, one of the best investments we’ve made.",
-      name: "Home Decor Store Owner",
-    },
-    {
-      quote:
-        "We wanted scalable growth beyond Shopify’s limits. Sell Alpha gave us a WooCommerce Next.js migration that feels seamless. Our store now handles 10x more traffic without breaking.",
-      name: "Beauty & Skincare Entrepreneur",
+        "Our Shopify Plus migration was seamless. Zero downtime, and our store is now faster and more scalable than ever.",
+      name: "Emily Rodriguez",
+      designation: "Founder, BeautyBox",
     },
   ];
+
   return (
-    <section
-      aria-labelledby="testimonials-title"
-      className="py-10 md:py-12"
-      style={{ backgroundColor: "#FFFFFF", color: "#333333" }}
-    >
-      <DottedSeparator />
-      <div className="mx-auto w-full max-w-7xl px-6">
-        <header className="md:mb-8">
-          <h3
-            id="testimonials-title"
-            className="text-xl md:text-2xl font-semibold text-pretty"
-          >
-            What Our Clients Say
-          </h3>
-          <p className="mt-2 text-sm md:text-base leading-6 text-pretty">
-            Our clients love how WooCommerce migration with Next.js and Shopify
-            Next.js solutions transformed their eCommerce stores. Here’s what
-            they say about working with Sell Alpha:
-          </p>
-        </header>
-
-        <div className="">
-          <AnimatedTestimonials testimonials={testimonials} />
+    <section className="py-24 bg-background">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="text-center space-y-4 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            What clients say
+          </h2>
         </div>
 
-        <div className="mt-6 md:mt-8">
-          <a
-            href="#contact"
-            className="text-sm font-medium underline underline-offset-4"
-            style={{ color: "#F97316" }}
-          >
-            Join Our Happy Clients
-          </a>
-        </div>
+        <AnimatedTestimonials testimonials={testimonials} />
       </div>
     </section>
   );
 };
 
-const CTAFooterSection = () => {
+const FinalCTASection = () => {
   return (
-    <section
-      id="cta-footer"
-      aria-labelledby="cta-footer-heading"
-      className="bg-white"
-    >
-      <DottedSeparator />
-      <div className="mx-auto max-w-7xl px-4  md:py-12">
-        <h3
-          id="cta-footer-heading"
-          className=" text-2xl md:text-3xl font-semibold text-[#333333] text-balance"
-        >
-          Ready to Make Your Store Faster and More Profitable?
-        </h3>
-
-        <p className="mt-3 text-sm md:text-base leading-relaxed text-[#333333]">
-          Get a free WooCommerce speed audit or a Shopify headless consultation
-          today. Our team at [Your Agency Name] specializes in transforming
-          online stores with a Next.js headless frontend and boosting
-          conversions using Sell Alpha. Whether you’re running WooCommerce or
-          Shopify, we’ll show you how to unlock faster performance and higher
-          sales.
+    <section className="py-24 bg-primary text-primary-foreground">
+      <div className="mx-auto max-w-4xl px-6 text-center space-y-6">
+        <h2 className="text-3xl md:text-4xl font-bold">
+          Ready to get started?
+        </h2>
+        <p className="text-lg opacity-90 max-w-2xl mx-auto">
+          Let's transform your Shopify store into a high-performing revenue machine.
         </p>
 
-        <div className="mt-6 flex flex-col sm:flex-row  gap-3">
+        <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
           <Button
+            size="lg"
+            variant="secondary"
             asChild
-            className="bg-[#F97316] text-black hover:opacity-90 focus-visible:ring-2 focus-visible:ring-[#16A34A]"
+            className="bg-background text-foreground hover:bg-background/90 border-0"
           >
-            <Link href="/contact-us" aria-label="Schedule your free audit">
-              Schedule Your Free Audit
+            <Link href="/contact-us">
+              Start a project
+              <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
           <Button
-            asChild
+            size="lg"
             variant="outline"
-            className="border-[#F97316] text-[#333333] hover:bg-[#F1F5F9] focus-visible:ring-2 focus-visible:ring-[#16A34A] bg-transparent"
+            asChild
+            className="border-2 border-background text-primary-foreground hover:bg-background hover:text-foreground"
           >
-            <Link href="/contact-us" aria-label="Try Sell Alpha">
-              Try Sell Alpha
-            </Link>
+            <Link href="/pricing">View pricing</Link>
           </Button>
-        </div>
-
-        <div className="mt-8 pt-6 border-t border-[#F1F5F9]">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div className="flex flex-col gap-2">
-              <a
-                href="mailto:hello@[youragency].com"
-                className="inline-flex items-center gap-2 text-sm text-[#333333] hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#16A34A] rounded"
-              >
-                <Mail className="h-4 w-4 text-[#333333]" aria-hidden="true" />
-                <span className="sr-only">Email</span>
-                <span>hello@[youragency].com</span>
-              </a>
-              <a
-                href="tel:+91XXXXXXXXXX"
-                className="inline-flex items-center gap-2 text-sm text-[#333333] hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#16A34A] rounded"
-              >
-                <Phone className="h-4 w-4 text-[#333333]" aria-hidden="true" />
-                <span className="sr-only">Phone</span>
-                <span>+91-9650296375</span>
-              </a>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <a
-                href="https://x.com/youragency"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit us on X"
-                className="inline-flex items-center gap-2 text-sm text-[#333333] hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#16A34A] rounded"
-              >
-                <Twitter
-                  className="h-4 w-4 text-[#333333]"
-                  aria-hidden="true"
-                />
-                <span>X</span>
-              </a>
-              <a
-                href="https://www.linkedin.com/company/youragency"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit us on LinkedIn"
-                className="inline-flex items-center gap-2 text-sm text-[#333333] hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#16A34A] rounded"
-              >
-                <Linkedin
-                  className="h-4 w-4 text-[#333333]"
-                  aria-hidden="true"
-                />
-                <span>LinkedIn</span>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>

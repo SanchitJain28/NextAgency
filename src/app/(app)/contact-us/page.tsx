@@ -4,63 +4,60 @@ import Header from "@/components/header-footer/Header";
 import { MovingReviews } from "@/components/reviews/MovingReviews";
 import Footer from "@/components/header-footer/Footer";
 import { Metadata } from "next";
+import { Mail, Phone, MessageCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Top Com Agency - Get Your Fast Headless eCommerce Quote Today",
-  description: "Ready to transform your slow WooCommerce or Shopify store? Contact Top Com Agency for expert Next.js headless eCommerce development. Free consultation on WhatsApp +919650296375",
+  title: "Contact ScaleFront - Get Your Free Shopify Consultation",
+  description: "Ready to transform your Shopify store? Contact ScaleFront for expert development, custom apps, and optimization services. Free consultation available.",
   keywords: [
-    "contact headless eCommerce developers",
-    "WooCommerce speed optimization consultation",
-    "Next.js eCommerce development quote",
-    "Shopify headless migration contact",
-    "headless eCommerce agency India",
-    "WooCommerce Next.js consultation",
-    "fast eCommerce website developers contact",
-    "eCommerce speed optimization experts India"
+    "contact Shopify developers",
+    "Shopify development consultation",
+    "custom Shopify apps contact",
+    "Shopify expert contact",
+    "Shopify agency contact",
   ],
   openGraph: {
-    title: "Contact Top Com Agency - Fast Headless eCommerce Development",
-    description: "Get your slow eCommerce store transformed into a lightning-fast Next.js website. Contact our headless WooCommerce & Shopify experts on WhatsApp for free consultation.",
+    title: "Contact ScaleFront - Expert Shopify Development",
+    description: "Get your Shopify store optimized by expert developers. Contact us for custom apps, headless commerce, and performance optimization.",
     type: "website",
   },
   alternates: {
-    canonical: "/contact",
+    canonical: "/contact-us",
   },
 };
 
-const PHONE_E164 = "919650296375"; // E.164 without &apos;+&apos; for wa.me
-const DISPLAY_PHONE = "+919650296375";
+const PHONE_E164 = "919650296375";
+const DISPLAY_PHONE = "+91-965-029-6375";
 const TEL_INTERNATIONAL = "+919650296375";
+const EMAIL = "hello@scalefront.io";
 
 function WhatsAppButtons() {
   const waBase = `https://wa.me/${PHONE_E164}`;
   const waPrefilled = `${waBase}?text=${encodeURIComponent(
-    "Hi! I came from your website and would like to discuss making my eCommerce store faster with Next.js headless development."
+    "Hi! I'm interested in your Shopify development services. I'd like to discuss my project."
   )}`;
-  
+
   return (
     <div className="flex flex-col sm:flex-row gap-3">
-      {/* Button 1: plain WhatsApp chat */}
-      <Button asChild className="bg-[#F97316] hover:bg-[#ea6a10] text-white">
-        <a
-          href={waBase}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Contact Top Com Agency on WhatsApp for headless eCommerce consultation"
-        >
-          Get Free Quote on WhatsApp
-        </a>
-      </Button>
-
-      {/* Button 2: pre-filled WhatsApp message */}
-      <Button asChild className="bg-[#F97316] hover:bg-[#ea6a10] text-white">
+      <Button asChild className="bg-primary hover:bg-primary/90">
         <a
           href={waPrefilled}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="WhatsApp Top Com Agency with pre-filled message about eCommerce optimization"
+          aria-label="Contact ScaleFront on WhatsApp"
         >
-          Quick Start Consultation
+          <MessageCircle className="mr-2 h-4 w-4" />
+          Chat on WhatsApp
+        </a>
+      </Button>
+
+      <Button asChild variant="outline">
+        <a
+          href={`mailto:${EMAIL}`}
+          aria-label="Email ScaleFront"
+        >
+          <Mail className="mr-2 h-4 w-4" />
+          Send Email
         </a>
       </Button>
     </div>
@@ -69,8 +66,7 @@ function WhatsAppButtons() {
 
 export default function ContactPage() {
   return (
-    <main className="min-h-[60vh] bg-white text-[#333333]">
-      {/* Structured Data for Contact Page */}
+    <main className="min-h-screen bg-background">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -79,206 +75,238 @@ export default function ContactPage() {
             "@type": "ContactPage",
             "mainEntity": {
               "@type": "Organization",
-              "name": "Top Com Agency",
+              "name": "ScaleFront",
               "contactPoint": [
                 {
                   "@type": "ContactPoint",
                   "telephone": "+919650296375",
                   "contactType": "customer service",
                   "availableLanguage": ["English", "Hindi"],
-                  "description": "Expert consultation for headless WooCommerce and Shopify Next.js development"
+                  "description": "Expert Shopify development consultation and support"
                 }
               ],
-              "address": {
-                "@type": "PostalAddress",
-                "addressCountry": "IN"
-              },
-              "url": "https://topcomsolutions.com/contact-us",
-              "sameAs": [
-                "https://wa.me/919650296375"
-              ]
+              "email": "hello@scalefront.io",
+              "url": "https://scalefront.io/contact-us",
             }
           })
         }}
       />
 
       <Header />
-      
-      <article className="mx-auto w-full max-w-2xl px-4 py-12">
-        <header className="mb-8 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold text-balance mb-4">
-            Contact Top Com Agency - Your Headless eCommerce Experts
+
+      <article className="mx-auto w-full max-w-4xl px-6 py-16 md:py-24">
+        <header className="mb-12 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            Get In Touch
           </h1>
-          <div className="mt-2 h-1 w-16 bg-[#16A34A] mx-auto" aria-hidden="true" />
-          <p className="mt-6 text-lg text-gray-600 max-w-xl mx-auto">
-            Ready to transform your <strong>slow eCommerce store</strong> into a 
-            lightning-fast Next.js website? Get your free consultation today!
+          <div className="h-1 w-20 bg-primary mx-auto mb-6 rounded-full" />
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Ready to take your Shopify store to the next level? Let's discuss how we can help you achieve your eCommerce goals.
           </p>
         </header>
 
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">
-            Get Your Free eCommerce Speed Audit
-          </h2>
-          <p className="text-gray-700 mb-6">
-            Whether you&apos;re struggling with <strong>WooCommerce speed optimization</strong> or 
-            need a complete <strong>Shopify headless migration</strong>, we&apos;re here to help. 
-            Our team specializes in <strong>Next.js eCommerce development</strong> and can 
-            show you exactly how to make your website 10x faster.
-          </p>
-        </section>
-
-        <div className="rounded-lg border border-[#F1F5F9] p-6 mb-8">
-          <h3 className="text-xl font-semibold mb-4">Get In Touch</h3>
-          
-          <dl className="space-y-4">
-            <div className="flex flex-col gap-1">
-              <dt className="text-sm text-[#333333]/70 font-medium">
-                Phone & WhatsApp
-              </dt>
-              <dd>
-                <Link
-                  href={`tel:${TEL_INTERNATIONAL}`}
-                  className="font-medium text-[#333333] underline-offset-4 hover:underline text-lg"
-                >
-                  {DISPLAY_PHONE}
-                </Link>
-              </dd>
-              <dd className="text-sm text-gray-600">
-                Available for <strong>headless eCommerce consultations</strong> and 
-                <strong> WooCommerce speed optimization</strong> discussions
-              </dd>
+        <div className="grid md:grid-cols-2 gap-12 mb-16">
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-2xl font-bold text-foreground mb-6">
+                Let's Start a Conversation
+              </h2>
+              <p className="text-muted-foreground mb-6">
+                Whether you need a custom Shopify app, want to optimize your store's performance, or are considering a headless commerce solution, we're here to help.
+              </p>
+              <WhatsAppButtons />
             </div>
 
-            <div className="flex flex-col gap-1">
-              <dt className="text-sm text-[#333333]/70 font-medium">
-                WhatsApp Business
-              </dt>
-              <dd>
-                <Link
-                  href={`https://wa.me/${PHONE_E164}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium text-[#333333] underline-offset-4 hover:underline text-lg"
-                >
-                  {DISPLAY_PHONE}
-                </Link>
-              </dd>
-              <dd className="text-sm text-gray-600">
-                Fastest way to get answers about <strong>Next.js eCommerce development</strong> 
-                and pricing for your project
-              </dd>
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="rounded-lg bg-primary/10 p-3">
+                  <Mail className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">Email</h3>
+                  <a
+                    href={`mailto:${EMAIL}`}
+                    className="text-primary hover:underline"
+                  >
+                    {EMAIL}
+                  </a>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    For detailed project inquiries
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="rounded-lg bg-primary/10 p-3">
+                  <Phone className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">Phone</h3>
+                  <a
+                    href={`tel:${TEL_INTERNATIONAL}`}
+                    className="text-primary hover:underline"
+                  >
+                    {DISPLAY_PHONE}
+                  </a>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    Mon-Fri, 9am-6pm IST
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="rounded-lg bg-primary/10 p-3">
+                  <MessageCircle className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">WhatsApp</h3>
+                  <a
+                    href={`https://wa.me/${PHONE_E164}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    {DISPLAY_PHONE}
+                  </a>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    Fastest response time
+                  </p>
+                </div>
+              </div>
             </div>
-          </dl>
-
-          <div className="mt-6">
-            <WhatsAppButtons />
           </div>
 
-          <div className="mt-6 p-4 bg-green-50 rounded-lg border border-green-200">
-            <h4 className="font-semibold text-green-800 mb-2">
-              💡 What to Include in Your Message:
-            </h4>
-            <ul className="text-sm text-green-700 space-y-1">
-              <li>• Current eCommerce platform (WooCommerce, Shopify, etc.)</li>
-              <li>• Main issues you&apos;re facing (slow loading, downtime, etc.)</li>
-              <li>• Approximate number of products</li>
-              <li>• Your website URL (for free speed analysis)</li>
-            </ul>
-          </div>
+          {/* What to Expect */}
+          <div className="bg-secondary/20 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-foreground mb-6">
+              What to Expect
+            </h2>
 
-          <p className="mt-6 text-sm text-[#333333]/70">
-            We typically respond within 30 minutes on WhatsApp. For the fastest service, 
-            include your website URL so we can provide an instant speed analysis.
-          </p>
+            <div className="space-y-6">
+              <div>
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
+                    1
+                  </div>
+                  <h3 className="font-semibold">Initial Consultation</h3>
+                </div>
+                <p className="text-sm text-muted-foreground ml-10">
+                  We'll discuss your project requirements, goals, and timeline.
+                </p>
+              </div>
+
+              <div>
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
+                    2
+                  </div>
+                  <h3 className="font-semibold">Proposal & Quote</h3>
+                </div>
+                <p className="text-sm text-muted-foreground ml-10">
+                  Receive a detailed proposal with scope, timeline, and pricing.
+                </p>
+              </div>
+
+              <div>
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
+                    3
+                  </div>
+                  <h3 className="font-semibold">Project Kickoff</h3>
+                </div>
+                <p className="text-sm text-muted-foreground ml-10">
+                  Once approved, we'll begin development with regular updates.
+                </p>
+              </div>
+
+              <div>
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
+                    4
+                  </div>
+                  <h3 className="font-semibold">Ongoing Support</h3>
+                </div>
+                <p className="text-sm text-muted-foreground ml-10">
+                  Post-launch support and maintenance to ensure success.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Service Areas Section */}
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">
-            Our Headless eCommerce Services
+        {/* Services Overview */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
+            How We Can Help
           </h2>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="p-4 border border-gray-200 rounded-lg">
-              <h3 className="font-semibold text-lg mb-2">
-                WooCommerce Speed Optimization
-              </h3>
-              <p className="text-sm text-gray-600">
-                Transform your slow WooCommerce store with <strong>headless Next.js architecture</strong>. 
-                Get 90+ PageSpeed scores and happier customers.
-              </p>
-            </div>
-            
-            <div className="p-4 border border-gray-200 rounded-lg">
-              <h3 className="font-semibold text-lg mb-2">
-                Shopify Headless Migration
-              </h3>
-              <p className="text-sm text-gray-600">
-                Keep Shopify&apos;s powerful backend while getting a lightning-fast 
-                <strong> Next.js frontend</strong>. Best of both worlds.
-              </p>
-            </div>
-            
-            <div className="p-4 border border-gray-200 rounded-lg">
-              <h3 className="font-semibold text-lg mb-2">
-                Custom Next.js Development
-              </h3>
-              <p className="text-sm text-gray-600">
-                Built from scratch for maximum performance. Perfect for businesses 
-                with <strong>500+ products</strong> or complex requirements.
-              </p>
-            </div>
-            
-            <div className="p-4 border border-gray-200 rounded-lg">
-              <h3 className="font-semibold text-lg mb-2">
-                24/7 Maintenance & Support
-              </h3>
-              <p className="text-sm text-gray-600">
-                We don&apos;t just build and disappear. Ongoing support ensures your 
-                <strong> fast eCommerce website</strong> stays optimized.
-              </p>
-            </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Custom Development",
+                description: "Tailored Shopify apps and features built specifically for your business needs."
+              },
+              {
+                title: "Performance Optimization",
+                description: "Speed up your store and improve Core Web Vitals for better SEO and conversions."
+              },
+              {
+                title: "Headless Commerce",
+                description: "Modern, decoupled storefronts with Next.js for ultimate performance."
+              },
+              {
+                title: "Theme Customization",
+                description: "Beautiful, responsive themes that perfectly match your brand identity."
+              },
+              {
+                title: "Shopify Plus Migration",
+                description: "Seamless migration to Shopify Plus with zero downtime."
+              },
+              {
+                title: "Expert Consulting",
+                description: "Strategic guidance to maximize your Shopify store's potential."
+              }
+            ].map((service) => (
+              <div key={service.title} className="bg-card border border-border rounded-lg p-6">
+                <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
+                <p className="text-sm text-muted-foreground">{service.description}</p>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">
-            Quick Answers Before You Contact Us
+        {/* FAQ */}
+        <section className="bg-secondary/20 rounded-xl p-8">
+          <h2 className="text-2xl font-bold text-foreground mb-6">
+            Common Questions
           </h2>
-          
+
           <div className="space-y-4">
-            <details className="border border-gray-200 rounded-lg p-4">
+            <details className="bg-card border border-border rounded-lg p-4">
               <summary className="font-semibold cursor-pointer">
-                How much does headless WooCommerce development cost?
+                What's your response time?
               </summary>
-              <p className="mt-3 text-gray-700">
-                <strong>Shopify Next.js migration cost in India</strong> varies based on 
-                your store&apos;s complexity. Simple stores start from ₹50,000, while complex 
-                <strong> WooCommerce 500+ products sites</strong> may cost more. Contact us 
-                for a precise quote based on your requirements.
+              <p className="mt-3 text-muted-foreground">
+                We typically respond to WhatsApp messages within 30 minutes during business hours (Mon-Fri, 9am-6pm IST). Email inquiries are answered within 24 hours.
               </p>
             </details>
-            
-            <details className="border border-gray-200 rounded-lg p-4">
+
+            <details className="bg-card border border-border rounded-lg p-4">
               <summary className="font-semibold cursor-pointer">
-                How long does it take to make my WooCommerce store faster?
+                Do you offer free consultations?
               </summary>
-              <p className="mt-3 text-gray-700">
-                Most <strong>WooCommerce speed optimization</strong> projects are completed 
-                in 2-4 weeks. This includes migrating to <strong>headless architecture</strong>, 
-                testing, and ensuring everything works perfectly before going live.
+              <p className="mt-3 text-muted-foreground">
+                Yes! We offer a complimentary 30-minute consultation to discuss your project requirements and provide initial recommendations.
               </p>
             </details>
-            
-            <details className="border border-gray-200 rounded-lg p-4">
+
+            <details className="bg-card border border-border rounded-lg p-4">
               <summary className="font-semibold cursor-pointer">
-                Do you provide ongoing support after the website is live?
+                What information should I provide?
               </summary>
-              <p className="mt-3 text-gray-700">
-                Yes! Unlike other agencies, we provide <strong>24/7 support and maintenance</strong>. 
-                We monitor your site&apos;s performance, handle updates, and ensure your 
-                <strong> fast eCommerce website</strong> continues running smoothly.
+              <p className="mt-3 text-muted-foreground">
+                Include your store URL, a brief description of what you need help with, your timeline, and any specific features or requirements. This helps us provide a more accurate initial assessment.
               </p>
             </details>
           </div>
@@ -289,7 +317,7 @@ export default function ContactPage() {
         <MovingReviews />
       </div>
 
-      <Footer/>
+      <Footer />
     </main>
   );
 }
