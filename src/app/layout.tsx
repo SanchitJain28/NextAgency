@@ -1,18 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import "@fontsource/stack-sans-text/200.css";
+import "@fontsource/stack-sans-text/300.css";
+import "@fontsource/stack-sans-text/400.css";
+import "@fontsource/stack-sans-text/500.css";
+import "@fontsource/stack-sans-text/600.css";
+import "@fontsource/stack-sans-text/700.css";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-  display: "swap", // Better font loading performance
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: "swap", // Better font loading performance
-});
 
 export const metadata: Metadata = {
   title: {
@@ -20,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | ScaleFront - Expert Shopify Solutions"
   },
   icons:{
-    icon:"/logo.ico"
+    icon:"/logos/scalefrontonlyicon.png"
   },
   description: "Elite Shopify development agency specializing in headless commerce, custom apps, theme development, and performance optimization. Transform your Shopify store with cutting-edge solutions.",
   keywords: [
@@ -118,7 +111,7 @@ export default function RootLayout({
               "name": "ScaleFront",
               "description": "Elite Shopify development agency specializing in custom apps, headless commerce, theme development, and performance optimization",
               "url": "https://scalefront.io",
-              "logo": "https://scalefront.io/logo.png",
+              "logo": "https://scalefront.io/logos/scalefrontsquarelogo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+919650296375",
@@ -170,7 +163,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               "name": "ScaleFront",
-              "image": "https://scalefront.io/logo.png",
+              "image": "https://scalefront.io/logos/scalefrontsquarelogo.png",
               "description": "Expert Shopify development agency offering custom apps, headless commerce, and performance optimization",
               "address": {
                 "@type": "PostalAddress",
@@ -185,7 +178,7 @@ export default function RootLayout({
       </head>
       
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className="antialiased"
       >
         {children}
         

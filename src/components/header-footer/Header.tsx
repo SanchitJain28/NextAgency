@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { useState, useCallback } from "react"
 import { cn } from "@/lib/utils"
@@ -41,9 +42,9 @@ export function Header() {
   const isServicesActive = pathname?.startsWith("/services")
 
   return (
-    <header className="w-full border-b border-border bg-background/95 backdrop-blur-sm sticky top-0 z-50">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="flex h-16 items-center justify-between">
+    <header className="w-full border-b-2 border-primary/30 bg-gradient-to-r from-background/80 via-primary/10 to-background/80 backdrop-blur-2xl sticky top-0 z-50 shadow-2xl shadow-primary/20 liquid-header">
+      <div className="mx-auto max-w-7xl px-6 relative">
+        <div className="flex h-16 items-center justify-between relative z-10">
           {/* Logo */}
           <Link
             href="/"
@@ -51,33 +52,19 @@ export function Header() {
             aria-label="Go to homepage"
             onClick={() => setOpen(false)}
           >
-            <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              ScaleFront
-            </span>
+            <Image
+              src="/logos/scalefrontlonglogoclearbackground.png"
+              alt="ScaleFront"
+              width={240}
+              height={60}
+              className="h-12 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-1" aria-label="Main">
-            {NAV_LINKS.map((item) => {
-              const active = isActive(item.href)
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  aria-current={active ? "page" : undefined}
-                  className={cn(
-                    "px-4 py-2 text-sm font-medium rounded-md transition-colors",
-                    active
-                      ? "text-primary"
-                      : "text-foreground hover:text-primary hover:bg-secondary/50"
-                  )}
-                >
-                  {item.label}
-                </Link>
-              )
-            })}
-
-            {/* Services Dropdown */}
+            {/* Services Dropdown - First */}
             <div
               className="relative"
               onMouseEnter={() => setServicesOpen(true)}
@@ -112,6 +99,25 @@ export function Header() {
                 </div>
               )}
             </div>
+
+            {NAV_LINKS.map((item) => {
+              const active = isActive(item.href)
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  aria-current={active ? "page" : undefined}
+                  className={cn(
+                    "px-4 py-2 text-sm font-medium rounded-md transition-colors",
+                    active
+                      ? "text-primary"
+                      : "text-foreground hover:text-primary hover:bg-secondary/50"
+                  )}
+                >
+                  {item.label}
+                </Link>
+              )
+            })}
           </nav>
 
           {/* Mobile menu button */}
@@ -140,28 +146,7 @@ export function Header() {
             className="md:hidden border-t border-border pb-4"
           >
             <ul className="flex flex-col py-2 space-y-1">
-              {NAV_LINKS.map((item) => {
-                const active = isActive(item.href)
-                return (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      aria-current={active ? "page" : undefined}
-                      onClick={() => setOpen(false)}
-                      className={cn(
-                        "block px-4 py-2 text-sm font-medium rounded-md transition-colors",
-                        active
-                          ? "text-primary bg-secondary/50"
-                          : "text-foreground hover:bg-secondary/50"
-                      )}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                )
-              })}
-
-              {/* Mobile Services */}
+              {/* Mobile Services - First */}
               <li>
                 <button
                   onClick={() => setServicesOpen(!servicesOpen)}
@@ -197,6 +182,27 @@ export function Header() {
                   </ul>
                 )}
               </li>
+
+              {NAV_LINKS.map((item) => {
+                const active = isActive(item.href)
+                return (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      aria-current={active ? "page" : undefined}
+                      onClick={() => setOpen(false)}
+                      className={cn(
+                        "block px-4 py-2 text-sm font-medium rounded-md transition-colors",
+                        active
+                          ? "text-primary bg-secondary/50"
+                          : "text-foreground hover:bg-secondary/50"
+                      )}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                )
+              })}
             </ul>
           </nav>
         )}

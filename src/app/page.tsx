@@ -18,8 +18,11 @@ import Link from "next/link";
 // Using MagicUI Globe component with interactive features
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import { InteractiveGlobe } from "@/components/InteractiveGlobe";
+import { MarqueeSection } from "@/components/MarqueeSection";
+import { TeamAvailability } from "@/components/TeamAvailability";
+import Galaxy from "@/components/Galaxy";
+import ColorBends from "@/components/ColorBends";
 import type { Metadata } from "next";
-
 export const metadata: Metadata = {
   title: "ScaleFront - Elite Shopify Development Agency",
   description:
@@ -53,23 +56,63 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background overflow-hidden">
-      <Header />
-      <HeroSection />
-      <StatsSection />
-      <ServicesOverview />
-      <WhyChooseSection />
-      <ResultsSection />
-      <TestimonialsSection />
-      <FinalCTASection />
+    <div className="min-h-screen bg-background overflow-hidden relative">
+      {/* Color Bends Background */}
+      <div className="fixed inset-0 z-0 pointer-events-none opacity-40 md:opacity-100">
+          <ColorBends
+            colors={["#91CB5A"]}
+            autoRotate={-1}
+            rotation={0}
+            speed={0.1}
+            scale={1}
+            frequency={1}
+            mouseInfluence={2}
+            parallax={0.5}
+            noise={0}
+            warpStrength={0.9}
+          />
+
+         
+      </div>
+
+      {/* Galaxy Background */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <Galaxy
+          hueShift={0}
+          density={0.2}
+          glowIntensity={0.15}
+          saturation={0}
+          speed={0.2}
+          starSpeed={0.08}
+          twinkleIntensity={0.15}
+          rotationSpeed={0.01}
+          mouseRepulsion={true}
+          repulsionStrength={0.5}
+          transparent={true}
+        />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10">
+        <Header />
+        <HeroSection />
+        <MarqueeSection />
+
+        <StatsSection />
+        <ServicesOverview />
+        <WhyChooseSection />
+        <ResultsSection />
+        <TestimonialsSection />
+        <FinalCTASection />
+      </div>
     </div>
   );
 }
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-20 pb-28 md:pt-32 md:pb-40">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="relative pt-20 pb-28 md:pt-32 md:pb-40 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-6 relative">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side: Text content */}
           <div className="space-y-8">
@@ -85,7 +128,7 @@ const HeroSection = () => {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
+            <p className="text-lg md:text-xl text-white leading-relaxed max-w-xl">
               Custom development, headless commerce, and performance
               optimization for ambitious Shopify brands.
             </p>
@@ -113,7 +156,7 @@ const HeroSection = () => {
             </div>
 
             {/* Trust indicators */}
-            <div className="flex flex-wrap items-center gap-6 pt-6 text-sm text-muted-foreground">
+            <div className="flex flex-wrap items-center gap-6 pt-6 text-sm text-white">
               <div className="flex items-center gap-1.5">
                 <Star className="h-4 w-4 fill-primary text-primary" />
                 <span>4.9/5 rating</span>
@@ -148,15 +191,18 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="py-20 border-y border-border bg-secondary/30">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="py-20 border-y border-border relative overflow-hidden">
+      <div className="mx-auto max-w-7xl px-6 relative">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat) => (
-            <div key={stat.label} className="text-center">
+            <div
+              key={stat.label}
+              className="text-center bg-background border-2 border-primary/30 rounded-2xl p-6 hover:bg-background hover:border-primary/50 transition-all hover:scale-105 shadow-lg hover:shadow-2xl hover:shadow-primary/20"
+            >
               <div className="text-3xl md:text-5xl font-bold text-primary mb-2">
                 {stat.value}
               </div>
-              <div className="text-sm md:text-base text-muted-foreground">
+              <div className="text-sm md:text-base text-white md:text-muted-foreground">
                 {stat.label}
               </div>
             </div>
@@ -202,8 +248,8 @@ const ServicesOverview = () => {
   ];
 
   return (
-    <section id="services" className="py-24 md:py-32 bg-background">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="services" className="py-24 md:py-32 relative overflow-hidden">
+      <div className="mx-auto max-w-7xl px-6 relative">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance">
             Our services
@@ -220,15 +266,15 @@ const ServicesOverview = () => {
             return (
               <div
                 key={service.title}
-                className="group rounded-xl border bg-card p-8 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+                className="group rounded-xl border-2 border-primary/30 bg-background p-8 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 hover:bg-background transition-all duration-300 hover:scale-105"
               >
                 <div className="inline-flex rounded-lg bg-primary/10 p-3 mb-4 group-hover:bg-primary/20 transition-colors">
                   <Icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-semibold text-lg md:text-xl text-card-foreground mb-2">
+                <h3 className="font-semibold text-lg md:text-xl text-white md:text-card-foreground mb-2">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                <p className="text-white md:text-muted-foreground text-sm md:text-base leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -278,10 +324,10 @@ const WhyChooseSection = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-secondary/30">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <div className="space-y-6">
+    <section className="py-24 md:py-32 relative overflow-hidden">
+      <div className="mx-auto max-w-7xl px-6 relative">
+        <div className="grid md:grid-cols-3 gap-12 md:gap-8 items-start">
+          <div className="space-y-6 md:col-span-2">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance">
               Why work with us
             </h2>
@@ -299,28 +345,33 @@ const WhyChooseSection = () => {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-8">
+              {reasons.map((reason) => {
+                const Icon = reason.icon;
+                return (
+                  <div
+                    key={reason.title}
+                    className="bg-background border-2 border-primary/30 rounded-xl p-6 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 hover:bg-background transition-all duration-300 hover:scale-105"
+                  >
+                    <div className="rounded-lg bg-primary/10 p-2.5 w-fit mb-3">
+                      <Icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <h3 className="font-semibold text-base md:text-lg mb-1.5 text-white md:text-foreground">
+                      {reason.title}
+                    </h3>
+                    <p className="text-sm text-white md:text-muted-foreground leading-relaxed">
+                      {reason.description}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {reasons.map((reason) => {
-              const Icon = reason.icon;
-              return (
-                <div
-                  key={reason.title}
-                  className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
-                >
-                  <div className="rounded-lg bg-primary/10 p-2.5 w-fit mb-3">
-                    <Icon className="h-5 w-5 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-base md:text-lg mb-1.5">
-                    {reason.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {reason.description}
-                  </p>
-                </div>
-              );
-            })}
+          {/* Team Availability Widget */}
+          <div className="md:col-span-1">
+            <TeamAvailability />
           </div>
         </div>
       </div>
@@ -348,8 +399,8 @@ const ResultsSection = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-background">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="py-24 md:py-32 relative overflow-hidden">
+      <div className="mx-auto max-w-7xl px-6 relative">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance">
             Real results
@@ -363,15 +414,15 @@ const ResultsSection = () => {
           {results.map((result) => (
             <div
               key={result.title}
-              className="bg-card border rounded-xl p-8 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
+              className="bg-background border-2 border-primary/30 rounded-xl p-8 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 hover:bg-background transition-all duration-300 hover:scale-105"
             >
               <div className="text-4xl md:text-5xl font-bold text-primary mb-4">
                 {result.metric}
               </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2">
+              <h3 className="text-lg md:text-xl font-semibold mb-2 text-white md:text-foreground">
                 {result.title}
               </h3>
-              <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+              <p className="text-sm md:text-base text-white md:text-muted-foreground leading-relaxed">
                 {result.description}
               </p>
             </div>
@@ -406,7 +457,7 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-secondary/30">
+    <section className="py-24 md:py-32 relative">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center space-y-4 mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance">
@@ -425,8 +476,8 @@ const TestimonialsSection = () => {
 
 const FinalCTASection = () => {
   return (
-    <section className="py-24 md:py-32 bg-primary text-primary-foreground">
-      <div className="mx-auto max-w-4xl px-6 text-center space-y-8">
+    <section className="py-24 md:py-32 relative">
+      <div className="mx-auto max-w-4xl px-6 text-center space-y-8 bg-background rounded-3xl border-2 border-primary/50 p-12">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-balance">
           Ready to get started?
         </h2>

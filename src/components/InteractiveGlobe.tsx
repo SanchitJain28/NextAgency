@@ -1,8 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Globe } from "@/components/ui/globe";
-import { TrendingUp, DollarSign, ArrowUpRight, MapPin } from "lucide-react";
+import { TrendingUp, DollarSign, Star } from "lucide-react";
+import Image from "next/image";
+import Particles from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 
 interface SaleEvent {
   id: number;
@@ -54,37 +57,98 @@ export function InteractiveGlobe() {
     return () => clearInterval(interval);
   }, []);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const particlesInit = async (engine: any) => {
+    await loadSlim(engine);
+  };
+
+  const particlesOptions = useMemo(
+    () => ({
+      background: {
+        color: {
+          value: "transparent",
+        },
+      },
+      fpsLimit: 120,
+      particles: {
+        color: {
+          value: ["#ffffff", "#e0e0e0", "#cccccc"],
+        },
+        links: {
+          color: "#ffffff",
+          distance: 150,
+          enable: true,
+          opacity: 0.08,
+          width: 1,
+        },
+        move: {
+          direction: "none" as const,
+          enable: true,
+          outModes: {
+            default: "bounce" as const,
+          },
+          random: true,
+          speed: 0.5,
+          straight: false,
+        },
+        number: {
+          density: {
+            enable: true,
+            area: 800,
+          },
+          value: 80,
+        },
+        opacity: {
+          value: { min: 0.3, max: 0.8 },
+          animation: {
+            enable: true,
+            speed: 1,
+            sync: false,
+          },
+        },
+        shape: {
+          type: "circle" as const,
+        },
+        size: {
+          value: { min: 1, max: 3 },
+        },
+      },
+      detectRetina: true,
+    }),
+    []
+  );
+
   return (
     <div className="relative w-full h-full flex items-center justify-center">
+      {/* TSParticles Galaxy Effect */}
+      <Particles
+        id="tsparticles"
+        options={particlesOptions}
+        className="absolute inset-0"
+      />
+
+      {/* Galaxy background glow */}
       {/* Globe Container */}
       <div className="relative w-full max-w-[600px] aspect-square">
-        {/* Rotating arrows around globe */}
-        <div className="absolute inset-0 animate-spin-slow">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2">
-            <ArrowUpRight className="h-6 w-6 text-primary" />
-          </div>
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 rotate-180">
-            <ArrowUpRight className="h-6 w-6 text-primary" />
-          </div>
-          <div className="absolute left-0 top-1/2 -translate-y-1/2 -rotate-90">
-            <ArrowUpRight className="h-6 w-6 text-primary" />
-          </div>
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 rotate-90">
-            <ArrowUpRight className="h-6 w-6 text-primary" />
-          </div>
+        {/* Minimal glow rings */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute w-[105%] h-[105%] rounded-full bg-white/3 blur-xl" />
         </div>
 
-        {/* Pulse rings */}
+        {/* Circular Glass Frame */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="absolute w-[120%] h-[120%] rounded-full border border-primary/20 animate-ping-slow" />
-          <div className="absolute w-[110%] h-[110%] rounded-full border border-primary/30 animate-ping-slow" style={{ animationDelay: '1s' }} />
+          <div className="w-[85%] h-[85%] rounded-full backdrop-blur-md bg-background/20 border-2 border-white/20 shadow-2xl shadow-white/10 animate-pulse"
+               style={{
+                 boxShadow: 'inset 0 0 60px rgba(255, 255, 255, 0.05), 0 0 80px rgba(255, 255, 255, 0.08)'
+               }}
+          />
         </div>
 
         {/* Globe */}
         <Globe className="top-0" />
 
         {/* Active connection indicators */}
-        {activeConnections.map((id, index) => (
+        {activeConnections.map((id) => (
           <div
             key={id}
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -92,12 +156,12 @@ export function InteractiveGlobe() {
               animation: 'pulse 0.5s ease-out',
             }}
           >
-            <div className="w-2 h-2 bg-primary rounded-full shadow-lg shadow-primary/50" />
+            <div className="w-2 h-2 bg-white rounded-full shadow-lg shadow-white/50" />
           </div>
         ))}
       </div>
 
-      {/* Sales Dashboard Overlay */}
+      {/* Top Section: Sales Counter and Review Image */}
       <div className="absolute top-0 left-0 right-0 flex justify-between items-start p-4 pointer-events-none">
         {/* Total Sales Counter */}
         <div className="bg-card/95 backdrop-blur-sm border border-primary/20 rounded-lg px-4 py-3 shadow-lg">
@@ -110,62 +174,86 @@ export function InteractiveGlobe() {
           </div>
           {salesVelocity > 0 && (
             <div className="flex items-center gap-1 mt-1">
-              <TrendingUp className="h-3 w-3 text-green-500" />
-              <span className="text-xs text-green-500 font-medium">
+              <TrendingUp className="h-3 w-3 text-muted-foreground" />
+              <span className="text-xs text-muted-foreground font-medium">
                 +${salesVelocity.toLocaleString()}/min
               </span>
             </div>
           )}
         </div>
 
-        {/* Active Regions */}
-        <div className="bg-card/95 backdrop-blur-sm border border-primary/20 rounded-lg px-4 py-3 shadow-lg">
-          <div className="flex items-center gap-2 mb-2">
-            <MapPin className="h-4 w-4 text-primary" />
-            <span className="text-xs text-muted-foreground font-medium">Active Regions</span>
+        {/* Happy Customer - Top Right */}
+        <div className="relative hover:scale-105 transition-transform">
+          <div className="relative w-28 h-28 rounded-xl overflow-hidden shadow-2xl">
+            <Image
+              src="/reviewImage/reviewImage_pe1rjnpe1rjnpe1r.png"
+              alt="Happy Customer"
+              fill
+              className="object-cover"
+            />
           </div>
-          <div className="flex items-center gap-1">
-            <div className="flex -space-x-1">
-              {[...Array(6)].map((_, i) => (
-                <div
-                  key={i}
-                  className="w-2 h-2 rounded-full bg-primary border border-card"
-                  style={{
-                    animation: `pulse 2s ease-in-out ${i * 0.3}s infinite`,
-                  }}
-                />
-              ))}
-            </div>
-            <span className="text-sm font-bold text-foreground ml-2">6 regions</span>
+          <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-0.5 bg-background/90 backdrop-blur-sm px-2 py-1 rounded-full border border-primary/20">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="h-3 w-3 fill-primary text-primary" />
+            ))}
           </div>
         </div>
       </div>
 
-      {/* Recent Sales Feed */}
-      <div className="absolute bottom-0 left-0 right-0 p-4 pointer-events-none">
-        <div className="bg-card/95 backdrop-blur-sm border border-primary/20 rounded-lg px-4 py-3 shadow-lg max-w-sm">
-          <div className="flex items-center gap-2 mb-2">
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-            <span className="text-xs text-muted-foreground font-medium">Live Activity</span>
+      {/* Side Review Images - Larger */}
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 p-4 pointer-events-none">
+        {/* Happy Customer - Left */}
+        <div className="relative hover:scale-105 transition-transform">
+          <div className="relative w-28 h-28 rounded-xl overflow-hidden shadow-2xl">
+            <Image
+              src="/reviewImage/reviewImage_lhz9twlhz9twlhz9 (1).png"
+              alt="Happy Customer"
+              fill
+              className="object-cover"
+            />
           </div>
-          <div className="space-y-2">
-            {recentSales.map((sale, index) => (
-              <div
-                key={sale.id}
-                className="flex items-center justify-between text-xs animate-slide-in"
-                style={{
-                  animation: 'slideIn 0.3s ease-out',
-                  opacity: 1 - (index * 0.3),
-                }}
-              >
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                  <span className="text-foreground font-medium">{sale.location}</span>
-                </div>
-                <span className="text-primary font-bold">
-                  +${sale.amount.toLocaleString()}
-                </span>
-              </div>
+          <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-0.5 bg-background/90 backdrop-blur-sm px-2 py-1 rounded-full border border-primary/20">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="h-3 w-3 fill-primary text-primary" />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 p-4 pointer-events-none">
+        {/* Happy Customer - Right */}
+        <div className="relative hover:scale-105 transition-transform">
+          <div className="relative w-28 h-28 rounded-xl overflow-hidden shadow-2xl">
+            <Image
+              src="/reviewImage/reviewImage_pe1rjnpe1rjnpe1r (1).png"
+              alt="Happy Customer"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-0.5 bg-background/90 backdrop-blur-sm px-2 py-1 rounded-full border border-primary/20">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="h-3 w-3 fill-primary text-primary" />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Review Image */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 p-4 pointer-events-none">
+        {/* Happy Customer - Bottom */}
+        <div className="relative hover:scale-105 transition-transform">
+          <div className="relative w-28 h-28 rounded-xl overflow-hidden shadow-2xl">
+            <Image
+              src="/reviewImage/reviewImage_lhz9twlhz9twlhz9.png"
+              alt="Happy Customer"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-0.5 bg-background/90 backdrop-blur-sm px-2 py-1 rounded-full border border-primary/20">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="h-3 w-3 fill-primary text-primary" />
             ))}
           </div>
         </div>

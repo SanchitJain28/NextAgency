@@ -6,8 +6,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Stack Sans Text", system-ui, sans-serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -59,9 +58,9 @@
   --card: oklch(0.16 0 0);
   --popover: oklch(0.16 0 0);
 
-  /* 2. Primary - Shopify Green */
-  --primary: oklch(0.68 0.16 158);
-  --primary-foreground: oklch(0.12 0 0);
+  /* 2. Primary - Neutral White/Gray */
+  --primary: oklch(0.85 0 0);
+  --primary-foreground: oklch(0.15 0 0);
 
   /* 3. Secondary - Dark Gray */
   --secondary: oklch(0.22 0 0);
@@ -73,33 +72,33 @@
   --popover-foreground: oklch(0.95 0 0);
   --muted-foreground: oklch(0.6 0 0);
 
-  /* 5. Accent - Emerald/Teal */
-  --accent: oklch(0.65 0.15 180);
-  --accent-foreground: oklch(0.12 0 0);
+  /* 5. Accent - Neutral Gray */
+  --accent: oklch(0.30 0 0);
+  --accent-foreground: oklch(0.95 0 0);
 
   /* Supporting colors */
   --muted: oklch(0.20 0 0);
   --destructive: oklch(0.60 0.24 25);
   --border: oklch(0.25 0 0);
   --input: oklch(0.25 0 0);
-  --ring: oklch(0.68 0.16 158);
+  --ring: oklch(0.85 0 0);
 
   /* Charts */
-  --chart-1: oklch(0.68 0.16 158);
-  --chart-2: oklch(0.65 0.15 180);
-  --chart-3: oklch(0.60 0.14 200);
-  --chart-4: oklch(0.72 0.14 140);
-  --chart-5: oklch(0.58 0.12 220);
+  --chart-1: oklch(0.85 0 0);
+  --chart-2: oklch(0.75 0 0);
+  --chart-3: oklch(0.65 0 0);
+  --chart-4: oklch(0.55 0 0);
+  --chart-5: oklch(0.45 0 0);
 
   /* Sidebar */
   --sidebar: oklch(0.14 0 0);
   --sidebar-foreground: oklch(0.95 0 0);
-  --sidebar-primary: oklch(0.68 0.16 158);
-  --sidebar-primary-foreground: oklch(0.12 0 0);
+  --sidebar-primary: oklch(0.85 0 0);
+  --sidebar-primary-foreground: oklch(0.15 0 0);
   --sidebar-accent: oklch(0.20 0 0);
   --sidebar-accent-foreground: oklch(0.95 0 0);
   --sidebar-border: oklch(0.25 0 0);
-  --sidebar-ring: oklch(0.68 0.16 158);
+  --sidebar-ring: oklch(0.85 0 0);
 }
 
 /* Light theme override - if needed in future */
@@ -140,8 +139,22 @@
 }
 
 @keyframes bounce-slow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translate(10px, -20px) scale(1.05);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(0, -30px) scale(1.1);
+    opacity: 0.9;
+  }
+  75% {
+    transform: translate(-10px, -20px) scale(1.05);
+    opacity: 1;
+  }
 }
 
 @keyframes spin-slow {
@@ -154,7 +167,7 @@
 }
 
 .animate-bounce-slow {
-  animation: bounce-slow 3s ease-in-out infinite;
+  animation: bounce-slow 8s ease-in-out infinite;
 }
 
 .animate-spin-slow {
@@ -197,4 +210,36 @@
 
 .animate-ping-slow {
   animation: ping-slow 3s ease-out infinite;
+}
+
+/* Liquid header shimmer effect */
+@keyframes liquid-shimmer {
+  0% {
+    background-position: 0% 50%;
+    filter: brightness(1);
+  }
+  25% {
+    filter: brightness(1.1);
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: brightness(1);
+  }
+  75% {
+    filter: brightness(1.1);
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: brightness(1);
+  }
+}
+
+.liquid-header {
+  background-size: 400% 400%;
+  animation: liquid-shimmer 6s ease-in-out infinite;
+}
+
+/* Galaxy radial gradient */
+.bg-gradient-radial {
+  background-image: radial-gradient(circle, var(--tw-gradient-stops));
 }
