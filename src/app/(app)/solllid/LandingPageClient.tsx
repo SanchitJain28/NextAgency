@@ -1,5 +1,6 @@
 "use client";
-import ShopifyHeader from "@/components/header-footer/ShopifyHeader";
+import { Header } from "@/components/header-footer/Header";
+import Footer from "@/components/header-footer/Footer";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -43,10 +44,8 @@ export default function LandingPage() {
     <div className={`${font_className}`}>
       <div className="min-h-screen bg-black text-white">
         {/* Navigation */}
-        <ShopifyHeader/>
-        <div className="pt-16">
-          <MarqueSection />
-        </div>
+        <Header />
+        <MarqueSection />
 
         {/* Hero Section */}
         <section className="pb-20 pt-4 px-6 sm:px-6 lg:px-8">
@@ -86,10 +85,15 @@ export default function LandingPage() {
                   variants={fadeInUp}
                   className="mt-8 flex flex-col sm:flex-row lg:gap-4"
                 >
-                  <button className="px-8 py-4 bg-white text-black lg:rounded-full -mx-6 lg:mx-0 hover:bg-gray-200 transition font-semibold text-lg flex items-center justify-center group">
-                    Get Started Free
+                  <a
+                    href="https://apps.shopify.com/solid-ai-related-products"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-8 py-4 bg-white text-black lg:rounded-full -mx-6 lg:mx-0 hover:bg-gray-200 transition font-semibold text-lg flex items-center justify-center group"
+                  >
+                    Go to Shopify App Store
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition" />
-                  </button>
+                  </a>
                   <button className="px-8 py-4 bg-white/10 text-white lg:rounded-full -mx-6 lg:mx-0 hover:bg-white/20 transition font-semibold text-lg border border-white/20">
                     Watch Demo
                   </button>
@@ -570,79 +574,7 @@ export default function LandingPage() {
         <BlogSection/>
 
         {/* Footer */}
-        <footer className="bg-black border-t border-white/10 text-gray-400 py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="col-span-2">
-                <div className="flex items-center space-x-2 mb-4">
-                  <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                    <Sparkles className="w-5 h-5 text-black" />
-                  </div>
-                  <span className="text-lg font-bold text-white">
-                    Recommendations AI
-                  </span>
-                </div>
-                <p className="max-w-md">
-                  AI-powered product recommendations that help Shopify merchants
-                  increase sales automatically.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-bold mb-4 text-white">Product</h3>
-                <ul className="space-y-2">
-                  <li>
-                    <a href="#features" className="hover:text-white transition">
-                      Features
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#pricing" className="hover:text-white transition">
-                      Pricing
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-white transition">
-                      Documentation
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-white transition">
-                      API
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-bold mb-4 text-white">Support</h3>
-                <ul className="space-y-2">
-                  <li>
-                    <a href="#" className="hover:text-white transition">
-                      Help Center
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-white transition">
-                      Contact Us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-white transition">
-                      Privacy Policy
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-white transition">
-                      Terms of Service
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="mt-12 pt-8 border-t border-white/10 text-center text-gray-500">
-              <p>&copy; 2025 Recommendations AI. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </div>
   );

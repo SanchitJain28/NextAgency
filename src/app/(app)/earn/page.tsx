@@ -6,6 +6,7 @@ import { Header } from '@/components/header-footer/Header';
 import Footer from '@/components/header-footer/Footer';
 import AuditForm from '@/components/earn/AuditForm';
 import ResultsDashboard from '@/components/earn/ResultsDashboard';
+import EmailCollectionModal from '@/components/earn/EmailCollectionModal';
 import { FullAuditResults } from '@/lib/types';
 
 export default function EarnAuditorPage() {
@@ -46,10 +47,13 @@ export default function EarnAuditorPage() {
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState<FullAuditResults | null>(null);
   const [error, setError] = useState<string>('');
+  const [showEmailModal, setShowEmailModal] = useState(false);
+  const [auditUrl, setAuditUrl] = useState<string>('');
 
   const handleAudit = async (url: string) => {
     setLoading(true);
     setError('');
+    setAuditUrl(url);
 
     try {
       const response = await fetch('/api/earn/analyze', {
@@ -67,11 +71,37 @@ export default function EarnAuditorPage() {
       }
 
       setResults(result);
+      // Show email collection modal after audit completes
+      setShowEmailModal(true);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred. Please try again.');
       console.error('Audit error:', err);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleSendReport = async (email: string, phone: string) => {
+    if (!results) return;
+
+    try {
+      await fetch('/api/earn/send-report', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          phone,
+          url: auditUrl,
+          results,
+        }),
+      });
+      setShowEmailModal(false);
+    } catch (error) {
+      console.error('Failed to send report:', error);
+      // Still close modal and show results even if email fails
+      setShowEmailModal(false);
     }
   };
 
@@ -103,6 +133,13 @@ export default function EarnAuditorPage() {
           ) : (
             <ResultsDashboard results={results} onReset={handleReset} />
           )}
+
+          {/* Email Collection Modal */}
+          <EmailCollectionModal
+            isOpen={showEmailModal}
+            onSubmit={handleSendReport}
+            onSkip={() => setShowEmailModal(false)}
+          />
       </main>
 
       <Footer />

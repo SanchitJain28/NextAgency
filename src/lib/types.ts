@@ -15,6 +15,16 @@ export interface AuditResult {
   metrics: AuditMetrics;
 }
 
+export interface BenchmarkComparison {
+  category: string;
+  yourScore: number;
+  industryAverage: number;
+  difference: number;
+  percentile: number;
+  rating: 'excellent' | 'above-average' | 'average' | 'below-average' | 'poor';
+  message: string;
+}
+
 export interface FullAuditResults {
   url: string;
   timestamp: string;
@@ -25,6 +35,10 @@ export interface FullAuditResults {
   security: AuditResult;
   shopify: AuditResult;
   salesOptimization: AuditResult;
+  coreWebVitals?: AuditResult;
+  industry?: string;
+  industryDisplayName?: string;
+  benchmarks?: BenchmarkComparison[];
   recommendations: Recommendation[];
 }
 

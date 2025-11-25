@@ -5,8 +5,10 @@ import { accessibilityAuditor } from '@/lib/auditors/accessibilityAuditor';
 import { securityAuditor } from '@/lib/auditors/securityAuditor';
 import { shopifyAuditor } from '@/lib/auditors/shopifyAuditor';
 import { salesOptimizationAuditor } from '@/lib/auditors/salesOptimizationAuditor';
+import { coreWebVitalsAuditor } from '@/lib/auditors/coreWebVitalsAuditor';
 import { fetchPage, isValidUrl } from '@/lib/utils/fetchPage';
 import { calculateOverallScore, generateRecommendations } from '@/lib/utils/scoring';
+import { detectIndustry, compareToBenchmarks, getIndustryDisplayName } from '@/lib/utils/benchmarks';
 import { saveAudit } from '@/lib/db/database';
 import { storeLead } from '@/lib/db/leadStorage';
 import { nanoid } from 'nanoid';
@@ -74,17 +76,18 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Run all auditors in parallel
-    const [seo, performance, accessibility, security, shopify, salesOptimization] = await Promise.all([
+    // Run all auditors in parallel (including Core Web Vitals if API key is configured)
+    const [seo, performance, accessibility, security, shopify, salesOptimization, coreWebVitals] = await Promise.all([
       seoAuditor.analyze(html, url),
-      performanceAuditor.analyze(html, headers, responseTime),
+      performanceAuditor.analyze(html, headers, responseTime, url),
       accessibilityAuditor.analyze(html),
       securityAuditor.analyze(headers, url),
       shopifyAuditor.analyze(html, url),
       salesOptimizationAuditor.analyze(html, url),
+      coreWebVitalsAuditor.analyze(url, 'mobile'), // Real Core Web Vitals from Google
     ]);
 
-    // Calculate overall score
+    // Calculate overall score (including Core Web Vitals if available)
     const overallScore = calculateOverallScore({
       seo,
       performance,
@@ -92,7 +95,24 @@ export async function POST(request: NextRequest) {
       security,
       shopify,
       salesOptimization,
+      coreWebVitals,
     });
+
+    // Detect industry and compare to benchmarks
+    const detectedIndustry = detectIndustry(html, url);
+    const industryDisplayName = getIndustryDisplayName(detectedIndustry);
+    const benchmarkComparisons = compareToBenchmarks(
+      {
+        seo: seo.score,
+        performance: performance.score,
+        accessibility: accessibility.score,
+        security: security.score,
+        shopify: shopify.score,
+        salesOptimization: salesOptimization.score,
+        overall: overallScore,
+      },
+      detectedIndustry
+    );
 
     const results = {
       url,
@@ -104,6 +124,10 @@ export async function POST(request: NextRequest) {
       security,
       shopify,
       salesOptimization,
+      coreWebVitals, // Add Core Web Vitals to results
+      industry: detectedIndustry,
+      industryDisplayName,
+      benchmarks: benchmarkComparisons,
       recommendations: generateRecommendations({
         seo,
         performance,
@@ -111,6 +135,7 @@ export async function POST(request: NextRequest) {
         security,
         shopify,
         salesOptimization,
+        coreWebVitals,
       }),
     };
 

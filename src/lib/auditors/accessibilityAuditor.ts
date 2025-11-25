@@ -1,5 +1,12 @@
 import * as cheerio from 'cheerio';
 import { Issue, AuditResult } from '../types';
+import {
+  parseColor,
+  getContrastRatio,
+  extractColorsFromStyle,
+  isLargeText,
+  meetsWCAGAA,
+} from '../utils/colorContrast';
 
 export const accessibilityAuditor = {
   analyze: async (html: string): Promise<AuditResult> => {
@@ -116,16 +123,47 @@ export const accessibilityAuditor = {
       score -= 8;
     }
 
-    // Color contrast (basic check for inline styles)
-    const elementsWithStyles = $('[style*="color"]').length;
-    if (elementsWithStyles > 5) {
+    // Color contrast checking
+    const textElements = $(
+      'p, h1, h2, h3, h4, h5, h6, a, span, div, button, label, li, td, th'
+    );
+    let contrastIssuesCount = 0;
+    const contrastProblems: string[] = [];
+
+    textElements.each((i, el) => {
+      const style = $(el).attr('style');
+      if (!style) return;
+
+      const { color, backgroundColor } = extractColorsFromStyle(style);
+      if (!color || !backgroundColor) return;
+
+      const foreground = parseColor(color);
+      const background = parseColor(backgroundColor);
+
+      if (foreground && background) {
+        const ratio = getContrastRatio(foreground, background);
+        const fontSize = style.match(/font-size\s*:\s*([^;]+)/i)?.[1];
+        const fontWeight = style.match(/font-weight\s*:\s*([^;]+)/i)?.[1];
+        const isLarge = isLargeText(fontSize, fontWeight);
+
+        if (!meetsWCAGAA(ratio, isLarge)) {
+          contrastIssuesCount++;
+          const tagName = el.tagName || 'element';
+          contrastProblems.push(
+            `${tagName} (ratio: ${ratio.toFixed(2)}:1, required: ${isLarge ? '3.0' : '4.5'}:1)`
+          );
+        }
+      }
+    });
+
+    if (contrastIssuesCount > 0) {
       issues.push({
-        severity: 'low',
+        severity: contrastIssuesCount > 5 ? 'high' : 'medium',
         category: 'Accessibility',
-        issue: 'Review color contrast',
-        recommendation: 'Ensure text has sufficient contrast ratio (4.5:1 minimum for normal text, 3:1 for large text)',
+        issue: `${contrastIssuesCount} elements with insufficient color contrast`,
+        recommendation: `Improve color contrast to meet WCAG AA standards (4.5:1 for normal text, 3:1 for large text). Problem elements: ${contrastProblems.slice(0, 3).join(', ')}${contrastProblems.length > 3 ? ` and ${contrastProblems.length - 3} more` : ''}`,
       });
-      score -= 5;
+      score -= Math.min(contrastIssuesCount * 2, 15);
     }
 
     // Focus indicators
@@ -181,6 +219,7 @@ export const accessibilityAuditor = {
         buttonsWithoutText,
         linksTotal: links.length,
         linksWithoutText,
+        colorContrastIssues: contrastIssuesCount,
         hasFocusStyles: focusStyles,
         headingCount: headings.length,
       },

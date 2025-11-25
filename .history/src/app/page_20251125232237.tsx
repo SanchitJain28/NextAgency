@@ -61,7 +61,7 @@ export default function HomePage() {
       {/* Color Bends Background */}
       <div className="fixed inset-0 z-0 pointer-events-none opacity-40 md:opacity-100 overflow-hidden">
           <ColorBends
-            colors={["#67EA3A"]}
+            colors={["#91CB5A"]}
             autoRotate={-1}
             rotation={0}
             speed={0.1}

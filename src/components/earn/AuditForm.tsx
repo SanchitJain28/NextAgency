@@ -89,7 +89,7 @@ export default function AuditForm({ onSubmit, loading }: AuditFormProps) {
                     value={url}
                     onChange={(e) => setUrl(e.target.value)}
                     placeholder="example.myshopify.com"
-                    className={`w-full pl-12 pr-4 py-4 text-lg border-2 focus:ring-4 focus:ring-blue-100 focus:border-blue-500 transition-all bg-white text-gray-900 placeholder-gray-400 ${
+                    className={`w-full pl-12 pr-4 py-4 text-lg border-2 focus:ring-4 focus:ring-blue-100 focus:border-blue-500 transition-all bg-white text-gray-900 placeholder-gray-400 rounded-lg ${
                       error ? 'border-red-400 bg-red-50/30' : 'border-gray-200 hover:border-gray-300'
                     }`}
                     disabled={loading}
