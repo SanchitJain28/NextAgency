@@ -69,7 +69,7 @@ const blogs = [
 
 export default function BlogIndexPage() {
   return (
-    <main className="bg-white">
+    <main className="bg-background">
       {/* Structured Data for Blog */}
       <script
         type="application/ld+json"
@@ -115,48 +115,48 @@ export default function BlogIndexPage() {
       
       <article className="mx-auto max-w-6xl px-4 py-10 md:py-14">
         <header className="mb-8 md:mb-12 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#333333] text-balance mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground text-balance mb-4">
             Headless eCommerce Development Blog
           </h1>
-          <p className="text-lg md:text-xl text-[#333333]/80 max-w-3xl mx-auto leading-relaxed">
-            Expert insights on <strong>headless WooCommerce</strong>, <strong>Next.js eCommerce development</strong>, 
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Expert insights on <strong>headless WooCommerce</strong>, <strong>Next.js eCommerce development</strong>,
             speed optimization strategies, and building faster online stores that convert better.
           </p>
-          <div className="mt-6 h-1 w-20 bg-[#16A34A] mx-auto" aria-hidden="true" />
+          <div className="mt-6 h-1 w-20 bg-primary mx-auto" aria-hidden="true" />
         </header>
 
         {/* Featured Topics Section */}
         <section className="mb-10 md:mb-12">
-          <h2 className="text-2xl font-semibold text-[#333333] mb-6 text-center">
+          <h2 className="text-2xl font-semibold text-foreground mb-6 text-center">
             What You&apos;ll Learn Here
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center p-6 border border-gray-200 rounded-lg">
-              <h3 className="font-semibold text-lg mb-2 text-[#16A34A]">
+            <div className="text-center p-6 border border-border rounded-lg">
+              <h3 className="font-semibold text-lg mb-2 text-primary">
                 🚀 Speed Optimization
               </h3>
-              <p className="text-sm text-gray-600">
-                Learn how to make your <strong>WooCommerce store 10x faster</strong> with 
+              <p className="text-sm text-muted-foreground">
+                Learn how to make your <strong>WooCommerce store 10x faster</strong> with
                 headless Next.js architecture and advanced optimization techniques.
               </p>
             </div>
-            
-            <div className="text-center p-6 border border-gray-200 rounded-lg">
-              <h3 className="font-semibold text-lg mb-2 text-[#16A34A]">
+
+            <div className="text-center p-6 border border-border rounded-lg">
+              <h3 className="font-semibold text-lg mb-2 text-primary">
                 📈 Scaling Strategies
               </h3>
-              <p className="text-sm text-gray-600">
-                Discover best practices for <strong>WooCommerce stores with 500+ products</strong> 
+              <p className="text-sm text-muted-foreground">
+                Discover best practices for <strong>WooCommerce stores with 500+ products</strong>
                 and how to maintain performance at scale.
               </p>
             </div>
-            
-            <div className="text-center p-6 border border-gray-200 rounded-lg">
-              <h3 className="font-semibold text-lg mb-2 text-[#16A34A]">
+
+            <div className="text-center p-6 border border-border rounded-lg">
+              <h3 className="font-semibold text-lg mb-2 text-primary">
                 🔧 Migration Guides
               </h3>
-              <p className="text-sm text-gray-600">
-                Step-by-step tutorials for <strong>Shopify to Next.js migration</strong> and 
+              <p className="text-sm text-muted-foreground">
+                Step-by-step tutorials for <strong>Shopify to Next.js migration</strong> and
                 WooCommerce headless transformations.
               </p>
             </div>
@@ -166,10 +166,10 @@ export default function BlogIndexPage() {
         {/* Main Blog Section */}
         <section>
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#333333]">
+            <h2 className="text-2xl md:text-3xl font-semibold text-foreground">
               Latest Articles on Headless eCommerce
             </h2>
-            <div className="text-sm text-gray-500">
+            <div className="text-sm text-muted-foreground">
               {blogs.length} articles
             </div>
           </div>
@@ -201,43 +201,43 @@ export default function BlogIndexPage() {
         </section>
 
         {/* Newsletter Signup Section */}
-        <section className="mt-16 text-center bg-gray-50 rounded-lg p-8 md:p-12">
-          <h2 className="text-2xl md:text-3xl font-semibold text-[#333333] mb-4">
+        <section className="mt-16 text-center bg-secondary/20 rounded-lg p-8 md:p-12">
+          <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-4">
             Stay Updated on Headless eCommerce Trends
           </h2>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Get the latest insights on <strong>WooCommerce speed optimization</strong>, 
-            <strong>Next.js eCommerce development</strong>, and headless architecture 
+          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+            Get the latest insights on <strong>WooCommerce speed optimization</strong>,
+            <strong>Next.js eCommerce development</strong>, and headless architecture
             delivered straight to your inbox.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input 
-              type="email" 
+            <input
+              type="email"
               placeholder="Your email for eCommerce tips..."
-              className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#16A34A]"
+              className="flex-1 px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground"
               aria-label="Email for newsletter subscription"
             />
-            <button 
+            <button
               type="button"
-              className="px-6 py-2 bg-[#16A34A] text-white rounded-lg hover:bg-[#15803d] transition-colors"
+              className="px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
             >
               Subscribe
             </button>
           </div>
-          <p className="text-xs text-gray-500 mt-3">
+          <p className="text-xs text-muted-foreground mt-3">
             No spam. Unsubscribe anytime. Get practical eCommerce optimization tips.
           </p>
         </section>
 
         {/* Popular Topics */}
         <section className="mt-12">
-          <h2 className="text-xl font-semibold text-[#333333] mb-6">
+          <h2 className="text-xl font-semibold text-foreground mb-6">
             Popular Topics We Cover
           </h2>
           <div className="flex flex-wrap gap-3">
             {[
               "Headless WooCommerce",
-              "Next.js eCommerce", 
+              "Next.js eCommerce",
               "WooCommerce Speed Optimization",
               "Shopify Migration",
               "eCommerce SEO",
@@ -246,9 +246,9 @@ export default function BlogIndexPage() {
               "Headless Architecture",
               "WooCommerce vs Shopify"
             ].map((topic) => (
-              <span 
+              <span
                 key={topic}
-                className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-[#16A34A] hover:text-white transition-colors cursor-pointer"
+                className="px-4 py-2 bg-secondary/20 text-foreground rounded-full text-sm hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer"
               >
                 {topic}
               </span>

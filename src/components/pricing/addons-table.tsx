@@ -22,32 +22,32 @@ export default function AddonsTable() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.45 }}
-      className="overflow-hidden rounded-lg border border-[#16A34A]/15 bg-white"
+      className="overflow-hidden rounded-lg border border-primary/15 bg-card"
     >
       <div className="overflow-x-auto">
         <table className="min-w-full border-separate border-spacing-0">
           <caption className="sr-only">Add-on features and fixed pricing</caption>
           <thead>
-            <tr className="bg-[#F1F5F9] text-left text-sm">
-              <th scope="col" className="px-4 py-3 font-medium text-[#333333]">
+            <tr className="bg-secondary/20 text-left text-sm">
+              <th scope="col" className="px-4 py-3 font-medium text-foreground">
                 Feature
               </th>
-              <th scope="col" className="px-4 py-3 font-medium text-[#333333]">
+              <th scope="col" className="px-4 py-3 font-medium text-foreground">
                 Price
               </th>
             </tr>
           </thead>
           <tbody>
             {addons.map((a, idx) => (
-              <tr key={a.feature} className={idx % 2 === 0 ? "bg-white" : "bg-[#F1F5F9]/60"}>
+              <tr key={a.feature} className={idx % 2 === 0 ? "bg-card" : "bg-secondary/20"}>
                 <td className="px-4 py-3 text-sm">{a.feature}</td>
-                <td className="px-4 py-3 text-sm font-medium text-[#16A34A]">{a.price}</td>
+                <td className="px-4 py-3 text-sm font-medium text-primary">{a.price}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-      <p className="px-4 py-3 text-xs text-[#333333]/70 md:hidden">Table scrolls horizontally on small screens.</p>
+      <p className="px-4 py-3 text-xs text-muted-foreground md:hidden">Table scrolls horizontally on small screens.</p>
     </motion.div>
   )
 }

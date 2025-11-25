@@ -21,6 +21,10 @@ const SERVICES = [
   { href: "/services/audit-consulting", label: "Store Audit & Consulting" },
 ]
 
+const TOOLS = [
+  { href: "/earn", label: "Earn - Store Auditor" },
+]
+
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about-us", label: "About" },
@@ -33,6 +37,7 @@ export function Header() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
+  const [toolsOpen, setToolsOpen] = useState(false)
 
   const isActive = useCallback(
     (href: string) => (href === "/" ? pathname === "/" : pathname?.startsWith(href)),
@@ -40,9 +45,10 @@ export function Header() {
   )
 
   const isServicesActive = pathname?.startsWith("/services")
+  const isToolsActive = pathname?.startsWith("/earn")
 
   return (
-    <header className="w-full border-b-2 border-primary/30 bg-gradient-to-r from-background/80 via-primary/10 to-background/80 backdrop-blur-2xl sticky top-0 z-50 shadow-2xl shadow-primary/20 liquid-header">
+    <header className="w-full border-b-2 border-gray-800 bg-black sticky top-0 z-50 shadow-lg">
       <div className="mx-auto max-w-7xl px-6 relative">
         <div className="flex h-16 items-center justify-between relative z-10">
           {/* Logo */}
@@ -74,8 +80,8 @@ export function Header() {
                 className={cn(
                   "px-4 py-2 text-sm font-medium rounded-md transition-colors flex items-center gap-1",
                   isServicesActive
-                    ? "text-primary"
-                    : "text-foreground hover:text-primary hover:bg-secondary/50"
+                    ? "text-blue-400"
+                    : "text-white hover:text-blue-400 hover:bg-gray-800"
                 )}
               >
                 Services
@@ -86,14 +92,50 @@ export function Header() {
               </button>
 
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-1 w-72 bg-card border border-border rounded-lg shadow-lg py-2 max-h-[80vh] overflow-y-auto z-50">
+                <div className="absolute top-full left-0 mt-1 w-72 bg-gray-900 border border-gray-700 rounded-lg shadow-lg py-2 max-h-[80vh] overflow-y-auto z-50">
                   {SERVICES.map((service) => (
                     <Link
                       key={service.href}
                       href={service.href}
-                      className="block px-4 py-2 text-sm text-card-foreground hover:bg-secondary/50 hover:text-primary transition-colors"
+                      className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-blue-400 transition-colors"
                     >
                       {service.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Tools Dropdown - Second */}
+            <div
+              className="relative"
+              onMouseEnter={() => setToolsOpen(true)}
+              onMouseLeave={() => setToolsOpen(false)}
+            >
+              <button
+                className={cn(
+                  "px-4 py-2 text-sm font-medium rounded-md transition-colors flex items-center gap-1",
+                  isToolsActive
+                    ? "text-blue-400"
+                    : "text-white hover:text-blue-400 hover:bg-gray-800"
+                )}
+              >
+                Tools
+                <ChevronDown className={cn(
+                  "h-4 w-4 transition-transform",
+                  toolsOpen && "rotate-180"
+                )} />
+              </button>
+
+              {toolsOpen && (
+                <div className="absolute top-full left-0 mt-1 w-64 bg-gray-900 border border-gray-700 rounded-lg shadow-lg py-2 z-50">
+                  {TOOLS.map((tool) => (
+                    <Link
+                      key={tool.href}
+                      href={tool.href}
+                      className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-blue-400 transition-colors"
+                    >
+                      {tool.label}
                     </Link>
                   ))}
                 </div>
@@ -110,8 +152,8 @@ export function Header() {
                   className={cn(
                     "px-4 py-2 text-sm font-medium rounded-md transition-colors",
                     active
-                      ? "text-primary"
-                      : "text-foreground hover:text-primary hover:bg-secondary/50"
+                      ? "text-blue-400"
+                      : "text-white hover:text-blue-400 hover:bg-gray-800"
                   )}
                 >
                   {item.label}
@@ -124,7 +166,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="md:hidden inline-flex items-center justify-center rounded-md p-2 hover:bg-secondary/50"
+            className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-gray-800"
             aria-label="Toggle menu"
           >
             {open ? (
@@ -143,7 +185,7 @@ export function Header() {
         {open && (
           <nav
             aria-label="Mobile"
-            className="md:hidden border-t border-border pb-4"
+            className="md:hidden border-t border-gray-800 pb-4"
           >
             <ul className="flex flex-col py-2 space-y-1">
               {/* Mobile Services - First */}
@@ -153,8 +195,8 @@ export function Header() {
                   className={cn(
                     "w-full text-left px-4 py-2 text-sm font-medium rounded-md transition-colors flex items-center justify-between",
                     isServicesActive
-                      ? "text-primary bg-secondary/50"
-                      : "text-foreground hover:bg-secondary/50"
+                      ? "text-blue-400 bg-gray-800"
+                      : "text-white hover:bg-gray-800"
                   )}
                 >
                   Services
@@ -173,9 +215,46 @@ export function Header() {
                             setOpen(false)
                             setServicesOpen(false)
                           }}
-                          className="block px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-secondary/50 rounded-md transition-colors"
+                          className="block px-4 py-2 text-sm text-gray-300 hover:text-blue-400 hover:bg-gray-800 rounded-md transition-colors"
                         >
                           {service.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+
+              {/* Mobile Tools - Second */}
+              <li>
+                <button
+                  onClick={() => setToolsOpen(!toolsOpen)}
+                  className={cn(
+                    "w-full text-left px-4 py-2 text-sm font-medium rounded-md transition-colors flex items-center justify-between",
+                    isToolsActive
+                      ? "text-blue-400 bg-gray-800"
+                      : "text-white hover:bg-gray-800"
+                  )}
+                >
+                  Tools
+                  <ChevronDown className={cn(
+                    "h-4 w-4 transition-transform",
+                    toolsOpen && "rotate-180"
+                  )} />
+                </button>
+                {toolsOpen && (
+                  <ul className="mt-2 ml-4 space-y-1">
+                    {TOOLS.map((tool) => (
+                      <li key={tool.href}>
+                        <Link
+                          href={tool.href}
+                          onClick={() => {
+                            setOpen(false)
+                            setToolsOpen(false)
+                          }}
+                          className="block px-4 py-2 text-sm text-gray-300 hover:text-blue-400 hover:bg-gray-800 rounded-md transition-colors"
+                        >
+                          {tool.label}
                         </Link>
                       </li>
                     ))}
@@ -194,8 +273,8 @@ export function Header() {
                       className={cn(
                         "block px-4 py-2 text-sm font-medium rounded-md transition-colors",
                         active
-                          ? "text-primary bg-secondary/50"
-                          : "text-foreground hover:bg-secondary/50"
+                          ? "text-blue-400 bg-gray-800"
+                          : "text-white hover:bg-gray-800"
                       )}
                     >
                       {item.label}

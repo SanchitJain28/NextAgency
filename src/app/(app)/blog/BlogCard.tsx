@@ -16,17 +16,17 @@ export function BlogCard({ blog }: { blog: Blog }) {
     <article>
       <Link
         href={to}
-        className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#16A34A] rounded-lg"
+        className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg"
       >
-        <Card className="transition-colors border-[#F1F5F9] hover:border-[#16A34A]">
+        <Card className="transition-colors border-border hover:border-primary">
           <CardHeader className="pb-2">
-            <CardTitle className="text-[#333333] text-balance group-hover:text-[#16A34A] transition-colors">
+            <CardTitle className="text-foreground text-balance group-hover:text-primary transition-colors">
               {blog.title}
             </CardTitle>
-            <CardDescription className="text-[#333333]/80">{blog.description}</CardDescription>
+            <CardDescription className="text-muted-foreground">{blog.description}</CardDescription>
           </CardHeader>
           <CardContent className="pt-0">
-            <span className="inline-flex items-center gap-2 text-sm font-medium text-[#F97316]">
+            <span className="inline-flex items-center gap-2 text-sm font-medium text-primary">
               Read article
               <span aria-hidden="true">→</span>
             </span>

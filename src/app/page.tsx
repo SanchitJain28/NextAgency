@@ -13,6 +13,7 @@ import {
   Star,
   Globe2,
   Sparkles,
+  BarChart,
 } from "lucide-react";
 import Link from "next/link";
 // Using MagicUI Globe component with interactive features
@@ -100,6 +101,7 @@ export default function HomePage() {
 
         <StatsSection />
         <ServicesOverview />
+        <ToolsSection />
         <WhyChooseSection />
         <ResultsSection />
         <TestimonialsSection />
@@ -293,6 +295,67 @@ const ServicesOverview = () => {
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const ToolsSection = () => {
+  return (
+    <section className="py-24 md:py-32 relative overflow-hidden">
+      <div className="mx-auto max-w-7xl px-6 relative">
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance">
+            Free Tools
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            Professional-grade tools to help optimize your Shopify store
+          </p>
+        </div>
+
+        <div className="max-w-4xl mx-auto">
+          <div className="group rounded-2xl border-2 border-blue-500/30 bg-background p-8 md:p-12 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 hover:scale-[1.02]">
+            <div className="flex items-start gap-6">
+              <div className="flex-shrink-0">
+                <div className="inline-flex rounded-xl bg-blue-500/10 p-4 group-hover:bg-blue-500/20 transition-colors">
+                  <BarChart className="h-10 w-10 text-blue-600" />
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="font-bold text-2xl md:text-3xl text-white md:text-foreground mb-3">
+                  <span className="text-blue-600">Earn</span> - Shopify Store Auditor
+                </h3>
+                <p className="text-lg text-white md:text-muted-foreground mb-6">
+                  Unlike other tools that just show page speed, Earn analyzes <strong>all factors that impact sales</strong> – from trust signals and conversion features to security and user experience. Get 100+ critical checks in 60 seconds, absolutely free.
+                </p>
+                <div className="flex flex-wrap gap-3 mb-6">
+                  <span className="inline-flex items-center rounded-full bg-blue-500/20 px-3 py-1 text-sm font-medium text-blue-400">
+                    SEO Analysis
+                  </span>
+                  <span className="inline-flex items-center rounded-full bg-blue-500/20 px-3 py-1 text-sm font-medium text-blue-400">
+                    Performance Testing
+                  </span>
+                  <span className="inline-flex items-center rounded-full bg-blue-500/20 px-3 py-1 text-sm font-medium text-blue-400">
+                    Sales Optimization
+                  </span>
+                  <span className="inline-flex items-center rounded-full bg-blue-500/20 px-3 py-1 text-sm font-medium text-blue-400">
+                    Security Check
+                  </span>
+                </div>
+                <Button
+                  size="lg"
+                  className="bg-blue-600 hover:bg-blue-700 text-white"
+                  asChild
+                >
+                  <Link href="/earn" className="flex items-center gap-2">
+                    Try Earn Free
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -511,3 +574,4 @@ const FinalCTASection = () => {
     </section>
   );
 };
+

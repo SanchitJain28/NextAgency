@@ -24,33 +24,33 @@ export default function PlanCard({ plan }: { plan: Plan }) {
     <motion.div whileHover={{ y: -4 }} transition={{ type: "spring", stiffness: 300, damping: 22 }}>
       <Card
         className={cn(
-          "h-full overflow-hidden bg-white border-[#16A34A]/15",
-          highlight ? "ring-2 ring-[#16A34A]" : "ring-1 ring-[#16A34A]/10",
+          "h-full overflow-hidden bg-card border-primary/15",
+          highlight ? "ring-2 ring-primary" : "ring-1 ring-primary/10",
         )}
       >
         <CardHeader className="relative">
           {badge ? (
-            <span className="absolute right-4 top-4 rounded-full bg-[#16A34A] px-2.5 py-1 text-xs font-medium text-white">
+            <span className="absolute right-4 top-4 rounded-full bg-primary px-2.5 py-1 text-xs font-medium text-primary-foreground">
               {badge}
             </span>
           ) : null}
           <CardTitle className="text-lg">{name}</CardTitle>
           <div className="mt-1 flex items-baseline gap-2">
             <span className="text-2xl font-semibold">{price}</span>
-            <span className="text-xs text-[#333333]/70">one‑time</span>
+            <span className="text-xs text-muted-foreground">one‑time</span>
           </div>
-          <p className="text-xs text-[#333333]/80">{productRange}</p>
+          <p className="text-xs text-muted-foreground">{productRange}</p>
         </CardHeader>
         <CardContent className="flex h-full flex-col">
           <ul className="mb-4 space-y-2">
             {features.map((f) => (
               <li key={f} className="flex items-start gap-2">
-                <Check className="mt-0.5 h-4 w-4 text-[#16A34A]" aria-hidden="true" />
+                <Check className="mt-0.5 h-4 w-4 text-primary" aria-hidden="true" />
                 <span className="text-sm">{f}</span>
               </li>
             ))}
           </ul>
-          <Button asChild className="mt-auto w-full bg-[#F97316] hover:bg-[#F97316]/90 text-white">
+          <Button asChild className="mt-auto w-full bg-primary hover:bg-primary/90 text-primary-foreground">
             <Link href={cta.href}>{cta.label}</Link>
           </Button>
         </CardContent>

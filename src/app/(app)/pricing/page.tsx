@@ -62,7 +62,7 @@ const plans = [
 
 export default function PricingPage() {
   return (
-    <main className="bg-white text-[#333333]">
+    <main className="bg-background text-foreground">
       {/* Hero */}
       <Header />
       <section className="mx-auto max-w-6xl px-4 pt-10 pb-6 md:pt-14">
@@ -73,8 +73,8 @@ export default function PricingPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.45 }}
           >
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#16A34A]/20 bg-[#F1F5F9] px-3 py-1 text-xs font-medium text-[#16A34A]">
-              <Sparkles className="h-3.5 w-3.5 text-[#16A34A]" />
+            <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
+              <Sparkles className="h-3.5 w-3.5 text-primary" />
               WooCommerce/Shopify backend • Next.js frontend
             </span>
           </motion.div>
@@ -85,10 +85,10 @@ export default function PricingPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.05 }}
           >
-            Modern ecommerce that’s fast, SEO‑friendly, and scalable
+            Modern ecommerce that's fast, SEO‑friendly, and scalable
           </motion.h1>
           <motion.p
-            className="mx-auto max-w-2xl text-balance text-sm md:text-base text-[#333333]/80"
+            className="mx-auto max-w-2xl text-balance text-sm md:text-base text-muted-foreground"
             initial={{ opacity: 0, y: 8 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -106,7 +106,7 @@ export default function PricingPage() {
           >
             <Button
               asChild
-              className="bg-[#F97316] hover:bg-[#F97316]/90 text-white"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
             >
               <Link href="/contact?intent=book-call">
                 Book a 15‑min call
@@ -116,7 +116,7 @@ export default function PricingPage() {
             <Button
               asChild
               variant="outline"
-              className="border-[#16A34A] text-[#16A34A] hover:bg-[#16A34A]/10 bg-transparent"
+              className="border-primary text-primary hover:bg-primary/10 bg-transparent"
             >
               <Link href="#addons">See add‑ons</Link>
             </Button>
@@ -139,7 +139,7 @@ export default function PricingPage() {
             </motion.div>
           ))}
         </div>
-        <p className="mt-4 text-center text-xs text-[#333333]/70">
+        <p className="mt-4 text-center text-xs text-muted-foreground">
           All plans include integration with either WooCommerce or Shopify as
           backend, and a Next.js frontend.
         </p>
@@ -151,7 +151,7 @@ export default function PricingPage() {
           <h2 className="text-pretty text-2xl font-semibold md:text-3xl">
             Add‑on features / plugins
           </h2>
-          <span className="text-xs text-[#333333]/70">
+          <span className="text-xs text-muted-foreground">
             Fixed, transparent pricing
           </span>
         </div>
@@ -159,11 +159,11 @@ export default function PricingPage() {
         <div className="mt-6 flex flex-col items-center justify-center gap-3 md:flex-row">
           <Button
             asChild
-            className="bg-[#F97316] hover:bg-[#F97316]/90 text-white"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground"
           >
             <Link href="/contact?intent=addons">Request add‑ons</Link>
           </Button>
-          <p className="text-xs text-[#333333]/70">
+          <p className="text-xs text-muted-foreground">
             Bundle multiple add‑ons for a custom quote.
           </p>
         </div>
@@ -175,14 +175,14 @@ export default function PricingPage() {
       </div>
 
       {/* CTA footer */}
-      <section className="border-t border-[#16A34A]/20 bg-[#F1F5F9]">
+      <section className="border-t border-primary/20 bg-secondary/20">
         <div className="mx-auto max-w-6xl px-4 py-8 md:py-10">
           <div className="flex flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left">
             <div>
               <h4 className="text-lg font-semibold">
                 Ready to migrate or build?
               </h4>
-              <p className="text-sm text-[#333333]/80">
+              <p className="text-sm text-muted-foreground">
                 Get a quick audit and a roadmap to launch on a modern Next.js
                 stack.
               </p>
@@ -190,7 +190,7 @@ export default function PricingPage() {
             <div className="flex gap-3">
               <Button
                 asChild
-                className="bg-[#F97316] hover:bg-[#F97316]/90 text-white"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground"
               >
                 <Link href="/contact?intent=start-project">
                   Start a project
@@ -199,7 +199,7 @@ export default function PricingPage() {
               <Button
                 asChild
                 variant="outline"
-                className="border-[#16A34A] text-[#16A34A] hover:bg-[#16A34A]/10 bg-transparent"
+                className="border-primary text-primary hover:bg-primary/10 bg-transparent"
               >
                 <Link href="/contact?intent=quote">Get a quote</Link>
               </Button>
