@@ -7,8 +7,20 @@ export function calculateOverallScore(results: {
   security: AuditResult;
   shopify: AuditResult;
   salesOptimization: AuditResult;
+  coreWebVitals?: AuditResult;
 }): number {
-  const weights = {
+  // Adjust weights if Core Web Vitals is included
+  const hasCoreWebVitals = results.coreWebVitals && results.coreWebVitals.score > 0;
+
+  const weights = hasCoreWebVitals ? {
+    seo: 0.18,
+    performance: 0.18,
+    accessibility: 0.10,
+    security: 0.12,
+    shopify: 0.12,
+    salesOptimization: 0.18,
+    coreWebVitals: 0.12,
+  } : {
     seo: 0.20,
     performance: 0.20,
     accessibility: 0.10,
@@ -17,13 +29,17 @@ export function calculateOverallScore(results: {
     salesOptimization: 0.20,
   };
 
-  const totalScore =
+  let totalScore =
     results.seo.score * weights.seo +
     results.performance.score * weights.performance +
     results.accessibility.score * weights.accessibility +
     results.security.score * weights.security +
     results.shopify.score * weights.shopify +
     results.salesOptimization.score * weights.salesOptimization;
+
+  if (hasCoreWebVitals) {
+    totalScore += results.coreWebVitals!.score * weights.coreWebVitals!;
+  }
 
   return Math.round(totalScore);
 }
@@ -35,6 +51,7 @@ export function generateRecommendations(results: {
   security: AuditResult;
   shopify: AuditResult;
   salesOptimization: AuditResult;
+  coreWebVitals?: AuditResult;
 }): Recommendation[] {
   const recommendations: Recommendation[] = [];
 
@@ -46,6 +63,7 @@ export function generateRecommendations(results: {
     ...results.security.issues,
     ...results.shopify.issues,
     ...results.salesOptimization.issues,
+    ...(results.coreWebVitals?.issues || []),
   ].filter(issue => issue.severity === 'critical' || issue.severity === 'high');
 
   // Convert to recommendations

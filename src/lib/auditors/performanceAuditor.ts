@@ -86,7 +86,7 @@ export const performanceAuditor = {
 
     let totalJSSize = 0;
     let measuredJSFiles = 0;
-    let largeJSFiles: string[] = [];
+    const largeJSFiles: string[] = [];
 
     // Measure first 10 JS files to avoid too many requests
     if (url && scriptSources.length > 0) {
@@ -171,7 +171,7 @@ export const performanceAuditor = {
 
     let totalCSSSize = 0;
     let measuredCSSFiles = 0;
-    let largeCSSFiles: string[] = [];
+    const largeCSSFiles: string[] = [];
 
     // Measure first 10 CSS files to avoid too many requests
     if (url && cssSources.length > 0) {
