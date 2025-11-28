@@ -5,13 +5,16 @@ import { Button } from '@/components/ui/button';
 import { Search, Sparkles, BarChart } from 'lucide-react';
 
 interface AuditFormProps {
-  onSubmit: (url: string) => void;
+  onSubmit: (url: string, credentials?: { shopDomain: string; accessToken: string }) => void;
   loading: boolean;
 }
 
 export default function AuditForm({ onSubmit, loading }: AuditFormProps) {
   const [url, setUrl] = useState('');
   const [error, setError] = useState('');
+  const [enhancedMode, setEnhancedMode] = useState(false);
+  const [shopDomain, setShopDomain] = useState('');
+  const [accessToken, setAccessToken] = useState('');
 
   const validateUrl = (url: string) => {
     try {
@@ -39,13 +42,27 @@ export default function AuditForm({ onSubmit, loading }: AuditFormProps) {
       return;
     }
 
+    // Validate Shopify credentials if enhanced mode is enabled
+    if (enhancedMode) {
+      if (!shopDomain.trim() || !accessToken.trim()) {
+        setError('Shop domain and access token are required for enhanced mode');
+        return;
+      }
+    }
+
     let finalUrl = url.trim();
     if (!finalUrl.startsWith('http://') && !finalUrl.startsWith('https://')) {
       finalUrl = 'https://' + finalUrl;
     }
 
     setError('');
-    onSubmit(finalUrl);
+
+    // Pass credentials if enhanced mode is enabled
+    if (enhancedMode && shopDomain && accessToken) {
+      onSubmit(finalUrl, { shopDomain: shopDomain.trim(), accessToken: accessToken.trim() });
+    } else {
+      onSubmit(finalUrl);
+    }
   };
 
   return (
@@ -101,6 +118,77 @@ export default function AuditForm({ onSubmit, loading }: AuditFormProps) {
                     <span className="mr-1">⚠️</span>
                     {error}
                   </p>
+                )}
+              </div>
+
+              {/* Enhanced Mode Toggle */}
+              <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-xl p-5">
+                <div className="flex items-start gap-3">
+                  <input
+                    type="checkbox"
+                    id="enhancedMode"
+                    checked={enhancedMode}
+                    onChange={(e) => setEnhancedMode(e.target.checked)}
+                    className="mt-1 h-5 w-5 text-green-600 focus:ring-green-500 border-gray-300 rounded cursor-pointer"
+                    disabled={loading}
+                  />
+                  <div className="flex-1">
+                    <label htmlFor="enhancedMode" className="block font-semibold text-gray-900 mb-1 cursor-pointer">
+                      🎯 Enhanced Accuracy Mode (Optional)
+                    </label>
+                    <p className="text-sm text-gray-700 mb-2">
+                      Connect your Shopify Admin API for <strong>95% accuracy</strong> vs 60-70% with HTML-only scanning.
+                    </p>
+                    <p className="text-xs text-gray-600">
+                      Your credentials are used only for this audit and are never stored.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Shopify Credentials Inputs */}
+                {enhancedMode && (
+                  <div className="mt-4 space-y-4 pt-4 border-t border-green-200">
+                    <div>
+                      <label htmlFor="shopDomain" className="block text-sm font-semibold text-gray-900 mb-2">
+                        Shop Domain
+                      </label>
+                      <input
+                        type="text"
+                        id="shopDomain"
+                        value={shopDomain}
+                        onChange={(e) => setShopDomain(e.target.value)}
+                        placeholder="yourstore.myshopify.com"
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-4 focus:ring-green-100 focus:border-green-500 bg-white text-gray-900 placeholder-gray-400"
+                        disabled={loading}
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="accessToken" className="block text-sm font-semibold text-gray-900 mb-2">
+                        Admin API Access Token
+                      </label>
+                      <input
+                        type="password"
+                        id="accessToken"
+                        value={accessToken}
+                        onChange={(e) => setAccessToken(e.target.value)}
+                        placeholder="shpat_••••••••••••••••"
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-4 focus:ring-green-100 focus:border-green-500 bg-white text-gray-900 placeholder-gray-400"
+                        disabled={loading}
+                      />
+                      <div className="mt-3 bg-white border border-green-200 rounded-lg p-3">
+                        <p className="text-xs font-semibold text-gray-900 mb-2">How to get your access token:</p>
+                        <ol className="text-xs text-gray-700 space-y-1 ml-4 list-decimal">
+                          <li>Go to your Shopify Admin → Settings → Apps and sales channels</li>
+                          <li>Click "Develop apps" → "Create an app"</li>
+                          <li>Name it (e.g., "Store Auditor") and click "Create app"</li>
+                          <li>Click "Configure Admin API scopes"</li>
+                          <li>Enable these scopes: <strong>read_discounts, read_script_tags</strong> (these are the only ones needed)</li>
+                          <li>Click "Save" → "Install app"</li>
+                          <li>Copy the "Admin API access token" - starts with shpat_</li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
                 )}
               </div>
 

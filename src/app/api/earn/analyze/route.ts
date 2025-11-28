@@ -12,10 +12,11 @@ import { detectIndustry, compareToBenchmarks, getIndustryDisplayName } from '@/l
 import { saveAudit } from '@/lib/db/database';
 import { storeLead } from '@/lib/db/leadStorage';
 import { nanoid } from 'nanoid';
+import { fetchShopifyAdminData, validateShopifyCredentials, type ShopifyCredentials } from '@/lib/shopify/adminApiClient';
 
 export async function POST(request: NextRequest) {
   try {
-    const { url, userId, email, phone } = await request.json();
+    const { url, userId, email, phone, shopifyCredentials } = await request.json();
 
     // Validate URL
     if (!url || !isValidUrl(url)) {
@@ -76,14 +77,42 @@ export async function POST(request: NextRequest) {
       }
     }
 
+    // Fetch Shopify Admin API data if credentials are provided (optional)
+    let shopifyAdminData = null;
+    let adminApiUsed = false;
+    let detectedApps: string[] = [];
+
+    if (shopifyCredentials && shopifyCredentials.shopDomain && shopifyCredentials.accessToken) {
+      try {
+        // Validate credentials first
+        const validation = await validateShopifyCredentials(shopifyCredentials as ShopifyCredentials);
+
+        if (validation.valid) {
+          // Fetch admin data
+          shopifyAdminData = await fetchShopifyAdminData(shopifyCredentials as ShopifyCredentials);
+          if (shopifyAdminData) {
+            adminApiUsed = true;
+            detectedApps = shopifyAdminData.installedApps.map(app => app.title);
+          }
+        } else {
+          console.warn('Invalid Shopify credentials provided:', validation.error);
+          // Continue with HTML-only analysis
+        }
+      } catch (adminError) {
+        console.error('Failed to fetch Shopify Admin data:', adminError);
+        // Continue with HTML-only analysis
+      }
+    }
+
     // Run all auditors in parallel (including Core Web Vitals if API key is configured)
+    // Pass admin data to salesOptimizationAuditor for enhanced accuracy
     const [seo, performance, accessibility, security, shopify, salesOptimization, coreWebVitals] = await Promise.all([
       seoAuditor.analyze(html, url),
       performanceAuditor.analyze(html, headers, responseTime, url),
       accessibilityAuditor.analyze(html),
       securityAuditor.analyze(headers, url),
       shopifyAuditor.analyze(html, url),
-      salesOptimizationAuditor.analyze(html, url),
+      salesOptimizationAuditor.analyze(html, url, shopifyAdminData),
       coreWebVitalsAuditor.analyze(url, 'mobile'), // Real Core Web Vitals from Google
     ]);
 
@@ -137,6 +166,10 @@ export async function POST(request: NextRequest) {
         salesOptimization,
         coreWebVitals,
       }),
+      // Admin API information
+      adminApiUsed,
+      accuracyLevel: adminApiUsed ? 'enhanced' : 'basic',
+      detectedApps: detectedApps.length > 0 ? detectedApps : undefined,
     };
 
     // Save audit to database

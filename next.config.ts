@@ -10,6 +10,14 @@ const nextConfig: NextConfig = {
     // Warning: This allows production builds even with TypeScript errors
     ignoreBuildErrors: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
+  },
 };
 
 export default nextConfig;

@@ -1,8 +1,12 @@
 import type { MetadataRoute } from 'next'
+import { getAllPosts } from '@/lib/blog/posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://scalefront.io'
   const lastModified = new Date()
+
+  // Get all blog posts dynamically
+  const blogPosts = getAllPosts()
 
   return [
     // Homepage with featured images
@@ -13,7 +17,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
       images: [
         `${baseUrl}/images/og-headless-woocommerce.png`,
-        // `${baseUrl}/featured-project.jpg`,
       ],
     },
     // About page with profile image
@@ -31,10 +34,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
       images: [
-        `${baseUrl}//images/og-headless-woocommerce.png`
-        // `${baseUrl}/services/mobile-app.jpg`,
-        // `${baseUrl}/services/consulting.jpg`,
+        `${baseUrl}/images/og-headless-woocommerce.png`
       ],
+    },
+    // Earn page (Shopify auditor)
+    {
+      url: `${baseUrl}/earn`,
+      lastModified: lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
     // Contact page
     {
@@ -48,33 +56,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/blog`,
       lastModified: lastModified,
       changeFrequency: 'weekly',
-      priority: 0.6,
+      priority: 0.9,
     },
-    // Blog posts with featured images
-    {
-      url: `${baseUrl}/blog/best-of-woo-and-shopify`,
-      lastModified: new Date('2024-01-15'),
-      changeFrequency: 'monthly',
-      priority: 0.5,
-      images: [`/images/og-headless-woocommerce.png`],
-    },
-    {
-      url: `${baseUrl}/blog/headless-woocommerce-with-nextjs`,
-      lastModified: new Date('2024-02-01'),
-      changeFrequency: 'monthly',
-      priority: 0.5,
-      images: [`${baseUrl}/images/og-headless-woocommerce.png`],
-    },
-    // Portfolio with project images
-    {
-      url: `${baseUrl}/blog/nextjs-headless-frontend`,
-      lastModified: lastModified,
-      changeFrequency: 'monthly',
+    // Dynamically generated blog posts
+    ...blogPosts.map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: 'monthly' as const,
       priority: 0.7,
-      images: [
-        `${baseUrl}/images/og-headless-woocommerce.png`
-      ],
-    },
+      images: post.image ? [`${baseUrl}${post.image}`] : [],
+    })),
     // Individual project pages
     // {
     //   url: `${baseUrl}/portfolio/ecommerce-website`,

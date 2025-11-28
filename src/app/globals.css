@@ -243,3 +243,42 @@
 .bg-gradient-radial {
   background-image: radial-gradient(circle, var(--tw-gradient-stops));
 }
+
+/* Blog font size controls */
+html[data-font-size="small"] .medium-content p,
+html[data-font-size="small"] .medium-content ul,
+html[data-font-size="small"] .medium-content ol,
+html[data-font-size="small"] .medium-content li {
+  font-size: 18px !important;
+}
+
+html[data-font-size="small"] .medium-content h1 {
+  font-size: 32px !important;
+}
+
+html[data-font-size="small"] .medium-content h2 {
+  font-size: 28px !important;
+}
+
+html[data-font-size="small"] .medium-content h3 {
+  font-size: 22px !important;
+}
+
+html[data-font-size="large"] .medium-content p,
+html[data-font-size="large"] .medium-content ul,
+html[data-font-size="large"] .medium-content ol,
+html[data-font-size="large"] .medium-content li {
+  font-size: 24px !important;
+}
+
+html[data-font-size="large"] .medium-content h1 {
+  font-size: 42px !important;
+}
+
+html[data-font-size="large"] .medium-content h2 {
+  font-size: 38px !important;
+}
+
+html[data-font-size="large"] .medium-content h3 {
+  font-size: 30px !important;
+}

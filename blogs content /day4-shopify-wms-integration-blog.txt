@@ -1,0 +1,625 @@
+============================================================
+SCALEFRONT BLOG - DAY 4
+============================================================
+
+PRIMARY KEYWORD: Shopify warehouse management integration
+SECONDARY KEYWORDS: Shopify WMS integration, Shopify inventory sync, Shopify 3PL integration, Shopify Unicommerce, Shopify warehouse software India
+URL SLUG: scalefront.io/blog/integrate-shopify-warehouse-management-system
+META TITLE: How to Integrate Shopify with Your Warehouse Management System (Complete Guide)
+META DESCRIPTION: Learn how to connect Shopify with your WMS or 3PL. Covers Unicommerce, Vinculum, Increff integrations, inventory sync issues, order routing, and avoiding common mistakes.
+WORD COUNT: 4,200+
+INTERNAL LINKS: Link to Third-Party Integrations, Backend & API Work, Custom Shopify Apps, Store Audit service pages
+
+============================================================
+BLOG CONTENT STARTS
+============================================================
+
+# How to Integrate Shopify with Your Warehouse Management System
+
+## Introduction
+
+When your D2C brand crosses ₹50 lakh in monthly revenue, spreadsheet-based inventory management stops working.
+
+Orders come in faster than you can update stock counts. You oversell products that are not actually available. Customers receive "in stock" confirmations for items sitting in the wrong warehouse. Returns create phantom inventory that never reconciles.
+
+The solution is connecting Shopify to a proper Warehouse Management System. But this integration is where many brands stumble.
+
+We have built Shopify-WMS integrations for brands using Unicommerce, Vinculum, Increff, and custom warehouse setups. We have also inherited broken integrations and spent weeks fixing sync issues that cost brands lakhs in cancelled orders.
+
+This guide covers everything you need to know about connecting Shopify to your warehouse system. Not the marketing version from software vendors. The actual implementation reality including what goes wrong and how to prevent it.
+
+
+## Why You Need WMS Integration (And When You Do Not)
+
+Not every brand needs a full WMS integration. Understanding when you need it prevents both premature complexity and delayed implementation.
+
+### Signs You Have Outgrown Manual Inventory
+
+You are manually updating inventory in Shopify after every order. This takes hours daily and errors are creeping in.
+
+You have oversold products more than twice in the past month. Customers ordered items you could not fulfill, damaging trust and creating refund overhead.
+
+You sell on multiple channels. Shopify, Amazon, Flipkart, your own website. Keeping inventory synced across channels is a daily struggle.
+
+You operate from multiple locations. Different warehouses, a retail store with inventory, a 3PL partner. Inventory exists in multiple places but Shopify shows one number.
+
+Returns are creating inventory chaos. Products come back but do not correctly reenter your available stock. You have units sitting in your warehouse that Shopify does not know about.
+
+Your team spends more time on inventory than on growth. Inventory management should not be a full-time job at your scale.
+
+### When Manual or Basic Tools Still Work
+
+You do fewer than 50 orders per day and have a single warehouse or storage location.
+
+You sell on Shopify only, not multiple marketplaces.
+
+Your product catalog is small (under 200 SKUs) and variants are limited.
+
+You have a dedicated person who can reliably update inventory daily without errors.
+
+In these cases, Shopify's built-in inventory management or simple apps like Stocky may be sufficient. Moving to a full WMS adds cost and complexity you may not need yet.
+
+
+## Understanding the Integration Landscape
+
+Before diving into implementation, understand what connects to what and how.
+
+### What a WMS Actually Does
+
+A Warehouse Management System handles:
+
+Inventory tracking across locations. Where is every unit of every SKU physically located? Which shelf, which bin, which warehouse?
+
+Order fulfillment workflow. Picking lists, packing instructions, shipping label generation, dispatch confirmation.
+
+Receiving and putaway. When new stock arrives, scanning it in and assigning storage locations.
+
+Returns processing. Inspecting returned items, grading condition, restocking or quarantining.
+
+Reporting and analytics. Stock levels, movement history, aging inventory, fulfillment speed.
+
+Shopify does some of this, but at a basic level. Dedicated WMS software does it comprehensively.
+
+### WMS vs 3PL vs OMS: Clarifying Terms
+
+These terms overlap and confuse people:
+
+WMS (Warehouse Management System): Software that manages warehouse operations. You run your own warehouse and use WMS software to manage it.
+
+3PL (Third-Party Logistics): A company that stores and ships your products for you. They use their own WMS. You integrate with their system.
+
+OMS (Order Management System): Software that manages orders across channels. Often includes or integrates with WMS functionality.
+
+In India, platforms like Unicommerce and Vinculum blur these lines. They function as OMS with WMS features, handling multi-channel order management plus inventory sync plus warehouse operations.
+
+For this guide, we will use "WMS" broadly to mean any system managing your inventory and fulfillment, whether you run the warehouse or a 3PL does.
+
+### Popular WMS Platforms in India
+
+Here are the systems we most commonly integrate with Shopify for Indian D2C brands:
+
+Unicommerce: The dominant player for Indian e-commerce. Strong multi-channel support including all major Indian marketplaces. Handles everything from inventory to shipping to returns. Has a Shopify app but custom integration is often needed for complex requirements.
+
+Vinculum: Enterprise-focused with robust B2B and B2C capabilities. Better for brands with complex distribution including retail and wholesale. Integration typically requires more custom work.
+
+Increff: Specializes in fashion and apparel. Strong size and variant handling, season management, and markdown optimization. Good for brands with deep SKU catalogs.
+
+Browntape: Simpler and more affordable. Works well for smaller brands that need basic multi-channel sync without enterprise complexity.
+
+Eshopbox: Full-service 3PL with technology platform. They handle warehousing and shipping with their own integrated system.
+
+Shiprocket Fulfillment: Logistics company now offering fulfillment services with inventory management.
+
+Custom/Legacy Systems: Many larger brands have existing ERP or WMS systems built years ago. These require fully custom API integration.
+
+
+## Integration Approaches: Choosing the Right Method
+
+There are three main ways to connect Shopify with a WMS:
+
+### Approach 1: Native App or Built-In Integration
+
+Most major WMS platforms have Shopify apps in the app store.
+
+Unicommerce, Vinculum, and others offer official apps that handle basic sync: orders flow from Shopify to WMS, inventory updates flow from WMS to Shopify.
+
+Pros:
+- Fastest to implement (hours or days, not weeks)
+- No development cost
+- Maintained by the WMS vendor
+- Works for standard use cases
+
+Cons:
+- Limited customization
+- May not handle complex scenarios (bundle products, pre-orders, location-specific inventory)
+- Sync frequency may not meet your needs
+- Troubleshooting is harder when issues occur
+
+Best for: Brands with straightforward requirements, single warehouse, standard product types.
+
+### Approach 2: Middleware/iPaaS Platform
+
+Middleware platforms like Celigo, Patchworks, or custom-built middleware sit between Shopify and your WMS.
+
+Data flows: Shopify → Middleware → WMS (and reverse for inventory)
+
+The middleware handles data transformation, error handling, retry logic, and logging.
+
+Pros:
+- More flexibility than native apps
+- Can handle complex mapping and transformations
+- Centralized logging and error management
+- Can connect multiple systems through one hub
+
+Cons:
+- Additional cost (middleware licensing plus setup)
+- Another system to manage and monitor
+- Performance depends on middleware reliability
+
+Best for: Brands with multiple integrations needed (WMS plus ERP plus CRM), complex data transformation requirements.
+
+### Approach 3: Custom API Integration
+
+Direct integration between Shopify and WMS using their respective APIs.
+
+You build custom code that:
+- Listens for Shopify webhooks (new order, order update, refund)
+- Transforms data to WMS format
+- Sends to WMS API
+- Receives inventory updates from WMS
+- Updates Shopify inventory via API
+
+Pros:
+- Complete control over logic and behavior
+- Can handle any complexity
+- No middleware licensing costs
+- Performance optimized for your specific needs
+
+Cons:
+- Higher initial development cost
+- Requires ongoing maintenance
+- You own the reliability and monitoring
+
+Best for: Brands with unique requirements, complex product structures, or existing development resources.
+
+
+## The Data That Needs to Sync
+
+Understanding exactly what data moves between systems prevents gaps and errors.
+
+### From Shopify to WMS
+
+Orders: When a customer places an order, the WMS needs:
+- Order ID and date
+- Customer name and shipping address
+- Line items with SKU, quantity, and price
+- Shipping method selected
+- Payment status
+- Any order notes or special instructions
+
+The critical detail here is SKU mapping. Shopify variant SKUs must exactly match WMS SKUs. If they do not, orders cannot be fulfilled. We have seen integrations break because someone added a space in an SKU on one system.
+
+Products (sometimes): Some integrations sync product catalog from Shopify to WMS. This ensures new products exist in WMS when orders arrive. Other setups create products in WMS first and sync to Shopify. Decide your source of truth upfront.
+
+Returns/RMA: When a return is initiated in Shopify, the WMS needs to know to expect incoming inventory and process it.
+
+### From WMS to Shopify
+
+Inventory Levels: The core sync. When WMS inventory changes (sale, receipt, adjustment, return processed), Shopify inventory should update.
+
+Fulfillment Status: When the warehouse ships an order, Shopify should update to "Fulfilled" with tracking number. Customer receives shipping notification automatically.
+
+Tracking Information: Shipping carrier and tracking number pushed to Shopify so customers can track packages.
+
+Inventory Locations: If using Shopify's multi-location inventory, updates should specify which location changed.
+
+### Sync Frequency Matters
+
+How often should data sync?
+
+Real-time (webhook-based): Orders should sync to WMS immediately. Customers expect fast processing. A 15-minute delay in order reaching the warehouse is acceptable. A 4-hour delay is not.
+
+Near real-time (every 5-15 minutes): Inventory can sync on this schedule for most brands. If you sell 10 units of an item per hour, 15-minute sync means you might oversell by 2-3 units in worst case. Acceptable for most.
+
+Batch (hourly or daily): Only appropriate for slow-moving inventory or very low volume. If you batch sync inventory daily and sell a fast-moving item out in the morning, customers see "in stock" all day for an item you cannot fulfill.
+
+The question to answer: What is the cost of a sync delay?
+
+If overselling an item means cancelling a ₹2,000 order and losing customer trust, frequent sync is worth the technical cost. If overselling means a backorder that customers accept, less frequent sync may be fine.
+
+
+## Implementation: Step by Step
+
+Here is the actual implementation process we follow for WMS integrations.
+
+### Phase 1: Discovery and Mapping (Week 1)
+
+Before writing any code or configuring any app, document everything.
+
+SKU Audit: Export all SKUs from Shopify. Export all SKUs from WMS. Compare them. They must match exactly. Differences cause order failures.
+
+We once inherited an integration where 20% of orders were failing. The cause: someone had prefixed WMS SKUs with a category code that Shopify SKUs did not have. SF-BLK-001 vs BLK-001. Every order with those products failed silently.
+
+Product Type Analysis: How do you handle bundles? If you sell a "Starter Kit" that contains 3 separate products, does the WMS see one line item or three? How is inventory deducted?
+
+Bundles are the number one cause of inventory discrepancies we see. Define the logic clearly:
+
+Option A: Bundle exists as its own SKU in WMS with its own inventory. Simple but requires pre-assembling bundles.
+
+Option B: Bundle explodes into components. Shopify shows one line item, WMS receives three. Inventory deducts from components. More flexible but integration must handle the explosion.
+
+Location Mapping: If you have multiple warehouses or locations, map them between systems. Shopify location "Delhi Warehouse" must map to WMS location code "DEL-01" or whatever identifier they use.
+
+Order Status Mapping: Define what happens at each stage:
+- Shopify order placed → WMS status "New"
+- WMS picks order → (no Shopify change, or update to processing?)
+- WMS ships order → Shopify marked fulfilled, tracking added
+- Customer returns → WMS receives, inspects, restocks → Shopify inventory increases
+
+Document every status transition. Gaps here cause orders to get stuck.
+
+### Phase 2: Configuration and Development (Weeks 2-3)
+
+With mapping complete, build the integration.
+
+If Using Native App:
+
+Install the app on your Shopify development store first, not production.
+
+Configure field mappings according to your documentation.
+
+Set sync frequencies.
+
+Configure error notification emails.
+
+Test with sample orders before going live.
+
+If Using Custom Integration:
+
+Set up webhooks in Shopify for relevant events (orders/create, orders/updated, refunds/create).
+
+Build the receiving endpoint that processes webhooks, transforms data, and sends to WMS.
+
+Implement error handling. What happens if WMS is down? Queue and retry? Alert someone?
+
+Build the inventory sync mechanism. Either WMS pushes to you via webhook, or you poll WMS API on a schedule.
+
+Implement logging. Every order sync, every inventory update, every error should be logged with timestamps. When something breaks at 2 AM, you need to know exactly what happened.
+
+### Phase 3: Testing (Week 4)
+
+Testing is where most teams cut corners. Do not.
+
+Test Cases to Cover:
+
+Standard order: Single item, standard product. Syncs to WMS, fulfills, tracking returns to Shopify.
+
+Multi-item order: Order with 5 different products. All line items reach WMS correctly.
+
+Variant products: Order with sized products (S, M, L). Correct variant SKU reaches WMS.
+
+Bundle order: If applicable. Correct components deducted from inventory.
+
+Partial fulfillment: Some items ship now, others backordered. Shopify reflects correctly.
+
+Order cancellation: Order cancelled after sync to WMS. WMS stops fulfillment, inventory returns.
+
+Order edit: Customer contacts support, you add or remove items. Change reaches WMS.
+
+Refund and return: Full return processed. Inventory restocks correctly.
+
+Inventory adjustment: Manually adjust WMS inventory. Change reflects in Shopify.
+
+Inventory receipt: New stock arrives at warehouse. Shopify inventory increases.
+
+Low stock: Item sells to zero. Shopify shows out of stock.
+
+Negative stock prevention: Cannot fulfill more than available. (This catches overselling scenarios.)
+
+High volume: Simulate sale-day volume. Integration handles load without delays or failures.
+
+WMS downtime: WMS unavailable for 30 minutes. Orders queue and process when WMS returns.
+
+Test each scenario. Document results. Fix issues before production.
+
+### Phase 4: Go-Live and Monitoring (Week 5)
+
+Cut over carefully.
+
+Sync existing inventory: Before going live, ensure WMS inventory matches Shopify. Run a full inventory sync. Verify counts for top 20 SKUs manually.
+
+Enable order sync: Start sending orders to WMS. Monitor first 10-20 orders closely. Confirm they appear in WMS correctly.
+
+Enable fulfillment sync: As warehouse ships orders, confirm tracking appears in Shopify and customers receive notifications.
+
+Monitor for 2-4 weeks: Watch for edge cases your testing missed. Have a process for flagging and fixing issues quickly.
+
+Set up ongoing monitoring:
+- Alert if order sync fails
+- Alert if inventory sync fails
+- Daily reconciliation report comparing Shopify and WMS totals
+- Weekly manual spot-checks of inventory accuracy
+
+
+## Common Integration Problems and Fixes
+
+These are issues we have encountered repeatedly across projects.
+
+### Problem 1: Inventory Drift
+
+Symptoms: Shopify inventory slowly diverges from WMS. After a month, Shopify shows 150 units but WMS has 203.
+
+Causes:
+- Sync failures that went unnoticed
+- Manual adjustments made in one system but not synced
+- Returns processed in WMS but not synced to Shopify
+- Orders fulfilled outside normal process (manual shipments)
+
+Solution:
+Implement daily reconciliation. An automated job compares inventory across systems and flags discrepancies. Investigate and resolve discrepancies same day.
+
+Set WMS as the source of truth for inventory. Shopify inventory should never be manually adjusted. All adjustments happen in WMS and sync over.
+
+Audit manual processes. If warehouse staff can fulfill orders outside the WMS (grabbing product and shipping directly), those movements bypass sync. Close the gap.
+
+### Problem 2: Order Sync Failures
+
+Symptoms: Some orders never reach the WMS. Customers wait for shipments that were never initiated.
+
+Causes:
+- Webhook delivery failures (Shopify could not reach your endpoint)
+- Data validation failures (missing or invalid field rejected by WMS)
+- SKU mismatches (product exists in Shopify but not WMS)
+- API rate limits exceeded
+
+Solution:
+Implement webhook retry logic. Shopify retries failed webhooks, but you should also have reconciliation that catches orders that never arrived.
+
+Run hourly order reconciliation: fetch recent Shopify orders, compare to WMS orders, flag any missing.
+
+Validate data before sending to WMS. Catch errors in your integration layer and alert for manual fixing rather than letting orders silently fail.
+
+Add new products to WMS before adding to Shopify. This prevents orders for products WMS does not recognize.
+
+### Problem 3: Duplicate or Split Orders
+
+Symptoms: Single customer order appears twice in WMS. Or one order becomes two shipments unexpectedly.
+
+Causes:
+- Webhook delivered twice (network issues caused retry)
+- Order update webhook treated as new order
+- Logic error in integration code
+
+Solution:
+Implement idempotency. Check if order already exists in WMS before creating. Use Shopify order ID as unique key.
+
+Handle order updates carefully. An order update webhook should update the existing WMS order, not create a new one. Your integration must distinguish creates from updates.
+
+### Problem 4: Tracking Not Updating
+
+Symptoms: Warehouse ships orders but customers never receive tracking. Shopify stays in "unfulfilled" state.
+
+Causes:
+- Fulfillment webhook from WMS failing
+- Tracking number format rejected by Shopify
+- Carrier name mismatch (WMS says "Delhivery", Shopify expects "delhivery" or a specific carrier code)
+
+Solution:
+Map carrier names correctly. Shopify has specific carrier identifiers. "Blue Dart" might need to be "bluedart" or the official Shopify carrier code. Test each carrier you use.
+
+Validate tracking format before sending. Some carriers have specific tracking number patterns. Catch format issues in your integration.
+
+Alert on fulfillment failures. If updating Shopify fulfillment fails, alert immediately. The warehouse already shipped; the customer is just not notified.
+
+### Problem 5: Bundle Inventory Nightmares
+
+Symptoms: Bundle products oversell or show wrong stock levels. Component inventory does not deduct correctly.
+
+Causes:
+- Bundle explosion not implemented correctly
+- Inventory calculation logic error
+- Returns of bundles not reversing correctly
+
+Solution:
+Decide on bundle strategy upfront and implement consistently.
+
+If bundles are pre-assembled: WMS has bundle as its own SKU. Simple. But requires physical assembly.
+
+If bundles explode to components: Shopify bundle product inventory should be calculated as minimum of component inventories divided by quantity needed. For example, a bundle needing 2 of SKU-A and 1 of SKU-B: available bundles = min(SKU-A inventory / 2, SKU-B inventory / 1).
+
+This calculation must happen in your integration and update Shopify inventory for the bundle product whenever components change.
+
+Returns must reverse correctly: returned bundle restocks components, not the bundle SKU.
+
+### Problem 6: Multi-Location Complexity
+
+Symptoms: Wrong warehouse fulfills orders. Inventory shows available but is in unreachable location.
+
+Causes:
+- Location routing logic not implemented
+- Shopify multi-location not configured correctly
+- WMS location codes not mapped properly
+
+Solution:
+Implement order routing rules:
+- Route to nearest warehouse by delivery pincode
+- Route to warehouse with all items in stock
+- Route based on SKU-warehouse assignment for certain products
+
+Configure Shopify locations correctly. Enable "Fulfill online orders from this location" only for locations that should fulfill web orders.
+
+Test routing with orders to different regions. Confirm correct warehouse receives each order.
+
+
+## Specific Integration Notes for Popular Indian WMS
+
+Here are platform-specific details from our integration experience.
+
+### Unicommerce Integration
+
+Unicommerce is the most common WMS we integrate with for Indian D2C brands.
+
+They have a Shopify app that handles basic sync. For most brands, start with the app and customize only if needed.
+
+Key Unicommerce-Shopify integration points:
+
+Facility Mapping: Unicommerce uses "facility codes" for locations. Map each to a Shopify location.
+
+Sale Order Creation: Unicommerce creates a "Sale Order" from Shopify orders. The API requires specific field formatting—refer to their API documentation for saleOrderCode requirements.
+
+Inventory Push: Unicommerce can push inventory updates to Shopify. Configure the sync frequency in Unicommerce panel.
+
+Returns Handling: Unicommerce has a returns module. Connect it to Shopify returns/refunds for proper inventory restock.
+
+Common issues:
+- SKU mismatches between systems (always audit before going live)
+- Bundle handling requires explicit configuration
+- Payment status mapping (prepaid vs COD) affects downstream processing
+
+### Vinculum Integration
+
+Vinculum is more enterprise-focused and typically requires more custom work.
+
+Their Shopify connection is less plug-and-play than Unicommerce.
+
+Key points:
+
+API Authentication: Vinculum uses OAuth. Token refresh must be handled in your integration.
+
+Order Format: Vinculum expects specific XML or JSON structures. Transformation from Shopify format requires careful mapping.
+
+Inventory Model: Vinculum tracks inventory by location and bin. Your Shopify sync needs to aggregate correctly.
+
+Custom Fields: Vinculum supports custom fields extensively. Use them for any Shopify data not covered by standard fields.
+
+We typically build custom middleware for Vinculum integrations rather than using their basic Shopify connector.
+
+### Increff Integration
+
+Increff specializes in fashion and handles season and style management well.
+
+Key integration considerations:
+
+Style-Color-Size Hierarchy: Increff models products as Style → Color → Size. Your Shopify variants should map to this hierarchy cleanly.
+
+Season Management: Increff tracks seasons for inventory aging and markdown. Consider syncing season metadata.
+
+Barcode-First Operations: Increff is barcode-centric. Ensure all SKUs have proper barcodes configured.
+
+Increff has a Shopify app that handles most scenarios for fashion brands. Custom integration is needed mainly for complex reporting or non-standard workflows.
+
+
+## Costs and Timeline Expectations
+
+Budget planning for WMS integration:
+
+### Using Native App/Connector
+
+Implementation time: 1-2 weeks
+Development cost: ₹0-50,000 (mostly configuration, minor customization)
+Ongoing cost: App subscription (₹2,000-15,000/month depending on platform)
+
+Best for: Standard requirements, quick implementation need.
+
+### Using Middleware
+
+Implementation time: 3-4 weeks
+Development cost: ₹1-3 lakh
+Middleware subscription: ₹10,000-50,000/month
+Ongoing maintenance: ₹10,000-20,000/month
+
+Best for: Multiple integrations, complex transformations, enterprise requirements.
+
+### Custom API Integration
+
+Implementation time: 4-8 weeks
+Development cost: ₹3-8 lakh depending on complexity
+Ongoing maintenance: ₹20,000-50,000/month
+
+Best for: Unique requirements, complete control, existing development team.
+
+### Hidden Costs to Budget For
+
+Testing and QA time: Plan for 2x the testing time you think you need.
+
+Data cleanup: SKU mismatches, product data gaps, and location setup often take longer than expected.
+
+Training: Warehouse staff and operations team need to learn new workflows.
+
+Post-launch support: First month after go-live always surfaces issues. Budget for rapid response.
+
+
+## Checklist: Before You Start Integration
+
+Use this checklist to prepare:
+
+□ All product SKUs documented and matched between Shopify and WMS
+□ Bundle logic defined (pre-assembled vs. component explosion)
+□ Warehouse locations mapped between systems
+□ Order status workflow documented
+□ Sync frequency requirements defined
+□ Error handling and alerting plan in place
+□ Testing plan with all scenarios listed
+□ Rollback plan if integration fails
+□ Training materials for operations team
+□ Go-live date coordinated with warehouse team
+□ Reconciliation process defined for post-launch
+
+
+## Conclusion
+
+Connecting Shopify to your warehouse management system is essential for D2C brands scaling beyond manual inventory management. The integration enables accurate inventory, faster fulfillment, and operational efficiency that directly impacts customer experience.
+
+The key to successful integration is thorough preparation. Map your data, define your logic, test extensively, and monitor continuously.
+
+Do not underestimate the complexity. SKU mismatches, bundle handling, and location routing are not solved by simply installing an app. They require deliberate design and careful implementation.
+
+If your brand is ready for WMS integration or you are struggling with an existing integration that is not working correctly, we specialize in these connections. Our team has integrated Shopify with all major Indian WMS platforms and can help you get it right.
+
+[Get a Free Integration Assessment →] (Link to contact page)
+
+
+============================================================
+FAQ SECTION (Add FAQPage Schema)
+============================================================
+
+Q: How long does Shopify WMS integration take?
+A: Using native apps, 1-2 weeks. Custom API integration takes 4-8 weeks including testing. Factor in additional time for data cleanup and training.
+
+Q: What is the best WMS for Shopify in India?
+A: Unicommerce is the most widely used for D2C brands due to its marketplace integrations and Shopify app. Vinculum suits larger enterprises. Increff excels for fashion brands. The best choice depends on your specific channels and requirements.
+
+Q: Why is my Shopify inventory not matching my warehouse?
+A: Common causes include sync failures going unnoticed, manual adjustments in one system not reflected in the other, returns not processing correctly, and orders fulfilled outside normal processes. Implement daily reconciliation to catch discrepancies early.
+
+Q: Can I use Shopify's inventory management without a WMS?
+A: Yes, for smaller operations. Shopify handles basic inventory tracking and multi-location inventory. You outgrow this when order volume makes manual updates impractical, when you need warehouse operations features like bin locations and picking lists, or when you sell across multiple channels.
+
+Q: How do I handle bundles in Shopify-WMS integration?
+A: Either pre-assemble bundles and track as their own SKU, or configure your integration to explode bundles into components when sending to WMS. Component explosion is more flexible but requires careful inventory calculation and returns handling.
+
+
+============================================================
+INTERNAL LINKING SUGGESTIONS
+============================================================
+
+1. Link "Third-Party Integrations" to service page
+2. Link "Backend & API Work" to service page when APIs mentioned
+3. Link "Custom Shopify Apps" when custom integration discussed
+4. Link "Store Audit" when mentioning inventory audits
+5. Link to Day 3 blog (Cart Abandonment) when order accuracy mentioned
+6. Link to future blog on ERP integration when mentioned
+
+
+============================================================
+SCHEMA MARKUP SUGGESTIONS
+============================================================
+
+1. Article schema (main content)
+2. FAQPage schema (FAQ section)
+3. HowTo schema (Implementation section)
+
+
+============================================================
+END OF BLOG
+============================================================

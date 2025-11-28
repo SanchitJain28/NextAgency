@@ -1,5 +1,6 @@
 import * as cheerio from 'cheerio';
 import { Issue, AuditResult } from '../types';
+import { isShopifyStore, getShopifyStoreData, getShopifyApps } from '../shopify/storefrontClient';
 
 export const shopifyAuditor = {
   analyze: async (html: string, url: string): Promise<AuditResult> => {
@@ -7,14 +8,24 @@ export const shopifyAuditor = {
     const issues: Issue[] = [];
     let score = 100;
 
-    // Detect if it's a Shopify store
-    const isShopify =
+    // Detect if it's a Shopify store using both HTML and API
+    const isShopifyHTML =
       html.includes('Shopify.shop') ||
       html.includes('cdn.shopify.com') ||
       html.includes('shopify-features') ||
       $('meta[name="shopify-checkout-api-token"]').length > 0 ||
       html.includes('Shopify.theme') ||
       html.includes('window.Shopify');
+
+    // Check using API for more accuracy
+    const isShopifyAPI = await isShopifyStore(url);
+    const isShopify = isShopifyHTML || isShopifyAPI;
+
+    // Get real Shopify store data from public API
+    let shopifyData = null;
+    if (isShopify) {
+      shopifyData = await getShopifyStoreData(url);
+    }
 
     if (!isShopify) {
       return {
@@ -216,6 +227,64 @@ export const shopifyAuditor = {
       score -= 4;
     }
 
+    // Check for required policies using API data
+    if (shopifyData) {
+      if (!shopifyData.policies?.privacyPolicy) {
+        issues.push({
+          severity: 'high',
+          category: 'Shopify',
+          issue: 'Privacy Policy not found',
+          recommendation: 'Add a Privacy Policy page. This is legally required in most jurisdictions and builds customer trust.',
+        });
+        score -= 12;
+      }
+
+      if (!shopifyData.policies?.refundPolicy) {
+        issues.push({
+          severity: 'medium',
+          category: 'Shopify',
+          issue: 'Refund Policy not found',
+          recommendation: 'Add a clear Refund Policy to reduce customer concerns and cart abandonment. This can increase conversions by 10-15%.',
+        });
+        score -= 8;
+      }
+
+      if (!shopifyData.policies?.shippingPolicy) {
+        issues.push({
+          severity: 'medium',
+          category: 'Shopify',
+          issue: 'Shipping Policy not found',
+          recommendation: 'Add a Shipping Policy detailing costs, timeframes, and regions. This builds trust and reduces support tickets.',
+        });
+        score -= 7;
+      }
+
+      // Check product count
+      if (shopifyData.products && shopifyData.products.totalCount < 5) {
+        issues.push({
+          severity: 'medium',
+          category: 'Shopify',
+          issue: `Low product count (${shopifyData.products.totalCount} products)`,
+          recommendation: 'Consider adding more products. Stores with 10+ products typically see higher conversion rates and better SEO.',
+        });
+        score -= 8;
+      }
+
+      // Check collections
+      if (shopifyData.collections && shopifyData.collections.totalCount === 0) {
+        issues.push({
+          severity: 'low',
+          category: 'Shopify',
+          issue: 'No collections found',
+          recommendation: 'Organize products into collections to improve navigation and help customers find products easier.',
+        });
+        score -= 5;
+      }
+    }
+
+    // Get detected Shopify apps
+    const detectedApps = await getShopifyApps(html);
+
     return {
       score: Math.max(score, 0),
       issues,
@@ -225,6 +294,7 @@ export const shopifyAuditor = {
         hasProductSchema: productSchema.length > 0,
         hasAddToCart: addToCartButton.length > 0,
         installedApps: appScripts.length,
+        detectedApps: detectedApps.join(', ') || 'None detected',
         hasCurrencySelector,
         trustBadgesCount: trustBadges,
         hasCart: cartElement.length > 0,
@@ -234,6 +304,16 @@ export const shopifyAuditor = {
         hasShippingInfo: shippingInfo.length > 0,
         productImagesCount: productImages.length,
         hasMobileViewport: !!(viewport && viewport.includes('width=device-width')),
+        // Real Shopify API data
+        totalProducts: shopifyData?.products?.totalCount || 0,
+        totalCollections: shopifyData?.collections?.totalCount || 0,
+        avgProductPrice: shopifyData?.products?.avgPrice
+          ? `$${shopifyData.products.avgPrice.toFixed(2)}`
+          : 'N/A',
+        hasPrivacyPolicy: !!shopifyData?.policies?.privacyPolicy,
+        hasRefundPolicy: !!shopifyData?.policies?.refundPolicy,
+        hasShippingPolicy: !!shopifyData?.policies?.shippingPolicy,
+        hasTermsOfService: !!shopifyData?.policies?.termsOfService,
       },
     };
   },

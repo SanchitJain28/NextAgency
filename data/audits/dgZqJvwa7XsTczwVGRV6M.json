@@ -1,0 +1,451 @@
+{
+  "id": "dgZqJvwa7XsTczwVGRV6M",
+  "url": "https://stepify-7071.myshopify.com/",
+  "timestamp": "2025-11-26T12:38:41.728Z",
+  "results": {
+    "url": "https://stepify-7071.myshopify.com/",
+    "timestamp": "2025-11-26T12:38:41.728Z",
+    "overallScore": 66,
+    "seo": {
+      "score": 54,
+      "issues": [
+        {
+          "severity": "low",
+          "category": "SEO",
+          "issue": "Title too short",
+          "recommendation": "Title is 7 characters. Aim for 50-60 characters."
+        },
+        {
+          "severity": "high",
+          "category": "SEO",
+          "issue": "Missing meta description",
+          "recommendation": "Add a compelling meta description (150-160 characters)"
+        },
+        {
+          "severity": "high",
+          "category": "SEO",
+          "issue": "No H1 tag found",
+          "recommendation": "Add exactly one H1 tag with your main keyword"
+        },
+        {
+          "severity": "medium",
+          "category": "SEO",
+          "issue": "Incomplete Open Graph tags",
+          "recommendation": "Add og:title, og:description, and og:image for better social sharing"
+        },
+        {
+          "severity": "medium",
+          "category": "SEO",
+          "issue": "Missing canonical URL",
+          "recommendation": "Add canonical tag to prevent duplicate content issues"
+        },
+        {
+          "severity": "high",
+          "category": "SEO",
+          "issue": "No structured data found",
+          "recommendation": "Add Product and Organization schema markup for rich results"
+        },
+        {
+          "severity": "low",
+          "category": "SEO",
+          "issue": "Few internal links",
+          "recommendation": "Add more internal links to improve site structure and crawlability"
+        }
+      ],
+      "metrics": {
+        "title": {
+          "value": "Stepify",
+          "length": 7
+        },
+        "description": {
+          "value": "N/A",
+          "length": 0
+        },
+        "h1Count": 0,
+        "imagesTotal": 0,
+        "imagesWithoutAlt": 0,
+        "internalLinks": 1,
+        "hasSchema": false,
+        "hasCanonical": false,
+        "hasOpenGraph": false
+      }
+    },
+    "performance": {
+      "score": 93,
+      "issues": [
+        {
+          "severity": "medium",
+          "category": "Performance",
+          "issue": "Browser caching not optimized",
+          "recommendation": "Set appropriate Cache-Control headers (max-age) for static assets"
+        }
+      ],
+      "metrics": {
+        "responseTime": "642ms",
+        "compression": "br",
+        "imageCount": 0,
+        "unoptimizedImages": 0,
+        "nonLazyImages": 0,
+        "scriptCount": 0,
+        "scriptSize": "Unknown",
+        "cssCount": 0,
+        "cssSize": "Unknown",
+        "renderBlockingScripts": 0,
+        "hasCaching": false
+      }
+    },
+    "accessibility": {
+      "score": 87,
+      "issues": [
+        {
+          "severity": "medium",
+          "category": "Accessibility",
+          "issue": "Missing ARIA landmarks",
+          "recommendation": "Use semantic HTML5 elements (<main>, <nav>, <header>, <footer>) for better screen reader navigation"
+        },
+        {
+          "severity": "low",
+          "category": "Accessibility",
+          "issue": "No skip navigation link",
+          "recommendation": "Add a \"Skip to main content\" link at the top of the page for keyboard users"
+        }
+      ],
+      "metrics": {
+        "hasLangAttribute": true,
+        "inputsTotal": 0,
+        "inputsWithoutLabels": 0,
+        "hasMainLandmark": false,
+        "hasNavLandmark": false,
+        "hasHeaderLandmark": false,
+        "hasFooterLandmark": false,
+        "buttonsTotal": 1,
+        "buttonsWithoutText": 0,
+        "linksTotal": 1,
+        "linksWithoutText": 0,
+        "colorContrastIssues": 0,
+        "hasFocusStyles": true,
+        "headingCount": 1
+      }
+    },
+    "security": {
+      "score": 96,
+      "issues": [
+        {
+          "severity": "low",
+          "category": "Security",
+          "issue": "Missing Referrer policy header",
+          "recommendation": "Add referrer-policy header for enhanced security"
+        }
+      ],
+      "metrics": {
+        "isHttps": true,
+        "hasHSTS": true,
+        "hasCSP": true,
+        "hasXFrameOptions": true,
+        "hasXContentTypeOptions": true,
+        "hasReferrerPolicy": false,
+        "securityHeadersCount": 5,
+        "totalSecurityHeaders": 6
+      }
+    },
+    "shopify": {
+      "score": 67,
+      "issues": [
+        {
+          "severity": "medium",
+          "category": "Shopify",
+          "issue": "Cart element not easily identifiable",
+          "recommendation": "Ensure cart is accessible and visible to users, preferably in the header"
+        },
+        {
+          "severity": "low",
+          "category": "Shopify",
+          "issue": "No search functionality found",
+          "recommendation": "Add search to help customers find products. Stores with search have 25% higher conversion rates."
+        },
+        {
+          "severity": "low",
+          "category": "Shopify",
+          "issue": "No newsletter signup found",
+          "recommendation": "Add email capture to build your marketing list. Email marketing has an average ROI of 4200%."
+        },
+        {
+          "severity": "low",
+          "category": "Shopify",
+          "issue": "No social proof elements found",
+          "recommendation": "Add customer testimonials, reviews, or \"as seen in\" badges to build trust"
+        },
+        {
+          "severity": "medium",
+          "category": "Shopify",
+          "issue": "Low product count (0 products)",
+          "recommendation": "Consider adding more products. Stores with 10+ products typically see higher conversion rates and better SEO."
+        },
+        {
+          "severity": "low",
+          "category": "Shopify",
+          "issue": "No collections found",
+          "recommendation": "Organize products into collections to improve navigation and help customers find products easier."
+        }
+      ],
+      "metrics": {
+        "isShopify": true,
+        "themeName": "Unknown",
+        "hasProductSchema": false,
+        "hasAddToCart": false,
+        "installedApps": 0,
+        "detectedApps": "None detected",
+        "hasCurrencySelector": false,
+        "trustBadgesCount": 0,
+        "hasCart": false,
+        "hasSearch": false,
+        "hasNewsletter": false,
+        "hasReviews": false,
+        "hasShippingInfo": false,
+        "productImagesCount": 0,
+        "hasMobileViewport": true,
+        "totalProducts": 0,
+        "totalCollections": 0,
+        "avgProductPrice": "N/A",
+        "hasPrivacyPolicy": true,
+        "hasRefundPolicy": true,
+        "hasShippingPolicy": true,
+        "hasTermsOfService": true
+      }
+    },
+    "salesOptimization": {
+      "score": 16,
+      "issues": [
+        {
+          "severity": "medium",
+          "category": "Sales Optimization",
+          "issue": "No bundle or \"Frequently Bought Together\" offers",
+          "recommendation": "Implement bundle deals to increase cart value by 20-40%"
+        },
+        {
+          "severity": "low",
+          "category": "Sales Optimization",
+          "issue": "No visible promo code field or discount messaging",
+          "recommendation": "Add promo code field and promotional banners to encourage conversions"
+        },
+        {
+          "severity": "high",
+          "category": "Sales Optimization",
+          "issue": "No easy customer support options visible",
+          "recommendation": "Add live chat, WhatsApp button, or prominent phone number to reduce cart abandonment by 15-20%"
+        },
+        {
+          "severity": "medium",
+          "category": "Sales Optimization",
+          "issue": "No wishlist or save for later functionality",
+          "recommendation": "Add wishlist feature to capture interested buyers and enable remarketing"
+        },
+        {
+          "severity": "high",
+          "category": "Sales Optimization",
+          "issue": "No abandoned cart recovery mechanism detected",
+          "recommendation": "Implement email capture at cart stage to recover 10-15% of abandoned carts"
+        },
+        {
+          "severity": "medium",
+          "category": "Sales Optimization",
+          "issue": "No loyalty or rewards program detected",
+          "recommendation": "Implement a loyalty program to increase customer lifetime value by 25-50%"
+        },
+        {
+          "severity": "high",
+          "category": "Sales Optimization",
+          "issue": "Google Analytics not detected",
+          "recommendation": "Install Google Analytics 4 for conversion tracking and ROI measurement"
+        },
+        {
+          "severity": "medium",
+          "category": "Sales Optimization",
+          "issue": "Facebook Pixel not detected",
+          "recommendation": "Install Facebook Pixel to improve ad performance by 20-40% through retargeting"
+        },
+        {
+          "severity": "low",
+          "category": "Sales Optimization",
+          "issue": "TikTok Pixel not detected",
+          "recommendation": "Install TikTok Pixel if running TikTok ads for better targeting"
+        }
+      ],
+      "metrics": {
+        "dataSource": "html",
+        "detectedApps": "None",
+        "adoptionRate": 0,
+        "featuresEnabled": 0,
+        "totalFeatures": 15,
+        "hasUpsell": false,
+        "hasCrossSell": false,
+        "hasBundles": false,
+        "hasFrequentlyBoughtTogether": false,
+        "hasPromoCode": false,
+        "hasCustomerSupport": false,
+        "hasLiveChat": false,
+        "hasWhatsApp": false,
+        "hasPhone": false,
+        "hasDeliveryEstimate": false,
+        "hasWishlist": false,
+        "hasAbandonedCartRecovery": false,
+        "hasLoyaltyProgram": false,
+        "trackingPixels": {
+          "googleAnalytics": false,
+          "facebookPixel": false,
+          "tiktokPixel": false
+        }
+      }
+    },
+    "coreWebVitals": {
+      "score": 0,
+      "issues": [
+        {
+          "severity": "critical",
+          "category": "Core Web Vitals",
+          "issue": "Failed to fetch Core Web Vitals data",
+          "recommendation": "Error: PageSpeed API error: 403. Check API key and network connection."
+        }
+      ],
+      "metrics": {
+        "apiConfigured": true,
+        "error": "PageSpeed API error: 403"
+      }
+    },
+    "industry": "general",
+    "industryDisplayName": "General E-commerce",
+    "benchmarks": [
+      {
+        "category": "Overall",
+        "yourScore": 66,
+        "industryAverage": 73,
+        "difference": -7,
+        "percentile": 31,
+        "rating": "below-average",
+        "message": "Your overall score is below industry average. Focus on improvements to stay competitive."
+      },
+      {
+        "category": "SEO",
+        "yourScore": 54,
+        "industryAverage": 75,
+        "difference": -21,
+        "percentile": 7,
+        "rating": "poor",
+        "message": "Your SEO score needs immediate attention. Significant improvements required to match competitors."
+      },
+      {
+        "category": "Performance",
+        "yourScore": 93,
+        "industryAverage": 67,
+        "difference": 26,
+        "percentile": 93,
+        "rating": "excellent",
+        "message": "Your performance score is exceptional! You're significantly outperforming the industry average."
+      },
+      {
+        "category": "Accessibility",
+        "yourScore": 87,
+        "industryAverage": 70,
+        "difference": 17,
+        "percentile": 84,
+        "rating": "excellent",
+        "message": "Your accessibility score is exceptional! You're significantly outperforming the industry average."
+      },
+      {
+        "category": "Security",
+        "yourScore": 96,
+        "industryAverage": 82,
+        "difference": 14,
+        "percentile": 69,
+        "rating": "above-average",
+        "message": "Your security score is above industry standards. Keep up the good work!"
+      },
+      {
+        "category": "Shopify Features",
+        "yourScore": 67,
+        "industryAverage": 72,
+        "difference": -5,
+        "percentile": 31,
+        "rating": "average",
+        "message": "Your Shopify features score is on par with industry standards. There's room for improvement."
+      },
+      {
+        "category": "Sales Optimization",
+        "yourScore": 16,
+        "industryAverage": 69,
+        "difference": -53,
+        "percentile": 2,
+        "rating": "poor",
+        "message": "Your sales optimization score needs immediate attention. Significant improvements required to match competitors."
+      }
+    ],
+    "recommendations": [
+      {
+        "priority": "medium",
+        "title": "Missing meta description",
+        "description": "Add a compelling meta description (150-160 characters)",
+        "impact": "High - Should be addressed soon",
+        "steps": [
+          "Add a compelling meta description (150-160 characters)"
+        ]
+      },
+      {
+        "priority": "medium",
+        "title": "No H1 tag found",
+        "description": "Add exactly one H1 tag with your main keyword",
+        "impact": "High - Should be addressed soon",
+        "steps": [
+          "Add exactly one H1 tag with your main keyword"
+        ]
+      },
+      {
+        "priority": "medium",
+        "title": "No structured data found",
+        "description": "Add Product and Organization schema markup for rich results",
+        "impact": "High - Should be addressed soon",
+        "steps": [
+          "Add Product and Organization schema markup for rich results"
+        ]
+      },
+      {
+        "priority": "medium",
+        "title": "No easy customer support options visible",
+        "description": "Add live chat, WhatsApp button, or prominent phone number to reduce cart abandonment by 15-20%",
+        "impact": "High - Should be addressed soon",
+        "steps": [
+          "Add live chat, WhatsApp button, or prominent phone number to reduce cart abandonment by 15-20%"
+        ]
+      },
+      {
+        "priority": "medium",
+        "title": "No abandoned cart recovery mechanism detected",
+        "description": "Implement email capture at cart stage to recover 10-15% of abandoned carts",
+        "impact": "High - Should be addressed soon",
+        "steps": [
+          "Implement email capture at cart stage to recover 10-15% of abandoned carts"
+        ]
+      },
+      {
+        "priority": "medium",
+        "title": "Google Analytics not detected",
+        "description": "Install Google Analytics 4 for conversion tracking and ROI measurement",
+        "impact": "High - Should be addressed soon",
+        "steps": [
+          "Install Google Analytics 4 for conversion tracking and ROI measurement"
+        ]
+      },
+      {
+        "priority": "high",
+        "title": "Failed to fetch Core Web Vitals data",
+        "description": "Error: PageSpeed API error: 403. Check API key and network connection.",
+        "impact": "Critical - Fix immediately",
+        "steps": [
+          "Error: PageSpeed API error: 403. Check API key and network connection."
+        ]
+      }
+    ],
+    "adminApiUsed": false,
+    "accuracyLevel": "basic"
+  },
+  "overallScore": 66
+}

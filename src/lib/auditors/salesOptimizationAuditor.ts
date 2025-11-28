@@ -1,8 +1,9 @@
 import * as cheerio from 'cheerio';
 import { Issue, AuditResult } from '../types';
+import { ShopifyAdminData, detectFeaturesFromAdminData } from '../shopify/adminApiClient';
 
 export const salesOptimizationAuditor = {
-  analyze: async (html: string, url: string): Promise<AuditResult> => {
+  analyze: async (html: string, url: string, adminData?: ShopifyAdminData | null): Promise<AuditResult> => {
     const $ = cheerio.load(html);
     const issues: Issue[] = [];
     let score = 100;
@@ -24,6 +25,26 @@ export const salesOptimizationAuditor = {
       facebookPixel: false,
       tiktokPixel: false
     };
+
+    // If Admin API data is available, use it for accurate feature detection
+    let detectedApps: string[] = [];
+    let dataSource: 'admin-api' | 'html' = 'html';
+
+    if (adminData) {
+      dataSource = 'admin-api';
+      const adminFeatures = detectFeaturesFromAdminData(adminData);
+
+      // Merge admin API features with HTML-detected features
+      features.upsell = adminFeatures.upsell || features.upsell;
+      features.crossSell = adminFeatures.crossSell || features.crossSell;
+      features.bundles = adminFeatures.bundles || features.bundles;
+      features.frequentlyBoughtTogether = adminFeatures.frequentlyBoughtTogether || features.frequentlyBoughtTogether;
+      features.promoCodes = adminFeatures.promoCodes || features.promoCodes;
+      features.abandonedCart = adminFeatures.abandonedCart || features.abandonedCart;
+      features.loyaltyProgram = adminFeatures.loyaltyProgram || features.loyaltyProgram;
+      features.wishlist = adminFeatures.wishlist || features.wishlist;
+      detectedApps = adminFeatures.detectedApps;
+    }
 
     // 1. UPSELL DETECTION
     const upsellIndicators = [
@@ -351,12 +372,15 @@ export const salesOptimizationAuditor = {
       score: Math.max(score, 0),
       issues,
       metrics: {
+        dataSource, // 'admin-api' or 'html'
+        detectedApps: detectedApps.length > 0 ? detectedApps.join(', ') : 'None',
         adoptionRate,
         featuresEnabled: adoptedFeatures,
         totalFeatures,
         hasUpsell: features.upsell,
         hasCrossSell: features.crossSell,
         hasBundles: features.bundles || features.frequentlyBoughtTogether,
+        hasFrequentlyBoughtTogether: features.frequentlyBoughtTogether,
         hasPromoCode: features.promoCodes,
         hasCustomerSupport: features.liveChat || features.whatsapp || features.phone,
         hasLiveChat: features.liveChat,

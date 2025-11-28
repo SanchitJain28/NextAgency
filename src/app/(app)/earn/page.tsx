@@ -7,6 +7,7 @@ import Footer from '@/components/header-footer/Footer';
 import AuditForm from '@/components/earn/AuditForm';
 import ResultsDashboard from '@/components/earn/ResultsDashboard';
 import EmailCollectionModal from '@/components/earn/EmailCollectionModal';
+import AnalyzingAnimation from '@/components/earn/AnalyzingAnimation';
 import { FullAuditResults } from '@/lib/types';
 
 export default function EarnAuditorPage() {
@@ -50,7 +51,7 @@ export default function EarnAuditorPage() {
   const [showEmailModal, setShowEmailModal] = useState(false);
   const [auditUrl, setAuditUrl] = useState<string>('');
 
-  const handleAudit = async (url: string) => {
+  const handleAudit = async (url: string, credentials?: { shopDomain: string; accessToken: string }) => {
     setLoading(true);
     setError('');
     setAuditUrl(url);
@@ -61,7 +62,10 @@ export default function EarnAuditorPage() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ url }),
+        body: JSON.stringify({
+          url,
+          shopifyCredentials: credentials // Pass optional credentials to API
+        }),
       });
 
       const result = await response.json();
@@ -128,7 +132,9 @@ export default function EarnAuditorPage() {
             </div>
           )}
 
-          {!results ? (
+          {loading ? (
+            <AnalyzingAnimation />
+          ) : !results ? (
             <AuditForm onSubmit={handleAudit} loading={loading} />
           ) : (
             <ResultsDashboard results={results} onReset={handleReset} />

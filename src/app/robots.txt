@@ -5,13 +5,9 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /dashboard/
 Disallow: /_next/
-Disallow: /.*
 
-# Optional: Crawl delay for all bots (in seconds)
-Crawl-delay: 1
+# Allow blog posts to be indexed
+Allow: /blog/
 
 # Sitemap location
-Sitemap: https://your-domain.com/sitemap.xml
-
-# Optional: Host directive
-Host: https://your-domain.com
+Sitemap: https://scalefront.io/sitemap.xml

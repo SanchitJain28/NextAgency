@@ -25,6 +25,11 @@ export interface BenchmarkComparison {
   message: string;
 }
 
+export interface ShopifyCredentials {
+  shopDomain: string; // e.g., "mystore.myshopify.com"
+  accessToken: string; // Admin API access token
+}
+
 export interface FullAuditResults {
   url: string;
   timestamp: string;
@@ -40,6 +45,10 @@ export interface FullAuditResults {
   industryDisplayName?: string;
   benchmarks?: BenchmarkComparison[];
   recommendations: Recommendation[];
+  // Shopify Admin API data (optional)
+  adminApiUsed?: boolean;
+  accuracyLevel?: 'basic' | 'enhanced'; // 'basic' = HTML only, 'enhanced' = Admin API
+  detectedApps?: string[];
 }
 
 export interface Recommendation {

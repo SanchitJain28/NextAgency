@@ -12,7 +12,7 @@ export default function IssueList({ issues }: IssueListProps) {
     return (
       <div className="text-center py-8">
         <CheckCircle className="h-12 w-12 text-primary mx-auto mb-4" />
-        <p className="text-muted-foreground">No issues found! Great job! 🎉</p>
+        <p className="text-gray-600">No issues found! Great job! 🎉</p>
       </div>
     );
   }
@@ -63,7 +63,7 @@ export default function IssueList({ issues }: IssueListProps) {
 
         return (
           <div key={severity}>
-            <h3 className="text-sm font-semibold text-muted-foreground uppercase mb-3">
+            <h3 className="text-sm font-semibold text-gray-600 uppercase mb-3">
               {severity} ({severityIssues.length})
             </h3>
             <div className="space-y-3">
@@ -75,10 +75,10 @@ export default function IssueList({ issues }: IssueListProps) {
                   <div className="flex items-start gap-3">
                     {getSeverityIcon(issue.severity)}
                     <div className="flex-1 min-w-0">
-                      <div className="font-semibold text-foreground mb-1">
+                      <div className="font-semibold text-gray-900 mb-1">
                         {issue.issue}
                       </div>
-                      <div className="text-sm text-muted-foreground">
+                      <div className="text-sm text-gray-600">
                         {issue.recommendation}
                       </div>
                     </div>
