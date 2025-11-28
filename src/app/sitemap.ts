@@ -64,7 +64,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(post.date),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
-      images: post.image ? [`${baseUrl}${post.image}`] : [],
+      images: post.image ? [post.image] : [],
     })),
     // Individual project pages
     // {
