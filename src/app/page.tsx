@@ -410,7 +410,7 @@ const ShopifyAppsSection = () => {
                   className="bg-purple-600 hover:bg-purple-700 text-white"
                   asChild
                 >
-                  <Link href="/solllid" className="flex items-center gap-2">
+                  <Link href="/upsell-cross-sell-app-shopify" className="flex items-center gap-2">
                     Learn More
                     <ArrowRight className="h-4 w-4" />
                   </Link>

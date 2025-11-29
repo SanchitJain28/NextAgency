@@ -26,7 +26,7 @@ const TOOLS = [
 ]
 
 const SHOPIFY_APPS = [
-  { href: "/solllid", label: "Crossell, Upsell & Related Products AI" },
+  { href: "/upsell-cross-sell-app-shopify", label: "Crossell, Upsell & Related Products AI" },
 ]
 
 const NAV_LINKS = [
@@ -51,7 +51,7 @@ export function Header() {
 
   const isServicesActive = pathname?.startsWith("/services")
   const isToolsActive = pathname?.startsWith("/earn")
-  const isShopifyAppsActive = pathname?.startsWith("/solllid")
+  const isShopifyAppsActive = pathname?.startsWith("/upsell-cross-sell-app-shopify")
 
   return (
     <header className="w-full border-b border-white/10 bg-black/70 backdrop-blur-xl sticky top-0 z-50 shadow-lg transition-all duration-300">

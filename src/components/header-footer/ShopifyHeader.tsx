@@ -25,13 +25,13 @@ export default function ShopifyHeader() {
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <Link
-                href="/solllid#features"
+                href="/upsell-cross-sell-app-shopify#features"
                 className="text-gray-400 hover:text-white transition"
               >
                 Features
               </Link>
               <Link
-                href="/solllid#how-it-works"
+                href="/upsell-cross-sell-app-shopify#how-it-works"
                 className="text-gray-400 hover:text-white transition"
               >
                 How It Works
