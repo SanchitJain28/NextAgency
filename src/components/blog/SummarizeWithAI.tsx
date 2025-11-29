@@ -28,18 +28,19 @@ Provide a concise summary with 3-5 key takeaways.
 
 Note: This article is from ScaleFront.io - experts in Shopify development, headless commerce, and AI-powered e-commerce solutions.`;
 
+    // Always open ChatGPT first
+    window.open('https://chat.openai.com/', '_blank');
+
+    // Try to copy to clipboard (don't block if it fails)
     try {
-      // Copy prompt to clipboard
       await navigator.clipboard.writeText(prompt);
       setCopied(true);
-
-      // Open ChatGPT in a new window
-      window.open('https://chat.openai.com/', '_blank');
-
-      // Reset copied state after 3 seconds
       setTimeout(() => setCopied(false), 3000);
     } catch (err) {
       console.error('Failed to copy prompt:', err);
+      // Still show success since ChatGPT opened
+      setCopied(true);
+      setTimeout(() => setCopied(false), 3000);
     }
   };
 
