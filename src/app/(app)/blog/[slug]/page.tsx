@@ -15,6 +15,7 @@ import { AuthorBio } from '@/components/blog/AuthorBio';
 import { NewsletterSignup } from '@/components/blog/NewsletterSignup';
 import { FontSizeControl } from '@/components/blog/FontSizeControl';
 import { DarkModeToggle } from '@/components/blog/DarkModeToggle';
+import { SummarizeWithAI } from '@/components/blog/SummarizeWithAI';
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -174,6 +175,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <div className="lg:hidden mb-8">
                   <TableOfContents content={post.content} />
                 </div>
+
+                {/* AI Summarize Feature */}
+                <SummarizeWithAI content={post.content} title={post.title} />
 
                 {/* Article Content */}
                 <div className="medium-content
