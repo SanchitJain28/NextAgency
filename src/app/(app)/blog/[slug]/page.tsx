@@ -166,10 +166,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
         {/* Content - True Medium Style */}
         <div className="bg-white dark:bg-gray-900">
-          <div className="max-w-[1192px] mx-auto px-6 py-12">
-            <div className="flex flex-col lg:flex-row gap-12">
-              {/* Main Content */}
-              <div className="flex-1 lg:max-w-[680px]">
+          <div className="max-w-[1400px] mx-auto px-6 py-12">
+            <div className="flex flex-col lg:flex-row gap-12 justify-center">
+              {/* Main Content - Centered */}
+              <div className="w-full lg:max-w-[680px] mx-auto lg:mx-0">
                 {/* Table of Contents - Mobile */}
                 <div className="lg:hidden mb-8">
                   <TableOfContents content={post.content} />
@@ -249,9 +249,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
               </div>
 
-              {/* Sidebar - Desktop */}
+              {/* Sidebar - Desktop (Sticky on the right) */}
               <aside className="hidden lg:block lg:w-80 flex-shrink-0">
-                <TableOfContents content={post.content} />
+                <div className="sticky top-24">
+                  <TableOfContents content={post.content} />
+                </div>
               </aside>
             </div>
           </div>
