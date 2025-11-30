@@ -34,6 +34,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const { slug } = await params;
   const post = getPostBySlug(slug);
 
+  console.log(post)
+
   if (!post) {
     return {
       title: 'Post Not Found',
@@ -113,8 +115,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://scalefront.io';
   const postUrl = `${siteUrl}/blog/${slug}`;
 
-  // Use FAQs from frontmatter
-  const faqs = post.faqs || [];
+  // Extract FAQ items if present in content
+  const faqMatches = post.content.matchAll(/###\s+(.+?)\n\n(.+?)(?=\n###|\n##|$)/gs);
+  const faqs = Array.from(faqMatches).map(match => ({
+    question: match[1].trim(),
+    answer: match[2].trim(),
+  }));
 
   return (
     <>
@@ -240,38 +246,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 ">
                   <MarkdownContent content={post.content} />
                 </div>
-
-                {/* FAQ Section */}
-                {faqs.length > 0 && (
-                  <div className="mt-16 border-t border-gray-200 dark:border-gray-700 pt-12">
-                    <h2 className="text-[32px] font-bold text-[#292929] dark:text-white mb-8 font-serif">
-                      Frequently Asked Questions
-                    </h2>
-                    <div className="space-y-6">
-                      {faqs.map((faq, index) => (
-                        <details
-                          key={index}
-                          className="group bg-gray-50 dark:bg-gray-800 rounded-lg p-6 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors"
-                        >
-                          <summary className="flex items-start justify-between font-semibold text-[21px] text-[#292929] dark:text-white list-none">
-                            <span className="flex-1 pr-4">{faq.question}</span>
-                            <svg
-                              className="w-6 h-6 flex-shrink-0 transform transition-transform group-open:rotate-180"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                          </summary>
-                          <p className="mt-4 text-[18px] text-[#6B6B6B] dark:text-gray-300 leading-[1.6]">
-                            {faq.answer}
-                          </p>
-                        </details>
-                      ))}
-                    </div>
-                  </div>
-                )}
 
                 {/* Author Bio */}
                 <AuthorBio author={post.author} />

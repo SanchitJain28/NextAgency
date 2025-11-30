@@ -5,6 +5,11 @@ import readingTime from 'reading-time';
 
 const postsDirectory = path.join(process.cwd(), 'src/content/blog');
 
+export interface FAQ {
+  question: string;
+  answer: string;
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -16,6 +21,7 @@ export interface BlogPost {
   tags: string[];
   content: string;
   readingTime: string;
+  faqs?: FAQ[];
 }
 
 export interface BlogPostMetadata {
@@ -28,6 +34,7 @@ export interface BlogPostMetadata {
   category: string;
   tags: string[];
   readingTime: string;
+  faqs?: FAQ[];
 }
 
 export function getAllPosts(): BlogPostMetadata[] {
@@ -51,6 +58,7 @@ export function getAllPosts(): BlogPostMetadata[] {
       category: data.category || 'Uncategorized',
       tags: data.tags || [],
       readingTime: text,
+      faqs: data.faqs || [],
     };
   });
 
@@ -85,6 +93,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
       tags: data.tags || [],
       content,
       readingTime: text,
+      faqs: data.faqs || [],
     };
   } catch (error) {
     console.error(`Error reading post ${slug}:`, error);

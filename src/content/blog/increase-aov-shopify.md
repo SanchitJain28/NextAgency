@@ -6,6 +6,19 @@ author: "ScaleFront Team"
 category: "Ecommerce"
 tags: ["increase AOV Shopify", "Shopify average order value", "AI product recommendations", "Shopify upselling", "cross-selling tactics", "Shopify revenue optimization"]
 image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop"
+faqs:
+  - question: "What is a good AOV for Shopify stores?"
+    answer: "A good AOV varies by industry, but generally ranges from $50-$150 for most Shopify stores. Fashion and beauty stores average $85-$120, while electronics can see $200+. Focus on improving your current AOV by 15-25% rather than comparing to others."
+  - question: "How can AI increase my Shopify store's AOV?"
+    answer: "AI-powered product recommendations analyze customer behavior to suggest highly relevant complementary products at the right moment. This typically increases AOV by 20-35% through intelligent upselling and cross-selling that feels natural rather than pushy."
+  - question: "What's the difference between upselling and cross-selling?"
+    answer: "Upselling encourages customers to buy a premium version of what they're considering (e.g., showing a higher-quality laptop when viewing a basic model). Cross-selling suggests complementary products (e.g., showing a laptop case when buying a laptop). Both strategies increase AOV when done correctly."
+  - question: "How do free shipping thresholds affect AOV?"
+    answer: "Free shipping thresholds can increase AOV by 10-30% when set strategically. Set your threshold 15-20% above your current AOV (e.g., if AOV is $60, set free shipping at $75). This motivates customers to add items without feeling manipulated."
+  - question: "Can product bundles really increase AOV on Shopify?"
+    answer: "Yes! Well-designed bundles can increase AOV by 20-40%. The key is creating bundles that solve a complete problem or need, offering a 10-15% discount from individual prices, and making them easy to discover through homepage placement and product page suggestions."
+  - question: "How long does it take to see AOV improvements?"
+    answer: "You can see initial AOV improvements within 2-4 weeks of implementing strategies like product recommendations, bundles, or free shipping thresholds. AI-powered recommendations improve continuously, with maximum impact typically reached after 60-90 days as the system learns customer patterns."
 ---
 
 # How to Increase AOV on Shopify: 15 Proven Strategies for 2025
