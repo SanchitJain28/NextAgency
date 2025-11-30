@@ -40,22 +40,63 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     };
   }
 
+  const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://scalefront.io';
+  const postUrl = `${siteUrl}/blog/${slug}`;
+  const imageUrl = post.image || `${siteUrl}/og-image.png`;
+
   return {
-    title: `${post.title} | ScaleFront Blog`,
+    title: post.title,
     description: post.description,
+    keywords: post.tags || [],
+    authors: [{ name: post.author }],
+    creator: 'ScaleFront',
+    publisher: 'ScaleFront',
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    metadataBase: new URL(siteUrl),
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.description,
+      url: `/blog/${slug}`,
+      siteName: 'ScaleFront',
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+      locale: 'en_US',
       type: 'article',
       publishedTime: post.date,
+      modifiedTime: post.date,
       authors: [post.author],
-      images: post.image ? [post.image] : [],
+      tags: post.tags || [],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.description,
-      images: post.image ? [post.image] : [],
+      images: [imageUrl],
+      creator: '@scalefront',
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
   };
 }
@@ -263,34 +304,69 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </div>
 
-        {/* Structured Data */}
+        {/* Article/TechArticle Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'BlogPosting',
+              '@type': 'TechArticle',
               headline: post.title,
               description: post.description,
-              image: post.image,
+              image: post.image || `${siteUrl}/og-image.png`,
               datePublished: post.date,
               dateModified: post.date,
               author: {
                 '@type': 'Organization',
                 name: post.author,
+                url: siteUrl,
               },
               publisher: {
                 '@type': 'Organization',
                 name: 'ScaleFront',
                 logo: {
                   '@type': 'ImageObject',
-                  url: 'https://scalefront.io/logo.png',
+                  url: `${siteUrl}/logo.png`,
                 },
               },
               mainEntityOfPage: {
                 '@type': 'WebPage',
                 '@id': postUrl,
               },
+              articleSection: post.category || 'Technology',
+              keywords: post.tags?.join(', ') || '',
+              proficiencyLevel: 'Intermediate',
+            }),
+          }}
+        />
+
+        {/* BreadcrumbList Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: siteUrl,
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Blog',
+                  item: `${siteUrl}/blog`,
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 3,
+                  name: post.title,
+                  item: postUrl,
+                },
+              ],
             }),
           }}
         />
@@ -315,6 +391,43 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             }}
           />
         )}
+
+        {/* HowTo Schema for technical/tutorial articles */}
+        {post.category?.toLowerCase().includes('tutorial') || post.title.toLowerCase().includes('how to') ? (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'HowTo',
+                name: post.title,
+                description: post.description,
+                image: {
+                  '@type': 'ImageObject',
+                  url: post.image || `${siteUrl}/og-image.png`,
+                },
+                totalTime: post.readingTime || 'PT10M',
+                step: [
+                  {
+                    '@type': 'HowToStep',
+                    name: 'Understand the Requirements',
+                    text: 'Learn about the technical requirements and prerequisites needed for implementation.',
+                  },
+                  {
+                    '@type': 'HowToStep',
+                    name: 'Follow Implementation Steps',
+                    text: 'Follow the detailed step-by-step guide provided in the article.',
+                  },
+                  {
+                    '@type': 'HowToStep',
+                    name: 'Test and Optimize',
+                    text: 'Test your implementation and optimize based on the best practices shared.',
+                  },
+                ],
+              }),
+            }}
+          />
+        ) : null}
       </article>
       <Footer />
     </>
