@@ -6,13 +6,14 @@ export function DarkModeToggle() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    const isDark = localStorage.getItem('blog-dark-mode') === 'true' ||
-      (!localStorage.getItem('blog-dark-mode') &&
-       window.matchMedia('(prefers-color-scheme: dark)').matches);
+    // Default to light mode - only use dark if explicitly set in localStorage
+    const isDark = localStorage.getItem('blog-dark-mode') === 'true';
 
     setDarkMode(isDark);
     if (isDark) {
       document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
     }
   }, []);
 
