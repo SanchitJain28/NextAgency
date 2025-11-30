@@ -6,6 +6,21 @@ author: "ScaleFront Team"
 category: "Shopify Integration"
 tags: ["Shopify warehouse management integration", "Shopify WMS integration", "Shopify inventory sync", "Shopify 3PL integration", "Shopify Unicommerce"]
 image: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=1200&h=630&fit=crop"
+faqs:
+  - question: "When does my D2C brand need WMS integration with Shopify?"
+    answer: "You need WMS integration when: monthly revenue exceeds ₹50 lakh, you're manually updating inventory after every order (taking hours daily), you've oversold products more than twice recently, you sell on multiple channels (Shopify, Amazon, Flipkart), you operate from multiple locations, or returns are creating inventory chaos."
+  - question: "What's the best WMS platform to integrate with Shopify in India?"
+    answer: "Unicommerce is most widely used for Indian D2C brands with strong marketplace integrations and a Shopify app. Vinculum suits larger enterprises with complex B2B/B2C needs. Increff excels for fashion brands with deep SKU catalogs. The best choice depends on your channels, volume, and specific requirements."
+  - question: "How long does Shopify WMS integration take to implement?"
+    answer: "Using native apps takes 1-2 weeks. Custom API integration requires 4-8 weeks including testing. Timeline breakdown: Week 1 discovery and mapping, Weeks 2-3 configuration/development, Week 4 testing all scenarios, Week 5+ go-live with 2-4 weeks monitoring. Factor in additional time for data cleanup and training."
+  - question: "What causes inventory drift between Shopify and my warehouse system?"
+    answer: "Common causes include: sync failures going unnoticed, manual adjustments in one system not synced, returns processed in WMS but not updating Shopify, orders fulfilled outside normal process (manual shipments), and bundle handling errors. Implement daily reconciliation to catch discrepancies immediately."
+  - question: "How much does Shopify WMS integration cost?"
+    answer: "Native app implementation: ₹0-50,000 (mostly configuration). Middleware solution: ₹1-3 lakh development plus ₹10,000-50,000/month subscription. Custom API integration: ₹3-8 lakh development plus ₹20,000-50,000/month maintenance. Budget extra for testing, data cleanup, and post-launch support."
+  - question: "How do I handle product bundles in Shopify-WMS integration?"
+    answer: "Two approaches: Pre-assemble bundles and track as their own SKU (simple but requires physical assembly), or configure integration to explode bundles into components when sending to WMS (flexible but requires careful inventory calculation). Component explosion needs proper handling of returns to restock components, not bundle SKU."
+  - question: "Can I still use WooCommerce admin after WMS integration?"
+    answer: "Yes, you continue managing everything—orders, customers, inventory, products—inside the Shopify admin panel. WMS handles warehouse operations (picking, packing, shipping), while Shopify remains your central management hub. The integration syncs data bidirectionally between systems."
 ---
 
 # How to Integrate Shopify with Your Warehouse Management System

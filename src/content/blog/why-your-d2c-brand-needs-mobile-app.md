@@ -6,6 +6,21 @@ author: "ScaleFront Team"
 category: "Mobile Apps"
 tags: ["mobile app for Shopify store", "D2C mobile app India", "Shopify mobile app development", "ecommerce app vs website", "customer retention app"]
 image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&h=630&fit=crop"
+faqs:
+  - question: "When should my D2C brand invest in a mobile app?"
+    answer: "You're ready for a mobile app when: annual revenue exceeds ₹1Cr, you have at least 10,000 past customers, retargeting costs are eating into margins, repeat purchase rate matters to your business model, and you're thinking long-term (2-5 year investment horizon). Don't build an app if you're still finding product-market fit."
+  - question: "What's the difference between a real mobile app and WebView apps?"
+    answer: "Real mobile apps (native or Flutter/React Native) render using device components with 60fps performance, can work offline, and feel smooth like Instagram. WebView apps are essentially your website in an app container—same slow loading, same limitations. WebView apps see 70-80% uninstall rates within 30 days."
+  - question: "How much does it cost to build a mobile app for my D2C brand?"
+    answer: "Custom Flutter apps with core e-commerce features cost ₹8-15 lakh for development. Premium apps with loyalty programs, personalization, and AR features cost ₹15-25 lakh. Ongoing maintenance is ₹1-2 lakh per year. App builder tools cost ₹2,000-10,000/month but deliver limited results."
+  - question: "Can a mobile app really reduce my retargeting costs?"
+    answer: "Yes, dramatically. Reaching 20,000 existing customers through retargeting ads costs ₹48 lakh annually at ₹60/customer per campaign (4 campaigns/year). With 30% app adoption, you can reach 6,000 via free push notifications, saving ₹14.4 lakh annually. Higher adoption increases savings proportionally."
+  - question: "What features should a D2C mobile app have at launch?"
+    answer: "Must-haves: fast product catalog browsing, cart and checkout integrated with Shopify, push notification system, user accounts synced with customers, wishlist/favorites, search with filters, and order tracking. Nice-to-haves for v2: loyalty program integration, personalized feeds, AR try-on, referral program, and live chat support."
+  - question: "How do I get customers to download my mobile app?"
+    answer: "Offer genuine incentives: first-order discount (10-15%), early access to sales, app-only products, loyalty points multiplier. Promote via website banners, post-purchase emails, in-package inserts, and social media. Target your best customers first—repeat buyers are 5-10x more likely to download than new visitors."
+  - question: "What's a good app adoption rate for D2C brands?"
+    answer: "Brands actively promoting their app see 30-50% adoption among repeat customers. Brands that launch without promotion see only 5-10%. Promotion requires website banners, post-purchase emails, SMS campaigns, and exclusive app benefits. Apps with compelling exclusive content maintain 40%+ engagement after first month."
 ---
 
 # Why Your D2C Brand Needs a Mobile App (And Why Most Shopify Apps Are Garbage)

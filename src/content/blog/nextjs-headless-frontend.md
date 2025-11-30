@@ -6,6 +6,21 @@ author: "ScaleFront Team"
 category: "Headless Commerce"
 tags: ["Next.js", "WooCommerce", "Shopify", "Headless Commerce", "Performance", "Scalability"]
 image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop"
+faqs:
+  - question: "What is headless commerce and how does Next.js work with WooCommerce?"
+    answer: "Headless commerce separates the frontend presentation layer from backend ecommerce functionality. With WooCommerce, the WordPress backend handles products, inventory, and orders while Next.js builds a custom, high-performance frontend that communicates via APIs. This architecture delivers 2-5x faster page loads through Incremental Static Regeneration (ISR) while maintaining WooCommerce's flexibility for product management."
+  - question: "How much faster is a Next.js headless store compared to traditional WooCommerce?"
+    answer: "Next.js headless stores load 2-5 times faster than traditional WooCommerce setups. Traditional stores take 3-5 seconds to load as they query databases and render pages on every visit. Headless Next.js stores pre-generate static pages and serve them via CDN, typically loading in under 1 second with Google PageSpeed scores above 90 compared to 40-60 for traditional WordPress rendering."
+  - question: "What are the cost savings of using Next.js for WooCommerce headless frontend?"
+    answer: "Headless Next.js setups dramatically reduce hosting costs while improving performance. Traditional WooCommerce hosting for high-traffic stores costs 8,000-15,000 rupees monthly, while Next.js hosting on platforms like Vercel or Netlify costs just 1,700-3,000 rupees per month. Most stores see ROI within 6-12 months from hosting savings alone, plus significant revenue gains from improved conversion rates due to faster load times."
+  - question: "Can Next.js headless commerce handle large traffic spikes better than traditional WooCommerce?"
+    answer: "Yes, Next.js static pages distributed via CDN can handle virtually unlimited concurrent visitors without server strain. Traditional WooCommerce setups that crashed with 1,000 simultaneous users can handle 10,000+ visitors without performance degradation using headless architecture. During Black Friday sales or traffic spikes, static pages are served from edge locations globally, eliminating server bottlenecks completely."
+  - question: "How does Next.js headless architecture improve SEO for WooCommerce stores?"
+    answer: "Next.js provides superior SEO through server-side rendering (SSR) and static site generation (SSG). Pages load faster, achieve better Core Web Vitals scores (LCP, FID, CLS), and provide excellent mobile experiences—all factors Google rewards with higher rankings. Stores typically see improved search rankings within 3-6 months of migration, with dramatic improvements in page speed scores from 40s to 90+ on Google PageSpeed Insights."
+  - question: "What happens to WooCommerce plugins when going headless with Next.js?"
+    answer: "Backend plugins like payment gateways, shipping calculators, and inventory management work seamlessly. Frontend-modifying plugins won't be compatible as Next.js handles all presentation. However, any functionality can be rebuilt in Next.js, often with better performance and user experience. A detailed compatibility audit before migration identifies which plugins need alternatives, and most essential features are easily replicated in the Next.js frontend."
+  - question: "How long does it take to migrate a WooCommerce store to Next.js headless?"
+    answer: "Migration timelines vary by store complexity: small stores with 100-500 products take 4-6 weeks, medium stores with 500-2000 products take 8-12 weeks, and large stores with 2000+ products take 12-16 weeks. This includes planning, design, development, testing, and gradual rollout to minimize business disruption. The investment pays off through significant performance improvements, reduced hosting costs, and better customer experience."
 ---
 
 ![Ecommerce scaling with Next.js](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop)

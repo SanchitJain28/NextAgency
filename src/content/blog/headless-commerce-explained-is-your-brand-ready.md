@@ -6,6 +6,21 @@ author: "ScaleFront Team"
 category: "Headless Commerce"
 tags: ["headless commerce Shopify", "headless Shopify India", "Shopify hydrogen", "composable commerce", "headless ecommerce cost"]
 image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&h=630&fit=crop"
+faqs:
+  - question: "What is headless commerce and how does it work with Shopify?"
+    answer: "Headless commerce separates your storefront (what customers see) from your backend (Shopify's commerce engine). Shopify still handles products, inventory, orders, and payments, but you build a custom frontend using technologies like React or Next.js. This gives you complete design freedom while maintaining Shopify's operational reliability."
+  - question: "How much does headless commerce actually cost for Indian D2C brands?"
+    answer: "Initial development costs ₹12-25 lakh for standard builds and ₹35-50 lakh for complex stores. Ongoing monthly costs include hosting (₹30,000-80,000), search services, and maintenance. Compare this to near-zero infrastructure costs for traditional Shopify, making headless viable only for brands doing ₹5Cr+ annually."
+  - question: "Is headless commerce worth it for my brand doing ₹2 crore annually?"
+    answer: "No, not yet. Headless is almost never worth it for brands under ₹3-5Cr annually. The incremental revenue from better performance won't offset additional costs. A well-optimized traditional Shopify store gets you 80% of the benefits at 20% of the cost. Focus on theme optimization first."
+  - question: "What's the difference between Shopify Hydrogen and Next.js for headless?"
+    answer: "Hydrogen is Shopify's React framework with tighter integration and hosting included for Plus merchants. Next.js offers more flexibility, a larger community, and more resources. We recommend Hydrogen for Shopify Plus brands wanting simplicity, and Next.js for brands wanting maximum control and flexibility."
+  - question: "Can headless commerce make my Shopify store faster?"
+    answer: "Yes dramatically. Well-built headless stores score 85-98 on mobile PageSpeed versus 45-65 for traditional themes. Headless uses pre-rendering and CDN edge locations to serve pages in under 1 second. Real implementations show load times dropping from 4+ seconds to under 1.5 seconds."
+  - question: "What are the signs my brand needs headless commerce?"
+    answer: "You're ready if: annual revenue exceeds ₹5Cr, you need a mobile app sharing data with your website, you have complex product configurations central to business, you're running multiple storefronts from one backend, or your design requirements are genuinely impossible with traditional Liquid templates."
+  - question: "How long does it take to build a headless Shopify store?"
+    answer: "A well-executed headless build takes 3-4 months from planning to launch, including architecture planning (weeks 1-2), core functionality (weeks 3-6), secondary features (weeks 7-10), integration and testing (weeks 11-12), and soft launch (weeks 13-14). Rushing this timeline leads to technical debt that costs more later."
 ---
 
 # Headless Commerce Explained: Is Your D2C Brand Actually Ready for It?

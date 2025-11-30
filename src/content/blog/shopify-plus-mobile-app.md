@@ -6,6 +6,21 @@ author: "Rishabh Jain"
 category: "Mobile Apps"
 tags: ["Shopify Plus", "Mobile App Development", "Enterprise Ecommerce", "Customer Retention", "Shopify Plus Features"]
 image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop"
+faqs:
+  - question: "Does Shopify Plus include a mobile app?"
+    answer: "No, Shopify Plus doesn't include a pre-built mobile app. You need to use third-party app builders (Tapcart, Shopify Mobile App, Vajro) or develop a custom app using Shopify's APIs. Plus merchants get enhanced APIs, faster rate limits, and better support for custom app development."
+  - question: "How much does a mobile app cost for Shopify Plus stores?"
+    answer: "App builder platforms cost ₹50,000-2,00,000/month depending on features and GMV. Custom native development costs ₹25-50 lakh initial build plus ₹1-3 lakh/month maintenance. Headless React Native apps cost ₹35-75 lakh development. Budget 15-20% annually for updates and improvements."
+  - question: "What Shopify Plus features are most valuable for mobile apps?"
+    answer: "Plus-exclusive benefits include: Shopify Flow for automated push notifications, Launchpad for scheduled app-exclusive drops, checkout.liquid customization, higher API rate limits for real-time updates, Scripts for custom pricing/discounts, wholesale channel integration, and dedicated support for complex implementations."
+  - question: "What's the ROI of a mobile app for Shopify Plus brands?"
+    answer: "Plus brands with apps see: 30-50% higher AOV from app users, 40-70% better repeat purchase rates, 2-3x higher customer lifetime value, and 15-25% lower CAC over time. A merchant spending ₹1.5Cr annually on retargeting can expect ₹50-60 lakh savings plus increased revenue."
+  - question: "Should I use an app builder or custom development for Shopify Plus?"
+    answer: "Custom development is strongly recommended for Plus merchants. App builders can't handle Plus-level traffic during sales, don't integrate with enterprise systems (Salesforce, NetSuite), and deliver generic experiences conflicting with premium positioning. The cost difference is justified by performance and brand consistency."
+  - question: "Can my Shopify Plus mobile app integrate with our CRM and ERP?"
+    answer: "Yes, custom-built apps integrate with any system with an API. Common integrations: Salesforce, HubSpot, Segment for CDP, Klaviyo/Braze for marketing automation, NetSuite/SAP for ERP, and warehouse management systems. These integrations enable unified customer data and cross-channel automation."
+  - question: "How long does it take to build a Shopify Plus mobile app?"
+    answer: "A proper Plus-grade app takes 5-6 months: 4 weeks discovery and design, 10-14 weeks development with Plus integrations, 3-4 weeks enterprise-level testing and optimization. Rushing this timeline compromises quality that Plus customers expect and creates technical debt."
 ---
 
 ![Mobile app interface showcasing enterprise ecommerce features](https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop)

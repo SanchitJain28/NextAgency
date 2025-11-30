@@ -6,6 +6,21 @@ author: "ScaleFront Team"
 category: "Shopify Optimization"
 tags: ["Shopify speed optimization", "fix slow Shopify store", "Shopify performance issues", "Shopify loading time"]
 image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop"
+faqs:
+  - question: "Why is my Shopify store so slow and how can I check it?"
+    answer: "Your Shopify store is likely slow due to too many apps (25-40 installed), unoptimized images, render-blocking scripts, or bloated theme code. Use Google PageSpeed Insights to check your mobile score—anything below 50 indicates serious performance issues costing you revenue. Most stores score 25-45 on mobile."
+  - question: "What is the biggest cause of slow Shopify performance?"
+    answer: "Too many Shopify apps is the #1 killer. Each app adds 100-500KB of JavaScript that loads on every page. We regularly see stores with 25-40 apps installed, with only 10-15 actively used. The unused apps still inject code that slows your site, even if disabled."
+  - question: "How do unoptimized images slow down my Shopify store?"
+    answer: "Images typically account for 50-80% of page weight. Common mistakes include uploading 4000x4000 pixel images displaying at 400x400, using PNG for photos instead of JPEG, and not implementing lazy loading. A single unoptimized product page can force customers to download 5-10MB on mobile networks."
+  - question: "What are Core Web Vitals and why do they matter for Shopify?"
+    answer: "Core Web Vitals are Google's metrics that directly impact search rankings: Largest Contentful Paint (LCP) measures main content load time (target under 2.5s), Interaction to Next Paint (INP) measures responsiveness (under 200ms), and Cumulative Layout Shift (CLS) measures visual stability (under 0.1). Poor scores hurt both SEO and conversions."
+  - question: "How quickly can I improve my Shopify store speed?"
+    answer: "You can see significant improvements within 48 hours by implementing quick wins: uninstall unused apps, compress hero images, add lazy loading to images, and defer non-critical JavaScript. Our action plan shows how to achieve 20-40 point PageSpeed score improvements in this timeframe."
+  - question: "Should I hire a developer to fix my slow Shopify store?"
+    answer: "For stores doing ₹50 lakh+ annually, professional help is recommended for complex issues like theme architecture problems, app dependency management, or headless commerce implementation. The revenue impact of proper optimization typically pays for professional services within weeks."
+  - question: "What is a good PageSpeed score for a Shopify store?"
+    answer: "Aim for 50+ on mobile and 70+ on desktop. Scores above 70 on mobile are excellent and put you ahead of most competitors. Focus more on Core Web Vitals (LCP, INP, CLS) than the overall score, as these directly impact both search rankings and conversion rates."
 ---
 
 # Why Your Shopify Store Is Slow (And How to Fix It in 48 Hours)

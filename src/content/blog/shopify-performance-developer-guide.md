@@ -6,6 +6,21 @@ author: "Rishabh Jain"
 category: "Development"
 tags: ["Shopify Performance", "Speed Optimization", "Core Web Vitals", "Liquid Optimization", "JavaScript Performance"]
 image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2070&auto=format&fit=crop"
+faqs:
+  - question: "What's a good PageSpeed score for Shopify stores?"
+    answer: "Aim for 70+ on mobile and 85+ on desktop. Scores above 80 on mobile put you in top tier of Shopify stores. Focus more on Core Web Vitals (LCP under 2.5s, INP under 200ms, CLS under 0.1) than composite score, as these directly impact rankings and conversions."
+  - question: "How do I optimize Liquid code for better performance?"
+    answer: "Use paginate for large collections instead of for loops, implement fragment caching for expensive operations, limit nested loop depth, use assign to cache repeated calculations, avoid Liquid filters inside loops, use product.metafields sparingly, and structure data to minimize object access."
+  - question: "Why is my Shopify store slow even with a fast theme?"
+    answer: "Apps are the most common cause. Each app adds JavaScript loading on every page. Audit installed apps, remove unused ones, request conditional loading from vendors, and check for leftover code from uninstalled apps. We regularly see 25-40 apps installed with only 10-15 actively used."
+  - question: "How do I reduce JavaScript execution time on Shopify?"
+    answer: "Implement code splitting to load only necessary JS per page, use dynamic imports for non-critical features, defer third-party scripts with async/defer attributes, remove unused app scripts, minify and compress all files, use service workers for caching, and move inline scripts to external files."
+  - question: "Does Shopify automatically optimize images?"
+    answer: "Shopify serves WebP when you use image_url filter, but you must implement responsive images (srcset/sizes) and lazy loading manually. Shopify doesn't automatically resize images to appropriate dimensions for each use case—you need to specify widths in your Liquid code."
+  - question: "How can I fix Cumulative Layout Shift on Shopify?"
+    answer: "Reserve space for images using width/height attributes or aspect-ratio CSS, use font-display: swap for custom fonts and preload critical fonts, reserve space for third-party embeds before load, avoid inserting content above existing content, and set explicit dimensions for ads/iframes."
+  - question: "Should I use page builder apps for Shopify?"
+    answer: "Page builders add significant JavaScript overhead. For performance-critical pages, custom Liquid development is faster. If using page builder, disable it on pages where not needed and audit performance impact regularly. Consider headless architecture for complex custom layouts without performance penalty."
 ---
 
 ![Developer optimizing code on multiple screens](https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2070&auto=format&fit=crop)

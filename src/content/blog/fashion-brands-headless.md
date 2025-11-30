@@ -6,6 +6,21 @@ author: "Rishabh Jain"
 category: "Headless Commerce"
 tags: ["Headless Commerce", "Fashion Ecommerce", "D2C Fashion", "Visual Storytelling", "Shopify Headless"]
 image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070&auto=format&fit=crop"
+faqs:
+  - question: "What is headless commerce for fashion brands?"
+    answer: "Headless commerce separates your website frontend (visual experience) from ecommerce backend (Shopify/WooCommerce). For fashion brands, this enables custom lookbook experiences, editorial layouts, and immersive storytelling that template platforms can't deliver while maintaining backend operational reliability."
+  - question: "How much does a headless fashion website cost?"
+    answer: "Mid-market fashion brands (₹5-15Cr revenue): ₹20-35 lakh development, ₹3-5 lakh annual maintenance. Premium brands (₹15-50Cr): ₹35-60 lakh development, ₹5-8 lakh annual maintenance. Luxury/enterprise (₹50Cr+): ₹60-100+ lakh development, ₹8-15 lakh annual maintenance. Higher costs reflect image-heavy requirements and visual complexity."
+  - question: "How long does it take to build a headless fashion store?"
+    answer: "Expect 5-7 months from kickoff to launch: 3-4 weeks discovery and creative direction, 4-6 weeks design and prototyping, 10-14 weeks development, 3-4 weeks content migration and QA. Fashion projects take longer than other categories due to visual complexity and extensive content requirements."
+  - question: "Is headless commerce worth it for small fashion brands?"
+    answer: "For brands under ₹5Cr annual revenue, headless typically isn't cost-effective. Focus on optimizing a premium Shopify/WooCommerce theme instead. Once you exceed ₹5Cr, have strong creative assets, and compete with digitally-native brands, headless becomes strategically viable."
+  - question: "What capabilities does headless unlock for fashion brands?"
+    answer: "Headless enables: immersive lookbook experiences with shoppable hotspots, scroll-based storytelling with parallax effects, shop-the-look functionality for complete outfits, advanced size and fit technology integration (AR try-on), visual search and discovery, personalized style feeds, and mobile-first performance (sub-1s load times)."
+  - question: "Can I keep using Shopify with a headless setup?"
+    answer: "Yes, most fashion headless builds use Shopify as backend for products, inventory, orders, and checkout via Storefront API. You get Shopify's operational reliability with complete frontend freedom. This is called 'headless Shopify' or 'composable commerce.'"
+  - question: "Which fashion brands use headless commerce?"
+    answer: "Many premium and luxury brands have adopted headless including Victoria Beckham, Pangaia, Kotn, and numerous digitally-native brands. In India, several premium ethnic wear and streetwear brands have transitioned in the past 2-3 years to compete with fast-growing digital-first competitors."
 ---
 
 ![Fashion brand editorial photoshoot with premium styling](https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070&auto=format&fit=crop)

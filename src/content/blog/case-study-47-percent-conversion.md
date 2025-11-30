@@ -6,6 +6,21 @@ author: "Rishabh Jain"
 category: "Case Studies"
 tags: ["Conversion Optimization", "Shopify Case Study", "D2C Growth", "UX Optimization", "Performance Optimization"]
 image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
+faqs:
+  - question: "What is a good conversion rate for fashion D2C brands in India?"
+    answer: "For fashion D2C brands in India, 1.8-2.5% is typical. Premium brands with strong audiences can reach 2.5-3.5%. Conversion rates below 1.5% usually indicate fixable UX, performance, or checkout issues. This case study improved from 1.1% to 1.62% (47% increase)."
+  - question: "How long does it take to see conversion rate improvements?"
+    answer: "Initial improvements are visible within 2-4 weeks of implementing changes. Full impact typically stabilizes within 2-3 months as you gather sufficient data and make iterative refinements. This case study saw product page improvements in 2 weeks, checkout fixes in 4 weeks, and full results in 3 months."
+  - question: "What are the most common reasons for low Shopify conversions?"
+    answer: "Based on audits: checkout friction is #1 (unclear shipping, missing delivery estimates, poor payment failure handling, forced account creation). Product page issues are #2 (size selection confusion, insufficient information, poor mobile image galleries). Performance issues (#3) compound both problems."
+  - question: "How much does conversion rate optimization cost?"
+    answer: "Comprehensive CRO projects like this case study cost ₹3-6 lakh depending on scope and complexity. ROI is typically 10-30x within first year based on revenue improvement from same traffic. The brand in this study gained ₹3.14Cr annual revenue from ₹3-4 lakh investment."
+  - question: "What's more important: product page or checkout optimization?"
+    answer: "Both matter, but prioritize based on your funnel. This case study had 65% product page drop-off and 84% cart abandonment. We fixed product pages first (weeks 1-2), then checkout (weeks 3-4), then performance (weeks 5-6). Addressing biggest leaks first maximizes impact."
+  - question: "Can you guarantee specific conversion rate improvements?"
+    answer: "No one can guarantee specific percentage improvements as results depend on starting point, traffic quality, and product-market fit. However, every audit identifies actionable improvements, and every implementation produces measurable results. This case study's 47% improvement represents thorough execution of fundamentals."
+  - question: "How did you reduce cart abandonment from 78% to 61%?"
+    answer: "We simplified checkout from 18 to 8 essential fields, added delivery estimates in cart, enabled guest checkout, implemented payment failure recovery with WhatsApp follow-up, moved COD to prominent position with small fee, and added trust signals throughout. Combined changes reduced abandonment 22 percentage points."
 ---
 
 ![Analytics dashboard showing conversion rate improvements](https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop)
