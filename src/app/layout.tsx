@@ -6,7 +6,7 @@ import "@fontsource/stack-sans-text/500.css";
 import "@fontsource/stack-sans-text/600.css";
 import "@fontsource/stack-sans-text/700.css";
 import "./globals.css";
-
+import { Analytics } from "@vercel/analytics/next";
 export const metadata: Metadata = {
   title: {
     default: "ScaleFront - Elite Shopify Development Agency | Custom Apps & Themes",
@@ -181,6 +181,7 @@ export default function RootLayout({
         className="antialiased"
       >
         {children}
+        <Analytics/>
         
         {/* Google Analytics - Replace with your tracking ID */}
         {process.env.NODE_ENV === 'production' && (
