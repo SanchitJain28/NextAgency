@@ -63,23 +63,35 @@ export default function AboutPage() {
           </p>
         </header>
 
-        {/* Our Story */}
+        {/* Who We Are */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-foreground mb-6">
-            Our Story
+            Who We Are
           </h2>
 
           <div className="prose prose-lg max-w-none space-y-4 text-muted-foreground">
             <p>
-              ScaleFront was born from a simple observation: too many Shopify stores were held back by outdated themes, slow performance, and cookie-cutter solutions. We saw businesses struggling to stand out in a crowded market, limited by the constraints of off-the-shelf apps and generic templates.
+              We are <strong className="text-foreground">ScaleFront</strong> – and our name tells our story. <em>Scale</em> represents our commitment to helping you technically scale your business, handling growth challenges with robust infrastructure and optimized performance. <em>Front</em> represents your storefront, the face of your business where customers experience your brand and make purchasing decisions.
             </p>
 
             <p>
-              As experienced developers who understood both the technical and business sides of eCommerce, we knew there had to be a better way. We started building custom solutions for Shopify stores—solutions that were tailored, performant, and designed to convert.
+              Together, ScaleFront means we're here to help your e-commerce business leap to greatness – combining technical excellence with exceptional user experiences that convert visitors into loyal customers.
             </p>
 
             <p>
-              Today, ScaleFront has grown into a full-service Shopify development agency, but our mission remains the same: <strong className="text-foreground">help businesses unlock the full potential of Shopify</strong> through expert development, innovative solutions, and unwavering support.
+              <strong className="text-foreground">Our focus is singular and intentional: e-commerce.</strong> We chose to specialize exclusively in e-commerce because we know e-commerce inside and out. We understand the unique challenges of online retail – from cart abandonment and conversion optimization to inventory management and payment processing. We speak your language because we've dedicated ourselves to mastering this space.
+            </p>
+
+            <p>
+              We're not just developers; we're a <strong className="text-foreground">passionate team</strong> that wakes up every day looking for ways to improve e-commerce. Whether it's discovering a new optimization technique, implementing cutting-edge technology, or finding creative solutions to complex problems, we're constantly pushing boundaries and staying ahead of industry trends.
+            </p>
+
+            <p>
+              When you work with us, you're not just hiring an agency – you're partnering with a team that genuinely cares about your success. We pride ourselves on two pillars: <strong className="text-foreground">Innovation + Great Service</strong>. Innovation means we bring fresh, modern solutions that give you a competitive edge. Great Service means we're responsive, reliable, and committed to your satisfaction at every step.
+            </p>
+
+            <p>
+              <strong className="text-foreground">You will be fully satisfied working with us.</strong> That's not just a promise – it's our standard. We don't consider a project complete until you're thrilled with the results. From the initial consultation to post-launch support, we ensure every interaction exceeds your expectations.
             </p>
           </div>
         </section>

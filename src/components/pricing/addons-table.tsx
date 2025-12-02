@@ -3,16 +3,16 @@
 import { motion } from "framer-motion"
 
 const addons = [
-  { feature: "Advanced AI Search", price: "Rs 5000" },
-  { feature: "Chaty / Live chat", price: "Rs 3000" },
-  { feature: "Pincode Checker", price: "Rs 5000" },
-  { feature: "AI Powered Related Products", price: "Rs 10000" },
-  { feature: "AI Powered Frequently Bought Together", price: "Rs 10000" },
-  { feature: "Abandoned Cart Recovery (Email / WhatsApp)", price: "Rs 10000" },
-  { feature: "Loyalty & Rewards Program", price: "Rs 15000" },
-  { feature: "Upsell & Cross‑sell in cart", price: "Rs 10000" },
-  { feature: "Analytics & Heatmap", price: "Rs 5000" },
-  { feature: "Checkout fraud protection for COD", price: "Rs 5000" },
+  { feature: "Advanced AI Search", price: "Starting at $60" },
+  { feature: "Chaty / Live chat", price: "Starting at $40" },
+  { feature: "Pincode Checker", price: "Starting at $60" },
+  { feature: "AI Powered Related Products", price: "Starting at $120" },
+  { feature: "AI Powered Frequently Bought Together", price: "Starting at $120" },
+  { feature: "Abandoned Cart Recovery (Email / WhatsApp)", price: "Starting at $120" },
+  { feature: "Loyalty & Rewards Program", price: "Starting at $180" },
+  { feature: "Upsell & Cross‑sell in cart", price: "Starting at $120" },
+  { feature: "Analytics & Heatmap", price: "Starting at $60" },
+  { feature: "Checkout fraud protection for COD", price: "Starting at $60" },
 ]
 
 export default function AddonsTable() {

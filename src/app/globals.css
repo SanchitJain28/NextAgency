@@ -282,3 +282,16 @@ html[data-font-size="large"] .medium-content h2 {
 html[data-font-size="large"] .medium-content h3 {
   font-size: 30px !important;
 }
+
+/* Text Selection Styles */
+::selection {
+  background-color: #60DB36;
+  color: white;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background-color: #60DB36;
+  color: white;
+  text-shadow: none;
+}

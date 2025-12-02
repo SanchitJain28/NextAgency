@@ -1,0 +1,364 @@
+============================================================
+SCALEFRONT SERVICE PAGE - CONVERSION OPTIMIZATION
+============================================================
+
+SEO META TITLE: Shopify Conversion Rate Optimization Services | Scalefront
+SEO META DESCRIPTION: Increase your Shopify store conversions through UX improvements, A/B testing, and CRO strategies. Starting $8K.
+PRIMARY KEYWORDS: Shopify conversion optimization, Shopify CRO, Shopify conversion rate optimization
+URL: scalefront.io/services/conversion-optimization
+
+============================================================
+HERO SECTION
+============================================================
+
+# Conversion Rate Optimization
+
+Turn more visitors into customers. Data-driven CRO for Shopify stores.
+
+You're spending money to drive traffic. Are you maximizing the value of each visitor? Even a 0.5% conversion increase can mean tens of thousands in additional revenue.
+
+We identify conversion barriers and implement proven improvements.
+
+[Schedule a CRO Consultation] [View Case Studies]
+
+**Trusted by brands serious about improving their conversion rates**
+
+
+============================================================
+WHO THIS IS FOR
+============================================================
+
+## Do You Need CRO Services?
+
+### You Need CRO If:
+
+**Your Traffic Is Good But Sales Aren't**
+Getting 10K+ monthly visitors but conversion under 2%? CRO can help identify what's stopping purchases.
+
+**High Cart Abandonment**
+75%+ cart abandonment rate? Common issues like unexpected shipping costs or confusing checkout are fixable.
+
+**Mobile Conversion Lags Desktop**
+Mobile traffic is 70%+ but conversion is 50% lower than desktop? Mobile-specific UX issues need addressing.
+
+**You've Hit a Revenue Plateau**
+Revenue stuck despite increased traffic? Conversion optimization can unlock growth without increasing ad spend.
+
+**Before Scaling Ad Spend**
+Planning to increase marketing budget? Optimize conversion first to maximize ROI on that increased spend.
+
+
+============================================================
+OUR CRO SERVICES
+============================================================
+
+## What We Optimize
+
+### CRO Audit & Strategy
+**$8,000-15,000**
+
+Comprehensive analysis identifying conversion barriers:
+
+- Funnel analysis (where visitors drop off)
+- Heatmaps and session recordings
+- Mobile vs. desktop analysis
+- Checkout flow audit
+- Trust signal assessment
+- Page speed analysis
+- Form usability review
+- Competitor benchmarking
+
+**Deliverable:** Detailed CRO audit report with prioritized recommendations
+
+**Timeline:** 2-3 weeks
+
+### CRO Implementation
+**$12,000-35,000**
+
+Execute improvements from audit:
+
+- Product page optimization
+- Collection page improvements
+- Cart abandonment reduction
+- Checkout optimization
+- Mobile experience fixes
+- Trust signal additions
+- Speed optimization
+- Form improvements
+
+**Deliverable:** Implemented improvements with before/after metrics
+
+**Timeline:** 4-8 weeks
+
+### A/B Testing Program
+**$15,000-40,000**
+
+Systematic testing to find what works:
+
+- Test hypothesis development
+- A/B test design and setup
+- Traffic allocation management
+- Statistical analysis
+- Winner implementation
+- Continuous testing cycle
+
+**Deliverable:** Ongoing testing program with documented winners
+
+**Timeline:** 12-16 weeks (iterative)
+
+### Full CRO Service
+**$30,000-70,000**
+
+Audit + Implementation + Testing:
+
+- Complete CRO audit
+- Prioritized implementation
+- A/B testing program
+- Monthly performance reviews
+- Continuous optimization
+- Quarterly strategy sessions
+
+**Deliverable:** Comprehensive CRO program
+
+**Timeline:** 6-12 months
+
+
+============================================================
+COMMON CRO IMPROVEMENTS
+============================================================
+
+## What We Typically Optimize
+
+### Product Pages
+
+**High-Impact Changes:**
+- Above-fold product info optimization
+- Trust signals (reviews, guarantees, badges)
+- Better product photography and videos
+- Clear size guides and fit information
+- Prominent add-to-cart buttons
+- Social proof and urgency
+- Related products and upsells
+
+**Average Impact:** 15-35% conversion increase
+
+### Checkout Flow
+
+**High-Impact Changes:**
+- Reduce form fields
+- Add guest checkout option
+- Display security badges
+- Show shipping costs early
+- Progress indicators
+- Error message clarity
+- Mobile checkout optimization
+
+**Average Impact:** 10-25% checkout completion increase
+
+### Mobile Experience
+
+**High-Impact Changes:**
+- Touch target optimization
+- Simplified navigation
+- Mobile-specific layouts
+- Form input optimization
+- Image loading optimization
+- Sticky add-to-cart buttons
+
+**Average Impact:** 20-45% mobile conversion increase
+
+### Trust & Credibility
+
+**High-Impact Changes:**
+- Customer reviews prominent
+- Trust badges and security seals
+- Clear return policy
+- Money-back guarantee
+- Social proof (customer photos, testimonials)
+- Professional photography
+
+**Average Impact:** 12-28% conversion increase
+
+
+============================================================
+OUR PROCESS
+============================================================
+
+## How We Optimize Your Store
+
+### Phase 1: Audit & Analysis (2 weeks)
+
+- Install analytics and heatmap tools
+- Analyze conversion funnels
+- Review session recordings
+- Assess mobile experience
+- Benchmark against competitors
+- Identify top issues
+
+**Deliverable:** CRO audit report with prioritized recommendations
+
+### Phase 2: Quick Wins (2-3 weeks)
+
+- Implement high-impact, low-effort changes
+- Fix obvious barriers
+- Add missing trust signals
+- Improve mobile experience
+- Optimize page speed
+
+**Deliverable:** Quick improvements with measurable impact
+
+### Phase 3: Major Improvements (4-6 weeks)
+
+- Product page redesign
+- Checkout optimization
+- Collection page improvements
+- Advanced trust signals
+- Enhanced mobile experience
+
+**Deliverable:** Comprehensive improvements implemented
+
+### Phase 4: Testing & Iteration (Ongoing)
+
+- A/B test major changes
+- Analyze results
+- Implement winners
+- Continue testing cycle
+- Monthly reporting
+
+**Deliverable:** Continuous optimization
+
+
+============================================================
+INVESTMENT
+============================================================
+
+## CRO Pricing
+
+### CRO Audit Only
+**$8,000-15,000**
+- Comprehensive audit
+- Prioritized recommendations
+- Implementation guidance
+Timeline: 2-3 weeks
+
+### Audit + Implementation
+**$20,000-50,000**
+- CRO audit
+- Full implementation
+- Performance tracking
+Timeline: 6-10 weeks
+
+### Ongoing CRO Program
+**$5,000-12,000/month**
+- Monthly optimization
+- A/B testing
+- Performance monitoring
+- Strategy adjustments
+Retainer: 3-12 months
+
+
+============================================================
+CASE STUDY
+============================================================
+
+## Real Results: Home Goods Brand CRO
+
+A home decor brand had good traffic (25K monthly) but low conversion (1.3%). They were spending $15K/month on ads.
+
+### Key Issues Found
+- Product pages missing key information
+- 82% cart abandonment
+- Mobile experience confusing
+- No trust signals
+- Slow page load (5.8s)
+
+### Improvements Made
+- Added detailed product descriptions and dimensions
+- Simplified checkout process
+- Redesigned mobile product pages
+- Added customer reviews prominently
+- Optimized images (5.8s → 2.1s load)
+
+### Results After 3 Months
+- Conversion: 1.3% → 2.6% (+100%)
+- Cart abandonment: 82% → 68%
+- Mobile conversion: +142%
+- AOV: +14%
+- Revenue: $32K → $58K/month (+81%)
+
+**ROI:** $35K CRO investment. Additional $26K monthly revenue = $312K annually
+
+[Read Full Case Study →]
+
+
+============================================================
+FAQ
+============================================================
+
+**How long before we see results?**
+Quick wins in 2-4 weeks. Full program shows significant results in 3-6 months. CRO is iterative and continuous.
+
+**What conversion rate should we aim for?**
+Industry average is 1-3%. Good stores achieve 3-5%. Exceptional stores 5%+. Depends on traffic quality, AOV, and product type.
+
+**Will CRO work for our niche?**
+Yes. CRO principles apply across industries, though specific tactics vary by product type and audience.
+
+**Do you guarantee results?**
+No guarantees, but we only recommend changes with proven track records. Average clients see 30-60% conversion improvement.
+
+**How does A/B testing work?**
+We show different versions to different visitors, measure which performs better, and implement the winner.
+
+**Can we implement recommendations ourselves?**
+Yes. Audit includes implementation guidance. Most clients prefer us to implement for speed and technical expertise.
+
+
+============================================================
+NEXT STEPS
+============================================================
+
+## Ready to Increase Conversions?
+
+Let's identify what's holding your store back and create a roadmap to improvement.
+
+### 1. Schedule a CRO Assessment
+
+30-minute call where we:
+- Review your current conversion rate
+- Discuss biggest challenges
+- Identify quick wins
+- Explain our process
+- Provide cost estimate
+
+[Schedule Assessment →]
+
+### 2. Get a Free Mini-Audit
+
+Quick 5-page analysis:
+- Top 3 conversion barriers
+- Quick win recommendations
+- Potential impact estimate
+
+[Get Mini-Audit →]
+
+### 3. View CRO Case Studies
+
+See results we've achieved:
+- Before/after metrics
+- Specific improvements made
+- ROI analysis
+
+[View Case Studies →]
+
+
+============================================================
+CONTACT
+============================================================
+
+**Email:** hello@scalefront.io
+**Schedule Call:** [Calendly Link]
+
+---
+
+Serving D2C brands worldwide | Founded by developers who care about craft

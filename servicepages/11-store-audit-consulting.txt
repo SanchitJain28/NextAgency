@@ -1,0 +1,663 @@
+============================================================
+SCALEFRONT SERVICE PAGE - STORE AUDIT & CONSULTING
+============================================================
+
+SEO META TITLE: Shopify Store Audit & Consulting Services India | Expert Review
+SEO META DESCRIPTION: Comprehensive Shopify store audit covering performance, UX, conversion, SEO, and technical issues. Actionable recommendations. Starting ₹75k. Based in India.
+PRIMARY KEYWORDS: Shopify store audit, Shopify consulting India, Shopify performance audit, Shopify conversion audit
+URL: scalefront.io/services/store-audit-consulting
+
+============================================================
+HERO SECTION
+============================================================
+
+# Shopify Store Audit & Consulting
+
+Identify what's holding your store back. Get a roadmap to improve performance, conversions, and revenue.
+
+Your store might look fine, but underneath there could be performance issues, UX problems, SEO gaps, or conversion killers costing you revenue every day.
+
+We conduct comprehensive audits across 8 critical areas and provide a prioritized action plan.
+
+[Get Your Store Audited] [View Sample Audit Report]
+
+**Trusted by D2C brands serious about improving their Shopify stores**
+
+
+============================================================
+WHO THIS IS FOR
+============================================================
+
+## Do You Need a Store Audit?
+
+### You Should Get an Audit If:
+
+**Your Traffic Is Good But Sales Are Low**
+Getting visitors but not converting? Something's wrong with UX, trust signals, or checkout flow. An audit reveals exactly what's breaking the conversion path.
+
+**You've Hit a Revenue Plateau**
+Revenue stuck at the same level for 6+ months? An audit identifies optimization opportunities you haven't considered.
+
+**Site Speed Is Slow**
+Long load times kill conversions. If your store takes 5+ seconds to load, you're losing 40%+ of visitors before they see anything.
+
+**You're Not Sure What to Fix Next**
+Limited budget and time. Should you fix mobile experience? Improve checkout? Add reviews? An audit prioritizes what will actually move the needle.
+
+**Before Major Investment**
+Planning a theme redesign, app implementation, or marketing push? Audit first to ensure you're building on solid foundations.
+
+**Post-Migration or Redesign**
+Just migrated to Shopify or launched a redesign? Audit helps catch issues before they compound.
+
+**SEO Rankings Dropped**
+Lost organic traffic? Technical SEO issues might be the culprit. An audit identifies and fixes the problems.
+
+### You Can Wait If:
+
+- Store is brand new (under 3 months old)
+- You're still figuring out product-market fit
+- Monthly traffic under 5,000 visitors
+- Revenue under ₹5 lakh/month
+- Major redesign already planned and budgeted
+
+
+============================================================
+OUR AUDIT PROCESS
+============================================================
+
+## 8-Area Comprehensive Audit
+
+We audit every critical aspect of your Shopify store and provide actionable recommendations.
+
+### 1. Performance & Speed Audit
+
+**What We Analyze:**
+- Page load times (desktop and mobile)
+- Core Web Vitals (LCP, FID, CLS)
+- Server response times
+- Image optimization
+- JavaScript and CSS bloat
+- App performance impact
+- Third-party script impact
+- Caching and CDN usage
+- Mobile performance specifically
+
+**What You Get:**
+- Performance score with industry benchmarks
+- Specific bottlenecks identified
+- App removal or optimization recommendations
+- Image optimization opportunities
+- Code optimization suggestions
+- Estimated improvement impact on conversions
+
+**Example Finding:**
+*"Homepage loads in 8.2 seconds on mobile. Top issues: Unoptimized hero image (3.2MB), 14 unused apps adding JavaScript, no lazy loading. Fixing these would reduce load time to ~2.1 seconds, potentially increasing mobile conversion by 28%."*
+
+### 2. User Experience (UX) Audit
+
+**What We Analyze:**
+- Mobile experience (80%+ of traffic is mobile)
+- Navigation and menu structure
+- Product discovery flow
+- Filter and search functionality
+- Product page layout and information architecture
+- Cart and checkout UX
+- Form design and usability
+- Trust signals and social proof
+- Mobile-specific issues (tap targets, scrolling, zoom)
+
+**What You Get:**
+- Annotated screenshots highlighting issues
+- User flow diagrams showing friction points
+- Mobile experience specific recommendations
+- Comparison to best-in-class examples
+- Prioritized UX improvements
+
+**Example Finding:**
+*"Mobile product page requires 7 taps to see product details, size guide, and reviews. 43% of mobile users bounce at this stage. Recommend collapsible accordions to reduce interaction cost."*
+
+### 3. Conversion Rate Optimization (CRO) Audit
+
+**What We Analyze:**
+- Checkout flow and abandonment points
+- Product page conversion elements
+- Trust signals (reviews, badges, guarantees)
+- Call-to-action placement and copy
+- Urgency and scarcity tactics
+- Free shipping thresholds
+- Return policy visibility
+- Payment and security badges
+- Discount and promotional effectiveness
+
+**What You Get:**
+- Conversion funnel analysis
+- Specific abandonment points identified
+- A/B test recommendations prioritized by potential impact
+- Quick wins vs. major improvements
+- Estimated revenue impact of changes
+
+**Example Finding:**
+*"Checkout abandonment at 78% (industry avg: 69%). Main issues: Unexpected shipping costs at final step, no guest checkout option, required account creation. Fixing these could recover ₹12L annually based on current traffic."*
+
+### 4. SEO & Content Audit
+
+**What We Analyze:**
+- Technical SEO (crawlability, indexing, schema)
+- On-page SEO (titles, descriptions, headings)
+- Content quality and keyword optimization
+- Internal linking structure
+- Image alt text and optimization
+- URL structure
+- Sitemap and robots.txt
+- Duplicate content issues
+- Blog content strategy (if applicable)
+
+**What You Get:**
+- Technical SEO issues prioritized by severity
+- Keyword opportunity analysis
+- Content improvement recommendations
+- Structured data implementation suggestions
+- SEO roadmap with estimated traffic impact
+
+**Example Finding:**
+*"47 products missing meta descriptions. 23 products have duplicate content from manufacturer descriptions. Blog exists but hasn't been updated in 8 months. Fixing meta descriptions and creating product-focused content could increase organic traffic by 40%+ over 6 months."*
+
+### 5. Mobile Experience Audit
+
+**What We Analyze:**
+- Mobile-specific UX issues
+- Touch target sizes and spacing
+- Mobile navigation usability
+- Form input experience
+- Mobile page speed
+- Responsive design issues
+- Mobile checkout flow
+- App-like features (if applicable)
+
+**What You Get:**
+- Mobile experience score
+- Device-specific testing results (iOS, Android)
+- Mobile conversion killers identified
+- Mobile-first redesign recommendations
+- Mobile-specific quick wins
+
+**Example Finding:**
+*"Mobile navigation menu requires precise tapping. Buttons are 36px (minimum is 44px). Product images don't zoom properly. 62% of mobile traffic but only 38% of conversions. Mobile optimization could add ₹8L annual revenue."*
+
+### 6. Technical & Code Audit
+
+**What We Analyze:**
+- Theme code quality
+- Liquid code efficiency
+- JavaScript errors and console warnings
+- Deprecated code or APIs
+- App conflicts
+- Security issues
+- Accessibility (WCAG 2.1)
+- Browser compatibility
+- Checkout extensibility opportunities (Plus only)
+
+**What You Get:**
+- Technical debt assessment
+- Code quality score
+- Security vulnerabilities identified
+- Accessibility compliance report
+- Technical improvement roadmap
+
+**Example Finding:**
+*"Theme using deprecated Shopify APIs that will break in 6 months. 8 JavaScript errors on every page load. No accessibility considerations (violates WCAG 2.1). Recommend theme update before issues compound."*
+
+### 7. App & Integration Audit
+
+**What We Analyze:**
+- Installed apps and actual usage
+- App performance impact
+- Redundant or overlapping apps
+- App cost vs. value analysis
+- Integration quality and reliability
+- Alternative app recommendations
+
+**What You Get:**
+- App inventory with usage analysis
+- Performance impact score per app
+- Cost savings opportunities
+- Better alternative recommendations
+- Apps to remove immediately
+
+**Example Finding:**
+*"Paying ₹42,000/month for 18 apps. 6 apps haven't been used in 3+ months. 4 apps have overlapping functionality. 3 apps significantly slow page load. Removing/consolidating could save ₹24,000/month and improve load time by 2.1 seconds."*
+
+### 8. Analytics & Tracking Audit
+
+**What We Analyze:**
+- Google Analytics 4 setup
+- Conversion tracking accuracy
+- E-commerce tracking configuration
+- Event tracking implementation
+- Goal setup and tracking
+- Attribution modeling
+- Customer journey tracking
+- Funnel analysis
+
+**What You Get:**
+- Tracking accuracy assessment
+- Missing events identified
+- GA4 configuration recommendations
+- Custom reporting suggestions
+- Data quality issues fixed
+
+**Example Finding:**
+*"GA4 not tracking 32% of transactions due to checkout redirect issues. No event tracking for add-to-cart or product views. Unable to analyze customer journey or optimize marketing spend. Fixing tracking would enable data-driven optimization."*
+
+
+============================================================
+DELIVERABLES
+============================================================
+
+## What You Receive
+
+### Comprehensive Audit Report
+
+**Executive Summary (2-3 pages)**
+- Overall store health score
+- Top 10 issues prioritized by impact
+- Quick wins (implement immediately)
+- Long-term improvements
+- Estimated revenue impact of fixes
+
+**Detailed Findings (40-60 pages)**
+- Section for each of 8 audit areas
+- Specific issues with annotated screenshots
+- Technical details and explanation
+- Industry benchmark comparisons
+- Before/after examples where applicable
+
+**Action Plan (5-10 pages)**
+- Prioritized recommendations
+- Implementation complexity (easy/medium/hard)
+- Estimated time and cost for each fix
+- Expected impact on metrics
+- 90-day roadmap
+
+**Technical Documentation**
+- Code snippets for quick fixes
+- App recommendations with links
+- Tool recommendations
+- Reference links and resources
+
+### 90-Minute Presentation
+
+**Video Conference Walk-Through**
+- Present findings and recommendations
+- Answer your questions
+- Discuss priorities based on your goals
+- Provide implementation guidance
+- Discuss budget and timeline
+
+### 30 Days Follow-Up Support
+
+**Post-Audit Support**
+- Answer implementation questions via email
+- Review changes you've made
+- Clarify any audit findings
+- Additional mini-reviews of specific areas
+
+
+============================================================
+AUDIT TYPES & PRICING
+============================================================
+
+## Audit Packages
+
+### Quick Audit
+**₹75,000**
+
+Best for: Small stores wanting quick assessment
+
+Includes:
+- Performance audit
+- Mobile experience audit
+- Basic UX audit
+- Quick wins identification
+- 15-page report
+- 45-minute presentation call
+- 7 days email support
+
+Timeline: 3-5 days
+
+### Standard Audit
+**₹1,50,000**
+
+Best for: Growing stores needing comprehensive review
+
+Includes:
+- All 8 audit areas (comprehensive)
+- 50-page detailed report
+- Prioritized action plan
+- 90-minute presentation call
+- 30 days email support
+- One follow-up review session
+
+Timeline: 7-10 days
+
+Most Popular Package
+
+### Premium Audit
+**₹2,50,000**
+
+Best for: Enterprise stores or major optimization initiatives
+
+Includes:
+- All Standard Audit features
+- Competitor analysis (3 competitors)
+- Custom Google Analytics dashboards
+- A/B test plan with mockups
+- Implementation support for 2 months
+- Monthly check-in calls
+- Priority support
+
+Timeline: 10-14 days
+
+### Ongoing Consulting
+**₹1,00,000-3,00,000/month**
+
+Retainer-based consulting for continuous optimization
+
+Includes:
+- Monthly audits and reviews
+- Continuous optimization recommendations
+- Implementation support (varies by retainer)
+- Performance monitoring
+- A/B testing guidance
+- Strategy sessions
+- Priority support
+
+For stores serious about continuous improvement
+
+
+============================================================
+AUDIT + IMPLEMENTATION
+============================================================
+
+## We Can Fix What We Find
+
+Many agencies audit and disappear. We can implement the fixes too.
+
+### Implementation Packages
+
+**Quick Wins Implementation**
+₹1,00,000-2,50,000
+
+Fix the top 10-15 issues from audit:
+- Performance optimization
+- Mobile UX fixes
+- Basic CRO improvements
+- Simple code fixes
+- App cleanup
+
+Timeline: 3-4 weeks
+
+**Comprehensive Implementation**
+₹3,00,000-6,00,000
+
+Address all major audit findings:
+- Performance optimization
+- UX improvements
+- CRO implementation
+- SEO improvements
+- Code refactoring
+- New features if needed
+
+Timeline: 8-12 weeks
+
+**Full Redesign**
+₹8,00,000+
+
+When audit reveals fundamental issues requiring complete rebuild:
+- Complete theme redesign
+- Mobile-first approach
+- Performance-optimized from ground up
+- Implementation of all audit recommendations
+
+Timeline: 12-16 weeks
+
+
+============================================================
+WHO HAS BENEFITED FROM AUDITS
+============================================================
+
+## Real Results from Store Audits
+
+### Case Study 1: Fashion Brand
+
+**Situation:** Revenue stuck at ₹45L/month for 8 months despite increasing traffic.
+
+**Audit Findings:**
+- Mobile page load: 9.2 seconds
+- Product page required 5 taps to see size guide
+- No trust signals (reviews hidden)
+- Checkout abandonment: 82%
+
+**Actions Taken:**
+- Optimized images and removed 6 unused apps
+- Improved mobile product page layout
+- Added prominent reviews
+- Simplified checkout flow
+
+**Results:**
+- Mobile page load: 9.2s → 2.1s
+- Mobile conversion: +41%
+- Overall conversion: 1.8% → 2.7% (+50%)
+- Monthly revenue: ₹45L → ₹67L (+49%)
+
+**ROI:** Audit cost ₹1.5L. Revenue increase: ₹22L/month = ₹2.64Cr annually
+
+---
+
+### Case Study 2: Home Decor Store
+
+**Situation:** High bounce rate (72%) despite good SEO traffic.
+
+**Audit Findings:**
+- Homepage loaded 22 JavaScript files
+- No product filtering on collections
+- Images not optimized (averaging 2.1MB each)
+- Mobile navigation confusing
+
+**Actions Taken:**
+- Removed redundant apps
+- Added advanced filtering
+- Optimized all images
+- Redesigned mobile navigation
+
+**Results:**
+- Bounce rate: 72% → 48%
+- Pages per session: 2.1 → 4.3
+- Conversion rate: 1.2% → 2.1% (+75%)
+- Organic revenue: +118%
+
+**ROI:** Audit + implementation cost ₹4.5L. Revenue increase: ₹15L/month
+
+---
+
+### Case Study 3: Beauty Brand
+
+**Situation:** Spending ₹3L/month on ads but poor ROAS.
+
+**Audit Findings:**
+- GA4 tracking only capturing 58% of conversions
+- Checkout abandonment: 79%
+- Mobile checkout broken on iOS
+- No product recommendations
+
+**Actions Taken:**
+- Fixed GA4 tracking
+- Streamlined checkout
+- Fixed iOS-specific bugs
+- Added AI product recommendations
+
+**Results:**
+- Accurate conversion tracking enabled better ad optimization
+- Checkout conversion: +32%
+- AOV increased: ₹1,850 → ₹2,440 (+32%)
+- ROAS improved: 2.1x → 3.8x
+
+**ROI:** Better ad optimization alone saved ₹90k/month in wasted ad spend
+
+
+============================================================
+WHY SCALEFRONT
+============================================================
+
+## Why Get Your Audit From Us
+
+**Shopify-Specific Expertise**
+We've audited 100+ Shopify stores. We know common issues and best practices specific to Shopify's platform.
+
+**Developer Perspective**
+We're developers first. We identify technical issues that non-technical agencies miss. We understand what's feasible and what's not.
+
+**Honest Recommendations**
+We'll tell you what to fix yourself, what needs professional help, and what's not worth doing at all. No selling you services you don't need.
+
+**Actionable, Not Theoretical**
+Our audits include specific, implementable recommendations. Not vague advice like "improve UX"—actual changes you can make.
+
+**Data-Driven**
+We base recommendations on data, not opinions. Performance metrics, industry benchmarks, conversion data—everything is measurable.
+
+**Implementation Available**
+Unlike consulting-only firms, we can implement what we recommend. One team, start to finish.
+
+**India-Based, Cost-Effective**
+Based in Gurgaon with competitive pricing. Direct access to founders who conduct the audits personally.
+
+
+============================================================
+FAQ
+============================================================
+
+## Frequently Asked Questions
+
+**How long does an audit take?**
+Quick Audit: 3-5 days. Standard: 7-10 days. Premium: 10-14 days. Timeline depends on store size and complexity.
+
+**Do you need access to our store?**
+Yes. We need admin access, Google Analytics access, and any relevant app logins. We sign NDAs and maintain strict confidentiality.
+
+**Can you audit our store while it's live?**
+Yes. Audits are non-invasive. We analyze your store without making any changes.
+
+**What if we've already done an audit?**
+We can review the previous audit and provide a second opinion, or focus on specific areas that weren't covered.
+
+**Do you provide implementation services?**
+Yes. We can implement all audit recommendations or just the ones you choose. Implementation is separate from audit pricing.
+
+**How do you prioritize recommendations?**
+We prioritize based on: (1) potential revenue impact, (2) implementation complexity, (3) time to implement, (4) your specific goals.
+
+**What if you don't find any issues?**
+Rare, but possible for very well-optimized stores. We'd tell you honestly and refund a portion of the fee. Has never happened in 100+ audits.
+
+**Can you audit specific areas only?**
+Yes. If you only need performance audit or CRO audit, we can customize the scope and pricing.
+
+**How technical is the audit report?**
+We write for business owners, not developers. Technical details are included but explained in plain language.
+
+**Do you sign NDAs?**
+Yes, happily. We maintain strict confidentiality for all clients.
+
+
+============================================================
+AUDIT CHECKLIST
+============================================================
+
+## Prepare for Your Audit
+
+**Information We'll Need:**
+
+Access:
+- [ ] Shopify admin access (Staff account)
+- [ ] Google Analytics access (View + Edit)
+- [ ] Google Search Console access (if available)
+- [ ] App admin access (if relevant)
+
+Business Information:
+- [ ] Current monthly revenue
+- [ ] Target market and audience
+- [ ] Top competitors (2-3)
+- [ ] Key business goals
+- [ ] Known issues or concerns
+
+Historical Data:
+- [ ] Traffic data (last 3 months)
+- [ ] Conversion rate trends
+- [ ] Any recent changes (theme, apps, redesigns)
+- [ ] Previous audit reports (if any)
+
+Goals & Priorities:
+- [ ] What you want to improve most
+- [ ] Budget for implementations
+- [ ] Timeline for improvements
+- [ ] Team resources available
+
+
+============================================================
+NEXT STEPS
+============================================================
+
+## Ready to Audit Your Store?
+
+Let's identify what's holding your store back and create a roadmap to improvement.
+
+### 1. Schedule an Audit Consultation
+
+30-minute call where we:
+- Understand your store and challenges
+- Discuss which audit package fits your needs
+- Answer your questions about the process
+- Review what access we'll need
+- Provide timeline estimate
+
+**No obligation. No pressure.**
+
+[Schedule Consultation →]
+
+### 2. Get a Free Mini-Audit
+
+Try before you buy. Get a free 5-page mini-audit:
+- Performance score
+- Top 5 issues
+- Quick win recommendations
+
+[Get Free Mini-Audit →]
+
+### 3. View Sample Audit Report
+
+See what our audit reports look like:
+- Anonymized sample report
+- Example findings and recommendations
+- Report structure
+
+[View Sample Report →]
+
+
+============================================================
+CONTACT CTA
+============================================================
+
+## Let's Improve Your Store
+
+Whether you're ready for a full audit or just want to discuss your store, we're here to help.
+
+**Email:** hello@scalefront.io
+**Schedule Call:** [Calendly Link]
+
+**Response Time:** We respond to all inquiries within 24 hours (usually faster)
+
+---
+
+Based in Gurgaon, India | Serving D2C brands worldwide | Founded by developers who care about craft

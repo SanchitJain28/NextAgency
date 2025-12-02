@@ -1,0 +1,441 @@
+============================================================
+SCALEFRONT SERVICE PAGE - MOBILE APPS
+============================================================
+
+SEO META TITLE: Shopify Mobile App Development Services | iOS & Android
+SEO META DESCRIPTION: Native iOS and Android mobile apps for your Shopify store. Enhanced shopping experience, push notifications, offline access. Starting $40K.
+PRIMARY KEYWORDS: Shopify mobile app development, Shopify iOS app, Shopify Android app, mobile app for Shopify
+URL: scalefront.io/services/mobile-apps
+
+============================================================
+HERO SECTION
+============================================================
+
+# Mobile Apps for Shopify Stores
+
+Build native iOS and Android apps for your Shopify store.
+
+70%+ of e-commerce traffic is mobile, but mobile web conversion rates lag desktop. A native app provides the premium mobile experience your customers expect.
+
+Push notifications, faster performance, offline browsing, and app-like UX that drives engagement and sales.
+
+[Schedule a Mobile App Consultation] [View App Examples]
+
+**Trusted by brands serious about mobile commerce**
+
+
+============================================================
+WHY BUILD A MOBILE APP
+============================================================
+
+## When Mobile Apps Make Sense
+
+### You Should Build a Mobile App If:
+
+**High Mobile Traffic**
+If 70%+ of your traffic is mobile and you process 500+ orders monthly, an app can significantly improve mobile conversion.
+
+**Repeat Purchase Business**
+Subscription boxes, consumables, beauty products, supplements—businesses with repeat customers benefit most from apps.
+
+**Strong Brand Loyalty**
+Customers love your brand and would download an app. Apps work best when customers want to engage regularly.
+
+**Push Notification Value**
+You have restock alerts, personalized promotions, or time-sensitive offers where push notifications drive sales.
+
+**Premium Positioning**
+Luxury and premium brands where an app enhances brand perception and provides elevated experience.
+
+### Apps May Not Make Sense If:
+
+- Low repeat purchase rate (one-time purchases)
+- Revenue under $1M annually
+- Limited mobile traffic (<60%)
+- Customers unlikely to download app
+- Budget under $40K
+
+
+============================================================
+WHAT WE BUILD
+============================================================
+
+## Mobile App Development Services
+
+### Standard E-Commerce App
+**$40,000-70,000**
+
+Full-featured native app for iOS and Android.
+
+**Core Features:**
+- Product browsing and search
+- Product filtering and sorting
+- Shopping cart
+- Secure checkout
+- Customer accounts
+- Order tracking
+- Wishlist
+- Push notifications
+- Payment integration (Apple Pay, Google Pay)
+- Analytics integration
+
+**Design:**
+- Custom UI matching your brand
+- Mobile-first UX
+- Smooth animations
+- Native performance
+
+**Timeline:** 4-6 months
+
+**Best For:** Mid-market brands ($1-10M revenue) wanting standard app functionality
+
+---
+
+### Premium E-Commerce App
+**$70,000-120,000**
+
+Everything in Standard, plus advanced features.
+
+**Additional Features:**
+- AR product visualization
+- Barcode scanning
+- Loyalty program integration
+- Subscription management
+- Social features (sharing, reviews)
+- Advanced personalization
+- Offline browsing
+- Apple Watch integration
+- In-app customer service
+- Video content integration
+
+**Timeline:** 6-8 months
+
+**Best For:** Premium brands ($10-50M revenue) wanting elevated mobile experience
+
+---
+
+### Enterprise Mobile App
+**$120,000-250,000+**
+
+Complete mobile commerce platform with custom features.
+
+**Enterprise Features:**
+- Multi-store/multi-brand support
+- B2B and B2C in one app
+- Advanced inventory management
+- Custom integrations (ERP, CRM, WMS)
+- White-label capabilities
+- Advanced analytics
+- A/B testing infrastructure
+- Localization for multiple markets
+
+**Timeline:** 8-12 months
+
+**Best For:** Enterprise brands ($50M+ revenue) or multi-brand portfolios
+
+---
+
+### App Maintenance & Updates
+**$3,000-8,000/month**
+
+Ongoing maintenance after launch.
+
+**Includes:**
+- Bug fixes
+- OS updates (iOS/Android)
+- Feature enhancements
+- Performance optimization
+- Security updates
+- App Store management
+
+**Timeline:** Ongoing retainer
+
+
+============================================================
+NATIVE vs HYBRID APPS
+============================================================
+
+## Why We Build Native Apps
+
+**Native Apps (Our Approach)**
+- Built specifically for iOS (Swift) and Android (Kotlin)
+- Best performance
+- Full access to device features
+- Best UX
+- More expensive initially
+
+**Hybrid Apps (Flutter/React Native)**
+- Single codebase for both platforms
+- Good performance (but not native-level)
+- Some device feature limitations
+- Lower cost
+- Faster development
+
+**Our Recommendation:** For e-commerce, native apps provide the premium experience that converts. The investment difference is worth it for serious brands.
+
+
+============================================================
+OUR PROCESS
+============================================================
+
+## How We Build Your Mobile App
+
+### Phase 1: Discovery & Planning (3-4 weeks)
+
+**Requirements Workshop**
+- Define app features and functionality
+- Understand target audience
+- Review Shopify store integration needs
+- Define success metrics
+- Competitive analysis
+
+**Technical Planning**
+- System architecture design
+- API integration planning
+- Payment gateway setup
+- Analytics strategy
+- Performance requirements
+
+**Deliverable:** Technical specification, project timeline
+
+### Phase 2: UX/UI Design (4-6 weeks)
+
+**User Experience Design**
+- User flow mapping
+- Wireframes
+- Interaction design
+- Onboarding flow
+- Navigation structure
+
+**User Interface Design**
+- Brand-aligned visual design
+- Mobile design system
+- Icon design
+- Animation design
+- Prototype creation
+
+**Deliverable:** Complete designs, interactive prototype
+
+### Phase 3: Development (12-20 weeks)
+
+**iOS Development**
+- Native Swift development
+- iOS-specific features
+- Apple Pay integration
+- App Store preparation
+
+**Android Development**
+- Native Kotlin development
+- Android-specific features
+- Google Pay integration
+- Google Play preparation
+
+**Backend Development**
+- Shopify API integration
+- Custom backend (if needed)
+- Push notification infrastructure
+- Analytics implementation
+
+**Deliverable:** Fully functional mobile apps
+
+### Phase 4: Testing (4-6 weeks)
+
+**Quality Assurance**
+- Functionality testing
+- Device testing (20+ devices)
+- Performance testing
+- Security testing
+- User acceptance testing
+
+**Deliverable:** Tested, production-ready apps
+
+### Phase 5: Launch (2-3 weeks)
+
+**App Store Submission**
+- App Store optimization
+- Screenshots and videos
+- Store listings
+- Submission and review
+- Launch coordination
+
+**Post-Launch**
+- Monitoring
+- Quick fixes
+- User feedback collection
+- Performance optimization
+
+**Deliverable:** Live apps on App Store and Google Play
+
+
+============================================================
+KEY FEATURES
+============================================================
+
+## What Makes Great Shopping Apps
+
+**Fast Performance**
+Native apps load instantly. Product pages in <0.5s, smooth scrolling, no lag.
+
+**Push Notifications**
+Abandoned cart reminders, back-in-stock alerts, personalized promotions, order updates.
+
+**Seamless Checkout**
+One-tap checkout with saved payment info, Apple Pay/Google Pay, biometric authentication.
+
+**Offline Browsing**
+Browse products without connection, cache product data, sync when online.
+
+**Personalization**
+Product recommendations, personalized home feed, recent views, based on behavior.
+
+**Social Proof**
+Reviews, ratings, customer photos, social sharing, influencer content.
+
+
+============================================================
+INVESTMENT
+============================================================
+
+## Mobile App Pricing
+
+### Standard E-Commerce App
+**$40,000-70,000**
+- iOS and Android
+- Core shopping features
+- Custom design
+- Timeline: 4-6 months
+
+### Premium E-Commerce App
+**$70,000-120,000**
+- Everything in Standard
+- Advanced features
+- AR/enhanced features
+- Timeline: 6-8 months
+
+### Enterprise App
+**$120,000-250,000+**
+- Complex integrations
+- Multi-store support
+- Custom backend
+- Timeline: 8-12 months
+
+### Ongoing Maintenance
+**$3,000-8,000/month**
+- Updates and bug fixes
+- Feature additions
+- Performance monitoring
+
+### App Store Costs (Separate)
+- Apple Developer: $99/year
+- Google Play: $25 one-time
+- No additional fees
+
+
+============================================================
+CASE STUDY
+============================================================
+
+## Real Results: Beauty Brand Mobile App
+
+A subscription beauty brand with 60K customers launched a mobile app to improve mobile conversion and retention.
+
+### Key App Features
+- Easy subscription management
+- Personalized product recommendations
+- AR makeup try-on
+- Push notifications for shipments
+- Loyalty points in-app
+- One-tap reordering
+
+### Results After 6 Months
+- 12,000 app downloads (20% of customer base)
+- App users conversion: 8.2% vs. 2.1% mobile web (+290%)
+- App users AOV: $78 vs. $52 mobile web (+50%)
+- App users repeat purchase: 45% higher
+- Push notification open rate: 42%
+- 28% of revenue from app users (despite only 12% of customers)
+
+**ROI:** $85K investment. $45K additional monthly revenue from app
+
+[Read Full Case Study →]
+
+
+============================================================
+FAQ
+============================================================
+
+**How long does app development take?**
+Standard apps: 4-6 months. Premium apps: 6-8 months. Enterprise: 8-12 months. Timeline depends on complexity.
+
+**Why so expensive?**
+Native app development requires building separately for iOS and Android. Design, development, testing, and App Store management all require specialized expertise.
+
+**Can we launch with just iOS first?**
+Yes. Many clients launch iOS first (60% of revenue typically), then Android. Reduces initial cost.
+
+**What about React Native or Flutter?**
+We can build hybrid apps for $30-50K, but native apps provide better performance and UX for e-commerce.
+
+**Do we need to pay Apple and Google?**
+Yes. Apple charges $99/year for Developer account. Google charges $25 one-time fee.
+
+**What happens after launch?**
+Apps require ongoing maintenance for OS updates, bug fixes, and features. Most clients opt for monthly retainers.
+
+**How do we market the app?**
+We provide in-store prompts, email campaigns, and App Store optimization. Marketing strategy included in launch plan.
+
+**Can the app work without internet?**
+Yes. We can enable offline product browsing with cached data. Checkout requires internet connection.
+
+
+============================================================
+NEXT STEPS
+============================================================
+
+## Ready to Build Your Mobile App?
+
+Let's discuss your mobile strategy and design the right app for your brand.
+
+### 1. Schedule an App Strategy Call
+
+60-minute consultation where we:
+- Discuss your mobile opportunity
+- Review features needed
+- Assess technical requirements
+- Provide timeline estimate
+- Give cost estimate
+
+[Schedule Strategy Call →]
+
+### 2. View App Portfolio
+
+See mobile apps we've built:
+- E-commerce apps
+- Feature demonstrations
+- Performance metrics
+- Customer feedback
+
+[View App Portfolio →]
+
+### 3. Download App Planning Guide
+
+Free resource:
+- App vs. mobile web decision guide
+- Feature prioritization worksheet
+- Budget planning template
+- Timeline expectations
+
+[Download Guide →]
+
+
+============================================================
+CONTACT
+============================================================
+
+**Email:** hello@scalefront.io
+**Schedule Call:** [Calendly Link]
+
+---
+
+Serving D2C brands worldwide | Founded by developers who care about craft

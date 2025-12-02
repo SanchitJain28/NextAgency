@@ -1,0 +1,410 @@
+============================================================
+SCALEFRONT SERVICE PAGE - THEME CUSTOMIZATION
+============================================================
+
+SEO META TITLE: Shopify Theme Customization Services | Scalefront
+SEO META DESCRIPTION: Custom Shopify theme development and modifications. Premium themes tailored to your brand. Starting $12K.
+PRIMARY KEYWORDS: Shopify theme customization, custom Shopify theme, Shopify theme development
+URL: scalefront.io/services/theme-customization
+
+============================================================
+HERO SECTION
+============================================================
+
+# Shopify Theme Customization
+
+Make your Shopify store uniquely yours. Custom themes that match your brand perfectly.
+
+Pre-built themes are a starting point, not the finish line. Whether you need extensive modifications to an existing theme or a completely custom theme from scratch, we build Shopify themes that feel premium and perform beautifully.
+
+[Schedule a Consultation] [View Theme Examples]
+
+**Trusted by brands that refuse to look like everyone else**
+
+
+============================================================
+WHO THIS IS FOR
+============================================================
+
+## Do You Need Theme Customization?
+
+### You Should Get Theme Customization If:
+
+**Your Theme Feels Generic**
+Every brand using the same theme looks similar. Custom modifications make your store distinctive and aligned with your brand identity.
+
+**You Need Features Your Theme Doesn't Have**
+Want custom product displays, unique filtering, specialized cart functionality, or features your theme doesn't support natively?
+
+**Your Brand Has Specific Design Requirements**
+Premium brands need premium design. Off-the-shelf themes can't always match sophisticated brand guidelines.
+
+**You're Launching a New Store**
+Starting fresh? A custom theme ensures your store launches with exactly the features and design you need.
+
+**Your Current Theme Is Slow or Buggy**
+Legacy themes with bloated code, poor performance, or constant bugs need replacement or major refactoring.
+
+### Theme Customization vs. Headless
+
+- **Theme Customization:** $12-60K, faster to market, easier to maintain
+- **Headless Commerce:** $50-200K, complete creative freedom, requires technical resources
+
+If you need unique design but don't need complete creative control, theme customization is more cost-effective.
+
+
+============================================================
+WHAT WE OFFER
+============================================================
+
+## Theme Customization Services
+
+### Option 1: Premium Theme Customization
+**$12,000-35,000**
+
+Start with a premium theme (Dawn, Empire, Impulse, etc.) and customize extensively.
+
+**What We Do:**
+- Brand-specific design modifications
+- Custom section development
+- Advanced functionality additions
+- Mobile optimization
+- Performance optimization
+- Custom product page layouts
+- Unique collection pages
+- Custom cart and checkout styling
+- Integration with your apps
+
+**Timeline:** 4-8 weeks
+
+**Best For:** Brands that like a premium theme's structure but need brand-specific design and features
+
+**Example:** Took the Dawn theme for a skincare brand, customized color schemes, typography, product page layout, added custom ingredient sections, before/after photo galleries, and subscription options. Result: unique store at 1/3 the cost of custom theme.
+
+### Option 2: Custom Theme from Scratch
+**$35,000-80,000**
+
+Build a completely custom theme designed specifically for your brand and requirements.
+
+**What We Do:**
+- Custom design system
+- Bespoke component library
+- Unique page layouts
+- Advanced functionality
+- Performance-optimized code
+- Mobile-first responsive design
+- Theme settings for easy management
+- Complete theme documentation
+
+**Timeline:** 10-14 weeks
+
+**Best For:** Brands with unique requirements that existing themes can't accommodate, even with modifications
+
+**Example:** Built a custom theme for a luxury jewelry brand with custom 360° product viewers, appointment booking integration, virtual try-on for rings, and editorial lookbook sections. Unique experience that no pre-built theme could provide.
+
+### Option 3: Theme Rebuild/Migration
+**$15,000-45,000**
+
+Migrate from an old theme to a new foundation while preserving customizations.
+
+**What We Do:**
+- Audit current theme and features
+- Select or build new theme foundation
+- Migrate all custom features
+- Improve performance and code quality
+- Update deprecated code
+- Mobile optimization
+- Training on new theme
+
+**Timeline:** 6-10 weeks
+
+**Best For:** Brands with outdated themes experiencing performance issues, security concerns, or compatibility problems
+
+**Example:** Migrated a fashion brand from a 5-year-old custom theme to a modern foundation. Preserved all custom features, improved performance (4.2s → 1.8s load time), fixed mobile issues, added new functionality.
+
+
+============================================================
+OUR CAPABILITIES
+============================================================
+
+## What We Can Customize
+
+**Design & Branding**
+- Custom color schemes and typography
+- Brand-specific layouts
+- Custom animations and interactions
+- Unique visual elements
+- Icon design and implementation
+
+**Product Pages**
+- Custom product layouts
+- Size guides and fit finders
+- 360° product viewers
+- Video integration
+- Before/after galleries
+- Ingredient or material showcases
+- Custom variant selectors
+- Product recommendations sections
+
+**Collection Pages**
+- Advanced filtering and sorting
+- Custom grid layouts
+- Quick view functionality
+- Infinite scroll or pagination
+- Category-specific layouts
+
+**Homepage**
+- Hero sections with video/animation
+- Featured collections
+- Social proof sections
+- Editorial content blocks
+- Custom sliders and carousels
+
+**Cart & Checkout**
+- Cart drawer customization
+- Cart upsells and recommendations
+- Progress indicators
+- Trust badges
+- Custom checkout fields (Plus only)
+
+**Navigation**
+- Mega menus
+- Sticky headers
+- Mobile navigation
+- Breadcrumbs
+- Search functionality
+
+**Technical Enhancements**
+- Performance optimization
+- SEO improvements
+- Accessibility (WCAG 2.1)
+- Third-party integrations
+- Custom Liquid logic
+
+
+============================================================
+OUR PROCESS
+============================================================
+
+## How We Customize Your Theme
+
+### Phase 1: Discovery & Planning (1 week)
+
+- Understand brand identity and goals
+- Audit current theme (if applicable)
+- Define customization requirements
+- Review inspiration and competitors
+- Select theme foundation (if applicable)
+- Create detailed specification
+
+### Phase 2: Design (2-3 weeks)
+
+- Design mockups for key pages
+- Define design system (colors, typography, spacing)
+- Create interactive prototype
+- Revision rounds with your feedback
+- Finalize design assets
+
+### Phase 3: Development (4-8 weeks)
+
+- Set up theme development environment
+- Build custom sections and components
+- Implement design system
+- Develop custom functionality
+- Mobile optimization
+- Performance optimization
+- Cross-browser testing
+
+### Phase 4: Content & Testing (1-2 weeks)
+
+- Content migration (if applicable)
+- Comprehensive testing
+- Mobile device testing
+- Performance testing
+- Accessibility audit
+- User acceptance testing
+
+### Phase 5: Launch & Support (1 week)
+
+- Pre-launch checklist
+- DNS and deployment
+- Post-launch monitoring
+- Team training
+- 30 days support
+
+
+============================================================
+INVESTMENT
+============================================================
+
+## Theme Customization Pricing
+
+### Minor Modifications
+**$3,000-8,000**
+
+- Small design tweaks
+- Add a few custom sections
+- Styling adjustments
+- Basic functionality additions
+- Performance optimization
+
+Timeline: 1-2 weeks
+
+### Premium Theme Customization
+**$12,000-35,000**
+
+- Extensive design modifications
+- Multiple custom sections
+- Advanced functionality
+- Complete mobile optimization
+- Performance optimization
+- App integrations
+
+Timeline: 4-8 weeks
+
+### Custom Theme Development
+**$35,000-80,000**
+
+- Complete custom theme
+- Bespoke design system
+- Advanced features
+- Performance-optimized
+- Full documentation
+- Extended support
+
+Timeline: 10-14 weeks
+
+### Theme Rebuild/Migration
+**$15,000-45,000**
+
+- Theme migration
+- Feature preservation
+- Code modernization
+- Performance improvements
+- Mobile optimization
+
+Timeline: 6-10 weeks
+
+### Ongoing Maintenance
+**$500-2,000/month**
+
+- Bug fixes
+- Minor updates
+- Shopify compatibility
+- Performance monitoring
+
+
+============================================================
+CASE STUDY
+============================================================
+
+## Real Results: Skincare Brand Theme Customization
+
+A premium skincare brand was using a standard theme that didn't communicate their luxury positioning.
+
+### The Challenge
+- Generic theme didn't match premium brand
+- Product pages lacked ingredient education
+- No before/after photo showcase
+- Mobile experience felt cheap
+- Site speed: 5.2 seconds
+
+### The Solution
+Customized the Impulse theme with:
+- Custom typography and color palette
+- Ingredient spotlight sections
+- Before/after photo galleries
+- Customer routine builder
+- Optimized images and code
+- Refined mobile experience
+
+### The Results
+- Conversion rate: 1.9% → 3.1% (+63%)
+- Average order value: +18%
+- Time on site: +52%
+- Page load time: 5.2s → 1.9s
+- Mobile conversion: +71%
+- Customer feedback: "Finally looks like a luxury brand"
+
+**ROI:** $28K investment. Revenue increased $42K/month
+
+[Read Full Case Study →]
+
+
+============================================================
+FAQ
+============================================================
+
+**How long does theme customization take?**
+Minor modifications: 1-2 weeks. Premium customization: 4-8 weeks. Custom theme: 10-14 weeks. Timeline depends on complexity.
+
+**Can you customize any theme?**
+Yes, though some themes are easier to work with than others. We'll advise if your current theme is suitable for customization.
+
+**Will my customizations break when the theme updates?**
+We code customizations properly so theme updates don't break them. We provide documentation for future developers.
+
+**Can you make my theme look like [competitor]?**
+We can create similar layouts and features, but we don't copy designs. We'll create something unique that achieves the same goals.
+
+**What if I want changes after launch?**
+We include 30 days post-launch support. After that, changes can be handled on hourly basis or retainer.
+
+**Can my team edit the customized theme?**
+Yes. We use Shopify's section system so your team can manage content without code. We provide training and documentation.
+
+**Will customizations slow down my site?**
+Not if done correctly. We optimize all code and actually often improve performance during customization.
+
+**Do you work with theme builders like Shogun or PageFly?**
+We prefer native Shopify themes for performance and maintainability, but can work with page builders if needed.
+
+
+============================================================
+NEXT STEPS
+============================================================
+
+## Ready to Customize Your Theme?
+
+Let's discuss your brand vision and how we can bring it to life.
+
+### 1. Schedule a Theme Consultation
+
+30-minute call where we:
+- Review your current theme or requirements
+- Discuss customization needs
+- Assess timeline and feasibility
+- Provide cost estimate
+- Answer your questions
+
+[Schedule Consultation →]
+
+### 2. View Our Theme Work
+
+See themes we've customized:
+- Before/after examples
+- Custom features showcase
+- Performance improvements
+
+[View Theme Portfolio →]
+
+### 3. Get Our Theme Guide
+
+Free resource:
+- "Customization vs. Custom Theme: Decision Guide"
+- Theme selection checklist
+- Customization ideas by industry
+
+[Download Theme Guide →]
+
+
+============================================================
+CONTACT
+============================================================
+
+**Email:** hello@scalefront.io
+**Schedule Call:** [Calendly Link]
+
+---
+
+Serving D2C brands worldwide | Founded by developers who care about craft

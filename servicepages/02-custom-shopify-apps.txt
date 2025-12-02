@@ -1,0 +1,472 @@
+============================================================
+SCALEFRONT SERVICE PAGE - CUSTOM SHOPIFY APPS
+============================================================
+
+SEO META TITLE: Custom Shopify App Development Services | Scalefront
+SEO META DESCRIPTION: Build custom Shopify apps for unique business logic, integrations, and workflows. Public & private apps. Starting $20K.
+PRIMARY KEYWORDS: custom Shopify app development, Shopify app development, private Shopify app, custom Shopify integration
+URL: scalefront.io/services/custom-shopify-apps
+
+============================================================
+HERO SECTION
+============================================================
+
+# Custom Shopify App Development
+
+Build the exact functionality your business needs. No compromises. No workarounds. No monthly app fees.
+
+When existing Shopify apps don't solve your problem—or cost $500/month for features you barely use—a custom app might be your answer.
+
+We build private apps for your store's unique workflows and public apps for the Shopify App Store.
+
+[Schedule a Consultation] [View Our Apps]
+
+**Trusted by brands tired of app subscriptions and limitations**
+
+
+============================================================
+WHO THIS IS FOR
+============================================================
+
+## Should You Build a Custom Shopify App?
+
+Custom apps aren't always the answer. Here's when they make sense.
+
+### You Should Build a Custom App If:
+
+**You're Spending $500+/Month on Apps**
+If you're paying multiple apps for overlapping features or paying for features you don't use, a custom app can pay for itself in 18-24 months.
+
+**Existing Apps Don't Solve Your Problem**
+You've tested 10+ apps and none do what you need. You're forced to use workarounds or manual processes that waste hours every week.
+
+**You Need Complex Integrations**
+Connect Shopify to your ERP, WMS, custom CRM, or proprietary systems. Existing integration apps are too rigid or don't support your specific workflow.
+
+**Your Business Logic Is Unique**
+Custom pricing rules, complex inventory allocation, specialized fulfillment workflows, unique customer segmentation—logic that no generic app can handle.
+
+**You Want to Own the Code**
+No more worrying about apps shutting down, raising prices, or changing features. You own the codebase and control your destiny.
+
+**You Hit App Limitations**
+Performance bottlenecks, feature restrictions, or apps breaking with theme updates. Custom apps give you complete control.
+
+### You Should Use Existing Apps If:
+
+- Commodity functionality (email marketing, reviews, live chat)
+- You need features quickly (custom apps take 2-4 months)
+- Your budget is under $15K
+- The app ecosystem has mature, reliable solutions
+- You don't have technical resources for maintenance
+
+
+============================================================
+WHAT WE BUILD
+============================================================
+
+## Custom App Categories
+
+### Integration Apps
+
+**Connect Shopify to Your Business Systems**
+
+- **ERP Integration:** Sync products, inventory, orders, and customers between Shopify and SAP, Oracle, Microsoft Dynamics, or custom ERPs
+- **WMS Integration:** Real-time inventory updates, automated fulfillment, warehouse location tracking
+- **Accounting Software:** QuickBooks, Xero, Sage integration for automated bookkeeping
+- **CRM Integration:** Salesforce, HubSpot, custom CRMs for unified customer data
+- **POS Systems:** Connect online and offline inventory and orders
+- **3PL/Fulfillment:** Custom fulfillment center integrations with specialized workflows
+
+*Example: Built a WMS integration for a D2C beauty brand managing 800+ SKUs across 3 warehouses with real-time stock sync and automated fulfillment routing. Eliminated 15 hours/week of manual order entry.*
+
+### Workflow Automation Apps
+
+**Automate Repetitive Tasks and Complex Business Logic**
+
+- **Order Processing:** Automated fraud checks, custom order routing, specialized tagging and fulfillment rules
+- **Inventory Management:** Multi-warehouse allocation, safety stock alerts, automated restocking workflows
+- **Customer Management:** Automated tagging, segmentation, VIP customer workflows
+- **Pricing Automation:** Dynamic pricing, customer-specific pricing, volume discounts, complex promotional logic
+- **Product Management:** Automated product creation, bulk updates, scheduled publishing
+
+*Example: Built an automated B2B pricing app for a distributor with customer-specific pricing, volume tiers, and contract-based discounts. Handles 200+ customers with unique pricing.*
+
+### Customer Experience Apps
+
+**Unique Frontend Features and Interactions**
+
+- **Product Configurators:** Customizable products with real-time pricing and visual preview
+- **Advanced Search and Filters:** Faceted search, AI-powered recommendations, custom filtering logic
+- **Pre-Order Management:** Take pre-orders with deposits, automated fulfillment when stock arrives
+- **Subscription Logic:** Custom subscription workflows beyond what Recharge/Bold offer
+- **Personalization:** Product recommendations based on custom logic, personalized content
+
+*Example: Built a 3D furniture configurator allowing customers to customize fabric, wood finish, and dimensions with real-time pricing. Increased AOV by 41%.*
+
+### Analytics and Reporting Apps
+
+**Business Intelligence Custom to Your Needs**
+
+- **Custom Dashboards:** KPIs specific to your business model
+- **Advanced Reporting:** Multi-store analytics, custom cohort analysis, attribution modeling
+- **Data Export and Sync:** Automated data pipelines to your analytics warehouse
+- **Profit Analysis:** Real profit tracking including COGS, shipping, discounts, returns
+
+*Example: Built a profit dashboard for an 8-brand D2C portfolio showing real-time profit by brand, product, channel, and customer segment. Replaced 3 apps costing $1,200/month.*
+
+### Public Apps for App Store
+
+**Build Apps for Other Shopify Merchants**
+
+- Complete app development from concept to App Store listing
+- Monetization strategy and pricing model design
+- App Store optimization for discoverability
+- Ongoing maintenance and feature development
+- Customer support infrastructure setup
+
+*Example: Built our own AI product recommendations app (Solid AI Related Products) generating automatic product matches. Now serving 100+ stores.*
+
+
+============================================================
+OUR DEVELOPMENT PROCESS
+============================================================
+
+## How We Build Your Custom App
+
+### Phase 1: Discovery & Requirements (1-2 weeks)
+
+**Detailed Requirements Workshop**
+- Deep dive into your business process
+- Document current pain points and workarounds
+- Define success criteria and KPIs
+- Map data flow and integrations needed
+- Identify edge cases and error scenarios
+
+**Technical Feasibility Analysis**
+- Assess Shopify API capabilities and limitations
+- Review third-party system APIs
+- Identify technical risks
+- Recommend architecture approach
+
+**Project Scoping**
+- Define MVP scope vs. future enhancements
+- Create detailed functional specification
+- Establish timeline and milestones
+- Define testing and acceptance criteria
+
+**Deliverable:** Functional specification document, project timeline, fixed-price quote
+
+### Phase 2: Design & Architecture (1-2 weeks)
+
+**Technical Architecture**
+- Database schema design
+- API integration design
+- Authentication and security planning
+- Performance and scaling considerations
+- Error handling and logging strategy
+
+**User Interface Design** (if applicable)
+- Admin interface mockups
+- Customer-facing components (if applicable)
+- Mobile responsiveness
+- User flow diagrams
+
+**Deliverable:** Technical architecture document, UI mockups, data models
+
+### Phase 3: Development (6-10 weeks)
+
+**Week 1-2: Foundation**
+- App infrastructure setup
+- Authentication (OAuth) implementation
+- Database setup
+- Admin UI scaffolding
+
+**Week 3-6: Core Functionality**
+- Shopify API integration
+- Business logic implementation
+- Third-party integrations
+- Background job processing
+
+**Week 7-8: Admin Interface**
+- Configuration screens
+- Management dashboards
+- Settings and preferences
+- User documentation
+
+**Week 9-10: Testing & Refinement**
+- Functionality testing
+- Edge case handling
+- Performance optimization
+- Security audit
+
+**Deliverable:** Fully functional app
+
+### Phase 4: Testing & Launch (2-3 weeks)
+
+**Week 1: Staging Testing**
+- Install on staging store
+- Test all workflows end-to-end
+- Performance testing under load
+- User acceptance testing
+
+**Week 2: Production Setup**
+- Production environment setup
+- Data migration (if needed)
+- Install on production store
+- Team training
+
+**Week 3: Monitoring & Support**
+- Monitor performance and errors
+- Quick fixes for any issues
+- Fine-tuning based on real usage
+
+**Deliverable:** Live app, documentation, training
+
+### Phase 5: Ongoing Support (Optional)
+
+**Maintenance Retainer**
+- Bug fixes and updates
+- Shopify API compatibility
+- Feature enhancements
+- Performance monitoring
+
+**Monthly Support Options:**
+- Essential: $1,000/month
+- Standard: $2,000/month
+- Premium: $4,000/month
+
+
+============================================================
+INVESTMENT
+============================================================
+
+## Custom App Pricing
+
+Pricing varies significantly based on complexity. Here's transparent pricing based on app types.
+
+### Simple Private App
+**$20,000-40,000**
+
+Typical scope:
+- Single integration (e.g., ERP sync)
+- Basic admin interface
+- Automated data sync
+- Simple business logic
+- Error handling and logging
+- Documentation
+
+Timeline: 2-3 months
+
+Examples:
+- Inventory sync with accounting software
+- Automated order tagging based on rules
+- Simple product data import/export
+- Customer data integration with CRM
+
+### Medium Complexity App
+**$40,000-80,000**
+
+Typical scope:
+- Multiple integrations
+- Complex business logic
+- Custom admin dashboards
+- Real-time processing
+- Advanced error handling
+- Customer-facing components (optional)
+
+Timeline: 3-4 months
+
+Examples:
+- B2B customer portal with custom pricing
+- Multi-warehouse inventory management
+- Advanced order routing and fulfillment
+- Product configurator with pricing logic
+- Custom analytics dashboard
+
+### Complex Enterprise App
+**$80,000-150,000+**
+
+Typical scope:
+- Multi-system integrations
+- Complex data transformations
+- Advanced admin interface
+- High-performance requirements
+- Extensive testing and QA
+- White-glove development
+
+Timeline: 4-6 months
+
+Examples:
+- Full ERP integration with bidirectional sync
+- Multi-store management platform
+- AI-powered recommendation engine
+- Custom subscription platform
+- Complex manufacturing workflow
+
+### Public App for App Store
+**$30,000-100,000**
+
+Includes:
+- App development
+- App Store listing optimization
+- Billing integration (Shopify Billing API)
+- Admin UI with Polaris
+- Customer onboarding flow
+- Documentation and help center
+- Initial marketing assets
+
+Ongoing: Revenue sharing or monthly retainer for maintenance
+
+### What's Included in All Packages
+
+- Complete source code ownership
+- Technical documentation
+- Admin user guide
+- Installation and setup
+- 30 days post-launch support
+- Basic maintenance guide
+
+### What's NOT Included
+
+- Monthly hosting costs (typically $200-500/month)
+- Third-party API costs (if applicable)
+- Shopify Partner/Plus plan fees
+- Extended support beyond 30 days (available as retainer)
+- Major feature additions post-launch
+
+
+============================================================
+CASE STUDY
+============================================================
+
+## Real Results: Furniture Retailer Custom App
+
+A made-to-order furniture brand was spending $900/month on 4 different apps (product customizer, custom pricing, inventory management, and fulfillment) but still needed 8+ hours of manual work weekly.
+
+### The Challenge
+- Multiple apps with overlapping features
+- Manual order processing for custom furniture
+- Complex pricing based on materials, dimensions, and finishing
+- No way to track production status
+- Orders getting stuck between apps
+- Apps kept breaking with theme updates
+
+### The Solution
+Built a single custom app that:
+- Allows customers to configure furniture (wood, fabric, dimensions)
+- Calculates pricing automatically based on materials and labor
+- Integrates with their manufacturing system
+- Tracks order through production stages
+- Sends automated updates to customers
+
+### The Results
+- Eliminated $900/month in app fees ($10,800 annual savings)
+- Saved 8 hours/week of manual work (~$15,000 annual labor savings)
+- Configuration errors reduced from 15%+ to <1%
+- Average order value increased 28% (better upsells during configuration)
+- Customer satisfaction improved (real-time production updates)
+
+**Total annual benefit:** $25,800 in savings + increased revenue
+
+**ROI:** App paid for itself in 8 months
+
+*"We should have built this 2 years ago. The app subscriptions were bleeding us dry, and we still had manual work. Now everything's automated."* - Operations Manager
+
+[Read Full Case Study →]
+
+
+============================================================
+FAQ
+============================================================
+
+## Frequently Asked Questions
+
+**How long does it take to build a custom app?**
+Simple apps: 2-3 months. Medium complexity: 3-4 months. Complex apps: 4-6 months. Timeline depends on scope, integrations, and your responsiveness during the project.
+
+**Do I own the code?**
+Yes, completely. You receive all source code, documentation, and deployment instructions. You can host it yourself, hire another developer to maintain it, or work with us ongoing.
+
+**What if the app breaks?**
+We include 30 days post-launch support for bug fixes. After that, you can hire us on retainer ($1-4K/month) or handle maintenance yourself. We document everything clearly.
+
+**Can you maintain apps built by other developers?**
+Often yes, if the code is well-documented. We'll review the codebase first to assess if we can work with it effectively.
+
+**How much does hosting cost?**
+Typically $200-500/month depending on traffic and database usage. We can deploy to Vercel, Railway, AWS, or your preferred platform.
+
+**What happens if Shopify changes their API?**
+Shopify API changes are rare and usually backward-compatible. If breaking changes occur, we can update your app. This is why many clients opt for maintenance retainers.
+
+**Can you integrate with any third-party system?**
+If it has an API, we can integrate with it. If no API exists, we can often scrape data or find workarounds, though this is less reliable.
+
+**Do you sign NDAs?**
+Yes, we're happy to sign mutual NDAs before discussing your specific business logic and requirements.
+
+**What if we want to add features later?**
+Easy. We can add features on a project basis or through ongoing retainer. Clean code means features are addable without rebuilding from scratch.
+
+**Can you help us decide between custom vs. existing apps?**
+Absolutely. We'll honestly tell you if existing apps are a better solution. We've turned down projects where apps made more sense.
+
+
+============================================================
+NEXT STEPS
+============================================================
+
+## Ready to Build Your Custom App?
+
+Custom apps are significant investments. Let's make sure it's the right solution for your business.
+
+### 1. Schedule a Discovery Call
+
+45-minute consultation where we:
+- Understand your workflow and pain points
+- Discuss existing apps you've tried
+- Assess technical feasibility
+- Provide honest guidance on custom vs. existing apps
+- Give ballpark timeline and cost estimates
+
+**No obligation. Honest advice.**
+
+[Schedule Discovery Call →]
+
+### 2. Review Our App Portfolio
+
+See custom apps we've built:
+- Integration apps (ERP, WMS, CRM)
+- Workflow automation examples
+- Custom configurators
+- Analytics dashboards
+
+[View App Portfolio →]
+
+### 3. Read Our App Development Content
+
+Learn more before talking:
+- "When to Build a Custom Shopify App" (blog)
+- "Custom App vs. Existing Apps: Decision Framework" (blog)
+- "Shopify App Development Guide" (resource)
+
+[Explore Resources →]
+
+
+============================================================
+CONTACT CTA
+============================================================
+
+## Let's Discuss Your Custom App
+
+Whether you're certain you need a custom app or still evaluating, we're here to provide honest guidance.
+
+**Email:** hello@scalefront.io
+**Schedule Call:** [Calendly Link]
+
+**Response Time:** We respond to all inquiries within 24 hours (usually faster)
+
+---
+
+Serving D2C brands worldwide | Founded by developers who care about craft

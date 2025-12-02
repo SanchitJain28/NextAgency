@@ -1,0 +1,467 @@
+============================================================
+SCALEFRONT SERVICE PAGE - HEADLESS COMMERCE
+============================================================
+
+SEO META TITLE: Headless Shopify Development Services | Scalefront
+SEO META DESCRIPTION: Build lightning-fast headless Shopify stores with Next.js, React, and custom frontends. Premium UX, enterprise performance. Starting $50K.
+PRIMARY KEYWORDS: headless Shopify development, headless commerce, Shopify headless architecture, Next.js Shopify
+URL: scalefront.io/services/headless-commerce
+
+============================================================
+HERO SECTION
+============================================================
+
+# Headless Shopify Development
+
+Break free from theme limitations. Build the premium digital experience your brand deserves.
+
+Headless commerce separates your storefront (what customers see) from your backend (Shopify's commerce engine). This gives you complete creative freedom while keeping Shopify's operational reliability.
+
+Build editorial experiences. Create unique interactions. Deliver sub-second page loads. All while Shopify handles products, checkout, and orders.
+
+[Schedule a Consultation] [View Our Work]
+
+**Trusted by D2C brands doing $5M+ annually**
+
+
+============================================================
+WHO THIS IS FOR
+============================================================
+
+## Is Headless Right for Your Brand?
+
+Headless commerce is not for everyone. It's a significant investment that makes sense in specific situations.
+
+### You Should Consider Headless If:
+
+**Your Brand Identity Demands It**
+Premium fashion, luxury goods, design-led brands—if your brand positioning requires a distinctive digital experience that themes cannot deliver, headless is the answer.
+
+**Visual Storytelling Is Your Competitive Edge**
+Editorial layouts, lookbook experiences, scroll-based narratives, immersive product presentations—these require custom frontend development.
+
+**You're Scaling Beyond $5M Annual Revenue**
+The investment in headless ($50-150K+) requires sufficient revenue to justify the cost. Below $5M annually, optimize your existing theme instead.
+
+**Mobile Experience Is Critical**
+If 80%+ of your traffic is mobile and you need app-like performance, headless delivers sub-second page transitions that themes cannot match.
+
+**You Need Advanced Integrations**
+Complex personalization, AR/VR experiences, custom configurators, ERP integrations—headless provides the flexibility to build these seamlessly.
+
+### You Should Wait If:
+
+- You're still finding product-market fit
+- Your revenue is under $5M annually
+- Standard theme functionality meets your needs
+- You lack technical resources for ongoing maintenance
+- Speed to market is more important than uniqueness
+
+
+============================================================
+WHAT WE DELIVER
+============================================================
+
+## Our Headless Commerce Solution
+
+We build production-ready headless storefronts that combine creative excellence with technical performance.
+
+### Technical Foundation
+
+**Frontend Framework**
+Next.js 14 with React, TypeScript, and Tailwind CSS. Server-side rendering for SEO, incremental static regeneration for performance, image optimization built-in.
+
+**Shopify Integration**
+Shopify Storefront API for products, cart, and customer data. Checkout remains on Shopify for security and payment processing. Real-time inventory sync.
+
+**Content Management**
+Sanity or Contentful for editorial content, campaign pages, and rich media. Visual editing for non-technical team members.
+
+**Performance Optimization**
+Edge caching via Vercel or Cloudflare. Image optimization with WebP/AVIF. Code splitting and lazy loading. Target: <1s page loads.
+
+**Mobile-First Design**
+Touch-optimized interactions, gesture navigation, infinite scroll, native-app-like transitions. 60fps animations on mobile devices.
+
+### What You Get
+
+**Complete Storefront**
+- Homepage with editorial flexibility
+- Collection pages with filtering and sorting
+- Product pages with dynamic layouts
+- Cart and checkout integration
+- Customer account portal
+- Search functionality
+- Multi-currency/multi-language support
+
+**Content Management System**
+- Visual page builder for marketing team
+- Editorial content management
+- Campaign page creation
+- Blog/content sections
+- Media library and DAM
+
+**Admin Dashboard**
+- Performance monitoring
+- Analytics integration (GA4, Segment)
+- A/B testing infrastructure
+- Content preview environments
+
+**Developer Handoff**
+- Complete source code and documentation
+- Deployment pipeline setup
+- Team training and knowledge transfer
+- Ongoing support plan
+
+
+============================================================
+OUR PROCESS
+============================================================
+
+## How We Build Your Headless Store
+
+### Phase 1: Discovery & Strategy (3-4 weeks)
+
+**Week 1-2: Brand & Requirements Workshop**
+- Deep dive into brand identity and vision
+- Audit existing site and identify pain points
+- Define technical requirements and integrations
+- Map customer journey and key interactions
+
+**Week 3-4: Technical Architecture**
+- Design system architecture
+- API integration planning
+- Performance benchmarks and targets
+- Content strategy and CMS setup
+
+**Deliverable:** Technical specification, project timeline, risk assessment
+
+### Phase 2: Design & Prototyping (4-6 weeks)
+
+**Design System Creation**
+- Typography, colors, spacing, components
+- Responsive breakpoints and layouts
+- Animation and interaction guidelines
+- Accessibility standards (WCAG 2.1 AA)
+
+**Key Page Designs**
+- Homepage (desktop, tablet, mobile)
+- Product page variations
+- Collection page layouts
+- Cart and account pages
+
+**Interactive Prototype**
+- Clickable prototype with real interactions
+- Mobile and desktop flows
+- Key user journeys tested
+
+**Deliverable:** Complete design system, high-fidelity designs, interactive prototype
+
+### Phase 3: Development (10-14 weeks)
+
+**Weeks 1-3: Foundation**
+- Next.js application setup
+- Design system implementation
+- Shopify API integration
+- CMS integration
+
+**Weeks 4-7: Core Pages**
+- Homepage with editorial flexibility
+- Product and collection pages
+- Cart and checkout flow
+- Search and navigation
+
+**Weeks 8-10: Advanced Features**
+- Customer accounts
+- Personalization logic
+- Third-party integrations
+- Performance optimization
+
+**Weeks 11-14: Polish & Testing**
+- Cross-browser testing
+- Mobile device testing
+- Performance optimization
+- Accessibility audit
+
+**Deliverable:** Fully functional headless storefront
+
+### Phase 4: Content Migration & Launch (3-4 weeks)
+
+**Week 1-2: Content Migration**
+- Product data migration
+- Content creation and import
+- Media optimization and upload
+- Editorial content setup
+
+**Week 3: QA & Testing**
+- Comprehensive functionality testing
+- Load testing and performance validation
+- Security audit
+- User acceptance testing
+
+**Week 4: Launch**
+- Pre-launch checklist completion
+- DNS and deployment
+- Post-launch monitoring
+- Team training
+
+**Deliverable:** Live headless store, documentation, training
+
+### Phase 5: Post-Launch Support (Ongoing)
+
+**First Month: Intensive Monitoring**
+- Daily performance checks
+- Bug fixes and adjustments
+- Analytics review
+- Optimization recommendations
+
+**Ongoing: Maintenance & Enhancement**
+- Monthly retainer options available
+- Feature additions as needed
+- Shopify API updates
+- Performance monitoring
+
+**Deliverable:** Stable, performant storefront with support
+
+
+============================================================
+INVESTMENT
+============================================================
+
+## Headless Commerce Pricing
+
+Headless is a significant investment. Here's transparent pricing based on project scope.
+
+### Standard Headless Build
+**$50,000-90,000**
+
+Includes:
+- Discovery and strategy phase
+- Complete design system
+- Next.js storefront development
+- Shopify Storefront API integration
+- CMS setup (Sanity or Contentful)
+- Product, collection, cart, checkout pages
+- Customer account portal
+- Basic search functionality
+- Mobile-responsive design
+- Performance optimization
+- Content migration
+- Launch support
+
+Timeline: 5-7 months
+
+Best for: Mid-market D2C brands ($5-25M annual revenue)
+
+### Premium Headless Build
+**$90,000-200,000**
+
+Everything in Standard, plus:
+- Advanced animations and interactions
+- Custom product configurators
+- Personalization engine integration
+- Advanced search with filters
+- Lookbook/editorial experiences
+- AR/VR integration
+- Multiple content types and templates
+- A/B testing infrastructure
+- Multi-region/multi-currency setup
+- Extended post-launch support
+
+Timeline: 6-9 months
+
+Best for: Premium brands ($25-100M annual revenue)
+
+### Enterprise Headless
+**$200,000+**
+
+Custom scope including:
+- Multi-brand/multi-store architecture
+- Advanced ERP/system integrations
+- Custom middleware and APIs
+- White-glove development process
+- Dedicated project team
+- Priority support SLA
+
+Timeline: 9-12 months
+
+Best for: Enterprise brands ($100M+ annual revenue)
+
+### Ongoing Maintenance
+
+**Essential Support: $2,000/month**
+- Bug fixes and updates
+- Shopify API compatibility
+- Performance monitoring
+- Monthly analytics review
+
+**Growth Support: $5,000/month**
+- Everything in Essential
+- Feature development (10 hours/month)
+- Conversion optimization
+- A/B testing management
+- Quarterly strategy sessions
+
+### What's NOT Included
+
+- Shopify plan fees (you pay Shopify directly)
+- Hosting costs (Vercel/Cloudflare: typically $500-1,000/month)
+- Third-party app subscriptions
+- Stock photography or custom illustration
+- Paid advertising or marketing services
+- Content writing (we can recommend partners)
+
+
+============================================================
+CASE STUDY EXCERPT
+============================================================
+
+## Real Results: Premium Fashion Brand
+
+A luxury ethnic wear brand came to us frustrated with theme limitations. They needed editorial lookbook experiences, custom product presentation, and mobile performance that matched their brand positioning.
+
+### The Challenge
+- Theme templates felt generic
+- Lookbooks were static blog posts
+- Mobile experience was adequate but not exceptional
+- 6-second average page load times
+- Editorial content difficult to manage
+
+### The Solution
+- Next.js headless storefront with custom design
+- Sanity CMS for editorial content
+- Interactive lookbooks with product hotspots
+- Scroll-triggered animations
+- Optimized for mobile-first experience
+
+### The Results
+- Page load times: 6s → 1.8s (70% improvement)
+- Mobile conversion: +34%
+- Average order value: +22%
+- Time on site: +48%
+- Pages per session: 3.2 → 5.1
+
+*"The headless rebuild transformed how customers experience our brand. We can now execute campaigns in hours, not weeks. The mobile experience feels like an app."* - Founder
+
+[Read Full Case Study →]
+
+
+============================================================
+WHY SCALEFRONT
+============================================================
+
+## Why Choose Us for Headless Development
+
+**Technical Depth**
+We're developers first. We've built headless stores handling 100K+ monthly visitors with sub-second page loads. We understand React, Next.js, and Shopify APIs deeply.
+
+**Design Excellence**
+Beautiful code means nothing if the UX is mediocre. We combine technical execution with design-led thinking. Our stores feel premium because they are.
+
+**Global Experience, Competitive Pricing**
+We work with brands across US, UK, Canada, and Europe. Competitive rates without compromising on quality. Direct communication with founders, no account managers.
+
+**Shopify Expertise**
+We've built 50+ Shopify stores and custom apps. We know Shopify's capabilities and limitations intimately. We know when to extend Shopify and when to work within it.
+
+**Transparent Process**
+No surprises. Clear milestones, regular updates, honest timelines. You'll know exactly where your project stands at all times.
+
+**Long-Term Partnership**
+We don't disappear after launch. Many clients have worked with us for 2-3+ years as their technical partners, adding features and optimizing continuously.
+
+
+============================================================
+FAQ
+============================================================
+
+## Frequently Asked Questions
+
+**How long does a headless build take?**
+Standard builds take 5-7 months from kickoff to launch. Premium builds take 6-9 months. Timeline depends on complexity, integrations, and content readiness. We provide detailed timeline during discovery.
+
+**Can I use my existing Shopify store?**
+Yes. Headless keeps your existing Shopify backend (products, orders, customers, checkout). We just rebuild the customer-facing frontend. Your Shopify admin stays the same.
+
+**What happens to my existing theme?**
+The headless frontend replaces your theme. However, Shopify checkout still uses your theme temporarily (until Checkout Extensibility is fully rolled out). We ensure visual consistency.
+
+**How much do hosting costs add?**
+Hosting a Next.js headless store on Vercel or Netlify typically costs $500-1,000/month depending on traffic. This is separate from the development cost and Shopify plan fees.
+
+**Can my team manage content after launch?**
+Yes. We set up a visual CMS (Sanity or Contentful) so your marketing team can update content, create campaign pages, and manage editorial sections without code.
+
+**Is headless harder to maintain?**
+Headless requires technical maintenance (updates, API changes, bug fixes). We offer maintenance retainers, or you can hire developers. It's more technical than theme stores but more flexible.
+
+**What about SEO?**
+Server-side rendering in Next.js means excellent SEO. Often better than theme stores because of faster load times and cleaner HTML. We implement all technical SEO best practices.
+
+**Can I add features later?**
+Yes. One advantage of headless is flexibility. Want to add AR try-on? Custom quiz? Advanced personalization? We can add features without rebuilding the entire store.
+
+**Do you offer payment plans?**
+We structure payments in milestones: 25% on signing, 25% after design approval, 25% mid-development, 25% on launch. Custom payment schedules possible for enterprise clients.
+
+**What if I'm not happy with the design?**
+We include revision rounds at each phase. If designs don't meet expectations, we revise until they do. We've never launched a project where the client wasn't happy with the final result.
+
+
+============================================================
+NEXT STEPS
+============================================================
+
+## Ready to Build Your Headless Store?
+
+Headless commerce is a significant investment and long-term commitment. Let's make sure it's the right choice for your brand.
+
+### 1. Schedule a Strategy Call
+
+30-minute consultation where we:
+- Understand your brand and goals
+- Assess if headless makes sense
+- Discuss technical requirements
+- Answer your questions
+- Provide ballpark estimates
+
+**No pressure. Honest guidance.**
+
+[Schedule Strategy Call →]
+
+### 2. Review Our Portfolio
+
+See examples of headless stores we've built:
+- Fashion and luxury brands
+- Beauty and cosmetics
+- Home goods and lifestyle
+- Technical specifications and performance metrics
+
+[View Headless Portfolio →]
+
+### 3. Read Our Headless Content
+
+Not ready to talk? Learn more:
+- "Why Fashion Brands Are Going Headless" (blog)
+- "Headless Commerce Explained" (guide)
+- "When Headless Makes Sense" (blog)
+
+[Explore Resources →]
+
+
+============================================================
+CONTACT CTA
+============================================================
+
+## Let's Build Something Exceptional
+
+Whether you're certain headless is right or still evaluating options, we're here to help you make the best decision for your brand.
+
+**Email:** hello@scalefront.io
+**Schedule Call:** [Calendly Link]
+
+**Response Time:** We respond to all inquiries within 24 hours (usually faster)
+
+---
+
+Serving D2C brands worldwide | Founded by developers who care about craft

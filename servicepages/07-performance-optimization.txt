@@ -1,0 +1,410 @@
+============================================================
+SCALEFRONT SERVICE PAGE - PERFORMANCE OPTIMIZATION
+============================================================
+
+SEO META TITLE: Shopify Performance Optimization Services | Scalefront
+SEO META DESCRIPTION: Speed up your Shopify store. Core Web Vitals optimization, image optimization, code cleanup. Starting $5K.
+PRIMARY KEYWORDS: Shopify speed optimization, Shopify performance optimization, Shopify page speed
+URL: scalefront.io/services/performance-optimization
+
+============================================================
+HERO SECTION
+============================================================
+
+# Shopify Performance Optimization
+
+Make your store lightning fast. Every second counts.
+
+A 1-second delay in page load decreases conversions by 7%. If your store loads in 5 seconds instead of 2, you're losing 21% of potential sales.
+
+We optimize Shopify stores to load in under 2 seconds.
+
+[Schedule a Speed Audit] [Check Our Speed]
+
+**Trusted by brands serious about performance**
+
+
+============================================================
+WHY SPEED MATTERS
+============================================================
+
+## The Cost of Slow Stores
+
+**Conversion Impact**
+- 1-second delay = 7% conversion decrease
+- 5-second load vs. 2-second = 21% fewer sales
+- Mobile users especially sensitive to speed
+
+**SEO Impact**
+- Google ranks faster sites higher
+- Core Web Vitals are ranking factors
+- Slow sites lose organic traffic
+
+**User Experience**
+- 53% mobile users abandon sites taking 3+ seconds
+- Slow sites feel unprofessional
+- Speed affects brand perception
+
+**Real Example:** A store doing $50K monthly revenue with 3% conversion and 5-second load time. Optimizing to 2 seconds could add $10.5K monthly revenue (21% conversion boost).
+
+
+============================================================
+WHAT WE OPTIMIZE
+============================================================
+
+## Performance Optimization Services
+
+### Speed Audit & Quick Wins
+**$5,000-8,000**
+
+Comprehensive performance analysis with immediate improvements.
+
+**What We Analyze:**
+- Page load times (desktop/mobile)
+- Core Web Vitals (LCP, FID, CLS)
+- Image optimization opportunities
+- JavaScript/CSS bloat
+- App performance impact
+- Third-party script analysis
+- Hosting and CDN configuration
+
+**Quick Wins We Implement:**
+- Image optimization and lazy loading
+- Remove unused apps
+- Optimize third-party scripts
+- Enable caching
+- Minify CSS/JavaScript
+
+**Deliverable:** Audit report + implemented quick wins
+
+**Typical Results:** 30-50% load time reduction
+
+**Timeline:** 1-2 weeks
+
+---
+
+### Complete Performance Overhaul
+**$12,000-30,000**
+
+Comprehensive optimization for maximum performance.
+
+**What We Do:**
+- Everything in Speed Audit
+- Theme code optimization
+- Custom liquid optimization
+- Advanced image optimization
+- App audit and replacement
+- Font loading optimization
+- Critical CSS implementation
+- JavaScript optimization
+- Mobile-specific optimization
+- Core Web Vitals perfection
+
+**Deliverable:** Fully optimized store
+
+**Typical Results:** 50-70% load time reduction, perfect Core Web Vitals scores
+
+**Timeline:** 4-6 weeks
+
+---
+
+### Ongoing Performance Monitoring
+**$1,000-3,000/month**
+
+Continuous monitoring and optimization.
+
+**What's Included:**
+- Weekly performance monitoring
+- Monthly optimization updates
+- App performance tracking
+- New issue identification
+- Core Web Vitals monitoring
+- Mobile performance focus
+
+**Deliverable:** Maintained fast performance
+
+**Timeline:** Ongoing retainer
+
+
+============================================================
+COMMON PERFORMANCE ISSUES
+============================================================
+
+## What Slows Down Shopify Stores
+
+### 1. Unoptimized Images (40% of issues)
+
+**Problems:**
+- Images too large (MB instead of KB)
+- Wrong formats (JPG instead of WebP)
+- No lazy loading
+- No responsive images
+
+**Our Fix:**
+- Compress all images
+- Convert to WebP/AVIF
+- Implement lazy loading
+- Responsive image serving
+
+**Impact:** 2-4 second improvement
+
+---
+
+### 2. Too Many Apps (30% of issues)
+
+**Problems:**
+- 15+ apps installed
+- Unused apps still loading code
+- Overlapping functionality
+- Heavy apps (reviews, popups)
+
+**Our Fix:**
+- Audit all apps
+- Remove unused apps
+- Replace heavy apps
+- Consolidate functionality
+
+**Impact:** 1-3 second improvement
+
+---
+
+### 3. Bloated Theme Code (15% of issues)
+
+**Problems:**
+- Old theme with legacy code
+- Multiple unused features
+- Inefficient Liquid code
+- Unminified CSS/JS
+
+**Our Fix:**
+- Remove unused code
+- Optimize Liquid logic
+- Minify assets
+- Lazy load JavaScript
+
+**Impact:** 1-2 second improvement
+
+---
+
+### 4. Third-Party Scripts (10% of issues)
+
+**Problems:**
+- Google Analytics
+- Facebook Pixel
+- Chat widgets
+- Review platforms
+- All loading synchronously
+
+**Our Fix:**
+- Async loading
+- Defer non-critical scripts
+- Remove unnecessary scripts
+- Optimize loading order
+
+**Impact:** 0.5-1.5 second improvement
+
+---
+
+### 5. No CDN or Poor Caching (5% of issues)
+
+**Problems:**
+- No CDN configuration
+- Poor browser caching
+- Shopify's CDN not optimized
+
+**Our Fix:**
+- Optimize CDN settings
+- Configure browser caching
+- Leverage Shopify's infrastructure
+
+**Impact:** 0.3-1 second improvement
+
+
+============================================================
+OUR PROCESS
+============================================================
+
+## How We Optimize Your Store
+
+### Phase 1: Performance Audit (Week 1)
+
+**Testing:**
+- Run speed tests (GTmetrix, PageSpeed, WebPageTest)
+- Analyze Core Web Vitals
+- Test on real devices
+- Identify bottlenecks
+
+**Analysis:**
+- Waterfall analysis
+- Third-party script impact
+- Image optimization opportunities
+- Code inefficiencies
+
+**Deliverable:** Detailed audit report with prioritized fixes
+
+### Phase 2: Quick Wins (Week 1-2)
+
+**Immediate Improvements:**
+- Image optimization
+- App removal
+- Script optimization
+- Basic code cleanup
+
+**Results:** 30-50% improvement typically
+
+### Phase 3: Deep Optimization (Week 2-6)
+
+**Advanced Optimization:**
+- Theme code refactoring
+- Custom optimization
+- Advanced caching
+- Mobile-specific fixes
+
+**Results:** Additional 20-30% improvement
+
+### Phase 4: Testing & Monitoring (Week 6+)
+
+**Validation:**
+- Cross-browser testing
+- Real device testing
+- Core Web Vitals validation
+- Ongoing monitoring
+
+**Deliverable:** Optimized store with monitoring
+
+
+============================================================
+INVESTMENT
+============================================================
+
+## Performance Optimization Pricing
+
+### Speed Audit + Quick Wins
+**$5,000-8,000**
+- Comprehensive audit
+- Quick win implementation
+- Timeline: 1-2 weeks
+- Typical: 30-50% improvement
+
+### Complete Optimization
+**$12,000-30,000**
+- Deep optimization
+- Theme code optimization
+- Perfect Core Web Vitals
+- Timeline: 4-6 weeks
+- Typical: 50-70% improvement
+
+### Performance Retainer
+**$1,000-3,000/month**
+- Ongoing monitoring
+- Monthly optimizations
+- Issue prevention
+- Timeline: Ongoing
+
+
+============================================================
+CASE STUDY
+============================================================
+
+## Real Results: Fashion Brand Speed Optimization
+
+A fashion brand with beautiful imagery had 7.2-second page loads on mobile. High bounce rate (72%) and low mobile conversion (1.1%).
+
+### Performance Issues Found
+- Hero images: 4.2MB each
+- 18 apps installed (6 unused)
+- No lazy loading
+- Unoptimized theme code
+- Heavy JavaScript libraries
+
+### Optimizations Made
+- Compressed and converted images to WebP
+- Removed 6 unused apps
+- Implemented lazy loading
+- Cleaned up theme code
+- Deferred non-critical JavaScript
+- Optimized mobile experience
+
+### Results After Optimization
+- Page load: 7.2s → 1.9s (74% improvement)
+- Core Web Vitals: All green
+- Bounce rate: 72% → 51%
+- Mobile conversion: 1.1% → 2.3% (+109%)
+- SEO rankings improved (faster load factor)
+
+**ROI:** $15K investment. Mobile revenue increased $18K/month
+
+[Read Full Case Study →]
+
+
+============================================================
+FAQ
+============================================================
+
+**How fast can you make our store?**
+We aim for <2 seconds on mobile. Typically achieve 1.5-2.5 seconds depending on starting point and content.
+
+**Will optimization break our theme?**
+No. We test thoroughly and maintain all functionality. Performance improvements should never break features.
+
+**How long do improvements last?**
+Permanent, unless you add heavy apps or large unoptimized images. That's why we offer monitoring retainers.
+
+**Can you optimize any theme?**
+Yes. Some themes are easier to optimize than others, but all can be improved significantly.
+
+**What if we keep adding content?**
+We can set up automated image optimization and provide guidelines for maintaining performance.
+
+**Do you optimize apps?**
+We can't change app code, but we can remove heavy apps, find lighter alternatives, or optimize how apps load.
+
+
+============================================================
+NEXT STEPS
+============================================================
+
+## Ready to Speed Up Your Store?
+
+Let's run a free speed test and show you what's possible.
+
+### 1. Get a Free Speed Audit
+
+We'll analyze your store and provide:
+- Current performance score
+- Top 5 issues slowing you down
+- Estimated improvement potential
+- No obligation
+
+[Get Free Speed Audit →]
+
+### 2. Schedule a Performance Consultation
+
+30-minute call where we:
+- Review your speed test results
+- Discuss optimization approach
+- Provide timeline estimate
+- Give cost estimate
+
+[Schedule Consultation →]
+
+### 3. View Speed Case Studies
+
+See before/after results:
+- Speed improvements
+- Conversion impact
+- Revenue impact
+
+[View Case Studies →]
+
+
+============================================================
+CONTACT
+============================================================
+
+**Email:** hello@scalefront.io
+**Schedule Call:** [Calendly Link]
+
+---
+
+Serving D2C brands worldwide | Founded by developers who care about craft

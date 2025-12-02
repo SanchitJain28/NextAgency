@@ -1,0 +1,362 @@
+============================================================
+SCALEFRONT SERVICE PAGE - CUSTOM FEATURES
+============================================================
+
+SEO META TITLE: Custom Shopify Features Development | Scalefront  
+SEO META DESCRIPTION: Add unique functionality to your Shopify store. Product configurators, calculators, quizzes, custom tools. Starting $10K.
+PRIMARY KEYWORDS: custom Shopify features, Shopify custom functionality, Shopify feature development
+URL: scalefront.io/services/custom-features
+
+============================================================
+HERO SECTION
+============================================================
+
+# Custom Features for Shopify
+
+Build unique functionality that sets your store apart.
+
+Shopify provides core e-commerce features, but your business might need something special—product configurators, custom calculators, interactive quizzes, or unique tools your competitors don't have.
+
+We build custom features that become your competitive advantage.
+
+[Schedule a Consultation] [View Feature Examples]
+
+**Trusted by brands that refuse to be limited by standard functionality**
+
+
+============================================================
+CUSTOM FEATURES WE BUILD
+============================================================
+
+## Product Configurators
+
+**Let Customers Design Their Product**
+
+Build-to-order functionality where customers customize products in real-time with pricing updates.
+
+**Common Configurators:**
+- Furniture (fabric, wood, dimensions, finishing)
+- Jewelry (metal, stones, engraving)
+- Apparel (custom text, colors, designs)
+- Gift boxes (select items, add message)
+- Tech products (specs, accessories, cases)
+
+**Features:**
+- Visual preview as customers customize
+- Real-time pricing calculations
+- Configuration validation
+- Save/share configurations
+- Integration with production systems
+
+**Investment:** $15,000-50,000
+**Timeline:** 8-14 weeks
+
+**Example:** Built a furniture configurator showing 3D preview with fabric/wood choices. Increased AOV 34% and reduced returns 28%.
+
+---
+
+## Interactive Quizzes & Finders
+
+**Guide Customers to Right Products**
+
+Help customers find products through interactive questions.
+
+**Common Quizzes:**
+- Skincare routine finder
+- Style quiz for fashion
+- Product recommendation quiz
+- Size/fit finder
+- Gift finder
+- Need assessment tool
+
+**Features:**
+- Branching logic based on answers
+- Product recommendations at end
+- Email capture during quiz
+- Results sharing
+- Analytics on quiz performance
+
+**Investment:** $10,000-30,000
+**Timeline:** 6-10 weeks
+
+**Example:** Built a skincare quiz that reduced product returns 41% and increased conversion 23% by matching customers better.
+
+---
+
+## Calculators & Tools
+
+**Help Customers Make Informed Decisions**
+
+Custom calculators that assist purchase decisions.
+
+**Common Calculators:**
+- ROI/savings calculators
+- Size/quantity calculators
+- Cost comparison tools
+- Coverage calculators (paint, flooring, etc.)
+- Compatibility checkers
+- Custom pricing calculators
+
+**Features:**
+- Custom algorithms
+- Results visualization
+- PDF report generation
+- Email results
+- CRM integration
+
+**Investment:** $8,000-25,000
+**Timeline:** 4-8 weeks
+
+**Example:** Built an ROI calculator for B2B SaaS showing 5-year savings. Increased B2B conversion 67%.
+
+---
+
+## Subscription Features
+
+**Beyond Standard Subscription Apps**
+
+Custom subscription logic that Recharge/Bold can't handle.
+
+**Custom Subscription Features:**
+- Build-your-box subscriptions
+- Tiered subscription levels
+- Credits-based subscriptions
+- Usage-based billing
+- Custom renewal logic
+- Subscription swaps/modifications
+
+**Investment:** $18,000-45,000
+**Timeline:** 8-12 weeks
+
+**Example:** Built a coffee subscription with custom blending, delivery calendar control, and rollover credits.
+
+---
+
+## Booking & Scheduling
+
+**Appointment or Rental Booking**
+
+Integrated booking systems for services or rentals.
+
+**Booking Systems:**
+- Appointment scheduling
+- Equipment rentals
+- Class/event bookings
+- Consultation scheduling
+- Rental calendar management
+- Resource allocation
+
+**Features:**
+- Real-time availability
+- Calendar integration
+- Automated reminders
+- Deposit handling
+- Cancellation management
+
+**Investment:** $15,000-40,000
+**Timeline:** 8-12 weeks
+
+**Example:** Built a jewelry appointment system integrating with store calendar and sending automated reminders.
+
+---
+
+## Membership & Loyalty
+
+**Custom Loyalty Programs**
+
+Beyond standard loyalty apps when you need unique rules.
+
+**Custom Loyalty Features:**
+- Point systems with custom rules
+- Tiered memberships
+- Exclusive product access
+- Member pricing
+- Referral systems
+- Custom rewards logic
+
+**Investment:** $12,000-35,000
+**Timeline:** 6-10 weeks
+
+**Example:** Built a tiered membership with exclusive product drops and early access increasing repeat purchase rate 48%.
+
+---
+
+## B2B Portals
+
+**Custom B2B Functionality**
+
+Beyond Shopify Plus native B2B when you need more.
+
+**B2B Features:**
+- Custom pricing by customer
+- Quote requests
+- Approval workflows
+- Net terms management
+- Bulk ordering
+- Custom catalogs by customer
+- Purchase order tracking
+
+**Investment:** $20,000-55,000
+**Timeline:** 10-14 weeks
+
+**Example:** Built a B2B portal with custom pricing matrices for 150+ wholesale customers.
+
+---
+
+## AR/VR Features
+
+**Augmented Reality Product Visualization**
+
+Let customers visualize products in their space or on themselves.
+
+**AR Features:**
+- AR product placement (furniture, decor)
+- Virtual try-on (glasses, jewelry, makeup)
+- 360° product viewers
+- Product visualization tools
+
+**Investment:** $20,000-60,000
+**Timeline:** 10-16 weeks
+
+**Example:** Built AR furniture placement tool reducing returns 31% and increasing conversion 19%.
+
+
+============================================================
+OUR PROCESS
+============================================================
+
+## How We Build Custom Features
+
+### Phase 1: Discovery (1-2 weeks)
+- Understand feature requirements
+- Define user flows
+- Technical feasibility assessment
+- Create detailed specification
+
+### Phase 2: Design (2-3 weeks)
+- UI/UX design
+- User flow mapping
+- Interactive prototype
+- Design revisions
+
+### Phase 3: Development (4-10 weeks)
+- Backend logic development
+- Frontend implementation
+- Shopify integration
+- Testing and QA
+
+### Phase 4: Launch (1-2 weeks)
+- Deployment
+- User testing
+- Training
+- Documentation
+- Post-launch support
+
+
+============================================================
+INVESTMENT
+============================================================
+
+## Custom Feature Pricing
+
+### Simple Features
+**$8,000-18,000**
+- Calculators
+- Simple quizzes
+- Basic tools
+- Timeline: 4-8 weeks
+
+### Medium Complexity
+**$18,000-40,000**
+- Product configurators
+- Booking systems
+- Advanced quizzes
+- Timeline: 8-12 weeks
+
+### Complex Features
+**$40,000-80,000**
+- AR/VR features
+- Advanced B2B portals
+- Complex subscription systems
+- Timeline: 12-18 weeks
+
+
+============================================================
+CASE STUDY
+============================================================
+
+## Real Results: Custom Jewelry Configurator
+
+A jewelry brand wanted customers to design custom rings with real-time pricing and 3D preview.
+
+### The Solution
+Built a custom configurator:
+- Metal selection (gold, platinum, silver)
+- Stone selection (type, size, quality)
+- Band style options
+- Engraving
+- Real-time 3D rendering
+- Live pricing updates
+
+### Results
+- AOV: $850 → $1,240 (+46%)
+- Conversion on custom page: 8.7% (vs. 2.1% regular products)
+- 34% of revenue from configured products
+- Returns reduced 42% (better expectations)
+
+**ROI:** $42K investment. $85K additional monthly revenue
+
+[Read Full Case Study →]
+
+
+============================================================
+FAQ
+============================================================
+
+**Can you build any feature?**
+If it's technically possible and makes business sense, yes. We'll advise on feasibility and alternatives.
+
+**How long do custom features take?**
+Simple features: 4-8 weeks. Complex features: 12-18 weeks. Timeline depends on complexity.
+
+**Will features slow down our site?**
+Not if built correctly. We optimize for performance. Many features actually improve engagement time.
+
+**Can features be updated later?**
+Yes. We build with future modifications in mind. You own the code and can adjust as needed.
+
+**Do you maintain features after launch?**
+We include 30 days support. Extended maintenance available on retainer.
+
+
+============================================================
+NEXT STEPS
+============================================================
+
+## Ready to Build Your Custom Feature?
+
+Let's discuss your vision and how we can bring it to life.
+
+### 1. Schedule a Feature Consultation
+Discuss your idea, feasibility, timeline, and cost
+[Schedule Consultation →]
+
+### 2. View Feature Portfolio
+See custom features we've built
+[View Portfolio →]
+
+### 3. Get a Feature Feasibility Assessment
+Quick assessment of your feature idea
+[Request Assessment →]
+
+
+============================================================
+CONTACT
+============================================================
+
+**Email:** hello@scalefront.io
+**Schedule Call:** [Calendly Link]
+
+---
+
+Serving D2C brands worldwide | Founded by developers who care about craft

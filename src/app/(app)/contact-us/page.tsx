@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/header-footer/Header";
 import { MovingReviews } from "@/components/reviews/MovingReviews";
 import Footer from "@/components/header-footer/Footer";
+import { ContactForm } from "@/components/ContactForm";
 import { Metadata } from "next";
 import { Mail, Phone, MessageCircle } from "lucide-react";
 
@@ -39,7 +40,7 @@ function WhatsAppButtons() {
 
   return (
     <div className="flex flex-col sm:flex-row gap-3">
-      <Button asChild className="bg-primary hover:bg-primary/90">
+      <Button asChild className="bg-[#60DB36] hover:bg-[#50CB26] text-white font-medium">
         <a
           href={waPrefilled}
           target="_blank"
@@ -51,7 +52,7 @@ function WhatsAppButtons() {
         </a>
       </Button>
 
-      <Button asChild variant="outline">
+      <Button asChild className="bg-[#60DB36] hover:bg-[#50CB26] text-white font-medium">
         <a
           href={`mailto:${EMAIL}`}
           aria-label="Email ScaleFront"
@@ -66,7 +67,7 @@ function WhatsAppButtons() {
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-white light">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -96,140 +97,159 @@ export default function ContactPage() {
 
       <article className="mx-auto w-full max-w-4xl px-6 py-16 md:py-24">
         <header className="mb-12 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Get In Touch
           </h1>
           <div className="h-1 w-20 bg-primary mx-auto mb-6 rounded-full" />
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Ready to take your Shopify store to the next level? Let's discuss how we can help you achieve your eCommerce goals.
           </p>
         </header>
 
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
-          {/* Contact Information */}
-          <div className="space-y-8">
-            <div>
-              <h2 className="text-2xl font-bold text-foreground mb-6">
-                Let's Start a Conversation
-              </h2>
-              <p className="text-muted-foreground mb-6">
-                Whether you need a custom Shopify app, want to optimize your store's performance, or are considering a headless commerce solution, we're here to help.
-              </p>
-              <WhatsAppButtons />
+        {/* Contact Form Section */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Send Us Your Project Details
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Fill out the form below and we'll get back to you within 24 hours with a detailed response
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-12">
+            {/* Form */}
+            <div className="lg:col-span-2">
+              <div className="bg-card border border-border rounded-xl p-8">
+                <ContactForm />
+              </div>
             </div>
 
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="rounded-lg bg-primary/10 p-3">
-                  <Mail className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                  <a
-                    href={`mailto:${EMAIL}`}
-                    className="text-primary hover:underline"
-                  >
-                    {EMAIL}
-                  </a>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    For detailed project inquiries
-                  </p>
-                </div>
-              </div>
+            {/* What to Expect Sidebar */}
+            <div className="lg:col-span-1">
+              <div className="bg-gray-50 rounded-xl p-8 sticky top-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-6">
+                  What to Expect
+                </h3>
 
-              <div className="flex items-start gap-4">
-                <div className="rounded-lg bg-primary/10 p-3">
-                  <Phone className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                  <a
-                    href={`tel:${TEL_INTERNATIONAL}`}
-                    className="text-primary hover:underline"
-                  >
-                    {DISPLAY_PHONE}
-                  </a>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    Mon-Fri, 9am-6pm IST
-                  </p>
-                </div>
-              </div>
+                <div className="space-y-6">
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-8 h-8 rounded-full bg-[#60DB36] text-white flex items-center justify-center font-bold text-sm">
+                        1
+                      </div>
+                      <h4 className="font-semibold text-sm text-gray-900">Initial Consultation</h4>
+                    </div>
+                    <p className="text-xs text-gray-600 ml-10">
+                      We'll discuss your project requirements, goals, and timeline.
+                    </p>
+                  </div>
 
-              <div className="flex items-start gap-4">
-                <div className="rounded-lg bg-primary/10 p-3">
-                  <MessageCircle className="h-6 w-6 text-primary" />
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-8 h-8 rounded-full bg-[#60DB36] text-white flex items-center justify-center font-bold text-sm">
+                        2
+                      </div>
+                      <h4 className="font-semibold text-sm text-gray-900">Proposal & Quote</h4>
+                    </div>
+                    <p className="text-xs text-gray-600 ml-10">
+                      Receive a detailed proposal with scope, timeline, and pricing.
+                    </p>
+                  </div>
+
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-8 h-8 rounded-full bg-[#60DB36] text-white flex items-center justify-center font-bold text-sm">
+                        3
+                      </div>
+                      <h4 className="font-semibold text-sm text-gray-900">Project Kickoff</h4>
+                    </div>
+                    <p className="text-xs text-gray-600 ml-10">
+                      Once approved, we'll begin development with regular updates.
+                    </p>
+                  </div>
+
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-8 h-8 rounded-full bg-[#60DB36] text-white flex items-center justify-center font-bold text-sm">
+                        4
+                      </div>
+                      <h4 className="font-semibold text-sm text-gray-900">Ongoing Support</h4>
+                    </div>
+                    <p className="text-xs text-gray-600 ml-10">
+                      Post-launch support and maintenance to ensure success.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">WhatsApp</h3>
-                  <a
-                    href={`https://wa.me/${PHONE_E164}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline"
-                  >
-                    {DISPLAY_PHONE}
-                  </a>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    Fastest response time
+
+                <div className="mt-8 pt-6 border-t border-gray-200">
+                  <p className="text-xs text-gray-600 text-center">
+                    <strong className="text-gray-900">Response Time:</strong><br />
+                    Within 24 hours during business days
                   </p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* What to Expect */}
-          <div className="bg-secondary/20 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-foreground mb-6">
-              What to Expect
-            </h2>
+        {/* Quick Contact Options */}
+        <div className="mb-16">
+          <div className="bg-gray-50 rounded-xl p-8">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                Prefer to Chat Directly?
+              </h2>
+              <p className="text-gray-600">
+                Get immediate assistance via WhatsApp or email
+              </p>
+            </div>
 
-            <div className="space-y-6">
-              <div>
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
-                    1
-                  </div>
-                  <h3 className="font-semibold">Initial Consultation</h3>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+              <WhatsAppButtons />
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 mt-8">
+              <div className="flex items-start gap-3">
+                <div className="rounded-lg bg-[#60DB36]/10 p-2">
+                  <Mail className="h-5 w-5 text-[#60DB36]" />
                 </div>
-                <p className="text-sm text-muted-foreground ml-10">
-                  We'll discuss your project requirements, goals, and timeline.
-                </p>
+                <div>
+                  <h3 className="font-semibold text-sm text-gray-900 mb-1">Email</h3>
+                  <a
+                    href={`mailto:${EMAIL}`}
+                    className="text-[#60DB36] hover:underline text-sm font-medium"
+                  >
+                    {EMAIL}
+                  </a>
+                </div>
               </div>
 
-              <div>
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
-                    2
-                  </div>
-                  <h3 className="font-semibold">Proposal & Quote</h3>
+              <div className="flex items-start gap-3">
+                <div className="rounded-lg bg-[#60DB36]/10 p-2">
+                  <Phone className="h-5 w-5 text-[#60DB36]" />
                 </div>
-                <p className="text-sm text-muted-foreground ml-10">
-                  Receive a detailed proposal with scope, timeline, and pricing.
-                </p>
+                <div>
+                  <h3 className="font-semibold text-sm text-gray-900 mb-1">Phone</h3>
+                  <a
+                    href={`tel:${TEL_INTERNATIONAL}`}
+                    className="text-[#60DB36] hover:underline text-sm font-medium"
+                  >
+                    {DISPLAY_PHONE}
+                  </a>
+                </div>
               </div>
 
-              <div>
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
-                    3
-                  </div>
-                  <h3 className="font-semibold">Project Kickoff</h3>
+              <div className="flex items-start gap-3">
+                <div className="rounded-lg bg-[#60DB36]/10 p-2">
+                  <MessageCircle className="h-5 w-5 text-[#60DB36]" />
                 </div>
-                <p className="text-sm text-muted-foreground ml-10">
-                  Once approved, we'll begin development with regular updates.
-                </p>
-              </div>
-
-              <div>
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
-                    4
-                  </div>
-                  <h3 className="font-semibold">Ongoing Support</h3>
+                <div>
+                  <h3 className="font-semibold text-sm text-gray-900 mb-1">WhatsApp</h3>
+                  <p className="text-sm text-gray-600">
+                    Fastest response
+                  </p>
                 </div>
-                <p className="text-sm text-muted-foreground ml-10">
-                  Post-launch support and maintenance to ensure success.
-                </p>
               </div>
             </div>
           </div>
@@ -237,7 +257,7 @@ export default function ContactPage() {
 
         {/* Services Overview */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             How We Can Help
           </h2>
 
@@ -268,44 +288,44 @@ export default function ContactPage() {
                 description: "Strategic guidance to maximize your Shopify store's potential."
               }
             ].map((service) => (
-              <div key={service.title} className="bg-card border border-border rounded-lg p-6">
-                <h3 className="font-semibold text-lg mb-2">{service.title}</h3>
-                <p className="text-sm text-muted-foreground">{service.description}</p>
+              <div key={service.title} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                <h3 className="font-semibold text-lg mb-2 text-gray-900">{service.title}</h3>
+                <p className="text-sm text-gray-600">{service.description}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* FAQ */}
-        <section className="bg-secondary/20 rounded-xl p-8">
-          <h2 className="text-2xl font-bold text-foreground mb-6">
+        <section className="bg-gray-50 rounded-xl p-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
             Common Questions
           </h2>
 
           <div className="space-y-4">
-            <details className="bg-card border border-border rounded-lg p-4">
-              <summary className="font-semibold cursor-pointer">
+            <details className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+              <summary className="font-semibold cursor-pointer text-gray-900">
                 What's your response time?
               </summary>
-              <p className="mt-3 text-muted-foreground">
+              <p className="mt-3 text-gray-600">
                 We typically respond to WhatsApp messages within 30 minutes during business hours (Mon-Fri, 9am-6pm IST). Email inquiries are answered within 24 hours.
               </p>
             </details>
 
-            <details className="bg-card border border-border rounded-lg p-4">
-              <summary className="font-semibold cursor-pointer">
+            <details className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+              <summary className="font-semibold cursor-pointer text-gray-900">
                 Do you offer free consultations?
               </summary>
-              <p className="mt-3 text-muted-foreground">
+              <p className="mt-3 text-gray-600">
                 Yes! We offer a complimentary 30-minute consultation to discuss your project requirements and provide initial recommendations.
               </p>
             </details>
 
-            <details className="bg-card border border-border rounded-lg p-4">
-              <summary className="font-semibold cursor-pointer">
+            <details className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+              <summary className="font-semibold cursor-pointer text-gray-900">
                 What information should I provide?
               </summary>
-              <p className="mt-3 text-muted-foreground">
+              <p className="mt-3 text-gray-600">
                 Include your store URL, a brief description of what you need help with, your timeline, and any specific features or requirements. This helps us provide a more accurate initial assessment.
               </p>
             </details>

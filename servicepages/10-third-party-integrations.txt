@@ -1,0 +1,487 @@
+============================================================
+SCALEFRONT SERVICE PAGE - THIRD-PARTY INTEGRATIONS
+============================================================
+
+SEO META TITLE: Shopify Third-Party Integration Services | API Integration
+SEO META DESCRIPTION: Connect Shopify with ERP, WMS, CRM, accounting, and custom systems. Expert API integration services. Starting $15K.
+PRIMARY KEYWORDS: Shopify third-party integration, Shopify API integration, ERP Shopify integration, Shopify system integration
+URL: scalefront.io/services/third-party-integrations
+
+============================================================
+HERO SECTION
+============================================================
+
+# Shopify Third-Party Integrations
+
+Connect Shopify to your business ecosystem. Seamless data flow between systems.
+
+Your business runs on multiple platforms—ERP, WMS, CRM, accounting software, fulfillment systems. When these systems don't talk to each other, you're stuck with manual data entry, errors, and inefficiency.
+
+We build robust integrations that sync data automatically and reliably.
+
+[Schedule an Integration Consultation] [View Integration Examples]
+
+**Trusted by brands tired of manual data entry and disconnected systems**
+
+
+============================================================
+WHO THIS IS FOR
+============================================================
+
+## Do You Need a Third-Party Integration?
+
+Integrations make sense when manual processes are costing you time and money.
+
+### You Need Integration If:
+
+**You're Doing Manual Data Entry**
+Copying orders from Shopify to your ERP. Updating inventory across multiple systems. Manually importing customer data. Even 30 minutes daily = 180 hours/year wasted.
+
+**Data Is Out of Sync**
+Inventory shows available in Shopify but it's out of stock in your warehouse. Customer data in Shopify doesn't match your CRM. Orders processed but accounting isn't updated.
+
+**You're Scaling and Hitting Limits**
+Processing 50+ orders daily makes manual workflows unsustainable. You're hiring people just to move data between systems.
+
+**You Need Real-Time Data**
+Instant inventory updates when orders are fulfilled. Real-time customer data for personalization. Immediate order sync to fulfillment systems.
+
+**You Have Complex Business Logic**
+Custom pricing rules in your ERP need to sync to Shopify. Inventory allocation across multiple warehouses. Order routing based on product type or location.
+
+**Compliance or Audit Requirements**
+Need unified customer data for GDPR compliance. Require complete order trails across systems. Need real-time financial data for audits.
+
+### You Can Wait If:
+
+- Processing under 20 orders daily
+- Manual processes take under 2 hours/week
+- Your systems have built-in integrations that work
+- Budget under $15K
+- You're still figuring out your tech stack
+
+
+============================================================
+INTEGRATION TYPES WE BUILD
+============================================================
+
+## Common Shopify Integrations
+
+### ERP Integration
+**$35,000-90,000**
+
+Connect Shopify to Enterprise Resource Planning Systems
+
+Popular ERPs we integrate:
+- SAP Business One
+- Oracle NetSuite
+- Microsoft Dynamics 365
+- Odoo
+- Custom ERPs
+
+**Typical Data Flows:**
+- Products: Sync product data, pricing, descriptions, images from ERP to Shopify
+- Inventory: Real-time inventory updates both ways
+- Orders: Orders from Shopify pushed to ERP for processing
+- Customers: Customer master data synced between systems
+- Accounting: Order data flows to financial modules
+- Fulfillment: Shipping updates sync back to Shopify
+
+**Example:** Fashion brand with 1,200 SKUs across 8 collections. Products managed in SAP, automatically sync to Shopify. Orders flow from Shopify to SAP for fulfillment. Inventory updates every 15 minutes. Eliminated 12 hours/week of manual data entry.
+
+Timeline: 10-16 weeks
+
+---
+
+### WMS/3PL Integration
+**$25,000-65,000**
+
+Connect Shopify to Warehouse Management Systems
+
+Popular WMS we integrate:
+- Manhattan WMS
+- Blue Yonder
+- Oracle WMS
+- 3PL providers (ShipBob, ShipStation, custom 3PLs)
+- Custom warehouse systems
+
+**Typical Data Flows:**
+- Orders: Orders from Shopify pushed to WMS for picking/packing
+- Inventory: Real-time stock levels from warehouse to Shopify
+- Fulfillment: Tracking numbers and shipping status back to Shopify
+- Returns: Return processing and inventory updates
+- Location Management: Multi-warehouse inventory allocation
+
+**Example:** Beauty brand using 3 fulfillment centers. Orders automatically route to nearest warehouse based on customer location and inventory availability. Real-time inventory sync prevents overselling. Tracking updates automatically in Shopify.
+
+Timeline: 8-12 weeks
+
+---
+
+### CRM Integration
+**$20,000-45,000**
+
+Connect Shopify to Customer Relationship Management Systems
+
+Popular CRMs we integrate:
+- Salesforce
+- HubSpot
+- Zoho CRM
+- Microsoft Dynamics CRM
+- Custom CRM systems
+
+**Typical Data Flows:**
+- Customers: Customer data syncs from Shopify to CRM
+- Orders: Order history available in CRM
+- Marketing: Customer segments from CRM used in Shopify
+- Support: Order data accessible in CRM for support team
+- Analytics: Customer lifetime value and behavior tracking
+
+**Example:** D2C brand with 50K+ customers. Customer data from Shopify syncs to Salesforce. Support team accesses order history directly in CRM. Marketing team segments customers based on CRM data for personalized campaigns.
+
+Timeline: 6-10 weeks
+
+---
+
+### Accounting Software Integration
+**$15,000-30,000**
+
+Connect Shopify to Accounting Platforms
+
+Popular accounting software we integrate:
+- QuickBooks (Online & Desktop)
+- Xero
+- Sage
+- Custom accounting systems
+
+**Typical Data Flows:**
+- Orders: Order data becomes invoices in accounting software
+- Payments: Payment reconciliation
+- Taxes: Tax calculation and reporting
+- Expenses: Product costs and COGS tracking
+- Inventory: Inventory valuation sync
+
+**Example:** E-commerce brand processing 200+ orders daily. Orders automatically create invoices in QuickBooks. Payments reconciled automatically. Tax reports generated directly from accounting system. Saves 20+ hours monthly in manual data entry.
+
+Timeline: 5-8 weeks
+
+---
+
+### POS Integration
+**$25,000-50,000**
+
+Connect Shopify Online Store to Point of Sale Systems
+
+Popular POS systems we integrate:
+- Lightspeed
+- Square
+- Clover
+- Custom POS systems
+
+**Typical Data Flows:**
+- Inventory: Unified inventory across online and retail
+- Products: Product catalog synced between systems
+- Customers: Customer data accessible across channels
+- Orders: All orders (online and offline) in one system
+- Analytics: Combined reporting for all channels
+
+**Example:** Fashion brand with 5 retail stores. Shopify POS not meeting needs. Integrated existing POS with Shopify online store. Inventory syncs in real-time. Customers can return online purchases in-store.
+
+Timeline: 8-12 weeks
+
+---
+
+### Marketing Platform Integration
+**$12,000-35,000**
+
+Connect Shopify to Marketing and Analytics Tools
+
+Popular platforms we integrate:
+- Klaviyo (email marketing)
+- Segment (customer data platform)
+- Google Analytics 4
+- Facebook/Meta (advanced catalog sync)
+- SMS platforms
+
+**Typical Data Flows:**
+- Customer Data: Rich customer profiles for personalization
+- Order Data: Purchase history for segmentation
+- Product Data: Product catalogs for dynamic ads
+- Events: Custom events for analytics and attribution
+- Campaigns: Triggered campaigns based on behavior
+
+**Example:** Beauty brand integrated advanced analytics with Shopify. Custom event tracking, attribution modeling, and customer journey analysis. 28% improvement in marketing ROI.
+
+Timeline: 5-8 weeks
+
+
+============================================================
+OUR INTEGRATION PROCESS
+============================================================
+
+## How We Build Your Integration
+
+### Phase 1: Discovery & Analysis (1-2 weeks)
+
+**Business Process Mapping**
+- Document current workflow and pain points
+- Identify all systems that need integration
+- Map data flows and dependencies
+- Define success criteria and KPIs
+
+**Technical Assessment**
+- Review Shopify setup and data structure
+- Assess third-party system APIs and documentation
+- Identify technical constraints and limitations
+- Evaluate authentication and security requirements
+- Check for rate limits and restrictions
+
+**Integration Design**
+- Design data flow architecture
+- Define sync frequency (real-time, hourly, daily)
+- Plan error handling and retry logic
+- Design data transformation rules
+- Create field mapping documentation
+
+**Deliverable:** Integration specification document, architecture diagram, timeline
+
+[Continue with full process matching previous integration page structure]
+
+
+============================================================
+INVESTMENT
+============================================================
+
+## Integration Pricing
+
+### Simple Integration
+**$15,000-30,000**
+
+Typical scope:
+- Single system integration (e.g., Shopify to accounting software)
+- Straightforward data flow (orders, products, inventory)
+- Standard API with good documentation
+- Scheduled sync (hourly or daily)
+- Basic error handling and logging
+- Admin dashboard
+
+Timeline: 5-8 weeks
+
+Examples:
+- QuickBooks order sync
+- Simple CRM customer sync
+- Basic 3PL fulfillment integration
+
+---
+
+### Standard Integration
+**$30,000-65,000**
+
+Typical scope:
+- Single complex system or multiple simple systems
+- Bidirectional data sync
+- Complex data transformations
+- Real-time sync requirements
+- Advanced error handling
+- Retry mechanisms and queuing
+- Comprehensive admin dashboard
+
+Timeline: 8-12 weeks
+
+Examples:
+- Full ERP integration (products, inventory, orders, customers)
+- Multi-warehouse WMS integration
+- CRM with advanced segmentation sync
+- POS with real-time inventory sync
+
+---
+
+### Complex Enterprise Integration
+**$65,000-150,000+**
+
+Typical scope:
+- Multiple system integrations
+- Complex business logic
+- High-volume data processing
+- Custom middleware development
+- Advanced features (automated routing, intelligent allocation)
+- White-glove development and testing
+- Extended post-launch support
+
+Timeline: 12-20 weeks
+
+Examples:
+- Multi-system ecosystem (ERP + WMS + CRM + Accounting)
+- Custom manufacturing system integration
+- Legacy system integration with limited APIs
+- Multi-brand/multi-store integration hub
+
+---
+
+### What's Included in All Packages
+
+- Integration architecture and design
+- Complete development
+- Testing and QA
+- Documentation
+- Deployment to production
+- Team training
+- 30 days post-launch support
+
+---
+
+### What's NOT Included
+
+- Monthly hosting costs ($200-500/month for middleware)
+- Third-party API costs (if applicable)
+- iPaaS platform fees (Zapier, Workato, etc.)
+- Ongoing maintenance beyond 30 days
+- Changes to source systems or APIs
+
+---
+
+### Ongoing Maintenance
+
+**Essential Support: $1,000/month**
+- Bug fixes and updates
+- API compatibility monitoring
+- Error resolution
+- Monthly reports
+
+**Standard Support: $2,000/month**
+- Everything in Essential
+- Minor enhancements (5 hours/month)
+- Performance optimization
+- Quarterly reviews
+
+**Premium Support: $4,000/month**
+- Everything in Standard
+- Feature additions (12 hours/month)
+- Priority support SLA
+- Proactive monitoring and optimization
+
+
+============================================================
+CASE STUDY
+============================================================
+
+## Real Results: D2C Beauty Brand ERP Integration
+
+A rapidly growing beauty brand was manually entering 150+ orders daily from Shopify into their ERP system. Inventory was out of sync, causing overselling and customer complaints.
+
+### The Challenge
+- 3 people spending 4 hours/day on manual data entry (12 person-hours daily)
+- Inventory sync happening once daily, causing overselling
+- Order entry errors causing fulfillment delays
+- No real-time visibility into actual inventory
+- Customer data disconnected between systems
+- Financial reporting delayed by manual reconciliation
+
+### The Solution
+Built a bidirectional integration between Shopify and their ERP:
+- Orders: Automatically pushed to ERP every 5 minutes
+- Inventory: Real-time sync (15-minute intervals)
+- Products: New products from ERP sync to Shopify automatically
+- Customers: Customer master data synchronized
+- Fulfillment: Tracking numbers flow back to Shopify
+- Pricing: Special pricing rules from ERP enforced in Shopify
+
+### The Results
+- Time Saved: 12 person-hours/day eliminated = 60 hours/week = 3,120 hours/year
+- Labor Cost Savings: $75,000/year (3 people freed up for growth work)
+- Overselling Eliminated: Inventory accuracy improved from 75% to 99.2%
+- Order Processing Speed: Orders reach fulfillment in 5 minutes vs. 8 hours
+- Error Reduction: Order entry errors reduced from 8% to <0.1%
+- Revenue Impact: Reduced stockouts increased revenue by $120K annually
+- Financial Reporting: Month-end close reduced from 5 days to 1 day
+
+**Total Annual Benefit:** $195K ($75K labor savings + $120K revenue increase)
+
+**ROI:** Integration paid for itself in 4 months
+
+[Read Full Case Study →]
+
+
+============================================================
+FAQ
+============================================================
+
+**How long does an integration take?**
+Simple integrations: 5-8 weeks. Standard: 8-12 weeks. Complex: 12-20 weeks. Timeline depends on systems involved, API quality, and complexity.
+
+**Can you integrate with any system?**
+If it has an API, we can integrate with it. If no API exists, we can sometimes scrape data or find workarounds, though this is less reliable.
+
+**What if the third-party system has poor documentation?**
+We've dealt with this many times. We reverse-engineer APIs, contact vendors for support, and find creative solutions. It takes longer but is usually possible.
+
+**Will the integration break if systems update?**
+Well-built integrations handle minor API changes. Major breaking changes (rare) may require updates. This is why many clients opt for maintenance retainers.
+
+**Can we modify the integration later?**
+Yes. We document everything clearly and can add features or modify logic as your business evolves.
+
+**What happens if the integration fails?**
+We build error handling, retry logic, and alerting into every integration. You'll be notified immediately if something fails, and we can fix it quickly.
+
+**Do you provide training?**
+Yes. We train your team on the admin dashboard, how to monitor the integration, and how to handle common issues.
+
+**Can we see the code?**
+Yes, you own all the code. We provide complete source code and documentation.
+
+
+============================================================
+NEXT STEPS
+============================================================
+
+## Ready to Connect Your Systems?
+
+Let's assess your integration needs and design the right solution.
+
+### 1. Schedule an Integration Assessment
+
+60-minute consultation where we:
+- Understand your current systems and workflows
+- Identify pain points and inefficiencies
+- Discuss technical requirements
+- Assess API availability and quality
+- Provide integration approach recommendation
+- Give timeline and cost estimate
+
+**No obligation. Honest advice.**
+
+[Schedule Assessment Call →]
+
+### 2. Get Our Integration Checklist
+
+Free downloadable checklist:
+- Pre-integration preparation steps
+- Questions to ask your vendors
+- Data mapping worksheet
+- API documentation requirements
+
+[Download Integration Checklist →]
+
+### 3. Read Our Integration Content
+
+Learn more about integrations:
+- "When to Build vs Buy Integration Solutions" (guide)
+- "Common Integration Pitfalls and How to Avoid Them" (blog)
+- "Integration Case Studies" (portfolio)
+
+[Explore Resources →]
+
+
+============================================================
+CONTACT
+============================================================
+
+**Email:** hello@scalefront.io
+**Schedule Call:** [Calendly Link]
+
+**Response Time:** We respond to all inquiries within 24 hours (usually faster)
+
+---
+
+Serving D2C brands worldwide | Founded by developers who care about craft

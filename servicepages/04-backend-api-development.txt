@@ -1,0 +1,381 @@
+============================================================
+SCALEFRONT SERVICE PAGE - BACKEND & API DEVELOPMENT
+============================================================
+
+SEO META TITLE: Shopify Backend & API Development Services | Scalefront
+SEO META DESCRIPTION: Custom backend systems, APIs, and server-side logic for Shopify. Complex data processing, integrations, and middleware. Starting $18K.
+PRIMARY KEYWORDS: Shopify backend development, Shopify API development, custom Shopify backend, Shopify server-side development
+URL: scalefront.io/services/backend-api-development
+
+============================================================
+HERO SECTION
+============================================================
+
+# Backend & API Development for Shopify
+
+Build the infrastructure your business needs. Custom backends, APIs, and server-side logic.
+
+Shopify handles the storefront, but sometimes you need custom backend systems for complex business logic, data processing, integrations, or specialized workflows.
+
+We build robust backend systems that scale with your business.
+
+[Schedule a Consultation] [View Our Work]
+
+**Trusted by brands with complex technical requirements**
+
+
+============================================================
+WHO THIS IS FOR
+============================================================
+
+## Do You Need Custom Backend Development?
+
+### You Need Backend Development If:
+
+**Complex Data Processing**
+Real-time analytics, complex calculations, data transformations, batch processing that Shopify's frontend can't handle efficiently.
+
+**Custom Business Logic**
+Pricing algorithms, inventory allocation rules, fulfillment routing logic too complex for apps or Shopify's native capabilities.
+
+**High-Performance Requirements**
+Operations that need to handle thousands of requests per second, real-time data sync, or heavy computational workloads.
+
+**Advanced Integrations**
+Connect multiple systems (ERP, WMS, CRM, custom databases) with complex data transformation and business rules.
+
+**API Development**
+Build APIs for mobile apps, partner integrations, or to expose your business data securely to third parties.
+
+**Webhook Processing**
+Complex webhook handling, queuing, retry logic, and processing that goes beyond simple integrations.
+
+
+============================================================
+WHAT WE BUILD
+============================================================
+
+## Backend Development Services
+
+### Custom API Development
+
+**Build APIs for Your Ecosystem**
+
+- **REST APIs:** Standard HTTP APIs for web and mobile apps
+- **GraphQL APIs:** Flexible query language for efficient data fetching
+- **Webhook Handlers:** Process Shopify webhooks reliably
+- **Partner APIs:** Expose data securely to partners or franchises
+- **Mobile App APIs:** Backend for iOS/Android apps
+- **Internal APIs:** Connect internal systems and tools
+
+**Example:** Built a GraphQL API for a fashion brand's mobile app, providing personalized product recommendations, real-time inventory, and order management. Handles 50K+ requests daily with <100ms response time.
+
+**Investment:** $18,000-45,000
+
+### Data Processing & Analytics
+
+**Complex Data Operations**
+
+- **Real-Time Analytics:** Process orders, customer behavior, inventory in real-time
+- **Data Pipelines:** ETL processes for moving data between systems
+- **Batch Processing:** Nightly jobs for reports, reconciliation, cleanup
+- **Data Aggregation:** Combine data from multiple sources
+- **Profit Analysis:** Calculate true profit including COGS, shipping, returns
+- **Customer Segmentation:** Advanced RFM analysis, predictive models
+
+**Example:** Built a profit analytics system processing 10K+ daily orders across 5 brands, calculating real-time profit by product, channel, and customer segment. Revealed $180K annual profit leakage.
+
+**Investment:** $20,000-50,000
+
+### Integration Middleware
+
+**Connect Systems Reliably**
+
+- **Multi-System Integration:** Connect 3+ systems with complex rules
+- **Data Transformation:** Clean, normalize, enrich data between systems
+- **Message Queuing:** Reliable async processing with retry logic
+- **Error Handling:** Sophisticated error detection and resolution
+- **Monitoring:** Real-time alerts and performance tracking
+- **Sync Orchestration:** Coordinate data flow across systems
+
+**Example:** Built middleware connecting Shopify, ERP, WMS, and CRM for a distributor. Handles 500+ orders daily with complex routing rules, customer-specific pricing, and multi-warehouse allocation.
+
+**Investment:** $25,000-60,000
+
+### Custom Business Logic Engines
+
+**Unique Algorithms and Rules**
+
+- **Pricing Engines:** Dynamic pricing, customer-specific pricing, complex discounts
+- **Inventory Allocation:** Multi-warehouse, priority rules, safety stock
+- **Order Routing:** Route orders based on location, product, customer, inventory
+- **Recommendation Engines:** Custom product recommendation logic
+- **Fraud Detection:** Custom rules beyond Shopify's basic fraud analysis
+- **Subscription Logic:** Complex subscription rules and billing
+
+**Example:** Built a dynamic pricing engine for a B2B distributor with contract-specific pricing, volume tiers, promotional rules, and customer-specific discounts. Handles 200+ customers with unique pricing matrices.
+
+**Investment:** $22,000-55,000
+
+### Serverless Functions
+
+**Event-Driven Processing**
+
+- **Shopify Functions:** Custom discount logic, shipping rates, payment methods
+- **Lambda Functions:** AWS Lambda for scalable processing
+- **Background Jobs:** Async processing without blocking main flow
+- **Scheduled Tasks:** Cron jobs for recurring operations
+- **Event Handlers:** React to specific triggers across your systems
+
+**Example:** Built serverless functions for a subscription business handling complex renewal logic, dunning management, and automated customer communications. Processes 5K+ subscriptions daily.
+
+**Investment:** $15,000-35,000
+
+
+============================================================
+OUR TECH STACK
+============================================================
+
+## Technologies We Use
+
+**Backend Languages**
+- Node.js (Express, Fastify, Next.js API routes)
+- Python (Django, Flask, FastAPI)
+- Ruby (Rails, Sinatra)
+- Go (for high-performance needs)
+
+**Databases**
+- PostgreSQL (relational data)
+- MongoDB (document storage)
+- Redis (caching, queues)
+- DynamoDB (serverless)
+
+**Cloud Infrastructure**
+- AWS (Lambda, EC2, RDS, S3)
+- Vercel (Next.js serverless)
+- Railway (simplified deployment)
+- Google Cloud Platform
+
+**APIs & Integration**
+- REST API design
+- GraphQL servers
+- Webhook processing
+- Message queues (Bull, SQS)
+
+**Monitoring & Logging**
+- Sentry (error tracking)
+- LogRocket (session replay)
+- CloudWatch (AWS monitoring)
+- Custom dashboards
+
+
+============================================================
+OUR PROCESS
+============================================================
+
+## How We Build Your Backend
+
+### Phase 1: Discovery & Architecture (1-2 weeks)
+
+- Understand business requirements
+- Map data flows and dependencies
+- Identify performance requirements
+- Design system architecture
+- Plan for scalability
+- Assess security requirements
+
+**Deliverable:** Technical architecture document
+
+### Phase 2: Development (4-10 weeks)
+
+- Set up development environment
+- Build core backend infrastructure
+- Implement business logic
+- Integrate with Shopify and third parties
+- Build monitoring and logging
+- Comprehensive testing
+
+**Deliverable:** Functional backend system
+
+### Phase 3: Testing & Deployment (2-3 weeks)
+
+- Load testing
+- Security audit
+- Integration testing
+- Deployment to production
+- Monitoring setup
+- Documentation
+
+**Deliverable:** Live backend system
+
+### Phase 4: Support & Optimization (Ongoing)
+
+- Monitor performance
+- Bug fixes
+- Feature additions
+- Scaling adjustments
+- Security updates
+
+**Deliverable:** Maintained, optimized system
+
+
+============================================================
+INVESTMENT
+============================================================
+
+## Backend Development Pricing
+
+### API Development
+**$18,000-45,000**
+
+Simple API with standard CRUD operations to complex GraphQL API with advanced features.
+
+Timeline: 6-10 weeks
+
+### Data Processing System
+**$20,000-50,000**
+
+Real-time analytics, batch processing, ETL pipelines, complex calculations.
+
+Timeline: 8-12 weeks
+
+### Integration Middleware
+**$25,000-60,000**
+
+Multi-system integration with complex data transformation and business rules.
+
+Timeline: 10-14 weeks
+
+### Business Logic Engine
+**$22,000-55,000**
+
+Custom algorithms for pricing, inventory, routing, recommendations, fraud detection.
+
+Timeline: 8-12 weeks
+
+### Enterprise Backend
+**$60,000-150,000+**
+
+Complete backend infrastructure with multiple services, advanced features, high scalability.
+
+Timeline: 14-20 weeks
+
+### Ongoing Maintenance
+**$1,500-5,000/month**
+
+Monitoring, updates, bug fixes, minor feature additions, scaling adjustments.
+
+
+============================================================
+CASE STUDY
+============================================================
+
+## Real Results: Multi-Brand Backend System
+
+A company operating 4 D2C brands needed unified backend infrastructure for inventory, order processing, and analytics.
+
+### The Challenge
+- Each brand on separate Shopify stores
+- No unified inventory visibility
+- Manual order aggregation for fulfillment
+- No cross-brand analytics
+- Customer data siloed by brand
+
+### The Solution
+Built a custom backend system:
+- Unified API aggregating all 4 stores
+- Real-time inventory sync across brands
+- Intelligent order routing to 2 fulfillment centers
+- Cross-brand customer identification
+- Unified analytics dashboard
+
+### The Results
+- Reduced inventory costs 18% through better visibility
+- Eliminated 15 hours/week of manual work
+- Order processing time: 4 hours → 15 minutes
+- Enabled cross-brand customer insights
+- Foundation for 2 additional brand launches
+
+**ROI:** $65K investment. Saved $45K annually + enabled growth
+
+[Read Full Case Study →]
+
+
+============================================================
+FAQ
+============================================================
+
+**Why not use Shopify's built-in features?**
+Shopify is excellent for standard e-commerce but has limitations for complex custom logic, high-performance processing, or advanced integrations.
+
+**How long does backend development take?**
+Simple APIs: 6-10 weeks. Complex systems: 10-20 weeks. Timeline depends on scope and integrations.
+
+**Where is the backend hosted?**
+We typically use AWS, Vercel, or Railway. We recommend based on your needs and can work with your preferred platform.
+
+**How much does hosting cost?**
+Typically $200-1,000/month depending on traffic, data processing, and storage needs. We provide estimates during planning.
+
+**Can you scale the backend as we grow?**
+Yes. We architect for scalability and can adjust infrastructure as your needs change.
+
+**What if APIs change?**
+We monitor API changes and update integrations. This is included in maintenance retainers or can be handled as needed.
+
+**Do we own the code?**
+Yes, completely. You receive all source code and deployment instructions.
+
+**Can our team maintain it?**
+If you have technical resources, yes. We provide comprehensive documentation. Most clients opt for maintenance retainers.
+
+
+============================================================
+NEXT STEPS
+============================================================
+
+## Ready to Build Your Backend?
+
+Let's discuss your technical requirements and design the right solution.
+
+### 1. Schedule a Technical Consultation
+
+60-minute call where we:
+- Understand your requirements
+- Discuss architecture options
+- Assess integrations needed
+- Provide timeline estimate
+- Give cost estimate
+
+[Schedule Consultation →]
+
+### 2. Review Technical Portfolio
+
+See backend systems we've built:
+- API architectures
+- Integration examples
+- Performance metrics
+- Technical specifications
+
+[View Portfolio →]
+
+### 3. Download Our Architecture Guide
+
+Free resource:
+- Backend architecture patterns
+- Technology selection guide
+- Scaling considerations
+
+[Download Guide →]
+
+
+============================================================
+CONTACT
+============================================================
+
+**Email:** hello@scalefront.io
+**Schedule Call:** [Calendly Link]
+
+---
+
+Serving D2C brands worldwide | Founded by developers who care about craft
