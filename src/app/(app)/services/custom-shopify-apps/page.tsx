@@ -2,7 +2,7 @@ import Header from "@/components/header-footer/Header";
 import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Code2, Zap, DollarSign, Clock, TrendingUp, Package, Settings, Puzzle } from "lucide-react";
+import { ArrowRight, CheckCircle2, Code2, Zap, DollarSign, Clock, TrendingUp, Package, Settings, Puzzle, Store } from "lucide-react";
 import DottedSeparator from "@/components/seperators/DottedSeperator";
 
 export const metadata: Metadata = {
@@ -13,11 +13,13 @@ export const metadata: Metadata = {
     "custom Shopify app development",
     "Shopify app development",
     "private Shopify app",
-    "custom Shopify integration"
+    "custom Shopify integration",
+    "Shopify public app development",
+    "Shopify API integration"
   ],
   openGraph: {
     title: "Custom Shopify App Development Services | ScaleFront",
-    description: "Build custom Shopify apps for unique business logic, integrations, and workflows.",
+    description: "Build custom Shopify apps for unique business logic, integrations, and workflows. Public & private apps.",
     type: "website",
   },
   alternates: {
@@ -136,6 +138,12 @@ export default function CustomShopifyAppsPage() {
                   <h4 className="font-semibold text-lg mb-2">You Want to Own the Code</h4>
                   <p className="text-muted-foreground">
                     No more worrying about apps shutting down, raising prices, or changing features. You own the codebase and control your destiny.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">You Hit App Limitations</h4>
+                  <p className="text-muted-foreground">
+                    Performance bottlenecks, feature restrictions, or apps breaking with theme updates. Custom apps give you complete control.
                   </p>
                 </div>
               </div>
@@ -281,6 +289,45 @@ export default function CustomShopifyAppsPage() {
                 </p>
               </div>
             </div>
+
+            <div className="bg-card rounded-xl border border-border p-8 md:col-span-2">
+              <div className="flex items-center gap-3 mb-4">
+                <Store className="h-6 w-6 text-primary" />
+                <h3 className="text-xl font-bold">Public Apps for App Store</h3>
+              </div>
+              <p className="text-muted-foreground mb-4">Build Apps for Other Shopify Merchants</p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <ul className="space-y-2">
+                  {[
+                    "Complete app development from concept to listing",
+                    "Monetization strategy and pricing model design",
+                    "App Store optimization for discoverability"
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <ul className="space-y-2">
+                  {[
+                    "Ongoing maintenance and feature development",
+                    "Customer support infrastructure setup",
+                    "Marketing and growth strategy"
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mt-4 p-4 bg-primary/5 rounded-lg">
+                <p className="text-sm text-muted-foreground italic">
+                  Built our own AI product recommendations app (Solid AI Related Products) generating automatic product matches. Now serving 100+ stores.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -300,11 +347,12 @@ export default function CustomShopifyAppsPage() {
                 phase: "Phase 1: Discovery & Requirements",
                 duration: "1-2 weeks",
                 items: [
-                  "Deep dive into your business process",
-                  "Document current pain points and workarounds",
+                  "Deep dive into your business process and pain points",
+                  "Document current workarounds and manual workflows",
                   "Define success criteria and KPIs",
                   "Map data flow and integrations needed",
-                  "Identify edge cases and error scenarios"
+                  "Identify edge cases and error scenarios",
+                  "Assess Shopify API capabilities and limitations"
                 ],
                 deliverable: "Functional specification document, project timeline, fixed-price quote"
               },
@@ -313,10 +361,10 @@ export default function CustomShopifyAppsPage() {
                 duration: "1-2 weeks",
                 items: [
                   "Database schema design",
-                  "API integration design",
-                  "Authentication and security planning",
+                  "API integration design and authentication planning",
                   "Performance and scaling considerations",
-                  "User interface mockups (if applicable)"
+                  "User interface mockups (if applicable)",
+                  "Error handling and logging strategy"
                 ],
                 deliverable: "Technical architecture document, UI mockups, data models"
               },
@@ -328,7 +376,7 @@ export default function CustomShopifyAppsPage() {
                   "Shopify API integration and business logic",
                   "Third-party integrations and background jobs",
                   "Admin interface and configuration screens",
-                  "Testing, edge case handling, security audit"
+                  "Testing, edge case handling, and security audit"
                 ],
                 deliverable: "Fully functional app"
               },
@@ -338,11 +386,22 @@ export default function CustomShopifyAppsPage() {
                 items: [
                   "Install on staging store and test workflows",
                   "Performance testing under load",
-                  "User acceptance testing",
+                  "User acceptance testing with your team",
                   "Production setup and team training",
-                  "Launch monitoring and support"
+                  "Launch monitoring and immediate support"
                 ],
-                deliverable: "Live app, documentation, training"
+                deliverable: "Live app, complete documentation, team training"
+              },
+              {
+                phase: "Phase 5: Ongoing Support",
+                duration: "Optional",
+                items: [
+                  "Bug fixes and updates as needed",
+                  "Shopify API compatibility maintenance",
+                  "Feature enhancements and improvements",
+                  "Performance monitoring and optimization"
+                ],
+                deliverable: "Monthly maintenance retainers available"
               }
             ].map((phase, index) => (
               <div key={index} className="border-l-4 border-primary pl-8">
@@ -380,7 +439,7 @@ export default function CustomShopifyAppsPage() {
             Pricing varies significantly based on complexity. Here's transparent pricing based on app types.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 name: "Simple Private App",
@@ -406,7 +465,7 @@ export default function CustomShopifyAppsPage() {
                   "Custom admin dashboards",
                   "Real-time processing",
                   "Advanced error handling",
-                  "Customer-facing components (optional)"
+                  "Customer-facing components"
                 ],
                 examples: "B2B portal, multi-warehouse management, product configurator",
                 highlight: true
@@ -424,6 +483,20 @@ export default function CustomShopifyAppsPage() {
                   "White-glove development"
                 ],
                 examples: "Full ERP integration, multi-store platform, AI recommendation engine"
+              },
+              {
+                name: "Public App Store",
+                price: "$30,000-100,000",
+                timeline: "3-6 months",
+                features: [
+                  "Complete app development",
+                  "App Store listing optimization",
+                  "Billing integration",
+                  "Admin UI with Polaris",
+                  "Customer onboarding flow",
+                  "Documentation & help center"
+                ],
+                examples: "Public apps for Shopify App Store marketplace"
               }
             ].map((tier) => (
               <div
@@ -467,7 +540,7 @@ export default function CustomShopifyAppsPage() {
               <div>
                 <h4 className="font-semibold mb-2">Standard: $2,000/month</h4>
                 <ul className="space-y-2">
-                  {["Everything in Essential", "Minor feature additions", "Quarterly reviews"].map((item) => (
+                  {["Everything in Essential", "Minor feature additions (5 hrs/mo)", "Quarterly reviews"].map((item) => (
                     <li key={item} className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
                       <span className="text-sm text-muted-foreground">{item}</span>
@@ -478,7 +551,7 @@ export default function CustomShopifyAppsPage() {
               <div>
                 <h4 className="font-semibold mb-2">Premium: $4,000/month</h4>
                 <ul className="space-y-2">
-                  {["Everything in Standard", "Feature development", "Priority support SLA"].map((item) => (
+                  {["Everything in Standard", "Feature development (10 hrs/mo)", "Priority support SLA"].map((item) => (
                     <li key={item} className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
                       <span className="text-sm text-muted-foreground">{item}</span>
@@ -486,6 +559,25 @@ export default function CustomShopifyAppsPage() {
                   ))}
                 </ul>
               </div>
+            </div>
+          </div>
+
+          <div className="mt-8 bg-card rounded-xl border border-border p-6">
+            <h4 className="font-semibold mb-4">What's Included in All Packages</h4>
+            <div className="grid md:grid-cols-3 gap-4">
+              {[
+                "Complete source code ownership",
+                "Technical documentation",
+                "Admin user guide",
+                "Installation and setup",
+                "30 days post-launch support",
+                "Basic maintenance guide"
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">{item}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -501,6 +593,10 @@ export default function CustomShopifyAppsPage() {
               Real Results: Furniture Retailer Custom App
             </h2>
 
+            <p className="text-lg text-muted-foreground mb-8">
+              A made-to-order furniture brand was spending $900/month on 4 different apps but still needed 8+ hours of manual work weekly.
+            </p>
+
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div>
                 <h3 className="font-semibold text-lg mb-4">The Challenge</h3>
@@ -509,7 +605,9 @@ export default function CustomShopifyAppsPage() {
                     "Multiple apps with overlapping features ($900/month)",
                     "Manual order processing for custom furniture (8+ hours weekly)",
                     "Complex pricing based on materials and dimensions",
-                    "Orders getting stuck between apps"
+                    "No way to track production status",
+                    "Orders getting stuck between apps",
+                    "Apps breaking with theme updates"
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2">
                       <div className="rounded-full bg-muted p-1 mt-0.5">
@@ -527,7 +625,8 @@ export default function CustomShopifyAppsPage() {
                     "Single custom app with furniture configurator",
                     "Automatic pricing based on materials and labor",
                     "Integration with manufacturing system",
-                    "Production tracking and customer updates"
+                    "Production tracking through stages",
+                    "Automated customer updates"
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
@@ -553,10 +652,16 @@ export default function CustomShopifyAppsPage() {
               ))}
             </div>
 
-            <blockquote className="border-l-4 border-primary pl-6 italic text-muted-foreground">
-              "We should have built this 2 years ago. The app subscriptions were bleeding us dry, and we still had manual work. Now everything's automated."
-              <footer className="mt-2 text-sm font-medium text-foreground not-italic">— Operations Manager</footer>
-            </blockquote>
+            <div className="bg-card rounded-lg p-6 border border-border">
+              <p className="text-lg text-foreground font-medium mb-2">ROI: App paid for itself in 8 months</p>
+              <p className="text-muted-foreground mb-4">
+                Total annual benefit: $25,800 in savings + increased revenue from higher AOV and better customer experience
+              </p>
+              <blockquote className="border-l-4 border-primary pl-6 italic text-muted-foreground">
+                "We should have built this 2 years ago. The app subscriptions were bleeding us dry, and we still had manual work. Now everything's automated."
+                <footer className="mt-2 text-sm font-medium text-foreground not-italic">— Operations Manager</footer>
+              </blockquote>
+            </div>
           </div>
         </div>
       </section>
@@ -585,6 +690,10 @@ export default function CustomShopifyAppsPage() {
                 a: "We include 30 days post-launch support for bug fixes. After that, you can hire us on retainer ($1-4K/month) or handle maintenance yourself. We document everything clearly."
               },
               {
+                q: "Can you maintain apps built by other developers?",
+                a: "Often yes, if the code is well-documented. We'll review the codebase first to assess if we can work with it effectively."
+              },
+              {
                 q: "How much does hosting cost?",
                 a: "Typically $200-500/month depending on traffic and database usage. We can deploy to Vercel, Railway, AWS, or your preferred platform."
               },
@@ -593,12 +702,20 @@ export default function CustomShopifyAppsPage() {
                 a: "Shopify API changes are rare and usually backward-compatible. If breaking changes occur, we can update your app. This is why many clients opt for maintenance retainers."
               },
               {
-                q: "Can you help us decide between custom vs. existing apps?",
-                a: "Absolutely. We'll honestly tell you if existing apps are a better solution. We've turned down projects where apps made more sense."
+                q: "Can you integrate with any third-party system?",
+                a: "If it has an API, we can integrate with it. If no API exists, we can often scrape data or find workarounds, though this is less reliable."
+              },
+              {
+                q: "Do you sign NDAs?",
+                a: "Yes, we're happy to sign mutual NDAs before discussing your specific business logic and requirements."
               },
               {
                 q: "What if we want to add features later?",
                 a: "Easy. We can add features on a project basis or through ongoing retainer. Clean code means features are addable without rebuilding from scratch."
+              },
+              {
+                q: "Can you help us decide between custom vs. existing apps?",
+                a: "Absolutely. We'll honestly tell you if existing apps are a better solution. We've turned down projects where apps made more sense."
               }
             ].map((faq, index) => (
               <div key={index} className="bg-card rounded-lg border border-border p-6">
@@ -617,7 +734,7 @@ export default function CustomShopifyAppsPage() {
             Ready to Build Your Custom App?
           </h2>
           <p className="text-lg opacity-90">
-            Whether you're certain you need a custom app or still evaluating, we're here to provide honest guidance.
+            Custom apps are significant investments. Let's make sure it's the right solution for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
