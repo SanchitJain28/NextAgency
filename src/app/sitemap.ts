@@ -37,6 +37,73 @@ export default function sitemap(): MetadataRoute.Sitemap {
         `${baseUrl}/images/og-headless-woocommerce.png`
       ],
     },
+    // Individual Service Pages (High Priority for SEO)
+    {
+      url: `${baseUrl}/services/headless-commerce`,
+      lastModified: lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/performance-optimization`,
+      lastModified: lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/custom-shopify-apps`,
+      lastModified: lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/mobile-apps`,
+      lastModified: lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/theme-development`,
+      lastModified: lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/backend-api`,
+      lastModified: lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/conversion-optimization`,
+      lastModified: lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/custom-features`,
+      lastModified: lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/shopify-plus-migration`,
+      lastModified: lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/integrations`,
+      lastModified: lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/audit-consulting`,
+      lastModified: lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
     // Earn page (Shopify auditor)
     {
       url: `${baseUrl}/earn`,
