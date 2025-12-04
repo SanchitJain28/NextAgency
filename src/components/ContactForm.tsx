@@ -135,13 +135,14 @@ export function ContactForm() {
       {/* Phone - Full Width */}
       <div>
         <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-2">
-          Phone Number
+          Phone Number <span className="text-red-500">*</span>
         </label>
         <div className="flex gap-2">
           <select
             name="countryCode"
             value={formData.countryCode}
             onChange={handleChange}
+            required
             className="w-32 px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
           >
             {COUNTRY_CODES.map((country) => (
@@ -154,6 +155,7 @@ export function ContactForm() {
             type="tel"
             id="phone"
             name="phone"
+            required
             value={formData.phone}
             onChange={handleChange}
             className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
@@ -165,12 +167,13 @@ export function ContactForm() {
       {/* Company - Full Width */}
       <div>
         <label htmlFor="company" className="block text-sm font-medium text-gray-900 mb-2">
-          Company/Store Name
+          Company/Store Name <span className="text-red-500">*</span>
         </label>
         <input
           type="text"
           id="company"
           name="company"
+          required
           value={formData.company}
           onChange={handleChange}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
@@ -210,11 +213,12 @@ export function ContactForm() {
         {/* Budget */}
         <div>
           <label htmlFor="budget" className="block text-sm font-medium text-gray-900 mb-2">
-            Budget Range
+            Budget Range <span className="text-red-500">*</span>
           </label>
           <select
             id="budget"
             name="budget"
+            required
             value={formData.budget}
             onChange={handleChange}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
