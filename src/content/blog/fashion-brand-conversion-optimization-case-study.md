@@ -33,6 +33,8 @@ faqs:
 
 ## The Brand
 
+![Modern fashion retail storefront with minimalist contemporary clothing display](https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070&auto=format&fit=crop)
+
 Let's call them "Maven & Thread" (anonymized for confidentiality).
 
 They're a direct-to-consumer women's fashion brand based in Los Angeles, selling contemporary minimalist clothing—think Everlane meets COS. Price points: $80-320 per item.
@@ -48,6 +50,8 @@ The founder reached out to us in March 2024 with a simple question:
 We conducted a comprehensive audit. What we found was a textbook example of how good products and decent marketing can still produce mediocre results when the website experience has invisible friction points.
 
 ## The Problems We Identified
+
+![Business analytics dashboard displaying data metrics and insights](https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop)
 
 ### Problem #1: The Audience Mismatch
 
@@ -200,6 +204,8 @@ We implemented fixes in 4 phases over 4 months.
 
 ### Phase 1: Fix the Traffic (Weeks 1-3)
 
+![Digital marketing campaign on laptop with social media ads](https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?q=80&w=2070&auto=format&fit=crop)
+
 **What we did:**
 
 **1. Audience Refinement**
@@ -232,6 +238,8 @@ New ad creative: Lifestyle shots, minimalist aesthetic, copy focused on "timeles
 We got slightly less traffic, but way better traffic. Conversion jumped 31% in 3 weeks just from fixing who we were targeting.
 
 ### Phase 2: Product Discovery Overhaul (Weeks 3-6)
+
+![E-commerce search results page showing product grid and filters](https://images.unsplash.com/photo-1556742393-d75f468bfcb0?q=80&w=2070&auto=format&fit=crop)
 
 **What we implemented:**
 
@@ -290,6 +298,8 @@ People searched MORE because it actually worked. And when they searched, they bo
 
 ### Phase 3: Product Page Optimization (Weeks 6-9)
 
+![Professional product photography of fashion items on clean background](https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=2070&auto=format&fit=crop)
+
 **What we implemented:**
 
 **1. Smart Stock Indicators**
@@ -343,6 +353,8 @@ Added shipping calculator before checkout:
 The "Complete the Look" section alone added $48K in monthly revenue.
 
 ### Phase 4: Checkout Transformation (Weeks 9-16)
+
+![Mobile checkout payment screen with secure transaction on smartphone](https://images.unsplash.com/photo-1556742111-a301076d9d18?q=80&w=2070&auto=format&fit=crop)
 
 This was the big one.
 
@@ -402,6 +414,8 @@ Designed specifically for mobile:
 Getting people through checkout became effortless.
 
 ## The Complete Before & After
+
+![Business growth chart showing successful revenue increase and metrics](https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop)
 
 ### Traffic & Conversion
 
@@ -502,6 +516,8 @@ We tracked which changes had the biggest impact:
 **Lesson:** Small things (reviews visible, stock indicators, cross-sell) add up to big impact.
 
 ## What Surprised Us
+
+![Light bulb moment representing business insights and discoveries](https://images.unsplash.com/photo-1535378917042-10a22c95931a?q=80&w=2070&auto=format&fit=crop)
 
 **Surprise #1: Mobile Was the Bigger Opportunity**
 

@@ -37,6 +37,8 @@ And if they do want it, can they find it without frustration?
 
 Let me explain.
 
+![Analytics dashboard showing conversion rate metrics and performance data](https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop)
+
 ## The #1 Factor That Kills Conversion (Before Anything Else)
 
 I recently talked to a premium menswear brand. Beautiful site. Fast loading. Great photography.
@@ -117,6 +119,8 @@ The average customer journey has 15-20 decision points between landing and check
 
 ## Product Discovery: The Make-or-Break Moment
 
+![E-commerce search bar with magnifying glass icon on modern interface](https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070&auto=format&fit=crop)
+
 **Stat:** 43% of visitors go immediately to the search bar. If they can't find what they want in 2-3 searches, they leave.
 
 ### The Search Bar Problem
@@ -133,6 +137,8 @@ Standard Shopify search returns:
 Customer leaves. Conversion lost.
 
 ### Enter AI-Powered Search
+
+![Artificial intelligence and machine learning technology concept visualization](https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop)
 
 Modern AI search understands intent, not just keywords.
 
@@ -225,6 +231,8 @@ We've built this for clients—happy to discuss: [Learn more about our custom Sh
 
 ## Product Page Optimization: The Psychology of "Buy Now"
 
+![Shopping cart on laptop showing online retail product page](https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=2070&auto=format&fit=crop)
+
 Once they find the right product, your product page needs to convince them to buy.
 
 ### Urgency Without Being Sleazy
@@ -305,6 +313,8 @@ Conversion rate increased 18% while return rate only increased 3%.
 Net positive: significantly more revenue.
 
 ## The Subtle Art of Upselling Without Annoying Customers
+
+![Person shopping online with multiple product recommendations displayed](https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop)
 
 Here's where most stores screw up: they interrupt the buying journey with aggressive upsells.
 
@@ -395,6 +405,8 @@ Customer viewing: Premium yoga mat ($80)
 Conversion rate on recommended products: 8.7% vs 2.4% with traditional recommendations.
 
 ## Checkout Optimization: The Final (and Most Critical) Hurdle
+
+![Mobile payment and secure checkout process on smartphone](https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop)
 
 You got them to add to cart. 70% will abandon at checkout.
 
@@ -517,6 +529,8 @@ Interested in headless? [Learn more about our headless commerce services](/servi
 
 ## Putting It All Together: The Conversion Optimization Roadmap
 
+![Business strategy roadmap with planning documents and charts](https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop)
+
 Here's how to approach this systematically:
 
 ### Phase 1: Audience Audit (Week 1)
@@ -586,6 +600,8 @@ Here's how to approach this systematically:
 - Analyze product page bounce rates
 
 ## Real-World Results: What's Actually Possible
+
+![Growth chart showing upward trending business metrics and success](https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop)
 
 Let me share results from 3 real stores (anonymized) that implemented these strategies:
 
