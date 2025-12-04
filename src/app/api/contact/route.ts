@@ -123,12 +123,19 @@ function generateContactEmail(data: ContactFormData): string {
   };
 
   const budgetLabels: Record<string, string> = {
+    'under-5k': 'Under $5,000',
+    '5k-10k': '$5,000 - $10,000',
+    '10k-25k': '$10,000 - $25,000',
+    '25k-50k': '$25,000 - $50,000',
+    '50k-100k': '$50,000 - $100,000',
+    '100k-plus': '$100,000+',
+    'not-sure': 'Not sure yet',
+    // Legacy INR values (in case old submissions exist)
     'under-3': 'Under ₹3 lakh',
     '3-6': '₹3-6 lakh',
     '6-12': '₹6-12 lakh',
     '12-25': '₹12-25 lakh',
     '25-plus': '₹25 lakh+',
-    'not-sure': 'Not sure yet',
   };
 
   return `

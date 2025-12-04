@@ -7,6 +7,7 @@ import { Loader2 } from 'lucide-react';
 interface FormData {
   name: string;
   email: string;
+  countryCode: string;
   phone: string;
   company: string;
   projectType: string;
@@ -14,10 +15,24 @@ interface FormData {
   message: string;
 }
 
+const COUNTRY_CODES = [
+  { code: '+1', name: 'US/Canada', flag: '🇺🇸' },
+  { code: '+91', name: 'India', flag: '🇮🇳' },
+  { code: '+44', name: 'UK', flag: '🇬🇧' },
+  { code: '+49', name: 'Germany', flag: '🇩🇪' },
+  { code: '+61', name: 'Australia', flag: '🇦🇺' },
+  { code: '+971', name: 'UAE', flag: '🇦🇪' },
+  { code: '+65', name: 'Singapore', flag: '🇸🇬' },
+  { code: '+33', name: 'France', flag: '🇫🇷' },
+  { code: '+81', name: 'Japan', flag: '🇯🇵' },
+  { code: '+86', name: 'China', flag: '🇨🇳' },
+];
+
 export function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
+    countryCode: '+1',
     phone: '',
     company: '',
     projectType: '',
@@ -42,12 +57,18 @@ export function ContactForm() {
     setSubmitStatus('idle');
 
     try {
+      // Combine country code with phone number
+      const fullPhone = formData.phone ? `${formData.countryCode} ${formData.phone}` : '';
+
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          phone: fullPhone,
+        }),
       });
 
       if (response.ok) {
@@ -55,6 +76,7 @@ export function ContactForm() {
         setFormData({
           name: '',
           email: '',
+          countryCode: '+1',
           phone: '',
           company: '',
           projectType: '',
@@ -114,15 +136,29 @@ export function ContactForm() {
           <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-2">
             Phone Number
           </label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
-            placeholder="+91 98765 43210"
-          />
+          <div className="flex gap-2">
+            <select
+              name="countryCode"
+              value={formData.countryCode}
+              onChange={handleChange}
+              className="w-32 px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
+            >
+              {COUNTRY_CODES.map((country) => (
+                <option key={country.code} value={country.code}>
+                  {country.flag} {country.code}
+                </option>
+              ))}
+            </select>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
+              placeholder="98765 43210"
+            />
+          </div>
         </div>
 
         {/* Company */}
@@ -181,11 +217,12 @@ export function ContactForm() {
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
           >
             <option value="">Select budget range</option>
-            <option value="under-3">Under ₹3 lakh</option>
-            <option value="3-6">₹3-6 lakh</option>
-            <option value="6-12">₹6-12 lakh</option>
-            <option value="12-25">₹12-25 lakh</option>
-            <option value="25-plus">₹25 lakh+</option>
+            <option value="under-5k">Under $5,000</option>
+            <option value="5k-10k">$5,000 - $10,000</option>
+            <option value="10k-25k">$10,000 - $25,000</option>
+            <option value="25k-50k">$25,000 - $50,000</option>
+            <option value="50k-100k">$50,000 - $100,000</option>
+            <option value="100k-plus">$100,000+</option>
             <option value="not-sure">Not sure yet</option>
           </select>
         </div>
