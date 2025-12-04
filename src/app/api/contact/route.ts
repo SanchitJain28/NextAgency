@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
                        'unknown';
     const user_agent = request.headers.get('user-agent') || 'unknown';
 
-    // Save to Supabase database
+    // Save to Supabase database (primary goal - always do this first)
     const { data: submissionData, error: dbError } = await supabaseAdmin
       .from('contact_submissions')
       .insert([
@@ -61,41 +61,44 @@ export async function POST(request: NextRequest) {
 
     if (dbError) {
       console.error('Database error:', dbError);
-      // Continue even if database save fails - still send emails
+      return NextResponse.json(
+        { error: 'Failed to save submission. Please try again.' },
+        { status: 500 }
+      );
     }
 
     // Generate email content
     const emailHtml = generateContactEmail(data);
 
-    // Send email to your team
-    const emailSent = await sendEmail({
-      to: process.env.CONTACT_EMAIL || 'hello@scalefront.io',
-      subject: `New Contact Form Submission: ${data.projectType}`,
-      html: emailHtml,
-    });
+    // Try to send emails (optional - don't fail if this doesn't work)
+    try {
+      // Send email to your team
+      await sendEmail({
+        to: process.env.CONTACT_EMAIL || 'hello@scalefront.io',
+        subject: `New Contact Form Submission: ${data.projectType}`,
+        html: emailHtml,
+      });
 
-    // Send confirmation email to customer
-    const confirmationSent = await sendEmail({
-      to: data.email,
-      subject: 'Thank you for contacting ScaleFront',
-      html: generateConfirmationEmail(data),
-    });
-
-    if (emailSent) {
-      return NextResponse.json(
-        {
-          success: true,
-          message: 'Contact form submitted successfully',
-          submissionId: submissionData?.id
-        },
-        { status: 200 }
-      );
-    } else {
-      return NextResponse.json(
-        { error: 'Failed to send email' },
-        { status: 500 }
-      );
+      // Send confirmation email to customer
+      await sendEmail({
+        to: data.email,
+        subject: 'Thank you for contacting ScaleFront',
+        html: generateConfirmationEmail(data),
+      });
+    } catch (emailError) {
+      console.error('Email sending error:', emailError);
+      // Don't fail the request if email fails - data is already saved
     }
+
+    // Success! Data is saved to Supabase (email is bonus)
+    return NextResponse.json(
+      {
+        success: true,
+        message: 'Contact form submitted successfully',
+        submissionId: submissionData?.id
+      },
+      { status: 200 }
+    );
   } catch (error) {
     console.error('Contact form error:', error);
     return NextResponse.json(
