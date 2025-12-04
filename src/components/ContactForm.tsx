@@ -130,52 +130,55 @@ export function ContactForm() {
             placeholder="john@example.com"
           />
         </div>
+      </div>
 
-        {/* Phone */}
-        <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-2">
-            Phone Number
-          </label>
-          <div className="flex gap-2">
-            <select
-              name="countryCode"
-              value={formData.countryCode}
-              onChange={handleChange}
-              className="w-32 px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
-            >
-              {COUNTRY_CODES.map((country) => (
-                <option key={country.code} value={country.code}>
-                  {country.flag} {country.code}
-                </option>
-              ))}
-            </select>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
-              placeholder="98765 43210"
-            />
-          </div>
-        </div>
-
-        {/* Company */}
-        <div>
-          <label htmlFor="company" className="block text-sm font-medium text-gray-900 mb-2">
-            Company/Store Name
-          </label>
-          <input
-            type="text"
-            id="company"
-            name="company"
-            value={formData.company}
+      {/* Phone - Full Width */}
+      <div>
+        <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-2">
+          Phone Number
+        </label>
+        <div className="flex gap-2">
+          <select
+            name="countryCode"
+            value={formData.countryCode}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
-            placeholder="Your Company"
+            className="w-32 px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
+          >
+            {COUNTRY_CODES.map((country) => (
+              <option key={country.code} value={country.code}>
+                {country.flag} {country.code}
+              </option>
+            ))}
+          </select>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
+            placeholder="98765 43210"
           />
         </div>
+      </div>
+
+      {/* Company - Full Width */}
+      <div>
+        <label htmlFor="company" className="block text-sm font-medium text-gray-900 mb-2">
+          Company/Store Name
+        </label>
+        <input
+          type="text"
+          id="company"
+          name="company"
+          value={formData.company}
+          onChange={handleChange}
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
+          placeholder="Your Company"
+        />
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
         {/* Project Type */}
         <div>
