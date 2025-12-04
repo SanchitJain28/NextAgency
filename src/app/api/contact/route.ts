@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { sendEmail } from '@/lib/email/emailService';
+import { supabaseAdmin } from '@/lib/supabase/client';
 
 interface ContactFormData {
   name: string;
@@ -32,6 +33,37 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Get IP address and user agent for tracking
+    const ip_address = request.headers.get('x-forwarded-for')?.split(',')[0] ||
+                       request.headers.get('x-real-ip') ||
+                       'unknown';
+    const user_agent = request.headers.get('user-agent') || 'unknown';
+
+    // Save to Supabase database
+    const { data: submissionData, error: dbError } = await supabaseAdmin
+      .from('contact_submissions')
+      .insert([
+        {
+          name: data.name,
+          email: data.email.toLowerCase(),
+          phone: data.phone || null,
+          company: data.company || null,
+          project_type: data.projectType,
+          budget: data.budget || null,
+          message: data.message,
+          status: 'new',
+          ip_address,
+          user_agent
+        }
+      ])
+      .select()
+      .single();
+
+    if (dbError) {
+      console.error('Database error:', dbError);
+      // Continue even if database save fails - still send emails
+    }
+
     // Generate email content
     const emailHtml = generateContactEmail(data);
 
@@ -53,7 +85,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           success: true,
-          message: 'Contact form submitted successfully'
+          message: 'Contact form submitted successfully',
+          submissionId: submissionData?.id
         },
         { status: 200 }
       );
