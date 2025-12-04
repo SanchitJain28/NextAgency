@@ -45,9 +45,21 @@ export function ContactForm() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
+    const { name, value } = e.target;
+
+    // For phone field, only allow numbers, spaces, dashes, and parentheses
+    if (name === 'phone') {
+      const cleanedValue = value.replace(/[^\d\s\-()]/g, '');
+      setFormData((prev) => ({
+        ...prev,
+        [name]: cleanedValue,
+      }));
+      return;
+    }
+
     setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value,
+      [name]: value,
     }));
   };
 
@@ -124,10 +136,12 @@ export function ContactForm() {
             id="email"
             name="email"
             required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
             value={formData.email}
             onChange={handleChange}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
             placeholder="john@example.com"
+            title="Please enter a valid email address"
           />
         </div>
       </div>
@@ -156,10 +170,14 @@ export function ContactForm() {
             id="phone"
             name="phone"
             required
+            pattern="[\d\s\-()]+"
+            minLength={10}
+            maxLength={15}
             value={formData.phone}
             onChange={handleChange}
             className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
-            placeholder="98765 43210"
+            placeholder="1234567890"
+            title="Please enter a valid phone number (10-15 digits)"
           />
         </div>
       </div>
