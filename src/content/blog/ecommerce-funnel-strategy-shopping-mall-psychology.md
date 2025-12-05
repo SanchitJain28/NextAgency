@@ -51,6 +51,8 @@ But ecommerce isn't about having pages. It's about orchestrating a journey where
 
 Let me show you what I mean.
 
+![Ecommerce funnel strategy visualization showing customer journey from awareness to purchase](/images/Gemini_Generated_Image_am20lsam20lsam20.png)
+
 ## The Shopping Mall Blueprint (And Why It Works)
 
 Before we talk about your online store, let's understand why physical retail works the way it does.
