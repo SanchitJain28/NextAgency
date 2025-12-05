@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Script from 'next/script';
 import { Header } from '@/components/header-footer/Header';
-import Footer from '@/components/header-footer/Footer';
+import EarnFooter from '@/components/earn/EarnFooter';
 import AuditForm from '@/components/earn/AuditForm';
 import ResultsDashboard from '@/components/earn/ResultsDashboard';
 import EmailCollectionModal from '@/components/earn/EmailCollectionModal';
@@ -148,7 +148,7 @@ export default function EarnAuditorPage() {
           />
       </main>
 
-      <Footer />
+      <EarnFooter />
     </div>
   );
 }
