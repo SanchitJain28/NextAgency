@@ -573,6 +573,229 @@ export default function LandingPage() {
 
         <BlogSection/>
 
+        {/* SEO Content Footer Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black border-t border-white/10">
+          <div className="max-w-7xl mx-auto">
+            <div className="prose prose-invert prose-lg max-w-none">
+              {/* Why We Built Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="mb-16"
+              >
+                <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-white">
+                  Why We Built AI CrossSell, Upsell & Related Products
+                </h2>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  We created this Shopify AI recommendation app after seeing thousands of online stores struggle with manual product recommendations. Store owners were spending hours tagging products, creating cross-sell rules, and manually updating upsell suggestions—only to see mediocre results. We knew there had to be a better way.
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  Our mission was simple: help Shopify merchants increase average order value and boost conversion rates without the manual work. By leveraging artificial intelligence and machine learning, we built an app that automatically analyzes your product catalog and shows intelligent product recommendations that actually convert.
+                </p>
+              </motion.div>
+
+              {/* How AI Increases Conversion */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="mb-16"
+              >
+                <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-white">
+                  How AI Product Recommendations Increase Your Conversion Rate
+                </h2>
+
+                <div className="space-y-8">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-4 text-white">
+                      Smart Cross-Selling Based on Product Data
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      Our AI-powered recommendation engine analyzes five critical data points for every product in your Shopify store: product names, descriptions, images, categories, and tags. This comprehensive analysis ensures customers see the most relevant cross-sell recommendations, increasing the likelihood of adding complementary items to their cart. Whether you sell fashion apparel, beauty products, electronics, or home goods, our intelligent product matching drives higher average order values.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-2xl font-bold mb-4 text-white">
+                      Automated Upselling That Works
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      Stop leaving revenue on the table. Our upsell app automatically identifies premium alternatives and higher-value products that match customer intent. When shoppers view a basic product, they'll see relevant upsell suggestions for upgraded versions—no manual configuration required. This automated upselling strategy has helped ecommerce stores increase their AOV by 20-30% on average.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-2xl font-bold mb-4 text-white">
+                      Related Products That Drive Additional Sales
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      The app displays similar products and related items across your product pages, cart, collection pages, and homepage. By showing visually similar products and contextually relevant recommendations, you keep customers engaged and increase the chances of multiple-item purchases. Our AI understands product relationships better than manual tagging ever could.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Industry-Specific Use Cases */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="mb-16"
+              >
+                <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-white">
+                  Increase Conversion Rate by Product Category
+                </h2>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                  {[
+                    {
+                      title: "Fashion & Apparel Stores",
+                      description: "Show complete outfit suggestions automatically. When customers view a dress, our AI recommends matching shoes, accessories, and jewelry—creating a seamless shopping experience that increases basket size."
+                    },
+                    {
+                      title: "Beauty & Cosmetics",
+                      description: "Recommend complementary skincare routines and makeup products. Our product recommendation algorithm understands which items work together, helping customers discover complete beauty solutions."
+                    },
+                    {
+                      title: "Electronics & Gadgets",
+                      description: "Automatically suggest compatible accessories, warranties, and upgrades. From phone cases to chargers to premium models, maximize every sale with intelligent cross-sell and upsell recommendations."
+                    },
+                    {
+                      title: "Home & Garden",
+                      description: "Help customers complete their space with matching décor items, furniture sets, and complementary products. Our visual similarity AI identifies products that belong together."
+                    },
+                    {
+                      title: "Jewelry Stores",
+                      description: "Suggest matching sets and complementary pieces. When customers view earrings, automatically show matching necklaces, bracelets, and rings to increase order value."
+                    }
+                  ].map((category, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="bg-white/5 p-6 rounded-xl border border-white/10"
+                    >
+                      <h3 className="text-xl font-bold mb-3 text-white">
+                        {category.title}
+                      </h3>
+                      <p className="text-gray-300 leading-relaxed">
+                        {category.description}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Key Features */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="mb-16"
+              >
+                <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-white">
+                  Key Features for Higher Shopify Conversion Rates
+                </h2>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  {[
+                    "AI-Powered Product Recommendations: Machine learning analyzes product similarity based on titles, descriptions, images, categories, and tags",
+                    "Zero Manual Setup: Install in 2 minutes with automatic product analysis—no tagging or configuration required",
+                    "Smart Cross-Sell & Upsell: Show complementary products (cross-sell) and premium alternatives (upsell) automatically",
+                    "Multi-Page Display: Product recommendations appear on product pages, cart, collections, and homepage for maximum visibility",
+                    "Manual Override Controls: Fine-tune any recommendation while AI handles the rest",
+                    "Automatic Sync: New products get instant AI-generated recommendations without manual work",
+                    "Conversion-Optimized Widgets: Customizable designs that match your store theme and drive clicks"
+                  ].map((feature, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="flex items-start space-x-3"
+                    >
+                      <CheckCircle2 className="w-6 h-6 text-white flex-shrink-0 mt-1" />
+                      <span className="text-gray-300">{feature}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Business Impact */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="mb-16"
+              >
+                <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-white">
+                  Boost Your Ecommerce Metrics
+                </h2>
+
+                <div className="space-y-6">
+                  <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                    <h3 className="text-xl font-bold mb-3 text-white">
+                      Increase Average Order Value (AOV)
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      By showing relevant product recommendations at the right moment, customers naturally add more items to their cart. Our merchants report 20-30% average order value increases.
+                    </p>
+                  </div>
+
+                  <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                    <h3 className="text-xl font-bold mb-3 text-white">
+                      Improve Conversion Rate
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      Intelligent product suggestions reduce decision fatigue and help customers find exactly what they need, leading to higher conversion rates across your store.
+                    </p>
+                  </div>
+
+                  <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                    <h3 className="text-xl font-bold mb-3 text-white">
+                      Reduce Cart Abandonment
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      Cart page recommendations give customers last-minute opportunities to complete their purchase with additional relevant products.
+                    </p>
+                  </div>
+
+                  <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                    <h3 className="text-xl font-bold mb-3 text-white">
+                      Maximize Revenue Per Visitor
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      Turn single-product browsers into multi-item buyers with AI-powered cross-sell and upsell suggestions.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Final CTA Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-r from-white/10 to-white/5 p-8 rounded-2xl border border-white/20"
+              >
+                <h2 className="text-3xl font-bold mb-4 text-white">
+                  Perfect for Growing Shopify Stores
+                </h2>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  Whether you're a new Shopify merchant or an established ecommerce brand, our AI recommendation app scales with your business. From stores with 50 products to catalogs with thousands of SKUs, the artificial intelligence handles everything automatically. No need to hire developers, spend weeks on setup, or manually maintain product relationships.
+                </p>
+                <p className="text-xl font-bold text-white">
+                  Start increasing your Shopify store revenue today with AI-powered product recommendations that work.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* Footer */}
         <Footer />
       </div>
