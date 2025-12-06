@@ -132,8 +132,8 @@ const HeroSection = () => {
 
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-white leading-relaxed max-w-xl">
-              Custom development, headless commerce, and performance
-              optimization for ambitious Shopify brands.
+              A premier Shopify agency delivering custom development, headless commerce, and performance
+              optimization for ambitious brands.
             </p>
 
             {/* CTA Buttons */}
@@ -258,8 +258,8 @@ const ServicesOverview = () => {
             Our services
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            From custom apps to headless commerce—we build Shopify solutions
-            that drive results.
+            As a full-service Shopify agency, we build custom apps, headless commerce solutions,
+            and high-performance stores that drive results.
           </p>
         </div>
 
@@ -457,8 +457,8 @@ const WhyChooseSection = () => {
               Why work with us
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              We build revenue-generating Shopify stores optimized for growth
-              and scale.
+              As a specialized Shopify agency, we build revenue-generating stores optimized for growth
+              and scale. Partner with experts who understand ecommerce.
             </p>
             <Button
               size="lg"
@@ -531,7 +531,8 @@ const ResultsSection = () => {
             Real results
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Proven track record of delivering measurable growth
+            Proven track record of delivering measurable growth. See why brands choose our Shopify agency
+            for transformative results.
           </p>
         </div>
 
@@ -607,8 +608,8 @@ const FinalCTASection = () => {
           Ready to get started?
         </h2>
         <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto leading-relaxed">
-          Let&apos;s transform your Shopify store into a high-performing revenue
-          machine.
+          Partner with a trusted Shopify agency to transform your store into a high-performing revenue
+          machine. Let&apos;s build something exceptional together.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
