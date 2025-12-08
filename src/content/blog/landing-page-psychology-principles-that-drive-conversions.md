@@ -5,7 +5,7 @@ date: 2025-12-07
 author: "ScaleFront Team"
 category: "Conversion Optimization"
 tags: ["landing page psychology", "conversion optimization", "persuasion principles", "cognitive biases", "web design psychology"]
-image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop"
+image: "https://images.unsplash.com/photo-1586717799252-bd134ad00e26?w=1200&h=630&fit=crop"
 faqs:
   - question: "What is landing page psychology?"
     answer: "Landing page psychology is the application of behavioral science and cognitive principles to design landing pages that align with how humans naturally make decisions. It includes principles like social proof, loss aversion, scarcity, cognitive fluency, and visual hierarchy to reduce friction and increase conversions."

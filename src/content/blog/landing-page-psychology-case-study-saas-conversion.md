@@ -5,7 +5,7 @@ date: 2025-12-07
 author: "ScaleFront Team"
 category: "Conversion Optimization"
 tags: ["landing page psychology case study", "conversion optimization", "case study", "SaaS conversion", "A/B testing"]
-image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop"
+image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=630&fit=crop"
 faqs:
   - question: "How much does landing page optimization cost?"
     answer: "Costs vary by complexity. This case study cost $12,000 for comprehensive optimization including: copy rewrite, design updates, form reduction, A/B testing setup, and implementation. Simple optimizations cost $3,000-5,000. Complex enterprise pages cost $15,000-30,000. ROI is typically 300-800% in first year."

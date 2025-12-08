@@ -5,7 +5,7 @@ date: 2025-12-08
 author: "ScaleFront Team"
 category: "Conversion Optimization"
 tags: ["ecommerce CRO audit", "conversion rate optimization", "audit checklist", "ecommerce optimization", "CRO framework"]
-image: https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop
+image: https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=630&fit=crop
 faqs:
   - question: "How long does a CRO audit take?"
     answer: "A comprehensive CRO audit takes 15-25 hours total: 2-4 hours for analytics setup, 3-5 hours for traffic analysis, 2-3 hours for funnel analysis, 3-4 hours for on-page review, 2-4 hours for qualitative feedback, and 2-3 hours for prioritization. Typically completed over 1-2 weeks to collect sufficient data. Professional agencies charge $3,000-15,000 for full audits."
