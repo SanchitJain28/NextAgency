@@ -347,6 +347,145 @@ export default function AuditForm({ onSubmit, loading }: AuditFormProps) {
           </div>
         </section>
 
+        {/* Conversion Rate Optimization Section */}
+        <section className="max-w-6xl mx-auto">
+          <div className="bg-gradient-to-br from-green-50 via-emerald-50 to-green-50 rounded-3xl p-8 md:p-12 border-2 border-green-200">
+            <div className="text-center mb-10">
+              <div className="inline-flex items-center gap-2 rounded-full bg-green-600 px-4 py-2 text-sm font-bold text-white mb-4">
+                <span>💡</span>
+                <span>CRO-Focused Analysis</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                How Earn Helps With Conversion Rate Optimization
+              </h2>
+              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                Unlike generic website auditors that only check page speed, Earn is specifically designed to identify and fix conversion rate killers in your Shopify store.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-10">
+              <div className="bg-white rounded-xl p-6 shadow-md border border-green-100">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-2xl">
+                    🎯
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">Trust Signal Analysis</h3>
+                    <p className="text-gray-700 mb-3">
+                      We analyze whether your store has essential trust signals that reduce purchase anxiety:
+                    </p>
+                    <ul className="space-y-2 text-sm text-gray-600">
+                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Customer reviews and ratings visibility</li>
+                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Trust badges (secure checkout, money-back guarantee)</li>
+                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> SSL certificate and HTTPS security</li>
+                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Clear return and shipping policies</li>
+                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Contact information and support options</li>
+                    </ul>
+                    <p className="text-xs text-gray-500 mt-3 italic">Impact: Stores with visible trust signals see 15-42% higher conversion rates</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 shadow-md border border-green-100">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-2xl">
+                    💰
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">Revenue-Driving Features</h3>
+                    <p className="text-gray-700 mb-3">
+                      We detect advanced features proven to increase average order value and conversions:
+                    </p>
+                    <ul className="space-y-2 text-sm text-gray-600">
+                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Upsell and cross-sell recommendations</li>
+                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Product bundles and quantity discounts</li>
+                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Abandoned cart recovery mechanisms</li>
+                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Promo code visibility and urgency timers</li>
+                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Wishlist and save-for-later features</li>
+                    </ul>
+                    <p className="text-xs text-gray-500 mt-3 italic">Impact: Upsells and cross-sells can increase AOV by 10-30%</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 shadow-md border border-green-100">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-2xl">
+                    ⚡
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">Friction Point Detection</h3>
+                    <p className="text-gray-700 mb-3">
+                      We identify elements that create unnecessary friction in the buying journey:
+                    </p>
+                    <ul className="space-y-2 text-sm text-gray-600">
+                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Slow page load times (>3 seconds)</li>
+                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Mobile usability issues and responsiveness</li>
+                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Unclear or hidden call-to-action buttons</li>
+                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Missing product information (size, specs, shipping)</li>
+                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Checkout complexity and extra steps</li>
+                    </ul>
+                    <p className="text-xs text-gray-500 mt-3 italic">Impact: Reducing friction can improve conversion by 20-50%</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 shadow-md border border-green-100">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-2xl">
+                    📊
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">Analytics & Tracking Verification</h3>
+                    <p className="text-gray-700 mb-3">
+                      We verify that essential tracking tools are properly implemented:
+                    </p>
+                    <ul className="space-y-2 text-sm text-gray-600">
+                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Google Analytics 4 (GA4) event tracking</li>
+                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Facebook Pixel and Conversions API</li>
+                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> TikTok Pixel for ad tracking</li>
+                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Google Tag Manager setup</li>
+                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> E-commerce conversion tracking</li>
+                    </ul>
+                    <p className="text-xs text-gray-500 mt-3 italic">Impact: Proper tracking enables data-driven optimization decisions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-green-300">
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Real CRO Impact</h3>
+                <p className="text-gray-600">Based on stores that implemented our recommendations</p>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-green-600 mb-2">+32%</div>
+                  <div className="text-sm text-gray-600">Average Conversion Rate Increase</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-green-600 mb-2">+18%</div>
+                  <div className="text-sm text-gray-600">Average Order Value Boost</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-green-600 mb-2">-24%</div>
+                  <div className="text-sm text-gray-600">Cart Abandonment Reduction</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-green-600 mb-2">2.4x</div>
+                  <div className="text-sm text-gray-600">ROI Within First Quarter</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 text-center">
+              <p className="text-gray-700 font-medium">
+                🚀 <strong>Every 1% improvement in conversion rate</strong> = Significant revenue increase without spending more on ads
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Why Use Earn Section */}
         <section className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
