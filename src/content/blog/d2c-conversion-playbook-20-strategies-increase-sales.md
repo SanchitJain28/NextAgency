@@ -5,7 +5,7 @@ date: 2025-12-09
 author: "ScaleFront Team"
 category: "Conversion Optimization"
 tags: ["D2C conversion strategies", "direct to consumer conversion", "ecommerce conversion tactics", "D2C sales optimization", "Shopify conversion"]
-image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop"
+image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&h=630&fit=crop"
 faqs:
   - question: "What is D2C conversion optimization?"
     answer: "D2C (Direct-to-Consumer) conversion optimization is the systematic process of improving how many website visitors become paying customers in brands that sell directly to consumers without retailers. It focuses on removing friction, creating urgency, and building desire using psychology-driven strategies proven by brands like Glossier, Warby Parker, and Allbirds."
@@ -41,7 +41,7 @@ This is the playbook used by Glossier ($1.8B valuation), Warby Parker ($3B), Gym
 
 20 strategies. 7 frameworks. All tested at scale.
 
-![D2C ecommerce conversion optimization strategies](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop)
+![D2C ecommerce conversion optimization strategies](https://images.unsplash.com/photo-1556740758-90de374c12ad?w=1200&h=630&fit=crop)
 
 ## Part 1: Capture Attention (The First 3 Seconds)
 
@@ -708,7 +708,7 @@ Result: 38% of customers own multiple bottles, repeat purchase rate 3.2x higher 
 
 **The dopamine of "what's new" drives habitual browsing.**
 
-![New product release strategy calendar](https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=1200&h=630&fit=crop)
+![New product release strategy calendar](https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=1200&h=630&fit=crop)
 
 **Your application:**
 
@@ -1061,7 +1061,7 @@ Tools:
 - Klaviyo cohort reports
 - Customer surveys
 
-![Ecommerce funnel optimization analytics](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=630&fit=crop)
+![Ecommerce funnel optimization analytics](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop)
 
 **The audit checklist:**
 
