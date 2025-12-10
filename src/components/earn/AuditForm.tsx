@@ -419,7 +419,7 @@ export default function AuditForm({ onSubmit, loading }: AuditFormProps) {
                       We identify elements that create unnecessary friction in the buying journey:
                     </p>
                     <ul className="space-y-2 text-sm text-gray-600">
-                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Slow page load times (>3 seconds)</li>
+                      <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Slow page load times (&gt;3 seconds)</li>
                       <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Mobile usability issues and responsiveness</li>
                       <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Unclear or hidden call-to-action buttons</li>
                       <li className="flex items-start"><span className="text-green-600 mr-2 font-bold">✓</span> Missing product information (size, specs, shipping)</li>
