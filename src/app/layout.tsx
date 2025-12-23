@@ -12,9 +12,19 @@ export const metadata: Metadata = {
     default: "ScaleFront - Elite Shopify Development Agency | Custom Apps & Themes",
     template: "%s | ScaleFront - Expert Shopify Solutions"
   },
-  icons:{
-    icon:"/logos/scalefrontonlyicon.png"
+  icons: {
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    shortcut: '/favicon-32x32.png',
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
+  manifest: '/site.webmanifest',
   description: "Elite Shopify development agency specializing in headless commerce, custom apps, theme development, and performance optimization. Transform your Shopify store with cutting-edge solutions.",
   keywords: [
     "Shopify development agency",
