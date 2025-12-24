@@ -41,7 +41,7 @@ I've helped dozens of Shopify stores prepare for holidays. The ones that follow 
 
 Here's exactly how to get your store ready.
 
-![Holiday shopping preparation for ecommerce](https://images.unsplash.com/photo-1513885535751-8b9238bd345a?q=80&w=2070&auto=format&fit=crop)
+![Holiday shopping preparation for ecommerce](https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=2070&auto=format&fit=crop)
 
 ## The Holiday Shopping Timeline (Start Earlier Than You Think)
 
@@ -485,7 +485,7 @@ Holiday traffic = 3-5x normal. Your site needs to handle it.
 - Upgrade hosting plan if needed
 - Use Shopify's CDN (built-in)
 
-![Website performance optimization](https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop)
+![Website performance optimization](https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop)
 
 ### Inventory management
 
@@ -836,7 +836,7 @@ Email drives 20-30% of holiday revenue. If you're not sending daily emails durin
 
 The sale doesn't end December 25. Plan for returns, January sales, and retaining those new customers.
 
-![Common ecommerce mistakes](https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop)
+![Common ecommerce mistakes](https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2070&auto=format&fit=crop)
 
 ## Real Numbers: What's Actually Possible
 
