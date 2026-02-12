@@ -167,5 +167,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.3,
     },
+    {
+      url: `${baseUrl}/upsell-cross-sell-app/privacy-policy`,
+      lastModified: lastModified,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
   ]
 }
