@@ -24,7 +24,7 @@ interface BlogPostPageProps {
 }
 
 export async function generateStaticParams() {
-  const posts = getAllPosts();
+  const posts =await getAllPosts();
   return posts.map((post) => ({
     slug: post.slug,
   }));
@@ -32,7 +32,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post =await getPostBySlug(slug);
 
   if (!post) {
     return {
@@ -103,13 +103,13 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await getPostBySlug(slug);
 
   if (!post) {
     notFound();
   }
 
-  const relatedPosts = getRelatedPosts(slug, 3);
+  const relatedPosts = await getRelatedPosts(slug, 3);
   const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://scalefront.io';
   const postUrl = `${siteUrl}/blog/${slug}`;
 
@@ -123,7 +123,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       <article className="min-h-screen bg-[#fafafa] dark:bg-gray-900">
         {/* Hero/Header - Medium Style */}
-        <div className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+        <div className="bg-white border-b border-gray-200 dark:bg-gray-900 dark:border-gray-700">
           <div className="max-w-[680px] mx-auto px-6 py-16">
             {/* Controls */}
             <div className="flex items-center justify-between mb-8">
@@ -151,7 +151,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </p>
 
             {/* Meta Info */}
-            <div className="flex items-center justify-between border-t border-gray-200 dark:border-gray-700 pt-8">
+            <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
               <div className="flex items-center gap-3 text-[14px] text-[#6B6B6B] dark:text-gray-400">
                 <span className="font-medium text-[#292929] dark:text-white">{post.author}</span>
                 <span>·</span>
@@ -205,11 +205,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         {/* Content - True Medium Style */}
         <div className="bg-white dark:bg-gray-900">
           <div className="max-w-[1400px] mx-auto px-6 py-12">
-            <div className="flex flex-col lg:flex-row gap-12 justify-center">
+            <div className="flex flex-col justify-center gap-12 lg:flex-row">
               {/* Main Content - Centered */}
               <div className="w-full lg:max-w-[680px] mx-auto lg:mx-0">
                 {/* Table of Contents - Mobile */}
-                <div className="lg:hidden mb-8">
+                <div className="mb-8 lg:hidden">
                   <TableOfContents content={post.content} />
                 </div>
 
@@ -243,7 +243,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
                 {/* FAQ Section */}
                 {faqs.length > 0 && (
-                  <div className="mt-16 border-t border-gray-200 dark:border-gray-700 pt-12">
+                  <div className="pt-12 mt-16 border-t border-gray-200 dark:border-gray-700">
                     <h2 className="text-[32px] font-bold text-[#292929] dark:text-white mb-8 font-serif">
                       Frequently Asked Questions
                     </h2>
@@ -251,12 +251,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       {faqs.map((faq, index) => (
                         <details
                           key={index}
-                          className="group bg-gray-50 dark:bg-gray-800 rounded-lg p-6 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-750 transition-colors"
+                          className="p-6 transition-colors rounded-lg cursor-pointer group bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-750"
                         >
                           <summary className="flex items-start justify-between font-semibold text-[21px] text-[#292929] dark:text-white list-none">
                             <span className="flex-1 pr-4">{faq.question}</span>
                             <svg
-                              className="w-6 h-6 flex-shrink-0 transform transition-transform group-open:rotate-180"
+                              className="flex-shrink-0 w-6 h-6 transition-transform transform group-open:rotate-180"
                               fill="none"
                               stroke="currentColor"
                               viewBox="0 0 24 24"
@@ -280,15 +280,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <NewsletterSignup />
 
                 {/* CTA Section */}
-                <div className="mt-16 border-t border-gray-200 dark:border-gray-700 pt-12">
-                  <div className="bg-gray-50 dark:bg-gray-800 rounded p-10 text-center">
+                <div className="pt-12 mt-16 border-t border-gray-200 dark:border-gray-700">
+                  <div className="p-10 text-center rounded bg-gray-50 dark:bg-gray-800">
                     <h3 className="text-[28px] font-bold text-[#292929] dark:text-white mb-4 font-serif">
                       Need Expert Help with Your Shopify Store?
                     </h3>
                     <p className="text-[18px] text-[#6B6B6B] dark:text-gray-300 mb-8 leading-[1.6] font-serif">
                       Get a free consultation with our Shopify optimization experts. We have helped dozens of brands improve their store performance and increase conversions.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col justify-center gap-4 sm:flex-row">
                       <Link
                         href="/earn"
                         className="inline-block px-8 py-3 bg-white dark:bg-gray-900 text-[#292929] dark:text-white font-medium rounded border border-gray-300 dark:border-gray-600 hover:border-[#292929] dark:hover:border-gray-400 transition-colors text-[16px]"
@@ -323,7 +323,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
 
               {/* Sidebar - Desktop (Sticky on the right) */}
-              <aside className="hidden lg:block lg:w-80 flex-shrink-0">
+              <aside className="flex-shrink-0 hidden lg:block lg:w-80">
                 <div className="sticky top-24">
                   <TableOfContents content={post.content} />
                 </div>

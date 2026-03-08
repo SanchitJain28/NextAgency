@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Blog {
+  id           String    @id @default(uuid())
+  title        String
+  slug         String    @unique
+  description  String
+  content      String
+  author       String
+  category     String
+  tags         String[]
+  image        String?
+  readingTime  String?
+  faqs         Json?
+  seoMeta      Json?
+  status       String    @default("draft")
+  qualityScore Int?
+  publishedAt  DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}

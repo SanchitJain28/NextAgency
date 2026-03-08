@@ -1,9 +1,10 @@
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import readingTime from 'reading-time';
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import readingTime from "reading-time";
+import { prisma } from "@/lib/db/prisma";
 
-const postsDirectory = path.join(process.cwd(), 'src/content/blog');
+const postsDirectory = path.join(process.cwd(), "src/content/blog");
 
 export interface FAQ {
   question: string;
@@ -37,14 +38,15 @@ export interface BlogPostMetadata {
   faqs?: FAQ[];
 }
 
-export function getAllPosts(): BlogPostMetadata[] {
-  // Get all markdown files
-  const fileNames = fs.readdirSync(postsDirectory).filter(file => file.endsWith('.md') || file.endsWith('.mdx'));
+function getMDPosts(): BlogPostMetadata[] {
+  const fileNames = fs
+    .readdirSync(postsDirectory)
+    .filter((file) => file.endsWith(".md") || file.endsWith(".mdx"));
 
-  const posts = fileNames.map(fileName => {
-    const slug = fileName.replace(/\.(md|mdx)$/, '');
+  return fileNames.map((fileName) => {
+    const slug = fileName.replace(/\.(md|mdx)$/, "");
     const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const fileContents = fs.readFileSync(fullPath, "utf8");
     const { data, content } = matter(fileContents);
     const { text } = readingTime(content);
 
@@ -53,30 +55,79 @@ export function getAllPosts(): BlogPostMetadata[] {
       title: data.title,
       description: data.description,
       date: data.date,
-      author: data.author || 'ScaleFront Team',
+      author: data.author || "ScaleFront Team",
       image: data.image,
-      category: data.category || 'Uncategorized',
+      category: data.category || "Uncategorized",
       tags: data.tags || [],
       readingTime: text,
       faqs: data.faqs || [],
     };
   });
-
-  // Sort posts by date (newest first)
-  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
-export function getPostBySlug(slug: string): BlogPost | null {
+async function getDBPosts(): Promise<BlogPostMetadata[]> {
+  const posts = await prisma.blog.findMany({
+    where: { status: "published" },
+    orderBy: { publishedAt: "desc" },
+  });
+
+  return posts.map((post) => ({
+    slug: post.slug,
+    title: post.title,
+    description: post.description,
+    date: post.publishedAt?.toISOString() || post.createdAt.toISOString(),
+    author: post.author,
+    image: post.image ?? undefined,
+    category: post.category,
+    tags: post.tags,
+    readingTime: post.readingTime ?? "5 min read",
+    faqs: (post.faqs as unknown as FAQ[]) || [],
+  }));
+}
+
+export async function getAllPosts(): Promise<BlogPostMetadata[]> {
+  const mdPosts = getMDPosts();
+  const dbPosts = await getDBPosts();
+
+  const combined = [...mdPosts, ...dbPosts];
+
+  return combined.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
+}
+
+export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
+  // Check DB first (new posts)
+  const dbPost = await prisma.blog.findUnique({
+    where: { slug, status: "published" },
+  });
+
+  if (dbPost) {
+    return {
+      slug: dbPost.slug,
+      title: dbPost.title,
+      description: dbPost.description,
+      date: dbPost.publishedAt?.toISOString() || dbPost.createdAt.toISOString(),
+      author: dbPost.author,
+      image: dbPost.image ?? undefined,
+      category: dbPost.category,
+      tags: dbPost.tags,
+      content: dbPost.content,
+      readingTime: dbPost.readingTime ?? "5 min read",
+      faqs: (dbPost.faqs as unknown as FAQ[]) || [],
+    };
+  }
+
+  // Fallback to MD files (existing posts)
   try {
     const fullPath = path.join(postsDirectory, `${slug}.md`);
     let fileContents;
 
     try {
-      fileContents = fs.readFileSync(fullPath, 'utf8');
+      fileContents = fs.readFileSync(fullPath, "utf8");
     } catch {
-      // Try MDX extension
       const mdxPath = path.join(postsDirectory, `${slug}.mdx`);
-      fileContents = fs.readFileSync(mdxPath, 'utf8');
+      fileContents = fs.readFileSync(mdxPath, "utf8");
     }
 
     const { data, content } = matter(fileContents);
@@ -87,9 +138,9 @@ export function getPostBySlug(slug: string): BlogPost | null {
       title: data.title,
       description: data.description,
       date: data.date,
-      author: data.author || 'ScaleFront Team',
+      author: data.author || "ScaleFront Team",
       image: data.image,
-      category: data.category || 'Uncategorized',
+      category: data.category || "Uncategorized",
       tags: data.tags || [],
       content,
       readingTime: text,
@@ -101,72 +152,77 @@ export function getPostBySlug(slug: string): BlogPost | null {
   }
 }
 
-export function getPostsByCategory(category: string): BlogPostMetadata[] {
-  const allPosts = getAllPosts();
-  return allPosts.filter(post => post.category.toLowerCase() === category.toLowerCase());
+// Rest of functions — update signatures to async where needed
+export async function getPostsByCategory(
+  category: string,
+): Promise<BlogPostMetadata[]> {
+  const allPosts = await getAllPosts();
+  return allPosts.filter(
+    (post) => post.category.toLowerCase() === category.toLowerCase(),
+  );
 }
 
-export function getPostsByTag(tag: string): BlogPostMetadata[] {
-  const allPosts = getAllPosts();
-  return allPosts.filter(post => post.tags.some(t => t.toLowerCase() === tag.toLowerCase()));
+export async function getPostsByTag(tag: string): Promise<BlogPostMetadata[]> {
+  const allPosts = await getAllPosts();
+  return allPosts.filter((post) =>
+    post.tags.some((t) => t.toLowerCase() === tag.toLowerCase()),
+  );
 }
 
-export function getAllCategories(): string[] {
-  const posts = getAllPosts();
-  const categories = new Set(posts.map(post => post.category));
-  return Array.from(categories);
+export async function getAllCategories(): Promise<string[]> {
+  const posts = await getAllPosts();
+  return Array.from(new Set(posts.map((post) => post.category)));
 }
 
-export function getAllTags(): string[] {
-  const posts = getAllPosts();
-  const tags = new Set(posts.flatMap(post => post.tags));
-  return Array.from(tags);
+export async function getAllTags(): Promise<string[]> {
+  const posts = await getAllPosts();
+  return Array.from(new Set(posts.flatMap((post) => post.tags)));
 }
 
-export function getRelatedPosts(currentSlug: string, limit: number = 3): BlogPostMetadata[] {
-  const currentPost = getPostBySlug(currentSlug);
+export async function getRelatedPosts(
+  currentSlug: string,
+  limit: number = 3,
+): Promise<BlogPostMetadata[]> {
+  const currentPost = await getPostBySlug(currentSlug);
   if (!currentPost) return [];
 
-  const allPosts = getAllPosts().filter(post => post.slug !== currentSlug);
+  const allPosts = (await getAllPosts()).filter(
+    (post) => post.slug !== currentSlug,
+  );
 
-  // Score posts by relevance
-  const scoredPosts = allPosts.map(post => {
+  const scoredPosts = allPosts.map((post) => {
     let score = 0;
-
-    // Same category = 3 points
     if (post.category === currentPost.category) score += 3;
-
-    // Shared tags = 1 point per tag
-    const sharedTags = post.tags.filter(tag => currentPost.tags.includes(tag));
+    const sharedTags = post.tags.filter((tag) =>
+      currentPost.tags.includes(tag),
+    );
     score += sharedTags.length;
-
     return { post, score };
   });
 
-  // Sort by score, then by date
   return scoredPosts
     .sort((a, b) => {
       if (b.score !== a.score) return b.score - a.score;
       return new Date(b.post.date).getTime() - new Date(a.post.date).getTime();
     })
     .slice(0, limit)
-    .map(item => item.post);
+    .map((item) => item.post);
 }
 
-export function searchPosts(query: string): BlogPostMetadata[] {
-  const allPosts = getAllPosts();
+export async function searchPosts(query: string): Promise<BlogPostMetadata[]> {
+  const allPosts = await getAllPosts();
   const lowerQuery = query.toLowerCase();
 
-  return allPosts.filter(post =>
-    post.title.toLowerCase().includes(lowerQuery) ||
-    post.description.toLowerCase().includes(lowerQuery) ||
-    post.tags.some(tag => tag.toLowerCase().includes(lowerQuery)) ||
-    post.category.toLowerCase().includes(lowerQuery)
+  return allPosts.filter(
+    (post) =>
+      post.title.toLowerCase().includes(lowerQuery) ||
+      post.description.toLowerCase().includes(lowerQuery) ||
+      post.tags.some((tag) => tag.toLowerCase().includes(lowerQuery)) ||
+      post.category.toLowerCase().includes(lowerQuery),
   );
 }
 
-export function getFeaturedPost(): BlogPostMetadata | null {
-  const posts = getAllPosts();
-  // Return the most recent post as featured
+export async function getFeaturedPost(): Promise<BlogPostMetadata | null> {
+  const posts = await getAllPosts();
   return posts.length > 0 ? posts[0] : null;
 }
