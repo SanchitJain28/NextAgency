@@ -1,0 +1,650 @@
+import { Header } from "@/components/header-footer/Header";
+import { Button } from "@/components/ui/button";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Zap,
+  Code2,
+  Palette,
+  TrendingUp,
+  Rocket,
+  Users,
+  Award,
+  Star,
+  Globe2,
+  Sparkles,
+  BarChart,
+} from "lucide-react";
+import Link from "next/link";
+// Using MagicUI Globe component with interactive features
+import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
+import { InteractiveGlobe } from "@/components/InteractiveGlobe";
+import { MarqueeSection } from "@/components/MarqueeSection";
+import { TeamAvailability } from "@/components/TeamAvailability";
+import Galaxy from "@/components/Galaxy";
+import ColorBends from "@/components/ColorBends";
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "ScaleFront - Elite Shopify Development Agency",
+  description:
+    "Transform your Shopify store with expert development. Custom apps, headless commerce, and performance optimization that drives real results.",
+  keywords: [
+    "Shopify development agency",
+    "custom Shopify apps",
+    "Shopify theme development",
+    "headless Shopify",
+  ],
+  openGraph: {
+    title: "ScaleFront - Elite Shopify Development Agency",
+    description:
+      "Expert Shopify development that drives growth. Custom apps, headless commerce, and performance optimization.",
+    url: "https://scalefront.io",
+    siteName: "ScaleFront",
+    images: [
+      {
+        url: "https://scalefront.io/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ScaleFront",
+      },
+    ],
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://scalefront.io",
+  },
+};
+
+export default function HomePage() {
+  return (
+    <div className="relative min-h-screen bg-background">
+      {/* Color Bends Background */}
+      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none opacity-40 md:opacity-100">
+        <ColorBends
+          colors={["#67EA3A"]}
+          autoRotate={-1}
+          rotation={0}
+          speed={0.1}
+          scale={1}
+          frequency={1}
+          mouseInfluence={2}
+          parallax={0.5}
+          noise={0}
+          warpStrength={0.9}
+        />
+      </div>
+
+      {/* Galaxy Background */}
+      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <Galaxy
+          hueShift={0}
+          density={0.2}
+          glowIntensity={0.15}
+          saturation={0}
+          speed={0.2}
+          starSpeed={0.08}
+          twinkleIntensity={0.15}
+          rotationSpeed={0.01}
+          mouseRepulsion={true}
+          repulsionStrength={0.5}
+          transparent={true}
+        />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10">
+        <Header />
+        <HeroSection />
+        <MarqueeSection />
+
+        <StatsSection />
+        <ServicesOverview />
+        <ToolsSection />
+        <ShopifyAppsSection />
+        <WhyChooseSection />
+        <ResultsSection />
+        <TestimonialsSection />
+        <FinalCTASection />
+      </div>
+    </div>
+  );
+}
+
+const HeroSection = () => {
+  return (
+    <section className="relative pt-20 overflow-hidden pb-28 md:pt-32 md:pb-40">
+      <div className="relative px-6 mx-auto max-w-7xl">
+        <div className="grid items-center gap-16 lg:grid-cols-2">
+          {/* Left side: Text content */}
+          <div className="space-y-8">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary">
+              <Sparkles className="h-3.5 w-3.5" />
+              <span>Trusted by 50+ brands worldwide</span>
+            </div>
+
+            {/* Main Headline */}
+            <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl text-foreground text-balance">
+              Build Shopify stores that convert
+            </h1>
+
+            {/* Subheadline */}
+            <p className="max-w-xl text-lg leading-relaxed text-white md:text-xl">
+              A premier Shopify agency delivering custom development, headless
+              commerce, and performance optimization for ambitious brands.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col gap-4 pt-2 sm:flex-row">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                asChild
+              >
+                <Link href="/contact-us" className="flex items-center gap-2">
+                  Start a project
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-transparent border-border hover:bg-secondary hover:text-secondary-foreground"
+                asChild
+              >
+                <Link href="#services">View services</Link>
+              </Button>
+            </div>
+
+            {/* Trust indicators */}
+            <div className="flex flex-wrap items-center gap-6 pt-6 text-sm text-white">
+              <div className="flex items-center gap-1.5">
+                <Star className="w-4 h-4 fill-primary text-primary" />
+                <span>4.9/5 rating</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-primary" />
+                <span>100+ projects</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Globe2 className="w-4 h-4 text-primary" />
+                <span>Global clients</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right side: Interactive Globe */}
+          <div className="hidden lg:flex lg:items-center lg:justify-center relative h-[600px]">
+            <InteractiveGlobe />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const StatsSection = () => {
+  const stats = [
+    { value: "250%", label: "Avg. revenue increase" },
+    { value: "60%", label: "Faster page loads" },
+    { value: "50+", label: "Happy clients" },
+    { value: "99%", label: "Client satisfaction" },
+  ];
+
+  return (
+    <section className="relative py-20 overflow-hidden border-y border-border">
+      <div className="relative px-6 mx-auto max-w-7xl">
+        <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+          {stats.map((stat) => (
+            <div
+              key={stat.label}
+              className="p-6 text-center transition-all border-2 shadow-lg bg-background border-primary/30 rounded-2xl hover:bg-background hover:border-primary/50 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20"
+            >
+              <div className="mb-2 text-3xl font-bold md:text-5xl text-primary">
+                {stat.value}
+              </div>
+              <div className="text-sm text-white md:text-base md:text-muted-foreground">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const ServicesOverview = () => {
+  const services = [
+    {
+      icon: Zap,
+      title: "Headless Commerce",
+      description: "Lightning-fast storefronts with Next.js",
+    },
+    {
+      icon: Code2,
+      title: "Custom Apps",
+      description: "Tailored solutions for your business",
+    },
+    {
+      icon: Palette,
+      title: "Theme Development",
+      description: "Beautiful, high-converting themes",
+    },
+    {
+      icon: TrendingUp,
+      title: "Conversion Optimization",
+      description: "Features that boost revenue",
+    },
+    {
+      icon: Rocket,
+      title: "Performance",
+      description: "Core Web Vitals optimization",
+    },
+    {
+      icon: Award,
+      title: "Shopify Plus",
+      description: "Enterprise-level solutions",
+    },
+  ];
+
+  return (
+    <section id="services" className="relative py-24 overflow-hidden md:py-32">
+      <div className="relative px-6 mx-auto max-w-7xl">
+        <div className="mb-16 space-y-4 text-center">
+          <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl text-foreground text-balance">
+            Our services
+          </h2>
+          <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
+            As a full-service Shopify agency, we build custom apps, headless
+            commerce solutions, and high-performance stores that drive results.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
+          {services.map((service) => {
+            const Icon = service.icon;
+            return (
+              <div
+                key={service.title}
+                className="p-8 transition-all duration-300 border-2 group rounded-xl border-primary/30 bg-background hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 hover:bg-background hover:scale-105"
+              >
+                <div className="inline-flex p-3 mb-4 transition-colors rounded-lg bg-primary/10 group-hover:bg-primary/20">
+                  <Icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="mb-2 text-lg font-semibold text-white md:text-xl md:text-card-foreground">
+                  {service.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-white md:text-muted-foreground md:text-base">
+                  {service.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="mt-16 text-center">
+          <Button
+            size="lg"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            asChild
+          >
+            <Link href="/contact-us">
+              View all services
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const ToolsSection = () => {
+  return (
+    <section className="relative py-24 overflow-hidden md:py-32">
+      <div className="relative px-6 mx-auto max-w-7xl">
+        <div className="mb-16 space-y-4 text-center">
+          <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl text-foreground text-balance">
+            Free Tools
+          </h2>
+          <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
+            Professional-grade tools to help optimize your Shopify store
+          </p>
+        </div>
+
+        <div className="max-w-4xl mx-auto">
+          <div className="group rounded-2xl border-2 border-blue-500/30 bg-background p-8 md:p-12 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 hover:scale-[1.02]">
+            <div className="flex items-start gap-6">
+              <div className="flex-shrink-0">
+                <div className="inline-flex p-4 transition-colors rounded-xl bg-blue-500/10 group-hover:bg-blue-500/20">
+                  <BarChart className="w-10 h-10 text-blue-600" />
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="mb-3 text-2xl font-bold text-white md:text-3xl md:text-foreground">
+                  <span className="text-blue-600">Earn</span> - Shopify Store
+                  Auditor
+                </h3>
+                <p className="mb-6 text-lg text-white md:text-muted-foreground">
+                  Unlike other tools that just show page speed, Earn analyzes{" "}
+                  <strong>all factors that impact sales</strong> – from trust
+                  signals and conversion features to security and user
+                  experience. Get 100+ critical checks in 60 seconds, absolutely
+                  free.
+                </p>
+                <div className="flex flex-wrap gap-3 mb-6">
+                  <span className="inline-flex items-center px-3 py-1 text-sm font-medium text-blue-400 rounded-full bg-blue-500/20">
+                    SEO Analysis
+                  </span>
+                  <span className="inline-flex items-center px-3 py-1 text-sm font-medium text-blue-400 rounded-full bg-blue-500/20">
+                    Performance Testing
+                  </span>
+                  <span className="inline-flex items-center px-3 py-1 text-sm font-medium text-blue-400 rounded-full bg-blue-500/20">
+                    Sales Optimization
+                  </span>
+                  <span className="inline-flex items-center px-3 py-1 text-sm font-medium text-blue-400 rounded-full bg-blue-500/20">
+                    Security Check
+                  </span>
+                </div>
+                <Button
+                  size="lg"
+                  className="text-white bg-blue-600 hover:bg-blue-700"
+                  asChild
+                >
+                  <Link href="/earn" className="flex items-center gap-2">
+                    Try Earn Free
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const ShopifyAppsSection = () => {
+  return (
+    <section className="relative py-24 overflow-hidden md:py-32">
+      <div className="relative px-6 mx-auto max-w-7xl">
+        <div className="mb-16 space-y-4 text-center">
+          <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl text-foreground text-balance">
+            Shopify Apps
+          </h2>
+          <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
+            Powerful apps to enhance your Shopify store functionality
+          </p>
+        </div>
+
+        <div className="max-w-4xl mx-auto">
+          <div className="group rounded-2xl border-2 border-purple-500/30 bg-background p-8 md:p-12 hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 hover:scale-[1.02]">
+            <div className="flex items-start gap-6">
+              <div className="flex-shrink-0">
+                <div className="inline-flex p-4 transition-colors rounded-xl bg-purple-500/10 group-hover:bg-purple-500/20">
+                  <Sparkles className="w-10 h-10 text-purple-600" />
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="mb-3 text-2xl font-bold text-white md:text-3xl md:text-foreground">
+                  Crossell, Upsell & Related Products AI
+                </h3>
+                <p className="mb-6 text-lg text-white md:text-muted-foreground">
+                  Intelligent product recommendations powered by AI to increase
+                  average order value. Automatically suggest relevant
+                  cross-sells, upsells, and related products based on customer
+                  behavior and purchase patterns.
+                </p>
+                <div className="flex flex-wrap gap-3 mb-6">
+                  <span className="inline-flex items-center px-3 py-1 text-sm font-medium text-purple-400 rounded-full bg-purple-500/20">
+                    AI-Powered
+                  </span>
+                  <span className="inline-flex items-center px-3 py-1 text-sm font-medium text-purple-400 rounded-full bg-purple-500/20">
+                    Smart Recommendations
+                  </span>
+                  <span className="inline-flex items-center px-3 py-1 text-sm font-medium text-purple-400 rounded-full bg-purple-500/20">
+                    Conversion Boost
+                  </span>
+                  <span className="inline-flex items-center px-3 py-1 text-sm font-medium text-purple-400 rounded-full bg-purple-500/20">
+                    Easy Integration
+                  </span>
+                </div>
+                <Button
+                  size="lg"
+                  className="text-white bg-purple-600 hover:bg-purple-700"
+                  asChild
+                >
+                  <Link
+                    href="/upsell-cross-sell-app-shopify"
+                    className="flex items-center gap-2"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const WhyChooseSection = () => {
+  const reasons = [
+    {
+      icon: Users,
+      title: "Expert team",
+      description: "Deep Shopify knowledge and proven results",
+    },
+    {
+      icon: Award,
+      title: "100+ projects",
+      description: "Successful launches across all industries",
+    },
+    {
+      icon: Zap,
+      title: "Fast delivery",
+      description: "Agile development, rapid deployment",
+    },
+    {
+      icon: CheckCircle2,
+      title: "Quality code",
+      description: "Clean, scalable, maintainable solutions",
+    },
+  ];
+
+  return (
+    <section className="relative py-24 overflow-hidden md:py-32">
+      <div className="relative px-6 mx-auto max-w-7xl">
+        <div className="grid items-start gap-12 md:grid-cols-3 md:gap-8">
+          <div className="space-y-6 md:col-span-2">
+            <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl text-foreground text-balance">
+              Why work with us
+            </h2>
+            <p className="text-lg leading-relaxed md:text-xl text-muted-foreground">
+              As a specialized Shopify agency, we build revenue-generating
+              stores optimized for growth and scale. Partner with experts who
+              understand ecommerce.
+            </p>
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              asChild
+            >
+              <Link href="/about-us">
+                Learn more
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </Button>
+
+            <div className="grid grid-cols-1 gap-5 mt-8 sm:grid-cols-2">
+              {reasons.map((reason) => {
+                const Icon = reason.icon;
+                return (
+                  <div
+                    key={reason.title}
+                    className="p-6 transition-all duration-300 border-2 bg-background border-primary/30 rounded-xl hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 hover:bg-background hover:scale-105"
+                  >
+                    <div className="rounded-lg bg-primary/10 p-2.5 w-fit mb-3">
+                      <Icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <h3 className="font-semibold text-base md:text-lg mb-1.5 text-white md:text-foreground">
+                      {reason.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-white md:text-muted-foreground">
+                      {reason.description}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Team Availability Widget */}
+          <div className="md:col-span-1">
+            <TeamAvailability />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const ResultsSection = () => {
+  const results = [
+    {
+      metric: "+250%",
+      title: "Revenue growth",
+      description: "Fashion brand after headless migration",
+    },
+    {
+      metric: "3.2s",
+      title: "Page load time",
+      description: "Reduced from 8.5s with optimization",
+    },
+    {
+      metric: "+85%",
+      title: "Mobile conversions",
+      description: "Custom mobile app impact",
+    },
+  ];
+
+  return (
+    <section className="relative py-24 overflow-hidden md:py-32">
+      <div className="relative px-6 mx-auto max-w-7xl">
+        <div className="mb-16 space-y-4 text-center">
+          <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl text-foreground text-balance">
+            Real results
+          </h2>
+          <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
+            Proven track record of delivering measurable growth. See why brands
+            choose our Shopify agency for transformative results.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3 md:gap-8">
+          {results.map((result) => (
+            <div
+              key={result.title}
+              className="p-8 transition-all duration-300 border-2 bg-background border-primary/30 rounded-xl hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 hover:bg-background hover:scale-105"
+            >
+              <div className="mb-4 text-4xl font-bold md:text-5xl text-primary">
+                {result.metric}
+              </div>
+              <h3 className="mb-2 text-lg font-semibold text-white md:text-xl md:text-foreground">
+                {result.title}
+              </h3>
+              <p className="text-sm leading-relaxed text-white md:text-base md:text-muted-foreground">
+                {result.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const TestimonialsSection = () => {
+  const testimonials = [
+    {
+      quote:
+        "ScaleFront transformed our store with a custom headless solution. Page loads dropped by 60% and conversions increased by 25%. Absolutely stellar work!",
+      name: "Sarah Johnson",
+      designation: "CEO, Fashion Forward",
+      src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400",
+    },
+    {
+      quote:
+        "The custom app they built revolutionized our inventory management. The team's expertise in Shopify development is unmatched.",
+      name: "Michael Chen",
+      designation: "CTO, TechGear",
+    },
+    {
+      quote:
+        "Our Shopify Plus migration was seamless. Zero downtime, and our store is now faster and more scalable than ever.",
+      name: "Emily Rodriguez",
+      designation: "Founder, BeautyBox",
+    },
+  ];
+
+  return (
+    <section className="relative py-24 md:py-32">
+      <div className="px-6 mx-auto max-w-7xl">
+        <div className="mb-12 space-y-4 text-center">
+          <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl text-foreground text-balance">
+            What clients say
+          </h2>
+          <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
+            Don&apos;t just take our word for it
+          </p>
+        </div>
+
+        <AnimatedTestimonials testimonials={testimonials} autoplay />
+      </div>
+    </section>
+  );
+};
+
+const FinalCTASection = () => {
+  return (
+    <section className="relative py-24 md:py-32">
+      <div className="max-w-4xl p-12 px-6 mx-auto space-y-8 text-center border-2 bg-background rounded-3xl border-primary/50">
+        <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl text-balance">
+          Ready to get started?
+        </h2>
+        <p className="max-w-2xl mx-auto text-lg leading-relaxed md:text-xl opacity-90">
+          Partner with a trusted Shopify agency to transform your store into a
+          high-performing revenue machine. Let&apos;s build something
+          exceptional together.
+        </p>
+
+        <div className="flex flex-col justify-center gap-4 pt-4 sm:flex-row">
+          <Button
+            size="lg"
+            variant="secondary"
+            asChild
+            className="border-0 bg-background text-foreground hover:bg-background/90"
+          >
+            <Link href="/contact-us">
+              Start a project
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            asChild
+            className="bg-transparent border-2 border-background text-primary-foreground hover:bg-background hover:text-foreground"
+          >
+            <Link href="/pricing">View pricing</Link>
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
