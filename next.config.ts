@@ -1,20 +1,29 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // 1. The Redirect Logic
+  async redirects() {
+    return [
+      {
+        source: "/:path*", // This catches every single page on your site
+        destination: "https://github.com/SanchitJain28", // REPLACE with your GitHub URL
+        permanent: false, // 307 redirect (temporary) to keep your SEO options open
+      },
+    ];
+  },
+
+  // 2. Your existing config
   eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
   typescript: {
-    // Warning: This allows production builds even with TypeScript errors
     ignoreBuildErrors: true,
   },
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
+        protocol: "https",
+        hostname: "images.unsplash.com",
       },
     ],
   },
