@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
-import { prisma } from "@/lib/db/prisma";
 
 const postsDirectory = path.join(process.cwd(), "src/content/blog");
 
@@ -65,31 +64,31 @@ function getMDPosts(): BlogPostMetadata[] {
   });
 }
 
-async function getDBPosts(): Promise<BlogPostMetadata[]> {
-  const posts = await prisma.blog.findMany({
-    where: { status: "published" },
-    orderBy: { publishedAt: "desc" },
-  });
+// async function getDBPosts(): Promise<BlogPostMetadata[]> {
+//   const posts = await prisma.blog.findMany({
+//     where: { status: "published" },
+//     orderBy: { publishedAt: "desc" },
+//   });
 
-  return posts.map((post) => ({
-    slug: post.slug,
-    title: post.title,
-    description: post.description,
-    date: post.publishedAt?.toISOString() || post.createdAt.toISOString(),
-    author: post.author,
-    image: post.image ?? undefined,
-    category: post.category,
-    tags: post.tags,
-    readingTime: post.readingTime ?? "5 min read",
-    faqs: (post.faqs as unknown as FAQ[]) || [],
-  }));
-}
+//   return posts.map((post) => ({
+//     slug: post.slug,
+//     title: post.title,
+//     description: post.description,
+//     date: post.publishedAt?.toISOString() || post.createdAt.toISOString(),
+//     author: post.author,
+//     image: post.image ?? undefined,
+//     category: post.category,
+//     tags: post.tags,
+//     readingTime: post.readingTime ?? "5 min read",
+//     faqs: (post.faqs as unknown as FAQ[]) || [],
+//   }));
+// }
 
 export async function getAllPosts(): Promise<BlogPostMetadata[]> {
   const mdPosts = getMDPosts();
-  const dbPosts = await getDBPosts();
+  // const dbPosts = await getDBPosts();
 
-  const combined = [...mdPosts, ...dbPosts];
+  const combined = [...mdPosts];
 
   return combined.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
@@ -98,25 +97,25 @@ export async function getAllPosts(): Promise<BlogPostMetadata[]> {
 
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   // Check DB first (new posts)
-  const dbPost = await prisma.blog.findUnique({
-    where: { slug, status: "published" },
-  });
+  // const dbPost = await prisma.blog.findUnique({
+  //   where: { slug, status: "published" },
+  // });
 
-  if (dbPost) {
-    return {
-      slug: dbPost.slug,
-      title: dbPost.title,
-      description: dbPost.description,
-      date: dbPost.publishedAt?.toISOString() || dbPost.createdAt.toISOString(),
-      author: dbPost.author,
-      image: dbPost.image ?? undefined,
-      category: dbPost.category,
-      tags: dbPost.tags,
-      content: dbPost.content,
-      readingTime: dbPost.readingTime ?? "5 min read",
-      faqs: (dbPost.faqs as unknown as FAQ[]) || [],
-    };
-  }
+  // if (dbPost) {
+  //   return {
+  //     slug: dbPost.slug,
+  //     title: dbPost.title,
+  //     description: dbPost.description,
+  //     date: dbPost.publishedAt?.toISOString() || dbPost.createdAt.toISOString(),
+  //     author: dbPost.author,
+  //     image: dbPost.image ?? undefined,
+  //     category: dbPost.category,
+  //     tags: dbPost.tags,
+  //     content: dbPost.content,
+  //     readingTime: dbPost.readingTime ?? "5 min read",
+  //     faqs: (dbPost.faqs as unknown as FAQ[]) || [],
+  //   };
+  // }
 
   // Fallback to MD files (existing posts)
   try {
