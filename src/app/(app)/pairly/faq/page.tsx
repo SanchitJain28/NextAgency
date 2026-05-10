@@ -120,7 +120,6 @@ export default function FAQPage() {
   return (
     <div className={`${font_className}`}>
       <div className="min-h-screen text-white bg-black selection:bg-white/20 selection:text-white">
-        {/* Navigation */}
         <nav className="fixed top-0 z-50 w-full border-b bg-black/80 backdrop-blur-md border-white/10">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
@@ -131,21 +130,12 @@ export default function FAQPage() {
                 <span className="text-lg font-bold tracking-tight">Pairly</span>
               </Link>
               <div className="flex gap-6 text-sm font-medium">
-                <Link
-                  href="/features"
-                  className="text-gray-400 transition hover:text-white"
-                >
-                  Features
-                </Link>
-                <Link
-                  href="/pricing"
+                <a
+                  href="https://apps.shopify.com/pairly-bundles-and-upsell"
                   className="text-gray-400 transition hover:text-white"
                 >
                   Pricing
-                </Link>
-                <Link href="/" className="text-white">
-                  Back to Home
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -235,9 +225,8 @@ export default function FAQPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="px-4 py-24 border-t sm:px-6 lg:px-8 border-white/10">
+        {/* <section className="px-4 py-24 border-t sm:px-6 lg:px-8 border-white/10">
           <div className="relative max-w-4xl mx-auto overflow-hidden text-center">
-            {/* Glow Effect */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-white/10 blur-[100px] rounded-full -z-10 pointer-events-none" />
 
             <motion.div
@@ -263,17 +252,23 @@ export default function FAQPage() {
               </div>
             </motion.div>
           </div>
-        </section>
+        </section> */}
 
         {/* Footer */}
         <footer className="px-4 py-12 text-gray-500 bg-black border-t border-white/10 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center justify-between gap-4 mx-auto max-w-7xl sm:flex-row">
             <p>&copy; 2026 Pairly. All rights reserved.</p>
             <div className="flex gap-6 text-sm">
-              <Link href="/privacy" className="transition hover:text-white">
+              <Link
+                href="privacy-policy"
+                className="transition hover:text-white"
+              >
                 Privacy
               </Link>
-              <Link href="/terms" className="transition hover:text-white">
+              <Link
+                href="privacy-policy"
+                className="transition hover:text-white"
+              >
                 Terms
               </Link>
             </div>

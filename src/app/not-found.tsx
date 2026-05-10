@@ -5,8 +5,7 @@ import Header from "@/components/header-footer/Header";
 export default function NotFound() {
   return (
     <>
-      <Header />
-      <div className="min-h-screen bg-background text-foreground flex items-center justify-center px-4">
+      <div className="flex items-center justify-center min-h-screen px-4 bg-background text-foreground">
         <div className="max-w-2xl mx-auto text-center">
           {/* Large 404 Number */}
           <div className="mb-8">
@@ -14,17 +13,17 @@ export default function NotFound() {
               404
             </h1>
             <div
-              className="mt-2 h-1 w-24 bg-primary mx-auto"
+              className="w-24 h-1 mx-auto mt-2 bg-primary"
               aria-hidden="true"
             />
           </div>
 
           {/* Error Message */}
           <div className="mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-balance mb-4">
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl text-balance">
               Oops! Page Not Found
             </h2>
-            <p className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
+            <p className="max-w-xl mx-auto text-lg leading-relaxed text-muted-foreground">
               The page you&apos;re looking for seems to have wandered off into
               the digital void. Don&apos;t worry though – we&apos;ll help you
               find your way back!
@@ -32,10 +31,10 @@ export default function NotFound() {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          {/* <div className="flex flex-col justify-center gap-4 mb-8 sm:flex-row">
             <Button
               asChild
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3"
+              className="px-8 py-3 bg-primary hover:bg-primary/90 text-primary-foreground"
             >
               <Link href="/">Take Me Home</Link>
             </Button>
@@ -43,44 +42,44 @@ export default function NotFound() {
             <Button
               asChild
               variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 bg-transparent"
+              className="px-8 py-3 bg-transparent border-primary text-primary hover:bg-primary hover:text-primary-foreground"
             >
               <Link href="/contact">Get Help</Link>
             </Button>
-          </div>
+          </div> */}
 
           {/* Helpful Links */}
-          <div className="rounded-lg border border-border p-6 bg-secondary/20">
-            <h3 className="text-xl font-semibold mb-4 text-foreground">
+          {/* <div className="p-6 border rounded-lg border-border bg-secondary/20">
+            <h3 className="mb-4 text-xl font-semibold text-foreground">
               Popular Pages
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               <Link
                 href="/"
-                className="text-primary hover:text-primary/80 underline-offset-4 hover:underline font-medium"
+                className="font-medium text-primary hover:text-primary/80 underline-offset-4 hover:underline"
               >
                 → Homepage
               </Link>
               <Link
                 href="/about-us"
-                className="text-primary hover:text-primary/80 underline-offset-4 hover:underline font-medium"
+                className="font-medium text-primary hover:text-primary/80 underline-offset-4 hover:underline"
               >
                 → About Us
               </Link>
               <Link
                 href="/blog"
-                className="text-primary hover:text-primary/80 underline-offset-4 hover:underline font-medium"
+                className="font-medium text-primary hover:text-primary/80 underline-offset-4 hover:underline"
               >
                 → Read Blogs
               </Link>
               <Link
                 href="/contact-us"
-                className="text-primary hover:text-primary/80 underline-offset-4 hover:underline font-medium"
+                className="font-medium text-primary hover:text-primary/80 underline-offset-4 hover:underline"
               >
                 → Contact
               </Link>
             </div>
-          </div>
+          </div> */}
 
 
         </div>

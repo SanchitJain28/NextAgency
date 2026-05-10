@@ -174,20 +174,20 @@ export default function FAQPage() {
 
   return (
     <div className={`${font_className}`}>
-      <div className="min-h-screen bg-black text-white">
+      <div className="min-h-screen text-white bg-black">
         {/* Navigation */}
-        <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-white/10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
+        <nav className="fixed top-0 z-50 w-full border-b bg-black/80 backdrop-blur-md border-white/10">
+          <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between h-16">
               <Link href="/" className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                <div className="flex items-center justify-center w-8 h-8 bg-white rounded-lg">
                   <HelpCircle className="w-5 h-5 text-black" />
                 </div>
                 <span className="text-lg font-bold">Recommendations AI</span>
               </Link>
               <Link
                 href="/shopify"
-                className="text-gray-400 hover:text-white transition"
+                className="text-gray-400 transition hover:text-white"
               >
                 Back to Home
               </Link>
@@ -196,7 +196,7 @@ export default function FAQPage() {
         </nav>
 
         {/* Hero Section */}
-        <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="px-4 pt-32 pb-16 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial="initial"
@@ -205,21 +205,21 @@ export default function FAQPage() {
               className="text-center"
             >
               <motion.div variants={fadeInUp} className="inline-block mb-6">
-                <span className="px-4 py-2 bg-white/10 text-white rounded-full text-sm font-medium border border-white/20">
+                <span className="px-4 py-2 text-sm font-medium text-white border rounded-full bg-white/10 border-white/20">
                   Frequently Asked Questions
                 </span>
               </motion.div>
 
               <motion.h1
                 variants={fadeInUp}
-                className="text-5xl lg:text-6xl font-bold leading-tight text-balance mb-6"
+                className="mb-6 text-5xl font-bold leading-tight lg:text-6xl text-balance"
               >
                 Got Questions? We&apos;ve Got Answers
               </motion.h1>
 
               <motion.p
                 variants={fadeInUp}
-                className="text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto"
+                className="max-w-2xl mx-auto text-xl leading-relaxed text-gray-400"
               >
                 Everything you need to know about Real AI Related Products and
                 how to maximize your store&apos;s potential.
@@ -229,7 +229,7 @@ export default function FAQPage() {
         </section>
 
         {/* FAQ Sections */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="px-4 py-20 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             {faqSections.map((section, sectionIndex) => (
               <motion.div
@@ -240,7 +240,7 @@ export default function FAQPage() {
                 viewport={{ once: true }}
                 className="mb-16"
               >
-                <h2 className="text-2xl lg:text-3xl font-bold mb-8 text-white">
+                <h2 className="mb-8 text-2xl font-bold text-white lg:text-3xl">
                   {section.title}
                 </h2>
 
@@ -257,10 +257,10 @@ export default function FAQPage() {
                         value={`${sectionIndex}-${itemIndex}`}
                         className="border-b border-white/10 last:border-b-0"
                       >
-                        <AccordionTrigger className="text-left text-lg font-semibold text-white hover:text-gray-300 transition py-4 hover:no-underline group">
+                        <AccordionTrigger className="py-4 text-lg font-semibold text-left text-white transition hover:text-gray-300 hover:no-underline group">
                           <span className="text-balance">{item.q}</span>
                         </AccordionTrigger>
-                        <AccordionContent className="text-gray-400 leading-relaxed pb-4">
+                        <AccordionContent className="pb-4 leading-relaxed text-gray-400">
                           {item.a}
                         </AccordionContent>
                       </AccordionItem>
@@ -273,30 +273,30 @@ export default function FAQPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 border-y border-white/10">
+        {/* <section className="px-4 py-20 sm:px-6 lg:px-8 bg-white/5 border-y border-white/10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-balance">
+              <h2 className="mb-4 text-3xl font-bold lg:text-4xl text-balance">
                 Still have questions?
               </h2>
-              <p className="text-lg text-gray-400 mb-8">
+              <p className="mb-8 text-lg text-gray-400">
                 Our support team is here to help. Reach out anytime through the
                 app dashboard or email us directly.
               </p>
-              <button className="px-8 py-4 bg-white text-black rounded-full hover:bg-gray-200 transition font-semibold text-lg">
+              <button className="px-8 py-4 text-lg font-semibold text-black transition bg-white rounded-full hover:bg-gray-200">
                 Contact Support
               </button>
             </motion.div>
           </div>
-        </section>
+        </section> */}
 
         {/* Footer */}
-        <footer className="bg-black border-t border-white/10 text-gray-400 py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
+        <footer className="px-4 py-12 text-gray-400 bg-black border-t border-white/10 sm:px-6 lg:px-8">
+          <div className="mx-auto text-center max-w-7xl">
             <p>&copy; 2025 Recommendations AI. All rights reserved.</p>
           </div>
         </footer>

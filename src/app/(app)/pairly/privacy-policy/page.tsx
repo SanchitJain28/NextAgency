@@ -232,7 +232,7 @@ export default function PrivacyPolicy() {
               </p>
               <p>
                 <strong className="text-white/90">Mailing Address:</strong>{" "}
-                [Your Business Address Here]
+                Sushant Lok 2 , Gurgaon
               </p>
             </div>
           </section>
