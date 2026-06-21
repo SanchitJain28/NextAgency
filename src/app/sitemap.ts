@@ -1,29 +1,33 @@
-import type { MetadataRoute } from 'next'
-import { getAllPosts } from '@/lib/blog/posts'
+import type { MetadataRoute } from "next";
+import { getAllPosts } from "@/lib/blog/posts";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://scalefront.io'
-  const lastModified = new Date()
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://scalefront.io";
+  const lastModified = new Date();
 
-  // Get all blog posts dynamically
-  const blogPosts = getAllPosts()
+  const blogPosts = await getAllPosts();
+
+  const blogUrls = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
 
   return [
-    // Homepage with featured images
+    ...blogUrls,
     {
       url: baseUrl,
       lastModified: lastModified,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 1,
-      images: [
-        `${baseUrl}/images/og-headless-woocommerce.png`,
-      ],
+      images: [`${baseUrl}/images/og-headless-woocommerce.png`],
     },
     // About page with profile image
     {
       url: `${baseUrl}/about-us`,
       lastModified: lastModified,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.8,
       images: [`${baseUrl}/images/og-headless-woocommerce.png`],
     },
@@ -31,98 +35,96 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/pricing`,
       lastModified: lastModified,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.8,
-      images: [
-        `${baseUrl}/images/og-headless-woocommerce.png`
-      ],
+      images: [`${baseUrl}/images/og-headless-woocommerce.png`],
     },
     // Individual Service Pages (High Priority for SEO)
     {
       url: `${baseUrl}/services/headless-commerce`,
       lastModified: lastModified,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/services/performance-optimization`,
       lastModified: lastModified,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/services/custom-shopify-apps`,
       lastModified: lastModified,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/services/mobile-apps`,
       lastModified: lastModified,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/services/theme-development`,
       lastModified: lastModified,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/services/backend-api`,
       lastModified: lastModified,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/services/conversion-optimization`,
       lastModified: lastModified,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/services/custom-features`,
       lastModified: lastModified,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/services/shopify-plus-migration`,
       lastModified: lastModified,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/services/integrations`,
       lastModified: lastModified,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/services/audit-consulting`,
       lastModified: lastModified,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.9,
     },
     // Earn page (Shopify auditor)
     {
       url: `${baseUrl}/earn`,
       lastModified: lastModified,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     // Contact page
     {
       url: `${baseUrl}/contact-us`,
       lastModified: lastModified,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.7,
     },
     // Blog main page
     {
       url: `${baseUrl}/blog`,
       lastModified: lastModified,
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 0.9,
     },
     // Dynamically generated blog posts
@@ -152,20 +154,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/privacy-policy`,
       lastModified: lastModified,
-      changeFrequency: 'yearly',
+      changeFrequency: "yearly",
       priority: 0.3,
     },
     {
       url: `${baseUrl}/terms-of-service`,
       lastModified: lastModified,
-      changeFrequency: 'yearly',
+      changeFrequency: "yearly",
       priority: 0.3,
     },
     {
       url: `${baseUrl}/upsell-cross-sell-app/privacy-policy`,
       lastModified: lastModified,
-      changeFrequency: 'yearly',
+      changeFrequency: "yearly",
       priority: 0.3,
     },
-  ]
+  ];
 }
