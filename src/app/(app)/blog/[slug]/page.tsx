@@ -1,21 +1,21 @@
-import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import Link from 'next/link';
-import Image from 'next/image';
-import { getPostBySlug, getAllPosts, getRelatedPosts } from '@/lib/blog/posts';
-import { Header } from '@/components/header-footer/Header';
-import Footer from '@/components/header-footer/Footer';
-import { ReadingProgress } from '@/components/blog/ReadingProgress';
-import { Breadcrumbs } from '@/components/blog/Breadcrumbs';
-import { TableOfContents } from '@/components/blog/TableOfContents';
-import { SocialShare } from '@/components/blog/SocialShare';
-import { MarkdownContent } from '@/components/blog/MarkdownContent';
-import { RelatedPosts } from '@/components/blog/RelatedPosts';
-import { AuthorBio } from '@/components/blog/AuthorBio';
-import { NewsletterSignup } from '@/components/blog/NewsletterSignup';
-import { FontSizeControl } from '@/components/blog/FontSizeControl';
-import { DarkModeToggle } from '@/components/blog/DarkModeToggle';
-import { SummarizeWithAI } from '@/components/blog/SummarizeWithAI';
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
+import { getPostBySlug, getAllPosts, getRelatedPosts } from "@/lib/blog/posts";
+import { Header } from "@/components/header-footer/Header";
+import Footer from "@/components/header-footer/Footer";
+import { ReadingProgress } from "@/components/blog/ReadingProgress";
+import { Breadcrumbs } from "@/components/blog/Breadcrumbs";
+import { TableOfContents } from "@/components/blog/TableOfContents";
+import { SocialShare } from "@/components/blog/SocialShare";
+import { MarkdownContent } from "@/components/blog/MarkdownContent";
+import { RelatedPosts } from "@/components/blog/RelatedPosts";
+import { AuthorBio } from "@/components/blog/AuthorBio";
+import { NewsletterSignup } from "@/components/blog/NewsletterSignup";
+import { FontSizeControl } from "@/components/blog/FontSizeControl";
+import { DarkModeToggle } from "@/components/blog/DarkModeToggle";
+import { SummarizeWithAI } from "@/components/blog/SummarizeWithAI";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -24,23 +24,26 @@ interface BlogPostPageProps {
 }
 
 export async function generateStaticParams() {
-  const posts =await getAllPosts();
+  const posts = await getAllPosts();
   return posts.map((post) => ({
     slug: post.slug,
   }));
 }
 
-export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
+//? this is for blog meta data
+export async function generateMetadata({
+  params,
+}: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post =await getPostBySlug(slug);
+  const post = await getPostBySlug(slug);
 
   if (!post) {
     return {
-      title: 'Post Not Found',
+      title: "Post Not Found",
     };
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://scalefront.io';
+  const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://scalefront.io";
   const postUrl = `${siteUrl}/blog/${slug}`;
   const imageUrl = post.image || `${siteUrl}/og-image.png`;
 
@@ -49,8 +52,8 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     description: post.description,
     keywords: post.tags || [],
     authors: [{ name: post.author }],
-    creator: 'ScaleFront',
-    publisher: 'ScaleFront',
+    creator: "ScaleFront",
+    publisher: "ScaleFront",
     formatDetection: {
       email: false,
       address: false,
@@ -64,7 +67,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       title: post.title,
       description: post.description,
       url: `/blog/${slug}`,
-      siteName: 'ScaleFront',
+      siteName: "ScaleFront",
       images: [
         {
           url: imageUrl,
@@ -73,19 +76,19 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
           alt: post.title,
         },
       ],
-      locale: 'en_US',
-      type: 'article',
+      locale: "en_US",
+      type: "article",
       publishedTime: post.date,
       modifiedTime: post.date,
       authors: [post.author],
       tags: post.tags || [],
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title: post.title,
       description: post.description,
       images: [imageUrl],
-      creator: '@scalefront',
+      creator: "@scalefront",
     },
     robots: {
       index: true,
@@ -93,9 +96,9 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       googleBot: {
         index: true,
         follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
       },
     },
   };
@@ -110,10 +113,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const relatedPosts = await getRelatedPosts(slug, 3);
-  const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://scalefront.io';
+  const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://scalefront.io";
   const postUrl = `${siteUrl}/blog/${slug}`;
 
-  // Use FAQs from frontmatter
   const faqs = post.faqs || [];
 
   return (
@@ -122,15 +124,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <Header />
 
       <article className="min-h-screen bg-[#fafafa] dark:bg-gray-900">
-        {/* Hero/Header - Medium Style */}
         <div className="bg-white border-b border-gray-200 dark:bg-gray-900 dark:border-gray-700">
           <div className="max-w-[680px] mx-auto px-6 py-16">
-            {/* Controls */}
+            {/* ?Controls */}
             <div className="flex items-center justify-between mb-8">
               <Breadcrumbs
                 items={[
-                  { label: 'Blog', href: '/blog' },
-                  { label: post.category, href: `/blog?category=${encodeURIComponent(post.category)}` },
+                  { label: "Blog", href: "/blog" },
+                  {
+                    label: post.category,
+                    href: `/blog?category=${encodeURIComponent(post.category)}`,
+                  },
                   { label: post.title },
                 ]}
               />
@@ -140,12 +144,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
             </div>
 
-            {/* Title - Large serif like Medium */}
+            {/* //? title */}
             <h1 className="text-[42px] md:text-[52px] font-bold text-[#292929] dark:text-white mb-4 leading-[1.15] tracking-tight font-serif">
               {post.title}
             </h1>
 
-            {/* Description - Medium subtitle style */}
+            {/* //? Description */}
             <p className="text-[24px] text-[#6B6B6B] dark:text-gray-300 mb-10 leading-[1.4] font-serif">
               {post.description}
             </p>
@@ -153,19 +157,25 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             {/* Meta Info */}
             <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
               <div className="flex items-center gap-3 text-[14px] text-[#6B6B6B] dark:text-gray-400">
-                <span className="font-medium text-[#292929] dark:text-white">{post.author}</span>
+                <span className="font-medium text-[#292929] dark:text-white">
+                  {post.author}
+                </span>
                 <span>·</span>
                 <time dateTime={post.date}>
-                  {new Date(post.date).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
+                  {new Date(post.date).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
                   })}
                 </time>
                 <span>·</span>
                 <span>{post.readingTime}</span>
               </div>
-              <SocialShare title={post.title} url={postUrl} description={post.description} />
+              <SocialShare
+                title={post.title}
+                url={postUrl}
+                description={post.description}
+              />
             </div>
 
             {/* Tags */}
@@ -202,22 +212,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         )}
 
-        {/* Content - True Medium Style */}
         <div className="bg-white dark:bg-gray-900">
           <div className="max-w-[1400px] mx-auto px-6 py-12">
             <div className="flex flex-col justify-center gap-12 lg:flex-row">
-              {/* Main Content - Centered */}
               <div className="w-full lg:max-w-[680px] mx-auto lg:mx-0">
-                {/* Table of Contents - Mobile */}
                 <div className="mb-8 lg:hidden">
                   <TableOfContents content={post.content} />
                 </div>
 
-                {/* AI Summarize Feature */}
                 <SummarizeWithAI content={post.content} title={post.title} />
 
-                {/* Article Content */}
-                <div className="medium-content
+                <div
+                  className="medium-content
                   [&>*]:text-[#292929] dark:[&>*]:text-white
                   [&>*]:font-serif
                   [&>h1]:text-[36px] [&>h1]:font-bold [&>h1]:mt-12 [&>h1]:mb-4 [&>h1]:leading-[1.25] [&>h1]:tracking-tight
@@ -237,7 +243,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   [&_th]:border [&_th]:border-gray-300 dark:[&_th]:border-gray-700 [&_th]:bg-gray-50 dark:[&_th]:bg-gray-800 [&_th]:p-4 [&_th]:text-left [&_th]:font-semibold [&_th]:text-[#292929] dark:[&_th]:text-white
                   [&_td]:border [&_td]:border-gray-300 dark:[&_td]:border-gray-700 [&_td]:p-4 [&_td]:text-[#292929] dark:[&_td]:text-gray-200
                   [&>img]:my-12 [&>img]:w-full [&>img]:rounded-lg
-                ">
+                "
+                >
                   <MarkdownContent content={post.content} />
                 </div>
 
@@ -261,7 +268,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                               stroke="currentColor"
                               viewBox="0 0 24 24"
                             >
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M19 9l-7 7-7-7"
+                              />
                             </svg>
                           </summary>
                           <p className="mt-4 text-[18px] text-[#6B6B6B] dark:text-gray-300 leading-[1.6]">
@@ -286,7 +298,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       Need Expert Help with Your Shopify Store?
                     </h3>
                     <p className="text-[18px] text-[#6B6B6B] dark:text-gray-300 mb-8 leading-[1.6] font-serif">
-                      Get a free consultation with our Shopify optimization experts. We have helped dozens of brands improve their store performance and increase conversions.
+                      Get a free consultation with our Shopify optimization
+                      experts. We have helped dozens of brands improve their
+                      store performance and increase conversions.
                     </p>
                     <div className="flex flex-col justify-center gap-4 sm:flex-row">
                       <Link
@@ -314,8 +328,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     href="/blog"
                     className="inline-flex items-center gap-2 text-[#292929] dark:text-white hover:text-black dark:hover:text-gray-300 font-medium text-[16px]"
                   >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                      />
                     </svg>
                     Back to all articles
                   </Link>
@@ -337,33 +361,33 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'TechArticle',
+              "@context": "https://schema.org",
+              "@type": "TechArticle",
               headline: post.title,
               description: post.description,
               image: post.image || `${siteUrl}/og-image.png`,
               datePublished: post.date,
               dateModified: post.date,
               author: {
-                '@type': 'Organization',
+                "@type": "Organization",
                 name: post.author,
                 url: siteUrl,
               },
               publisher: {
-                '@type': 'Organization',
-                name: 'ScaleFront',
+                "@type": "Organization",
+                name: "ScaleFront",
                 logo: {
-                  '@type': 'ImageObject',
+                  "@type": "ImageObject",
                   url: `${siteUrl}/logo.png`,
                 },
               },
               mainEntityOfPage: {
-                '@type': 'WebPage',
-                '@id': postUrl,
+                "@type": "WebPage",
+                "@id": postUrl,
               },
-              articleSection: post.category || 'Technology',
-              keywords: post.tags?.join(', ') || '',
-              proficiencyLevel: 'Intermediate',
+              articleSection: post.category || "Technology",
+              keywords: post.tags?.join(", ") || "",
+              proficiencyLevel: "Intermediate",
             }),
           }}
         />
@@ -373,23 +397,23 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'BreadcrumbList',
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
               itemListElement: [
                 {
-                  '@type': 'ListItem',
+                  "@type": "ListItem",
                   position: 1,
-                  name: 'Home',
+                  name: "Home",
                   item: siteUrl,
                 },
                 {
-                  '@type': 'ListItem',
+                  "@type": "ListItem",
                   position: 2,
-                  name: 'Blog',
+                  name: "Blog",
                   item: `${siteUrl}/blog`,
                 },
                 {
-                  '@type': 'ListItem',
+                  "@type": "ListItem",
                   position: 3,
                   name: post.title,
                   item: postUrl,
@@ -405,13 +429,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'FAQPage',
-                mainEntity: faqs.map(faq => ({
-                  '@type': 'Question',
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                mainEntity: faqs.map((faq) => ({
+                  "@type": "Question",
                   name: faq.question,
                   acceptedAnswer: {
-                    '@type': 'Answer',
+                    "@type": "Answer",
                     text: faq.answer,
                   },
                 })),
@@ -420,36 +444,36 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           />
         )}
 
-        {/* HowTo Schema for technical/tutorial articles */}
-        {post.category?.toLowerCase().includes('tutorial') || post.title.toLowerCase().includes('how to') ? (
+        {post.category?.toLowerCase().includes("tutorial") ||
+        post.title.toLowerCase().includes("how to") ? (
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'HowTo',
+                "@context": "https://schema.org",
+                "@type": "HowTo",
                 name: post.title,
                 description: post.description,
                 image: {
-                  '@type': 'ImageObject',
+                  "@type": "ImageObject",
                   url: post.image || `${siteUrl}/og-image.png`,
                 },
-                totalTime: post.readingTime || 'PT10M',
+                totalTime: post.readingTime || "PT10M",
                 step: [
                   {
-                    '@type': 'HowToStep',
-                    name: 'Understand the Requirements',
-                    text: 'Learn about the technical requirements and prerequisites needed for implementation.',
+                    "@type": "HowToStep",
+                    name: "Understand the Requirements",
+                    text: "Learn about the technical requirements and prerequisites needed for implementation.",
                   },
                   {
-                    '@type': 'HowToStep',
-                    name: 'Follow Implementation Steps',
-                    text: 'Follow the detailed step-by-step guide provided in the article.',
+                    "@type": "HowToStep",
+                    name: "Follow Implementation Steps",
+                    text: "Follow the detailed step-by-step guide provided in the article.",
                   },
                   {
-                    '@type': 'HowToStep',
-                    name: 'Test and Optimize',
-                    text: 'Test your implementation and optimize based on the best practices shared.',
+                    "@type": "HowToStep",
+                    name: "Test and Optimize",
+                    text: "Test your implementation and optimize based on the best practices shared.",
                   },
                 ],
               }),
@@ -457,7 +481,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           />
         ) : null}
       </article>
-      <Footer />
     </>
   );
 }

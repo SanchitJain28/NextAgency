@@ -24,9 +24,7 @@ interface ShopifyStore {
   };
 }
 
-/**
- * Check if a URL is a Shopify store
- */
+
 export async function isShopifyStore(url: string): Promise<boolean> {
   try {
     const domain = new URL(url).hostname;

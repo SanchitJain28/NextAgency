@@ -51,7 +51,11 @@ export const AnyNull = runtime.AnyNull
 
 
 export const ModelName = {
-  Blog: 'Blog'
+  Blog: 'Blog',
+  Topic: 'Topic',
+  GapReport: 'GapReport',
+  Draft: 'Draft',
+  PublishedPost: 'PublishedPost'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -93,6 +97,79 @@ export const BlogScalarFieldEnum = {
 export type BlogScalarFieldEnum = (typeof BlogScalarFieldEnum)[keyof typeof BlogScalarFieldEnum]
 
 
+export const TopicScalarFieldEnum = {
+  id: 'id',
+  keyword: 'keyword',
+  cluster: 'cluster',
+  searchConsoleImpressions: 'searchConsoleImpressions',
+  estDifficulty: 'estDifficulty',
+  priorityScore: 'priorityScore',
+  status: 'status',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type TopicScalarFieldEnum = (typeof TopicScalarFieldEnum)[keyof typeof TopicScalarFieldEnum]
+
+
+export const GapReportScalarFieldEnum = {
+  id: 'id',
+  topicId: 'topicId',
+  competitorUrls: 'competitorUrls',
+  commonSubtopics: 'commonSubtopics',
+  missingSubtopics: 'missingSubtopics',
+  avgWordCount: 'avgWordCount',
+  differentiationAngle: 'differentiationAngle',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type GapReportScalarFieldEnum = (typeof GapReportScalarFieldEnum)[keyof typeof GapReportScalarFieldEnum]
+
+
+export const DraftScalarFieldEnum = {
+  id: 'id',
+  topicId: 'topicId',
+  gapReportId: 'gapReportId',
+  outline: 'outline',
+  bodyMarkdown: 'bodyMarkdown',
+  wordCount: 'wordCount',
+  metaTitle: 'metaTitle',
+  metaDescription: 'metaDescription',
+  slug: 'slug',
+  internalLinks: 'internalLinks',
+  schemaMarkup: 'schemaMarkup',
+  status: 'status',
+  reviewNotes: 'reviewNotes',
+  exportedFilePath: 'exportedFilePath',
+  modelUsed: 'modelUsed',
+  generationTokens: 'generationTokens',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type DraftScalarFieldEnum = (typeof DraftScalarFieldEnum)[keyof typeof DraftScalarFieldEnum]
+
+
+export const PublishedPostScalarFieldEnum = {
+  id: 'id',
+  draftId: 'draftId',
+  cmsPostId: 'cmsPostId',
+  publishedUrl: 'publishedUrl',
+  publishedAt: 'publishedAt',
+  impressions: 'impressions',
+  clicks: 'clicks',
+  avgPosition: 'avgPosition',
+  ctr: 'ctr',
+  lastTrackedAt: 'lastTrackedAt',
+  needsRefresh: 'needsRefresh',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type PublishedPostScalarFieldEnum = (typeof PublishedPostScalarFieldEnum)[keyof typeof PublishedPostScalarFieldEnum]
+
+
 export const SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -107,6 +184,13 @@ export const NullableJsonNullValueInput = {
 } as const
 
 export type NullableJsonNullValueInput = (typeof NullableJsonNullValueInput)[keyof typeof NullableJsonNullValueInput]
+
+
+export const JsonNullValueInput = {
+  JsonNull: JsonNull
+} as const
+
+export type JsonNullValueInput = (typeof JsonNullValueInput)[keyof typeof JsonNullValueInput]
 
 
 export const QueryMode = {

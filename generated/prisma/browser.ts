@@ -22,3 +22,23 @@ export * from './enums';
  * 
  */
 export type Blog = Prisma.BlogModel
+/**
+ * Model Topic
+ * 
+ */
+export type Topic = Prisma.TopicModel
+/**
+ * Model GapReport
+ * 
+ */
+export type GapReport = Prisma.GapReportModel
+/**
+ * Model Draft
+ * 
+ */
+export type Draft = Prisma.DraftModel
+/**
+ * Model PublishedPost
+ * 
+ */
+export type PublishedPost = Prisma.PublishedPostModel

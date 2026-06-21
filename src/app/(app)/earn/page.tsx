@@ -64,7 +64,7 @@ export default function EarnAuditorPage() {
         },
         body: JSON.stringify({
           url,
-          shopifyCredentials: credentials // Pass optional credentials to API
+          shopifyCredentials: credentials
         }),
       });
 
@@ -125,8 +125,8 @@ export default function EarnAuditorPage() {
 
       <main className="pt-16">
           {error && (
-            <div className="max-w-4xl mx-auto p-6 pt-6">
-              <div className="bg-red-100 border border-red-300 text-red-700 rounded-xl p-4 mb-6 shadow-sm">
+            <div className="max-w-4xl p-6 pt-6 mx-auto">
+              <div className="p-4 mb-6 text-red-700 bg-red-100 border border-red-300 shadow-sm rounded-xl">
                 <strong className="font-semibold">Error:</strong> {error}
               </div>
             </div>

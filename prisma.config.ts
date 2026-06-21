@@ -1,5 +1,9 @@
 import "dotenv/config";
-import { defineConfig, env } from "prisma/config";
+import { defineConfig } from "prisma/config";
+
+const poolerUrl = process.env.DATABASE_URL!;
+
+const directUrl = poolerUrl.replace("-pooler.", ".");
 
 export default defineConfig({
   schema: "prisma/schema.prisma",
@@ -7,6 +11,6 @@ export default defineConfig({
     path: "prisma/migrations",
   },
   datasource: {
-    url: "postgresql://neondb_owner:npg_mYs7DyRj8fLE@ep-lingering-lab-a12n04op-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require",
+    url: directUrl,
   },
 });
