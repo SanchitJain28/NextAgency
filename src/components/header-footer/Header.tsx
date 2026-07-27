@@ -44,11 +44,29 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-[100] border-b border-[#d9dee7] transition-colors duration-200 font-sans backdrop-blur-[20px] ${
+      className={`sticky top-0 z-[100] border-b border-[#d9dee7] transition-colors duration-200 font-sans backdrop-blur-[20px] flex flex-col ${
         scrolled ? "bg-white/95" : "bg-white/90"
       }`}
     >
-      <div className="max-w-[1280px] mx-auto px-6 flex items-center justify-between h-16">
+      <div className="bg-[#1677ff] text-white text-[14px] font-bold tracking-[0.15em] py-2.5 overflow-hidden whitespace-nowrap flex w-full">
+        <style>{`
+          @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .animate-marquee-infinite {
+            animation: marquee 20s linear infinite;
+          }
+        `}</style>
+        <div className="animate-marquee-infinite flex w-fit">
+          {[...Array(15)].map((_, i) => (
+            <span key={i} className="mx-6">
+              GET YOUR FREE SHOPIFY STORE AUDIT
+            </span>
+          ))}
+        </div>
+      </div>
+      <div className="max-w-[1280px] w-full mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo */}
         <Link
           href="/"
