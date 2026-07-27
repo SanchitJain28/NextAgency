@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useCallback, useEffect } from "react";
 import {
@@ -47,23 +48,22 @@ export function Header() {
         scrolled ? "bg-white/95" : "bg-white/90"
       }`}
     >
-      <div className="max-w-[1280px] mx-auto px-10 flex items-center justify-between h-16">
+      <div className="max-w-[1280px] mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo */}
         <Link
           href="/"
           aria-label="ScaleFront — Shopify Development Agency"
-          className="flex items-center gap-2.5 no-underline"
+          className="flex items-center no-underline"
           onClick={() => setMobileOpen(false)}
         >
-          <span
-            className="w-8 h-8 bg-[#1677ff] rounded-lg flex items-center justify-center text-white font-semibold text-base tracking-[-0.01em] shrink-0"
-            aria-hidden="true"
-          >
-            S
-          </span>
-          <span className="text-[20px] font-semibold tracking-[-0.02em] text-[#111111]">
-            ScaleFront
-          </span>
+          <Image
+            src="/logos/scalefrontlonglogo.png"
+            alt="ScaleFront"
+            width={200}
+            height={48}
+            className="w-auto h-12 md:h-12"
+            priority
+          />
         </Link>
 
         {/* ── Desktop nav ──────────────────────────────────────────────── */}
