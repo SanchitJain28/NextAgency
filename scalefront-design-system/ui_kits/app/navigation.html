@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation — ScaleFront UI Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../colors_and_type.css">
+<style>
+  body { font-family: var(--font-body); background: var(--bg); color: var(--fg); margin: 0; }
+  a.back { color: var(--accent); text-decoration: none; font-size: 14px; }
+  a.back:hover { text-decoration: underline; }
+
+  .navbar { position: sticky; top: 0; z-index: 100; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+  .nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .nav-logo { font-family: var(--font-display); font-size: 22px; font-weight: 600; letter-spacing: -0.02em; color: var(--fg); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+  .nav-logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 600; font-size: 16px; letter-spacing: -0.01em; }
+  .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; margin: 0; padding: 0; }
+  .nav-links a { font-size: 15px; font-weight: 500; color: var(--fg); text-decoration: none; letter-spacing: 0.01em; transition: color var(--transition-base); }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-cta { display: inline-flex; align-items: center; height: 40px; padding: 0 20px; font-size: 14px; font-weight: 600; letter-spacing: 0.02em; color: #fff; background: var(--fg); border-radius: var(--radius); text-decoration: none; transition: background var(--transition-base), transform var(--transition-fast); }
+  .nav-cta:hover { background: color-mix(in srgb, var(--fg) 85%, var(--accent)); transform: translateY(-1px); }
+
+  .demo-body { min-height: 400px; background: var(--bg); }
+  .demo-content { max-width: 800px; margin: 0 auto; padding: 60px 40px; }
+  .demo-content h2 { font-family: var(--font-display); font-size: 24px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 12px; }
+  .demo-content p { font-size: 15px; color: var(--muted); line-height: 1.6; }
+
+  .footer { padding: 40px; border-top: 1px solid var(--border); background: var(--bg); }
+  .footer-inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+  .footer-copy { font-size: 13px; color: var(--muted); letter-spacing: 0.01em; }
+  .footer-links { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; }
+  .footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; letter-spacing: 0.01em; transition: color var(--transition-base); }
+  .footer-links a:hover { color: var(--fg); }
+
+  .specs { max-width: 960px; margin: 0 auto; padding: 40px; }
+  .specs h2 { font-family: var(--font-display); font-size: 24px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 24px; }
+  .spec-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .spec-table th, .spec-table td { text-align: left; padding: 10px 16px; border-bottom: 1px solid var(--border); }
+  .spec-table th { font-weight: 600; color: var(--muted); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
+  .spec-table code { font-family: 'SF Mono', monospace; font-size: 13px; color: var(--accent); }
+</style>
+</head>
+<body>
+
+<nav class="navbar" data-od-id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <span class="nav-logo-mark">S</span>
+      ScaleFront
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#">Process</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+    <a href="#" class="nav-cta">Start a project</a>
+  </div>
+</nav>
+
+<div class="demo-body">
+  <div class="demo-content">
+    <p style="margin-bottom: 24px;"><a href="index.html" class="back">&larr; Back to UI Kit</a></p>
+    <h2>Sticky Glassmorphism Navbar</h2>
+    <p>The navbar uses <code>position: sticky; top: 0</code> with a translucent background (<code>color-mix(in srgb, var(--bg) 88%, transparent)</code>) and <code>backdrop-filter: blur(20px)</code> for the glassmorphism effect. On scroll past 10px, the background opacity increases.</p>
+    <p>The logo is composed of a 32×32px accent-colored square with the initial "S" plus the "ScaleFront" wordmark in Inter 600 at 22px with -0.02em tracking. Nav links are 15px/500 with 32px gap. The CTA button is a compact 40px-tall primary button.</p>
+    <p style="font-size: 13px; color: var(--muted);">Scroll this page to see the sticky behavior. The navbar remains fixed at the top.</p>
+  </div>
+
+  <div style="max-width: 800px; margin: 0 auto; padding: 0 40px 60px;">
+    <p style="font-size: 15px; color: var(--muted); line-height: 1.6; margin-bottom: 16px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p style="font-size: 15px; color: var(--muted); line-height: 1.6; margin-bottom: 16px;">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p style="font-size: 15px; color: var(--muted); line-height: 1.6; margin-bottom: 16px;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    <p style="font-size: 15px; color: var(--muted); line-height: 1.6;">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+  </div>
+</div>
+
+<footer class="footer" data-od-id="footer">
+  <div class="footer-inner">
+    <span class="footer-copy">&copy; 2026 ScaleFront. All rights reserved.</span>
+    <ul class="footer-links">
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">LinkedIn</a></li>
+      <li><a href="#">Email</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="specs">
+  <h2>Component Specs</h2>
+  <table class="spec-table">
+    <thead><tr><th>Property</th><th>Token / Value</th></tr></thead>
+    <tbody>
+      <tr><td>Navbar position</td><td><code>sticky; top: 0; z-index: 100</code></td></tr>
+      <tr><td>Navbar background</td><td><code>color-mix(in srgb, var(--bg) 88%, transparent)</code></td></tr>
+      <tr><td>Navbar blur</td><td><code>backdrop-filter: blur(20px)</code></td></tr>
+      <tr><td>Navbar height</td><td><code>64px</code></td></tr>
+      <tr><td>Logo mark</td><td><code>32×32px · --accent bg · #fff text · 16px font</code></td></tr>
+      <tr><td>Logo text</td><td><code>22px · 600 weight · -0.02em tracking</code></td></tr>
+      <tr><td>Nav links</td><td><code>15px · 500 weight · 32px gap</code></td></tr>
+      <tr><td>Nav CTA</td><td><code>40px height · 14px · 600 weight</code></td></tr>
+      <tr><td>Footer border</td><td><code>1px solid --border (top)</code></td></tr>
+      <tr><td>Footer text</td><td><code>13px · --muted · 0.01em tracking</code></td></tr>
+      <tr><td>Footer links hover</td><td><code>color → --fg</code></td></tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

@@ -1,372 +1,367 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import Image from "next/image"
-import { usePathname } from "next/navigation"
-import { useState, useCallback } from "react"
-import { cn } from "@/lib/utils"
-import { ChevronDown } from "lucide-react"
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState, useCallback, useEffect } from "react";
+import {
+  HEADER_SERVICES as SERVICES,
+  HEADER_SHOPIFY_APPS as SHOPIFY_APPS,
+  HEADER_TOOLS as TOOLS,
+  HEADER_NAV_LINKS as NAV_LINKS,
+} from "@/data/data";
+import { MenuIcon, CloseIcon, ChevronDownIcon as ChevronDown } from "@/icons";
 
-const SERVICES = [
-  { href: "/services/headless-commerce", label: "Headless Commerce" },
-  { href: "/services/custom-shopify-apps", label: "Custom Shopify Apps" },
-  { href: "/services/theme-development", label: "Theme Development" },
-  { href: "/services/backend-api", label: "Backend & API" },
-  { href: "/services/conversion-optimization", label: "Conversion Optimization" },
-  { href: "/services/custom-features", label: "Custom Features" },
-  { href: "/services/performance-optimization", label: "Performance Optimization" },
-  { href: "/services/mobile-apps", label: "Mobile Apps" },
-  { href: "/services/shopify-plus-migration", label: "Shopify Plus Migration" },
-  { href: "/services/integrations", label: "Third-Party Integrations" },
-  { href: "/services/audit-consulting", label: "Store Audit & Consulting" },
-]
-
-const TOOLS = [
-  { href: "/earn", label: "Earn - Store Auditor" },
-]
-
-const SHOPIFY_APPS = [
-  { href: "/upsell-cross-sell-app-shopify", label: "Crossell, Upsell & Related Products AI" },
-]
-
-const NAV_LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/about-us", label: "About" },
-  { href: "/blog", label: "Blog" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/contact-us", label: "Contact" },
-]
+type DropdownKey = "services" | "apps" | "tools" | null;
 
 export function Header() {
-  const pathname = usePathname()
-  const [open, setOpen] = useState(false)
-  const [servicesOpen, setServicesOpen] = useState(false)
-  const [toolsOpen, setToolsOpen] = useState(false)
-  const [shopifyAppsOpen, setShopifyAppsOpen] = useState(false)
+  const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileExpanded, setMobileExpanded] = useState<DropdownKey>(null);
+  const [activeDropdown, setActiveDropdown] = useState<DropdownKey>(null);
 
   const isActive = useCallback(
-    (href: string) => (href === "/" ? pathname === "/" : pathname?.startsWith(href)),
+    (href: string) =>
+      href === "/" ? pathname === "/" : pathname?.startsWith(href),
     [pathname],
-  )
+  );
 
-  const isServicesActive = pathname?.startsWith("/services")
-  const isToolsActive = pathname?.startsWith("/earn")
-  const isShopifyAppsActive = pathname?.startsWith("/upsell-cross-sell-app-shopify")
+  // Glassmorphism scroll effect
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    setMobileOpen(false);
+    setMobileExpanded(null);
+  }, [pathname]);
+
+  const toggleMobile = (key: DropdownKey) =>
+    setMobileExpanded((prev) => (prev === key ? null : key));
 
   return (
-    <header className="w-full border-b border-white/10 bg-black/70 backdrop-blur-xl sticky top-0 z-50 shadow-lg transition-all duration-300">
-      <div className="mx-auto max-w-7xl px-6 relative">
-        <div className="flex h-16 items-center justify-between relative z-10">
-          {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center gap-2"
-            aria-label="Go to homepage"
-            onClick={() => setOpen(false)}
+    <header
+      className={`sticky top-0 z-[100] border-b border-[#d9dee7] transition-colors duration-200 font-sans backdrop-blur-[20px] ${
+        scrolled ? "bg-white/95" : "bg-white/90"
+      }`}
+    >
+      <div className="max-w-[1280px] mx-auto px-10 flex items-center justify-between h-16">
+        {/* Logo */}
+        <Link
+          href="/"
+          aria-label="ScaleFront — Shopify Development Agency"
+          className="flex items-center gap-2.5 no-underline"
+          onClick={() => setMobileOpen(false)}
+        >
+          <span
+            className="w-8 h-8 bg-[#1677ff] rounded-lg flex items-center justify-center text-white font-semibold text-base tracking-[-0.01em] shrink-0"
+            aria-hidden="true"
           >
-            <Image
-              src="/logos/scalefrontlonglogoclearbackground.png"
-              alt="ScaleFront"
-              width={240}
-              height={60}
-              className="h-12 w-auto"
-              priority
-            />
-          </Link>
+            S
+          </span>
+          <span className="text-[20px] font-semibold tracking-[-0.02em] text-[#111111]">
+            ScaleFront
+          </span>
+        </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-1" aria-label="Main">
-            {/* Services Dropdown - First */}
-            <div
-              className="relative"
-              onMouseEnter={() => setServicesOpen(true)}
-              onMouseLeave={() => setServicesOpen(false)}
-            >
-              <button
-                className={cn(
-                  "px-4 py-2 text-sm font-medium rounded-md transition-colors flex items-center gap-1",
-                  isServicesActive
-                    ? "text-blue-400"
-                    : "text-white hover:text-blue-400 hover:bg-gray-800"
-                )}
-              >
-                Services
-                <ChevronDown className={cn(
-                  "h-4 w-4 transition-transform",
-                  servicesOpen && "rotate-180"
-                )} />
-              </button>
-
-              {servicesOpen && (
-                <div className="absolute top-full left-0 mt-1 w-72 bg-gray-900/95 backdrop-blur-xl border border-white/10 rounded-lg shadow-2xl py-2 max-h-[80vh] overflow-y-auto z-50">
-                  {SERVICES.map((service) => (
-                    <Link
-                      key={service.href}
-                      href={service.href}
-                      className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-blue-400 transition-colors"
-                    >
-                      {service.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Tools Dropdown - Second */}
-            <div
-              className="relative"
-              onMouseEnter={() => setToolsOpen(true)}
-              onMouseLeave={() => setToolsOpen(false)}
-            >
-              <button
-                className={cn(
-                  "px-4 py-2 text-sm font-medium rounded-md transition-colors flex items-center gap-1",
-                  isToolsActive
-                    ? "text-blue-400"
-                    : "text-white hover:text-blue-400 hover:bg-gray-800"
-                )}
-              >
-                Tools
-                <ChevronDown className={cn(
-                  "h-4 w-4 transition-transform",
-                  toolsOpen && "rotate-180"
-                )} />
-              </button>
-
-              {toolsOpen && (
-                <div className="absolute top-full left-0 mt-1 w-64 bg-gray-900/95 backdrop-blur-xl border border-white/10 rounded-lg shadow-2xl py-2 z-50">
-                  {TOOLS.map((tool) => (
-                    <Link
-                      key={tool.href}
-                      href={tool.href}
-                      className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-blue-400 transition-colors"
-                    >
-                      {tool.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Shopify Apps Dropdown - Third */}
-            <div
-              className="relative"
-              onMouseEnter={() => setShopifyAppsOpen(true)}
-              onMouseLeave={() => setShopifyAppsOpen(false)}
-            >
-              <button
-                className={cn(
-                  "px-4 py-2 text-sm font-medium rounded-md transition-colors flex items-center gap-1",
-                  isShopifyAppsActive
-                    ? "text-purple-400"
-                    : "text-white hover:text-purple-400 hover:bg-gray-800"
-                )}
-              >
-                Shopify Apps
-                <ChevronDown className={cn(
-                  "h-4 w-4 transition-transform",
-                  shopifyAppsOpen && "rotate-180"
-                )} />
-              </button>
-
-              {shopifyAppsOpen && (
-                <div className="absolute top-full left-0 mt-1 w-72 bg-gray-900/95 backdrop-blur-xl border border-white/10 rounded-lg shadow-2xl py-2 z-50">
-                  {SHOPIFY_APPS.map((app) => (
-                    <Link
-                      key={app.href}
-                      href={app.href}
-                      className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-purple-400 transition-colors"
-                    >
-                      {app.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {NAV_LINKS.map((item) => {
-              const active = isActive(item.href)
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  aria-current={active ? "page" : undefined}
-                  className={cn(
-                    "px-4 py-2 text-sm font-medium rounded-md transition-colors",
-                    active
-                      ? "text-blue-400"
-                      : "text-white hover:text-blue-400 hover:bg-gray-800"
-                  )}
-                >
-                  {item.label}
-                </Link>
-              )
-            })}
-          </nav>
-
-          {/* Mobile menu button */}
-          <button
-            type="button"
-            onClick={() => setOpen((v) => !v)}
-            className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-gray-800"
-            aria-label="Toggle menu"
+        {/* ── Desktop nav ──────────────────────────────────────────────── */}
+        <nav
+          aria-label="Main navigation"
+          className="hidden md:flex items-center gap-1"
+        >
+          {/* Services dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setActiveDropdown("services")}
+            onMouseLeave={() => setActiveDropdown(null)}
           >
-            {open ? (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M6 18L18 6M6 6l12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-              </svg>
-            ) : (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-              </svg>
+            <button
+              aria-haspopup="true"
+              aria-expanded={activeDropdown === "services"}
+              className={`flex items-center gap-1 py-2 px-3.5 text-[15px] font-medium tracking-[0.01em] bg-transparent border-none cursor-pointer rounded-lg transition-colors duration-200 ${
+                isActive("/services") ? "text-[#1677ff]" : "text-[#111111]"
+              }`}
+            >
+              Services
+              <ChevronDown
+                className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                  activeDropdown === "services" ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </button>
+
+            {activeDropdown === "services" && (
+              <div
+                role="menu"
+                className="absolute top-[calc(100%+4px)] left-0 w-[560px] bg-white border border-[#d9dee7] rounded-lg shadow-[0_8px_32px_rgba(0,0,0,0.08)] p-3 grid grid-cols-2 gap-0.5 z-[200]"
+              >
+                {SERVICES.map((s) => (
+                  <Link
+                    key={s.href}
+                    href={s.href}
+                    role="menuitem"
+                    className={`block p-2.5 px-3 rounded-md no-underline transition-colors duration-150 ${
+                      isActive(s.href)
+                        ? "bg-[#f7f8fa]"
+                        : "bg-transparent hover:bg-[#f7f8fa]"
+                    }`}
+                  >
+                    <div className="text-sm font-semibold text-[#111111] mb-0.5">
+                      {s.label}
+                    </div>
+                    <div className="text-xs text-[#6b7280]">{s.desc}</div>
+                  </Link>
+                ))}
+              </div>
             )}
-          </button>
-        </div>
+          </div>
 
-        {/* Mobile nav */}
-        {open && (
-          <nav
-            aria-label="Mobile"
-            className="md:hidden border-t border-white/10 pb-4 bg-black/30 backdrop-blur-lg"
+          {/* Shopify Apps dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setActiveDropdown("apps")}
+            onMouseLeave={() => setActiveDropdown(null)}
           >
-            <ul className="flex flex-col py-2 space-y-1">
-              {/* Mobile Services - First */}
-              <li>
-                <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  className={cn(
-                    "w-full text-left px-4 py-2 text-sm font-medium rounded-md transition-colors flex items-center justify-between",
-                    isServicesActive
-                      ? "text-blue-400 bg-gray-800"
-                      : "text-white hover:bg-gray-800"
-                  )}
-                >
-                  Services
-                  <ChevronDown className={cn(
-                    "h-4 w-4 transition-transform",
-                    servicesOpen && "rotate-180"
-                  )} />
-                </button>
-                {servicesOpen && (
-                  <ul className="mt-2 ml-4 space-y-1">
-                    {SERVICES.map((service) => (
-                      <li key={service.href}>
-                        <Link
-                          href={service.href}
-                          onClick={() => {
-                            setOpen(false)
-                            setServicesOpen(false)
-                          }}
-                          className="block px-4 py-2 text-sm text-gray-300 hover:text-blue-400 hover:bg-gray-800 rounded-md transition-colors"
-                        >
-                          {service.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
+            <button
+              aria-haspopup="true"
+              aria-expanded={activeDropdown === "apps"}
+              className={`flex items-center gap-1 py-2 px-3.5 text-[15px] font-medium tracking-[0.01em] bg-transparent border-none cursor-pointer rounded-lg transition-colors duration-200 ${
+                isActive("/upsell-cross-sell-app-shopify")
+                  ? "text-[#1677ff]"
+                  : "text-[#111111]"
+              }`}
+            >
+              Apps
+              <ChevronDown
+                className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                  activeDropdown === "apps" ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </button>
 
-              {/* Mobile Tools - Second */}
-              <li>
-                <button
-                  onClick={() => setToolsOpen(!toolsOpen)}
-                  className={cn(
-                    "w-full text-left px-4 py-2 text-sm font-medium rounded-md transition-colors flex items-center justify-between",
-                    isToolsActive
-                      ? "text-blue-400 bg-gray-800"
-                      : "text-white hover:bg-gray-800"
-                  )}
-                >
-                  Tools
-                  <ChevronDown className={cn(
-                    "h-4 w-4 transition-transform",
-                    toolsOpen && "rotate-180"
-                  )} />
-                </button>
-                {toolsOpen && (
-                  <ul className="mt-2 ml-4 space-y-1">
-                    {TOOLS.map((tool) => (
-                      <li key={tool.href}>
-                        <Link
-                          href={tool.href}
-                          onClick={() => {
-                            setOpen(false)
-                            setToolsOpen(false)
-                          }}
-                          className="block px-4 py-2 text-sm text-gray-300 hover:text-blue-400 hover:bg-gray-800 rounded-md transition-colors"
-                        >
-                          {tool.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
+            {activeDropdown === "apps" && (
+              <div
+                role="menu"
+                className="absolute top-[calc(100%+4px)] left-0 w-[280px] bg-white border border-[#d9dee7] rounded-lg shadow-[0_8px_32px_rgba(0,0,0,0.08)] p-2 z-[200]"
+              >
+                {SHOPIFY_APPS.map((a) => (
+                  <Link
+                    key={a.href}
+                    href={a.href}
+                    role="menuitem"
+                    className="block p-2.5 px-3 rounded-md no-underline bg-transparent hover:bg-[#f7f8fa] transition-colors duration-150"
+                  >
+                    <div className="text-sm font-semibold text-[#111111] mb-0.5">
+                      {a.label}
+                    </div>
+                    <div className="text-xs text-[#6b7280]">{a.desc}</div>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
 
-              {/* Mobile Shopify Apps - Third */}
-              <li>
-                <button
-                  onClick={() => setShopifyAppsOpen(!shopifyAppsOpen)}
-                  className={cn(
-                    "w-full text-left px-4 py-2 text-sm font-medium rounded-md transition-colors flex items-center justify-between",
-                    isShopifyAppsActive
-                      ? "text-purple-400 bg-gray-800"
-                      : "text-white hover:bg-gray-800"
-                  )}
-                >
-                  Shopify Apps
-                  <ChevronDown className={cn(
-                    "h-4 w-4 transition-transform",
-                    shopifyAppsOpen && "rotate-180"
-                  )} />
-                </button>
-                {shopifyAppsOpen && (
-                  <ul className="mt-2 ml-4 space-y-1">
-                    {SHOPIFY_APPS.map((app) => (
-                      <li key={app.href}>
-                        <Link
-                          href={app.href}
-                          onClick={() => {
-                            setOpen(false)
-                            setShopifyAppsOpen(false)
-                          }}
-                          className="block px-4 py-2 text-sm text-gray-300 hover:text-purple-400 hover:bg-gray-800 rounded-md transition-colors"
-                        >
-                          {app.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
+          {/* Tools dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setActiveDropdown("tools")}
+            onMouseLeave={() => setActiveDropdown(null)}
+          >
+            <button
+              aria-haspopup="true"
+              aria-expanded={activeDropdown === "tools"}
+              className={`flex items-center gap-1 py-2 px-3.5 text-[15px] font-medium tracking-[0.01em] bg-transparent border-none cursor-pointer rounded-lg transition-colors duration-200 ${
+                isActive("/earn") ? "text-[#1677ff]" : "text-[#111111]"
+              }`}
+            >
+              Tools
+              <ChevronDown
+                className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                  activeDropdown === "tools" ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </button>
 
-              {NAV_LINKS.map((item) => {
-                const active = isActive(item.href)
-                return (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      aria-current={active ? "page" : undefined}
-                      onClick={() => setOpen(false)}
-                      className={cn(
-                        "block px-4 py-2 text-sm font-medium rounded-md transition-colors",
-                        active
-                          ? "text-blue-400 bg-gray-800"
-                          : "text-white hover:bg-gray-800"
-                      )}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                )
-              })}
-            </ul>
-          </nav>
-        )}
+            {activeDropdown === "tools" && (
+              <div
+                role="menu"
+                className="absolute top-[calc(100%+4px)] left-0 w-[260px] bg-white border border-[#d9dee7] rounded-lg shadow-[0_8px_32px_rgba(0,0,0,0.08)] p-2 z-[200]"
+              >
+                {TOOLS.map((t) => (
+                  <Link
+                    key={t.href}
+                    href={t.href}
+                    role="menuitem"
+                    className="block p-2.5 px-3 rounded-md no-underline bg-transparent hover:bg-[#f7f8fa] transition-colors duration-150"
+                  >
+                    <div className="text-sm font-semibold text-[#111111] mb-0.5">
+                      {t.label}
+                    </div>
+                    <div className="text-xs text-[#6b7280]">{t.desc}</div>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Flat nav links */}
+          {NAV_LINKS.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              aria-current={isActive(item.href) ? "page" : undefined}
+              className={`py-2 px-3.5 text-[15px] font-medium tracking-[0.01em] no-underline rounded-lg transition-colors duration-200 ${
+                isActive(item.href) ? "text-[#1677ff]" : "text-[#111111]"
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
+
+          {/* CTA */}
+          <Link
+            href="/contact-us"
+            className="ml-3 inline-flex items-center h-10 px-5 text-sm font-semibold tracking-[0.02em] text-white bg-[#111111] rounded-lg no-underline whitespace-nowrap transition-all duration-200 hover:bg-[#111111]/90 active:scale-95"
+          >
+            Start a project
+          </Link>
+        </nav>
+
+        <button
+          type="button"
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileOpen}
+          onClick={() => setMobileOpen((v) => !v)}
+          className="md:hidden flex items-center justify-center w-10 h-10 bg-transparent border-none cursor-pointer text-[#111111] rounded-lg"
+        >
+          {mobileOpen ? (
+            <CloseIcon className="w-5 h-5" />
+          ) : (
+            <MenuIcon className="w-5 h-5" />
+          )}
+        </button>
       </div>
+
+      {/* ── Mobile nav panel ─────────────────────────────────────────────── */}
+      {mobileOpen && (
+        <nav
+          aria-label="Mobile navigation"
+          className="md:hidden border-t border-[#d9dee7] bg-white px-5 pt-4 pb-6 max-h-[80vh] overflow-y-auto"
+        >
+          {/* Services accordion */}
+          <div className="mb-1">
+            <button
+              onClick={() => toggleMobile("services")}
+              className="w-full flex items-center justify-between py-2.5 px-3 text-[15px] font-semibold text-[#111111] bg-transparent border-none cursor-pointer rounded-lg text-left"
+            >
+              Services
+              <ChevronDown
+                className={`w-4 h-4 transition-transform duration-200 ${
+                  mobileExpanded === "services" ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </button>
+            {mobileExpanded === "services" && (
+              <div className="pl-3 pb-2">
+                {SERVICES.map((s) => (
+                  <Link
+                    key={s.href}
+                    href={s.href}
+                    className={`block py-2 px-3 text-sm no-underline rounded-md ${
+                      isActive(s.href) ? "text-[#1677ff]" : "text-[#111111]"
+                    }`}
+                  >
+                    {s.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Apps accordion */}
+          <div className="mb-1">
+            <button
+              onClick={() => toggleMobile("apps")}
+              className="w-full flex items-center justify-between py-2.5 px-3 text-[15px] font-semibold text-[#111111] bg-transparent border-none cursor-pointer rounded-lg text-left"
+            >
+              Apps
+              <ChevronDown
+                className={`w-4 h-4 transition-transform duration-200 ${
+                  mobileExpanded === "apps" ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </button>
+            {mobileExpanded === "apps" && (
+              <div className="pl-3 pb-2">
+                {SHOPIFY_APPS.map((a) => (
+                  <Link
+                    key={a.href}
+                    href={a.href}
+                    className="block py-2 px-3 text-sm text-[#111111] no-underline rounded-md"
+                  >
+                    {a.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Tools accordion */}
+          <div className="mb-1">
+            <button
+              onClick={() => toggleMobile("tools")}
+              className="w-full flex items-center justify-between py-2.5 px-3 text-[15px] font-semibold text-[#111111] bg-transparent border-none cursor-pointer rounded-lg text-left"
+            >
+              Tools
+              <ChevronDown
+                className={`w-4 h-4 transition-transform duration-200 ${
+                  mobileExpanded === "tools" ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </button>
+            {mobileExpanded === "tools" && (
+              <div className="pl-3 pb-2">
+                {TOOLS.map((t) => (
+                  <Link
+                    key={t.href}
+                    href={t.href}
+                    className="block py-2 px-3 text-sm text-[#111111] no-underline rounded-md"
+                  >
+                    {t.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Flat links */}
+          {NAV_LINKS.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`block py-2.5 px-3 text-[15px] font-semibold no-underline rounded-lg ${
+                isActive(item.href) ? "text-[#1677ff]" : "text-[#111111]"
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
+
+          {/* Mobile CTA */}
+          <div className="mt-4 pt-4 border-t border-[#d9dee7]">
+            <Link
+              href="/contact-us"
+              className="flex items-center justify-center h-12 rounded-lg bg-[#1677ff] text-white text-[15px] font-semibold tracking-[0.02em] no-underline"
+            >
+              Start a project
+            </Link>
+          </div>
+        </nav>
+      )}
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

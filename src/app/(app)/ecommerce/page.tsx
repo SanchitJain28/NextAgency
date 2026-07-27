@@ -18,7 +18,6 @@ import {
 import Link from "next/link";
 // Using MagicUI Globe component with interactive features
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
-import { InteractiveGlobe } from "@/components/InteractiveGlobe";
 import { MarqueeSection } from "@/components/MarqueeSection";
 import { TeamAvailability } from "@/components/TeamAvailability";
 import Galaxy from "@/components/Galaxy";
@@ -171,11 +170,6 @@ const HeroSection = () => {
                 <span>Global clients</span>
               </div>
             </div>
-          </div>
-
-          {/* Right side: Interactive Globe */}
-          <div className="hidden lg:flex lg:items-center lg:justify-center relative h-[600px]">
-            <InteractiveGlobe />
           </div>
         </div>
       </div>

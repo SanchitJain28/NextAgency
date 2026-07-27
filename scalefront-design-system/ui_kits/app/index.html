@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ScaleFront UI Kit — Component Overview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../colors_and_type.css">
+<style>
+  body { font-family: var(--font-body); background: var(--bg); color: var(--fg); margin: 0; }
+  .header { padding: 40px; border-bottom: 1px solid var(--border); }
+  .header-inner { max-width: 1280px; margin: 0 auto; }
+  .header h1 { font-family: var(--font-display); font-size: 36px; font-weight: 600; letter-spacing: -0.02em; margin: 0 0 8px; }
+  .header p { font-size: 16px; color: var(--muted); margin: 0; }
+  .grid { max-width: 1280px; margin: 0 auto; padding: 40px; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+  .comp-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; text-decoration: none; color: inherit; transition: box-shadow 0.3s, transform 0.2s; display: block; }
+  .comp-card:hover { box-shadow: var(--accent-shadow); transform: translateY(-4px); }
+  .comp-card h2 { font-family: var(--font-display); font-size: 20px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 8px; }
+  .comp-card p { font-size: 14px; color: var(--muted); line-height: 1.5; margin: 0 0 16px; }
+  .comp-card .count { font-size: 12px; color: var(--accent); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+  .footer { padding: 24px 40px; border-top: 1px solid var(--border); text-align: center; font-size: 13px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="header-inner">
+    <h1>ScaleFront UI Kit</h1>
+    <p>Applied interface components extracted from the ScaleFront premium Shopify agency homepage. Each component page is standalone — open it directly for markup and styles.</p>
+  </div>
+</div>
+<div class="grid">
+  <a href="button.html" class="comp-card" data-od-id="comp-card-button">
+    <h2>Button</h2>
+    <p>Primary, Accent, Outline, Light, Dark Outline, Nav CTA — 6 variants with hover lift and accent transitions.</p>
+    <span class="count">6 variants</span>
+  </a>
+  <a href="card.html" class="comp-card" data-od-id="comp-card-card">
+    <h2>Card</h2>
+    <p>Service cards with icon + title + description. Case study cards with metric + label. Testimonial cards with stars + avatar.</p>
+    <span class="count">3 variants</span>
+  </a>
+  <a href="navigation.html" class="comp-card" data-od-id="comp-card-navigation">
+    <h2>Navigation</h2>
+    <p>Sticky glassmorphism navbar with logo mark, nav links, and CTA button. Footer with social links.</p>
+    <span class="count">2 components</span>
+  </a>
+</div>
+<div class="footer">&copy; ScaleFront Design System</div>
+</body>
+</html>

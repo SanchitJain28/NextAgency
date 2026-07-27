@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Card — ScaleFront UI Kit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../colors_and_type.css">
+<style>
+  body { font-family: var(--font-body); background: var(--bg); color: var(--fg); padding: 40px; max-width: 1100px; margin: 0 auto; }
+  a { color: var(--accent); text-decoration: none; font-size: 14px; }
+  a:hover { text-decoration: underline; }
+  h1 { font-family: var(--font-display); font-size: 32px; font-weight: 600; letter-spacing: -0.02em; margin: 0 0 8px; }
+  h2 { font-family: var(--font-display); font-size: 20px; font-weight: 600; margin: 48px 0 16px; }
+  .subtitle { font-size: 15px; color: var(--muted); margin-bottom: 40px; }
+
+  .card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; transition: box-shadow var(--transition-slow), transform var(--transition-base); }
+  .card:hover { box-shadow: var(--accent-shadow); transform: translateY(-4px); }
+  .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .card h3 { font-family: var(--font-display); font-size: 18px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 8px; }
+  .card p { font-size: 15px; color: var(--muted); line-height: 1.55; }
+
+  .card-icon { width: 44px; height: 44px; border-radius: var(--radius); background: var(--accent-tint-10); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: var(--accent); }
+
+  .card-metric { font-family: var(--font-display); font-size: 36px; font-weight: 600; letter-spacing: -0.02em; color: var(--accent); margin-bottom: 4px; }
+  .card-label { font-size: 13px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 16px; }
+
+  .testimonial-stars { display: flex; gap: 2px; margin-bottom: 16px; color: var(--accent); }
+  .testimonial-stars svg { width: 16px; height: 16px; }
+  .testimonial-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--accent-tint-15); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; color: var(--accent); flex-shrink: 0; }
+  .testimonial-author-row { display: flex; align-items: center; gap: 12px; margin-top: 20px; }
+
+  .spec-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin-bottom: 32px; }
+  .spec-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+  .spec-card h4 { font-size: 14px; font-weight: 600; margin: 0 0 8px; }
+  .spec-card ul { margin: 0; padding-left: 20px; font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .spec-card code { font-family: 'SF Mono', monospace; font-size: 12px; color: var(--accent); }
+  .back-link { margin-bottom: 24px; }
+</style>
+</head>
+<body>
+<div class="back-link"><a href="index.html">&larr; Back to UI Kit</a></div>
+<h1>Card</h1>
+<p class="subtitle">3 variants from the ScaleFront homepage. All cards share: 1px border, 8px radius, 32px padding, accent shadow + -4px lift on hover.</p>
+
+<div class="spec-grid">
+  <div class="spec-card">
+    <h4>Base Card Properties</h4>
+    <ul>
+      <li>Background: <code>--bg</code></li>
+      <li>Border: <code>1px solid --border</code></li>
+      <li>Radius: <code>8px</code></li>
+      <li>Padding: <code>32px</code></li>
+      <li>Hover: <code>--accent-shadow</code> + <code>translateY(-4px)</code></li>
+      <li>Transition: <code>box-shadow 0.3s, transform 0.2s</code></li>
+    </ul>
+  </div>
+</div>
+
+<h2>1. Service Card</h2>
+<div class="card-grid">
+  <div class="card">
+    <div class="card-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+    </div>
+    <h3>Custom theme development</h3>
+    <p>Pixel-perfect Shopify themes built with modern tooling — no page builders, no compromises.</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+    </div>
+    <h3>Headless commerce</h3>
+    <p>Hydrogen + Next.js storefronts with sub-second load times and full design freedom.</p>
+  </div>
+  <div class="card">
+    <div class="card-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+    </div>
+    <h3>Performance optimization</h3>
+    <p>Core Web Vitals audits, speed improvements, and conversion-focused engineering.</p>
+  </div>
+</div>
+
+<h2>2. Case Study Card (Metric Variant)</h2>
+<div class="card-grid">
+  <div class="card">
+    <div class="card-metric">+340%</div>
+    <div class="card-label">Revenue increase</div>
+    <h3>Luminae Skincare</h3>
+    <p>Full replatform from WooCommerce to Shopify Plus with a custom Hydrogen storefront. Cut load time from 4.2s to 0.8s.</p>
+  </div>
+  <div class="card">
+    <div class="card-metric">22%</div>
+    <div class="card-label">CVR uplift</div>
+    <h3>Vertex Nutrition</h3>
+    <p>Subscription-first rebuild with Recharge integration and a custom quiz-to-product funnel.</p>
+  </div>
+  <div class="card">
+    <div class="card-metric">5 markets</div>
+    <div class="card-label">International launch</div>
+    <h3>Field &amp; Forge</h3>
+    <p>Shopify Markets rollout across EU + APAC with localized storefronts and multi-currency checkout.</p>
+  </div>
+</div>
+
+<h2>3. Testimonial Card</h2>
+<div class="card-grid">
+  <div class="card">
+    <div class="testimonial-stars">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <blockquote style="font-size:15px; line-height:1.6; margin:0 0 0 0;">ScaleFront rebuilt our entire storefront in six weeks. Our conversion rate has never been higher, and the team actually understands eCommerce.</blockquote>
+    <div class="testimonial-author-row">
+      <div class="testimonial-avatar">MC</div>
+      <div>
+        <div style="font-size:14px; font-weight:600; letter-spacing:0.01em;">Marcus Chen</div>
+        <div style="font-size:13px; color:var(--muted); letter-spacing:0.01em;">CEO, Luminae Skincare</div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="testimonial-stars">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <blockquote style="font-size:15px; line-height:1.6; margin:0 0 0 0;">The migration was seamless — we didn't lose a single order. They handled our complex subscription logic perfectly.</blockquote>
+    <div class="testimonial-author-row">
+      <div class="testimonial-avatar">SK</div>
+      <div>
+        <div style="font-size:14px; font-weight:600; letter-spacing:0.01em;">Sarah Kwan</div>
+        <div style="font-size:13px; color:var(--muted); letter-spacing:0.01em;">CTO, Vertex Nutrition</div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="testimonial-stars">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+    <blockquote style="font-size:15px; line-height:1.6; margin:0 0 0 0;">We launched five international storefronts in three months. Their Shopify Markets expertise saved us six months of trial and error.</blockquote>
+    <div class="testimonial-author-row">
+      <div class="testimonial-avatar">DR</div>
+      <div>
+        <div style="font-size:14px; font-weight:600; letter-spacing:0.01em;">David Rivera</div>
+        <div style="font-size:13px; color:var(--muted); letter-spacing:0.01em;">Head of Digital, Field &amp; Forge</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

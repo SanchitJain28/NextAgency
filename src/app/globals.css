@@ -52,11 +52,11 @@
 :root {
   --radius: 0.625rem;
 
-  /* Dark Theme - 5 Color System */
-  /* 1. Background - Deep Black */
-  --background: oklch(0.12 0 0);
-  --card: oklch(0.16 0 0);
-  --popover: oklch(0.16 0 0);
+  /* Light Theme - Design System */
+  /* 1. Background - White */
+  --background: oklch(1 0 0);
+  --card: oklch(0.973 0.001 253);
+  --popover: oklch(1 0 0);
 
   /* 2. Primary - Green (#91CB5A) */
   --primary: oklch(0.77 0.15 130);
@@ -66,22 +66,22 @@
   --secondary: oklch(0.22 0 0);
   --secondary-foreground: oklch(0.95 0 0);
 
-  /* 4. Text/Foreground - Light Gray/White */
-  --foreground: oklch(0.95 0 0);
-  --card-foreground: oklch(0.95 0 0);
-  --popover-foreground: oklch(0.95 0 0);
-  --muted-foreground: oklch(0.6 0 0);
+  /* 4. Text/Foreground - Dark */
+  --foreground: oklch(0.13 0 0);
+  --card-foreground: oklch(0.13 0 0);
+  --popover-foreground: oklch(0.13 0 0);
+  --muted-foreground: oklch(0.53 0.02 276);
 
-  /* 5. Accent - Neutral Gray */
-  --accent: oklch(0.30 0 0);
-  --accent-foreground: oklch(0.95 0 0);
+  /* 5. Accent - Blue (#1677ff) */
+  --accent: oklch(0.56 0.22 258);
+  --accent-foreground: oklch(1 0 0);
 
   /* Supporting colors */
-  --muted: oklch(0.20 0 0);
-  --destructive: oklch(0.60 0.24 25);
-  --border: oklch(0.25 0 0);
-  --input: oklch(0.25 0 0);
-  --ring: oklch(0.77 0.15 130);
+  --muted: oklch(0.973 0.001 253);
+  --destructive: oklch(0.55 0.2 22);
+  --border: oklch(0.885 0.015 268);
+  --input: oklch(0.885 0.015 268);
+  --ring: oklch(0.56 0.22 258);
 
   /* Charts */
   --chart-1: oklch(0.77 0.15 130);
@@ -283,15 +283,3 @@ html[data-font-size="large"] .medium-content h3 {
   font-size: 30px !important;
 }
 
-/* Text Selection Styles */
-::selection {
-  background-color: #60DB36;
-  color: white;
-  text-shadow: none;
-}
-
-::-moz-selection {
-  background-color: #60DB36;
-  color: white;
-  text-shadow: none;
-}

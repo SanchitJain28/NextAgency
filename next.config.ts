@@ -4,9 +4,9 @@ const nextConfig: NextConfig = {
   // async redirects() {
   //   return [
   //     {
-  //       source: "/", 
+  //       source: "/",
   //       destination: "https://github.com/SanchitJain28",
-  //       permanent: false, 
+  //       permanent: false,
   //     },
   //   ];
   // },
@@ -17,7 +17,11 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "images.unsplash.com",
+        hostname: "**",
+      },
+      {
+        protocol: "http",
+        hostname: "**",
       },
     ],
   },

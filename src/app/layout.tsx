@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Header } from "@/components/header-footer/Header";
+import Footer from "@/components/header-footer/Footer";
 import "@fontsource/stack-sans-text/200.css";
 import "@fontsource/stack-sans-text/300.css";
 import "@fontsource/stack-sans-text/400.css";
@@ -9,23 +11,25 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 export const metadata: Metadata = {
   title: {
-    default: "ScaleFront - Elite Shopify Development Agency | Custom Apps & Themes",
-    template: "%s | ScaleFront - Expert Shopify Solutions"
+    default:
+      "ScaleFront - Elite Shopify Development Agency | Custom Apps & Themes",
+    template: "%s | ScaleFront - Expert Shopify Solutions",
   },
   icons: {
     icon: [
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
     ],
-    shortcut: '/favicon-32x32.png',
+    shortcut: "/favicon-32x32.png",
     apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
   },
-  manifest: '/site.webmanifest',
-  description: "Elite Shopify development agency specializing in headless commerce, custom apps, theme development, and performance optimization. Transform your Shopify store with cutting-edge solutions.",
+  manifest: "/site.webmanifest",
+  description:
+    "Elite Shopify development agency specializing in headless commerce, custom apps, theme development, and performance optimization. Transform your Shopify store with cutting-edge solutions.",
   keywords: [
     "Shopify development agency",
     "custom Shopify apps",
@@ -40,7 +44,7 @@ export const metadata: Metadata = {
     "Shopify store audit",
     "Shopify consulting services",
     "Shopify backend development",
-    "custom Shopify features"
+    "custom Shopify features",
   ],
   authors: [{ name: "ScaleFront" }],
   creator: "ScaleFront",
@@ -55,7 +59,8 @@ export const metadata: Metadata = {
     url: "https://scalefront.io",
     siteName: "ScaleFront",
     title: "ScaleFront - Elite Shopify Development Agency",
-    description: "Transform your Shopify store with expert development services: custom apps, headless commerce, theme customization, and performance optimization.",
+    description:
+      "Transform your Shopify store with expert development services: custom apps, headless commerce, theme customization, and performance optimization.",
     images: [
       {
         url: "/og-image.jpg",
@@ -68,7 +73,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "ScaleFront - Elite Shopify Development Agency",
-    description: "Expert Shopify development: custom apps, headless commerce, theme development, and performance optimization for growing brands.",
+    description:
+      "Expert Shopify development: custom apps, headless commerce, theme development, and performance optimization for growing brands.",
     images: ["/twitter-image.jpg"],
     creator: "@scalefront",
   },
@@ -92,10 +98,11 @@ export const metadata: Metadata = {
     "geo.region": "IN",
     "geo.country": "India",
     "geo.placename": "India",
-    "contact": "hello@scalefront.io",
-    "distribution": "global",
-    "rating": "general",
-    "robots": "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    contact: "hello@scalefront.io",
+    distribution: "global",
+    rating: "general",
+    robots:
+      "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1",
   },
 };
 
@@ -107,94 +114,98 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Additional SEO tags that can't be handled by Next.js metadata */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
-        {/* Schema.org structured data */}
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "ScaleFront",
-              "description": "Elite Shopify development agency specializing in custom apps, headless commerce, theme development, and performance optimization",
-              "url": "https://scalefront.io",
-              "logo": "https://scalefront.io/logos/scalefrontsquarelogo.png",
-              "contactPoint": {
+              name: "ScaleFront",
+              description:
+                "Elite Shopify development agency specializing in custom apps, headless commerce, theme development, and performance optimization",
+              url: "https://scalefront.io",
+              logo: "https://scalefront.io/logos/scalefrontsquarelogo.png",
+              contactPoint: {
                 "@type": "ContactPoint",
-                "telephone": "+919650296375",
-                "contactType": "customer service",
-                "email": "hello@scalefront.io",
-                "availableLanguage": ["English", "Hindi"]
+                telephone: "+919650296375",
+                contactType: "customer service",
+                email: "hello@scalefront.io",
+                availableLanguage: ["English", "Hindi"],
               },
-              "address": {
+              address: {
                 "@type": "PostalAddress",
-                "addressCountry": "IN",
-                "addressRegion": "India"
+                addressCountry: "IN",
+                addressRegion: "India",
               },
-              "sameAs": [
+              sameAs: [
                 "https://linkedin.com/company/scalefront",
                 "https://twitter.com/scalefront",
-                "https://github.com/scalefront"
+                "https://github.com/scalefront",
               ],
-              "makesOffer": [
+              makesOffer: [
                 {
                   "@type": "Service",
-                  "serviceType": "Headless Commerce Development",
-                  "description": "Custom headless Shopify solutions for enterprise-level performance"
+                  serviceType: "Headless Commerce Development",
+                  description:
+                    "Custom headless Shopify solutions for enterprise-level performance",
                 },
                 {
                   "@type": "Service",
-                  "serviceType": "Custom Shopify App Development",
-                  "description": "Tailored Shopify apps to extend your store's functionality"
+                  serviceType: "Custom Shopify App Development",
+                  description:
+                    "Tailored Shopify apps to extend your store's functionality",
                 },
                 {
                   "@type": "Service",
-                  "serviceType": "Shopify Theme Development",
-                  "description": "Custom theme development and optimization"
+                  serviceType: "Shopify Theme Development",
+                  description: "Custom theme development and optimization",
                 },
                 {
                   "@type": "Service",
-                  "serviceType": "Shopify Plus Migration",
-                  "description": "Seamless migration to Shopify Plus"
-                }
-              ]
-            })
+                  serviceType: "Shopify Plus Migration",
+                  description: "Seamless migration to Shopify Plus",
+                },
+              ],
+            }),
           }}
         />
 
-        {/* Professional Services structured data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
-              "name": "ScaleFront",
-              "image": "https://scalefront.io/logos/scalefrontsquarelogo.png",
-              "description": "Expert Shopify development agency offering custom apps, headless commerce, and performance optimization",
-              "address": {
+              name: "ScaleFront",
+              image: "https://scalefront.io/logos/scalefrontsquarelogo.png",
+              description:
+                "Expert Shopify development agency offering custom apps, headless commerce, and performance optimization",
+              address: {
                 "@type": "PostalAddress",
-                "addressCountry": "IN"
+                addressCountry: "IN",
               },
-              "priceRange": "$$",
-              "telephone": "+919650296375",
-              "url": "https://scalefront.io"
-            })
+              priceRange: "$$",
+              telephone: "+919650296375",
+              url: "https://scalefront.io",
+            }),
           }}
         />
       </head>
-      
-      <body
-        className="antialiased"
-      >
+
+      <body className="antialiased">
+        <Header />
         {children}
-        <Analytics/>
-        
-        {/* Google Analytics - Replace with your tracking ID */}
-        {process.env.NODE_ENV === 'production' && (
+        <Footer />
+        <Analytics />
+
+        {process.env.NODE_ENV === "production" && (
           <>
             <script
               async
