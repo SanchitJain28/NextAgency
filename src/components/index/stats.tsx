@@ -1,22 +1,74 @@
-import { STATS } from "@/data/data";
+"use client";
 
-export default function Stats() {
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+
+const STATS = [
+  { value: "+41%", label: "Median conversion lift within 90 days of launch", delay: "0ms" },
+  { value: "0.9s", label: "Average Largest Contentful Paint across shipped stores", delay: "80ms" },
+  { value: "$120M", label: "Merchant revenue processed through our builds last year", delay: "160ms" },
+  { value: "180+", label: "Stores designed, built and scaled since 2014", delay: "240ms" },
+];
+
+export default function ResultsBand() {
+  const ref = useScrollReveal();
+
   return (
-    <section aria-label="Key statistics" className="md:px-10">
-      <div className="max-w-[1280px] mx-auto grid grid-cols-2 md:grid-cols-4 bg-[#d9dee7] gap-[1px] rounded-lg overflow-hidden border border-[#d9dee7]">
-        {STATS.map((s) => (
-          <div
-            key={s.label}
-            className="text-center py-6 md:py-10 px-4 md:px-5 bg-[#f7f8fa]"
-          >
-            <div className="text-3xl md:text-4xl font-semibold tracking-[-0.02em] text-[#111111] mb-1.5">
-              {s.number}
-            </div>
-            <div className="text-xs md:text-sm text-[#6b7280] tracking-[0.01em]">
-              {s.label}
-            </div>
+    <section
+      ref={ref}
+      id="work"
+      className="mt-8"
+      style={{ background: "var(--sf-paper-deep)", color: "var(--sf-paper)" }}
+    >
+      <div className="max-w-[1200px] mx-auto px-7 py-[52px]">
+        <div data-reveal="" className="max-w-[620px] mb-8">
+          <div className="text-[13px] font-semibold tracking-[0.14em] uppercase text-[var(--sf-gold)] mb-[14px]">
+            The receipts
           </div>
-        ))}
+          <h2
+            className="m-0 leading-[1.02] tracking-[-0.03em] text-[var(--sf-paper-raised)]"
+            style={{
+              fontFamily: "'Bricolage Grotesque', sans-serif",
+              fontWeight: 700,
+              fontSize: "clamp(32px, 4.4vw, 52px)",
+            }}
+          >
+            We don&apos;t ship pretty. We ship performance.
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-[22px]">
+          {STATS.map((st) => (
+            <div
+              key={st.value}
+              data-reveal=""
+              data-delay={st.delay}
+              className="pt-5"
+              style={{
+                borderTop: "2px solid color-mix(in srgb, var(--sf-gold) 60%, transparent)",
+              }}
+            >
+              <div
+                className="leading-none text-[var(--sf-paper-raised)]"
+                style={{
+                  fontFamily: "'Bricolage Grotesque', sans-serif",
+                  fontWeight: 700,
+                  fontSize: "clamp(38px, 5vw, 58px)",
+                  letterSpacing: "-0.04em",
+                }}
+              >
+                {st.value}
+              </div>
+              <div
+                className="mt-3 text-[14.5px] leading-[1.5]"
+                style={{
+                  color: "color-mix(in srgb, var(--sf-paper) 74%, transparent)",
+                }}
+              >
+                {st.label}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -1,14 +1,13 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Header } from "@/components/header-footer/Header";
 import Footer from "@/components/header-footer/Footer";
-import "@fontsource/stack-sans-text/200.css";
-import "@fontsource/stack-sans-text/300.css";
 import "@fontsource/stack-sans-text/400.css";
 import "@fontsource/stack-sans-text/500.css";
 import "@fontsource/stack-sans-text/600.css";
-import "@fontsource/stack-sans-text/700.css";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
+
 export const metadata: Metadata = {
   title: {
     default:
@@ -90,20 +89,21 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code",
+    // Replace with your real code from Google Search Console
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
   category: "technology",
-  classification: "Shopify Development Agency",
   other: {
     "geo.region": "IN",
     "geo.country": "India",
     "geo.placename": "India",
     contact: "hello@scalefront.io",
     distribution: "global",
-    rating: "general",
-    robots:
-      "index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#1677ff",
 };
 
 export default function RootLayout({
@@ -111,91 +111,74 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://scalefront.io/#organization",
+        name: "ScaleFront",
+        description:
+          "Elite Shopify development agency specializing in custom apps, headless commerce, theme development, and performance optimization",
+        url: "https://scalefront.io",
+        image: "https://scalefront.io/logos/scalefrontsquarelogo.png",
+        logo: "https://scalefront.io/logos/scalefrontsquarelogo.png",
+        priceRange: "$$",
+        telephone: "+919650296375",
+        email: "hello@scalefront.io",
+        address: {
+          "@type": "PostalAddress",
+          addressCountry: "IN",
+        },
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: "+919650296375",
+          contactType: "customer service",
+          email: "hello@scalefront.io",
+          availableLanguage: ["English", "Hindi"],
+        },
+        sameAs: [
+          "https://linkedin.com/company/scalefront",
+          "https://twitter.com/scalefront",
+          "https://github.com/scalefront",
+        ],
+        makesOffer: [
+          {
+            "@type": "Service",
+            serviceType: "Headless Commerce Development",
+            description:
+              "Custom headless Shopify solutions for enterprise-level performance",
+          },
+          {
+            "@type": "Service",
+            serviceType: "Custom Shopify App Development",
+            description:
+              "Tailored Shopify apps to extend your store's functionality",
+          },
+          {
+            "@type": "Service",
+            serviceType: "Shopify Theme Development",
+            description: "Custom theme development and optimization",
+          },
+          {
+            "@type": "Service",
+            serviceType: "Shopify Plus Migration",
+            description: "Seamless migration to Shopify Plus",
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300..800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "ScaleFront",
-              description:
-                "Elite Shopify development agency specializing in custom apps, headless commerce, theme development, and performance optimization",
-              url: "https://scalefront.io",
-              logo: "https://scalefront.io/logos/scalefrontsquarelogo.png",
-              contactPoint: {
-                "@type": "ContactPoint",
-                telephone: "+919650296375",
-                contactType: "customer service",
-                email: "hello@scalefront.io",
-                availableLanguage: ["English", "Hindi"],
-              },
-              address: {
-                "@type": "PostalAddress",
-                addressCountry: "IN",
-                addressRegion: "India",
-              },
-              sameAs: [
-                "https://linkedin.com/company/scalefront",
-                "https://twitter.com/scalefront",
-                "https://github.com/scalefront",
-              ],
-              makesOffer: [
-                {
-                  "@type": "Service",
-                  serviceType: "Headless Commerce Development",
-                  description:
-                    "Custom headless Shopify solutions for enterprise-level performance",
-                },
-                {
-                  "@type": "Service",
-                  serviceType: "Custom Shopify App Development",
-                  description:
-                    "Tailored Shopify apps to extend your store's functionality",
-                },
-                {
-                  "@type": "Service",
-                  serviceType: "Shopify Theme Development",
-                  description: "Custom theme development and optimization",
-                },
-                {
-                  "@type": "Service",
-                  serviceType: "Shopify Plus Migration",
-                  description: "Seamless migration to Shopify Plus",
-                },
-              ],
-            }),
-          }}
-        />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "ProfessionalService",
-              name: "ScaleFront",
-              image: "https://scalefront.io/logos/scalefrontsquarelogo.png",
-              description:
-                "Expert Shopify development agency offering custom apps, headless commerce, and performance optimization",
-              address: {
-                "@type": "PostalAddress",
-                addressCountry: "IN",
-              },
-              priceRange: "$$",
-              telephone: "+919650296375",
-              url: "https://scalefront.io",
-            }),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
       </head>
 
@@ -205,24 +188,23 @@ export default function RootLayout({
         <Footer />
         <Analytics />
 
-        {process.env.NODE_ENV === "production" && (
-          <>
-            <script
-              async
-              src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"
-            />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
+        {process.env.NODE_ENV === "production" &&
+          process.env.NEXT_PUBLIC_GA_ID && (
+            <>
+              <Script
+                strategy="afterInteractive"
+                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+              />
+              <Script id="gtag-init" strategy="afterInteractive">
+                {`
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', 'GA_TRACKING_ID');
-                `,
-              }}
-            />
-          </>
-        )}
+                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+                `}
+              </Script>
+            </>
+          )}
       </body>
     </html>
   );

@@ -1,95 +1,87 @@
-import { FAQS, SERVICES } from "@/data/data";
 import type { Metadata } from "next";
 import Hero from "@/components/index/hero";
-import Stats from "@/components/index/stats";
+import LogoMarquee from "@/components/index/logo-marquee";
+import IntroArticle from "@/components/index/intro-article";
+import FeaturedWork from "@/components/index/featured-work";
 import Services from "@/components/index/services";
-import WhyUs from "@/components/index/why-us";
-import CaseStudies from "@/components/index/case-studies";
-import TechStack from "@/components/index/tech-stack";
+import ResultsBand from "@/components/index/stats";
 import Testimonials from "@/components/index/testimonials";
-import Blog from "@/components/index/blog";
-import Process from "@/components/index/process";
-import FAQ from "@/components/index/faq";
-import CTA from "@/components/index/cta";
+import Pricing from "@/components/index/pricing";
+import DesignShowcase from "@/components/index/design-showcase";
+import ContactCTA from "@/components/index/contact-cta";
+import FloatingContact from "@/components/index/floating-contact";
 
 export const metadata: Metadata = {
-  title:
-    "Shopify Development Agency India | Custom Apps & Headless Commerce — ScaleFront",
+  title: "Shopify Development Agency India | ScaleFront",
   description:
     "ScaleFront is an expert Shopify development agency based in India. We build custom Shopify apps, headless storefronts, and high-converting themes for DTC brands doing $1M+. Shopify Plus partners.",
   alternates: { canonical: "https://scalefront.io/" },
+  robots: { index: true, follow: true },
   openGraph: {
     title: "Shopify Development Agency India — ScaleFront",
     description:
-      "Expert Shopify development: custom apps, headless commerce, theme development, CRO, and Shopify Plus migration for scaling brands.",
+      "Custom Shopify apps, headless commerce, theme development, CRO, and Shopify Plus migration for scaling brands.",
     url: "https://scalefront.io",
+    siteName: "ScaleFront",
+    type: "website",
+    images: [
+      {
+        url: "https://scalefront.io/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ScaleFront — Shopify Development Agency",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shopify Development Agency India — ScaleFront",
+    description:
+      "Custom Shopify apps, headless commerce, and Shopify Plus development for DTC brands.",
+    images: ["https://scalefront.io/og-image.jpg"],
   },
 };
 
 export default function HomePage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://scalefront.io/#organization",
+        name: "ScaleFront",
+        url: "https://scalefront.io",
+        logo: "https://scalefront.io/logo.png",
+        sameAs: [
+          "https://twitter.com/scalefront",
+          "https://linkedin.com/company/scalefront",
+          "https://github.com/scalefront",
+        ],
+        email: "hello@scalefront.io",
+        telephone: "+91-9650296375",
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: FAQS.map((f) => ({
-              "@type": "Question",
-              name: f.q,
-              acceptedAnswer: { "@type": "Answer", text: f.a },
-            })),
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ItemList",
-            name: "ScaleFront Shopify Development Services",
-            itemListElement: SERVICES.map((s, i) => ({
-              "@type": "ListItem",
-              position: i + 1,
-              name: s.title,
-              description: s.desc,
-              url: `https://scalefront.io${s.href}`,
-            })),
-          }),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "ScaleFront",
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "4.9",
-              reviewCount: "60",
-              bestRating: "5",
-            },
-          }),
-        }}
-      />
-
-      <main className="font-sans bg-white text-[#111111] leading-[1.55] antialiased overflow-x-hidden">
+      <main className="w-full overflow-clip bg-[var(--sf-paper)]">
         <Hero />
-        <Stats />
+        <LogoMarquee />
+        <IntroArticle />
+        <FeaturedWork />
         <Services />
-        <WhyUs />
-        <CaseStudies />
-        <TechStack />
+        <ResultsBand />
         <Testimonials />
-        <Blog />
-        <Process />
-        <FAQ />
-        <CTA />
+        <Pricing />
+        <DesignShowcase />
+        <ContactCTA />
+        <FloatingContact />
       </main>
     </>
   );

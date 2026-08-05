@@ -1,59 +1,104 @@
+"use client";
+
 import Link from "next/link";
-import { SERVICES } from "@/data/data";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+
+const SERVICES = [
+  { no: "01", icon: "{ }", title: "Custom theme development", blurb: "Bespoke, pixel-obsessed themes built from scratch — never a bloated template retrofit.", tint: "var(--sf-primary-soft)", ink: "var(--sf-primary-deep)", delay: "0ms" },
+  { no: "02", icon: "⌘", title: "Headless commerce", blurb: "Hydrogen, Next.js & composable stacks for storefronts that load instantly and scale infinitely.", tint: "var(--sf-sage-soft)", ink: "var(--sf-sage-deep)", delay: "60ms" },
+  { no: "03", icon: "◈", title: "Custom Shopify apps", blurb: "Private apps and embedded tools that bend Shopify to your exact operational workflow.", tint: "var(--sf-gold-soft)", ink: "#8a6410", delay: "120ms" },
+  { no: "04", icon: "↯", title: "Performance optimization", blurb: "Core Web Vitals into the green — faster stores, lower bounce, better rankings.", tint: "var(--sf-berry-soft)", ink: "var(--sf-berry)", delay: "0ms" },
+  { no: "05", icon: "⇗", title: "Shopify Plus migration", blurb: "Replatform from Magento, WooCommerce or legacy Shopify with zero-drama, zero-downtime cutovers.", tint: "var(--sf-primary-soft)", ink: "var(--sf-primary-deep)", delay: "60ms" },
+  { no: "06", icon: "A/B", title: "CRO & A/B testing", blurb: "Research-led experiments on the pages that move revenue, with statistically honest results.", tint: "var(--sf-sage-soft)", ink: "var(--sf-sage-deep)", delay: "120ms" },
+  { no: "07", icon: "{;}", title: "Backend & API development", blurb: "Robust integrations, custom endpoints and data pipelines that keep the store humming.", tint: "var(--sf-gold-soft)", ink: "#8a6410", delay: "0ms" },
+  { no: "08", icon: "⊹", title: "Third-party integrations", blurb: "ERPs, PIMs, subscriptions, loyalty, ESPs — wired together so nothing falls through the cracks.", tint: "var(--sf-berry-soft)", ink: "var(--sf-berry)", delay: "60ms" },
+  { no: "09", icon: "✦", title: "Store audit & consulting", blurb: "A forensic look at UX, tech and conversion, with a prioritized roadmap you can act on today.", tint: "var(--sf-primary-soft)", ink: "var(--sf-primary-deep)", delay: "120ms" },
+];
 
 export default function Services() {
+  const ref = useScrollReveal();
+
   return (
     <section
+      ref={ref}
       id="services"
-      aria-labelledby="services-heading"
-      className="py-[60px] px-10"
+      className="max-w-[1200px] mx-auto px-7 pt-[60px] pb-7"
     >
-      <div className="max-w-[1280px] mx-auto">
-        <div className="text-[13px] font-semibold tracking-[0.08em] uppercase text-[#1677ff] mb-4">
-          What we do
-        </div>
-        <h2
-          id="services-heading"
-          className="text-[40px] font-semibold tracking-[-0.025em] leading-[1.1] text-[#111111] mb-5"
-        >
-          End-to-end Shopify development services
-        </h2>
-        <p className="text-[18px] text-[#6b7280] max-w-[600px] leading-[1.55] mb-12">
-          From storefront architecture to post-launch optimization — our Shopify
-          development agency handles every layer of your stack.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-[#d9dee7] border border-[#d9dee7] rounded-xl overflow-hidden">
-          {SERVICES.map((s) => (
-            <Link
-              key={s.href}
-              href={s.href}
-              className="block p-6 md:p-8 bg-white transition-all hover:bg-[#f7f8fa]"
-            >
-              <div
-                className="w-11 h-11 rounded-lg flex items-center justify-center mb-5 text-[#1677ff] bg-[#1677ff]/10"
-                aria-hidden="true"
-              >
-                {s.icon}
-              </div>
-              <h3 className="text-lg font-semibold tracking-[-0.01em] text-[#111111] mb-2">
-                {s.title}
-              </h3>
-              <p className="text-[15px] text-[#6b7280] leading-[1.55]">
-                {s.desc}
-              </p>
-            </Link>
-          ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <Link
-            href="/services"
-            className="inline-flex items-center h-12 px-7 text-[15px] font-semibold tracking-[0.02em] rounded-lg bg-transparent text-[#111111] border border-[#d9dee7] hover:bg-[#f7f8fa] transition-colors"
+      <div className="flex justify-between items-end gap-6 flex-wrap mb-7">
+        <div data-reveal="" className="max-w-[640px]">
+          <div className="text-[13px] font-semibold tracking-[0.14em] uppercase text-[var(--sf-primary)] mb-[14px]">
+            What we do
+          </div>
+          <h2
+            className="m-0 leading-[1.02] tracking-[-0.03em]"
+            style={{
+              fontFamily: "'Bricolage Grotesque', sans-serif",
+              fontWeight: 700,
+              fontSize: "clamp(32px, 4.4vw, 52px)",
+              textWrap: "balance",
+            }}
           >
-            See all services
-          </Link>
+            Everything your store needs, under one roof.
+          </h2>
         </div>
+        <Link
+          href="/contact"
+          className="font-semibold text-[var(--sf-ink)] border-b-2 border-[var(--sf-primary)] pb-[3px] whitespace-nowrap"
+        >
+          Discuss your project →
+        </Link>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {SERVICES.map((svc) => (
+          <article
+            key={svc.no}
+            data-reveal=""
+            data-delay={svc.delay}
+            className="bg-[var(--sf-paper-raised)] border-2 border-[var(--sf-ink)] p-5 pb-[22px] relative overflow-hidden transition-all duration-200 hover:-translate-y-[6px]"
+            style={{
+              boxShadow: "none",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = "var(--sf-shadow-lift)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = "none";
+            }}
+          >
+            <div className="flex justify-between items-start mb-5">
+              <span
+                className="w-[46px] h-[46px] inline-flex items-center justify-center text-[17px]"
+                style={{
+                  background: svc.tint,
+                  color: svc.ink,
+                  fontFamily: "'Bricolage Grotesque', sans-serif",
+                  fontWeight: 800,
+                }}
+              >
+                {svc.icon}
+              </span>
+              <span
+                className="text-[13px] text-[var(--sf-ink-mute)]"
+                style={{ fontFamily: "'JetBrains Mono', monospace" }}
+              >
+                {svc.no}
+              </span>
+            </div>
+            <h3
+              className="m-0 mb-[9px] text-[21px] tracking-[-0.02em] leading-[1.15]"
+              style={{
+                fontFamily: "'Bricolage Grotesque', sans-serif",
+                fontWeight: 700,
+              }}
+            >
+              {svc.title}
+            </h3>
+            <p className="m-0 text-[15px] leading-[1.55] text-[var(--sf-ink-soft)]">
+              {svc.blurb}
+            </p>
+          </article>
+        ))}
       </div>
     </section>
   );

@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="b4c07c4d-0d10-45e9-bde6-508cc74d2940"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* vietnamese */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("e79c05c4-9c1f-49aa-8a7f-bc089cce7e02") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("9fe99516-4dcb-45b9-96d9-62845c301380") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 300 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("092e74f2-98c5-41a1-9ccf-9bbcfb56c495") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("150ffe2f-e81b-48ca-8d2e-36a81e1a103c") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("468e9ba8-27e7-435c-9f58-5862154b6d10") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("739cbeec-1236-452d-b8f4-7cf39c33e8f8") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("59b13efa-06aa-425b-9240-2a335a27cdec") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("150ffe2f-e81b-48ca-8d2e-36a81e1a103c") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("468e9ba8-27e7-435c-9f58-5862154b6d10") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("739cbeec-1236-452d-b8f4-7cf39c33e8f8") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("59b13efa-06aa-425b-9240-2a335a27cdec") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("150ffe2f-e81b-48ca-8d2e-36a81e1a103c") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("468e9ba8-27e7-435c-9f58-5862154b6d10") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("739cbeec-1236-452d-b8f4-7cf39c33e8f8") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("59b13efa-06aa-425b-9240-2a335a27cdec") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("150ffe2f-e81b-48ca-8d2e-36a81e1a103c") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("468e9ba8-27e7-435c-9f58-5862154b6d10") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("739cbeec-1236-452d-b8f4-7cf39c33e8f8") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("59b13efa-06aa-425b-9240-2a335a27cdec") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("48a281d3-54fb-4b60-89a0-28122018e46e") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("78047fb3-2fe4-4b82-91f6-77aeb791f3c3") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("098bc394-282d-4f79-a575-a55d81089bdb") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("0a5da407-0861-4d37-85c6-99b11cbf2036") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("4ed6304f-bbdc-4990-8baa-b5d046684b2b") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("8a73e00f-31f0-4d26-85f0-5eb5326d943f") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("48a281d3-54fb-4b60-89a0-28122018e46e") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("78047fb3-2fe4-4b82-91f6-77aeb791f3c3") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("098bc394-282d-4f79-a575-a55d81089bdb") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("0a5da407-0861-4d37-85c6-99b11cbf2036") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("4ed6304f-bbdc-4990-8baa-b5d046684b2b") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("8a73e00f-31f0-4d26-85f0-5eb5326d943f") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+:root{
+  --paper:#FFFFFF; --paper-raised:#FFFFFF; --paper-sunken:#F4F0E8; --paper-deep:#181310;
+  --ink:#181310; --ink-soft:#4A413A; --ink-mute:#8A7E72;
+  --primary:#D9481F; --primary-deep:#B4370F; --primary-press:#902B0A; --primary-soft:#FBDDD1;
+  --sage:#4C6B49; --sage-soft:#DCE7D5; --sage-deep:#33502F;
+  --gold:#E39A16; --gold-soft:#F8E6BC;
+  --berry:#8B2F45; --berry-soft:#F2D6DD;
+  --line:#181310; --line-strong:#181310;
+  --radius-xl:0px; --radius-lg:0px; --radius-md:0px; --radius-sm:0px; --radius-pill:0px;
+  --shadow-sm:3px 3px 0 var(--ink);
+  --shadow-md:5px 5px 0 var(--ink);
+  --shadow-lg:8px 8px 0 var(--ink);
+  --shadow-lift:6px 6px 0 var(--ink);
+  --font-display:'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --font-body:'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-mono:'JetBrains Mono', ui-monospace, monospace;
+  --ease-out:cubic-bezier(.22,.72,.2,1);
+  --ease-spring:cubic-bezier(.34,1.56,.64,1);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+a{color:var(--primary);text-decoration:none;}
+a:hover{color:var(--primary-deep);}
+::selection{background:var(--primary-soft);color:var(--ink);}
+@keyframes sf-marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@keyframes sf-float{0%,100%{transform:translateY(0) rotate(var(--r,0deg));}50%{transform:translateY(-14px) rotate(var(--r,0deg));}}
+@keyframes sf-blob{0%,100%{border-radius:62% 38% 46% 54%/58% 44% 56% 42%;}33%{border-radius:44% 56% 62% 38%/50% 62% 38% 50%;}66%{border-radius:56% 44% 38% 62%/42% 50% 50% 58%;}}
+@keyframes sf-spin{to{transform:rotate(360deg);}}
+@keyframes sf-pulse{0%,100%{transform:scale(1);opacity:.5;}50%{transform:scale(1.12);opacity:.85;}}
+[data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out),box-shadow .28s var(--ease-out);}
+[data-reveal][data-shown]{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;}[data-reveal]{opacity:1 !important;transform:none !important;}}
+</style>
+</helmet>
+<div ref="{{ setRoot }}" style="width:100%;overflow:clip;background:var(--paper);">
+  
+  <!-- ============ ANNOUNCEMENT MARQUEE ============ -->
+  <div style="background:var(--ink);color:#fff;overflow:hidden;border-bottom:2px solid var(--ink);">
+    <div style="display:flex;width:max-content;animation:sf-marquee 20s linear infinite;padding:9px 0;">
+      <sc-for list="{{ announce }}" as="a" hint-placeholder-count="7">
+        <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px;font-family:var(--font-display);font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;">{{ a }}<span style="color:var(--gold);font-size:11px;">✦</span></span>
+      </sc-for>
+      <sc-for list="{{ announce }}" as="a" hint-placeholder-count="7">
+        <span style="display:inline-flex;align-items:center;gap:22px;padding:0 22px;font-family:var(--font-display);font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;">{{ a }}<span style="color:var(--gold);font-size:11px;">✦</span></span>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header style="position:sticky;top:0;z-index:50;backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);background:color-mix(in srgb, var(--paper) 78%, transparent);border-bottom:2px solid var(--ink);">
+    <div style="max-width:1200px;margin:0 auto;padding:13px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <a href="#top" style="display:flex;align-items:center;gap:11px;font-family:var(--font-display);font-weight:800;font-size:23px;letter-spacing:-.02em;color:var(--ink);">
+        <span style="width:32px;height:32px;border-radius:0;background:linear-gradient(140deg,var(--primary),var(--berry));display:inline-flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);">
+          <span style="width:12px;height:12px;background:var(--paper-raised);border-radius:0;"></span>
+        </span>
+        Scale<span style="color:var(--primary);">front</span>
+      </a>
+      <nav style="display:flex;align-items:center;gap:30px;">
+        <a href="#services" style="color:var(--ink-soft);font-weight:500;font-size:15px;">Services</a>
+        <a href="#work" style="color:var(--ink-soft);font-weight:500;font-size:15px;">Results</a>
+        <a href="#pricing" style="color:var(--ink-soft);font-weight:500;font-size:15px;">Pricing</a>
+        <a href="#system" style="color:var(--ink-soft);font-weight:500;font-size:15px;">System</a>
+        <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--paper-raised);font-weight:600;font-size:15px;line-height:1;padding:11px 20px;border-radius:0;box-shadow:3px 3px 0 var(--primary);transition:transform .12s var(--ease-out),box-shadow .12s var(--ease-out),background .2s;" style-hover="transform:translate(2px,2px);box-shadow:1px 1px 0 var(--primary);background:var(--primary);" style-active="transform:translate(3px,3px);box-shadow:0 0 0 var(--primary);">
+          Start a project
+          <span style="width:6px;height:6px;border-radius:0;background:currentColor;"></span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="top" style="position:relative;max-width:1200px;margin:0 auto;padding:52px 28px 28px;">
+    <div style="position:absolute;top:20px;right:-40px;width:520px;height:520px;background:radial-gradient(circle at 30% 30%, var(--primary-soft), transparent 62%);filter:blur(10px);opacity:.9;pointer-events:none;z-index:0;"></div>
+    <div style="position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;">
+      <div>
+        <div data-reveal="" style="display:inline-flex;align-items:center;gap:10px;background:var(--paper-raised);border:2px solid var(--ink);padding:8px 15px 8px 10px;border-radius:var(--radius-pill);box-shadow:var(--shadow-sm);margin-bottom:26px;">
+          <span style="display:inline-flex;gap:4px;">
+            <span style="width:7px;height:7px;border-radius:0;background:var(--sage);animation:sf-pulse 2.4s var(--ease-out) infinite;"></span>
+          </span>
+          <span style="font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--ink-soft);">Shopify Plus partner · Booking Q3 builds</span>
+        </div>
+        <h1 data-reveal="" data-delay="60ms" style="margin:0 0 22px;font-family:var(--font-display);font-weight:700;font-size:clamp(44px,6.2vw,80px);line-height:.98;letter-spacing:-.035em;color:var(--ink);text-wrap:balance;">
+          Storefronts that <span style="position:relative;white-space:nowrap;color:var(--primary);">feel<span style="position:absolute;left:0;right:0;bottom:6px;height:12px;background:var(--gold-soft);z-index:-1;border-radius:3px;"></span></span> handmade, built to <span style="font-style:italic;font-weight:600;">scale</span>.
+        </h1>
+        <p data-reveal="" data-delay="120ms" style="margin:0 0 34px;max-width:520px;font-size:19px;line-height:1.42;color:var(--ink-soft);">
+          Scalefront is a Shopify studio for brands who refuse to look like everyone else. Custom themes, headless builds, and conversion engineering — crafted by people, tuned for revenue.
+        </p>
+        <div data-reveal="" data-delay="180ms" style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;">
+          <a href="#contact" style="display:inline-flex;align-items:center;gap:10px;background:var(--primary);color:#fff;font-weight:600;font-size:16px;line-height:1;padding:15px 26px;border-radius:0;border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink);transition:transform .12s var(--ease-out),box-shadow .12s var(--ease-out),background .2s var(--ease-out);" style-hover="transform:translate(2px,2px);box-shadow:3px 3px 0 var(--ink);background:var(--primary-deep);" style-active="transform:translate(5px,5px);box-shadow:0 0 0 var(--ink);">
+            Book a build →
+          </a>
+          <a href="#work" style="display:inline-flex;align-items:center;gap:10px;background:var(--paper-raised);color:var(--ink);border:2px solid var(--ink);font-weight:600;font-size:16px;line-height:1;padding:15px 24px;border-radius:0;box-shadow:5px 5px 0 var(--ink);transition:transform .12s var(--ease-out),box-shadow .12s var(--ease-out);" style-hover="transform:translate(2px,2px);box-shadow:3px 3px 0 var(--ink);" style-active="transform:translate(5px,5px);box-shadow:0 0 0 var(--ink);">
+            See the results
+          </a>
+        </div>
+        <div data-reveal="" data-delay="240ms" style="display:flex;gap:36px;margin-top:28px;flex-wrap:wrap;">
+          <div><div style="font-family:var(--font-display);font-weight:700;font-size:32px;letter-spacing:-.03em;color:var(--ink);">+41%</div><div style="font-size:13.5px;color:var(--ink-mute);font-weight:500;">avg. conversion lift</div></div>
+          <div style="width:1px;background:var(--line);"></div>
+          <div><div style="font-family:var(--font-display);font-weight:700;font-size:32px;letter-spacing:-.03em;color:var(--ink);">180+</div><div style="font-size:13.5px;color:var(--ink-mute);font-weight:500;">stores shipped</div></div>
+          <div style="width:1px;background:var(--line);"></div>
+          <div><div style="font-family:var(--font-display);font-weight:700;font-size:32px;letter-spacing:-.03em;color:var(--ink);">4.9<span style="font-size:18px;color:var(--gold);">★</span></div><div style="font-size:13.5px;color:var(--ink-mute);font-weight:500;">client rating</div></div>
+        </div>
+      </div>
+
+      <div data-reveal="" data-delay="140ms" style="position:relative;height:420px;">
+        <div style="position:absolute;inset:8% 4%;background:linear-gradient(150deg,var(--sage-soft),var(--primary-soft));box-shadow:inset 0 2px 30px rgba(255,255,255,.5);"></div>
+        <div style="position:absolute;top:6%;left:2%;width:66px;height:66px;border-radius:0;border:2px dashed var(--primary);opacity:.5;animation:sf-spin 26s linear infinite;"></div>
+        <!-- storefront mock card -->
+        <div style="position:absolute;top:12%;left:10%;width:230px;background:var(--paper-raised);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);padding:14px;--r:-4deg;animation:sf-float 7s var(--ease-out) infinite;">
+          <div style="height:120px;border-radius:var(--radius-md);background:linear-gradient(135deg,var(--berry),var(--primary));display:flex;align-items:flex-end;padding:12px;">
+            <span style="font-family:var(--font-display);color:#fff;font-weight:700;font-size:19px;line-height:1.05;letter-spacing:-.02em;">Nomad<br>Coffee Co.</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:11px;">
+            <div><div style="font-weight:700;font-size:14px;">Reserve blend</div><div style="font-size:12px;color:var(--ink-mute);">Single origin</div></div>
+            <div style="font-family:var(--font-display);font-weight:700;color:var(--primary);">$24</div>
+          </div>
+          <div style="margin-top:10px;background:var(--ink);color:#fff;text-align:center;font-size:12.5px;font-weight:600;padding:9px;border-radius:var(--radius-sm);">Add to cart</div>
+        </div>
+        <!-- metric chip -->
+        <div style="position:absolute;bottom:14%;right:4%;width:200px;background:var(--paper-raised);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);padding:16px;--r:5deg;animation:sf-float 8.5s var(--ease-out) .6s infinite;">
+          <div style="font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-mute);">Revenue / visit</div>
+          <div style="display:flex;align-items:baseline;gap:8px;margin-top:6px;"><span style="font-family:var(--font-display);font-weight:700;font-size:30px;letter-spacing:-.03em;">$4.82</span><span style="color:var(--sage);font-weight:700;font-size:13px;">▲ 28%</span></div>
+          <div style="display:flex;gap:4px;align-items:flex-end;height:36px;margin-top:10px;">
+            <div style="flex:1;height:40%;background:var(--sage-soft);border-radius:3px;"></div>
+            <div style="flex:1;height:60%;background:var(--sage-soft);border-radius:3px;"></div>
+            <div style="flex:1;height:50%;background:var(--sage-soft);border-radius:3px;"></div>
+            <div style="flex:1;height:80%;background:var(--sage);border-radius:3px;"></div>
+            <div style="flex:1;height:100%;background:var(--sage);border-radius:3px;"></div>
+          </div>
+        </div>
+        <!-- gold star sticker -->
+        <div style="position:absolute;top:2%;right:14%;width:58px;height:58px;background:var(--gold);border-radius:0;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-md);--r:8deg;animation:sf-float 6s var(--ease-out) .3s infinite;">
+          <span style="font-family:var(--font-display);color:var(--ink);font-weight:800;font-size:13px;line-height:1;text-align:center;">A+<br><span style="font-size:8px;font-weight:600;">CWV</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOGO MARQUEE ============ -->
+  <section style="max-width:1200px;margin:16px auto 0;padding:0 28px;">
+    <div style="text-align:center;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:22px;">Trusted by brands scaling on Shopify</div>
+    <div style="position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);">
+      <div style="display:flex;gap:56px;width:max-content;animation:sf-marquee 32s linear infinite;padding:6px 28px;">
+        <sc-for list="{{ logos }}" as="logo" hint-placeholder-count="8">
+          <span style="font-family:var(--font-display);font-weight:700;font-size:24px;letter-spacing:-.02em;color:var(--ink-soft);opacity:.72;white-space:nowrap;">{{ logo }}</span>
+        </sc-for>
+        <sc-for list="{{ logos }}" as="logo" hint-placeholder-count="8">
+          <span style="font-family:var(--font-display);font-weight:700;font-size:24px;letter-spacing:-.02em;color:var(--ink-soft);opacity:.72;white-space:nowrap;">{{ logo }}</span>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="services" style="max-width:1200px;margin:0 auto;padding:60px 28px 28px;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:28px;">
+      <div data-reveal="" style="max-width:640px;">
+        <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--primary);margin-bottom:14px;">What we do</div>
+        <h2 style="margin:0;font-family:var(--font-display);font-weight:700;font-size:clamp(32px,4.4vw,52px);line-height:1.02;letter-spacing:-.03em;text-wrap:balance;">Everything your store needs, under one roof.</h2>
+      </div>
+      <a href="#contact" style="font-weight:600;color:var(--ink);border-bottom:2px solid var(--primary);padding-bottom:3px;white-space:nowrap;">Discuss your project →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <sc-for list="{{ services }}" as="svc" hint-placeholder-count="9">
+        <article data-reveal="" data-delay="{{ svc.delay }}" style="background:var(--paper-raised);border:2px solid var(--ink);border-radius:var(--radius-lg);padding:20px 20px 22px;position:relative;overflow:hidden;" style-hover="transform:translateY(-6px);box-shadow:var(--shadow-lift);border-color:var(--primary-soft);">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px;">
+            <span style="width:46px;height:46px;border-radius:0;background:{{ svc.tint }};display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:17px;color:{{ svc.ink }};">{{ svc.icon }}</span>
+            <span style="font-family:var(--font-mono);font-size:13px;color:var(--ink-mute);">{{ svc.no }}</span>
+          </div>
+          <h3 style="margin:0 0 9px;font-family:var(--font-display);font-weight:700;font-size:21px;letter-spacing:-.02em;line-height:1.15;">{{ svc.title }}</h3>
+          <p style="margin:0;font-size:15px;line-height:1.55;color:var(--ink-soft);">{{ svc.blurb }}</p>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============ RESULTS BAND ============ -->
+  <section id="work" style="background:var(--paper-deep);color:var(--paper);margin-top:32px;">
+    <div style="max-width:1200px;margin:0 auto;padding:52px 28px;">
+      <div data-reveal="" style="max-width:620px;margin-bottom:32px;">
+        <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;">The receipts</div>
+        <h2 style="margin:0;font-family:var(--font-display);font-weight:700;font-size:clamp(32px,4.4vw,52px);line-height:1.02;letter-spacing:-.03em;color:var(--paper-raised);">We don't ship pretty. We ship performance.</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px;">
+        <sc-for list="{{ stats }}" as="st" hint-placeholder-count="4">
+          <div data-reveal="" data-delay="{{ st.delay }}" style="border-top:2px solid color-mix(in srgb, var(--gold) 60%, transparent);padding-top:20px;">
+            <div style="font-family:var(--font-display);font-weight:700;font-size:clamp(38px,5vw,58px);letter-spacing:-.04em;color:var(--paper-raised);line-height:1;">{{ st.value }}</div>
+            <div style="margin-top:12px;font-size:14.5px;line-height:1.5;color:color-mix(in srgb, var(--paper) 74%, transparent);">{{ st.label }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section style="max-width:1200px;margin:0 auto;padding:60px 28px 28px;">
+    <div data-reveal="" style="text-align:center;max-width:640px;margin:0 auto 32px;">
+      <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--primary);margin-bottom:14px;">Kind words</div>
+      <h2 style="margin:0;font-family:var(--font-display);font-weight:700;font-size:clamp(32px,4.4vw,52px);line-height:1.02;letter-spacing:-.03em;">Founders who came back for round two.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="3">
+        <figure data-reveal="" data-delay="{{ t.delay }}" style="margin:0;background:var(--t-bg, var(--paper-raised));border:2px solid var(--ink);border-radius:var(--radius-lg);padding:22px 22px;display:flex;flex-direction:column;gap:18px;box-shadow:var(--shadow-sm);">
+          <div style="color:var(--gold);font-size:15px;letter-spacing:2px;">★★★★★</div>
+          <blockquote style="margin:0;font-family:var(--font-display);font-weight:500;font-size:19px;line-height:1.4;letter-spacing:-.01em;color:var(--ink);">"{{ t.quote }}"</blockquote>
+          <figcaption style="margin-top:auto;display:flex;align-items:center;gap:12px;">
+            <span style="width:42px;height:42px;border-radius:0;background:var(--t-avatar, var(--sage));display:inline-flex;align-items:center;justify-content:center;color:#fff;font-family:var(--font-display);font-weight:700;">{{ t.initials }}</span>
+            <span><span style="display:block;font-weight:700;font-size:15px;">{{ t.name }}</span><span style="display:block;font-size:13px;color:var(--ink-mute);">{{ t.role }}</span></span>
+          </figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section id="pricing" style="max-width:1200px;margin:0 auto;padding:60px 28px 28px;">
+    <div data-reveal="" style="text-align:center;max-width:640px;margin:0 auto 32px;">
+      <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--primary);margin-bottom:14px;">Engagements</div>
+      <h2 style="margin:0 0 14px;font-family:var(--font-display);font-weight:700;font-size:clamp(32px,4.4vw,52px);line-height:1.02;letter-spacing:-.03em;">Ways to work together.</h2>
+      <p style="margin:0;font-size:17px;color:var(--ink-soft);line-height:1.6;">Fixed-scope or embedded — every engagement starts with a free store audit.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch;">
+      <sc-for list="{{ pricing }}" as="p" hint-placeholder-count="3">
+        <article data-reveal="" data-delay="{{ p.delay }}" style="background:{{ p.bg }};color:{{ p.ink }};border:2px solid {{ p.border }};border-radius:var(--radius-xl);padding:24px 22px;display:flex;flex-direction:column;position:relative;box-shadow:{{ p.shadow }};">
+          <sc-if value="{{ p.featured }}" hint-placeholder-val="{{ false }}">
+            <span style="position:absolute;top:22px;right:22px;background:var(--gold);color:var(--ink);font-size:12px;font-weight:700;letter-spacing:.03em;padding:6px 12px;border-radius:var(--radius-pill);">Most picked</span>
+          </sc-if>
+          <div style="font-family:var(--font-display);font-weight:700;font-size:22px;letter-spacing:-.02em;">{{ p.name }}</div>
+          <div style="font-size:14.5px;color:{{ p.mute }};margin-top:6px;line-height:1.5;">{{ p.tagline }}</div>
+          <div style="display:flex;align-items:baseline;gap:6px;margin:24px 0 4px;">
+            <span style="font-size:15px;color:{{ p.mute }};">from</span>
+            <span style="font-family:var(--font-display);font-weight:700;font-size:44px;letter-spacing:-.04em;">{{ p.price }}</span>
+          </div>
+          <div style="font-size:13.5px;color:{{ p.mute }};margin-bottom:24px;">{{ p.unit }}</div>
+          <ul style="list-style:none;margin:0 0 28px;padding:0;display:flex;flex-direction:column;gap:12px;">
+            <sc-for list="{{ p.features }}" as="f" hint-placeholder-count="5">
+              <li style="display:flex;gap:11px;align-items:flex-start;font-size:15px;line-height:1.4;color:{{ p.feat }};">
+                <span style="flex:none;width:20px;height:20px;border-radius:0;background:{{ p.check }};color:{{ p.checkink }};display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;margin-top:1px;">✓</span>
+                {{ f }}
+              </li>
+            </sc-for>
+          </ul>
+          <a href="#contact" style="margin-top:auto;text-align:center;font-weight:600;font-size:15.5px;line-height:1;padding:14px;border-radius:0;border:2px solid var(--ink);background:{{ p.cta_bg }};color:{{ p.cta_ink }};box-shadow:4px 4px 0 var(--ink);transition:transform .12s var(--ease-out),box-shadow .12s var(--ease-out),opacity .2s;" style-hover="transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink);" style-active="transform:translate(4px,4px);box-shadow:0 0 0 var(--ink);">{{ p.cta }}</a>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============ DESIGN SYSTEM SHOWCASE ============ -->
+  <section id="system" style="background:var(--paper-sunken);margin-top:36px;border-top:2px solid var(--ink);">
+    <div style="max-width:1200px;margin:0 auto;padding:56px 28px;">
+      <div data-reveal="" style="max-width:660px;margin-bottom:32px;">
+        <div style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--primary);margin-bottom:14px;">The system</div>
+        <h2 style="margin:0 0 12px;font-family:var(--font-display);font-weight:700;font-size:clamp(30px,4vw,46px);line-height:1.02;letter-spacing:-.03em;">A living design language.</h2>
+        <p style="margin:0;font-size:17px;color:var(--ink-soft);line-height:1.6;">The same tokens, type, and components power every screen we ship — so brands stay consistent as they scale.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:22px;">
+        <!-- palette -->
+        <div data-reveal="" style="background:var(--paper-raised);border-radius:var(--radius-lg);padding:22px;box-shadow:var(--shadow-sm);">
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--ink-mute);margin-bottom:18px;">01 — COLOR</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+            <sc-for list="{{ swatches }}" as="sw" hint-placeholder-count="6">
+              <div>
+                <div style="height:64px;border-radius:var(--radius-md);background:{{ sw.hex }};box-shadow:inset 0 0 0 1px rgba(0,0,0,.05);"></div>
+                <div style="margin-top:9px;font-weight:600;font-size:13px;">{{ sw.name }}</div>
+                <div style="font-family:var(--font-mono);font-size:11.5px;color:var(--ink-mute);">{{ sw.hex }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        <!-- type -->
+        <div data-reveal="" data-delay="80ms" style="background:var(--paper-raised);border-radius:var(--radius-lg);padding:22px;box-shadow:var(--shadow-sm);">
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--ink-mute);margin-bottom:18px;">02 — TYPE</div>
+          <div style="border-bottom:2px solid var(--ink);padding-bottom:16px;margin-bottom:16px;">
+            <div style="font-size:12px;color:var(--ink-mute);margin-bottom:4px;">Display — Bricolage Grotesque</div>
+            <div style="font-family:var(--font-display);font-weight:700;font-size:40px;letter-spacing:-.03em;line-height:1;">Aa Scale</div>
+          </div>
+          <div>
+            <div style="font-size:12px;color:var(--ink-mute);margin-bottom:6px;">Body — Hanken Grotesk</div>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:var(--ink-soft);">We design for the merchant on their phone at 11pm and the shopper who just wants to check out. Clarity first, always.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- components row -->
+      <div data-reveal="" data-delay="120ms" style="background:var(--paper-raised);border-radius:var(--radius-lg);padding:22px;box-shadow:var(--shadow-sm);margin-top:22px;">
+        <div style="font-family:var(--font-mono);font-size:12px;color:var(--ink-mute);margin-bottom:20px;">03 — COMPONENTS</div>
+        <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;">
+          <button style="background:var(--primary);color:#fff;font-family:var(--font-body);font-weight:600;font-size:15px;padding:13px 22px;border:none;border-radius:var(--radius-pill);cursor:pointer;box-shadow:var(--shadow-sm);transition:transform .2s var(--ease-spring),background .2s;" style-hover="transform:translateY(-2px);background:var(--primary-deep);">Primary</button>
+          <button style="background:var(--paper-raised);color:var(--ink);font-family:var(--font-body);font-weight:600;font-size:15px;padding:12px 22px;border:2px solid var(--ink);border-radius:var(--radius-pill);cursor:pointer;transition:transform .2s var(--ease-spring),border-color .2s;" style-hover="transform:translateY(-2px);border-color:var(--ink);">Secondary</button>
+          <button style="background:transparent;color:var(--primary);font-family:var(--font-body);font-weight:600;font-size:15px;padding:12px 8px;border:none;cursor:pointer;">Ghost link →</button>
+          <span style="display:inline-flex;align-items:center;gap:7px;background:var(--sage-soft);color:var(--sage-deep);font-weight:600;font-size:13px;padding:7px 14px;border-radius:var(--radius-pill);"><span style="width:7px;height:7px;border-radius:0;background:var(--sage);"></span>In stock</span>
+          <span style="background:var(--primary);color:#fff;font-weight:700;font-size:13px;padding:7px 13px;border-radius:var(--radius-pill);">-30%</span>
+          <span style="background:var(--gold-soft);color:#8a6410;font-weight:700;font-size:13px;padding:7px 13px;border-radius:var(--radius-pill);">Award winner</span>
+          <div style="display:flex;align-items:center;gap:10px;background:var(--paper);border:2px solid var(--ink);border-radius:var(--radius-pill);padding:5px 6px 5px 18px;min-width:230px;">
+            <input placeholder="Search the catalog…" style="border:none;background:transparent;outline:none;font-family:var(--font-body);font-size:14px;color:var(--ink);flex:1;width:100%;">
+            <span style="width:34px;height:34px;border-radius:0;background:var(--ink);color:#fff;display:inline-flex;align-items:center;justify-content:center;">⌕</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT / CTA ============ -->
+  <section id="contact" style="max-width:1200px;margin:0 auto;padding:60px 28px 52px;">
+    <div data-reveal="" style="position:relative;overflow:hidden;background:linear-gradient(135deg,var(--primary),var(--berry));border-radius:var(--radius-xl);padding:clamp(40px,6vw,80px);color:#fff;">
+      <div style="position:absolute;top:-80px;right:-60px;width:340px;height:340px;background:radial-gradient(circle,rgba(255,255,255,.22),transparent 65%);"></div>
+      <div style="position:absolute;bottom:-120px;left:-40px;width:280px;height:280px;background:var(--gold);opacity:.35;"></div>
+      <div style="position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;">
+        <div>
+          <h2 style="margin:0 0 18px;font-family:var(--font-display);font-weight:700;font-size:clamp(34px,5vw,60px);line-height:1;letter-spacing:-.035em;text-wrap:balance;">Let's build the store your brand deserves.</h2>
+          <p style="margin:0 0 30px;font-size:18px;line-height:1.6;max-width:480px;color:rgba(255,255,255,.9);">Tell us where you are today. We'll send back a free audit with the three highest-impact wins — no pitch deck, no fluff.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:14px;">
+            <a href="mailto:hello@scalefront.studio" style="display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--primary-deep);font-weight:700;font-size:16px;line-height:1;padding:15px 28px;border-radius:0;border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink);transition:transform .12s var(--ease-out),box-shadow .12s var(--ease-out);" style-hover="transform:translate(2px,2px);box-shadow:3px 3px 0 var(--ink);" style-active="transform:translate(5px,5px);box-shadow:0 0 0 var(--ink);">Get your free audit →</a>
+            <a href="#top" style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.16);color:#fff;border:2px solid #fff;font-weight:600;font-size:16px;line-height:1;padding:14px 26px;border-radius:0;box-shadow:4px 4px 0 rgba(0,0,0,.35);transition:transform .12s var(--ease-out),box-shadow .12s var(--ease-out),background .2s;" style-hover="transform:translate(2px,2px);box-shadow:2px 2px 0 rgba(0,0,0,.35);background:rgba(255,255,255,.26);" style-active="transform:translate(4px,4px);box-shadow:0 0 0 rgba(0,0,0,.35);">Book a call</a>
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);border-radius:var(--radius-lg);padding:22px;backdrop-filter:blur(6px);">
+          <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:.05em;color:rgba(255,255,255,.85);margin-bottom:16px;">RESPONSE TIME</div>
+          <div style="font-family:var(--font-display);font-weight:700;font-size:52px;line-height:1;letter-spacing:-.03em;">&lt; 24h</div>
+          <div style="font-size:14.5px;color:rgba(255,255,255,.85);margin-top:8px;line-height:1.5;">Every inquiry gets a human reply from a strategist — never a bot.</div>
+          <div style="height:1px;background:rgba(255,255,255,.25);margin:22px 0;"></div>
+          <div style="display:flex;justify-content:space-between;font-size:14px;"><span style="color:rgba(255,255,255,.8);">Based in</span><span style="font-weight:600;">Austin · Remote</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:14px;margin-top:10px;"><span style="color:rgba(255,255,255,.8);">Availability</span><span style="font-weight:600;">Q3 2026</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="border-top:2px solid var(--ink);">
+    <div style="max-width:1200px;margin:0 auto;padding:40px 28px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;">
+      <div style="display:flex;align-items:center;gap:11px;font-family:var(--font-display);font-weight:800;font-size:20px;letter-spacing:-.02em;">
+        <span style="width:28px;height:28px;border-radius:0;background:linear-gradient(140deg,var(--primary),var(--berry));"></span>
+        Scale<span style="color:var(--primary);">front</span>
+      </div>
+      <div style="font-size:14px;color:var(--ink-mute);">© 2026 Scalefront Studio · Crafted for merchants who mean it.</div>
+      <div style="display:flex;gap:20px;font-size:14px;">
+        <a href="#services" style="color:var(--ink-soft);">Services</a>
+        <a href="#pricing" style="color:var(--ink-soft);">Pricing</a>
+        <a href="#contact" style="color:var(--ink-soft);">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ FLOATING CONTACT ============ -->
+  <div style="position:fixed;right:22px;bottom:22px;z-index:200;display:flex;flex-direction:column;align-items:flex-end;">
+    <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-end;margin-bottom:12px;opacity:{{ fabPanelOpacity }};transform:{{ fabPanelShift }};pointer-events:{{ fabPanelPE }};transition:opacity .2s var(--ease-out),transform .2s var(--ease-out);">
+      <a href="https://instagram.com/scalefront" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="background:#fff;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);padding:6px 11px;font-family:var(--font-display);font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);white-space:nowrap;">Instagram</span>
+        <span style="width:50px;height:50px;flex:none;background:#D6296B;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);display:flex;align-items:center;justify-content:center;color:#fff;transition:transform .12s var(--ease-out),box-shadow .12s var(--ease-out);" style-hover="transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);"><svg width="23" height="23" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"></circle></svg></span>
+      </a>
+      <a href="https://wa.me/10000000000" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="background:#fff;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);padding:6px 11px;font-family:var(--font-display);font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);white-space:nowrap;">WhatsApp</span>
+        <span style="width:50px;height:50px;flex:none;background:#1FA855;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);display:flex;align-items:center;justify-content:center;color:#fff;transition:transform .12s var(--ease-out),box-shadow .12s var(--ease-out);" style-hover="transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);"><svg width="23" height="23" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></span>
+      </a>
+      <a href="tel:+10000000000" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="background:#fff;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);padding:6px 11px;font-family:var(--font-display);font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);white-space:nowrap;">Call</span>
+        <span style="width:50px;height:50px;flex:none;background:var(--ink);border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);display:flex;align-items:center;justify-content:center;color:#fff;transition:transform .12s var(--ease-out),box-shadow .12s var(--ease-out);" style-hover="transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);"><svg width="22" height="22" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+      </a>
+      <a href="mailto:hello@scalefront.studio" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <span style="background:#fff;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);padding:6px 11px;font-family:var(--font-display);font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);white-space:nowrap;">Email</span>
+        <span style="width:50px;height:50px;flex:none;background:var(--primary);border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);display:flex;align-items:center;justify-content:center;color:#fff;transition:transform .12s var(--ease-out),box-shadow .12s var(--ease-out);" style-hover="transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);"><svg width="22" height="22" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16"></rect><path d="m22 6-10 7L2 6"></path></svg></span>
+      </a>
+    </div>
+    <button sc-camel-on-click="{{ toggleFab }}" aria-label="Contact Scalefront" style="width:58px;height:58px;background:#1FA855;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;transition:transform .12s var(--ease-out),box-shadow .12s var(--ease-out);" style-hover="transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink);">
+      <svg width="28" height="28" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+    </button>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:1240,&quot;height&quot;:900},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#332b28&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;}}">
+class Component extends DCLogic {
+  state = { fabOpen: false };
+  componentDidMount() {
+    if (typeof IntersectionObserver === 'undefined') {
+      (this.rootEl || document).querySelectorAll('[data-reveal]').forEach((el) => el.setAttribute('data-shown', ''));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const d = e.target.getAttribute('data-delay') || '0ms';
+          e.target.style.transitionDelay = d;
+          e.target.setAttribute('data-shown', '');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    const root = this.rootEl || document;
+    root.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
+    this._io = io;
+  }
+  componentWillUnmount() { if (this._io) this._io.disconnect(); }
+
+  renderVals() {
+    const accent = this.props.accent ?? '#D45A38';
+    return {
+      setRoot: (el) => { this.rootEl = el; },
+      toggleFab: () => this.setState((s) => ({ fabOpen: !s.fabOpen })),
+      fabPanelOpacity: this.state.fabOpen ? '1' : '0',
+      fabPanelShift: this.state.fabOpen ? 'translateY(0)' : 'translateY(14px)',
+      fabPanelPE: this.state.fabOpen ? 'auto' : 'none',
+      announce: Array(7).fill('Get your free Shopify store CRO Audit'),
+      logos: ['Nomad Coffee', 'Verdant', 'Ashwood', 'Tidalwear', 'Lumen', 'Marrow & Co', 'Fielding', 'Osric', 'Blume', 'Halcyon'],
+      services: [
+        { no: '01', icon: '{ }', title: 'Custom theme development', blurb: 'Bespoke, pixel-obsessed themes built from scratch — never a bloated template retrofit.', tint: 'var(--primary-soft)', ink: 'var(--primary-deep)', delay: '0ms' },
+        { no: '02', icon: '⌘', title: 'Headless commerce', blurb: 'Hydrogen, Next.js & composable stacks for storefronts that load instantly and scale infinitely.', tint: 'var(--sage-soft)', ink: 'var(--sage-deep)', delay: '60ms' },
+        { no: '03', icon: '◈', title: 'Custom Shopify apps', blurb: 'Private apps and embedded tools that bend Shopify to your exact operational workflow.', tint: 'var(--gold-soft)', ink: '#8a6410', delay: '120ms' },
+        { no: '04', icon: '↯', title: 'Performance optimization', blurb: 'Core Web Vitals into the green — faster stores, lower bounce, better rankings.', tint: 'var(--berry-soft)', ink: 'var(--berry)', delay: '0ms' },
+        { no: '05', icon: '⇗', title: 'Shopify Plus migration', blurb: 'Replatform from Magento, WooCommerce or legacy Shopify with zero-drama, zero-downtime cutovers.', tint: 'var(--primary-soft)', ink: 'var(--primary-deep)', delay: '60ms' },
+        { no: '06', icon: 'A/B', title: 'CRO & A/B testing', blurb: 'Research-led experiments on the pages that move revenue, with statistically honest results.', tint: 'var(--sage-soft)', ink: 'var(--sage-deep)', delay: '120ms' },
+        { no: '07', icon: '{;}', title: 'Backend & API development', blurb: 'Robust integrations, custom endpoints and data pipelines that keep the store humming.', tint: 'var(--gold-soft)', ink: '#8a6410', delay: '0ms' },
+        { no: '08', icon: '⊹', title: 'Third-party integrations', blurb: 'ERPs, PIMs, subscriptions, loyalty, ESPs — wired together so nothing falls through the cracks.', tint: 'var(--berry-soft)', ink: 'var(--berry)', delay: '60ms' },
+        { no: '09', icon: '✦', title: 'Store audit & consulting', blurb: 'A forensic look at UX, tech and conversion, with a prioritized roadmap you can act on today.', tint: 'var(--primary-soft)', ink: 'var(--primary-deep)', delay: '120ms' },
+      ].map((s) => ({ ...s })),
+      stats: [
+        { value: '+41%', label: 'Median conversion lift within 90 days of launch', delay: '0ms' },
+        { value: '0.9s', label: 'Average Largest Contentful Paint across shipped stores', delay: '80ms' },
+        { value: '$120M', label: 'Merchant revenue processed through our builds last year', delay: '160ms' },
+        { value: '180+', label: 'Stores designed, built and scaled since 2014', delay: '240ms' },
+      ],
+      testimonials: [
+        { quote: "They rebuilt our storefront in six weeks and our conversion rate jumped 38% the first month. No agency has ever moved this fast.", name: 'Priya Sundaram', role: 'Founder, Verdant Skincare', initials: 'PS', delay: '0ms' },
+        { quote: "The headless migration felt scary until Scalefront made it boring — in the best way. Flawless launch, instant pages.", name: 'Marcus Hale', role: 'CTO, Tidalwear', initials: 'MH', delay: '80ms', bg: 'var(--paper-deep)' },
+        { quote: "It's rare to find people who care about both the pixels and the P&L. We've hired them for three projects and counting.", name: 'Elena Rossi', role: 'VP Ecommerce, Lumen', initials: 'ER', delay: '160ms' },
+      ].map((t) => ({ ...t })),
+      pricing: (() => {
+        const light = { bg: 'var(--paper-raised)', ink: 'var(--ink)', mute: 'var(--ink-mute)', feat: 'var(--ink-soft)', border: 'var(--line)', shadow: 'var(--shadow-sm)', check: 'var(--sage-soft)', checkink: 'var(--sage-deep)', cta_bg: 'var(--ink)', cta_ink: '#fff' };
+        return [
+          { ...light, name: 'Launch', tagline: 'For new brands that need to look established from day one.', price: '$12k', unit: 'fixed-scope build · 4–6 weeks', featured: false, cta: 'Start here', features: ['Custom Shopify theme', 'Up to 8 templates', 'CRO-ready product pages', 'Speed-optimized build', '30 days post-launch support'], delay: '0ms' },
+          { name: 'Growth', tagline: 'Our most-picked engagement for scaling DTC brands.', price: '$28k', unit: 'end-to-end build · 8–12 weeks', featured: true, cta: 'Book Growth', features: ['Everything in Launch', 'Headless or advanced theme', 'Custom app or integration', 'A/B testing program', 'Analytics & dashboards', 'Dedicated strategist'], delay: '80ms', bg: 'var(--ink)', ink: '#fff', mute: 'rgba(255,255,255,.66)', feat: 'rgba(255,255,255,.86)', border: 'var(--ink)', shadow: 'var(--shadow-lg)', check: 'rgba(224,162,51,.2)', checkink: 'var(--gold)', cta_bg: 'var(--gold)', cta_ink: 'var(--ink)' },
+          { ...light, name: 'Scale', tagline: 'Embedded team for enterprise & Shopify Plus merchants.', price: '$15k', unit: 'per month · retainer', featured: false, cta: 'Talk to us', features: ['Dedicated pod (design + dev)', 'Roadmap & sprint planning', 'Continuous experimentation', 'Priority SLA & on-call', 'Quarterly business reviews'], delay: '160ms' },
+        ];
+      })(),
+      swatches: [
+        { name: 'Clay', hex: '#D9481F' }, { name: 'Espresso', hex: '#181310' }, { name: 'Sage', hex: '#4C6B49' },
+        { name: 'Gold', hex: '#E39A16' }, { name: 'Berry', hex: '#8B2F45' }, { name: 'Paper', hex: '#FFFFFF' },
+      ],
+      accent,
+    };
+  }
+}
+</script>
+
+
+</body></html>

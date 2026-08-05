@@ -1,8 +1,15 @@
-import Header from "@/components/header-footer/Header";
 import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Zap, Code2, TrendingUp, Clock, DollarSign } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Zap,
+  Code2,
+  TrendingUp,
+  Clock,
+  DollarSign,
+} from "lucide-react";
 import DottedSeparator from "@/components/seperators/DottedSeperator";
 
 export const metadata: Metadata = {
@@ -15,11 +22,12 @@ export const metadata: Metadata = {
     "Shopify headless architecture",
     "Next.js Shopify",
     "Shopify Storefront API",
-    "headless ecommerce development"
+    "headless ecommerce development",
   ],
   openGraph: {
     title: "Headless Shopify Development Services | ScaleFront",
-    description: "Build lightning-fast headless Shopify stores with Next.js, React, and custom frontends.",
+    description:
+      "Build lightning-fast headless Shopify stores with Next.js, React, and custom frontends.",
     type: "website",
   },
   alternates: {
@@ -36,22 +44,21 @@ export default function HeadlessCommercePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "name": "Headless Shopify Development",
-            "provider": {
+            name: "Headless Shopify Development",
+            provider: {
               "@type": "Organization",
-              "name": "ScaleFront"
+              name: "ScaleFront",
             },
-            "description": "Build lightning-fast headless Shopify stores with Next.js, React, and custom frontends.",
-            "offers": {
+            description:
+              "Build lightning-fast headless Shopify stores with Next.js, React, and custom frontends.",
+            offers: {
               "@type": "Offer",
-              "priceRange": "$5,000+",
-              "priceCurrency": "USD"
-            }
-          })
+              priceRange: "$5,000+",
+              priceCurrency: "USD",
+            },
+          }),
         }}
       />
-
-      <Header />
 
       {/* Hero Section with Contact CTA */}
       <section className="pt-24 pb-16 md:pt-32 md:pb-24">
@@ -67,15 +74,25 @@ export default function HeadlessCommercePage() {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-4">
-              Break free from theme limitations. Build the premium digital experience your brand deserves.
+              Break free from theme limitations. Build the premium digital
+              experience your brand deserves.
             </p>
 
             <p className="text-base text-muted-foreground mb-8">
-              Headless commerce separates your storefront (what customers see) from your backend (Shopify's commerce engine). This gives you complete creative freedom while keeping Shopify's operational reliability. Build editorial experiences. Create unique interactions. Deliver sub-second page loads. All while Shopify handles products, checkout, and orders.
+              Headless commerce separates your storefront (what customers see)
+              from your backend (Shopify's commerce engine). This gives you
+              complete creative freedom while keeping Shopify's operational
+              reliability. Build editorial experiences. Create unique
+              interactions. Deliver sub-second page loads. All while Shopify
+              handles products, checkout, and orders.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
-              <Button size="lg" asChild className="bg-[#60DB36] hover:bg-[#50CB26]">
+              <Button
+                size="lg"
+                asChild
+                className="bg-[#60DB36] hover:bg-[#50CB26]"
+              >
                 <Link href="/contact-us">
                   Schedule a Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -103,49 +120,70 @@ export default function HeadlessCommercePage() {
           </h2>
 
           <p className="text-lg text-muted-foreground mb-12">
-            Headless commerce is not for everyone. It's a significant investment that makes sense in specific situations.
+            Headless commerce is not for everyone. It's a significant investment
+            that makes sense in specific situations.
           </p>
 
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">You Should Consider Headless If:</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">
+                You Should Consider Headless If:
+              </h3>
               <div className="space-y-6">
                 <div>
-                  <h4 className="font-semibold text-lg mb-2">Your Brand Identity Demands It</h4>
+                  <h4 className="font-semibold text-lg mb-2">
+                    Your Brand Identity Demands It
+                  </h4>
                   <p className="text-muted-foreground">
-                    Premium fashion, luxury goods, design-led brands—if your brand positioning requires a distinctive digital experience that themes cannot deliver, headless is the answer.
+                    Premium fashion, luxury goods, design-led brands—if your
+                    brand positioning requires a distinctive digital experience
+                    that themes cannot deliver, headless is the answer.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg mb-2">Visual Storytelling Is Your Competitive Edge</h4>
+                  <h4 className="font-semibold text-lg mb-2">
+                    Visual Storytelling Is Your Competitive Edge
+                  </h4>
                   <p className="text-muted-foreground">
-                    Editorial layouts, lookbook experiences, scroll-based narratives, immersive product presentations—these require custom frontend development.
+                    Editorial layouts, lookbook experiences, scroll-based
+                    narratives, immersive product presentations—these require
+                    custom frontend development.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg mb-2">You're Scaling Beyond $5M Annual Revenue</h4>
+                  <h4 className="font-semibold text-lg mb-2">
+                    You're Scaling Beyond $5M Annual Revenue
+                  </h4>
                   <p className="text-muted-foreground">
-                    The investment in headless ($50-150K+) requires sufficient revenue to justify the cost. Below $5M annually, optimize your existing theme instead.
+                    The investment in headless ($50-150K+) requires sufficient
+                    revenue to justify the cost. Below $5M annually, optimize
+                    your existing theme instead.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg mb-2">Mobile Experience Is Critical</h4>
+                  <h4 className="font-semibold text-lg mb-2">
+                    Mobile Experience Is Critical
+                  </h4>
                   <p className="text-muted-foreground">
-                    If 80%+ of your traffic is mobile and you need app-like performance, headless delivers sub-second page transitions that themes cannot match.
+                    If 80%+ of your traffic is mobile and you need app-like
+                    performance, headless delivers sub-second page transitions
+                    that themes cannot match.
                   </p>
                 </div>
               </div>
             </div>
 
             <div className="bg-secondary/20 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-6">You Should Wait If:</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">
+                You Should Wait If:
+              </h3>
               <ul className="space-y-3">
                 {[
                   "You're still finding product-market fit",
                   "Your revenue is under $5M annually",
                   "Standard theme functionality meets your needs",
                   "You lack technical resources for ongoing maintenance",
-                  "Speed to market is more important than uniqueness"
+                  "Speed to market is more important than uniqueness",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <div className="rounded-full bg-muted p-1 mt-0.5">
@@ -170,39 +208,51 @@ export default function HeadlessCommercePage() {
           </h2>
 
           <p className="text-lg text-muted-foreground mb-12">
-            We build production-ready headless storefronts that combine creative excellence with technical performance.
+            We build production-ready headless storefronts that combine creative
+            excellence with technical performance.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {[
               {
                 title: "Frontend Framework",
-                description: "Next.js 14 with React, TypeScript, and Tailwind CSS. Server-side rendering for SEO, incremental static regeneration for performance, image optimization built-in."
+                description:
+                  "Next.js 14 with React, TypeScript, and Tailwind CSS. Server-side rendering for SEO, incremental static regeneration for performance, image optimization built-in.",
               },
               {
                 title: "Shopify Integration",
-                description: "Shopify Storefront API for products, cart, and customer data. Checkout remains on Shopify for security and payment processing. Real-time inventory sync."
+                description:
+                  "Shopify Storefront API for products, cart, and customer data. Checkout remains on Shopify for security and payment processing. Real-time inventory sync.",
               },
               {
                 title: "Content Management",
-                description: "Sanity or Contentful for editorial content, campaign pages, and rich media. Visual editing for non-technical team members."
+                description:
+                  "Sanity or Contentful for editorial content, campaign pages, and rich media. Visual editing for non-technical team members.",
               },
               {
                 title: "Performance Optimization",
-                description: "Edge caching via Vercel or Cloudflare. Image optimization with WebP/AVIF. Code splitting and lazy loading. Target: <1s page loads."
+                description:
+                  "Edge caching via Vercel or Cloudflare. Image optimization with WebP/AVIF. Code splitting and lazy loading. Target: <1s page loads.",
               },
               {
                 title: "Mobile-First Design",
-                description: "Touch-optimized interactions, gesture navigation, infinite scroll, native-app-like transitions. 60fps animations on mobile devices."
+                description:
+                  "Touch-optimized interactions, gesture navigation, infinite scroll, native-app-like transitions. 60fps animations on mobile devices.",
               },
               {
                 title: "Developer Handoff",
-                description: "Complete source code and documentation. Deployment pipeline setup. Team training and knowledge transfer. Ongoing support plan."
-              }
+                description:
+                  "Complete source code and documentation. Deployment pipeline setup. Team training and knowledge transfer. Ongoing support plan.",
+              },
             ].map((item) => (
-              <div key={item.title} className="bg-card rounded-xl border border-border p-6">
+              <div
+                key={item.title}
+                className="bg-card rounded-xl border border-border p-6"
+              >
                 <h3 className="font-semibold text-lg mb-3">{item.title}</h3>
-                <p className="text-muted-foreground text-sm">{item.description}</p>
+                <p className="text-muted-foreground text-sm">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>
@@ -220,17 +270,21 @@ export default function HeadlessCommercePage() {
                     "Cart and checkout integration",
                     "Customer account portal",
                     "Search functionality",
-                    "Multi-currency/multi-language support"
+                    "Multi-currency/multi-language support",
                   ].map((feature) => (
                     <li key={feature} className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
+                      <span className="text-sm text-muted-foreground">
+                        {feature}
+                      </span>
                     </li>
                   ))}
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-4">Content Management & Analytics</h4>
+                <h4 className="font-semibold mb-4">
+                  Content Management & Analytics
+                </h4>
                 <ul className="space-y-2">
                   {[
                     "Visual page builder for marketing team",
@@ -239,11 +293,13 @@ export default function HeadlessCommercePage() {
                     "Performance monitoring dashboard",
                     "Analytics integration (GA4, Segment)",
                     "A/B testing infrastructure",
-                    "Content preview environments"
+                    "Content preview environments",
                   ].map((feature) => (
                     <li key={feature} className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
+                      <span className="text-sm text-muted-foreground">
+                        {feature}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -272,9 +328,10 @@ export default function HeadlessCommercePage() {
                   "Audit existing site and identify pain points",
                   "Define technical requirements and integrations",
                   "Design system architecture and API planning",
-                  "Performance benchmarks and targets"
+                  "Performance benchmarks and targets",
                 ],
-                deliverable: "Technical specification, project timeline, risk assessment"
+                deliverable:
+                  "Technical specification, project timeline, risk assessment",
               },
               {
                 phase: "Phase 2: Design & Prototyping",
@@ -284,9 +341,10 @@ export default function HeadlessCommercePage() {
                   "Key page designs (desktop, tablet, mobile)",
                   "Interactive prototype with real interactions",
                   "Accessibility standards (WCAG 2.1 AA)",
-                  "Mobile and desktop user flows"
+                  "Mobile and desktop user flows",
                 ],
-                deliverable: "Complete design system, high-fidelity designs, interactive prototype"
+                deliverable:
+                  "Complete design system, high-fidelity designs, interactive prototype",
               },
               {
                 phase: "Phase 3: Development",
@@ -296,9 +354,9 @@ export default function HeadlessCommercePage() {
                   "Shopify API and CMS integration",
                   "Core pages (homepage, products, collections, cart)",
                   "Advanced features (accounts, personalization, search)",
-                  "Performance optimization and accessibility audit"
+                  "Performance optimization and accessibility audit",
                 ],
-                deliverable: "Fully functional headless storefront"
+                deliverable: "Fully functional headless storefront",
               },
               {
                 phase: "Phase 4: Content Migration & Launch",
@@ -308,16 +366,18 @@ export default function HeadlessCommercePage() {
                   "Media optimization and upload",
                   "Comprehensive QA and load testing",
                   "Security audit and user acceptance testing",
-                  "Deployment, DNS setup, and team training"
+                  "Deployment, DNS setup, and team training",
                 ],
-                deliverable: "Live headless store, documentation, training"
-              }
+                deliverable: "Live headless store, documentation, training",
+              },
             ].map((phase, index) => (
               <div key={index} className="border-l-4 border-primary pl-8">
                 <div className="flex items-center gap-3 mb-4">
                   <Clock className="h-5 w-5 text-primary" />
                   <h3 className="text-xl font-bold">{phase.phase}</h3>
-                  <span className="text-sm text-muted-foreground">({phase.duration})</span>
+                  <span className="text-sm text-muted-foreground">
+                    ({phase.duration})
+                  </span>
                 </div>
                 <ul className="space-y-2 mb-4">
                   {phase.items.map((item) => (
@@ -345,7 +405,8 @@ export default function HeadlessCommercePage() {
             Headless Commerce Pricing
           </h2>
           <p className="text-lg text-muted-foreground mb-12">
-            Headless is a significant investment. Here's transparent pricing based on project scope.
+            Headless is a significant investment. Here's transparent pricing
+            based on project scope.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -365,8 +426,8 @@ export default function HeadlessCommercePage() {
                   "Customer account portal",
                   "Mobile-responsive design",
                   "Performance optimization",
-                  "Launch support"
-                ]
+                  "Launch support",
+                ],
               },
               {
                 name: "Premium Build",
@@ -382,9 +443,9 @@ export default function HeadlessCommercePage() {
                   "AR/VR integration",
                   "A/B testing infrastructure",
                   "Multi-region/multi-currency setup",
-                  "Extended post-launch support"
+                  "Extended post-launch support",
                 ],
-                highlight: true
+                highlight: true,
               },
               {
                 name: "Enterprise",
@@ -397,27 +458,35 @@ export default function HeadlessCommercePage() {
                   "Custom middleware and APIs",
                   "White-glove development process",
                   "Dedicated project team",
-                  "Priority support SLA"
-                ]
-              }
+                  "Priority support SLA",
+                ],
+              },
             ].map((tier) => (
               <div
                 key={tier.name}
                 className={`rounded-xl border ${
-                  tier.highlight ? "border-primary bg-primary/5" : "border-border bg-card"
+                  tier.highlight
+                    ? "border-primary bg-primary/5"
+                    : "border-border bg-card"
                 } p-8`}
               >
                 <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
                 <div className="flex items-baseline gap-2 mb-4">
-                  <span className="text-3xl font-bold text-primary">{tier.price}</span>
+                  <span className="text-3xl font-bold text-primary">
+                    {tier.price}
+                  </span>
                 </div>
-                <p className="text-sm text-muted-foreground mb-2">Timeline: {tier.timeline}</p>
+                <p className="text-sm text-muted-foreground mb-2">
+                  Timeline: {tier.timeline}
+                </p>
                 <p className="text-sm font-medium mb-6">{tier.bestFor}</p>
                 <ul className="space-y-3">
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
+                      <span className="text-sm text-muted-foreground">
+                        {feature}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -429,23 +498,42 @@ export default function HeadlessCommercePage() {
             <h3 className="text-xl font-bold mb-6">Ongoing Maintenance</h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h4 className="font-semibold mb-2">Essential Support: $2,000/month</h4>
+                <h4 className="font-semibold mb-2">
+                  Essential Support: $2,000/month
+                </h4>
                 <ul className="space-y-2">
-                  {["Bug fixes and updates", "Shopify API compatibility", "Performance monitoring", "Monthly analytics review"].map((item) => (
+                  {[
+                    "Bug fixes and updates",
+                    "Shopify API compatibility",
+                    "Performance monitoring",
+                    "Monthly analytics review",
+                  ].map((item) => (
                     <li key={item} className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-muted-foreground">{item}</span>
+                      <span className="text-sm text-muted-foreground">
+                        {item}
+                      </span>
                     </li>
                   ))}
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-2">Growth Support: $5,000/month</h4>
+                <h4 className="font-semibold mb-2">
+                  Growth Support: $5,000/month
+                </h4>
                 <ul className="space-y-2">
-                  {["Everything in Essential", "Feature development (10 hours/month)", "Conversion optimization", "A/B testing management", "Quarterly strategy sessions"].map((item) => (
+                  {[
+                    "Everything in Essential",
+                    "Feature development (10 hours/month)",
+                    "Conversion optimization",
+                    "A/B testing management",
+                    "Quarterly strategy sessions",
+                  ].map((item) => (
                     <li key={item} className="flex items-start gap-2">
                       <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-muted-foreground">{item}</span>
+                      <span className="text-sm text-muted-foreground">
+                        {item}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -473,7 +561,7 @@ export default function HeadlessCommercePage() {
                     "Theme templates felt generic",
                     "Lookbooks were static blog posts",
                     "6-second average page load times",
-                    "Editorial content difficult to manage"
+                    "Editorial content difficult to manage",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2">
                       <div className="rounded-full bg-muted p-1 mt-0.5">
@@ -491,7 +579,7 @@ export default function HeadlessCommercePage() {
                     "Next.js headless storefront with custom design",
                     "Sanity CMS for editorial content",
                     "Interactive lookbooks with product hotspots",
-                    "Optimized for mobile-first experience"
+                    "Optimized for mobile-first experience",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
@@ -504,22 +592,51 @@ export default function HeadlessCommercePage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
               {[
-                { metric: "Page Load Time", value: "70% faster", detail: "6s → 1.8s" },
-                { metric: "Mobile Conversion", value: "+34%", detail: "Significant lift" },
-                { metric: "Average Order Value", value: "+22%", detail: "More revenue" },
-                { metric: "Pages per Session", value: "3.2 → 5.1", detail: "Better engagement" }
+                {
+                  metric: "Page Load Time",
+                  value: "70% faster",
+                  detail: "6s → 1.8s",
+                },
+                {
+                  metric: "Mobile Conversion",
+                  value: "+34%",
+                  detail: "Significant lift",
+                },
+                {
+                  metric: "Average Order Value",
+                  value: "+22%",
+                  detail: "More revenue",
+                },
+                {
+                  metric: "Pages per Session",
+                  value: "3.2 → 5.1",
+                  detail: "Better engagement",
+                },
               ].map((stat) => (
-                <div key={stat.metric} className="bg-card rounded-lg p-4 border border-border">
-                  <div className="text-2xl font-bold text-primary mb-1">{stat.value}</div>
-                  <div className="text-sm font-medium text-foreground">{stat.metric}</div>
-                  <div className="text-xs text-muted-foreground">{stat.detail}</div>
+                <div
+                  key={stat.metric}
+                  className="bg-card rounded-lg p-4 border border-border"
+                >
+                  <div className="text-2xl font-bold text-primary mb-1">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm font-medium text-foreground">
+                    {stat.metric}
+                  </div>
+                  <div className="text-xs text-muted-foreground">
+                    {stat.detail}
+                  </div>
                 </div>
               ))}
             </div>
 
             <blockquote className="border-l-4 border-primary pl-6 italic text-muted-foreground">
-              "The headless rebuild transformed how customers experience our brand. We can now execute campaigns in hours, not weeks. The mobile experience feels like an app."
-              <footer className="mt-2 text-sm font-medium text-foreground not-italic">— Founder</footer>
+              "The headless rebuild transformed how customers experience our
+              brand. We can now execute campaigns in hours, not weeks. The
+              mobile experience feels like an app."
+              <footer className="mt-2 text-sm font-medium text-foreground not-italic">
+                — Founder
+              </footer>
             </blockquote>
           </div>
         </div>
@@ -538,34 +655,37 @@ export default function HeadlessCommercePage() {
             {[
               {
                 q: "How long does a headless build take?",
-                a: "Standard builds take 5-7 months from kickoff to launch. Premium builds take 6-9 months. Timeline depends on complexity, integrations, and content readiness. We provide detailed timeline during discovery."
+                a: "Standard builds take 5-7 months from kickoff to launch. Premium builds take 6-9 months. Timeline depends on complexity, integrations, and content readiness. We provide detailed timeline during discovery.",
               },
               {
                 q: "Can I use my existing Shopify store?",
-                a: "Yes. Headless keeps your existing Shopify backend (products, orders, customers, checkout). We just rebuild the customer-facing frontend. Your Shopify admin stays the same."
+                a: "Yes. Headless keeps your existing Shopify backend (products, orders, customers, checkout). We just rebuild the customer-facing frontend. Your Shopify admin stays the same.",
               },
               {
                 q: "How much do hosting costs add?",
-                a: "Hosting a Next.js headless store on Vercel or Netlify typically costs $500-1,000/month depending on traffic. This is separate from the development cost and Shopify plan fees."
+                a: "Hosting a Next.js headless store on Vercel or Netlify typically costs $500-1,000/month depending on traffic. This is separate from the development cost and Shopify plan fees.",
               },
               {
                 q: "Can my team manage content after launch?",
-                a: "Yes. We set up a visual CMS (Sanity or Contentful) so your marketing team can update content, create campaign pages, and manage editorial sections without code."
+                a: "Yes. We set up a visual CMS (Sanity or Contentful) so your marketing team can update content, create campaign pages, and manage editorial sections without code.",
               },
               {
                 q: "What about SEO?",
-                a: "Server-side rendering in Next.js means excellent SEO. Often better than theme stores because of faster load times and cleaner HTML. We implement all technical SEO best practices."
+                a: "Server-side rendering in Next.js means excellent SEO. Often better than theme stores because of faster load times and cleaner HTML. We implement all technical SEO best practices.",
               },
               {
                 q: "Can I add features later?",
-                a: "Yes. One advantage of headless is flexibility. Want to add AR try-on? Custom quiz? Advanced personalization? We can add features without rebuilding the entire store."
+                a: "Yes. One advantage of headless is flexibility. Want to add AR try-on? Custom quiz? Advanced personalization? We can add features without rebuilding the entire store.",
               },
               {
                 q: "Do you offer payment plans?",
-                a: "We structure payments in milestones: 25% on signing, 25% after design approval, 25% mid-development, 25% on launch. Custom payment schedules possible for enterprise clients."
-              }
+                a: "We structure payments in milestones: 25% on signing, 25% after design approval, 25% mid-development, 25% on launch. Custom payment schedules possible for enterprise clients.",
+              },
             ].map((faq, index) => (
-              <div key={index} className="bg-card rounded-lg border border-border p-6">
+              <div
+                key={index}
+                className="bg-card rounded-lg border border-border p-6"
+              >
                 <h3 className="font-semibold text-lg mb-3">{faq.q}</h3>
                 <p className="text-muted-foreground">{faq.a}</p>
               </div>
@@ -581,7 +701,9 @@ export default function HeadlessCommercePage() {
             Let's Build Something Exceptional
           </h2>
           <p className="text-lg opacity-90">
-            Whether you're certain headless is right or still evaluating options, we're here to help you make the best decision for your brand.
+            Whether you're certain headless is right or still evaluating
+            options, we're here to help you make the best decision for your
+            brand.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
@@ -590,7 +712,12 @@ export default function HeadlessCommercePage() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10" asChild>
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-transparent border-white text-white hover:bg-white/10"
+              asChild
+            >
               <Link href="/pricing">View All Services</Link>
             </Button>
           </div>
