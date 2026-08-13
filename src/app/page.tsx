@@ -10,7 +10,6 @@ import Testimonials from "@/components/index/testimonials";
 import SecondaryArticle from "@/components/index/secondary-article";
 import Pricing from "@/components/index/pricing";
 import FAQ from "@/components/index/faq";
-import DesignShowcase from "@/components/index/design-showcase";
 import ContactCTA from "@/components/index/contact-cta";
 import FloatingContact from "@/components/index/floating-contact";
 

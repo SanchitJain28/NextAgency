@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const SERVICES = [
   {
@@ -117,16 +114,13 @@ const SERVICES = [
 ];
 
 export default function Services() {
-  const ref = useScrollReveal();
-
   return (
     <section
-      ref={ref}
       id="services"
       className="max-w-[1200px] mx-auto px-7 pt-[60px] pb-7"
     >
       <div className="flex justify-between items-end gap-6 flex-wrap mb-7">
-        <div data-reveal="" className="max-w-[640px]">
+        <div className="max-w-[640px]">
           <div className="text-[13px] font-semibold tracking-[0.14em] uppercase text-[var(--sf-primary)] mb-[14px]">
             What we do
           </div>
@@ -150,22 +144,11 @@ export default function Services() {
         </Link>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 overflow-x-auto snap-x snap-mandatory pb-4 md:pb-0 brutal-scrollbar scroll-pl-7 -mx-7 px-7 md:mx-0 md:px-0 md:scroll-pl-0">
         {SERVICES.map((svc) => (
           <article
             key={svc.no}
-            data-reveal=""
-            data-delay={svc.delay}
-            className="bg-[var(--sf-paper-raised)] border-2 border-[var(--sf-ink)] p-5 pb-[22px] relative overflow-hidden transition-all duration-200 hover:-translate-y-[6px]"
-            style={{
-              boxShadow: "none",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow = "var(--sf-shadow-lift)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow = "none";
-            }}
+            className="bg-[var(--sf-paper-raised)] border-2 border-[var(--sf-ink)] p-5 pb-[22px] relative overflow-hidden transition-all duration-200 hover:-translate-y-[6px] hover:shadow-[var(--sf-shadow-lift)] w-[85vw] md:w-auto snap-start shrink-0"
           >
             <div className="flex justify-between items-start mb-5">
               <span

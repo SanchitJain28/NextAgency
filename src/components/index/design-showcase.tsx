@@ -1,19 +1,13 @@
-"use client";
-
-import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-
 const SWATCHES = [
   { name: 'Clay', hex: '#D9481F' }, { name: 'Espresso', hex: '#181310' }, { name: 'Sage', hex: '#4C6B49' },
   { name: 'Gold', hex: '#E39A16' }, { name: 'Berry', hex: '#8B2F45' }, { name: 'Paper', hex: '#FFFFFF' },
 ];
 
 export default function DesignShowcase() {
-  const ref = useScrollReveal();
-
   return (
-    <section ref={ref} id="system" className="bg-[var(--sf-paper-sunken)] mt-9 border-t-2 border-[var(--sf-ink)]">
+    <section id="system" className="bg-[var(--sf-paper-sunken)] mt-9 border-t-2 border-[var(--sf-ink)]">
       <div className="max-w-[1200px] mx-auto px-7 py-14">
-        <div data-reveal="" className="max-w-[660px] mb-8">
+        <div className="max-w-[660px] mb-8">
           <div className="text-[13px] font-semibold tracking-[0.14em] uppercase text-[var(--sf-primary)] mb-[14px]">
             The system
           </div>
@@ -34,7 +28,7 @@ export default function DesignShowcase() {
 
         <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-[22px]">
           {/* Palette */}
-          <div data-reveal="" className="bg-[var(--sf-paper-raised)] p-[22px]" style={{ boxShadow: "var(--sf-shadow-sm)" }}>
+          <div className="bg-[var(--sf-paper-raised)] p-[22px]" style={{ boxShadow: "var(--sf-shadow-sm)" }}>
             <div className="text-[12px] text-[var(--sf-ink-mute)] mb-[18px]" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
               01 — COLOR
             </div>
@@ -58,7 +52,7 @@ export default function DesignShowcase() {
           </div>
 
           {/* Type */}
-          <div data-reveal="" data-delay="80ms" className="bg-[var(--sf-paper-raised)] p-[22px]" style={{ boxShadow: "var(--sf-shadow-sm)" }}>
+          <div className="bg-[var(--sf-paper-raised)] p-[22px]" style={{ boxShadow: "var(--sf-shadow-sm)" }}>
             <div className="text-[12px] text-[var(--sf-ink-mute)] mb-[18px]" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
               02 — TYPE
             </div>
@@ -81,33 +75,19 @@ export default function DesignShowcase() {
         </div>
 
         {/* Components row */}
-        <div data-reveal="" data-delay="120ms" className="bg-[var(--sf-paper-raised)] p-[22px] mt-[22px]" style={{ boxShadow: "var(--sf-shadow-sm)" }}>
+        <div className="bg-[var(--sf-paper-raised)] p-[22px] mt-[22px]" style={{ boxShadow: "var(--sf-shadow-sm)" }}>
           <div className="text-[12px] text-[var(--sf-ink-mute)] mb-5" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
             03 — COMPONENTS
           </div>
           <div className="flex flex-wrap gap-4 items-center">
             <button
-              className="bg-[var(--sf-primary)] text-white font-semibold text-[15px] px-[22px] py-[13px] border-none cursor-pointer transition-all duration-200"
+              className="bg-[var(--sf-primary)] text-white font-semibold text-[15px] px-[22px] py-[13px] border-none cursor-pointer transition-all duration-200 hover:-translate-y-[2px] hover:bg-[var(--sf-primary-deep)]"
               style={{ boxShadow: "var(--sf-shadow-sm)" }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-2px)";
-                e.currentTarget.style.background = "var(--sf-primary-deep)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "none";
-                e.currentTarget.style.background = "var(--sf-primary)";
-              }}
             >
               Primary
             </button>
             <button
-              className="bg-[var(--sf-paper-raised)] text-[var(--sf-ink)] font-semibold text-[15px] px-[22px] py-3 border-2 border-[var(--sf-ink)] cursor-pointer transition-all duration-200"
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-2px)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "none";
-              }}
+              className="bg-[var(--sf-paper-raised)] text-[var(--sf-ink)] font-semibold text-[15px] px-[22px] py-3 border-2 border-[var(--sf-ink)] cursor-pointer transition-all duration-200 hover:-translate-y-[2px]"
             >
               Secondary
             </button>

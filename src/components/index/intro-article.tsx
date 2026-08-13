@@ -2,7 +2,7 @@ export default function IntroArticle() {
   return (
     <section className="max-w-[1200px] mx-auto px-7 py-16 lg:py-24">
       <div
-        className="w-full bg-[var(--sf-paper-sunken)] p-8 md:p-12 border-2 border-[var(--sf-ink)] relative"
+        className="w-full bg-[var(--sf-paper-sunken)] p-6 md:p-12 border-2 border-[var(--sf-ink)] relative"
         style={{
           boxShadow: "8px 8px 0 var(--sf-ink)",
         }}
@@ -30,7 +30,7 @@ export default function IntroArticle() {
           technical precision.
         </h2>
 
-        <div className="space-y-6 max-w-[800px] text-[17px] leading-[1.5] text-[var(--sf-ink-soft)] font-medium">
+        <div className="space-y-6 max-w-[800px] text-[15px] md:text-[17px] leading-[1.5] text-[var(--sf-ink-soft)] font-medium">
           <p>
             Based in Gurgaon, we provide dedicated{" "}
             <strong className="text-[var(--sf-ink)] font-bold">

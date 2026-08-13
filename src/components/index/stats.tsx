@@ -1,7 +1,3 @@
-"use client";
-
-import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-
 const STATS = [
   {
     value: "50+",
@@ -26,17 +22,14 @@ const STATS = [
 ];
 
 export default function ResultsBand() {
-  const ref = useScrollReveal();
-
   return (
     <section
-      ref={ref}
       id="work"
       className="mt-8"
       style={{ background: "var(--sf-paper-deep)", color: "var(--sf-paper)" }}
     >
       <div className="max-w-[1200px] mx-auto px-7 py-[52px]">
-        <div data-reveal="" className="max-w-[620px] mb-8">
+        <div className="max-w-[620px] mb-8">
           <div className="text-[13px] font-semibold tracking-[0.14em] uppercase text-[var(--sf-gold)] mb-[14px]">
             The receipts
           </div>
@@ -56,8 +49,6 @@ export default function ResultsBand() {
           {STATS.map((st) => (
             <div
               key={st.value}
-              data-reveal=""
-              data-delay={st.delay}
               className="pt-5"
               style={{
                 borderTop:

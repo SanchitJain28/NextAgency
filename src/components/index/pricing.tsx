@@ -1,24 +1,25 @@
-"use client";
-
 import Link from "next/link";
-import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const PRICING = [
   {
-    name: "Launch",
-    tagline: "For new brands that need to look established from day one.",
-    price: "$12k",
-    unit: "fixed-scope build · 4–6 weeks",
+    name: "Starter",
+    tagline: "Perfect for emerging brands needing a professional launch.",
+    price: "₹25,000",
+    unit: "1-2 weeks",
     featured: false,
     cta: "Start here",
     features: [
-      "Custom Shopify theme",
-      "Up to 8 templates",
-      "CRO-ready product pages",
-      "Speed-optimized build",
-      "30 days post-launch support",
+      "Up to 4 core pages (Home, Product, Collection, About)",
+      "Standard eCommerce functionality",
+      "Premium template setup & configuration",
+      "Basic CRO optimization",
+      "1 week post-launch support",
+      "3 revisions free",
+      "Content upload",
+      "Number of products: 10",
+      "Social media icons",
+      "Payment integration",
     ],
-    delay: "0ms",
     bg: "var(--sf-paper-raised)",
     ink: "var(--sf-ink)",
     mute: "var(--sf-ink-mute)",
@@ -32,20 +33,26 @@ const PRICING = [
   },
   {
     name: "Growth",
-    tagline: "Our most-picked engagement for scaling DTC brands.",
-    price: "$28k",
-    unit: "end-to-end build · 8–12 weeks",
+    tagline: "Pixel-perfect custom design for scaling DTC brands.",
+    price: "₹50,000",
+    unit: "2-3 weeks",
     featured: true,
     cta: "Book Growth",
     features: [
-      "Everything in Launch",
-      "Headless or advanced theme",
-      "Custom app or integration",
-      "A/B testing program",
-      "Analytics & dashboards",
-      "Dedicated strategist",
+      "Custom Figma-to-Shopify conversion",
+      "Fully bespoke frontend design",
+      "Advanced UI/UX animations",
+      "Speed & Core Web Vitals optimization",
+      "1 month post-launch support",
+      "5 revisions free",
+      "Payment gateway integration",
+      "Content upload",
+      "Number of products: 25",
+      "Speed optimization",
+      "Hosting setup and domain connect",
+      "Social media icons",
+      "Shopify app configuration",
     ],
-    delay: "80ms",
     bg: "var(--sf-ink)",
     ink: "#fff",
     mute: "rgba(255,255,255,.66)",
@@ -59,19 +66,60 @@ const PRICING = [
   },
   {
     name: "Scale",
-    tagline: "Embedded team for enterprise & Shopify Plus merchants.",
-    price: "$15k",
-    unit: "per month · retainer",
+    tagline:
+      "Complex functionality and deep customization for power merchants.",
+    price: "₹75,000",
+    unit: "3-4 weeks",
     featured: false,
     cta: "Talk to us",
     features: [
-      "Dedicated pod (design + dev)",
-      "Roadmap & sprint planning",
-      "Continuous experimentation",
-      "Priority SLA & on-call",
-      "Quarterly business reviews",
+      "Everything in Growth, plus:",
+      "Complex custom functionality (Subscriptions, Bundles, etc.)",
+      "Advanced API & ERP integrations",
+      "Custom Shopify App development if required",
+      "3 months dedicated website support",
+      "10 revisions free",
+      "Payment gateway integration",
+      "Content upload",
+      "Number of products: 50",
+      "Speed optimization",
+      "Hosting setup and domain connect",
+      "Social media icons",
+      "Shopify app configuration",
     ],
-    delay: "160ms",
+    bg: "var(--sf-paper-raised)",
+    ink: "var(--sf-ink)",
+    mute: "var(--sf-ink-mute)",
+    feat: "var(--sf-ink-soft)",
+    border: "var(--sf-line)",
+    shadow: "var(--sf-shadow-sm)",
+    check: "var(--sf-sage-soft)",
+    checkink: "var(--sf-sage-deep)",
+    cta_bg: "var(--sf-ink)",
+    cta_ink: "#fff",
+  },
+  {
+    name: "Enterprise",
+    tagline: "Blazing fast Headless commerce architectures.",
+    price: "₹1,00,000+",
+    unit: "4-6+ weeks",
+    featured: false,
+    cta: "Talk to us",
+    features: [
+      "Headless architecture (Next.js or Medusa.js)",
+      "Sub-second page load times",
+      "Limitless URL structures & flexibility",
+      "Advanced Data Migration (zero downtime)",
+      "3 months enterprise SLA support",
+      "Unlimited revisions",
+      "Payment gateway integration",
+      "Content upload",
+      "Number of products: 100+",
+      "Speed optimization",
+      "Hosting setup and domain connect",
+      "Social media icons",
+      "Shopify app configuration",
+    ],
     bg: "var(--sf-paper-raised)",
     ink: "var(--sf-ink)",
     mute: "var(--sf-ink-mute)",
@@ -86,11 +134,9 @@ const PRICING = [
 ];
 
 export default function Pricing() {
-  const ref = useScrollReveal();
-
   return (
-    <section ref={ref} id="pricing" className="max-w-[1200px] mx-auto px-7 py-[60px]">
-      <div data-reveal="" className="text-center max-w-[640px] mx-auto mb-8">
+    <section id="pricing" className="max-w-[1200px] mx-auto px-7 py-[60px]">
+      <div className="text-center max-w-[640px] mx-auto mb-8">
         <div className="text-[13px] font-semibold tracking-[0.14em] uppercase text-[var(--sf-primary)] mb-[14px]">
           Engagements
         </div>
@@ -105,17 +151,16 @@ export default function Pricing() {
           Ways to work together.
         </h2>
         <p className="m-0 text-[17px] text-[var(--sf-ink-soft)] leading-[1.6]">
-          Fixed-scope or embedded — every engagement starts with a free store audit.
+          Fixed-scope or embedded — every engagement starts with a free store
+          audit.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
+      <div className="flex md:grid md:grid-cols-2 gap-5 overflow-x-auto snap-x snap-mandatory pb-4 md:pb-0 brutal-scrollbar scroll-pl-7 -mx-7 px-7 md:mx-0 md:px-0 md:scroll-pl-0">
         {PRICING.map((p, i) => (
           <article
             key={i}
-            data-reveal=""
-            data-delay={p.delay}
-            className="flex flex-col relative"
+            className="flex flex-col relative min-w-[280px] snap-start"
             style={{
               background: p.bg,
               color: p.ink,
@@ -139,7 +184,10 @@ export default function Pricing() {
             >
               {p.name}
             </div>
-            <div className="text-[14.5px] mt-1.5 leading-[1.5]" style={{ color: p.mute }}>
+            <div
+              className="text-[14.5px] mt-1.5 leading-[1.5]"
+              style={{ color: p.mute }}
+            >
               {p.tagline}
             </div>
 
@@ -161,7 +209,7 @@ export default function Pricing() {
               {p.unit}
             </div>
 
-            <ul className="list-none m-0 mb-7 p-0 flex flex-col gap-3">
+            <ul className="list-none m-0 mb-7 p-0 grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-3">
               {p.features.map((f, fi) => (
                 <li
                   key={fi}
@@ -181,25 +229,77 @@ export default function Pricing() {
 
             <Link
               href="#contact"
-              className="mt-auto text-center font-semibold text-[15.5px] leading-none p-3.5 border-2 border-[var(--sf-ink)] transition-all duration-100"
+              className="mt-auto text-center font-semibold text-[15.5px] leading-none p-3.5 border-2 border-[var(--sf-ink)] transition-all duration-100 shadow-[4px_4px_0_var(--sf-ink)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_var(--sf-ink)]"
               style={{
                 background: p.cta_bg,
                 color: p.cta_ink,
-                boxShadow: "4px 4px 0 var(--sf-ink)",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translate(2px, 2px)";
-                e.currentTarget.style.boxShadow = "2px 2px 0 var(--sf-ink)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "none";
-                e.currentTarget.style.boxShadow = "4px 4px 0 var(--sf-ink)";
               }}
             >
               {p.cta}
             </Link>
           </article>
         ))}
+      </div>
+
+      {/* Add-ons */}
+      <div
+        className="mt-16 max-w-[800px] mx-auto border-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)] p-6 md:p-8"
+        style={{ boxShadow: "8px 8px 0 var(--sf-ink)" }}
+      >
+        <h3
+          className="m-0 mb-2 font-bold text-[22px] tracking-tight text-[var(--sf-ink)]"
+          style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+        >
+          Transparent Add-ons (A La Carte)
+        </h3>
+        <p className="m-0 mb-6 text-[15px] text-[var(--sf-ink-soft)] leading-snug">
+          Need a little extra? Add these to any plan.
+        </p>
+
+        <div className="flex flex-col gap-3">
+          {[
+            { label: "10 Extra Product Uploads", price: "+ ₹1,000", time: "" },
+            {
+              label: "Extra Page Design & Setup",
+              price: "+ ₹5,000",
+              time: "Adds 2 days",
+            },
+            {
+              label: "Extra Revision Round",
+              price: "+ ₹2,000",
+              time: "Adds 2 days",
+            },
+            {
+              label: "Speed Optimization (For Starter Plan)",
+              price: "+ ₹1,0000",
+              time: "Adds 4 days",
+            },
+            {
+              label: "Hosting Setup & Domain Connect (For Starter Plan)",
+              price: "+ ₹10,000",
+              time: "Adds 2 days",
+            },
+          ].map((addon, i) => (
+            <div
+              key={i}
+              className="flex flex-col sm:flex-row sm:items-center justify-between py-2 border-b border-[var(--sf-line)] last:border-0 gap-2"
+            >
+              <span className="font-semibold text-[15.5px] text-[var(--sf-ink)]">
+                {addon.label}
+              </span>
+              <div className="flex items-center gap-4 text-[14px]">
+                {addon.time && (
+                  <span className="text-[var(--sf-ink-mute)] font-medium bg-[var(--sf-paper-raised)] px-2 py-1">
+                    {addon.time}
+                  </span>
+                )}
+                <span className="font-bold text-[var(--sf-primary)] min-w-[70px] text-right">
+                  {addon.price}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

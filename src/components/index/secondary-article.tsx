@@ -2,7 +2,7 @@ export default function SecondaryArticle() {
   return (
     <section className="max-w-[1200px] mx-auto px-7 py-16 lg:py-24">
       <div
-        className="w-full bg-[var(--sf-paper-deep)] p-8 md:p-12 border-2 border-[var(--sf-ink)] relative"
+        className="w-full bg-[var(--sf-paper-deep)] p-6 md:p-12 border-2 border-[var(--sf-ink)] relative"
         style={{
           boxShadow: "8px 8px 0 var(--sf-ink)",
         }}
@@ -29,7 +29,7 @@ export default function SecondaryArticle() {
           <span className="text-[var(--sf-primary)]">Shopify development company in India</span>.
         </h2>
 
-        <div className="space-y-6 max-w-[800px] text-[17px] leading-[1.6] text-[color-mix(in_srgb,var(--sf-paper)_80%,transparent)] font-medium">
+        <div className="space-y-6 max-w-[800px] text-[15px] md:text-[17px] leading-[1.6] text-[color-mix(in_srgb,var(--sf-paper)_80%,transparent)] font-medium">
           <p>
             When merchants look to scale, the conversation eventually turns to the{" "}
             <strong className="text-white font-bold">

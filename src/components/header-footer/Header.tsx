@@ -58,7 +58,8 @@ export function Header() {
             <span
               className="w-8 h-8 flex items-center justify-center"
               style={{
-                background: "linear-gradient(140deg, var(--sf-primary), var(--sf-berry))",
+                background:
+                  "linear-gradient(140deg, var(--sf-primary), var(--sf-berry))",
                 boxShadow: "var(--sf-shadow-sm)",
               }}
             >
