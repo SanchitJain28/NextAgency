@@ -242,3 +242,26 @@ html[data-font-size="large"] .medium-content li { font-size: 24px !important; }
 html[data-font-size="large"] .medium-content h1 { font-size: 42px !important; }
 html[data-font-size="large"] .medium-content h2 { font-size: 38px !important; }
 html[data-font-size="large"] .medium-content h3 { font-size: 30px !important; }
+
+@layer utilities {
+  .brutal-scrollbar::-webkit-scrollbar {
+    height: 16px;
+  }
+  .brutal-scrollbar::-webkit-scrollbar-track {
+    background: var(--sf-paper-sunken);
+    border-top: 2px solid var(--sf-ink);
+    border-bottom: 2px solid var(--sf-ink);
+  }
+  .brutal-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--sf-primary);
+    border: 2px solid var(--sf-ink);
+    border-radius: 0;
+  }
+  .brutal-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--sf-primary-deep);
+  }
+  .brutal-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--sf-primary) var(--sf-paper-sunken);
+  }
+}

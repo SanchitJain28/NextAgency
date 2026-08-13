@@ -11,97 +11,86 @@ type Project = {
   link: string;
 };
 
-// 10 Placeholder projects (8 Storefronts, 2 Apps) as requested
 const PROJECTS: Project[] = [
   {
-    id: "project-1",
-    title: "Storefront Alpha",
+    id: "iron-crate",
+    title: "Iron Crate",
     category: "Storefront",
-    description: "A high-performance custom Liquid theme engineered for sub-second load times.",
-    tags: ["Custom Theme", "CRO", "Speed Optimization"],
-    imagePlaceholder: "https://images.unsplash.com/photo-1498804103079-a6351b050096?q=80&w=800&auto=format&fit=crop",
+    description:
+      "A custom-built eCommerce storefront tailored for a high-performance sports supplement brand. We delivered a visually striking aesthetic while engineering every touchpoint for maximum CRO, including a gamified high-speed slide-out cart.",
+    tags: ["Custom Theme", "CRO", "High-Speed Cart"],
+    imagePlaceholder: "/portfolio/iron-crate/covers/cover.png",
     link: "/portfolio",
   },
   {
-    id: "project-2",
-    title: "Storefront Beta",
+    id: "recovrx",
+    title: "RecovrX",
     category: "Storefront",
-    description: "Complete redesign and custom architecture replacing slow third-party apps.",
-    tags: ["Redesign", "Liquid", "Metaobjects"],
-    imagePlaceholder: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=800&auto=format&fit=crop",
+    description:
+      "A premium Shopify storefront designed for a high-end athletic recovery brand. The build centered on delivering a sleek, dark-mode aesthetic while integrating advanced CRO strategies and a high-AOV cart.",
+    tags: ["Dark Mode", "High-AOV", "Mobile Responsive"],
+    imagePlaceholder: "/portfolio/recovrx/covers/cover.png",
     link: "/portfolio",
   },
   {
-    id: "project-3",
-    title: "UpsellPro App",
+    id: "flexform-athletics",
+    title: "FlexForm Athletics",
+    category: "Storefront",
+    description:
+      "Custom-built storefront for a premium women's activewear brand. The project focused on a minimalist, visually-driven UI that puts product imagery front and center alongside strategic upsell features.",
+    tags: ["Minimalist", "Athleisure", "Upsell Carousel"],
+    imagePlaceholder: "/portfolio/flexform-athletics/covers/cover.png",
+    link: "/portfolio",
+  },
+  {
+    id: "maison-luxe",
+    title: "Maison Luxe",
+    category: "Storefront",
+    description:
+      "A premium storefront designed for a luxury Scandinavian home decor brand. Built upon the Shopify Dawn architecture, the project required extensive UI customization to deliver an editorial, high-end aesthetic.",
+    tags: ["Luxury", "Editorial", "Shopify Dawn"],
+    imagePlaceholder: "/portfolio/maison-luxe/covers/cover.png",
+    link: "/portfolio",
+  },
+  {
+    id: "industrial-supply-direct",
+    title: "Industrial Supply Direct",
+    category: "Storefront",
+    description:
+      "Specialized B2B eCommerce platform built for the industrial manufacturing sector. We transformed a complex technical catalog into a streamlined procurement experience with volume pricing and custom quote generation.",
+    tags: ["B2B", "Data-Rich", "Quote Generation"],
+    imagePlaceholder: "/portfolio/industrial-supply-direct/covers/cover.png",
+    link: "/portfolio",
+  },
+  {
+    id: "360-alpha",
+    title: "360 - Alpha",
+    category: "Storefront",
+    description:
+      "A high-end storefront engineered for a premium streetwear brand. Inspired by elevated aesthetics, we delivered an immersive lookbook-style browsing experience while maintaining rigorous CRO standards.",
+    tags: ["Premium", "Streetwear", "Minimalist"],
+    imagePlaceholder: "/portfolio/360-alpha/covers/cover.png",
+    link: "/portfolio",
+  },
+  {
+    id: "scalefront-app",
+    title: "Scalefront",
     category: "App",
-    description: "A native Shopify public app enabling complex in-cart upselling without theme conflicts.",
-    tags: ["Public App", "Remix", "Prisma"],
-    imagePlaceholder: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+    description:
+      "An intelligent Shopify application engineered to automate cross-selling through AI-driven recommendations. It eliminates manual configuration by instantly generating highly relevant product suggestions.",
+    tags: ["AI-Powered", "Omnichannel", "Zero-Config"],
+    imagePlaceholder: "/portfolio/scalefront-app/covers/cover.png",
     link: "#",
   },
   {
-    id: "project-4",
-    title: "Storefront Gamma",
-    category: "Storefront",
-    description: "Headless commerce migration using Next.js and Shopify Storefront API.",
-    tags: ["Headless", "Next.js", "API"],
-    imagePlaceholder: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800&auto=format&fit=crop",
-    link: "/portfolio",
-  },
-  {
-    id: "project-5",
-    title: "Storefront Delta",
-    category: "Storefront",
-    description: "Custom checkout extensions and specialized B2B wholesale portal.",
-    tags: ["B2B", "Checkout Ext", "Custom"],
-    imagePlaceholder: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=800&auto=format&fit=crop",
-    link: "/portfolio",
-  },
-  {
-    id: "project-6",
-    title: "Storefront Epsilon",
-    category: "Storefront",
-    description: "Subscription-first DTC brand with highly customized customer portal.",
-    tags: ["Subscriptions", "Liquid API", "UI/UX"],
-    imagePlaceholder: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=800&auto=format&fit=crop",
-    link: "/portfolio",
-  },
-  {
-    id: "project-7",
-    title: "Storefront Zeta",
-    category: "Storefront",
-    description: "Internationalization strategy with multi-currency and localized storefronts.",
-    tags: ["Shopify Plus", "Markets", "I18n"],
-    imagePlaceholder: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?q=80&w=800&auto=format&fit=crop",
-    link: "/portfolio",
-  },
-  {
-    id: "project-8",
-    title: "BundleBuilder App",
+    id: "pairly-app",
+    title: "Pairly",
     category: "App",
-    description: "Private custom app to handle complex mixed-pallet shipping and bundling logic.",
-    tags: ["Private App", "Node.js", "Backend"],
-    imagePlaceholder: "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?q=80&w=800&auto=format&fit=crop",
+    description:
+      "A comprehensive Shopify bundle and upsell application designed to maximize store revenue. It combines multiple high-converting offer types with an intelligent, AI-backed recommendation engine.",
+    tags: ["Bundle & Upsell", "AI Engine", "Native UI"],
+    imagePlaceholder: "/portfolio/pairly-app/covers/cover.png",
     link: "#",
-  },
-  {
-    id: "project-9",
-    title: "Storefront Eta",
-    category: "Storefront",
-    description: "Bespoke animations, 3D product viewer, and advanced media integration.",
-    tags: ["3D Models", "WebGL", "Custom Theme"],
-    imagePlaceholder: "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=800&auto=format&fit=crop",
-    link: "/portfolio",
-  },
-  {
-    id: "project-10",
-    title: "Storefront Theta",
-    category: "Storefront",
-    description: "Migration from Magento to Shopify Plus with full data integrity.",
-    tags: ["Migration", "Data", "Shopify Plus"],
-    imagePlaceholder: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop",
-    link: "/portfolio",
   },
 ];
 
@@ -139,7 +128,7 @@ export default function FeaturedWork() {
               <div className="absolute top-4 left-4 z-10 bg-[var(--sf-ink)] text-white text-[11px] font-bold tracking-[0.08em] uppercase px-3 py-1.5 shadow-[3px_3px_0_var(--sf-primary)]">
                 {project.category}
               </div>
-              
+
               <img
                 src={project.imagePlaceholder}
                 alt={project.title}
@@ -149,9 +138,9 @@ export default function FeaturedWork() {
             </div>
 
             {/* Content Container */}
-            <div className="p-6 md:p-8 flex flex-col flex-1">
+            <div className="p-5 md:p-6 flex flex-col flex-1">
               <h3
-                className="text-[24px] tracking-[-0.02em] text-[var(--sf-ink)] mb-3"
+                className="text-[20px] tracking-[-0.01em] text-[var(--sf-ink)] mb-2"
                 style={{
                   fontFamily: "'Bricolage Grotesque', sans-serif",
                   fontWeight: 800,
@@ -159,20 +148,24 @@ export default function FeaturedWork() {
               >
                 {project.title}
               </h3>
-              
-              <p className="text-[16px] text-[var(--sf-ink-soft)] font-medium leading-[1.4] mb-6 flex-1">
+
+              <p className="text-[14.5px] text-[var(--sf-ink-soft)] font-medium leading-[1.5] mb-5 flex-1">
                 {project.description}
               </p>
 
-              <div className="flex flex-wrap gap-2 mt-auto">
+              <div className="flex flex-wrap gap-2 mt-auto mb-5">
                 {project.tags.map((tag, idx) => (
                   <span
                     key={idx}
-                    className="text-[12px] font-semibold text-[var(--sf-ink-mute)] bg-[var(--sf-paper)] border-2 border-[var(--sf-ink)] px-2.5 py-1"
+                    className="text-[11px] font-bold tracking-[0.02em] text-[var(--sf-ink-mute)] bg-[var(--sf-paper)] border-2 border-[var(--sf-ink)] px-2 py-1"
                   >
                     {tag}
                   </span>
                 ))}
+              </div>
+
+              <div className="mt-auto text-[13px] font-bold tracking-[0.05em] uppercase text-[var(--sf-primary)] group-hover:translate-x-1 transition-transform duration-200">
+                View Project →
               </div>
             </div>
           </Link>

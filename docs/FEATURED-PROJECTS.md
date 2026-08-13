@@ -57,3 +57,41 @@ Industrial Supply Direct is a specialized B2B eCommerce platform built for the i
 - **Data-Rich Product Pages (PDP):** Engineered highly structured product pages to handle extensive technical specifications via clean, tabbed data tables. Integrated "Volume Pricing" tiers and quick-access technical assistance buttons to facilitate high-volume B2B purchasing.
 - **Custom Quote Generation Flow:** Built a robust, multi-step "Request a Quote" funnel. This friction-free lead generation tool captures detailed buyer requirements, company information, and industry specifics to streamline the enterprise sales process.
 - **Strategic Component Cross-Selling:** Implemented intuitive "Frequently Bought Together" list modules and related product carousels to encourage comprehensive parts sourcing and increase the overall Average Order Value (AOV) per transaction.
+
+### 360 - Alpha | Premium Shopify Theme Development
+
+**Project Overview**
+360 - Alpha is a high-end eCommerce storefront engineered for a premium streetwear and apparel brand. Inspired by elevated, minimalist aesthetics similar to Fear of God, the project focused on delivering an immersive, editorial-style browsing experience while maintaining rigorous Conversion Rate Optimization (CRO) standards.
+
+**Key Features & Implementation**
+
+- **Custom Design Architecture:** Developed a sophisticated, ultra-minimalist UI featuring muted color palettes, expansive whitespace, and large-format editorial imagery to seamlessly reinforce luxury brand positioning.
+- **CRO-Driven Homepage:** Designed a fluid discovery flow with lookbook-style shoppable galleries and unobtrusive navigation, ensuring a premium feel without sacrificing usability or mobile performance.
+- **High-Converting Product Pages:** Engineered sleek PDPs focused on visual storytelling. Features include sticky "Add to Cart" functionality, integrated sizing guides, and clean, collapsible accordions for material and care details.
+- **Optimized Slide-Out Cart:** Built a friction-free, minimalist drawer cart that handles premium features like aesthetically-aligned, one-click cross-sells to increase Average Order Value (AOV) without cluttering the luxury checkout experience.
+
+### Scalefront | Custom Shopify App Development
+
+**Project Overview**
+Scalefront is an intelligent Shopify application engineered to automate cross-selling and upselling through AI-driven recommendations. Designed specifically to boost Conversion Rate Optimization (CRO) and Average Order Value (AOV), the app eliminates the need for manual configuration by instantly generating highly relevant product suggestions.
+
+**Key Features & Implementation**
+
+- **AI-Powered Recommendation Engine:** Utilizes an advanced algorithm that analyzes five core data points (product names, descriptions, images, categories, and tags) to surface the perfect upsell or cross-sell pairing.
+- **Zero-Configuration Setup:** Built for immediate deployment. Merchants can install the app and activate automated recommendations across their entire catalog in under two minutes without writing rules.
+- **Dynamic Omnichannel Placement:** seamlessly integrates high-converting recommendation widgets across multiple touchpoints, including the homepage, collection pages, product pages (PDP), and the cart.
+- **Hybrid Control System:** While the AI handles automated catalog updates and suggestions, the app includes a manual override dashboard, giving merchants complete control to fine-tune specific product recommendations when needed.
+
+---
+
+### Pairly | Custom Shopify App Development
+
+**Project Overview**
+Pairly is a comprehensive Shopify bundle and upsell application designed to maximize store revenue through strategic product pairings. Built with a focus on seamless theme integration and ease of use, it combines multiple high-converting offer types with intelligent, AI-backed product suggestions.
+
+**Key Features & Implementation**
+
+- **Versatile Promotional Structures:** Engineered to support a wide array of bundle types, including fixed bundles, volume discounts, Buy X Get Y (BOGO), gift-with-purchase, and Frequently Bought Together (FBT) add-ons.
+- **Smart Pairing Algorithm:** Features an embedded AI-powered recommendation engine that automatically suggests relevant product pairings, actively optimizing bundles to increase AOV over time.
+- **Native UI Integration:** Developed with highly customizable, no-code widgets designed to automatically inherit store styling, ensuring all bundle offers look completely native to any custom Shopify theme.
+- **Centralized Merchant Dashboard:** Provides a streamlined, user-friendly interface allowing store owners to launch and manage complex bundle strategies across PDPs, carts, and custom sections without requiring developer support.

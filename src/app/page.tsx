@@ -4,9 +4,12 @@ import LogoMarquee from "@/components/index/logo-marquee";
 import IntroArticle from "@/components/index/intro-article";
 import FeaturedWork from "@/components/index/featured-work";
 import Services from "@/components/index/services";
+import CaseStudies from "@/components/index/case-studies";
 import ResultsBand from "@/components/index/stats";
 import Testimonials from "@/components/index/testimonials";
+import SecondaryArticle from "@/components/index/secondary-article";
 import Pricing from "@/components/index/pricing";
+import FAQ from "@/components/index/faq";
 import DesignShowcase from "@/components/index/design-showcase";
 import ContactCTA from "@/components/index/contact-cta";
 import FloatingContact from "@/components/index/floating-contact";
@@ -76,10 +79,12 @@ export default function HomePage() {
         <IntroArticle />
         <FeaturedWork />
         <Services />
+        <CaseStudies />
         <ResultsBand />
         <Testimonials />
+        <SecondaryArticle />
         <Pricing />
-        <DesignShowcase />
+        <FAQ />
         <ContactCTA />
         <FloatingContact />
       </main>

@@ -3,10 +3,26 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const STATS = [
-  { value: "+41%", label: "Median conversion lift within 90 days of launch", delay: "0ms" },
-  { value: "0.9s", label: "Average Largest Contentful Paint across shipped stores", delay: "80ms" },
-  { value: "$120M", label: "Merchant revenue processed through our builds last year", delay: "160ms" },
-  { value: "180+", label: "Stores designed, built and scaled since 2014", delay: "240ms" },
+  {
+    value: "50+",
+    label: "Shopify stores built and scaled from the ground up",
+    delay: "0ms",
+  },
+  {
+    value: "20-30%",
+    label: "Average revenue increase observed post-launch",
+    delay: "80ms",
+  },
+  {
+    value: "100%",
+    label: "In-house development. We never outsource your project.",
+    delay: "160ms",
+  },
+  {
+    value: "Zero",
+    label: "Bloated templates. Every line of code is custom.",
+    delay: "240ms",
+  },
 ];
 
 export default function ResultsBand() {
@@ -44,7 +60,8 @@ export default function ResultsBand() {
               data-delay={st.delay}
               className="pt-5"
               style={{
-                borderTop: "2px solid color-mix(in srgb, var(--sf-gold) 60%, transparent)",
+                borderTop:
+                  "2px solid color-mix(in srgb, var(--sf-gold) 60%, transparent)",
               }}
             >
               <div

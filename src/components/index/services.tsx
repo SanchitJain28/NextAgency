@@ -4,15 +4,116 @@ import Link from "next/link";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const SERVICES = [
-  { no: "01", icon: "{ }", title: "Custom theme development", blurb: "Bespoke, pixel-obsessed themes built from scratch — never a bloated template retrofit.", tint: "var(--sf-primary-soft)", ink: "var(--sf-primary-deep)", delay: "0ms" },
-  { no: "02", icon: "⌘", title: "Headless commerce", blurb: "Hydrogen, Next.js & composable stacks for storefronts that load instantly and scale infinitely.", tint: "var(--sf-sage-soft)", ink: "var(--sf-sage-deep)", delay: "60ms" },
-  { no: "03", icon: "◈", title: "Custom Shopify apps", blurb: "Private apps and embedded tools that bend Shopify to your exact operational workflow.", tint: "var(--sf-gold-soft)", ink: "#8a6410", delay: "120ms" },
-  { no: "04", icon: "↯", title: "Performance optimization", blurb: "Core Web Vitals into the green — faster stores, lower bounce, better rankings.", tint: "var(--sf-berry-soft)", ink: "var(--sf-berry)", delay: "0ms" },
-  { no: "05", icon: "⇗", title: "Shopify Plus migration", blurb: "Replatform from Magento, WooCommerce or legacy Shopify with zero-drama, zero-downtime cutovers.", tint: "var(--sf-primary-soft)", ink: "var(--sf-primary-deep)", delay: "60ms" },
-  { no: "06", icon: "A/B", title: "CRO & A/B testing", blurb: "Research-led experiments on the pages that move revenue, with statistically honest results.", tint: "var(--sf-sage-soft)", ink: "var(--sf-sage-deep)", delay: "120ms" },
-  { no: "07", icon: "{;}", title: "Backend & API development", blurb: "Robust integrations, custom endpoints and data pipelines that keep the store humming.", tint: "var(--sf-gold-soft)", ink: "#8a6410", delay: "0ms" },
-  { no: "08", icon: "⊹", title: "Third-party integrations", blurb: "ERPs, PIMs, subscriptions, loyalty, ESPs — wired together so nothing falls through the cracks.", tint: "var(--sf-berry-soft)", ink: "var(--sf-berry)", delay: "60ms" },
-  { no: "09", icon: "✦", title: "Store audit & consulting", blurb: "A forensic look at UX, tech and conversion, with a prioritized roadmap you can act on today.", tint: "var(--sf-primary-soft)", ink: "var(--sf-primary-deep)", delay: "120ms" },
+  {
+    no: "01",
+    icon: "{ }",
+    title: "Custom Shopify development",
+    blurb:
+      "As a leading Shopify development company, we build bespoke, scalable commerce solutions tailored to your unique operational workflow and business logic.",
+    tint: "var(--sf-primary-soft)",
+    ink: "var(--sf-primary-deep)",
+    delay: "0ms",
+  },
+  {
+    no: "02",
+    icon: "❖",
+    title: "Theme customization",
+    blurb:
+      "Expert Shopify theme development and customization. We engineer pixel-obsessed frontend experiences that drive conversions, rather than just tweaking templates.",
+    tint: "var(--sf-sage-soft)",
+    ink: "var(--sf-sage-deep)",
+    delay: "60ms",
+  },
+  {
+    no: "03",
+    icon: "A/B",
+    title: "CRO optimization",
+    blurb:
+      "Stop guessing. We run research-led eCommerce conversion rate optimization and A/B tests on the pages that move revenue, delivering statistically honest results.",
+    tint: "var(--sf-gold-soft)",
+    ink: "#8a6410",
+    delay: "120ms",
+  },
+  {
+    no: "04",
+    icon: "◈",
+    title: "Shopify app development",
+    blurb:
+      "We build custom, private applications and embedded tools that bend the Shopify ecosystem to your exact operational workflow.",
+    tint: "var(--sf-berry-soft)",
+    ink: "var(--sf-berry)",
+    delay: "0ms",
+  },
+  {
+    no: "05",
+    icon: "⌘",
+    title: "Headless Shopify",
+    blurb:
+      "Hire a Shopify expert to decouple your frontend. We use Next.js, Hydrogen, and composable stacks for storefronts that load instantly and scale infinitely.",
+    tint: "var(--sf-primary-soft)",
+    ink: "var(--sf-primary-deep)",
+    delay: "60ms",
+  },
+  {
+    no: "06",
+    icon: "W",
+    title: "Wordpress development",
+    blurb:
+      "Robust, high-performance WordPress development services. We build custom themes and plugins engineered for speed, security, and complex content management.",
+    tint: "var(--sf-sage-soft)",
+    ink: "var(--sf-sage-deep)",
+    delay: "120ms",
+  },
+  {
+    no: "07",
+    icon: "⚡",
+    title: "Headless WooCommerce",
+    blurb:
+      "Modernize your tech stack. We pair the flexibility of WooCommerce backends with blazing-fast Next.js frontends for ultimate eCommerce performance.",
+    tint: "var(--sf-gold-soft)",
+    ink: "#8a6410",
+    delay: "0ms",
+  },
+  {
+    no: "08",
+    icon: "⇗",
+    title: "Store migration services",
+    blurb:
+      "Replatform from Magento, WooCommerce, or legacy setups with zero-drama cutovers. We handle complex enterprise data migrations with absolute integrity.",
+    tint: "var(--sf-berry-soft)",
+    ink: "var(--sf-berry)",
+    delay: "60ms",
+  },
+  {
+    no: "09",
+    icon: "🛒",
+    title: "E-commerce development",
+    blurb:
+      "Looking for top eCommerce experts in India? We build robust platforms, custom endpoints, and custom data pipelines that keep your enterprise humming.",
+    tint: "var(--sf-primary-soft)",
+    ink: "var(--sf-primary-deep)",
+    delay: "120ms",
+  },
+  {
+    no: "10",
+    icon: "M",
+    title: "Medusa JS development",
+    blurb:
+      "Future-proof your business with Medusa.js. We specialize in building open-source, headless commerce architectures designed for unparalleled developer control.",
+    tint: "var(--sf-sage-soft)",
+    ink: "var(--sf-sage-deep)",
+    delay: "0ms",
+  },
+  {
+    no: "11",
+    icon: "P",
+    title: "Prestashop development",
+    blurb:
+      "Custom PrestaShop theme development and advanced module integration tailored for merchants who need deep customization and self-hosted control.",
+    tint: "var(--sf-gold-soft)",
+    ink: "#8a6410",
+    delay: "60ms",
+  },
 ];
 
 export default function Services() {
