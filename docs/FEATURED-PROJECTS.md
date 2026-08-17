@@ -1,14 +1,42 @@
-### Iron Crate | Custom Shopify Theme Development
+### Iron Crate | Custom Shopify Theme & Bundle Architecture
 
 **Project Overview**
-Iron Crate is a custom-built eCommerce storefront tailored for a high-performance sports supplement brand. The core objective was to deliver a visually striking, custom aesthetic while engineering every touchpoint for maximum Conversion Rate Optimization (CRO) and increased Average Order Value (AOV).
+Iron Crate is a custom-built, high-performance eCommerce storefront engineered for a premium sports nutrition and supplement brand. The design balances a bold, high-energy fitness aesthetic (neon accent glow, dark-mode gym imagery, and vibrant gradient contrast) with ruthless Conversion Rate Optimization (CRO), native multi-product bundling, and an interactive tiered-reward cart.
 
-**Key Features & Implementation**
+**Key Architecture & Page-by-Page Breakdown**
 
-- **Custom Design Architecture:** Delivered a high-energy, custom UI tailored specifically to the fitness demographic, balancing bold visual appeal with intuitive, friction-free navigation.
-- **CRO-Driven Homepage:** Engineered for immediate trust and streamlined purchasing. Features include clear category routing, prominent trust badges (e.g., Vegan, GMO-Free), and integrated social proof to validate buyer decisions.
-- **High-Converting Product Pages:** Built dynamic PDPs designed to maximize revenue per visitor. Incorporates strategic product bundling, seamless subscription options, detailed nutritional breakdown accordions, and highly visible customer reviews.
-- **Gamified, High-Speed Cart:** Developed an optimized, lightning-fast slide-out cart. It features a custom tiered-reward progress bar (actively tracking the distance to free shipping or bonus products) to incentivize higher cart values immediately prior to checkout.
+- **Homepage Architecture (Conversion & Discovery):**
+  - **Dynamic Category Matrix:** High-impact, neon-bordered category discovery cards (*Muscle & Strength*, *Protein Supplements*, *Health & Wellness*, *Performance Supplements*) paired with infinite marquee tickers (*"Our Top Categories — Handpicked Just For You"*).
+  - **High-Density Featured Product Grid:** Clean, bordered product cards with prominent "SALE" badges, strikethrough comparison pricing, and full-width "VIEW PRODUCT" buttons.
+  - **"Setting the Bar" Purity & Trust Grid:** A dark gym visual showcase coupled with a 6-point clinical certification matrix (*Vegan, GMO Free, Synthetic Free, Soy Free, Gluten Free, Sucralose Free*).
+  - **Interactive Stack Finder / Quiz Banner:** Vibrant gradient CTA banner (*"Not Sure Where to Start?"*) presenting a visual 3-part supplement formula (*Pre-Workout + Protein + Creatine*) and direct routing to the custom stack builder.
+  - **Athletic Authority Storytelling:** Brand credibility section highlighting 55+ years of bodybuilding pedigree and formulator experience working with Olympians and NBA athletic programs.
+
+- **Collection Page System & Dynamic Filtering:**
+  - **Gradient Collection Hero Banners:** Immersive hero headers featuring custom category narratives (e.g. clinical dosage callouts for beta-alanine and citrulline malate) and composite product line visuals.
+  - **Interactive Collection Switcher Slider:** Horizontal tab carousel with bold bordered buttons allowing instant category switching (*Muscle & Strength, Performance Supplements, Health & Wellness, Pre-Workout*) without full page reloads.
+  - **Instant Filter & Sort Controls:** Fast faceted filtering by Availability and Price, with real-time sort options (Best Selling, Price, Featured) and live product count indicators.
+
+- **High-Converting Product Detail Pages (PDP):**
+  - **Formula & Dosage Summary Box:** Clear formulation highlights positioned above the fold detailing per-scoop clinical dosages (e.g. 8g Citrulline Malate, 3.2g Beta-Alanine, Alpha-GPC, Cognizin®) alongside Informed Sport and cGMP certifications.
+  - **Hybrid Purchase & Subscription Engine:** Seamless toggle between "One Time Purchase" and "Subscribe and Save (10% Off)" with "BEST SELLER !" callout badges and recurring delivery breakdown.
+  - **Live Cart Context & Quantity Steppers:** Real-time feedback displaying current cart status (*"Quantity (2 in cart)"*) with integrated stepper controls.
+  - **Clinical "Supplement Facts" & "What's Inside" Breakdown:** Structured, FDA-compliant nutrition panel paired with educational breakdowns explaining biological pathways (e.g., urea cycle, nitric oxide synthesis).
+  - **Verified Social Proof Grid:** Dedicated "Customer Reviews" grid with 5-star aggregate metrics, reviewer initials, verified purchase badges, and submission dates.
+  - **Collapsible FAQ Accordions:** High-contrast FAQ modules addressing usage timing, bottle longevity, stacking protocols, third-party lab safety, and expected timelines.
+  - **"Chosen by Champions" Quality Block:** Dark-mode trust component emphasizing third-party batch testing and 1-click access to verified Certificates of Analysis (COA).
+
+- **Gamified, High-AOV Slide-Out Drawer Cart:**
+  - **Dynamic Multi-Tiered Reward Progress Bar:** Real-time spend milestone tracker gamifying cart expansion across 3 unlockable tiers:
+    - *Tier 1 ($50):* Free Shipping
+    - *Tier 2 ($100):* Free Ghoststrike Alpha - Focus + Pump
+    - *Tier 3 ($200):* Free Ironclad Micronized Creatine
+  - **Milestone Highlight & Spend Countdown:** Live calculation badge (*"ONLY ₹95.60 / $X LEFT TO GET FREE CREATINE!"*) with animated next-reward indicator.
+  - **Subscription Indicators & In-Cart Cross-Sells:** Line-item subscription badges (*"Delivery: every month | 10% off"*), quantity controllers, and an integrated *"FOR YOU ✨ DISCOUNTS"* upsell module.
+
+- **Custom "Build Your Own Stack" Bundle Builder (`/build-your-own`):**
+  - **Interactive Multi-Product Catalog Grid:** Clean, multi-column supplement selector (Whey Isolates, Concentrates, Pea Protein, Collagen Peptides, Hemp Protein, Casein) featuring instant 1-click addition (`+`) and quantity adjustments.
+  - **Real-Time Sticky Bundle Sidebar:** Sticky right-hand configuration panel (*"Your Bundle"*) tracking item counts, selected product thumbnails, strikethrough retail comparison savings, line-item delete actions, live cumulative price calculation, and a multi-step checkout funnel.
 
 ### RecovrX | Custom Shopify Theme Development
 

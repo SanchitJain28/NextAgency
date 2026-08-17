@@ -19,7 +19,7 @@ const PROJECTS: Project[] = [
       "A custom-built eCommerce storefront tailored for a high-performance sports supplement brand. We delivered a visually striking aesthetic while engineering every touchpoint for maximum CRO, including a gamified high-speed slide-out cart.",
     tags: ["Custom Theme", "CRO", "High-Speed Cart"],
     imagePlaceholder: "/portfolio/iron-crate/covers/cover.png",
-    link: "/portfolio",
+    link: "/work/iron-crate",
   },
   {
     id: "recovrx",
@@ -59,7 +59,7 @@ const PROJECTS: Project[] = [
       "Specialized B2B eCommerce platform built for the industrial manufacturing sector. We transformed a complex technical catalog into a streamlined procurement experience with volume pricing and custom quote generation.",
     tags: ["B2B", "Data-Rich", "Quote Generation"],
     imagePlaceholder: "/portfolio/industrial-supply-direct/covers/cover.png",
-    link: "/portfolio",
+    link: "/work/industrial-supply-direct",
   },
   {
     id: "360-alpha",

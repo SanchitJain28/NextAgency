@@ -10,6 +10,7 @@ type CaseStudy = {
   metricLabel: string;
   description: string;
   imagePlaceholder: string;
+  link: string;
 };
 
 const CASE_STUDIES: CaseStudy[] = [
@@ -23,6 +24,7 @@ const CASE_STUDIES: CaseStudy[] = [
     description:
       "We replaced a bloated template with a custom headless build that unlocked massive speed gains and integrated a gamified reward cart that instantly drove up average order values.",
     imagePlaceholder: "/portfolio/iron-crate/covers/cover.png",
+    link: "/work/iron-crate",
   },
   {
     id: "cs-2",
@@ -34,6 +36,7 @@ const CASE_STUDIES: CaseStudy[] = [
     description:
       "Selling $2,000+ recovery gear requires trust. We implemented clinical data accordions, rigorous social proof, and a friction-free slide-out cart to turn browsing athletes into buyers.",
     imagePlaceholder: "/portfolio/recovrx/covers/cover.png",
+    link: "/portfolio",
   },
   {
     id: "cs-3",
@@ -45,6 +48,7 @@ const CASE_STUDIES: CaseStudy[] = [
     description:
       "Luxury buyers expect speed and elegance. We stripped out slow 3rd-party apps and built native 'Shop the Look' modules that maintain peak performance while increasing bundle purchases.",
     imagePlaceholder: "/portfolio/maison-luxe/covers/cover.png",
+    link: "/portfolio",
   },
   {
     id: "cs-4",
@@ -56,6 +60,7 @@ const CASE_STUDIES: CaseStudy[] = [
     description:
       "We transformed a dense, confusing technical catalog into an intuitive B2B procurement portal, complete with tiered volume pricing and a rapid 2-step quote request flow.",
     imagePlaceholder: "/portfolio/industrial-supply-direct/covers/cover.png",
+    link: "/work/industrial-supply-direct",
   },
 ];
 
@@ -150,7 +155,7 @@ export default function CaseStudies() {
                   </div>
 
                   <Link
-                    href={`/case-studies/${cs.id}`}
+                    href={cs.link}
                     className="w-12 h-12 rounded-full bg-[var(--sf-paper-raised)] border-2 border-[var(--sf-ink)] flex items-center justify-center group-hover:bg-[var(--sf-primary)] group-hover:text-white transition-colors duration-200"
                   >
                     <span className="text-lg">→</span>

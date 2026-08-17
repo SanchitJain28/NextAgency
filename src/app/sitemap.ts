@@ -129,27 +129,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     // Dynamically generated blog posts
 
-    // Individual project pages
-    // {
-    //   url: `${baseUrl}/portfolio/ecommerce-website`,
-    //   lastModified: new Date('2024-01-20'),
-    //   changeFrequency: 'yearly',
-    //   priority: 0.6,
-    //   images: [
-    //     `${baseUrl}/portfolio/ecommerce/screenshot1.jpg`,
-    //     `${baseUrl}/portfolio/ecommerce/screenshot2.jpg`,
-    //   ],
-    // },
-    // {
-    //   url: `${baseUrl}/portfolio/mobile-app`,
-    //   lastModified: new Date('2024-01-25'),
-    //   changeFrequency: 'yearly',
-    //   priority: 0.6,
-    //   images: [
-    //     `${baseUrl}/portfolio/mobile-app/app-screen1.jpg`,
-    //     `${baseUrl}/portfolio/mobile-app/app-screen2.jpg`,
-    //   ],
-    // },
+    // Individual project pages & Case Studies
+    {
+      url: `${baseUrl}/work/industrial-supply-direct`,
+      lastModified: lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      images: [
+        `${baseUrl}/portfolio/industrial-supply-direct/covers/cover.png`,
+      ],
+    },
+    {
+      url: `${baseUrl}/work/iron-crate`,
+      lastModified: lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      images: [
+        `${baseUrl}/portfolio/iron-crate/covers/cover.png`,
+      ],
+    },
     // Legal pages
     {
       url: `${baseUrl}/privacy-policy`,
