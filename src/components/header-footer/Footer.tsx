@@ -27,19 +27,25 @@ export default function Footer() {
         </div>
         <div className="flex gap-5 text-[14px]">
           <Link
-            href="#services"
+            href="/work"
+            className="text-[var(--sf-ink-soft)] hover:text-[var(--sf-primary)] font-medium"
+          >
+            Work
+          </Link>
+          <Link
+            href="/#services"
             className="text-[var(--sf-ink-soft)] hover:text-[var(--sf-primary)]"
           >
             Services
           </Link>
           <Link
-            href="#pricing"
+            href="/#pricing"
             className="text-[var(--sf-ink-soft)] hover:text-[var(--sf-primary)]"
           >
             Pricing
           </Link>
           <Link
-            href="#contact"
+            href="/#contact"
             className="text-[var(--sf-ink-soft)] hover:text-[var(--sf-primary)]"
           >
             Contact

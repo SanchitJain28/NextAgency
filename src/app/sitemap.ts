@@ -129,6 +129,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     // Dynamically generated blog posts
 
+    // Work / Portfolio Hub
+    {
+      url: `${baseUrl}/work`,
+      lastModified: lastModified,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
     // Individual project pages & Case Studies
     {
       url: `${baseUrl}/work/industrial-supply-direct`,
@@ -144,9 +151,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
-      images: [
-        `${baseUrl}/portfolio/iron-crate/covers/cover.png`,
-      ],
+      images: [`${baseUrl}/portfolio/iron-crate/covers/cover.png`],
+    },
+    {
+      url: `${baseUrl}/work/recovrx`,
+      lastModified: lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      images: [`${baseUrl}/portfolio/recovrx/covers/cover.png`],
+    },
+    {
+      url: `${baseUrl}/work/flexform-athletics`,
+      lastModified: lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      images: [`${baseUrl}/portfolio/flexform-athletics/covers/cover.png`],
     },
     // Legal pages
     {

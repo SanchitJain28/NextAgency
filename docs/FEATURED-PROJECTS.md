@@ -38,29 +38,105 @@ Iron Crate is a custom-built, high-performance eCommerce storefront engineered f
   - **Interactive Multi-Product Catalog Grid:** Clean, multi-column supplement selector (Whey Isolates, Concentrates, Pea Protein, Collagen Peptides, Hemp Protein, Casein) featuring instant 1-click addition (`+`) and quantity adjustments.
   - **Real-Time Sticky Bundle Sidebar:** Sticky right-hand configuration panel (*"Your Bundle"*) tracking item counts, selected product thumbnails, strikethrough retail comparison savings, line-item delete actions, live cumulative price calculation, and a multi-step checkout funnel.
 
-### RecovrX | Custom Shopify Theme Development
+### RecovrX | Custom Shopify Theme & High-Ticket Recovery Architecture
 
 **Project Overview**
-RecovrX is a premium Shopify storefront designed for a high-end athletic recovery and performance brand. The build centered on delivering a sleek, dark-mode aesthetic while integrating advanced Conversion Rate Optimization (CRO) and Average Order Value (AOV) strategies tailored for high-ticket fitness equipment.
+RecovrX is a premium Shopify storefront custom-engineered for a high-end athletic recovery, percussive therapy, and sports performance equipment brand. The build balances a sleek, high-contrast dark-mode aesthetic (obsidian backgrounds with energetic red accents and athletic rim lighting) with high-ticket Conversion Rate Optimization (CRO), multi-SKU cross-sell bundles, predictive search, and a gamified 3-tier drawer cart.
 
-**Key Features & Implementation**
+**Key Architecture & Page-by-Page Breakdown**
 
-- **Custom Design Architecture:** Developed a modern, high-contrast dark theme that emphasizes clinical efficacy and athletic performance, prioritizing mobile responsiveness and rapid load speeds.
-- **CRO-Driven Homepage:** Implemented a user-centric "Shop by Concern" (Muscle Pain, Mobility, Recovery) navigation flow. The homepage is fortified with immediate social proof, including metric-driven trust banners (50k+ athletes, 4.9 ratings) and verified athlete testimonials.
-- **Optimized Product Pages (PDP):** Engineered PDPs for maximum conversion with integrated "Buy it with" cross-sell bundles, prominent "Subscribe and Save" functionality, and collapsible "Clinical Insights & FAQs" accordions to educate buyers without visual clutter.
-- **High-AOV Slide-Out Cart:** Built a dynamic, conversion-focused cart featuring a gamified tiered-reward progress bar (unlocking free shipping and bonus gifts at higher spend thresholds) and an integrated "You may also like" cross-sell carousel to drive upsells directly at the point of checkout.
+- **Homepage Architecture & Diagnostic Funnel:**
+  - **Hero Carousel Banner:** Full-bleed athletic hero slider showcasing the flagship *RecovrX Pro Plus* with value propositions (*"Unlock faster recovery, with all the benefits of a 15 minute massage in just two minutes"*), interactive pagination indicators, and direct CTA routing (*"Shop PRO Plus"*).
+  - **"Shop by Concern" Diagnostic Matrix:** 3 visual concern tiles (*Muscle Pain*, *Mobility*, *Recovery*) allowing athletes to navigate by symptom and injury type rather than browsing generic product tables.
+  - **"Best Sellers" Carousel with 1-Click Quick Add:** Horizontal product slider with navigation controls `[ < | > ]`, featuring dynamic percentage discount badges (*45% OFF*, *50% OFF*, *44% OFF*), comparison pricing, and instant red circle `+` quick-add triggers.
+  - **4-Pillar Trust & Guarantee Strip:** Prominent assurance bar reinforcing buyer confidence for high-ticket gear: *Fast Shipping (Free over ₹999)*, *30-Day Returns (Risk-free guarantee)*, *1-Year Warranty (Clinical grade quality)*, and *Secure Checkout (256-bit encryption)*.
+  - **"Experience Recovery and Relief" Split Showcase:** Two clinical comparison cards (*Percussion Massage Gun [PRO]* and *Compression Knee Sleeve [NEW]*) pairing deep tissue imagery with empirical survey badges (*"🔬 89% of athletes stated their muscles felt more rejuvenated after 1 week"* and *"🔬 Scientifically proven to ease tension"*).
+  - **Metric Social Proof Strip:** High-impact numeric proof points (*50K+ Athletes Recovered*, *4.9 / 5 Average Rating*, *30-Day Risk-Free Returns*).
+  - **Flagship Spotlight Deep Dive:** Isolated technical showcase of the Pro Plus percussive device highlighting key engineering specs: `16mm amplitude for deep tissue relief`, `QuietForce Technology™`, and `300-minute battery life`.
+  - **"Real Athletes. Real Results." Testimonial Grid:** 3 customer review cards with 5-star ratings, athlete headshots, verified buyer badges, and real-world athletic use cases (squat mobility, physical therapy hamstring recovery).
+  - **"RecovrX's Research" Institutional Validation:** High-contrast clinical trial showcase featuring independent laboratory testing from accredited bodies (*Eurofins CRL*, *PRUVN*, *The Open University*) proving inflammation reduction and muscle activation.
+  - **"Why Athletes Choose Us" Value Matrix:** 3 dark benefit cards with neon red outline icons: *Faster recovery* (pulse icon), *Pain relief* (shield icon), and *Better performance* (trending chart icon).
+  - **VIP Email Capture & 4-Column Structured Footer:** "Unlock 10% Off Your First Order" lead generation module, paired with 4 organized navigation columns (*Best Selling*, *Muscle Recovery*, *Support*, *Company*).
 
-### FlexForm Athletics | Shopify Theme Development
+- **High-Converting Product Detail Pages (PDP):**
+  - **Media Gallery & Rich Tag Chips:** Multi-angle image switcher paired with structured tag pills (*Collection: Muscle Recovery*, *Cramp Prevention*, *Electrolytes*, *Hydration*, *Keto*), sale pricing ($299 vs $499 USD), and variant flavor pills (*Lemon, Watermelon, Multi-packs*).
+  - **Native "Buy It With" 4-Item Cross-Sell Bundle Module:**
+    - High-AOV bundling widget with real-time status pill: *"All items selected! Enjoy 10% OFF bundle"*.
+    - Interactive 4-product checkbox matrix (*CrampOut Tablets, KinetiGrip Balls, PoseTech Posture Corrector, NexoKnee Sleeve*) with inline variant dropdown selectors for sizes/flavors.
+    - Live bundle subtotal calculator (*$1,616.40 vs $1,796.00 — Save $179.60*) with a 1-click "Add to cart" multi-SKU payload button.
+    - Dual primary action buttons: Full-width red *"ADD TO CART"* and black *"Buy it now"* instant checkout.
+  - **"Scientifically-Proven Benefits" 4-Column Grid:** Empirical benefit cards detailing pain relief, mobility enhancement, recovery speed, and performance reactivation.
+  - **"Clinical Insights & FAQs" Accordions:** High-contrast collapsible drawers resolving pre-purchase hesitation on usage frequency, skin contact safety, and warranty terms.
+  - **Persistent Sticky Mobile/Desktop Buy Bar:** Bottom-anchored conversion bar with active thumbnail, variant selector, pricing, and direct *"ADD TO CART"* CTA during deep page scrolling.
+
+- **Gamified 3-Tier Spend Milestone Drawer Cart:**
+  - **Tiered Milestone Progress Bar:** Real-time spend milestone tracker gamifying cart expansion across 3 unlockable tiers:
+    - *Tier 1 ($500):* Free Shipping (Unlocked green check state)
+    - *Tier 2 ($1,000):* Free Electrolyte Tablets
+    - *Tier 3 ($2,000):* Free ArcFlex Stretch Strap
+  - **Dynamic Milestone Countdown Banner:** Live headline calculation (*"ONLY $460.90 LEFT TO GET FREE REWARD!"*).
+  - **Subscription & Variant Badges:** Line-item indicators (*"Pack: 5-Band Set | Delivery: every month | 10% off"*), quantity steppers, and delete triggers.
+  - **In-Cart "You May Also Like" Upsell Carousel:** Integrated slider offering one-click accessories (*PoseTech Posture Brace at $549, ProPulse Percussion Gun at $3,499*) with vertical *"ADD"* actions directly inside the drawer.
+  - **Estimated Total & Full-Width Checkout Button:** High-visibility red *"CHECK OUT"* CTA.
+
+- **Predictive AJAX Search Modal:**
+  - Fast, debounced search overlay providing categorized instant results: **Collections Matches** (*Best Selling, Strength & Mobility, Muscle Recovery*) and **Products Matches** (*CoreLock Ab Roller, ArcFlex Strap, PoseTech Posture, CrampOut Tablets, NexoKnee Sleeve*) with real-time thumbnail previews and prices.
+
+- **Dedicated FAQ Knowledge Center (`/faq`):**
+  - Standalone customer support hub featuring 10 accordion sections addressing shipping timelines, 30-day return policies, scientific testing, warranty terms, attachment usage, hot/cold therapy prep, order tracking, and bundle discounts.
+
+### FlexForm Athletics | Custom Athleisure Theme & CRO Architecture
 
 **Project Overview**
-FlexForm Athletics is a custom-built eCommerce storefront for a premium women's activewear and athleisure brand. The project focused on delivering a clean, modern aesthetic that highlights high-quality lifestyle imagery while implementing strategic Conversion Rate Optimization (CRO) features to drive apparel sales.
+FlexForm Athletics is a bespoke Shopify storefront engineered for a premium women's activewear and performance athleisure brand. The build balances a minimalist, editorial-driven aesthetic (clean white canvas, ocean teal accents, and high-contrast fashion photography) with Conversion Rate Optimization (CRO), visual category discovery, 1-click coupon clipping, fit/fabric assurance modules, and an in-drawer upsell cart.
 
-**Key Features & Implementation**
+**Key Architecture & Page-by-Page Breakdown**
 
-- **Custom Design Architecture:** Designed a light, minimalist, and highly visual UI that puts product imagery front and center, optimized for rapid load speeds and a seamless mobile browsing experience.
-- **CRO-Driven Homepage:** Structured for intuitive discovery with clear "Shop by Category" navigation, integrated Instagram feeds for community building, and prominent social proof to build buyer trust.
-- **High-Converting Product Pages:** Engineered PDPs to maximize Average Order Value (AOV) with seamless "Wear It With" cross-sell bundles. Includes clean accordion sections for product details and FAQs to keep the page visually uncluttered while addressing buyer objections.
-- **Optimized Slide-Out Cart:** Developed a friction-free drawer cart that keeps users on the page, featuring an integrated "You May Also Like" upsell carousel to encourage supplementary purchases right before checkout.
+- **Homepage Discovery & High-Engagement Funnel:**
+  - **Top Promotional Announcement Bar:** Persistent scrolling ticker broadcasting active promo codes (*"USE CODE: GETACTIVE. FLAT 10% OFF ON YOUR 1ST ORDER..."*).
+  - **Header & 9-Category Visual Story Strip:** Debounced live search input (*"Start typing to see res"*), centered serif brandmark, customer account portal, active cart counter (`2`), and a 9-item circular/square thumbnail navigation strip (*Accessories & Essentials*, *Athleisure Sets*, *Best Sellers*, *Leggings*, *New Arrivals*, *Outerwear & Layers*, *Recovery & Lounge*, *Sports Bras*, *Tops*).
+  - **Hero Promotional Campaign Carousel:** High-impact campaign banner (*"KICA Pink Love Sale — UP TO 70% OFF — NOW LIVE!"*) with high-contrast "Shop Now" pill CTA, smooth slider arrows, and pagination dots.
+  - **Curated Collection Pathways:** 3 lifestyle category tiles with oversized watermark typography: *CO-ORDS ("Mix.Match.Move")*, *ALL-DAY WEAR ("AM Meetings To PM Workouts")*, and *TRAVEL WEAR ("Sky-bound luxury")*.
+  - **"Join Our Self-Love Club" Editorial Grid:** 4-card model photography grid routing shoppers directly to *Shop Bestsellers*, *Shop Topwear*, *Shop Bottomwear*, and *Shop Coords*.
+  - **Interactive "Shop by Category" Tabbed Showcase:**
+    - Live category filter tabs: `[TOPS (active)]`, `[SPORTS BRAS]`, `[BEST SELLERS]`, `[LEGGINGS]`, `[NEW ARRIVALS]`.
+    - 5-column product grid featuring 1-click quick-add bag triggers, comfort guarantee tags (*10% OFF TESTED FOR COMFORT*), strikethrough comparison pricing, and a "VIEW ALL TOPS" catalog link.
+  - **Social Proof, Testimonials & UGC Instagram Feed:**
+    - Dedicated social channel header (`@FLEXFORM` across Instagram, Facebook, TikTok, YouTube, Pinterest).
+    - Customer review carousel (*"HEAR IT FROM OUR KICA CHICAS!"* — 4.8★ from 1,590 reviews) pairing real athlete feedback with product photography.
+    - 12-image UGC lifestyle Instagram lookbook featuring real workout sessions, activewear styling, and industry accolades (*Women's Running Awards Editor's Choice*).
+  - **6-Point Trust & Guarantee Strip:** Assurance icons covering *Now pay later available*, *7 days easy returns*, *Free Shipping*, *2 lakh+ Happy customers*, *Quality Checked*, and *Buy Now pay later*.
+  - **Subtle Editorial Footer:** Deep charcoal footer with a textured *"Let's #KeepMoving"* watermark, store details, quick links, and legal navigation.
+
+- **Collection Archive & Faceted Filtering (`/collections/outerwear-layers`):**
+  - **Panoramic Category Banner:** Wide sky-blue gradient header featuring lifestyle apparel shots and bold typographic collection titling.
+  - **Faceted Filter & Sort Controls:** Real-time dropdown filters for *Availability ⌵* and *Price ⌵*, sort controls (*Best selling ⌵*), and active product count tracker (*4 products*).
+  - **4-Column Product Grid:** Clean product cards with hover-activated quick-add buttons, comfort badges (*11% OFF TESTED FOR COMFORT*), and clear price hierarchy.
+
+- **High-Density Conversion Product Detail Pages (PDP):**
+  - **Rich Media Gallery & Fabric Assurance Badges:** Multi-angle photography (front, power-mesh back view, detail close-up showing *Full Coverage*, *Breathable Mesh*, *Removable Pads*).
+  - **4 Core Fabric Attribute Badges:** *Comfort* (waves icon), *Breathable* (feather icon), *Cotton* (fiber icon), and *Super Soft* (botanical icon).
+  - **Interactive Swatches & Real-Time Stock States:** Color pill selectors (*Navy, Red, Green*) and size buttons with live out-of-stock strike-throughs (*S, M [crossed out], L*).
+  - **Interactive "Offers For You" 1-Click Coupon Drawer:**
+    - Pre-configured discount coupon cards with instant `[COPY CODE]` clipboard triggers:
+      - `GETACTIVE`: Flat 10% off on orders above Rs. 1,599 (1st order).
+      - `FLEXSET`: Buy 2 items (Leggings + Top) to get 15% OFF instantly.
+      - `FREESHIP`: Free express shipping on all prepaid orders.
+  - **3-Column Technical Specifications & Fit Gauge:**
+    - Comprehensive fabric breakdown (78% Nylon, 22% Spandex sweat-wicking).
+    - Model fit metadata (5'8", 34" bust, wearing size M).
+    - Visual **Fit Size Gauge** (*Runs Small --- Runs True to Size --- Runs Large*).
+  - **Activity Intensity Spectrum & 4 Performance Guarantees:**
+    - Visual workout intensity bar: *Everyday ------- Yoga ------- HIIT*.
+    - 4 core apparel performance guarantees: *No Camel Toe Show*, *Anti-Slip & Anti-Roll*, *Squat Proof*, and *4-Way Stretch*.
+  - **"Worn By You" Influencer Lookbook & FAQ Hub:** Real influencer tagged photos (`@sanaabanana_`, `@ladylolita__`, `@shikhamehra`) paired with an expandable 6-question leggings/fit FAQ accordion.
+  - **"You May Also Like" Cross-Sell Grid & Verified Reviews:** 4-item complementary accessory grid with 1-click add buttons, alongside a 108-review breakdown with 5-star distribution charts and verified purchase badges.
+
+- **Friction-Free Slide-Out Drawer Cart:**
+  - Slide-out cart drawer preserving page context and reducing abandonment.
+  - Granular line-item breakdown with variant pills (Color, Size), quantity steppers `[ - | 1 | + ]`, and instant remove triggers.
+  - **"You May Also Like" 1-Click Accessory Upsell Slider:** Horizontal carousel featuring high-intent add-ons (*Technical Thermal Half Zip $68, Ventilation Sports Bra $58, Adjustable High Impact Bra $78*) with instant `[ADD]` buttons directly inside the cart.
+  - Live estimated subtotal calculation (`$103.00 USD`) and full-width black "Check out" CTA.
 
 ### Maison Luxe | Custom Shopify Theme Development
 

@@ -36,7 +36,7 @@ const CASE_STUDIES: CaseStudy[] = [
     description:
       "Selling $2,000+ recovery gear requires trust. We implemented clinical data accordions, rigorous social proof, and a friction-free slide-out cart to turn browsing athletes into buyers.",
     imagePlaceholder: "/portfolio/recovrx/covers/cover.png",
-    link: "/portfolio",
+    link: "/work/recovrx",
   },
   {
     id: "cs-3",

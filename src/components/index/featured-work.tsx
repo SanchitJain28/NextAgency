@@ -29,7 +29,7 @@ const PROJECTS: Project[] = [
       "A premium Shopify storefront designed for a high-end athletic recovery brand. The build centered on delivering a sleek, dark-mode aesthetic while integrating advanced CRO strategies and a high-AOV cart.",
     tags: ["Dark Mode", "High-AOV", "Mobile Responsive"],
     imagePlaceholder: "/portfolio/recovrx/covers/cover.png",
-    link: "/portfolio",
+    link: "/work/recovrx",
   },
   {
     id: "flexform-athletics",
@@ -39,7 +39,7 @@ const PROJECTS: Project[] = [
       "Custom-built storefront for a premium women's activewear brand. The project focused on a minimalist, visually-driven UI that puts product imagery front and center alongside strategic upsell features.",
     tags: ["Minimalist", "Athleisure", "Upsell Carousel"],
     imagePlaceholder: "/portfolio/flexform-athletics/covers/cover.png",
-    link: "/portfolio",
+    link: "/work/flexform-athletics",
   },
   {
     id: "maison-luxe",
