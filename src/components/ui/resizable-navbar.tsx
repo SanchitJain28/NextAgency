@@ -27,18 +27,18 @@ export const MobileNavHeader = ({
 export const NavbarLogo = () => {
   return (
     <a
-      href="#"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-[#181310]"
+      href="/"
+      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-bold text-[var(--sf-ink)]"
     >
       <img
-        src="https://assets.aceternity.com/logo-dark.png"
-        alt="logo"
+        src="/logo/updated_logo.png"
+        alt="Scalefront Logo"
         width={30}
         height={30}
-        className="dark:invert"
+        className="rounded border border-[var(--sf-ink)] object-contain"
       />
-      <span className="font-medium text-[#181310] dark:text-[#faf9f5]">
-        Startup
+      <span className="font-bold text-[var(--sf-ink)]">
+        Scalefront
       </span>
     </a>
   );

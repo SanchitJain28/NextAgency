@@ -1,13 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { MenuIcon, CloseIcon } from "@/icons";
 
 const ANNOUNCEMENT = "Get your free Shopify store CRO Audit";
 const NAV_LINKS = [
   { href: "#services", label: "Services" },
-  { href: "#work", label: "Results" },
+  { href: "/work", label: "Work" },
   { href: "#pricing", label: "Pricing" },
   { href: "#system", label: "System" },
 ];
@@ -47,7 +48,7 @@ export function Header() {
       >
         <div className="max-w-[1200px] mx-auto px-7 py-[13px] flex items-center justify-between gap-6">
           <Link
-            href="#top"
+            href="/"
             className="flex items-center gap-[11px] text-[23px] tracking-[-0.02em] text-[var(--sf-ink)]"
             style={{
               fontFamily: "'Bricolage Grotesque', sans-serif",
@@ -55,16 +56,14 @@ export function Header() {
             }}
             onClick={() => setMobileOpen(false)}
           >
-            <span
-              className="w-8 h-8 flex items-center justify-center"
-              style={{
-                background:
-                  "linear-gradient(140deg, var(--sf-primary), var(--sf-berry))",
-                boxShadow: "var(--sf-shadow-sm)",
-              }}
-            >
-              <span className="w-3 h-3 bg-[var(--sf-paper-raised)]" />
-            </span>
+            <Image
+              src="/logo/updated_logo.png"
+              alt="Scalefront Logo"
+              width={34}
+              height={34}
+              className="w-[34px] h-[34px] rounded border border-[var(--sf-ink)] shadow-[2px_2px_0_var(--sf-ink)] object-contain bg-[#181310]"
+              priority
+            />
             Scale<span style={{ color: "var(--sf-primary)" }}>front</span>
           </Link>
 

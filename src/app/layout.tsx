@@ -121,8 +121,8 @@ export default function RootLayout({
         description:
           "Elite Shopify development agency specializing in custom apps, headless commerce, theme development, and performance optimization",
         url: "https://scalefront.io",
-        image: "https://scalefront.io/logos/scalefrontsquarelogo.png",
-        logo: "https://scalefront.io/logos/scalefrontsquarelogo.png",
+        image: "https://scalefront.io/logo/updated_logo.png",
+        logo: "https://scalefront.io/logo/updated_logo.png",
         priceRange: "$$",
         telephone: "+919650296375",
         email: "hello@scalefront.io",

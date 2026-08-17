@@ -12,11 +12,11 @@ export default function ShopifyHeader() {
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 rounded-lg flex items-center justify-center">
                 <Image
-                  src="/logo.png"
-                  alt="Logo"
+                  src="/logo/updated_logo.png"
+                  alt="Scalefront Logo"
                   width={32}
                   height={32}
-                  className="bg-white rounded-full "
+                  className="rounded-md object-contain"
                 />
               </div>
               <span className="text-lg font-bold text-white">

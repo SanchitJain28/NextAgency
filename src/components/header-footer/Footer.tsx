@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -12,12 +13,12 @@ export default function Footer() {
             fontWeight: 800,
           }}
         >
-          <span
-            className="w-7 h-7"
-            style={{
-              background:
-                "linear-gradient(140deg, var(--sf-primary), var(--sf-berry))",
-            }}
+          <Image
+            src="/logo/updated_logo.png"
+            alt="Scalefront Logo"
+            width={30}
+            height={30}
+            className="w-[30px] h-[30px] rounded border border-[var(--sf-ink)] shadow-[2px_2px_0_var(--sf-ink)] object-contain bg-[#181310]"
           />
           Scale<span style={{ color: "var(--sf-primary)" }}>front</span>
         </Link>
