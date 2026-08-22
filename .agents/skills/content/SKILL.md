@@ -1,71 +1,72 @@
 ---
 name: scalefront-content-writing
-description: Write or review any homepage, service page, portfolio/case-study, or FAQ copy for ScaleFront (scalefront.io), a Shopify development freelance practice. Use this skill whenever writing marketing copy, case studies, service descriptions, hero sections, FAQ answers, or any client-facing text for the site — including when the user asks to "write," "rewrite," "improve," "make content-rich," or "check" a section, component, or page. Also use when the user pastes a React/Next.js component containing copy and asks for feedback or edits. Enforces positioning consistency, honesty about project status, and correct SEO keyword usage — don't skip this even for small copy edits.
+description: Write or review any homepage, service page, portfolio/case-study, or FAQ copy for ScaleFront (scalefront.io), a Shopify development freelance practice. Use whenever writing, rewriting, improving, or checking copy — including React/Next.js components with text in them. Don't skip this even for small edits.
 ---
 
 # ScaleFront Content Writing
 
-Rules for writing and reviewing all copy on scalefront.io. Sanchit is a solo Shopify freelancer (not an agency, not a multi-person company) based in Gurgaon, India, currently building his portfolio and pursuing SEO-driven client acquisition. Apply every rule below whenever writing or editing copy — don't apply only the ones that seem most relevant.
+Sanchit is a solo Shopify freelancer in Gurgaon, India. Not an agency. Not a company. Apply every rule below, every time.
 
-## 1. Positioning: "We," not "I," but never imply a team that doesn't exist
+## 1. Say "we," but don't fake a team
 
-- Use "we" throughout (client-facing perception reasons — "I" reads as solo/lower-capacity to prospects), **except**:
-  - Never pair "we" with language that explicitly asserts team size or structure (e.g. "our studio," "our team of developers," "our engineers").
-  - When describing direct-access/no-middleman selling points ("no account managers, you talk directly to the developer"), keep this **singular** ("the developer building your store," not "our developers") — this is a genuine differentiator for a freelancer, but it directly contradicts "we/team" framing if not phrased carefully. Check every page for this specific contradiction before finalizing.
-- Never call the practice a "company" or "agency" in headlines/H1s unless explicitly instructed otherwise — this was deliberately dropped from the homepage H1 for positioning-honesty reasons matching the real business status. Ask before reintroducing it.
+- Use "we" (not "I") — reads more credible to clients.
+- Never add words that claim team size: no "our studio," "our engineers," "our team of developers."
+- When the copy says "no account managers, talk straight to the developer" — keep that part singular ("the developer," not "our developers"). This is a real selling point for a freelancer. Don't let "we" language next to it accidentally imply a big team, which kills the point.
+- Don't call this a "company" or "agency" in any H1. Ask first if someone wants to change this.
 
-## 2. Never write unverifiable claims
+## 2. Never write a claim you can't back up
 
-Before finalizing any section, scan for:
+- No made-up numbers: no "50k+ users," no "180+ projects," no star ratings — unless the user confirms it's real.
+- No "best," "top," "world-class," "leading" — unless there's a real source for it.
+- No pretending a self-built project was client work.
 
-- Specific stats (%, counts, ratings, "50k+ users," "180+ projects," "4.9★") — **only include if the user has confirmed these are real and verifiable.** If unconfirmed, ask, or omit and use qualitative language instead.
-- Superlatives ("top," "best," "world-class," "leading") — remove unless there's a real, citable source (award, ranking, verified review count).
-- Any implied client relationship, named brand results, or "delivered for [client]" phrasing — see Section 3.
+## 3. Self-built projects: say so through tone, not a badge
 
-## 3. Self-initiated / concept projects: honest framing, no fabricated relationship
+Most portfolio projects (Iron Crate, RecovrX, FlexForm, Maison Luxe, 360-Alpha, Industrial Supply Direct, the apps) are things Sanchit built himself, not real client work. No badge on the page saying this — but the words must never lie about it.
 
-Several portfolio projects (e.g. Iron Crate, RecovrX, FlexForm Athletics, Maison Luxe, 360-Alpha, Industrial Supply Direct, Scalefront app, Pairly app) are **self-initiated builds, not paid client work.** No visible "concept project" badge is used on these pages (a deliberate choice), but the copy itself must never claim or imply a commercial engagement:
+- Never write: "the client needed," "delivered for [brand]."
+- Always write like a builder: "we built this to test...", "this project explores..."
+- Never claim a result that wasn't measured. Write the goal, not a fake outcome.
+  - Wrong: "reduced cart abandonment by 30%"
+  - Right: "built to reduce friction at checkout"
 
-- **Never write**: "the client needed," "delivered for [brand]," "the brand's homepage," or any phrasing asserting the business hired ScaleFront.
-- **Always write** in build/creator voice: "this project explores," "we built this to demonstrate," "this build tests whether..."
-- **Frame outcomes as design intent/hypothesis, not claimed results**: write "designed to reduce cart abandonment by removing friction at X step," never "reduced cart abandonment by 30%" (no real measurement exists).
-- If/when a page describes genuine paid client work in the future, this rule relaxes — confirm with the user first before treating any project as a real client case study.
+## 4. Every project page must sound different
 
-## 4. No shared boilerplate across pages
+Don't reuse the same stock phrases across pages — no repeating "CRO-driven homepage," "AOV," "tiered-reward cart" everywhere. Each project needs its own real problem and its own real decision, in its own words. Copy-pasted phrasing across pages looks fake to readers and looks like thin content to Google.
 
-Portfolio/case-study pages must not reuse the same phrasing pattern across multiple projects. Watch for (and rewrite) repeated stock phrases like:
+## 5. "More content" means more real facts, not more words
 
-- "CRO-Driven Homepage... prominent trust badges... integrated social proof"
-- "engineered to maximize Average Order Value (AOV)"
-- "Optimized Slide-Out Cart... tiered-reward progress bar"
+- Don't pad with adjectives ("seamless," "world-class," "cutting-edge").
+- Do add real detail: what was actually built, what tradeoff was made, what tech was used (Liquid, Metaobjects, Storefront API, etc).
+- Hero sections stay short: one headline, one line of text, one button. Never add paragraphs here, even if asked to add more content. Put the depth in the sections below.
 
-Each project page needs a **distinct actual problem, distinct technical decision, and distinct reasoning** — not a features checklist reworded. Near-identical phrasing across pages risks being flagged as thin/templated content by search engines and reads as generic to a human reader.
+## 6. Write like a person, not an AI
 
-## 5. "Content-rich" means more real information, not more adjectives
+This is the most important rule. If it sounds like ChatGPT wrote it, rewrite it.
 
-When asked to make a section "content-rich" or add more content:
+- Use small, everyday words. A ten-year-old should understand every sentence.
+- Short sentences. Say one thing, then stop.
+- No AI stock phrases: cut "in today's fast-paced world," "unlock your potential," "seamlessly," "elevate," "robust," "cutting-edge," "game-changing," "dive into," "unleash," "empower," "at the end of the day," "it's important to note that."
+- No pretentious jargon: replace "bespoke" with "custom", "operational model" with "how your store works", and avoid overly complex scenarios (like "monogrammed foil-stamping fees dynamically"). Use clear, relatable examples like "custom 3-item gift box builders" and "warehouse ERP inventory sync".
+- Keep FAQ answers strictly between 30 and 35 words.
+- No triple lists everywhere ("fast, reliable, and scalable") — that rhythm is an AI tell. Vary sentence length and structure like a real person talking.
+- No em-dashes stitched into every other sentence. Write plainly instead.
+- Read it out loud. If you wouldn't say it to a person's face, rewrite it.
+- Specific beats vague, always. "Loads in under 1 second" beats "blazing fast."
 
-- **Do not** pad with adjectives, marketing filler, or restated claims ("world-class," "seamlessly," "complex commerce problems").
-- **Do** add genuine technical specifics (e.g. actual implementation details: Liquid customization, Metaobjects, Storefront API, specific architecture decisions) or a real example/reasoning the reader couldn't get from a template shop.
-- Hero sections specifically should **stay short** (headline + one subtitle sentence + CTA) — don't add paragraph text here even if asked for "more content." Content-richness belongs in body/article/FAQ sections below the fold, not the hero.
+## 7. Only use keywords that are actually verified
 
-## 6. Plain, direct language — no AI slop
+- Never build a page around a keyword no one has checked in OpenSEO/DataForSEO (India, unless told otherwise). Guessing volume is not allowed.
+- This project has learned: long "service description" phrases (e.g. "shopify custom development," "shopify plus migration") almost always show zero volume. Shorter phrases (e.g. "shopify b2b," "hire shopify developer") often carry the real volume instead.
+- If a keyword hasn't been checked yet, say so before writing around it.
+- "Vs" and "how to vet" style comparison phrases usually have no search volume. Still write good FAQ answers for these — for trust, not for ranking.
+- Portfolio/case-study pages usually don't get their own keyword. That's fine — they earn SEO value by linking to a real service page, not by ranking themselves. Don't force a keyword onto a portfolio page just to have one.
 
-- No fancy or complex words where simple ones work. Easy, understandable grammar.
-- Every section should be genuinely useful and specific, not generic filler that could apply to any Shopify agency's site.
-- No forced keyword stuffing — natural, readable sentences first; keyword placement second.
+## 8. Before calling any page done, check:
 
-## 7. Keyword usage: only real, verified terms
-
-- **Never target a keyword phrase that hasn't been checked against real search volume/difficulty data** (via OpenSEO/DataForSEO, India location). Estimated or guessed volumes are not acceptable — this project has repeatedly found that "obvious" service-description long-tail phrases (e.g. "shopify custom development," "shopify plus migration," "shopify development agency gurgaon," "shopify b2b development") return zero or near-zero standalone volume, while shorter head terms (e.g. "shopify b2b," "hire shopify developer") carry the real volume.
-- If a keyword the user wants to target hasn't been verified yet in this conversation, say so and suggest checking it before finalizing copy around it — don't silently write around an unverified assumption.
-- Comparison/evaluation-stage phrases ("shopify developer vs agency," "how to vet a shopify developer") typically have no standalone search volume. Write these as genuine, helpful FAQ answers for trust-building and on-site conversion — not as SEO-targeted H2s expecting organic traffic.
-- Place primary keyword in H1/title tag once; secondary keywords naturally in H2s/body; low-difficulty "easy win" keywords get dedicated sections/cards when volume and difficulty justify it.
-
-## 8. Before finalizing any page, check for:
-
-1. Unverified stats or superlatives → flag or remove
-2. "We/team" language contradicting a "direct access, no middleman" claim elsewhere on the same page → fix the contradiction
-3. Implied client relationship on a self-initiated project → rewrite in build/creator voice
-4. Copy that duplicates phrasing from another portfolio/service page → rewrite distinctly
-5. Keyword targets that haven't been verified with real search data → flag before committing to them as H1/H2 targets
+1. Any fake stat or "best/top" claim? Remove it.
+2. Does "we" language clash with the "talk to the developer directly" line? Fix it.
+3. Does it accidentally sound like real client work when it isn't? Rewrite in builder voice.
+4. Does it copy phrasing from another page? Rewrite it fresh.
+5. Is the keyword actually verified? If not, flag it.
+6. Read it out loud — does it sound like a human wrote it, or like AI? If AI, rewrite per Rule 6.

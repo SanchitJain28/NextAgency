@@ -1,43 +1,43 @@
 const FAQS = [
   {
     q: "How much does it cost to build a custom Shopify store in India?",
-    a: "The cost of ecommerce website development in India varies based on complexity. A bespoke, highly customized Shopify store typically starts around ₹20,000, while a full headless Shopify architecture (using Next.js or Medusa.js) ranges from ₹50,000 to ₹1,00,000. Most full custom Shopify stores range between ₹50,000 to ₹75,000. We do not compete on being the cheapest; we compete on delivering enterprise-grade code that scales without breaking.",
+    a: "Custom Shopify store development starts at ₹25,000 for standard theme setups. Full custom Liquid themes range between ₹50,000 and ₹75,000, while complex headless builds start at ₹1,00,000 depending on integrations and catalog size.",
   },
   {
     q: "Do you use pre-made Shopify themes or build from scratch?",
-    a: "We never use bloated, pre-made marketplace themes. Every storefront we deliver is 100% custom-designed and built from scratch using clean Liquid, CSS, and vanilla JS (or a modern React framework for headless). This guarantees perfect Core Web Vitals scores and total control over your conversion funnel.",
+    a: "We build custom themes from scratch using clean Liquid, CSS, and vanilla JavaScript. We do not use bloated marketplace themes, ensuring fast page load speeds and custom sections you can easily edit yourself.",
   },
   {
     q: "How long does a custom Shopify or Headless build take?",
-    a: "A standard custom Shopify theme development project usually takes 1 to 2 weeks from kickoff to launch. More complex projects, such as migrating a large catalog to a Headless Shopify architecture or integrating custom ERP systems, typically require 3 to 4 weeks of dedicated engineering.",
+    a: "A custom Shopify theme build typically takes 2 to 3 weeks from start to launch. Larger projects involving headless Next.js storefronts, custom apps, or deep ERP connections take 4 to 6 weeks.",
   },
   {
-    q: "Why should I hire a Shopify development company instead of a freelancer?",
-    a: "While freelancers can be cost-effective for simple tasks, scaling an e-commerce brand requires a multi-disciplinary approach. When you hire a top-tier Shopify development agency, you get a cohesive team of UI/UX designers, frontend engineers, backend integration experts, and QA testers working in unison to ensure your store can handle massive traffic spikes.",
+    q: "Why work with ScaleFront instead of a large agency?",
+    a: "You work directly with the developer building your store instead of account managers or project middlemen. This means faster turnarounds, clear technical communication, and no inflated agency markups on your build.",
   },
   {
-    q: "What is the difference between traditional Shopify Plus and Headless Shopify?",
-    a: "Traditional Shopify Plus uses Shopify's Liquid templating engine to render the frontend. Headless Shopify separates the backend (Shopify) from the frontend (built with Next.js, Remix, etc.). Headless provides sub-second page loads, limitless URL structures, and extreme customization, making it ideal for brands pushing boundaries.",
+    q: "What is the difference between custom Liquid themes and Headless Shopify?",
+    a: "Custom Liquid themes run directly on Shopify's native theme engine and are easy for merchants to edit. Headless uses a separate Next.js frontend, offering custom web app functionality for a higher development investment.",
   },
   {
-    q: "Will my store lose its SEO ranking during a migration to Shopify?",
-    a: "No. Data and SEO migration is a critical part of our process. We meticulously map your existing URLs to your new Shopify store and implement strict 301 redirects to ensure your organic traffic and domain authority are completely preserved during the transition.",
+    q: "Will my store lose SEO ranking during a migration to Shopify?",
+    a: "No. We carefully map your existing page URLs, product links, and metadata to Shopify. We set up 301 redirects for every old page so your Google rankings and organic search traffic remain protected.",
   },
   {
-    q: "Do you provide ongoing support after the store launches?",
-    a: "Yes. Post-launch support is crucial for e-commerce. We offer retainer agreements for ongoing CRO (Conversion Rate Optimization), A/B testing, custom app development, and technical monitoring to ensure your store continues to grow and perform perfectly.",
+    q: "Do you provide support after the store launches?",
+    a: "Yes. Every build includes a post-launch support period to fix bugs, adjust layouts, and help your team update content. We also offer monthly retainers for ongoing improvements, speed checks, and new features.",
   },
   {
-    q: "Can you integrate our existing ERP/CRM with Shopify?",
-    a: "Absolutely. We are experts in custom API development. We frequently integrate complex backend systems like NetSuite, Salesforce, SAP, and custom fulfillment software with Shopify to automate your operations and sync inventory in real-time.",
+    q: "Can you connect our warehouse or ERP system to Shopify?",
+    a: "Yes. We use the Shopify Admin API and webhooks to build private integrations with warehouse tools, ERPs like NetSuite and SAP, custom CRMs, and 3PL fulfillment platforms for automatic inventory updates.",
   },
   {
-    q: "Why do you focus on Conversion Rate Optimization (CRO) in your builds?",
-    a: "Beautiful design is useless if it doesn't sell. Our engineering process is heavily data-driven. We implement high-speed carts, frictionless checkouts, strategic micro-animations, and trust-building UI elements specifically designed to increase your Average Order Value (AOV) and overall conversion rate.",
+    q: "How do you improve store conversion rates during a build?",
+    a: "We build fast slide-out carts with free shipping bars, clean 1-click variant selectors, clear mobile navigation, and trust badges, removing friction so more visitors complete their purchase without abandoning carts.",
   },
   {
-    q: "What makes your agency different from other Shopify developers in India?",
-    a: "We operate as a technical partner, not a task-runner. We don't have account managers playing telephone between you and the developers. You work directly with senior engineers. We focus exclusively on highly technical, custom builds for ambitious brands, maintaining a quality standard that rivals any top global agency.",
+    q: "Can I edit text and replace images myself after launch?",
+    a: "Yes. All custom themes are built with Shopify Online Store 2.0. You can easily add sections, swap banner photos, edit product descriptions, and change homepage blocks in the Shopify admin without touching code.",
   },
 ];
 
@@ -61,8 +61,8 @@ export default function FAQ() {
             Frequently asked questions
           </h2>
           <p className="mt-4 text-[17px] text-[var(--sf-ink-soft)] font-medium leading-[1.5]">
-            Everything you need to know about working with an elite Shopify
-            development partner.
+            Common questions about pricing, timelines, custom themes, and our
+            development process.
           </p>
         </div>
 

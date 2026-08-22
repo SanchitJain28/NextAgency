@@ -52,23 +52,32 @@ export default function Hero() {
           {/* Subtitle */}
           <p className="mb-[34px] max-w-[520px] text-[19px] leading-[1.42] text-[var(--sf-ink-soft)]">
             Based in Gurgaon, working with Shopify brands across India. We build
-            blazing-fast custom stores, bespoke apps, and headless experiences
-            that convert.
+            fast custom stores, private apps, and headless storefronts designed to convert.
           </p>
 
           <div className="flex flex-wrap gap-[14px] items-center">
             <Link
-              href="/contact"
+              href="/contact-us"
               className="group inline-flex items-center gap-2.5 bg-[var(--sf-primary)] text-white font-semibold text-[16px] leading-none px-[26px] py-[15px] border-2 border-[var(--sf-ink)] transition-all duration-100 hover:translate-x-[2px] hover:translate-y-[2px] shadow-[5px_5px_0_var(--sf-ink)] hover:shadow-[3px_3px_0_var(--sf-ink)] hover:bg-[var(--sf-primary-deep)]"
             >
+              <img
+                src="/icons/call.png"
+                alt="Call icon"
+                className="w-4 h-4 object-contain brightness-0 invert"
+              />
               Book a call →
             </Link>
             <Link
-              href="https://wa.me/10000000000"
+              href="https://wa.me/919650296375"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 bg-[#1FA855] text-white border-2 border-[var(--sf-ink)] font-semibold text-[16px] leading-none px-6 py-[15px] transition-all duration-100 hover:translate-x-[2px] hover:translate-y-[2px] shadow-[5px_5px_0_var(--sf-ink)] hover:shadow-[3px_3px_0_var(--sf-ink)]"
             >
+              <img
+                src="/icons/whatsapp.png"
+                alt="WhatsApp icon"
+                className="w-4.5 h-4.5 object-contain"
+              />
               WhatsApp Us
             </Link>
           </div>

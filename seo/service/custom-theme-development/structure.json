@@ -1,0 +1,155 @@
+{
+  "page": "Custom Shopify Development",
+  "type": "service_page",
+  "route": "/services/custom-shopify-development",
+  "primary_keyword": {
+    "term": "custom shopify development",
+    "volume": 50,
+    "intent": "commercial",
+    "placement": "H1, title tag, meta description — once, natural"
+  },
+  "secondary_keywords": [
+    {
+      "term": "custom shopify theme development",
+      "volume": 40,
+      "intent": "commercial",
+      "placement": "Theme section H2"
+    },
+    {
+      "term": "custom shopify app development",
+      "volume": 20,
+      "intent": "commercial",
+      "placement": "Apps/integrations section H2"
+    },
+    {
+      "term": "shopify theme development",
+      "volume": 320,
+      "score": 8,
+      "intent": "commercial",
+      "placement": "Theme section body, natural mention, links to existing verified page"
+    }
+  ],
+  "technical_seo_requirements": {
+    "schema_markup": [
+      "Service Schema (defining custom engineering capabilities, tools, and provider details)",
+      "FAQPage Schema (restricted strictly to questions visible to the user on the frontend)"
+    ],
+    "internal_linking_rules": [
+      "Use exact-match anchor text when pointing to /services/shopify-theme-development to maximize equity transfer.",
+      "Strict no-loop policy: Do not link to an internal page that links back to this page using identical anchor text."
+    ]
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "name": "Hero",
+      "purpose": "State what this page is about and give a clear next action. First thing anyone sees.",
+      "content_strategy": [
+        "H1 uses the primary keyword naturally, not stuffed.",
+        "One subtitle line only. No paragraph. No stats block unless numbers are already confirmed real.",
+        "Two CTAs: WhatsApp and Book a call, matching the rest of the site.",
+        "Do not describe the service in detail here — that belongs in the sections below.",
+        "Write in 'we' voice, singular-safe (no 'our team', no 'our studio')."
+      ],
+      "word_count": "150"
+    },
+    {
+      "id": "what_is_custom_development",
+      "name": "What is custom Shopify development",
+      "purpose": "Define the term in plain language using a real example, not a dictionary definition.",
+      "content_strategy": [
+        "Keep the gifting-store engraving example from the working notes — specific example beats abstract definition.",
+        "Explain the difference between customizing a theme's colors/fonts and true custom development (building something that doesn't exist in the Shopify App Store or Theme Store).",
+        "Short sentences. No AI stock phrases ('unlock', 'seamless', 'robust').",
+        "No keyword stuffing — say the primary keyword once here if it fits naturally, don't force it twice."
+      ],
+      "word_count": "300"
+    },
+    {
+      "id": "custom_themes_vs_off_the_shelf",
+      "name": "Custom themes vs off-the-shelf",
+      "purpose": "Explain what a custom-built theme actually changes versus an off-the-shelf Shopify theme.",
+      "content_strategy": [
+        "H2 naturally works in 'custom shopify theme development'.",
+        "Mention 'shopify theme development' once, link to /services/shopify-theme-development (existing verified page).",
+        "Describe real technical differences: page structure, filtering, image handling, size guides — tied to what the merchant actually sells, not generic 'looks and feels great' language.",
+        "Mention Online Store 2.0 drag-and-drop editing as a real, concrete benefit merchants get post-launch — this is a genuine technical fact, not a claim.",
+        "No fabricated client examples — describe capability in general terms or reference an actual portfolio project if one demonstrates it."
+      ],
+      "word_count": "300"
+    },
+    {
+      "id": "custom_checkout_apps_integrations",
+      "name": "Custom checkout, private apps, and integrations",
+      "purpose": "Cover the higher-end custom work: checkout customization, private apps, third-party integrations.",
+      "content_strategy": [
+        "H2 naturally works in 'custom shopify app development'.",
+        "Checkout customization is described here as a capability only — do not build a dedicated keyword-targeted subsection for it (verified: no commercial-intent search volume exists for any checkout customization phrase).",
+        "Use real technical specifics: Liquid, Shopify Admin API, Storefront API, webhooks. This is where technical depth matters most — a prospect evaluating custom work wants to see real capability, not marketing language.",
+        "List concrete examples (ERP/inventory sync, custom subscription rules, B2B portals, loyalty programs, automated order workflows) as capabilities offered, not as claimed past results unless a real portfolio project backs a specific one.",
+        "If referencing Shopify Plus-specific features (Checkout Extensibility, B2B), only state these as real if the site can back the claim — do not imply access to features Sanchit hasn't actually worked with."
+      ],
+      "word_count": "300"
+    },
+    {
+      "id": "headless_shopify",
+      "name": "Headless Shopify",
+      "purpose": "Briefly cover headless as an option, with an honest caveat about when it's worth it.",
+      "content_strategy": [
+        "Keep this section short — headless is a secondary/advanced offering, not the page's main focus.",
+        "Include an honest tradeoff: headless is a bigger investment and isn't right for every brand. This kind of honest caveat builds trust — keep it.",
+        "No unverified performance claims ('blazing fast', 'best in class') — describe what headless actually changes structurally (Shopify as backend, custom frontend framework) instead.",
+        "Can link to a dedicated headless service page later if one gets built — don't try to fully cover headless here."
+      ],
+      "word_count": "250"
+    },
+    {
+      "id": "portfolio_proof",
+      "name": "Relevant work (proof section)",
+      "purpose": "Link to real portfolio pages that demonstrate the capabilities described above.",
+      "content_strategy": [
+        "Link to Iron Crate (bundle builder), Industrial Supply Direct (B2B/quote flow), and any other portfolio project relevant to a claim made earlier on this page.",
+        "Every capability claim made in the sections above should be traceable to a real portfolio example here where possible — this is how the page avoids sounding like unverified marketing.",
+        "Keep descriptions short here — this section points to full case studies, it doesn't repeat them."
+      ],
+      "word_count": "150"
+    },
+    {
+      "id": "faq",
+      "name": "FAQ",
+      "purpose": "Answer real buyer questions: cost, timeline, process, freelancer vs agency — for trust and conversion, not for SEO ranking (these phrases mostly have no search volume).",
+      "content_strategy": [
+        "Cost and timeline questions are good to include — matches real buyer intent even without search volume behind the exact phrase.",
+        "Never copy a competitor's price ranges. Use real numbers if confirmed, or answer with a qualitative range/process instead of a fabricated number.",
+        "If including a freelancer-vs-agency question, answer it honestly from this site's actual position: direct access to the person doing the work, no markup, no account-manager layer. Never conclude 'agency is better' — that directly contradicts this site's positioning.",
+        "Write every answer in plain, direct language — no AI filler phrases.",
+        "No FAQPage schema entry for any question not actually shown in the visible FAQ content on the page."
+      ],
+      "word_count": "350"
+    },
+    {
+      "id": "cta",
+      "name": "Final CTA",
+      "purpose": "Close the page with a clear next step.",
+      "content_strategy": [
+        "Short. One line plus the two CTA buttons (WhatsApp, Book a call) — matches the rest of the site.",
+        "No new claims or stats introduced here — this section closes the page, it doesn't add new selling points."
+      ],
+      "word_count": "50"
+    }
+  ],
+  "explicitly_excluded_sections": [
+    {
+      "name": "Why choose us / self-congratulation section",
+      "reason": "Competitor reference page (eBizTrait) uses unverifiable claim-stacking here ('we carefully consider which shops we take on', 'guaranteed top-notch product'). This violates the no-unverifiable-claims rule. Do not build this section."
+    },
+    {
+      "name": "Dedicated checkout customization section with its own H2/keyword target",
+      "reason": "Verified: zero commercial-intent search volume exists for any checkout customization keyword variant tested. Cover checkout customization inside the apps/integrations section only, as a capability description, not a targeted section."
+    }
+  ],
+  "cross_reference_skills": [
+    "scalefront-content-writing — tone, honesty, and 'we' positioning rules apply to every section above",
+    "onpage-seo-practices — use for implementing metadata, canonical, and Service schema once copy is finalized"
+  ]
+}

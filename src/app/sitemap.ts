@@ -41,6 +41,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     // Individual Service Pages (High Priority for SEO)
     {
+      url: `${baseUrl}/services/custom-shopify-development`,
+      lastModified: lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/services/headless-commerce`,
       lastModified: lastModified,
       changeFrequency: "monthly",
@@ -166,6 +172,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly",
       priority: 0.8,
       images: [`${baseUrl}/portfolio/flexform-athletics/covers/cover.png`],
+    },
+    {
+      url: `${baseUrl}/work/maison-luxe`,
+      lastModified: lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      images: [`${baseUrl}/portfolio/maison-luxe/covers/cover.png`],
     },
     // Legal pages
     {

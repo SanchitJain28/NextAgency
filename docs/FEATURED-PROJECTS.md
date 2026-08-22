@@ -138,17 +138,71 @@ FlexForm Athletics is a bespoke Shopify storefront engineered for a premium wome
   - **"You May Also Like" 1-Click Accessory Upsell Slider:** Horizontal carousel featuring high-intent add-ons (*Technical Thermal Half Zip $68, Ventilation Sports Bra $58, Adjustable High Impact Bra $78*) with instant `[ADD]` buttons directly inside the cart.
   - Live estimated subtotal calculation (`$103.00 USD`) and full-width black "Check out" CTA.
 
-### Maison Luxe | Custom Shopify Theme Development
+### Maison Luxe | Custom Scandinavian Lifestyle Theme & Tiered CRO Architecture
 
 **Project Overview**
-Maison Luxe is a premium eCommerce storefront designed for a luxury Scandinavian home decor brand. Built upon the Shopify Dawn theme architecture, the project required extensive UI customization to deliver an editorial, high-end aesthetic while maintaining peak performance and conversion standards.
+Maison Luxe is a bespoke Shopify storefront engineered for a premium Scandinavian home decor, artisanal ceramics, and interior living brand. The build seamlessly unites an elevated, editorial-driven aesthetic (warm oatmeal paper canvas `#FBF9F5`, deep forest green `#0E3820`, electric Klein blue accents `#1035E4`, and architectural earth tones) with high-converting eCommerce mechanics: tabbed collection discoverability, asymmetric editorial storytelling blocks, dual PDP purchase funnels with in-line cross-sells, a comprehensive verified review matrix, and a gamified 3-tier spend milestone drawer cart.
 
-**Key Features & Implementation**
+**Key Architecture & Page-by-Page Breakdown**
 
-- **Custom Brand Architecture:** Implemented a bespoke, earthy color palette and editorial-style layout. Features include dynamic scrolling marquees, stylized typography, and asymmetrical lifestyle content blocks that elevate the brand's luxury positioning.
-- **Strategic Homepage Routing:** Engineered a visually driven homepage with clear, modular "Shop by Collection" pathways and curated "Best Seller" grids to seamlessly guide users toward high-intent product categories.
-- **Immersive, High-Converting PDPs:** Designed product pages that justify premium pricing through rich storytelling sections (highlighting handcrafted quality and ethical sourcing) while keeping the buy-box above the fold.
-- **Integrated Upsell Modules:** Engineered a native "Frequently Bought Together" cross-sell feature positioned directly below the primary "Add to Cart" button to increase Average Order Value (AOV) without disrupting the primary purchase flow.
+- **Homepage Architecture & Editorial Storytelling:**
+  - **Minimalist Fixed Header & Navigation:** Clean, distraction-free navigation featuring a framed forest green brandmark badge (`Maison Luxe`), core navigation paths (*HOME*, *CATALOG*, *CONTACT*), and utility triggers (search overlay, customer account login, and dynamic cart bag with real-time item counter).
+  - **Atmospheric Editorial Hero:** Full-bleed lifestyle interior shot establishing the brand's quiet luxury positioning with warm natural light, neutral linen textiles, and handcrafted solid oak furniture.
+  - **4-Tab Category Product Switcher:**
+    - Live category tab navigation with active underline indicator: `[HOME PAGE (active)]`, `[SEASONAL EDIT]`, `[HOME OFFICE]`, `[LIVING ESSENTIALS]`.
+    - 8-product discovery grid with pale stone/sage card containers (`#F4F6EE`), condensed serif/grotesque product titles, clean USD currency hierarchy, and full-width deep forest green "VIEW PRODUCT" buttons (*Kjell Solid Oak Writing Desk $850, French Linen Pillowcase Pair $55, Tidal Stoneware Pasta Bowl $28, Stoneware Breakfast Bowl $18, Solid Oak End-Grain Serving Board $115, Fjord Reactive Glaze Dinner Plate $24, Horizon Abstract Line Art Print $55, Vertex Brushed Brass Taper Holder $48*).
+    - Centered pill CTA button: "VIEW ALL".
+  - **4-Column "Shop by Collection" Matrix:**
+    - High-impact forest green category banners with neon outline styling and retro geometric display titling:
+      1. *HOME AND OFFICE* (Desk accessories & olive green notebook | `SHOP NOW →`)
+      2. *SEASONAL EDIT* (Aery Northern Lights artisanal candle | `SHOP NOW →`)
+      3. *BEDROOM RETREAT* (Gingham pillows & acoustic wool throw | `SHOP NOW →`)
+      4. *KITCHEN & DINING* (Borosilicate glass carafe & oak dining setup | `SHOP NOW →`)
+  - **Kinetic Lime Ticker Marquee:** Infinite horizontal text ticker on high-visibility chartreuse lime background (*"...DESIGN • CURATED LIVING • SCANDINAVIAN LUXURY • TIMELESS DESIGN..."*).
+  - **Asymmetrical 3-Tier Color-Blocked Editorial Storytelling:**
+    - *Story 1 (Oatmeal Cream Canvas)*: *"Curate your sanctuary with intention."* (Electric Klein blue typography & blue *"Explore the Collection"* pill button) paired with studio shots of the Kjell Solid Oak Desk.
+    - *Story 2 (Pale Pistachio Canvas)*: *"Where function meets stillness."* (Forest green typography & button) paired with a textured rust linen cushion.
+    - *Story 3 (Peach Clay Canvas)*: *"This season: The art of less."* (Burgundy plum typography & button) paired with the Tidal Stoneware Pasta Bowl.
+  - **Social Proof Lookbook & Community Showcase (`@CHARACTER.HOME`):**
+    - High-engagement community banner (*"Thousands have done projects with Character. You can be next. #madewithcharacter"*).
+    - Horizontal UGC lookbook carousel with navigation arrows `[ < | • • • | > ]` showcasing real-world customer interior styling.
+  - **"Shop Our Best Sellers" Limited Release Carousel:**
+    - Horizontal product carousel highlighting limited-batch releases with promotional `SALE` tags, strike-through comparison pricing, and instant "VIEW PRODUCT" actions (*Limited: Winter Solstice Wool Throw $185, Linear Ceramic Serving Platter $85 was $95, Limited: Frosted Glass Ambient Table Lamp $210, Limited: Oben Sculptural Oak Stool $450*).
+
+- **High-Density Conversion Product Detail Pages (PDP):**
+  - **Dual Studio Photography Gallery:** Multi-angle image showcase highlighting artisanal glaze texture, dimensions, and side-profile craftsmanship.
+  - **High-Converting Buy Box & Dual Checkout Actions:**
+    - Brand eyebrow badge (`MAISON LUXE`) paired with condensed forest green headline (`TIDAL STONEWARE PASTA BOWL - CHARCOAL`).
+    - High-visibility price tag in electric Klein blue (`$28.00 USD`).
+    - Live cart context indicator: `Quantity (1 in cart)` with interactive quantity stepper `[ - | 1 | + ]`.
+    - Dual primary action buttons:
+      - Soft CTA: Cream-toned `"Add to cart"` button (`#F5F6DB`).
+      - Express CTA: Full-width solid forest green `"Buy it now"` button (`#0E3820`).
+  - **Tabbed Technical Specifications & Material Care:**
+    - Tab navigation (`OVERVIEW` [active] and `SPECS & CARE`).
+    - Comprehensive product data: Material (*High-fired stoneware*), Dimensions (*Ø 22cm, H 5cm*), Capacity (*800ml*), Weight (*0.7kg*), Finish (*Matte charcoal*), Features (*Wide shallow profile, stackable, microwave/dishwasher safe*), Sustainability (*Lead-free*), Origin (*Made in Portugal*), and Style (*Minimalist scandi-industrial*).
+  - **In-PDP "You May Also Like" 1-Click Cross-Sell Widget:**
+    - Dedicated cross-sell drawer slider with navigation arrows `[ < | > ]`.
+    - Integrated inline add-on card (*Stoneware Breakfast Bowl - Sage at $18.00*) featuring interactive quantity stepper and direct `"Add to Cart"` trigger without leaving the page.
+  - **4-Column Complementary Products Grid:**
+    - Curated accessory cross-sells (*Duo Stainless Steel Salad Servers $38, Pebble Marble Serving Board $75, Aura Borosilicate Glass Carafe $45, Linear Ceramic Serving Platter $85 was $95*).
+  - **Deep-Dive Customer Reviews & Rating Architecture:**
+    - 4.6★ rating aggregated across 108 customer submissions with interactive 5-star distribution bars and `"WRITE A REVIEW"` button.
+    - Faceted review filters: `Sort by: Most recent ⌵`, `Rating: All ⌵`.
+    - Verified buyer reviews with purchase badges, date indicators, review titles (*"Tactile Perfection"*, *"Quiet Luxury"*, *"Beautiful, but substantial"*, *"The Art of Living"*, *"Minimalist Dream"*), variant tags (*Kitchen & Dining - Stone*, *Bedroom Retreat - Wool*, *Home Office - Walnut*, *Living Essentials - Clear/Ash*), and helpfulness voting buttons (`👍 / 👎`).
+    - `"Load More Reviews"` pagination control.
+
+- **Gamified 3-Tier Spend Milestone Slide-Out Drawer Cart:**
+  - **Dynamic Multi-Tier Spend Milestone Tracker:**
+    - Real-time spend milestone progress bar gamifying cart expansion across 3 distinct reward tiers:
+      - *Tier 1 ($50):* Free Shipping (Active milestone progress indicator)
+      - *Tier 2 ($100):* Free Northern Lights Scented Candle Set
+      - *Tier 3 ($200):* Free Frosted Glass Ambient Table Lamp
+    - Dynamic Milestone Alert Badge: Live headline calculation (*"ONLY $22.00 LEFT TO GET FREE SHIPPING!"*) with callout badge (*"NEXT: FREE SHIPPING • $22.00 away"*).
+  - **Granular Line-Item Cart Management:** High-resolution product thumbnail, line-item subtotal, interactive quantity adjustment stepper `[ - | 1 | + ]`, and instant remove trigger.
+  - **In-Drawer "You May Also Like" Upsell Carousel:** Integrated slider offering one-click accessories (*Limited: Frosted Glass Ambient Table Lamp at $210.00*) with instant `"ADD"` triggers directly inside the cart drawer.
+  - **Estimated Total & Full-Width Checkout Trigger:** Clear pricing breakdown (`Estimated total: $28.00 USD`), tax/shipping notice, and full-width solid forest green `"CHECK OUT"` button.
+
 
 ### Industrial Supply Direct | Custom B2B Shopify Theme Development
 

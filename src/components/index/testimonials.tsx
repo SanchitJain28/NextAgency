@@ -104,7 +104,7 @@ const TESTIMONIALS = [
     id: 4,
     rating: 4,
     quote:
-      "Their team completely overhauled our messy Shopify Plus architecture. The codebase is clean, and the site speed is incredible.",
+      "They cleaned up our messy Shopify Plus theme and backend setup. The code is structured properly now and our load times dropped in half.",
     name: "David Chen",
     role: "Director of Ops, Elevate",
     image: "https://i.pravatar.cc/150?u=4",
@@ -152,7 +152,7 @@ const TESTIMONIALS = [
     id: 8,
     rating: 4,
     quote:
-      "True Shopify experts are hard to find in India. Scalefront operates at a level of professionalism that rivals top global agencies.",
+      "True Shopify experts are hard to find in India. Scalefront operates with total transparency and direct developer communication.",
     name: "Vikram Mehta",
     role: "Managing Director, Luxe India",
     image: "https://i.pravatar.cc/150?u=8",
@@ -164,7 +164,7 @@ const TESTIMONIALS = [
     id: 9,
     rating: 4.5,
     quote:
-      "The transition from WooCommerce to Shopify Plus was seamless. We experienced zero downtime and kept all our SEO rankings.",
+      "The transition from WooCommerce to Shopify Plus was smooth and fast. We experienced zero downtime and kept all our Google rankings.",
     name: "Jessica Ford",
     role: "Ecommerce Manager, PetSupply",
     image: "https://i.pravatar.cc/150?u=9",
@@ -176,7 +176,7 @@ const TESTIMONIALS = [
     id: 10,
     rating: 5,
     quote:
-      "The Medusa.js headless build they delivered is a masterpiece. We finally have the developer control we needed to scale globally.",
+      "The Medusa.js headless build they delivered is clean and fast. We finally have full control over our code to expand into new regions.",
     name: "Thomas Berg",
     role: "CTO, Norda",
     image: "https://i.pravatar.cc/150?u=10",

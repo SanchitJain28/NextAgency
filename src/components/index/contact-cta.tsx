@@ -44,13 +44,13 @@ export default function ContactCTA() {
             </p>
             <div className="flex flex-wrap gap-3.5">
               <Link
-                href="mailto:hello@scalefront.studio"
+                href="/contact-us"
                 className="inline-flex items-center gap-2.5 bg-white text-[var(--sf-primary-deep)] font-bold text-[16px] leading-none px-7 py-[15px] border-2 border-[var(--sf-ink)] transition-all duration-100 shadow-[5px_5px_0_var(--sf-ink)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0_var(--sf-ink)]"
               >
                 Get your free audit →
               </Link>
               <Link
-                href="#top"
+                href="/contact-us"
                 className="inline-flex items-center gap-2.5 bg-white/10 text-white font-semibold text-[16px] leading-none px-[26px] py-[14px] border-2 border-white transition-all duration-100 shadow-[4px_4px_0_rgba(0,0,0,.35)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_rgba(0,0,0,.35)] hover:bg-[rgba(255,255,255,.26)]"
               >
                 Book a call
@@ -75,16 +75,16 @@ export default function ContactCTA() {
               &lt; 24h
             </div>
             <div className="text-[14.5px] text-white/85 mt-2 leading-[1.5]">
-              Every inquiry gets a human reply from a strategist — never a bot.
+              Every inquiry gets a direct reply from a developer — never a bot.
             </div>
             <div className="h-px bg-white/25 my-[22px]" />
             <div className="flex justify-between text-[14px]">
               <span className="text-white/80">Based in</span>
-              <span className="font-semibold">Austin · Remote</span>
+              <span className="font-semibold">Gurgaon · India</span>
             </div>
             <div className="flex justify-between text-[14px] mt-2.5">
               <span className="text-white/80">Availability</span>
-              <span className="font-semibold">Q3 2026</span>
+              <span className="font-semibold">Open for new builds</span>
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ export default function SecondaryArticle() {
         />
 
         <div className="text-[13px] font-semibold tracking-[0.14em] uppercase text-[var(--sf-gold)] mb-[16px]">
-          The Indian Advantage
+          Direct Technical Work
         </div>
 
         <h2
@@ -25,27 +25,38 @@ export default function SecondaryArticle() {
             textWrap: "balance",
           }}
         >
-          Why leading brands choose a top-tier{" "}
-          <span className="text-[var(--sf-primary)]">Shopify development company in India</span>.
+          Why brands choose a dedicated{" "}
+          <span className="text-[var(--sf-primary)]">
+            Shopify development partner in India
+          </span>
+          .
         </h2>
 
         <div className="space-y-6 max-w-[800px] text-[15px] md:text-[17px] leading-[1.6] text-[color-mix(in_srgb,var(--sf-paper)_80%,transparent)] font-medium">
           <p>
-            When merchants look to scale, the conversation eventually turns to the{" "}
+            When merchants look into{" "}
             <strong className="text-white font-bold">
               ecommerce website development cost in India
             </strong>
-            . However, the true advantage isn't just cost arbitrage—it is gaining access to specialized, deep technical talent that operates as an extension of your own engineering team. 
+            , the real benefit goes beyond rates. It is working directly with
+            experienced developers who understand store speed, Liquid code, and
+            checkout conversion.
           </p>
           <p>
-            Unlike traditional outsourcing farms, we are a specialized boutique agency. When you{" "}
+            When you{" "}
             <strong className="text-white font-bold">
               hire Shopify developers in India
             </strong>{" "}
-            through Scalefront, you are partnering directly with the architects who will build your headless stack, write your custom Liquid, and optimize your Core Web Vitals. We eliminate the layers of account managers that dilute technical execution.
+            through ScaleFront, you talk directly with the developer writing
+            your code. There are no middle layers, account managers, or
+            miscommunication. If a cart feature needs an update or a product
+            feed breaks, you get it fixed right away.
           </p>
           <p>
-            From complex backend integrations and ERP syncing, to bespoke frontend architectures using Next.js and Hydrogen, our developers deliver enterprise-grade solutions. We focus on writing clean, scalable code that ensures your storefront remains lightning fast during peak holiday traffic, driving long-term revenue rather than short-term fixes.
+            From ERP inventory syncing and warehouse connections to custom
+            Online Store 2.0 themes and Next.js headless storefronts, we focus
+            on clean code that holds up under high traffic. Your store stays
+            fast during sales and peak seasons without surprise crashes.
           </p>
         </div>
       </div>

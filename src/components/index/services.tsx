@@ -6,7 +6,7 @@ const SERVICES = [
     icon: "{ }",
     title: "Custom Shopify development",
     blurb:
-      "As a leading Shopify development company, we build bespoke, scalable commerce solutions tailored to your unique operational workflow and business logic.",
+      "We build custom Shopify themes, private apps, and API integrations that match how you actually manage products and fulfill orders.",
     tint: "var(--sf-primary-soft)",
     ink: "var(--sf-primary-deep)",
     delay: "0ms",
@@ -16,7 +16,7 @@ const SERVICES = [
     icon: "❖",
     title: "Theme customization",
     blurb:
-      "Expert Shopify theme development and customization. We engineer pixel-obsessed frontend experiences that drive conversions, rather than just tweaking templates.",
+      "Custom Liquid templates, drawer carts, and dynamic product sections built natively in Online Store 2.0 so you can edit content easily.",
     tint: "var(--sf-sage-soft)",
     ink: "var(--sf-sage-deep)",
     delay: "60ms",
@@ -26,7 +26,7 @@ const SERVICES = [
     icon: "A/B",
     title: "CRO optimization",
     blurb:
-      "Stop guessing. We run research-led eCommerce conversion rate optimization and A/B tests on the pages that move revenue, delivering statistically honest results.",
+      "We review your analytics, identify where mobile shoppers drop off, and test checkout and cart changes to increase conversion rates.",
     tint: "var(--sf-gold-soft)",
     ink: "#8a6410",
     delay: "120ms",
@@ -36,7 +36,7 @@ const SERVICES = [
     icon: "◈",
     title: "Shopify app development",
     blurb:
-      "We build custom, private applications and embedded tools that bend the Shopify ecosystem to your exact operational workflow.",
+      "Private apps and background scripts that connect Shopify to your warehouse, sync inventory, and automate manual order tasks.",
     tint: "var(--sf-berry-soft)",
     ink: "var(--sf-berry)",
     delay: "0ms",
@@ -46,7 +46,7 @@ const SERVICES = [
     icon: "⌘",
     title: "Headless Shopify",
     blurb:
-      "Hire a Shopify expert to decouple your frontend. We use Next.js, Hydrogen, and composable stacks for storefronts that load instantly and scale infinitely.",
+      "Custom Next.js and Hydrogen frontends powered by Shopify's commerce backend for brands needing custom web apps or international stores.",
     tint: "var(--sf-primary-soft)",
     ink: "var(--sf-primary-deep)",
     delay: "60ms",
@@ -56,7 +56,7 @@ const SERVICES = [
     icon: "W",
     title: "Wordpress development",
     blurb:
-      "Robust, high-performance WordPress development services. We build custom themes and plugins engineered for speed, security, and complex content management.",
+      "Custom WordPress and WooCommerce themes built with clean PHP, minimal plugins, and fast page load times.",
     tint: "var(--sf-sage-soft)",
     ink: "var(--sf-sage-deep)",
     delay: "120ms",
@@ -66,7 +66,7 @@ const SERVICES = [
     icon: "⚡",
     title: "Headless WooCommerce",
     blurb:
-      "Modernize your tech stack. We pair the flexibility of WooCommerce backends with blazing-fast Next.js frontends for ultimate eCommerce performance.",
+      "Next.js frontends connected to WooCommerce via REST or GraphQL APIs for fast mobile speeds and custom interactive layouts.",
     tint: "var(--sf-gold-soft)",
     ink: "#8a6410",
     delay: "0ms",
@@ -76,7 +76,7 @@ const SERVICES = [
     icon: "⇗",
     title: "Store migration services",
     blurb:
-      "Replatform from Magento, WooCommerce, or legacy setups with zero-drama cutovers. We handle complex enterprise data migrations with absolute integrity.",
+      "Move products, customer history, order records, and SEO redirects from Magento, WooCommerce, or custom platforms to Shopify without losing rankings.",
     tint: "var(--sf-berry-soft)",
     ink: "var(--sf-berry)",
     delay: "60ms",
@@ -86,7 +86,7 @@ const SERVICES = [
     icon: "🛒",
     title: "E-commerce development",
     blurb:
-      "Looking for top eCommerce experts in India? We build robust platforms, custom endpoints, and custom data pipelines that keep your enterprise humming.",
+      "End-to-end online store builds, custom payment gateway setups, and ERP inventory connections for growing online brands.",
     tint: "var(--sf-primary-soft)",
     ink: "var(--sf-primary-deep)",
     delay: "120ms",
@@ -96,7 +96,7 @@ const SERVICES = [
     icon: "M",
     title: "Medusa JS development",
     blurb:
-      "Future-proof your business with Medusa.js. We specialize in building open-source, headless commerce architectures designed for unparalleled developer control.",
+      "Open-source headless commerce builds using Medusa.js and Next.js for brands that want full control over their code and database.",
     tint: "var(--sf-sage-soft)",
     ink: "var(--sf-sage-deep)",
     delay: "0ms",
@@ -106,7 +106,7 @@ const SERVICES = [
     icon: "P",
     title: "Prestashop development",
     blurb:
-      "Custom PrestaShop theme development and advanced module integration tailored for merchants who need deep customization and self-hosted control.",
+      "Custom themes and module development for self-hosted PrestaShop stores with multi-currency and multi-warehouse needs.",
     tint: "var(--sf-gold-soft)",
     ink: "#8a6410",
     delay: "60ms",

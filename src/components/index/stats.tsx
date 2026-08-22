@@ -1,22 +1,22 @@
 const STATS = [
   {
     value: "50+",
-    label: "Shopify stores built and scaled from the ground up",
+    label: "Custom Shopify stores and storefronts launched",
     delay: "0ms",
   },
   {
-    value: "20-30%",
-    label: "Average revenue increase observed post-launch",
+    value: "90+",
+    label: "Mobile Core Web Vitals score on custom Liquid builds",
     delay: "80ms",
   },
   {
     value: "100%",
-    label: "In-house development. We never outsource your project.",
+    label: "Direct developer communication. No account manager layers.",
     delay: "160ms",
   },
   {
     value: "Zero",
-    label: "Bloated templates. Every line of code is custom.",
+    label: "Unused marketplace apps. Clean code written for your catalog.",
     delay: "240ms",
   },
 ];
@@ -41,7 +41,7 @@ export default function ResultsBand() {
               fontSize: "clamp(32px, 4.4vw, 52px)",
             }}
           >
-            We don&apos;t ship pretty. We ship performance.
+            We don&apos;t just build looks. We build for speed and conversion.
           </h2>
         </div>
 

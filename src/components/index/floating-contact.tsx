@@ -60,9 +60,9 @@ export default function FloatingContact() {
           </span>
         </Link>
         <Link
-          href="https://wa.me/10000000000"
+          href="https://wa.me/919650296375"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           className="group flex items-center gap-2.5 no-underline"
         >
           <span
@@ -101,7 +101,7 @@ export default function FloatingContact() {
           </span>
         </Link>
         <Link
-          href="tel:+10000000000"
+          href="tel:+919650296375"
           className="group flex items-center gap-2.5 no-underline"
         >
           <span
@@ -140,7 +140,7 @@ export default function FloatingContact() {
           </span>
         </Link>
         <Link
-          href="mailto:hello@scalefront.studio"
+          href="mailto:hello@scalefront.io"
           className="group flex items-center gap-2.5 no-underline"
         >
           <span

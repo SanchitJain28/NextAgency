@@ -53,7 +53,7 @@ export default function HomePage() {
         "@id": "https://scalefront.io/#organization",
         name: "ScaleFront",
         url: "https://scalefront.io",
-        logo: "https://scalefront.io/logo.png",
+        logo: "https://scalefront.io/logo/updated_logo.png",
         sameAs: [
           "https://twitter.com/scalefront",
           "https://linkedin.com/company/scalefront",

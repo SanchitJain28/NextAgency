@@ -13,7 +13,7 @@ export default function IntroArticle() {
         />
 
         <div className="text-[13px] font-semibold tracking-[0.14em] uppercase text-[var(--sf-primary)] mb-[16px]">
-          Engineering Growth
+          Shopify Engineering
         </div>
 
         <h2
@@ -37,19 +37,19 @@ export default function IntroArticle() {
               Shopify development services
             </strong>{" "}
             to fast-growing DTC brands. Instead of installing pre-made
-            templates, we build storefronts from the ground up using advanced
-            Liquid customization, Metaobjects, and the Storefront API to match
-            your specific business rules.
+            templates, we build storefronts from the ground up using custom
+            Liquid sections, Metaobjects, and the Storefront API to match
+            how you actually sell.
           </p>
           <p>
-            From bespoke private apps to completely custom{" "}
+            From custom private apps to dedicated{" "}
             <strong className="text-[var(--sf-ink)] font-bold">
               Shopify theme development
             </strong>
-            , the focus is on clean architecture. Writing native features
-            directly into your theme eliminates the need for bloated third-party
-            apps. This drastically reduces your monthly costs, improves Core Web
-            Vitals, and gives you total control over the frontend experience.
+            , the focus is on writing clean, lightweight code. Building native
+            features directly into your theme removes the need for 10+ slow
+            third-party apps. This reduces your monthly app fees, speeds up
+            mobile page loads, and gives you total control over your store.
           </p>
           <p>
             When you{" "}
@@ -57,9 +57,9 @@ export default function IntroArticle() {
               hire a Shopify expert
             </strong>
             , you work directly with the developer building your store — no
-            account managers, no handoffs, no telephone games. Just direct
-            technical execution for headless transitions, data migrations, and
-            custom API integrations.
+            account managers or telephone games. Just direct technical work
+            for theme redesigns, headless storefronts, catalog migrations, and
+            custom ERP connections.
           </p>
         </div>
       </div>
