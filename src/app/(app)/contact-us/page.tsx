@@ -1,15 +1,15 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import Header from "@/components/header-footer/Header";
-import { MovingReviews } from "@/components/reviews/MovingReviews";
-import Footer from "@/components/header-footer/Footer";
-import { ContactForm } from "@/components/ContactForm";
 import { Metadata } from "next";
-import { Mail, Phone, MessageCircle } from "lucide-react";
+import { ContactForm } from "@/components/ContactForm";
+import { MovingReviews } from "@/components/reviews/MovingReviews";
+import { Mail, Phone, Clock, Zap, ArrowRight } from "lucide-react";
+import { WhatsAppIcon } from "@/icons/whatsapp";
+import { CONTACT_INFO } from "@/hooks";
 
 export const metadata: Metadata = {
-  title: "Contact ScaleFront - Get Your Free Shopify Consultation",
-  description: "Ready to transform your Shopify store? Contact ScaleFront for expert development, custom apps, and optimization services. Free consultation available.",
+  title: "Contact ScaleFront - Get Your Custom Shopify & Web Proposal",
+  description:
+    "Tell us about your Shopify store goals. Get a direct reply from our development team with clear steps, timelines, and pricing within 24 hours.",
   keywords: [
     "contact Shopify developers",
     "Shopify development consultation",
@@ -18,8 +18,9 @@ export const metadata: Metadata = {
     "Shopify agency contact",
   ],
   openGraph: {
-    title: "Contact ScaleFront - Expert Shopify Development",
-    description: "Get your Shopify store optimized by expert developers. Contact us for custom apps, headless commerce, and performance optimization.",
+    title: "Contact ScaleFront - Shopify Development & Engineering",
+    description:
+      "Direct developer response within 24 hours. Custom Shopify apps, custom theme builds, and speed optimization.",
     type: "website",
   },
   alternates: {
@@ -27,317 +28,322 @@ export const metadata: Metadata = {
   },
 };
 
-const PHONE_E164 = "919650296375";
-const DISPLAY_PHONE = "+91-965-029-6375";
-const TEL_INTERNATIONAL = "+919650296375";
-const EMAIL = "hello@scalefront.io";
-
-function WhatsAppButtons() {
-  const waBase = `https://wa.me/${PHONE_E164}`;
-  const waPrefilled = `${waBase}?text=${encodeURIComponent(
-    "Hi! I'm interested in your Shopify development services. I'd like to discuss my project."
-  )}`;
-
-  return (
-    <div className="flex flex-col sm:flex-row gap-3">
-      <Button asChild className="bg-[#60DB36] hover:bg-[#50CB26] text-white font-medium">
-        <a
-          href={waPrefilled}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Contact ScaleFront on WhatsApp"
-        >
-          <MessageCircle className="mr-2 h-4 w-4" />
-          Chat on WhatsApp
-        </a>
-      </Button>
-
-      <Button asChild className="bg-[#60DB36] hover:bg-[#50CB26] text-white font-medium">
-        <a
-          href={`mailto:${EMAIL}`}
-          aria-label="Email ScaleFront"
-        >
-          <Mail className="mr-2 h-4 w-4" />
-          Send Email
-        </a>
-      </Button>
-    </div>
-  );
-}
-
 export default function ContactPage() {
+  const {
+    displayPhone,
+    telInternational,
+    email,
+    waPrefilled,
+  } = CONTACT_INFO;
+
   return (
-    <main className="min-h-screen bg-white light">
+    <main className="min-h-screen w-full bg-[var(--sf-paper-sunken)] text-[var(--sf-ink)]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ContactPage",
-            "mainEntity": {
+            mainEntity: {
               "@type": "Organization",
-              "name": "ScaleFront",
-              "contactPoint": [
+              name: "ScaleFront",
+              contactPoint: [
                 {
                   "@type": "ContactPoint",
-                  "telephone": "+919650296375",
-                  "contactType": "customer service",
-                  "availableLanguage": ["English", "Hindi"],
-                  "description": "Expert Shopify development consultation and support"
-                }
+                  telephone: `+${CONTACT_INFO.phoneE164}`,
+                  contactType: "customer service",
+                  availableLanguage: ["English", "Hindi"],
+                  description:
+                    "Shopify development consultation and technical support",
+                },
               ],
-              "email": "hello@scalefront.io",
-              "url": "https://scalefront.io/contact-us",
-            }
-          })
+              email: CONTACT_INFO.email,
+              url: "https://scalefront.io/contact-us",
+            },
+          }),
         }}
       />
 
-      <Header />
-
-      <article className="mx-auto w-full max-w-4xl px-6 py-16 md:py-24">
-        <header className="mb-12 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Get In Touch
+      <article className="w-full px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 pt-8 pb-20">
+        <header className="mb-10 text-center max-w-4xl mx-auto">
+          <h1
+            className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[var(--sf-ink)] leading-[1.05] tracking-[-0.035em] mb-5"
+            style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+          >
+            Tell us about your store.
           </h1>
-          <div className="h-1 w-20 bg-primary mx-auto mb-6 rounded-full" />
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Ready to take your Shopify store to the next level? Let's discuss how we can help you achieve your eCommerce goals.
+
+          <p className="text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed max-w-2xl mx-auto">
+            Whether you need a custom Shopify app, a faster site, or a full
+            rebuild, tell us what you want to build. You will get a direct reply
+            with clear steps and pricing.
           </p>
+
+          <div className="flex flex-wrap items-center justify-center gap-2.5 mt-6">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[var(--sf-sage-soft)] border-1.5 border-[var(--sf-ink)] shadow-[2px_2px_0_var(--sf-ink)] font-mono text-[11px] font-bold text-[var(--sf-sage)]">
+              <Clock className="w-3.5 h-3.5" />
+              <span>Replies within 24 hours</span>
+            </div>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[var(--sf-gold-soft)] border-1.5 border-[var(--sf-ink)] shadow-[2px_2px_0_var(--sf-ink)] font-mono text-[11px] font-bold text-[var(--sf-ink)]">
+              <Zap className="w-3.5 h-3.5 text-[var(--sf-primary)]" />
+              <span>Direct developer response</span>
+            </div>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border-1.5 border-[var(--sf-ink)] shadow-[2px_2px_0_var(--sf-ink)] font-mono text-[11px] font-bold text-[var(--sf-ink-soft)]">
+              <span>Gurgaon &bull; Worldwide Delivery</span>
+            </div>
+          </div>
         </header>
 
-        {/* Contact Form Section */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Send Us Your Project Details
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Fill out the form below and we'll get back to you within 24 hours with a detailed response
-            </p>
+        <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+          <div className="lg:col-span-5 xl:col-span-5 lg:sticky lg:top-8 order-1">
+            <div className="bg-[var(--sf-paper)] border-2 border-[var(--sf-ink)] shadow-[8px_8px_0_var(--sf-ink)] p-6 sm:p-8">
+              <div className="border-b-2 border-[var(--sf-ink)] pb-4 mb-6">
+                <div className="font-mono text-[11px] font-bold tracking-[0.1em] uppercase text-[var(--sf-primary)] mb-1">
+                  PROJECT INQUIRY
+                </div>
+                <h2
+                  className="text-2xl font-extrabold text-[var(--sf-ink)]"
+                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                >
+                  Send Project Details
+                </h2>
+              </div>
+
+              <ContactForm />
+            </div>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-12">
-            {/* Form */}
-            <div className="lg:col-span-2">
-              <div className="bg-card border border-border rounded-xl p-8">
-                <ContactForm />
+          <div className="lg:col-span-7 xl:col-span-7 space-y-10 order-2">
+            <section className="bg-[var(--sf-paper)] border-2 border-[var(--sf-ink)] shadow-[6px_6px_0_var(--sf-ink)] p-6 sm:p-8">
+              <div className="mb-6">
+                <span className="font-mono text-[11px] font-bold tracking-[0.14em] uppercase text-[var(--sf-primary)]">
+                  DIRECT CHANNELS
+                </span>
+                <h2
+                  className="text-2xl font-extrabold text-[var(--sf-ink)] mt-1"
+                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                >
+                  Prefer to Talk Directly?
+                </h2>
               </div>
-            </div>
 
-            {/* What to Expect Sidebar */}
-            <div className="lg:col-span-1">
-              <div className="bg-gray-50 rounded-xl p-8 sticky top-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-6">
-                  What to Expect
-                </h3>
-
-                <div className="space-y-6">
-                  <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-8 h-8 rounded-full bg-[#60DB36] text-white flex items-center justify-center font-bold text-sm">
-                        1
-                      </div>
-                      <h4 className="font-semibold text-sm text-gray-900">Initial Consultation</h4>
-                    </div>
-                    <p className="text-xs text-gray-600 ml-10">
-                      We'll discuss your project requirements, goals, and timeline.
-                    </p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <a
+                  href={waPrefilled}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#25D366]/10 hover:bg-[#25D366]/20 border-2 border-[var(--sf-ink)] shadow-[3px_3px_0_var(--sf-ink)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0_var(--sf-ink)] transition-all p-5 text-center group cursor-pointer block"
+                >
+                  <div className="w-11 h-11 mx-auto bg-[#25D366] text-white border-2 border-[var(--sf-ink)] shadow-[2px_2px_0_var(--sf-ink)] flex items-center justify-center mb-3">
+                    <WhatsAppIcon className="w-6 h-6" />
                   </div>
-
-                  <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-8 h-8 rounded-full bg-[#60DB36] text-white flex items-center justify-center font-bold text-sm">
-                        2
-                      </div>
-                      <h4 className="font-semibold text-sm text-gray-900">Proposal & Quote</h4>
-                    </div>
-                    <p className="text-xs text-gray-600 ml-10">
-                      Receive a detailed proposal with scope, timeline, and pricing.
-                    </p>
+                  <div className="font-mono text-[10px] font-bold uppercase tracking-wider text-[#128C7E] mb-1">
+                    FASTEST REPLY
                   </div>
-
-                  <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-8 h-8 rounded-full bg-[#60DB36] text-white flex items-center justify-center font-bold text-sm">
-                        3
-                      </div>
-                      <h4 className="font-semibold text-sm text-gray-900">Project Kickoff</h4>
-                    </div>
-                    <p className="text-xs text-gray-600 ml-10">
-                      Once approved, we'll begin development with regular updates.
-                    </p>
-                  </div>
-
-                  <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-8 h-8 rounded-full bg-[#60DB36] text-white flex items-center justify-center font-bold text-sm">
-                        4
-                      </div>
-                      <h4 className="font-semibold text-sm text-gray-900">Ongoing Support</h4>
-                    </div>
-                    <p className="text-xs text-gray-600 ml-10">
-                      Post-launch support and maintenance to ensure success.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-8 pt-6 border-t border-gray-200">
-                  <p className="text-xs text-gray-600 text-center">
-                    <strong className="text-gray-900">Response Time:</strong><br />
-                    Within 24 hours during business days
+                  <h3
+                    className="font-bold text-[15px] text-[var(--sf-ink)] mb-0.5"
+                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  >
+                    WhatsApp Chat
+                  </h3>
+                  <p className="text-[12px] text-[var(--sf-ink-soft)]">
+                    Live chat with team
                   </p>
-                </div>
+                </a>
+
+                <a
+                  href={`mailto:${email}`}
+                  className="bg-[var(--sf-primary-soft)] hover:bg-[#facdc0] border-2 border-[var(--sf-ink)] shadow-[3px_3px_0_var(--sf-ink)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0_var(--sf-ink)] transition-all p-5 text-center group cursor-pointer block"
+                >
+                  <div className="w-11 h-11 mx-auto bg-[var(--sf-primary)] text-white border-2 border-[var(--sf-ink)] shadow-[2px_2px_0_var(--sf-ink)] flex items-center justify-center mb-3">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  <div className="font-mono text-[10px] font-bold uppercase tracking-wider text-[var(--sf-primary-deep)] mb-1">
+                    DIRECT EMAIL
+                  </div>
+                  <h3
+                    className="font-bold text-[15px] text-[var(--sf-ink)] mb-0.5"
+                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  >
+                    {email}
+                  </h3>
+                  <p className="text-[12px] text-[var(--sf-ink-soft)]">
+                    Send brief or RFPs
+                  </p>
+                </a>
+
+                <a
+                  href={`tel:${telInternational}`}
+                  className="bg-[var(--sf-gold-soft)] hover:bg-[#fae0a5] border-2 border-[var(--sf-ink)] shadow-[3px_3px_0_var(--sf-ink)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0_var(--sf-ink)] transition-all p-5 text-center group cursor-pointer block"
+                >
+                  <div className="w-11 h-11 mx-auto bg-[var(--sf-gold)] text-[var(--sf-ink)] border-2 border-[var(--sf-ink)] shadow-[2px_2px_0_var(--sf-ink)] flex items-center justify-center mb-3">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <div className="font-mono text-[10px] font-bold uppercase tracking-wider text-[var(--sf-ink-soft)] mb-1">
+                    PHONE LINE
+                  </div>
+                  <h3
+                    className="font-bold text-[15px] text-[var(--sf-ink)] mb-0.5"
+                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  >
+                    {displayPhone}
+                  </h3>
+                  <p className="text-[12px] text-[var(--sf-ink-soft)]">
+                    9am - 7pm IST
+                  </p>
+                </a>
               </div>
-            </div>
+            </section>
+
+            <section className="bg-[var(--sf-paper)] border-2 border-[var(--sf-ink)] shadow-[6px_6px_0_var(--sf-ink)] p-6 sm:p-8">
+              <div className="mb-6">
+                <span className="font-mono text-[11px] font-bold tracking-[0.14em] uppercase text-[var(--sf-primary)]">
+                  CAPABILITIES
+                </span>
+                <h2
+                  className="text-2xl font-extrabold text-[var(--sf-ink)] mt-1"
+                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                >
+                  How ScaleFront Can Help
+                </h2>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  {
+                    title: "Custom Shopify Apps",
+                    tag: "EXTENSIONS & REMIX",
+                    description:
+                      "Custom Shopify apps, checkout extensions, and backend tools built specifically for how your store runs.",
+                    link: "/services/custom-shopify-apps",
+                  },
+                  {
+                    title: "Headless Commerce",
+                    tag: "NEXT.JS & STOREFRONT",
+                    description:
+                      "Next.js storefronts with fast page loads and full layout freedom when standard theme settings reach their limits.",
+                    link: "/services/headless-commerce",
+                  },
+                  {
+                    title: "Theme Development",
+                    tag: "CUSTOM LIQUID",
+                    description:
+                      "Custom Liquid themes built from scratch to match your products without slowing down your store with heavy apps.",
+                    link: "/services/theme-development",
+                  },
+                  {
+                    title: "Speed & Performance",
+                    tag: "CORE WEB VITALS",
+                    description:
+                      "Code cleanup, image optimization, and app audit that get your store loading in under 2 seconds on mobile.",
+                    link: "/services/performance-optimization",
+                  },
+                  {
+                    title: "Shopify Plus Migration",
+                    tag: "STORE MIGRATION",
+                    description:
+                      "Move products, customer accounts, order history, and SEO URLs from Magento, WooCommerce, or Salesforce without downtime.",
+                    link: "/services/shopify-plus-migration",
+                  },
+                  {
+                    title: "Store Audit & CRO",
+                    tag: "CONVERSION FIXES",
+                    description:
+                      "A thorough review finding the biggest drop-offs in your store and the exact fixes needed to lift sales.",
+                    link: "/services/audit-consulting",
+                  },
+                ].map((service) => (
+                  <Link
+                    key={service.title}
+                    href={service.link}
+                    className="bg-[var(--sf-paper-sunken)] border-2 border-[var(--sf-ink)] shadow-[3px_3px_0_var(--sf-ink)] p-5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_var(--sf-primary)] transition-all group flex flex-col justify-between"
+                  >
+                    <div>
+                      <div className="font-mono text-[10px] font-bold text-[var(--sf-primary)] tracking-wider mb-1.5">
+                        {service.tag}
+                      </div>
+                      <h3
+                        className="font-bold text-[16px] text-[var(--sf-ink)] mb-2 group-hover:text-[var(--sf-primary)] transition-colors"
+                        style={{
+                          fontFamily: "'Bricolage Grotesque', sans-serif",
+                        }}
+                      >
+                        {service.title}
+                      </h3>
+                      <p className="text-[13px] text-[var(--sf-ink-soft)] leading-relaxed">
+                        {service.description}
+                      </p>
+                    </div>
+                    <div className="mt-4 pt-3 border-t border-[var(--sf-ink)]/15 flex items-center justify-between text-[12px] font-bold text-[var(--sf-ink)]">
+                      <span>View Details</span>
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </section>
+
+            <section className="bg-[var(--sf-paper)] border-2 border-[var(--sf-ink)] shadow-[6px_6px_0_var(--sf-ink)] p-6 sm:p-8">
+              <div className="mb-6">
+                <span className="font-mono text-[11px] font-bold tracking-[0.14em] uppercase text-[var(--sf-primary)]">
+                  FAQ
+                </span>
+                <h2
+                  className="text-2xl font-extrabold text-[var(--sf-ink)] mt-1"
+                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                >
+                  Frequently Asked Questions
+                </h2>
+              </div>
+
+              <div className="space-y-3.5">
+                {[
+                  {
+                    q: "How quickly will I hear back after submitting?",
+                    a: "You will receive a response within 24 hours during business days. Our engineers review your store details directly and send back clear technical suggestions, next steps, and project pricing.",
+                  },
+                  {
+                    q: "Do you offer free technical consultations?",
+                    a: "Yes. We offer a free 30-minute consultation call. An engineer reviews your store live on screen, answers your technical questions, and points out the highest-impact fixes before you commit.",
+                  },
+                  {
+                    q: "What details should I include in my message?",
+                    a: "Include your store URL, the main problem you want solved, your target launch date, and any specific app requirements. This helps us prepare a detailed, accurate quote right from the start.",
+                  },
+                  {
+                    q: "Can you sign an NDA before we share store access?",
+                    a: "Yes. We regularly sign mutual non-disclosure agreements before reviewing private store code, custom ERP workflows, sales data, or upcoming product launch details. Simply email us your standard agreement or request ours.",
+                  },
+                ].map((faq) => (
+                  <details
+                    key={faq.q}
+                    className="bg-[var(--sf-paper-sunken)] border-2 border-[var(--sf-ink)] shadow-[2px_2px_0_var(--sf-ink)] p-4.5 cursor-pointer group"
+                  >
+                    <summary
+                      className="font-bold text-[15px] text-[var(--sf-ink)] list-none flex items-center justify-between focus:outline-none"
+                      style={{
+                        fontFamily: "'Bricolage Grotesque', sans-serif",
+                      }}
+                    >
+                      <span className="pr-4">{faq.q}</span>
+                      <span className="font-mono text-lg font-bold transition-transform group-open:rotate-45 shrink-0">
+                        +
+                      </span>
+                    </summary>
+                    <p className="mt-2.5 text-[13.5px] text-[var(--sf-ink-soft)] leading-relaxed border-t border-[var(--sf-ink)]/15 pt-2.5">
+                      {faq.a}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </section>
           </div>
         </div>
-
-        {/* Quick Contact Options */}
-        <div className="mb-16">
-          <div className="bg-gray-50 rounded-xl p-8">
-            <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-3">
-                Prefer to Chat Directly?
-              </h2>
-              <p className="text-gray-600">
-                Get immediate assistance via WhatsApp or email
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-              <WhatsAppButtons />
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6 mt-8">
-              <div className="flex items-start gap-3">
-                <div className="rounded-lg bg-[#60DB36]/10 p-2">
-                  <Mail className="h-5 w-5 text-[#60DB36]" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-sm text-gray-900 mb-1">Email</h3>
-                  <a
-                    href={`mailto:${EMAIL}`}
-                    className="text-[#60DB36] hover:underline text-sm font-medium"
-                  >
-                    {EMAIL}
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <div className="rounded-lg bg-[#60DB36]/10 p-2">
-                  <Phone className="h-5 w-5 text-[#60DB36]" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-sm text-gray-900 mb-1">Phone</h3>
-                  <a
-                    href={`tel:${TEL_INTERNATIONAL}`}
-                    className="text-[#60DB36] hover:underline text-sm font-medium"
-                  >
-                    {DISPLAY_PHONE}
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <div className="rounded-lg bg-[#60DB36]/10 p-2">
-                  <MessageCircle className="h-5 w-5 text-[#60DB36]" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-sm text-gray-900 mb-1">WhatsApp</h3>
-                  <p className="text-sm text-gray-600">
-                    Fastest response
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Services Overview */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            How We Can Help
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Custom Development",
-                description: "Tailored Shopify apps and features built specifically for your business needs."
-              },
-              {
-                title: "Performance Optimization",
-                description: "Speed up your store and improve Core Web Vitals for better SEO and conversions."
-              },
-              {
-                title: "Headless Commerce",
-                description: "Modern, decoupled storefronts with Next.js for ultimate performance."
-              },
-              {
-                title: "Theme Customization",
-                description: "Beautiful, responsive themes that perfectly match your brand identity."
-              },
-              {
-                title: "Shopify Plus Migration",
-                description: "Seamless migration to Shopify Plus with zero downtime."
-              },
-              {
-                title: "Expert Consulting",
-                description: "Strategic guidance to maximize your Shopify store's potential."
-              }
-            ].map((service) => (
-              <div key={service.title} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                <h3 className="font-semibold text-lg mb-2 text-gray-900">{service.title}</h3>
-                <p className="text-sm text-gray-600">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section className="bg-gray-50 rounded-xl p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Common Questions
-          </h2>
-
-          <div className="space-y-4">
-            <details className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-              <summary className="font-semibold cursor-pointer text-gray-900">
-                What's your response time?
-              </summary>
-              <p className="mt-3 text-gray-600">
-                We typically respond to WhatsApp messages within 30 minutes during business hours (Mon-Fri, 9am-6pm IST). Email inquiries are answered within 24 hours.
-              </p>
-            </details>
-
-            <details className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-              <summary className="font-semibold cursor-pointer text-gray-900">
-                Do you offer free consultations?
-              </summary>
-              <p className="mt-3 text-gray-600">
-                Yes! We offer a complimentary 30-minute consultation to discuss your project requirements and provide initial recommendations.
-              </p>
-            </details>
-
-            <details className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-              <summary className="font-semibold cursor-pointer text-gray-900">
-                What information should I provide?
-              </summary>
-              <p className="mt-3 text-gray-600">
-                Include your store URL, a brief description of what you need help with, your timeline, and any specific features or requirements. This helps us provide a more accurate initial assessment.
-              </p>
-            </details>
-          </div>
-        </section>
       </article>
 
-      <div className="pb-12">
+      <div className="w-full pb-12">
         <MovingReviews />
       </div>
-
-      <Footer />
     </main>
   );
 }

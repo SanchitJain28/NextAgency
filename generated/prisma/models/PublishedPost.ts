@@ -591,6 +591,10 @@ export type PublishedPostUncheckedUpdateOneWithoutDraftNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.PublishedPostUpdateToOneWithWhereWithoutDraftInput, Prisma.PublishedPostUpdateWithoutDraftInput>, Prisma.PublishedPostUncheckedUpdateWithoutDraftInput>
 }
 
+export type NullableDateTimeFieldUpdateOperationsInput = {
+  set?: Date | string | null
+}
+
 export type BoolFieldUpdateOperationsInput = {
   set?: boolean
 }

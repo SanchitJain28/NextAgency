@@ -1,10 +1,14 @@
+"use client";
+
 import Link from "next/link";
+import { useGeo } from "@/hooks";
 
 const PRICING = [
   {
     name: "Starter",
     tagline: "Perfect for emerging brands needing a professional launch.",
-    price: "₹25,000",
+    priceINR: "₹25,000",
+    priceUSD: "$490",
     unit: "1-2 weeks",
     featured: false,
     cta: "Start here",
@@ -34,7 +38,8 @@ const PRICING = [
   {
     name: "Growth",
     tagline: "Custom design and development for scaling DTC brands.",
-    price: "₹50,000",
+    priceINR: "₹50,000",
+    priceUSD: "$990",
     unit: "2-3 weeks",
     featured: true,
     cta: "Book Growth",
@@ -68,7 +73,8 @@ const PRICING = [
     name: "Scale",
     tagline:
       "Complex functionality and custom features for high-volume stores.",
-    price: "₹75,000",
+    priceINR: "₹75,000",
+    priceUSD: "$1,490",
     unit: "3-4 weeks",
     featured: false,
     cta: "Talk to us",
@@ -101,7 +107,8 @@ const PRICING = [
   {
     name: "Enterprise",
     tagline: "Headless storefronts built with Next.js and Shopify.",
-    price: "₹1,00,000+",
+    priceINR: "₹1,00,000+",
+    priceUSD: "$2,490+",
     unit: "4-6+ weeks",
     featured: false,
     cta: "Talk to us",
@@ -134,6 +141,8 @@ const PRICING = [
 ];
 
 export default function Pricing() {
+  const { isIndia, setManualCountry } = useGeo();
+
   return (
     <section id="pricing" className="max-w-[1200px] mx-auto px-7 py-[60px]">
       <div className="text-center max-w-[640px] mx-auto mb-8">
@@ -150,156 +159,131 @@ export default function Pricing() {
         >
           Ways to work together.
         </h2>
-        <p className="m-0 text-[17px] text-[var(--sf-ink-soft)] leading-[1.6]">
+        <p className="m-0 text-[17px] text-[var(--sf-ink-soft)] leading-[1.6] mb-5">
           Fixed-scope or embedded — every engagement starts with a free store
           audit.
         </p>
+
+        {/* Currency Switcher Badge */}
+        <div className="inline-flex items-center gap-1 border-2 border-[var(--sf-ink)] shadow-[2px_2px_0_var(--sf-ink)] bg-[var(--sf-paper)] p-1 text-xs font-mono font-bold">
+          <button
+            type="button"
+            onClick={() => setManualCountry("IN")}
+            className={`px-3 py-1 transition-all cursor-pointer ${
+              isIndia
+                ? "bg-[var(--sf-primary)] text-white"
+                : "hover:bg-black/5 text-[var(--sf-ink)]"
+            }`}
+          >
+            🇮🇳 INR (₹)
+          </button>
+          <button
+            type="button"
+            onClick={() => setManualCountry("US")}
+            className={`px-3 py-1 transition-all cursor-pointer ${
+              !isIndia
+                ? "bg-[var(--sf-primary)] text-white"
+                : "hover:bg-black/5 text-[var(--sf-ink)]"
+            }`}
+          >
+            🌎 USD ($)
+          </button>
+        </div>
       </div>
 
       <div className="flex md:grid md:grid-cols-2 gap-5 overflow-x-auto snap-x snap-mandatory pb-4 md:pb-0 brutal-scrollbar scroll-pl-7 -mx-7 px-7 md:mx-0 md:px-0 md:scroll-pl-0">
-        {PRICING.map((p, i) => (
-          <article
-            key={i}
-            className="flex flex-col relative min-w-[280px] snap-start"
-            style={{
-              background: p.bg,
-              color: p.ink,
-              border: `2px solid ${p.border}`,
-              padding: "24px 22px",
-              boxShadow: p.shadow,
-            }}
-          >
-            {p.featured && (
-              <span className="absolute top-[22px] right-[22px] bg-[var(--sf-gold)] text-[var(--sf-ink)] text-[12px] font-bold tracking-[0.03em] px-3 py-1.5 uppercase">
-                Most picked
-              </span>
-            )}
+        {PRICING.map((p, i) => {
+          const currentPrice = isIndia ? p.priceINR : p.priceUSD;
 
-            <div
-              className="text-[22px] tracking-[-0.02em]"
+          return (
+            <article
+              key={i}
+              className="flex flex-col relative min-w-[280px] snap-start"
               style={{
-                fontFamily: "'Bricolage Grotesque', sans-serif",
-                fontWeight: 700,
+                background: p.bg,
+                color: p.ink,
+                border: `2px solid ${p.border}`,
+                padding: "24px 22px",
+                boxShadow: p.shadow,
               }}
             >
-              {p.name}
-            </div>
-            <div
-              className="text-[14.5px] mt-1.5 leading-[1.5]"
-              style={{ color: p.mute }}
-            >
-              {p.tagline}
-            </div>
+              {p.featured && (
+                <span className="absolute top-[22px] right-[22px] bg-[var(--sf-gold)] text-[var(--sf-ink)] text-[12px] font-bold tracking-[0.03em] px-3 py-1.5 uppercase">
+                  Most picked
+                </span>
+              )}
 
-            <div className="flex items-baseline gap-1.5 my-6 mb-1">
-              <span className="text-[15px]" style={{ color: p.mute }}>
-                from
-              </span>
-              <span
-                className="text-[44px] tracking-[-0.04em]"
+              <div
+                className="text-[22px] tracking-[-0.02em]"
                 style={{
                   fontFamily: "'Bricolage Grotesque', sans-serif",
                   fontWeight: 700,
                 }}
               >
-                {p.price}
-              </span>
-            </div>
-            <div className="text-[13.5px] mb-6" style={{ color: p.mute }}>
-              {p.unit}
-            </div>
+                {p.name}
+              </div>
+              <div
+                className="text-[14.5px] mt-1.5 leading-[1.5]"
+                style={{ color: p.mute }}
+              >
+                {p.tagline}
+              </div>
 
-            <ul className="list-none m-0 mb-7 p-0 grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-3">
-              {p.features.map((f, fi) => (
-                <li
-                  key={fi}
-                  className="flex gap-3 items-start text-[15px] leading-[1.4]"
-                  style={{ color: p.feat }}
+              <div className="flex items-baseline gap-1.5 my-6 mb-1">
+                <span className="text-[15px]" style={{ color: p.mute }}>
+                  from
+                </span>
+                <span
+                  className="text-[44px] tracking-[-0.04em]"
+                  style={{
+                    fontFamily: "'Bricolage Grotesque', sans-serif",
+                    fontWeight: 700,
+                  }}
                 >
-                  <span
-                    className="flex-none w-5 h-5 inline-flex items-center justify-center text-[12px] font-extrabold mt-px"
-                    style={{ background: p.check, color: p.checkink }}
-                  >
-                    ✓
-                  </span>
-                  {f}
-                </li>
-              ))}
-            </ul>
-
-            <Link
-              href="#contact"
-              className="mt-auto text-center font-semibold text-[15.5px] leading-none p-3.5 border-2 border-[var(--sf-ink)] transition-all duration-100 shadow-[4px_4px_0_var(--sf-ink)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_var(--sf-ink)]"
-              style={{
-                background: p.cta_bg,
-                color: p.cta_ink,
-              }}
-            >
-              {p.cta}
-            </Link>
-          </article>
-        ))}
-      </div>
-
-      {/* Add-ons */}
-      <div
-        className="mt-16 max-w-[800px] mx-auto border-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)] p-6 md:p-8"
-        style={{ boxShadow: "8px 8px 0 var(--sf-ink)" }}
-      >
-        <h3
-          className="m-0 mb-2 font-bold text-[22px] tracking-tight text-[var(--sf-ink)]"
-          style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
-        >
-          Transparent Add-ons (A La Carte)
-        </h3>
-        <p className="m-0 mb-6 text-[15px] text-[var(--sf-ink-soft)] leading-snug">
-          Need a little extra? Add these to any plan.
-        </p>
-
-        <div className="flex flex-col gap-3">
-          {[
-            { label: "10 Extra Product Uploads", price: "+ ₹1,000", time: "" },
-            {
-              label: "Extra Page Design & Setup",
-              price: "+ ₹5,000",
-              time: "Adds 2 days",
-            },
-            {
-              label: "Extra Revision Round",
-              price: "+ ₹2,000",
-              time: "Adds 2 days",
-            },
-            {
-              label: "Speed Optimization (For Starter Plan)",
-              price: "+ ₹1,0000",
-              time: "Adds 4 days",
-            },
-            {
-              label: "Hosting Setup & Domain Connect (For Starter Plan)",
-              price: "+ ₹10,000",
-              time: "Adds 2 days",
-            },
-          ].map((addon, i) => (
-            <div
-              key={i}
-              className="flex flex-col sm:flex-row sm:items-center justify-between py-2 border-b border-[var(--sf-line)] last:border-0 gap-2"
-            >
-              <span className="font-semibold text-[15.5px] text-[var(--sf-ink)]">
-                {addon.label}
-              </span>
-              <div className="flex items-center gap-4 text-[14px]">
-                {addon.time && (
-                  <span className="text-[var(--sf-ink-mute)] font-medium bg-[var(--sf-paper-raised)] px-2 py-1">
-                    {addon.time}
-                  </span>
-                )}
-                <span className="font-bold text-[var(--sf-primary)] min-w-[70px] text-right">
-                  {addon.price}
+                  {currentPrice}
                 </span>
               </div>
-            </div>
-          ))}
-        </div>
+              <div className="text-[13.5px] mb-6" style={{ color: p.mute }}>
+                {p.unit}
+              </div>
+
+              <ul className="list-none m-0 mb-7 p-0 grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-3">
+                {p.features.map((f, fi) => (
+                  <li
+                    key={fi}
+                    className="flex gap-3 items-start text-[15px] leading-[1.4]"
+                    style={{ color: p.feat }}
+                  >
+                    <span
+                      className="flex-none w-5 h-5 inline-flex items-center justify-center text-[12px] font-extrabold mt-px"
+                      style={{
+                        background: p.check,
+                        color: p.checkink,
+                      }}
+                    >
+                      ✓
+                    </span>
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-auto">
+                <Link
+                  href="/contact-us"
+                  className="block w-full text-center py-3 px-4 font-bold text-[14px] tracking-[0.02em] transition-transform hover:-translate-y-0.5 active:translate-y-0"
+                  style={{
+                    background: p.cta_bg,
+                    color: p.cta_ink,
+                    fontFamily: "'Bricolage Grotesque', sans-serif",
+                  }}
+                >
+                  {p.cta} &rarr;
+                </Link>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </section>
   );

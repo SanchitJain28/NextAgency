@@ -1,55 +1,60 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Loader2 } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Loader2, Send, CheckCircle2, AlertCircle } from "lucide-react";
+import { useContact, useGeo } from "@/hooks";
+import { ContactFormData } from "@/types/contact";
 
-interface FormData {
-  name: string;
-  email: string;
+interface FormData extends ContactFormData {
   countryCode: string;
   phone: string;
-  company: string;
-  projectType: string;
-  budget: string;
-  message: string;
 }
 
 const COUNTRY_CODES = [
-  { code: '+1', name: 'US/Canada', flag: '🇺🇸' },
-  { code: '+91', name: 'India', flag: '🇮🇳' },
-  { code: '+44', name: 'UK', flag: '🇬🇧' },
-  { code: '+49', name: 'Germany', flag: '🇩🇪' },
-  { code: '+61', name: 'Australia', flag: '🇦🇺' },
-  { code: '+971', name: 'UAE', flag: '🇦🇪' },
-  { code: '+65', name: 'Singapore', flag: '🇸🇬' },
-  { code: '+33', name: 'France', flag: '🇫🇷' },
-  { code: '+81', name: 'Japan', flag: '🇯🇵' },
-  { code: '+86', name: 'China', flag: '🇨🇳' },
+  { code: "+91", name: "India", flag: "🇮🇳" },
+  { code: "+1", name: "US/Canada", flag: "🇺🇸" },
+  { code: "+44", name: "UK", flag: "🇬🇧" },
+  { code: "+49", name: "Germany", flag: "🇩🇪" },
+  { code: "+61", name: "Australia", flag: "🇦🇺" },
+  { code: "+971", name: "UAE", flag: "🇦🇪" },
+  { code: "+65", name: "Singapore", flag: "🇸🇬" },
+  { code: "+33", name: "France", flag: "🇫🇷" },
+  { code: "+81", name: "Japan", flag: "🇯🇵" },
+  { code: "+86", name: "China", flag: "🇨🇳" },
 ];
 
 export function ContactForm() {
+  const { isIndia, defaultCountryCode } = useGeo();
+
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    countryCode: '+1',
-    phone: '',
-    company: '',
-    projectType: '',
-    budget: '',
-    message: '',
+    name: "",
+    email: "",
+    countryCode: "+91",
+    phone: "",
+    company: "",
+    projectType: "",
+    budget: "",
+    message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  useEffect(() => {
+    setFormData((prev) => ({
+      ...prev,
+      countryCode: defaultCountryCode,
+    }));
+  }, [defaultCountryCode]);
+
+  const { submitContact, isSubmitting, status, error } = useContact();
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     const { name, value } = e.target;
 
-    // For phone field, only allow numbers, spaces, dashes, and parentheses
-    if (name === 'phone') {
-      const cleanedValue = value.replace(/[^\d\s\-()]/g, '');
+    if (name === "phone") {
+      const cleanedValue = value.replace(/[^\d\s\-()]/g, "");
       setFormData((prev) => ({
         ...prev,
         [name]: cleanedValue,
@@ -65,54 +70,31 @@ export function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
 
     try {
-      // Combine country code with phone number
-      const fullPhone = formData.phone ? `${formData.countryCode} ${formData.phone}` : '';
-
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          phone: fullPhone,
-        }),
+      await submitContact(formData);
+      setFormData({
+        name: "",
+        email: "",
+        countryCode: "+1",
+        phone: "",
+        company: "",
+        projectType: "",
+        budget: "",
+        message: "",
       });
-
-      if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          countryCode: '+1',
-          phone: '',
-          company: '',
-          projectType: '',
-          budget: '',
-          message: '',
-        });
-      } else {
-        setSubmitStatus('error');
-      }
-    } catch (error) {
-      console.error('Form submission error:', error);
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
+    } catch {}
   };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Name */}
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">
-            Full Name <span className="text-red-500">*</span>
+          <label
+            htmlFor="name"
+            className="block font-mono text-[12px] font-bold uppercase tracking-wider text-[var(--sf-ink)] mb-2"
+          >
+            Full Name <span className="text-[var(--sf-primary)]">*</span>
           </label>
           <input
             type="text"
@@ -121,15 +103,17 @@ export function ContactForm() {
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
-            placeholder="John Doe"
+            className="w-full px-4 py-3.5 bg-[var(--sf-paper)] text-[var(--sf-ink)] border-2 border-[var(--sf-ink)] shadow-[3px_3px_0_var(--sf-ink)] focus:outline-none focus:border-[var(--sf-primary)] focus:shadow-[4px_4px_0_var(--sf-primary)] transition-all font-medium placeholder:text-[var(--sf-ink-mute)]"
+            placeholder="e.g. Alex Morgan"
           />
         </div>
 
-        {/* Email */}
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">
-            Email Address <span className="text-red-500">*</span>
+          <label
+            htmlFor="email"
+            className="block font-mono text-[12px] font-bold uppercase tracking-wider text-[var(--sf-ink)] mb-2"
+          >
+            Email Address <span className="text-[var(--sf-primary)]">*</span>
           </label>
           <input
             type="email"
@@ -139,25 +123,26 @@ export function ContactForm() {
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
-            placeholder="john@example.com"
+            className="w-full px-4 py-3.5 bg-[var(--sf-paper)] text-[var(--sf-ink)] border-2 border-[var(--sf-ink)] shadow-[3px_3px_0_var(--sf-ink)] focus:outline-none focus:border-[var(--sf-primary)] focus:shadow-[4px_4px_0_var(--sf-primary)] transition-all font-medium placeholder:text-[var(--sf-ink-mute)]"
+            placeholder="alex@brand.com"
             title="Please enter a valid email address"
           />
         </div>
       </div>
 
-      {/* Phone - Full Width */}
       <div>
-        <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-2">
-          Phone Number <span className="text-red-500">*</span>
+        <label
+          htmlFor="phone"
+          className="block font-mono text-[12px] font-bold uppercase tracking-wider text-[var(--sf-ink)] mb-2"
+        >
+          Phone / WhatsApp Number
         </label>
-        <div className="flex gap-2">
+        <div className="flex gap-2.5">
           <select
             name="countryCode"
             value={formData.countryCode}
             onChange={handleChange}
-            required
-            className="w-32 px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
+            className="w-32 px-3 py-3.5 bg-[var(--sf-paper)] text-[var(--sf-ink)] border-2 border-[var(--sf-ink)] shadow-[3px_3px_0_var(--sf-ink)] focus:outline-none focus:border-[var(--sf-primary)] focus:shadow-[4px_4px_0_var(--sf-primary)] transition-all font-medium cursor-pointer"
           >
             {COUNTRY_CODES.map((country) => (
               <option key={country.code} value={country.code}>
@@ -169,42 +154,43 @@ export function ContactForm() {
             type="tel"
             id="phone"
             name="phone"
-            required
             pattern="[\d\s\-()]+"
             minLength={10}
             maxLength={15}
             value={formData.phone}
             onChange={handleChange}
-            className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
-            placeholder="1234567890"
-            title="Please enter a valid phone number (10-15 digits)"
+            className="flex-1 px-4 py-3.5 bg-[var(--sf-paper)] text-[var(--sf-ink)] border-2 border-[var(--sf-ink)] shadow-[3px_3px_0_var(--sf-ink)] focus:outline-none focus:border-[var(--sf-primary)] focus:shadow-[4px_4px_0_var(--sf-primary)] transition-all font-medium placeholder:text-[var(--sf-ink-mute)]"
+            placeholder="98765 43210"
+            title="Please enter a valid phone number"
           />
         </div>
       </div>
 
-      {/* Company - Full Width */}
       <div>
-        <label htmlFor="company" className="block text-sm font-medium text-gray-900 mb-2">
-          Company/Store Name <span className="text-red-500">*</span>
+        <label
+          htmlFor="company"
+          className="block font-mono text-[12px] font-bold uppercase tracking-wider text-[var(--sf-ink)] mb-2"
+        >
+          Company or Store Name
         </label>
         <input
           type="text"
           id="company"
           name="company"
-          required
           value={formData.company}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
-          placeholder="Your Company"
+          className="w-full px-4 py-3.5 bg-[var(--sf-paper)] text-[var(--sf-ink)] border-2 border-[var(--sf-ink)] shadow-[3px_3px_0_var(--sf-ink)] focus:outline-none focus:border-[var(--sf-primary)] focus:shadow-[4px_4px_0_var(--sf-primary)] transition-all font-medium placeholder:text-[var(--sf-ink-mute)]"
+          placeholder="e.g. Maison Luxe Apparel"
         />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-        {/* Project Type */}
         <div>
-          <label htmlFor="projectType" className="block text-sm font-medium text-gray-900 mb-2">
-            Project Type <span className="text-red-500">*</span>
+          <label
+            htmlFor="projectType"
+            className="block font-mono text-[12px] font-bold uppercase tracking-wider text-[var(--sf-ink)] mb-2"
+          >
+            Project Type <span className="text-[var(--sf-primary)]">*</span>
           </label>
           <select
             id="projectType"
@@ -212,51 +198,80 @@ export function ContactForm() {
             required
             value={formData.projectType}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
+            className="w-full px-4 py-3.5 bg-[var(--sf-paper)] text-[var(--sf-ink)] border-2 border-[var(--sf-ink)] shadow-[3px_3px_0_var(--sf-ink)] focus:outline-none focus:border-[var(--sf-primary)] focus:shadow-[4px_4px_0_var(--sf-primary)] transition-all font-medium cursor-pointer"
           >
             <option value="">Select a service</option>
             <option value="custom-app">Custom Shopify App</option>
-            <option value="headless-commerce">Headless Commerce</option>
-            <option value="theme-development">Theme Development</option>
-            <option value="performance-optimization">Performance Optimization</option>
-            <option value="conversion-optimization">Conversion Optimization</option>
-            <option value="shopify-plus-migration">Shopify Plus Migration</option>
+            <option value="headless-commerce">
+              Headless Commerce (Next.js)
+            </option>
+            <option value="theme-development">Custom Theme Development</option>
+            <option value="performance-optimization">
+              Speed &amp; Core Web Vitals
+            </option>
+            <option value="conversion-optimization">
+              CRO &amp; Sales Funnel
+            </option>
+            <option value="shopify-plus-migration">
+              Shopify Plus Migration
+            </option>
             <option value="mobile-app">Mobile App Development</option>
-            <option value="integration">Third-party Integration</option>
-            <option value="consulting">Consulting & Audit</option>
-            <option value="other">Other</option>
+            <option value="integration">
+              Third-Party ERP / CRM Integration
+            </option>
+            <option value="consulting">
+              Full Store Audit &amp; Consulting
+            </option>
+            <option value="other">Other Inquiry</option>
           </select>
         </div>
 
-        {/* Budget */}
         <div>
-          <label htmlFor="budget" className="block text-sm font-medium text-gray-900 mb-2">
-            Budget Range <span className="text-red-500">*</span>
+          <label
+            htmlFor="budget"
+            className="block font-mono text-[12px] font-bold uppercase tracking-wider text-[var(--sf-ink)] mb-2"
+          >
+            Estimated Budget
           </label>
           <select
             id="budget"
             name="budget"
-            required
             value={formData.budget}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60DB36] bg-white text-gray-900"
+            className="w-full px-4 py-3.5 bg-[var(--sf-paper)] text-[var(--sf-ink)] border-2 border-[var(--sf-ink)] shadow-[3px_3px_0_var(--sf-ink)] focus:outline-none focus:border-[var(--sf-primary)] focus:shadow-[4px_4px_0_var(--sf-primary)] transition-all font-medium cursor-pointer"
           >
             <option value="">Select budget range</option>
-            <option value="under-5k">Under $5,000</option>
-            <option value="5k-10k">$5,000 - $10,000</option>
-            <option value="10k-25k">$10,000 - $25,000</option>
-            <option value="25k-50k">$25,000 - $50,000</option>
-            <option value="50k-100k">$50,000 - $100,000</option>
-            <option value="100k-plus">$100,000+</option>
-            <option value="not-sure">Not sure yet</option>
+            {(isIndia
+              ? [
+                  "Under ₹25,000",
+                  "₹25,000 - ₹50,000",
+                  "₹50,000 - ₹1,00,000",
+                  "₹1,00,000+",
+                  "Flexible / Not sure yet",
+                ]
+              : [
+                  "Under $5,00",
+                  "$500 - $1000",
+                  "$1000 - $2500",
+                  "$2500 - $5000",
+                  "$5000+",
+                  "Flexible / Not sure yet",
+                ]
+            ).map((opt) => (
+              <option key={opt} value={opt}>
+                {opt}
+              </option>
+            ))}
           </select>
         </div>
       </div>
 
-      {/* Message */}
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-900 mb-2">
-          Project Details <span className="text-red-500">*</span>
+        <label
+          htmlFor="message"
+          className="block font-mono text-[12px] font-bold uppercase tracking-wider text-[var(--sf-ink)] mb-2"
+        >
+          Project Details <span className="text-[var(--sf-primary)]">*</span>
         </label>
         <textarea
           id="message"
@@ -264,44 +279,67 @@ export function ContactForm() {
           required
           value={formData.message}
           onChange={handleChange}
-          rows={6}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-white text-gray-900 resize-none"
-          placeholder="Tell us about your project, what you're trying to achieve, and any specific requirements..."
+          rows={5}
+          className="w-full px-4 py-3.5 bg-[var(--sf-paper)] text-[var(--sf-ink)] border-2 border-[var(--sf-ink)] shadow-[3px_3px_0_var(--sf-ink)] focus:outline-none focus:border-[var(--sf-primary)] focus:shadow-[4px_4px_0_var(--sf-primary)] transition-all font-medium placeholder:text-[var(--sf-ink-mute)] resize-none"
+          placeholder="Tell us about your brand, current bottlenecks, desired timeline, or features you'd like to build..."
         />
       </div>
 
-      {/* Submit Button */}
       <div>
-        <Button
+        <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full md:w-auto px-8 py-3 bg-[#60DB36] hover:bg-[#50CB26] text-white font-medium"
+          className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[var(--sf-primary)] hover:bg-[var(--sf-primary-deep)] text-white font-bold text-[16px] leading-none border-2 border-[var(--sf-ink)] shadow-[5px_5px_0_var(--sf-ink)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0_var(--sf-ink)] active:translate-x-[5px] active:translate-y-[5px] active:shadow-none transition-all cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+          style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
         >
           {isSubmitting ? (
             <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Sending...
+              <Loader2 className="h-5 w-5 animate-spin" />
+              <span>Sending Proposal Request...</span>
             </>
           ) : (
-            'Send Message'
+            <>
+              <span>Send Project Inquiry</span>
+              <Send className="h-4 w-4" />
+            </>
           )}
-        </Button>
+        </button>
       </div>
 
       {/* Status Messages */}
-      {submitStatus === 'success' && (
-        <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
-          <p className="text-green-800 font-medium">
-            Thank you for your message! We'll get back to you within 24 hours.
-          </p>
+      {status === "success" && (
+        <div className="p-5 bg-[var(--sf-sage-soft)] border-2 border-[var(--sf-ink)] shadow-[4px_4px_0_var(--sf-ink)] flex items-start gap-3">
+          <CheckCircle2 className="h-6 w-6 text-[var(--sf-sage)] shrink-0 mt-0.5" />
+          <div>
+            <h4
+              className="text-[16px] font-bold text-[var(--sf-ink)] mb-1"
+              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            >
+              Inquiry Sent Successfully!
+            </h4>
+            <p className="text-[14px] text-[var(--sf-ink-soft)] leading-relaxed">
+              Thank you! We&apos;ve sent a confirmation to your email and our
+              team will get back to you within 24 hours.
+            </p>
+          </div>
         </div>
       )}
 
-      {submitStatus === 'error' && (
-        <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-          <p className="text-red-800 font-medium">
-            Oops! Something went wrong. Please try again or contact us directly at hello@scalefront.io
-          </p>
+      {status === "error" && (
+        <div className="p-5 bg-[var(--sf-primary-soft)] border-2 border-[var(--sf-ink)] shadow-[4px_4px_0_var(--sf-ink)] flex items-start gap-3">
+          <AlertCircle className="h-6 w-6 text-[var(--sf-primary-deep)] shrink-0 mt-0.5" />
+          <div>
+            <h4
+              className="text-[16px] font-bold text-[var(--sf-ink)] mb-1"
+              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            >
+              Submission Failed
+            </h4>
+            <p className="text-[14px] text-[var(--sf-ink-soft)] leading-relaxed">
+              {error ||
+                "Something went wrong while sending your message. Please try again or reach us at hello@scalefront.io"}
+            </p>
+          </div>
         </div>
       )}
     </form>

@@ -7,6 +7,111 @@ datasource db {
   provider = "postgresql"
 }
 
+enum TopicStatus {
+  pending
+  selected
+  done
+}
+
+enum DraftStatus {
+  pending
+  pending_review
+  approved
+  rejected
+  published
+}
+
+model Topic {
+  id                       Int         @id @default(autoincrement())
+  keyword                  String      @unique
+  cluster                  String?
+  searchConsoleImpressions Int?        @map("search_console_impressions")
+  estDifficulty            Float?      @map("est_difficulty")
+  priorityScore            Float?      @map("priority_score")
+  status                   TopicStatus @default(pending)
+  createdAt                DateTime    @default(now()) @map("created_at")
+  updatedAt                DateTime    @updatedAt @map("updated_at")
+
+  gapReport GapReport?
+  drafts    Draft[]
+
+  @@map("topics")
+}
+
+model GapReport {
+  id                   Int      @id @default(autoincrement())
+  topicId              Int      @unique @map("topic_id")
+  competitorUrls       Json     @map("competitor_urls")
+  commonSubtopics      Json     @map("common_subtopics")
+  missingSubtopics     Json     @map("missing_subtopics")
+  avgWordCount         Int?     @map("avg_word_count")
+  differentiationAngle String?  @map("differentiation_angle")
+  createdAt            DateTime @default(now()) @map("created_at")
+  updatedAt            DateTime @updatedAt @map("updated_at")
+
+  topic  Topic   @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  drafts Draft[]
+
+  @@map("gap_reports")
+}
+
+model Draft {
+  id          Int  @id @default(autoincrement())
+  topicId     Int  @map("topic_id")
+  gapReportId Int? @map("gap_report_id")
+
+  outline Json?
+
+  bodyMarkdown String? @map("body_markdown")
+  wordCount    Int?    @map("word_count")
+
+  metaTitle       String? @map("meta_title")
+  metaDescription String? @map("meta_description")
+  slug            String? @unique
+  internalLinks   Json?   @map("internal_links")
+  schemaMarkup    Json?   @map("schema_markup")
+
+  status           DraftStatus @default(pending)
+  reviewNotes      String?     @map("review_notes")
+  exportedFilePath String?     @map("exported_file_path")
+
+  modelUsed        String? @map("model_used")
+  generationTokens Int?    @map("generation_tokens")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  topic         Topic          @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  gapReport     GapReport?     @relation(fields: [gapReportId], references: [id], onDelete: SetNull)
+  publishedPost PublishedPost?
+
+  @@map("drafts")
+}
+
+model PublishedPost {
+  id           Int      @id @default(autoincrement())
+  draftId      Int      @unique @map("draft_id")
+
+  cmsPostId    String?  @map("cms_post_id")
+  publishedUrl String   @map("published_url")
+  publishedAt  DateTime @map("published_at")
+
+  impressions   Int       @default(0)
+  clicks        Int       @default(0)
+  avgPosition   Float?    @map("avg_position")
+  ctr           Float?
+  lastTrackedAt DateTime? @map("last_tracked_at")
+
+  needsRefresh Boolean @default(false) @map("needs_refresh")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  draft Draft @relation(fields: [draftId], references: [id], onDelete: Cascade)
+
+  @@map("published_posts")
+}
+
 model Blog {
   id           String    @id @default(uuid())
   title        String
@@ -26,4 +131,19 @@ model Blog {
   createdAt    DateTime  @default(now())
   updatedAt    DateTime  @updatedAt
 }
+
+model Contact {
+  id          String   @id @default(uuid())
+  name        String
+  email       String
+  phone       String?
+  company     String?
+  projectType String?
+  budget      String?
+  message     String
+  status      String   @default("new")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
 

@@ -8,9 +8,10 @@
  *
  * 🟢 You can import this file directly.
  */
-export type * from './models/Blog'
 export type * from './models/Topic'
 export type * from './models/GapReport'
 export type * from './models/Draft'
 export type * from './models/PublishedPost'
+export type * from './models/Blog'
+export type * from './models/Contact'
 export type * from './commonInputTypes'
