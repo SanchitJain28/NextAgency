@@ -151,3 +151,15 @@
 
 1. The content should use easy understandable grammer , not any fancy or complex words
 2. Each section should be content rich and text rich
+
+### Blogs (Next)
+
+1. How to make a custom shopify theme from scratch ?
+
+## Things i have learned
+
+1. The content style should bea easy to understand
+2. do keyword analusis before writing any content
+3. Should help people with the content
+4. the page word length should not be less than 2000 , 2000 - 2500 words per page is good
+5. learn how websites write content like (https://www.codeable.io/blog)

@@ -1,680 +1,1003 @@
-import Header from "@/components/header-footer/Header";
-import { Button } from "@/components/ui/button";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Palette, Sparkles, Layout, Code2, Clock, Zap, Brush, Package } from "lucide-react";
-import DottedSeparator from "@/components/seperators/DottedSeperator";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+import ComparisonTable from "@/components/shared/ComparisonTable";
 
 export const metadata: Metadata = {
-  title: "Shopify Theme Customization Services | ScaleFront",
+  title: "Shopify Theme Development Services | ScaleFront",
   description:
-    "Custom Shopify theme development and modifications. Premium themes tailored to your brand. Starting $12K.",
-  keywords: [
-    "Shopify theme customization",
-    "custom Shopify theme",
-    "Shopify theme development",
-    "Shopify theme modifications",
-    "premium Shopify theme",
-    "Shopify theme design"
-  ],
-  openGraph: {
-    title: "Shopify Theme Customization Services | ScaleFront",
-    description: "Custom Shopify theme development and modifications. Premium themes tailored to your brand.",
-    type: "website",
-  },
+    "We build custom Shopify themes in clean Liquid and Online Store 2.0. Tailored layouts, fast load speeds, and drag-and-drop merchant editing.",
   alternates: {
-    canonical: "/services/theme-development",
+    canonical: "https://scalefront.io/services/theme-development",
+  },
+  openGraph: {
+    title: "Shopify Theme Development Services | ScaleFront",
+    description:
+      "We build custom Shopify themes in clean Liquid and Online Store 2.0. Tailored layouts, fast load speeds, and drag-and-drop merchant editing.",
+    url: "https://scalefront.io/services/theme-development",
+    siteName: "ScaleFront",
+    type: "website",
+    images: [
+      {
+        url: "https://scalefront.io/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Shopify Theme Development by ScaleFront",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shopify Theme Development Services | ScaleFront",
+    description:
+      "We build custom Shopify themes in clean Liquid and Online Store 2.0. Tailored layouts, fast load speeds, and drag-and-drop merchant editing.",
+    images: ["https://scalefront.io/og-image.jpg"],
   },
 };
 
 export default function ThemeDevelopmentPage() {
+  const faqData = [
+    {
+      question:
+        "What is the difference between custom theme development and theme customization?",
+      answer:
+        "Theme customization means changing settings in a pre-made theme. Custom theme development means coding an entire theme from scratch in Liquid, building unique layouts and features tailored specifically to your product catalog.",
+    },
+    {
+      question: "Should I buy a pre-made theme or get a custom theme built?",
+      answer:
+        "If you are just starting out, a pre-made theme works fine. If you are scaling and need fast mobile loading, unique product layouts, and lower monthly app fees, invest in a custom theme.",
+    },
+    {
+      question: "How much does custom Shopify theme development cost?",
+      answer:
+        "Custom theme builds start at ₹25,000 for standard store setups. Full custom theme development with custom product builders and advanced drawer carts ranges from ₹50,000 to ₹75,000 depending on catalog requirements.",
+    },
+    {
+      question: "How long does a custom Shopify theme build take?",
+      answer:
+        "A full custom theme build typically takes 2 to 4 weeks. This timeline covers wireframing, custom Liquid development, mobile responsiveness testing across devices, speed optimization, and training your team on editing.",
+    },
+    {
+      question: "Can I edit text and replace images myself after launch?",
+      answer:
+        "Yes. Every theme is built using Shopify Online Store 2.0 standards. You can easily add sections, swap photos, change banners, and update text inside the Shopify theme editor without writing any code.",
+    },
+    {
+      question: "Will a custom theme improve my mobile store speed?",
+      answer:
+        "Yes. Custom themes load much faster than marketplace themes because we only include the code your store needs. We eliminate heavy JavaScript and replace slow third-party apps with native Liquid features.",
+    },
+    {
+      question:
+        "Can you convert our Figma or Adobe XD designs into a Shopify theme?",
+      answer:
+        "Yes. We take your exact Figma, Sketch, or Adobe XD design files and translate them into a responsive, clean Shopify theme with pixel precision, fluid mobile layouts, and custom interactive elements.",
+    },
+    {
+      question: "Do you help migrate data when upgrading our existing theme?",
+      answer:
+        "Yes. We build and test your new theme in a private development environment without affecting your live store. When ready, we transfer your product data, collections, and apps with zero downtime.",
+    },
+    {
+      question: "Why work directly with a developer instead of an agency?",
+      answer:
+        "You speak directly with the developer writing your theme code. This removes account manager delays, prevents miscommunication, speeds up delivery, and eliminates the heavy markups charged by traditional agency models.",
+    },
+    {
+      question: "How do we get started on a custom theme project?",
+      answer:
+        "Send us your store URL and design files or feature wishlist. We will review your catalog, recommend the cleanest technical structure, and provide a fixed quote and delivery timeline within 24 hours.",
+    },
+  ];
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://scalefront.io/services/theme-development#service",
+        name: "Shopify Theme Development Services",
+        serviceType: "Shopify Theme Development",
+        description:
+          "Custom Shopify theme development services including native Liquid coding, Online Store 2.0 modular architecture, speed optimization, and mobile-first storefront builds.",
+        provider: {
+          "@type": "Organization",
+          name: "ScaleFront",
+          url: "https://scalefront.io",
+          logo: "https://scalefront.io/logo/updated_logo.png",
+          email: "hello@scalefront.io",
+          telephone: "+919650296375",
+        },
+        areaServed: "Worldwide",
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Shopify Theme Development Offerings",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Custom Shopify Theme Development",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Figma to Shopify Theme Conversion",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Shopify Website Development Services",
+              },
+            },
+          ],
+        },
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://scalefront.io/services/theme-development#faq",
+        mainEntity: faqData.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://scalefront.io",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Services",
+            item: "https://scalefront.io/services/custom-shopify-development",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Shopify Theme Development",
+            item: "https://scalefront.io/services/theme-development",
+          },
+        ],
+      },
+    ],
+  };
+
   return (
-    <div className="min-h-screen bg-background">
+    <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Shopify Theme Customization",
-            "provider": {
-              "@type": "Organization",
-              "name": "ScaleFront"
-            },
-            "description": "Custom Shopify theme development and modifications. Premium themes tailored to your brand.",
-            "offers": {
-              "@type": "Offer",
-              "priceRange": "$12,000+",
-              "priceCurrency": "USD"
-            }
-          })
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <Header />
-
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 md:pt-32 md:pb-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary mb-6">
-              <Palette className="h-4 w-4" />
-              <span>Theme Customization</span>
+      <article
+        className="min-h-screen bg-[var(--sf-paper)] text-[var(--sf-ink)] selection:bg-[var(--sf-primary-soft)] selection:text-[var(--sf-ink)]"
+        style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}
+      >
+        <div className="border-b-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
+            <div className="flex items-center gap-2">
+              <Link
+                href="/"
+                className="hover:text-[var(--sf-primary)] transition-colors uppercase font-bold"
+              >
+                Home
+              </Link>
+              <span className="text-[var(--sf-ink-mute)]">/</span>
+              <span className="text-[var(--sf-ink-mute)] uppercase">
+                Services
+              </span>
+              <span className="text-[var(--sf-ink-mute)]">/</span>
+              <span className="text-[var(--sf-primary)] font-bold uppercase">
+                Shopify Theme Development
+              </span>
             </div>
+            <div className="text-[var(--sf-ink-mute)] hidden sm:inline font-mono">
+              SERVICE // NATIVE LIQUID &amp; ONLINE STORE 2.0
+            </div>
+          </div>
+        </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground mb-6">
-              Shopify Theme Customization
+        {/* MAIN FULL-WIDTH CONTAINER */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+          {/* HERO SECTION */}
+          <header
+            id="hero"
+            className="mb-16 pb-12 border-b-2 border-[var(--sf-ink)]"
+          >
+            <h1
+              className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[var(--sf-ink)] leading-[1.05] mb-6 max-w-4xl"
+              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            >
+              Shopify Theme Development Services
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground mb-4">
-              Make your Shopify store uniquely yours. Custom themes that match your brand perfectly.
+            <p className="text-xl sm:text-2xl text-[var(--sf-ink-soft)] leading-relaxed mb-8 max-w-3xl">
+              We build custom Shopify themes from the ground up using clean
+              Liquid and Online Store 2.0. Fast mobile speeds, custom product
+              pages, and easy drag-and-drop editing.
             </p>
 
-            <p className="text-base text-muted-foreground mb-8">
-              Pre-built themes are a starting point, not the finish line. Whether you need extensive modifications to an existing theme or a completely custom theme from scratch, we build Shopify themes that feel premium and perform beautifully.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 mb-6">
-              <Button size="lg" asChild className="bg-[#60DB36] hover:bg-[#50CB26]">
-                <Link href="/contact-us">
-                  Schedule a Consultation
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link href="#pricing">View Pricing</Link>
-              </Button>
-            </div>
-
-            <p className="text-sm text-muted-foreground">
-              ✓ Trusted by brands that refuse to look like everyone else
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <DottedSeparator />
-
-      {/* Who This Is For */}
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
-            Do You Need Theme Customization?
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">You Should Get Theme Customization If:</h3>
-              <div className="space-y-6">
-                <div>
-                  <h4 className="font-semibold text-lg mb-2">Your Theme Feels Generic</h4>
-                  <p className="text-muted-foreground">
-                    Every brand using the same theme looks similar. Custom modifications make your store distinctive and aligned with your brand identity.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-lg mb-2">You Need Features Your Theme Doesn't Have</h4>
-                  <p className="text-muted-foreground">
-                    Want custom product displays, unique filtering, specialized cart functionality, or features your theme doesn't support natively?
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-lg mb-2">Your Brand Has Specific Design Requirements</h4>
-                  <p className="text-muted-foreground">
-                    Premium brands need premium design. Off-the-shelf themes can't always match sophisticated brand guidelines.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-lg mb-2">You're Launching a New Store</h4>
-                  <p className="text-muted-foreground">
-                    Starting fresh? A custom theme ensures your store launches with exactly the features and design you need.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-lg mb-2">Your Current Theme Is Slow or Buggy</h4>
-                  <p className="text-muted-foreground">
-                    Legacy themes with bloated code, poor performance, or constant bugs need replacement or major refactoring.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-secondary/20 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Theme Customization vs. Headless</h3>
-              <div className="space-y-4">
-                <div className="bg-card rounded-lg p-4 border border-border">
-                  <h4 className="font-semibold mb-2">Theme Customization</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                      <span>$12-60K investment</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                      <span>Faster to market</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                      <span>Easier to maintain</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-card rounded-lg p-4 border border-border">
-                  <h4 className="font-semibold mb-2">Headless Commerce</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-muted-foreground flex-shrink-0 mt-0.5" />
-                      <span>$50-200K investment</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-muted-foreground flex-shrink-0 mt-0.5" />
-                      <span>Complete creative freedom</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="h-4 w-4 text-muted-foreground flex-shrink-0 mt-0.5" />
-                      <span>Requires technical resources</span>
-                    </li>
-                  </ul>
-                </div>
-                <p className="text-sm text-muted-foreground italic">
-                  If you need unique design but don't need complete creative control, theme customization is more cost-effective.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <DottedSeparator />
-
-      {/* What We Offer */}
-      <section id="pricing" className="py-20 bg-secondary/20">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Theme Customization Services
-          </h2>
-          <p className="text-lg text-muted-foreground mb-12">
-            From minor tweaks to complete custom builds, we offer flexible theme services.
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            {[
-              {
-                name: "Premium Theme Customization",
-                price: "$12,000-35,000",
-                timeline: "4-8 weeks",
-                description: "Start with a premium theme and customize extensively",
-                features: [
-                  "Brand-specific design modifications",
-                  "Custom section development",
-                  "Advanced functionality additions",
-                  "Mobile optimization",
-                  "Performance optimization",
-                  "Custom product page layouts",
-                  "Unique collection pages",
-                  "Custom cart and checkout styling",
-                  "Integration with your apps"
-                ],
-                example: "Took the Dawn theme for a skincare brand, customized color schemes, typography, product page layout, added custom ingredient sections, before/after photo galleries, and subscription options.",
-                bestFor: "Brands that like a premium theme's structure but need brand-specific design and features",
-                highlight: true
-              },
-              {
-                name: "Custom Theme from Scratch",
-                price: "$35,000-80,000",
-                timeline: "10-14 weeks",
-                description: "Build a completely custom theme for your brand",
-                features: [
-                  "Custom design system",
-                  "Bespoke component library",
-                  "Unique page layouts",
-                  "Advanced functionality",
-                  "Performance-optimized code",
-                  "Mobile-first responsive design",
-                  "Theme settings for easy management",
-                  "Complete theme documentation"
-                ],
-                example: "Built a custom theme for a luxury jewelry brand with custom 360° product viewers, appointment booking integration, virtual try-on for rings, and editorial lookbook sections.",
-                bestFor: "Brands with unique requirements that existing themes can't accommodate, even with modifications"
-              },
-              {
-                name: "Theme Rebuild/Migration",
-                price: "$15,000-45,000",
-                timeline: "6-10 weeks",
-                description: "Migrate from an old theme while preserving customizations",
-                features: [
-                  "Audit current theme and features",
-                  "Select or build new theme foundation",
-                  "Migrate all custom features",
-                  "Improve performance and code quality",
-                  "Update deprecated code",
-                  "Mobile optimization",
-                  "Training on new theme"
-                ],
-                example: "Migrated a fashion brand from a 5-year-old custom theme to a modern foundation. Preserved all custom features, improved performance (4.2s → 1.8s load time), fixed mobile issues.",
-                bestFor: "Brands with outdated themes experiencing performance issues, security concerns, or compatibility problems"
-              },
-              {
-                name: "Minor Modifications",
-                price: "$3,000-8,000",
-                timeline: "1-2 weeks",
-                description: "Small design tweaks and functionality additions",
-                features: [
-                  "Small design tweaks",
-                  "Add a few custom sections",
-                  "Styling adjustments",
-                  "Basic functionality additions",
-                  "Performance optimization"
-                ],
-                example: "Added custom FAQ sections, modified header design, improved mobile menu, and optimized images for a home goods store.",
-                bestFor: "Brands needing quick improvements without major rebuilds"
-              }
-            ].map((tier) => (
-              <div
-                key={tier.name}
-                className={`rounded-xl border ${
-                  tier.highlight ? "border-primary bg-primary/5" : "border-border bg-card"
-                } p-8`}
+            <div className="flex flex-wrap items-center gap-4">
+              <Link
+                href="/contact-us"
+                className="px-7 py-3.5 border-2 border-[var(--sf-ink)] bg-[var(--sf-primary)] hover:bg-[var(--sf-primary-deep)] text-white text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
+                style={{
+                  fontFamily: "'JetBrains Mono', monospace",
+                  boxShadow: "var(--sf-shadow-sm)",
+                }}
               >
-                <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
-                <div className="flex items-baseline gap-2 mb-4">
-                  <span className="text-3xl font-bold text-primary">{tier.price}</span>
-                </div>
-                <p className="text-sm text-muted-foreground mb-2">Timeline: {tier.timeline}</p>
-                <p className="text-sm font-medium mb-6 text-muted-foreground">{tier.description}</p>
-                <ul className="space-y-3 mb-6">
-                  {tier.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="bg-secondary/40 rounded-lg p-4 mb-4">
-                  <p className="text-xs text-muted-foreground italic">{tier.example}</p>
-                </div>
-                <p className="text-xs text-muted-foreground">
-                  <strong>Best For:</strong> {tier.bestFor}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-card rounded-xl border border-border p-6">
-            <h4 className="font-semibold mb-4">Ongoing Maintenance: $500-2,000/month</h4>
-            <div className="grid md:grid-cols-4 gap-4">
-              {["Bug fixes", "Minor updates", "Shopify compatibility", "Performance monitoring"].map((item) => (
-                <div key={item} className="flex items-start gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-muted-foreground">{item}</span>
-                </div>
-              ))}
+                <Image
+                  src="/icons/call.png"
+                  alt="Call icon"
+                  width={18}
+                  height={18}
+                  className="w-4 h-4 object-contain brightness-0 invert"
+                />
+                Book a Call
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <a
+                href="https://wa.me/919650296375"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-7 py-3.5 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] hover:bg-white text-[var(--sf-ink)] text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
+                style={{
+                  fontFamily: "'JetBrains Mono', monospace",
+                  boxShadow: "var(--sf-shadow-sm)",
+                }}
+              >
+                <Image
+                  src="/icons/whatsapp.png"
+                  alt="WhatsApp icon"
+                  width={18}
+                  height={18}
+                  className="w-4.5 h-4.5 object-contain"
+                />
+                Chat on WhatsApp
+              </a>
             </div>
-          </div>
-        </div>
-      </section>
+          </header>
 
-      <DottedSeparator />
-
-      {/* What We Can Customize */}
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
-            What We Can Customize
-          </h2>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: Brush,
-                title: "Design & Branding",
-                items: [
-                  "Custom color schemes and typography",
-                  "Brand-specific layouts",
-                  "Custom animations and interactions",
-                  "Unique visual elements",
-                  "Icon design and implementation"
-                ]
-              },
-              {
-                icon: Package,
-                title: "Product Pages",
-                items: [
-                  "Custom product layouts",
-                  "Size guides and fit finders",
-                  "360° product viewers",
-                  "Video integration",
-                  "Before/after galleries"
-                ]
-              },
-              {
-                icon: Layout,
-                title: "Collection Pages",
-                items: [
-                  "Advanced filtering and sorting",
-                  "Custom grid layouts",
-                  "Quick view functionality",
-                  "Infinite scroll or pagination",
-                  "Category-specific layouts"
-                ]
-              },
-              {
-                icon: Sparkles,
-                title: "Homepage",
-                items: [
-                  "Hero sections with video/animation",
-                  "Featured collections",
-                  "Social proof sections",
-                  "Editorial content blocks",
-                  "Custom sliders and carousels"
-                ]
-              },
-              {
-                icon: Zap,
-                title: "Cart & Checkout",
-                items: [
-                  "Cart drawer customization",
-                  "Cart upsells and recommendations",
-                  "Progress indicators",
-                  "Trust badges",
-                  "Custom checkout fields (Plus only)"
-                ]
-              },
-              {
-                icon: Code2,
-                title: "Technical Enhancements",
-                items: [
-                  "Performance optimization",
-                  "SEO improvements",
-                  "Accessibility (WCAG 2.1)",
-                  "Third-party integrations",
-                  "Custom Liquid logic"
-                ]
-              }
-            ].map((category) => {
-              const Icon = category.icon;
-              return (
-                <div key={category.title} className="bg-card rounded-xl border border-border p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <Icon className="h-6 w-6 text-primary" />
-                    <h3 className="text-xl font-bold">{category.title}</h3>
-                  </div>
-                  <ul className="space-y-2">
-                    {category.items.map((item) => (
-                      <li key={item} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-muted-foreground">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      <DottedSeparator />
-
-      {/* Process */}
-      <section className="py-20 bg-secondary/20">
-        <div className="mx-auto max-w-7xl px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
-            How We Customize Your Theme
-          </h2>
-
-          <div className="space-y-12">
-            {[
-              {
-                phase: "Phase 1: Discovery & Planning",
-                duration: "1 week",
-                items: [
-                  "Understand brand identity and goals",
-                  "Audit current theme (if applicable)",
-                  "Define customization requirements",
-                  "Review inspiration and competitors",
-                  "Select theme foundation (if applicable)",
-                  "Create detailed specification"
-                ],
-                deliverable: "Project specification and timeline"
-              },
-              {
-                phase: "Phase 2: Design",
-                duration: "2-3 weeks",
-                items: [
-                  "Design mockups for key pages",
-                  "Define design system (colors, typography, spacing)",
-                  "Create interactive prototype",
-                  "Revision rounds with your feedback",
-                  "Finalize design assets"
-                ],
-                deliverable: "Complete designs and prototype"
-              },
-              {
-                phase: "Phase 3: Development",
-                duration: "4-8 weeks",
-                items: [
-                  "Set up theme development environment",
-                  "Build custom sections and components",
-                  "Implement design system",
-                  "Develop custom functionality",
-                  "Mobile optimization",
-                  "Performance optimization",
-                  "Cross-browser testing"
-                ],
-                deliverable: "Fully functional customized theme"
-              },
-              {
-                phase: "Phase 4: Content & Testing",
-                duration: "1-2 weeks",
-                items: [
-                  "Content migration (if applicable)",
-                  "Comprehensive testing",
-                  "Mobile device testing",
-                  "Performance testing",
-                  "Accessibility audit",
-                  "User acceptance testing"
-                ],
-                deliverable: "Tested, production-ready theme"
-              },
-              {
-                phase: "Phase 5: Launch & Support",
-                duration: "1 week",
-                items: [
-                  "Pre-launch checklist",
-                  "DNS and deployment",
-                  "Post-launch monitoring",
-                  "Team training",
-                  "30 days support"
-                ],
-                deliverable: "Live theme with documentation and training"
-              }
-            ].map((phase, index) => (
-              <div key={index} className="border-l-4 border-primary pl-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <Clock className="h-5 w-5 text-primary" />
-                  <h3 className="text-xl font-bold">{phase.phase}</h3>
-                  <span className="text-sm text-muted-foreground">({phase.duration})</span>
-                </div>
-                <ul className="space-y-2 mb-4">
-                  {phase.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="text-sm font-medium text-foreground">
-                  <strong>Deliverable:</strong> {phase.deliverable}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <DottedSeparator />
-
-      {/* Case Study */}
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Real Results: Skincare Brand Theme Customization
+          {/* SECTION 1: WHAT IS SHOPIFY THEME DEVELOPMENT */}
+          <section id="what-is-theme-development" className="mb-16 max-w-5xl">
+            <h2
+              className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
+              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            >
+              What custom theme development really means
             </h2>
 
-            <p className="text-lg text-muted-foreground mb-8">
-              A premium skincare brand was using a standard theme that didn't communicate their luxury positioning.
-            </p>
+            <div className="space-y-5 text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed">
+              <p>
+                Custom Shopify theme development is the professional practice of
+                designing, coding, and building a unique Shopify theme from
+                scratch.
+              </p>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
-              <div>
-                <h3 className="font-semibold text-lg mb-4">The Challenge</h3>
-                <ul className="space-y-2">
-                  {[
-                    "Generic theme didn't match premium brand",
-                    "Product pages lacked ingredient education",
-                    "No before/after photo showcase",
-                    "Mobile experience felt cheap",
-                    "Site speed: 5.2 seconds"
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <div className="rounded-full bg-muted p-1 mt-0.5">
-                        <div className="w-2 h-2 rounded-full bg-muted-foreground" />
-                      </div>
-                      <span className="text-muted-foreground">{item}</span>
+              <p>
+                This entire process is tailored to fit the specific branding,
+                product catalog, and business goals of your company. Having said
+                that, it is equally important to understand what this{" "}
+                <em className="italic font-semibold text-[var(--sf-ink)]">
+                  is not
+                </em>
+                .
+              </p>
+
+              {/* COMPARISON TABLE */}
+              <ComparisonTable
+                rows={[
+                  {
+                    included: (
+                      <>
+                        <span className="font-semibold text-emerald-800">
+                          ✅ Designing a unique theme
+                        </span>{" "}
+                        from the ground up tailored to your product catalog.
+                      </>
+                    ),
+                    excluded: (
+                      <>
+                        <span className="font-semibold text-rose-700">
+                          ❌ Buying a pre-built &quot;premium&quot; theme
+                        </span>{" "}
+                        from the Shopify Theme Store or ThemeForest.
+                      </>
+                    ),
+                  },
+                  {
+                    included: (
+                      <>
+                        <span className="font-semibold text-emerald-800">
+                          ✅ Coding and building the theme
+                        </span>{" "}
+                        from scratch using clean Liquid, CSS, and native JavaScript.
+                      </>
+                    ),
+                    excluded: (
+                      <>
+                        <span className="font-semibold text-rose-700">
+                          ❌ Simply changing colors, fonts, or banner images
+                        </span>{" "}
+                        on an existing pre-made template.
+                      </>
+                    ),
+                  },
+                  {
+                    included: (
+                      <>
+                        <span className="font-semibold text-emerald-800">
+                          ✅ Structuring modular Online Store 2.0 sections
+                        </span>{" "}
+                        so merchants can easily edit content post-launch.
+                      </>
+                    ),
+                    excluded: (
+                      <>
+                        <span className="font-semibold text-rose-700">
+                          ❌ Relying on heavy drag-and-drop page builders
+                        </span>{" "}
+                        (like PageFly or Shogun) that slow down mobile load times.
+                      </>
+                    ),
+                  },
+                  {
+                    included: (
+                      <>
+                        <span className="font-semibold text-emerald-800">
+                          ✅ Building native product features
+                        </span>{" "}
+                        (interactive drawer carts, custom bundle builders, size guides).
+                      </>
+                    ),
+                    excluded: (
+                      <>
+                        <span className="font-semibold text-rose-700">
+                          ❌ Stacking 12+ third-party apps
+                        </span>{" "}
+                        with expensive monthly fees and duplicate tracking scripts.
+                      </>
+                    ),
+                  },
+                  {
+                    included: (
+                      <>
+                        <span className="font-semibold text-emerald-800">
+                          ✅ Aligning the entire storefront architecture
+                        </span>{" "}
+                        with your business goals and conversion funnel.
+                      </>
+                    ),
+                    excluded: (
+                      <>
+                        <span className="font-semibold text-rose-700">
+                          ❌ Forcing your product catalog
+                        </span>{" "}
+                        into rigid layout boxes that were designed for a different industry.
+                      </>
+                    ),
+                  },
+                ]}
+              />
+
+              <p>
+                For instance, an apparel store requires interactive size charts,
+                fabric close-up zoom states, color swatch variant pickers, and
+                model fit notes. In contrast, an industrial machinery
+                distributor requires volume discount tables, PDF technical
+                specification downloads, and direct quote request buttons.
+                Custom theme development gives each product type the exact
+                layout it needs to convert visitors into customers.
+              </p>
+
+              <p>
+                When paired with broader{" "}
+                <Link
+                  href="/services/custom-shopify-development"
+                  className="text-[var(--sf-primary)] font-bold underline hover:text-[var(--sf-primary-deep)]"
+                >
+                  custom shopify development
+                </Link>
+                , a custom theme gives you a fast store that you can
+                manage effortlessly without depending on developers for daily
+                content updates.
+              </p>
+            </div>
+          </section>
+
+          {/* SECTION 2: CUSTOM THEMES VS PRE-MADE THEMES (Content Left, Image Right) */}
+          <section
+            id="custom-vs-marketplace"
+            className="mb-16 pt-8 border-t border-[var(--sf-ink)]/15"
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+              <div className="lg:col-span-7">
+                <h2
+                  className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
+                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                >
+                  Custom Shopify themes vs pre-made marketplace themes
+                </h2>
+
+                <div className="space-y-4 text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed">
+                  <p>
+                    Marketplace themes on the Shopify Theme Store or ThemeForest
+                    are built to appeal to as many buyers as possible. A single
+                    theme tries to cater to fashion boutiques, electronics
+                    stores, furniture retailers, and food brands all at once.
+                  </p>
+
+                  <p>
+                    To achieve that universal appeal, pre-made themes come
+                    bloated with hundreds of unused configuration toggles, heavy
+                    JavaScript libraries, and redundant stylesheets. This excess
+                    code slows down mobile load times and frustrates shoppers.
+                  </p>
+
+                  <p>
+                    A custom-built theme solves this problem by including only
+                    the code your store actually needs:
+                  </p>
+
+                  <ul className="space-y-3 my-4 pl-4 border-l-2 border-[var(--sf-primary)] text-base sm:text-lg text-[var(--sf-ink)]">
+                    <li>
+                      <strong>Tailored Product Layouts:</strong> Design product
+                      pages around how your customers make buying decisions,
+                      including tiered bundle options, ingredient accordions,
+                      and comparison tables.
                     </li>
-                  ))}
-                </ul>
+                    <li>
+                      <strong>Sub-2-Second Mobile Load Times:</strong> By
+                      stripping out heavy third-party framework dependencies,
+                      custom Liquid themes load rapidly on 4G and 5G mobile
+                      connections.
+                    </li>
+                    <li>
+                      <strong>Fewer Paid App Subscriptions:</strong> Build
+                      slide-out carts, sticky add-to-cart bars, announcement
+                      carousels, and size guides directly into the theme, saving
+                      thousands in monthly app fees.
+                    </li>
+                    <li>
+                      <strong>Clean Online Store 2.0 Architecture:</strong>{" "}
+                      Manage every section, header, and footer directly in the
+                      Shopify visual editor with full drag-and-drop flexibility.
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div>
-                <h3 className="font-semibold text-lg mb-4">The Solution</h3>
-                <p className="text-muted-foreground mb-3">Customized the Impulse theme with:</p>
-                <ul className="space-y-2">
-                  {[
-                    "Custom typography and color palette",
-                    "Ingredient spotlight sections",
-                    "Before/after photo galleries",
-                    "Customer routine builder",
-                    "Optimized images and code",
-                    "Refined mobile experience"
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+
+              <div className="lg:col-span-5 lg:sticky lg:top-24">
+                <div className="border-2 border-[var(--sf-ink)] bg-white shadow-[4px_4px_0_var(--sf-ink)] overflow-hidden">
+                  <Image
+                    src="/portfolio/maison-luxe/covers/cover.png"
+                    alt="Custom Shopify Theme Development - Maison Luxe Storefront"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto object-cover"
+                  />
+                  <div
+                    className="p-3 border-t-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)] text-xs text-[var(--sf-ink-mute)] font-mono"
+                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                  >
+                    Maison Luxe: Custom home decor storefront with instant
+                    collection filtering and clean Online Store 2.0 sections.
+                  </div>
+                </div>
               </div>
             </div>
+          </section>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-              {[
-                { metric: "Conversion", value: "+63%", detail: "1.9% → 3.1%" },
-                { metric: "AOV", value: "+18%", detail: "Higher order value" },
-                { metric: "Time on Site", value: "+52%", detail: "Better engagement" },
-                { metric: "Page Load", value: "1.9s", detail: "From 5.2s" },
-                { metric: "Mobile Conv.", value: "+71%", detail: "Mobile improvement" },
-                { metric: "Investment", value: "$28K", detail: "Full customization" }
-              ].map((stat) => (
-                <div key={stat.metric} className="bg-card rounded-lg p-4 border border-border">
-                  <div className="text-2xl font-bold text-primary mb-1">{stat.value}</div>
-                  <div className="text-sm font-medium text-foreground">{stat.metric}</div>
-                  <div className="text-xs text-muted-foreground">{stat.detail}</div>
+          {/* SECTION 3: CONVERSION FEATURES (Image Left, Content Right) */}
+          <section
+            id="custom-theme-features"
+            className="mb-16 pt-8 border-t border-[var(--sf-ink)]/15"
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+              <div className="lg:col-span-5 order-2 lg:order-1 lg:sticky lg:top-24">
+                <div className="border-2 border-[var(--sf-ink)] bg-white shadow-[4px_4px_0_var(--sf-ink)] overflow-hidden">
+                  <Image
+                    src="/portfolio/flexform-athletics/covers/cover.png"
+                    alt="Custom Shopify Theme Development - FlexForm Athletics Activewear Storefront"
+                    width={800}
+                    height={450}
+                    className="w-full h-auto object-cover"
+                  />
+                  <div
+                    className="p-3 border-t-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)] text-xs text-[var(--sf-ink-mute)] font-mono"
+                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                  >
+                    FlexForm Athletics: Custom activewear theme featuring visual
+                    category strips, lookbook bundles, and instant drawer cart.
+                  </div>
+                </div>
+              </div>
+
+              <div className="lg:col-span-7 order-1 lg:order-2">
+                <h2
+                  className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
+                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                >
+                  Custom Shopify theme development built for conversion
+                </h2>
+
+                <div className="space-y-4 text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed">
+                  <p>
+                    Effective eCommerce design focuses on removing hesitation
+                    and making checkout effortless. When we engineer a{" "}
+                    <span className="font-semibold text-[var(--sf-ink)]">
+                      custom shopify theme development
+                    </span>{" "}
+                    project, conversion features are built directly into the
+                    Liquid template structure:
+                  </p>
+
+                  <ul className="space-y-3 my-4 pl-4 border-l-2 border-[var(--sf-primary)] text-base sm:text-lg text-[var(--sf-ink)]">
+                    <li>
+                      <strong>Interactive Drawer Carts:</strong> Slide-out AJAX
+                      carts with dynamic free-shipping progress bars, 1-click
+                      product cross-sells, discount code fields, and instant
+                      checkout buttons.
+                    </li>
+                    <li>
+                      <strong>Instant AJAX Collection Filtering:</strong>{" "}
+                      Shoppers can filter products by size, color, price range,
+                      and availability without full page reloads, improving
+                      browsing efficiency.
+                    </li>
+                    <li>
+                      <strong>Custom Bundle &amp; Box Builders:</strong>{" "}
+                      Multi-step bundle builders that allow customers to select
+                      items, calculate bundle discounts automatically, and add
+                      everything to the cart together.
+                    </li>
+                    <li>
+                      <strong>Shop the Look &amp; Lookbook Modules:</strong>{" "}
+                      Tagged lifestyle photo grids where shoppers click
+                      hot-spots on an image to view product details and add
+                      items to cart instantly.
+                    </li>
+                    <li>
+                      <strong>Structured Metafields &amp; Metaobjects:</strong>{" "}
+                      Custom admin fields for size guides, materials, care
+                      instructions, and customer FAQs that render cleanly
+                      without custom code.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* SECTION 4: WEB DEVELOPMENT SERVICES & CORE WEB VITALS */}
+          <section
+            id="website-development-services"
+            className="mb-16 pt-8 border-t border-[var(--sf-ink)]/15 max-w-5xl"
+          >
+            <h2
+              className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
+              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            >
+              Shopify website development services focused on Core Web Vitals
+            </h2>
+
+            <div className="space-y-5 text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed">
+              <p>
+                Mobile page speed is one of the most critical factors
+                influencing Google organic rankings and ad conversion rates. If
+                your store takes longer than 3 seconds to load on mobile, up to
+                40% of potential buyers leave before seeing your products.
+              </p>
+
+              <p>
+                Our{" "}
+                <span className="font-semibold text-[var(--sf-ink)]">
+                  shopify website development services
+                </span>{" "}
+                are built around clean code practices. We write modern semantic
+                HTML, optimized CSS, and native JavaScript without relying on
+                heavy external libraries like jQuery. We also avoid slow visual
+                page builders (like PageFly or Shogun) that inject excess script
+                payloads into your storefront.
+              </p>
+
+              <p>
+                When you partner with our{" "}
+                <span className="font-semibold text-[var(--sf-ink)]">
+                  shopify website developers
+                </span>
+                , you get direct technical communication with the person writing
+                your Liquid code. We audit every third-party script, convert
+                images to modern WebP formats, implement lazy-loading, and tune
+                Largest Contentful Paint (LCP) and Cumulative Layout Shift (CLS)
+                so your store consistently scores in the 90s on Google PageSpeed
+                Insights.
+              </p>
+            </div>
+          </section>
+
+          {/* SECTION 5: THE CUSTOM THEME DEVELOPMENT PROCESS */}
+          <section
+            id="development-process"
+            className="mb-16 pt-8 border-t border-[var(--sf-ink)]/15 max-w-5xl"
+          >
+            <h2
+              className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
+              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            >
+              The custom Shopify theme development process
+            </h2>
+
+            <div className="space-y-5 text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed mb-8">
+              <p>
+                A successful custom theme project follows a structured engineering workflow. From initial planning to post-launch training, every stage is designed to ensure clean code, high speed, and effortless merchant control.
+              </p>
+
+              <div className="space-y-8 my-6">
+                {/* Phase 1 */}
+                <div className="pl-4 sm:pl-6 border-l-2 border-[var(--sf-primary)]">
+                  <div
+                    className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--sf-primary)] mb-1"
+                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                  >
+                    Phase I
+                  </div>
+                  <h3
+                    className="text-xl sm:text-2xl font-bold text-[var(--sf-ink)] mb-3"
+                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  >
+                    Discovery and Strategy
+                  </h3>
+                  <p className="text-base text-[var(--sf-ink-soft)] leading-relaxed mb-4">
+                    We start by analyzing how your business runs and what your buyers need before writing a single line of code.
+                  </p>
+                  <ul className="space-y-2 text-base text-[var(--sf-ink)]">
+                    <li>
+                      <strong>Goal Clarification:</strong> We define your core business targets, whether that is improving mobile conversion, reducing cart drop-off, or supporting catalog expansion.
+                    </li>
+                    <li>
+                      <strong>Audience Analysis:</strong> We analyze how your customers browse, their mobile screen habits, and common points of hesitation during checkout.
+                    </li>
+                    <li>
+                      <strong>Competitive Audit:</strong> We review competitor stores in your niche to identify UX shortcomings and design opportunities to make your brand stand out.
+                    </li>
+                    <li>
+                      <strong>Technical Requirements Gathering:</strong> We map out your product variant structures, custom data fields, required third-party apps, and backend inventory workflows.
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Phase 2 */}
+                <div className="pl-4 sm:pl-6 border-l-2 border-[var(--sf-primary)]">
+                  <div
+                    className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--sf-primary)] mb-1"
+                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                  >
+                    Phase II
+                  </div>
+                  <h3
+                    className="text-xl sm:text-2xl font-bold text-[var(--sf-ink)] mb-3"
+                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  >
+                    UI/UX Design
+                  </h3>
+                  <p className="text-base text-[var(--sf-ink-soft)] leading-relaxed mb-4">
+                    We create intuitive storefront layouts focused on clear product presentation, fast navigation, and friction-free purchasing.
+                  </p>
+                  <ul className="space-y-2 text-base text-[var(--sf-ink)]">
+                    <li>
+                      <strong>Wireframing:</strong> We establish page layout foundations for your homepage, collection grids, product detail pages, and slide-out carts.
+                    </li>
+                    <li>
+                      <strong>Mockups and Prototypes:</strong> We build pixel-precise visual designs in Figma showing typography scales, button states, spacing, and micro-interactions.
+                    </li>
+                    <li>
+                      <strong>User Flow Mapping:</strong> We chart the path customers take from discovery to product selection, drawer cart interaction, and checkout.
+                    </li>
+                    <li>
+                      <strong>Content Structure Guidance:</strong> We advise on image dimensions, lifestyle photography layouts, video embeds, and product copy formatting for maximum visual clarity.
+                    </li>
+                    <li>
+                      <strong>Stakeholder Review Cycles:</strong> We review Figma prototypes together, incorporating your direct feedback before frontend implementation starts.
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Phase 3 */}
+                <div className="pl-4 sm:pl-6 border-l-2 border-[var(--sf-primary)]">
+                  <div
+                    className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--sf-primary)] mb-1"
+                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                  >
+                    Phase III
+                  </div>
+                  <h3
+                    className="text-xl sm:text-2xl font-bold text-[var(--sf-ink)] mb-3"
+                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  >
+                    Development and Implementation
+                  </h3>
+                  <p className="text-base text-[var(--sf-ink-soft)] leading-relaxed mb-4">
+                    We code your theme from scratch using modern Liquid templating, clean CSS, and lightweight JavaScript.
+                  </p>
+                  <ul className="space-y-2 text-base text-[var(--sf-ink)]">
+                    <li>
+                      <strong>Local Environment Setup:</strong> We configure a modern Shopify CLI development workflow with Git version control for transparent tracking.
+                    </li>
+                    <li>
+                      <strong>Theme Scaffolding:</strong> We build a clean theme directory structure with organized Liquid templates, sections, snippets, and assets.
+                    </li>
+                    <li>
+                      <strong>Template and Section Development:</strong> We build native Online Store 2.0 sections and blocks so every layout element is easily customizable in the theme customizer.
+                    </li>
+                    <li>
+                      <strong>Front-End and Liquid Coding:</strong> We write clean semantic HTML5, responsive CSS, and native JavaScript for fast interactive features without heavy dependencies.
+                    </li>
+                    <li>
+                      <strong>Integration Development:</strong> We connect your third-party tools, ERP systems, email providers, and review platforms using Shopify APIs and webhooks.
+                    </li>
+                    <li>
+                      <strong>Progressive Client Review:</strong> We share live staging preview links at each milestone so you can test real store features throughout development.
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Phase 4 */}
+                <div className="pl-4 sm:pl-6 border-l-2 border-[var(--sf-primary)]">
+                  <div
+                    className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--sf-primary)] mb-1"
+                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                  >
+                    Phase IV
+                  </div>
+                  <h3
+                    className="text-xl sm:text-2xl font-bold text-[var(--sf-ink)] mb-3"
+                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  >
+                    Quality Assurance and Testing
+                  </h3>
+                  <p className="text-base text-[var(--sf-ink-soft)] leading-relaxed mb-4">
+                    Every section, button, and script is thoroughly tested across real devices and screen resolutions.
+                  </p>
+                  <ul className="space-y-2 text-base text-[var(--sf-ink)]">
+                    <li>
+                      <strong>Functional Testing:</strong> We verify all interactive elements, such as variant pickers, multi-tier bundle calculations, search bars, and drawer carts.
+                    </li>
+                    <li>
+                      <strong>Performance Testing:</strong> We run Google PageSpeed Insights and WebPageTest audits to guarantee fast load times and zero layout shifts.
+                    </li>
+                    <li>
+                      <strong>Cross-Browser and Responsive Testing:</strong> We test responsiveness across iPhone, Android, tablet, and desktop viewports on Chrome, Safari, Firefox, and Edge.
+                    </li>
+                    <li>
+                      <strong>Usability Testing:</strong> We walk through the end-to-end shopping experience to ensure buttons are easy to tap and navigation is effortless.
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Phase 5 */}
+                <div className="pl-4 sm:pl-6 border-l-2 border-[var(--sf-primary)]">
+                  <div
+                    className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--sf-primary)] mb-1"
+                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                  >
+                    Phase V
+                  </div>
+                  <h3
+                    className="text-xl sm:text-2xl font-bold text-[var(--sf-ink)] mb-3"
+                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  >
+                    Launch and Deployment
+                  </h3>
+                  <p className="text-base text-[var(--sf-ink-soft)] leading-relaxed mb-4">
+                    We push your new theme live smoothly with zero downtime, full SEO protection, and complete admin handoff.
+                  </p>
+                  <ul className="space-y-2 text-base text-[var(--sf-ink)]">
+                    <li>
+                      <strong>Theme Packaging and Migration:</strong> We publish the tested theme to your live store, connecting all menus, collections, and product metafields.
+                    </li>
+                    <li>
+                      <strong>Technical SEO Implementation:</strong> We verify structured data schema, canonical links, Open Graph tags, and set up 301 redirects to protect organic search traffic.
+                    </li>
+                    <li>
+                      <strong>Performance Optimization:</strong> We perform live asset minification, cache checks, and script tag audits on production servers.
+                    </li>
+                    <li>
+                      <strong>Handoff and Training:</strong> We walk your team through the Shopify admin editor, showing you how to add sections, update banners, and edit text without touching code.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* SECTION 6: RELEVANT WORK / PORTFOLIO PROOF */}
+          <section
+            id="portfolio-proof"
+            className="mb-16 pt-8 border-t border-[var(--sf-ink)]/15 max-w-5xl"
+          >
+            <h2
+              className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
+              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            >
+              Relevant Work: Custom Shopify themes in action
+            </h2>
+
+            <div className="space-y-5 text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed mb-8">
+              <p>
+                Here are a few real custom Shopify themes and storefront
+                features we have built:
+              </p>
+
+              <div className="space-y-6 my-6">
+                <div>
+                  <h3
+                    className="text-xl font-bold text-[var(--sf-ink)] mb-1"
+                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  >
+                    <Link
+                      href="/work/maison-luxe"
+                      className="hover:text-[var(--sf-primary)] transition-colors underline"
+                    >
+                      Maison Luxe: Scandinavian Home Decor &amp; Stoneware Store
+                    </Link>
+                  </h3>
+                  <p className="text-sm sm:text-base text-[var(--sf-ink-soft)]">
+                    An editorial lifestyle storefront with a 4-tab category
+                    selector, custom room lookbooks, and an instant add-to-cart
+                    slideout drawer.
+                  </p>
+                </div>
+
+                <div>
+                  <h3
+                    className="text-xl font-bold text-[var(--sf-ink)] mb-1"
+                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  >
+                    <Link
+                      href="/work/flexform-athletics"
+                      className="hover:text-[var(--sf-primary)] transition-colors underline"
+                    >
+                      FlexForm Athletics: Activewear &amp; Athleisure Storefront
+                    </Link>
+                  </h3>
+                  <p className="text-sm sm:text-base text-[var(--sf-ink-soft)]">
+                    A women's activewear storefront with 9-category visual story
+                    strips, instant size filtering, and product page lookbook
+                    bundles.
+                  </p>
+                </div>
+
+                <div>
+                  <h3
+                    className="text-xl font-bold text-[var(--sf-ink)] mb-1"
+                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  >
+                    <Link
+                      href="/work/iron-crate"
+                      className="hover:text-[var(--sf-primary)] transition-colors underline"
+                    >
+                      Iron Crate: Multi-Product Bundle Builder &amp; Nutrition
+                      Store
+                    </Link>
+                  </h3>
+                  <p className="text-sm sm:text-base text-[var(--sf-ink-soft)]">
+                    A custom storefront featuring a 3-step supplement bundle
+                    builder, dosage accordions, and an AJAX drawer cart with
+                    real-time spend milestones.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* SECTION 6: FAQ */}
+          <section
+            id="faq"
+            className="mb-16 pt-8 border-t border-[var(--sf-ink)]/15 max-w-5xl"
+          >
+            <h2
+              className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
+              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            >
+              Frequently Asked Questions
+            </h2>
+
+            <div className="space-y-6">
+              {faqData.map((faq, index) => (
+                <div
+                  key={index}
+                  className="pb-6 border-b border-[var(--sf-ink)]/15 last:border-b-0"
+                >
+                  <h3
+                    className="text-lg sm:text-xl font-bold text-[var(--sf-ink)] mb-2"
+                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  >
+                    {faq.question}
+                  </h3>
+                  <p className="text-base text-[var(--sf-ink-soft)] leading-relaxed">
+                    {faq.answer}
+                  </p>
                 </div>
               ))}
             </div>
+          </section>
 
-            <div className="bg-card rounded-lg p-6 border border-border">
-              <p className="text-lg text-foreground font-medium mb-2">
-                ROI: $28K investment → $42K additional monthly revenue
-              </p>
-              <blockquote className="border-l-4 border-primary pl-6 italic text-muted-foreground">
-                "Finally looks like a luxury brand. The custom theme transformed how customers perceive our products."
-              </blockquote>
-            </div>
-          </div>
-        </div>
-      </section>
+          {/* SECTION 7: FINAL CTA */}
+          <section
+            id="cta"
+            className="pt-12 border-t-2 border-[var(--sf-ink)] text-center"
+          >
+            <h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--sf-ink)] mb-4 max-w-2xl mx-auto"
+              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            >
+              Ready to build a custom Shopify theme?
+            </h2>
 
-      <DottedSeparator />
+            <p className="text-base sm:text-lg text-[var(--sf-ink-soft)] max-w-xl mx-auto mb-8 leading-relaxed">
+              Tell us about your brand and catalog. We will review your
+              requirements, recommend the cleanest Liquid architecture, and
+              share a clear scope.
+            </p>
 
-      {/* FAQ */}
-      <section className="py-20 bg-secondary/20">
-        <div className="mx-auto max-w-4xl px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
-            Frequently Asked Questions
-          </h2>
-
-          <div className="space-y-6">
-            {[
-              {
-                q: "How long does theme customization take?",
-                a: "Minor modifications: 1-2 weeks. Premium customization: 4-8 weeks. Custom theme: 10-14 weeks. Timeline depends on complexity."
-              },
-              {
-                q: "Can you customize any theme?",
-                a: "Yes, though some themes are easier to work with than others. We'll advise if your current theme is suitable for customization or if a new foundation would be better."
-              },
-              {
-                q: "Will my customizations break when the theme updates?",
-                a: "We code customizations properly so theme updates don't break them. We provide documentation for future developers and can handle updates for you."
-              },
-              {
-                q: "Can you make my theme look like [competitor]?",
-                a: "We can create similar layouts and features, but we don't copy designs. We'll create something unique that achieves the same goals while respecting your brand identity."
-              },
-              {
-                q: "What if I want changes after launch?",
-                a: "We include 30 days post-launch support for bug fixes. After that, changes can be handled on hourly basis ($150/hr) or monthly retainer."
-              },
-              {
-                q: "Can my team edit the customized theme?",
-                a: "Yes. We use Shopify's section system so your team can manage content without code. We provide training and comprehensive documentation."
-              },
-              {
-                q: "Will customizations slow down my site?",
-                a: "Not if done correctly. We optimize all code and actually often improve performance during customization by removing bloat and optimizing assets."
-              },
-              {
-                q: "Do you work with theme builders like Shogun or PageFly?",
-                a: "We prefer native Shopify themes for performance and maintainability, but can work with page builders if needed for specific sections."
-              }
-            ].map((faq, index) => (
-              <div key={index} className="bg-card rounded-lg border border-border p-6">
-                <h3 className="font-semibold text-lg mb-3">{faq.q}</h3>
-                <p className="text-muted-foreground">{faq.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-4xl px-6 text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Ready to Customize Your Theme?
-          </h2>
-          <p className="text-lg opacity-90">
-            Let's discuss your brand vision and how we can bring it to life with a custom Shopify theme.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" asChild>
-              <Link href="/contact-us">
-                Schedule Theme Consultation
-                <ArrowRight className="ml-2 h-4 w-4" />
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <Link
+                href="/contact-us"
+                className="px-8 py-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-primary)] hover:bg-[var(--sf-primary-deep)] text-white text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
+                style={{
+                  fontFamily: "'JetBrains Mono', monospace",
+                  boxShadow: "var(--sf-shadow-sm)",
+                }}
+              >
+                <Image
+                  src="/icons/call.png"
+                  alt="Call icon"
+                  width={18}
+                  height={18}
+                  className="w-4 h-4 object-contain brightness-0 invert"
+                />
+                Schedule a Call
+                <ArrowRight className="w-4 h-4" />
               </Link>
-            </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10" asChild>
-              <Link href="/pricing">View All Services</Link>
-            </Button>
-          </div>
-          <p className="text-sm opacity-75">
-            ✓ 30-minute consultation • ✓ Cost estimates • ✓ No obligation
-          </p>
+              <a
+                href="https://wa.me/919650296375"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] hover:bg-white text-[var(--sf-ink)] text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
+                style={{
+                  fontFamily: "'JetBrains Mono', monospace",
+                  boxShadow: "var(--sf-shadow-sm)",
+                }}
+              >
+                <Image
+                  src="/icons/whatsapp.png"
+                  alt="WhatsApp icon"
+                  width={18}
+                  height={18}
+                  className="w-4.5 h-4.5 object-contain"
+                />
+                Chat on WhatsApp
+              </a>
+            </div>
+          </section>
         </div>
-      </section>
-    </div>
+      </article>
+    </>
   );
 }
