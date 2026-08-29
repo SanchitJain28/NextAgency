@@ -89,6 +89,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/services/cro-optimization`,
+      lastModified: lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/services/custom-features`,
       lastModified: lastModified,
       changeFrequency: "monthly",

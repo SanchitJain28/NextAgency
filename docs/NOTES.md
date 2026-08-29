@@ -158,8 +158,15 @@
 
 ## Things i have learned
 
-1. The content style should bea easy to understand
+1. The content style should be easy to understand
 2. do keyword analusis before writing any content
 3. Should help people with the content
-4. the page word length should not be less than 2000 , 2000 - 2500 words per page is good
+4. the page word length should not be less than 2000 , Ideaal word count range should be between 2200 - 2500 words per page is good
 5. learn how websites write content like (https://www.codeable.io/blog)
+
+### Add a "Get a free quota button" when opens it will open a modal
+
+1. It will step by step process to increase CRO
+
+- First get thier email
+- then choose the service they want
