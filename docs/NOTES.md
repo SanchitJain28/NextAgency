@@ -170,3 +170,7 @@
 
 - First get thier email
 - then choose the service they want
+
+## Ideas
+
+1. We can also a make a custom service page for shopify api integration or backend integration

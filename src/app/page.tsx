@@ -11,7 +11,6 @@ import SecondaryArticle from "@/components/index/secondary-article";
 import Pricing from "@/components/index/pricing";
 import FAQ from "@/components/index/faq";
 import ContactCTA from "@/components/index/contact-cta";
-import FloatingContact from "@/components/index/floating-contact";
 
 export const metadata: Metadata = {
   title: "Shopify Development Agency India | ScaleFront",
@@ -85,7 +84,6 @@ export default function HomePage() {
         <Pricing />
         <FAQ />
         <ContactCTA />
-        <FloatingContact />
       </main>
     </>
   );

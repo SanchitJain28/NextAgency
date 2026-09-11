@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Header } from "@/components/header-footer/Header";
 import Footer from "@/components/header-footer/Footer";
+import FloatingContact from "@/components/index/floating-contact";
 import "@fontsource/stack-sans-text/400.css";
 import "@fontsource/stack-sans-text/500.css";
 import "@fontsource/stack-sans-text/600.css";
@@ -186,6 +187,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <FloatingContact />
         <Analytics />
 
         {process.env.NODE_ENV === "production" &&
