@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://scalefront.io'
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.scalefront.io'
 
   return {
     rules: [
@@ -13,7 +13,6 @@ export default function robots(): MetadataRoute.Robots {
           '/admin/',
           '/api/',
           '/dashboard/',
-          '/_next/',
         ],
       },
       {

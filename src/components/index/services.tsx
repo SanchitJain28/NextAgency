@@ -137,7 +137,7 @@ export default function Services() {
           </h2>
         </div>
         <Link
-          href="/contact"
+          href="/contact-us"
           className="font-semibold text-[var(--sf-ink)] border-b-2 border-[var(--sf-primary)] pb-[3px] whitespace-nowrap"
         >
           Discuss your project →

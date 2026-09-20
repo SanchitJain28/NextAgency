@@ -24,23 +24,22 @@ import {
 import DottedSeparator from "@/components/seperators/DottedSeperator";
 
 export const metadata: Metadata = {
-  title: "Iron Crate — Custom Shopify Bundle Builder & Cart Case Study | ScaleFront",
+  title: "Iron Crate — Custom Theme Case Study",
   description:
     "A deep dive into Iron Crate: custom Shopify theme architecture, interactive bundle builder, clinical dosage PDPs, and a tiered-reward cart.",
   alternates: {
-    canonical: "https://scalefront.io/work/iron-crate",
+    canonical: "/work/iron-crate",
   },
   openGraph: {
-    title:
-      "Iron Crate — Custom Shopify Bundle Builder & Cart Case Study | ScaleFront",
+    title: "Iron Crate — Custom Theme Case Study",
     description:
       "A deep dive into Iron Crate: custom Shopify theme architecture, interactive bundle builder, clinical dosage PDPs, and a tiered-reward cart.",
-    url: "https://scalefront.io/work/iron-crate",
+    url: "https://www.scalefront.io/work/iron-crate",
     siteName: "ScaleFront",
     type: "article",
     images: [
       {
-        url: "https://scalefront.io/portfolio/iron-crate/covers/cover.png",
+        url: "https://www.scalefront.io/portfolio/iron-crate/covers/cover.png",
         width: 1200,
         height: 675,
         alt: "Iron Crate custom Shopify theme, category matrix, and tiered-reward cart case study",
@@ -49,12 +48,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Iron Crate — Custom Shopify Bundle Builder & Cart Case Study | ScaleFront",
+    title: "Iron Crate — Custom Theme Case Study",
     description:
       "Custom Shopify theme architecture for sports nutrition: interactive bundle builder, clinical dosage PDPs, and tiered cart rewards.",
     images: [
-      "https://scalefront.io/portfolio/iron-crate/covers/cover.png",
+      "https://www.scalefront.io/portfolio/iron-crate/covers/cover.png",
     ],
   },
 };
@@ -118,10 +116,10 @@ export default function IronCratePage() {
               </Link>
               <span>/</span>
               <Link
-                href="/portfolio"
+                href="/work"
                 className="hover:text-[var(--sf-primary)] transition-colors"
               >
-                Portfolio
+                Work
               </Link>
               <span>/</span>
               <span className="text-[var(--sf-ink)] font-bold">Iron Crate</span>
@@ -760,7 +758,7 @@ export default function IronCratePage() {
                 Explore Theme Development
               </Link>
               <Link
-                href="/portfolio"
+                href="/work"
                 className="px-6 py-3.5 bg-[var(--sf-paper-sunken)] text-[var(--sf-ink)] text-xs font-mono font-bold uppercase tracking-wider border-2 border-[var(--sf-ink)] hover:bg-white transition-all"
               >
                 View All Case Studies

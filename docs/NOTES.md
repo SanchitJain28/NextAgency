@@ -52,6 +52,24 @@
 
 - CTA Section
 
+## New portfolio pages
+
+1.  360 - Alpha (Premium clothing brand)
+2.  Aesthetica
+3.  Ai cross-sell and upsell app
+4.  Pairly Bundles App
+5.  Araiaya by aza (Jewelry brand)
+6.  Asherved
+7.  Aspire real state agency
+8.  Ayuface
+9.  calaire-cofee
+10. daiva-drishti
+11. design-gatha
+12. fruitraja
+13. gain_x_noir
+14. nutriwaves-themes
+15. studio-beades
+
 ## Services we offer
 
 1. Custom shopify development
@@ -217,11 +235,17 @@ Cite authoritative sources to back up claims
 
 ## Things i have learned
 
-1. The content style should be easy to understand
+1. The content style should be easy to understand - Even a small child can understand it , Grammer should be simple
 2. do keyword analusis before writing any content
 3. Should help people with the content
 4. the page word length should not be less than 2000 , Ideaal word count range should be between 2200 - 2500 words per page is good
 5. learn how websites write content like (https://www.codeable.io/blog)
+6. For AEO , Make comparision pages , add Detailed FAQs (add that in structured json)
+7. Make pillarwise content
+
+- Suppose we have a service page : [custom shopify development] ->
+- Now make content around that main page , which can be blogs page , case studies , FAQs , comparision pages
+  and others
 
 ### Add a "Get a free quota button" when opens it will open a modal
 

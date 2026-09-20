@@ -4,22 +4,22 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Custom Shopify Development Services | ScaleFront",
+  title: "Custom Shopify Development Services",
   description:
     "We build custom Shopify themes, private apps, and API integrations tailored to how your business actually operates.",
   alternates: {
-    canonical: "https://scalefront.io/services/custom-shopify-development",
+    canonical: "/services/custom-shopify-development",
   },
   openGraph: {
-    title: "Custom Shopify Development Services | ScaleFront",
+    title: "Custom Shopify Development Services",
     description:
       "We build custom Shopify themes, private apps, and API integrations tailored to how your business actually operates.",
-    url: "https://scalefront.io/services/custom-shopify-development",
+    url: "https://www.scalefront.io/services/custom-shopify-development",
     siteName: "ScaleFront",
     type: "website",
     images: [
       {
-        url: "https://scalefront.io/og-image.jpg",
+        url: "https://www.scalefront.io/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Custom Shopify Development by ScaleFront",
@@ -28,10 +28,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Shopify Development Services | ScaleFront",
+    title: "Custom Shopify Development Services",
     description:
       "We build custom Shopify themes, private apps, and API integrations tailored to how your business actually operates.",
-    images: ["https://scalefront.io/og-image.jpg"],
+    images: ["https://www.scalefront.io/og-image.jpg"],
   },
 };
 

@@ -20,19 +20,17 @@ import {
 import DottedSeparator from "@/components/seperators/DottedSeperator";
 
 export const metadata: Metadata = {
-  title:
-    "RecovrX — Custom Shopify Theme & High-Ticket CRO Case Study | ScaleFront",
+  title: "RecovrX — Wellness Store Case Study",
   description:
     "An architectural case study of RecovrX: custom dark-mode Shopify theme development, native cross-sell bundling, diagnostic navigation, and a tiered-reward cart.",
   alternates: {
-    canonical: "https://scalefront.io/work/recovrx",
+    canonical: "/work/recovrx",
   },
   openGraph: {
-    title:
-      "RecovrX — Custom Shopify Theme & High-Ticket CRO Case Study | ScaleFront",
+    title: "RecovrX — Wellness Store Case Study | ScaleFront",
     description:
       "An architectural case study of RecovrX: custom dark-mode Shopify theme development, native cross-sell bundling, diagnostic navigation, and a tiered-reward cart.",
-    url: "https://scalefront.io/work/recovrx",
+    url: "https://www.scalefront.io/work/recovrx",
     siteName: "ScaleFront",
     type: "article",
     images: [
@@ -46,8 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "RecovrX — Custom Shopify Theme & High-Ticket CRO Case Study | ScaleFront",
+    title: "RecovrX — Wellness Store Case Study | ScaleFront",
     description:
       "Custom Shopify theme architecture for athletic recovery: diagnostic navigation, 4-item cross-sell bundles, and tiered cart rewards.",
     images: ["https://scalefront.io/portfolio/recovrx/covers/cover.png"],
@@ -315,9 +312,9 @@ export default function RecovrXPage() {
                   />
                 </div>
                 <div className="p-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] shadow-[3px_3px_0_var(--sf-ink)]">
-                  <h4 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
+                  <h3 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
                     01. High-Impact Flagship Hero
-                  </h4>
+                  </h3>
                   <p className="text-xs text-[var(--sf-ink-soft)] leading-relaxed">
                     Full-bleed dark athletic hero slider with bold typographic
                     hierarchy, top scrolling free-shipping ticker, and direct
@@ -337,9 +334,9 @@ export default function RecovrXPage() {
                   />
                 </div>
                 <div className="p-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] shadow-[3px_3px_0_var(--sf-ink)]">
-                  <h4 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
+                  <h3 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
                     02. "Shop by Concern" Diagnostic Matrix
-                  </h4>
+                  </h3>
                   <p className="text-xs text-[var(--sf-ink-soft)] leading-relaxed">
                     Visual diagnostic cards (<em>Muscle Pain</em>,{" "}
                     <em>Mobility</em>, <em>Recovery</em>) that immediately
@@ -351,51 +348,49 @@ export default function RecovrXPage() {
             </div>
 
             {/* 4-PILLAR TRUST BAR FEATURE */}
-            <div className="border-2 border-[var(--sf-ink)] bg-[#171717] text-white p-6 shadow-[5px_5px_0_var(--sf-ink)] mb-12">
-              <div className="font-mono text-xs font-bold uppercase tracking-wider text-red-400 mb-4 flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4" /> 4-Pillar Buyer Protection
-                Architecture
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div className="border border-neutral-800 bg-neutral-900/80 p-3.5">
-                  <div className="flex items-center gap-2 text-red-500 font-mono text-xs font-bold mb-1">
-                    <Truck className="w-4 h-4" /> FAST SHIPPING
+            <div className="border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] p-6 shadow-[4px_4px_0_var(--sf-ink)] mb-12">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-[var(--sf-ink)]/20">
+                <div className="pt-4 md:pt-0">
+                  <ShieldCheck className="w-6 h-6 text-[var(--sf-primary)] mx-auto mb-2" />
+                  <div className="font-serif font-bold text-sm text-[var(--sf-ink)]">
+                    1-Year Warranty
                   </div>
-                  <div className="text-xs text-neutral-300 font-sans">
-                    Free doorstep delivery on orders over ₹999 / $500.
+                  <div className="text-xs text-[var(--sf-ink-soft)] font-sans mt-0.5">
+                    Full hardware protection
                   </div>
                 </div>
-                <div className="border border-neutral-800 bg-neutral-900/80 p-3.5">
-                  <div className="flex items-center gap-2 text-red-500 font-mono text-xs font-bold mb-1">
-                    <RotateCcw className="w-4 h-4" /> 30-DAY RETURNS
+                <div className="pt-4 md:pt-0">
+                  <RotateCcw className="w-6 h-6 text-[var(--sf-primary)] mx-auto mb-2" />
+                  <div className="font-serif font-bold text-sm text-[var(--sf-ink)]">
+                    30-Day Money Back
                   </div>
-                  <div className="text-xs text-neutral-300 font-sans">
-                    Risk-free home trial guarantee with prepaid returns.
-                  </div>
-                </div>
-                <div className="border border-neutral-800 bg-neutral-900/80 p-3.5">
-                  <div className="flex items-center gap-2 text-red-500 font-mono text-xs font-bold mb-1">
-                    <Shield className="w-4 h-4" /> 1-YEAR WARRANTY
-                  </div>
-                  <div className="text-xs text-neutral-300 font-sans">
-                    Clinical grade manufacturing coverage on all motors and
-                    chassis.
+                  <div className="text-xs text-[var(--sf-ink-soft)] font-sans mt-0.5">
+                    Zero-risk trial period
                   </div>
                 </div>
-                <div className="border border-neutral-800 bg-neutral-900/80 p-3.5">
-                  <div className="flex items-center gap-2 text-red-500 font-mono text-xs font-bold mb-1">
-                    <ShieldCheck className="w-4 h-4" /> SECURE CHECKOUT
+                <div className="pt-4 md:pt-0">
+                  <Truck className="w-6 h-6 text-[var(--sf-primary)] mx-auto mb-2" />
+                  <div className="font-serif font-bold text-sm text-[var(--sf-ink)]">
+                    Free Express Shipping
                   </div>
-                  <div className="text-xs text-neutral-300 font-sans">
-                    256-bit bank-grade encryption via Shopify PCI-DSS
-                    compliance.
+                  <div className="text-xs text-[var(--sf-ink-soft)] font-sans mt-0.5">
+                    On all orders over $99
+                  </div>
+                </div>
+                <div className="pt-4 md:pt-0">
+                  <Activity className="w-6 h-6 text-[var(--sf-primary)] mx-auto mb-2" />
+                  <div className="font-serif font-bold text-sm text-[var(--sf-ink)]">
+                    Physiologist Approved
+                  </div>
+                  <div className="text-xs text-[var(--sf-ink-soft)] font-sans mt-0.5">
+                    Designed for recovery
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* SCREENSHOT PAIR: RECOVERY/RELIEF SHOWCASE & REAL RESULTS */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* HOME SCREENSHOTS PART 2 */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-3">
                 <div className="border-2 border-[var(--sf-ink)] bg-black shadow-[6px_6px_0_var(--sf-ink)] overflow-hidden">
                   <Image
@@ -407,9 +402,9 @@ export default function RecovrXPage() {
                   />
                 </div>
                 <div className="p-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] shadow-[3px_3px_0_var(--sf-ink)]">
-                  <h4 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
+                  <h3 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
                     03. Split Clinical Feature Showcase
-                  </h4>
+                  </h3>
                   <p className="text-xs text-[var(--sf-ink-soft)] leading-relaxed">
                     High-contrast product cards with embedded scientific badges
                     (
@@ -432,9 +427,9 @@ export default function RecovrXPage() {
                   />
                 </div>
                 <div className="p-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] shadow-[3px_3px_0_var(--sf-ink)]">
-                  <h4 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
+                  <h3 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
                     04. Flagship Specs & Verified Athlete Social Proof
-                  </h4>
+                  </h3>
                   <p className="text-xs text-[var(--sf-ink-soft)] leading-relaxed">
                     Engineering highlights (16mm amplitude, QuietForce Tech™,
                     300-min battery) paired with verified buyer reviews
@@ -552,9 +547,9 @@ export default function RecovrXPage() {
                   />
                 </div>
                 <div className="p-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] shadow-[3px_3px_0_var(--sf-ink)]">
-                  <h4 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
+                  <h3 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
                     01. Structured Buy Box & Multi-SKU Bundling
-                  </h4>
+                  </h3>
                   <p className="text-xs text-[var(--sf-ink-soft)] leading-relaxed">
                     Featuring category tag pills (<em>Muscle Recovery</em>,{" "}
                     <em>Electrolytes</em>, <em>Hydration</em>), instant flavor
@@ -575,9 +570,9 @@ export default function RecovrXPage() {
                   />
                 </div>
                 <div className="p-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] shadow-[3px_3px_0_var(--sf-ink)]">
-                  <h4 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
+                  <h3 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
                     02. Benefits Grid, Clinical FAQs & Sticky Bar
-                  </h4>
+                  </h3>
                   <p className="text-xs text-[var(--sf-ink-soft)] leading-relaxed">
                     4-column physiological benefit badges, collapsible accordion
                     drawers for pre-purchase hesitation, and a bottom-docked
@@ -747,9 +742,9 @@ export default function RecovrXPage() {
                   />
                 </div>
                 <div className="p-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)] shadow-[3px_3px_0_var(--sf-ink)]">
-                  <h4 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
+                  <h3 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
                     01. Instant AJAX Predictive Search
-                  </h4>
+                  </h3>
                   <p className="text-xs text-[var(--sf-ink-soft)] leading-relaxed">
                     Lightweight search modal categorizing live query results
                     across Collections (<em>Best Selling</em>,{" "}
@@ -770,9 +765,9 @@ export default function RecovrXPage() {
                   />
                 </div>
                 <div className="p-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)] shadow-[3px_3px_0_var(--sf-ink)]">
-                  <h4 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
+                  <h3 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
                     02. Dedicated FAQ Knowledge Base (/faq)
-                  </h4>
+                  </h3>
                   <p className="text-xs text-[var(--sf-ink-soft)] leading-relaxed">
                     Standalone support hub with 10 accordion sections addressing
                     shipping, 30-day return guarantees, clinical testing
@@ -976,7 +971,7 @@ export default function RecovrXPage() {
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <Link
-                  href="/contact"
+                  href="/contact-us"
                   className="px-7 py-3.5 border-2 border-white bg-[var(--sf-primary)] hover:bg-[var(--sf-primary-deep)] text-white font-mono text-sm font-bold uppercase tracking-wider shadow-[4px_4px_0_#ffffff] transition-all hover:translate-x-0.5 hover:translate-y-0.5"
                 >
                   Discuss Your Project

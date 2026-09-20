@@ -1,12 +1,19 @@
-import Header from "@/components/header-footer/Header";
 import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Zap, TrendingUp, AlertCircle, Timer, DollarSign } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Zap,
+  TrendingUp,
+  AlertCircle,
+  Timer,
+  DollarSign,
+} from "lucide-react";
 import DottedSeparator from "@/components/seperators/DottedSeperator";
 
 export const metadata: Metadata = {
-  title: "Shopify Performance Optimization Services | ScaleFront",
+  title: "Shopify Speed & Performance Optimization",
   description:
     "Speed up your Shopify store. Core Web Vitals optimization, image optimization, code cleanup. Improve conversions with faster page loads. Starting $800.",
   keywords: [
@@ -15,15 +22,24 @@ export const metadata: Metadata = {
     "Shopify page speed",
     "Core Web Vitals Shopify",
     "Shopify store optimization",
-    "Shopify load time"
+    "Shopify load time",
   ],
-  openGraph: {
-    title: "Shopify Performance Optimization Services | ScaleFront",
-    description: "Speed up your Shopify store and improve conversions with professional performance optimization.",
-    type: "website",
-  },
   alternates: {
     canonical: "/services/performance-optimization",
+  },
+  openGraph: {
+    title: "Shopify Speed & Performance Optimization",
+    description:
+      "Speed up your Shopify store and improve conversions with professional performance optimization.",
+    url: "https://www.scalefront.io/services/performance-optimization",
+    siteName: "ScaleFront",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shopify Speed & Performance Optimization",
+    description:
+      "Speed up your Shopify store and improve conversions with professional performance optimization.",
   },
 };
 
@@ -36,22 +52,21 @@ export default function PerformanceOptimizationPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "name": "Shopify Performance Optimization",
-            "provider": {
+            name: "Shopify Performance Optimization",
+            provider: {
               "@type": "Organization",
-              "name": "ScaleFront"
+              name: "ScaleFront",
             },
-            "description": "Professional Shopify store speed optimization services to improve Core Web Vitals and conversions.",
-            "offers": {
+            description:
+              "Professional Shopify store speed optimization services to improve Core Web Vitals and conversions.",
+            offers: {
               "@type": "Offer",
-              "priceRange": "$800-30,000",
-              "priceCurrency": "USD"
-            }
-          })
+              priceRange: "$800-30,000",
+              priceCurrency: "USD",
+            },
+          }),
         }}
       />
-
-      <Header />
 
       {/* Hero Section with Contact CTA */}
       <section className="pt-24 pb-16 md:pt-32 md:pb-24">
@@ -71,11 +86,18 @@ export default function PerformanceOptimizationPage() {
             </p>
 
             <p className="text-base text-muted-foreground mb-8">
-              A 1-second delay in page load decreases conversions by 7%. If your store loads in 5 seconds instead of 2, you're losing 21% of potential sales. We optimize Shopify stores to load in under 2 seconds.
+              A 1-second delay in page load decreases conversions by 7%. If your
+              store loads in 5 seconds instead of 2, you're losing 21% of
+              potential sales. We optimize Shopify stores to load in under 2
+              seconds.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
-              <Button size="lg" asChild className="bg-[#60DB36] hover:bg-[#50CB26]">
+              <Button
+                size="lg"
+                asChild
+                className="bg-[#60DB36] hover:bg-[#50CB26]"
+              >
                 <Link href="/contact-us">
                   Schedule a Speed Audit
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -137,10 +159,12 @@ export default function PerformanceOptimizationPage() {
           <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl p-8">
             <h3 className="font-semibold text-lg mb-4">Real Example</h3>
             <p className="text-muted-foreground mb-4">
-              A store doing $50K monthly revenue with 3% conversion and 5-second load time.
+              A store doing $50K monthly revenue with 3% conversion and 5-second
+              load time.
             </p>
             <p className="font-semibold text-lg text-primary">
-              Optimizing to 2 seconds could add $10.5K monthly revenue (21% conversion boost).
+              Optimizing to 2 seconds could add $10.5K monthly revenue (21%
+              conversion boost).
             </p>
           </div>
         </div>
@@ -162,7 +186,8 @@ export default function PerformanceOptimizationPage() {
                 price: "$5,000-8,000",
                 timeline: "1-2 weeks",
                 results: "30-50% load time reduction",
-                description: "Comprehensive performance analysis with immediate improvements.",
+                description:
+                  "Comprehensive performance analysis with immediate improvements.",
                 analyze: [
                   "Page load times (desktop/mobile)",
                   "Core Web Vitals (LCP, FID, CLS)",
@@ -170,22 +195,23 @@ export default function PerformanceOptimizationPage() {
                   "JavaScript/CSS bloat",
                   "App performance impact",
                   "Third-party script analysis",
-                  "Hosting and CDN configuration"
+                  "Hosting and CDN configuration",
                 ],
                 implement: [
                   "Image optimization and lazy loading",
                   "Remove unused apps",
                   "Optimize third-party scripts",
                   "Enable caching",
-                  "Minify CSS/JavaScript"
-                ]
+                  "Minify CSS/JavaScript",
+                ],
               },
               {
                 name: "Complete Performance Overhaul",
                 price: "$12,000-30,000",
                 timeline: "4-6 weeks",
                 results: "50-70% load time reduction, perfect Core Web Vitals",
-                description: "Comprehensive optimization for maximum performance.",
+                description:
+                  "Comprehensive optimization for maximum performance.",
                 analyze: [],
                 implement: [
                   "Everything in Speed Audit",
@@ -197,8 +223,8 @@ export default function PerformanceOptimizationPage() {
                   "Critical CSS implementation",
                   "JavaScript optimization",
                   "Mobile-specific optimization",
-                  "Core Web Vitals perfection"
-                ]
+                  "Core Web Vitals perfection",
+                ],
               },
               {
                 name: "Ongoing Performance Monitoring",
@@ -213,20 +239,31 @@ export default function PerformanceOptimizationPage() {
                   "App performance tracking",
                   "New issue identification",
                   "Core Web Vitals monitoring",
-                  "Mobile performance focus"
-                ]
-              }
+                  "Mobile performance focus",
+                ],
+              },
             ].map((service, index) => (
-              <div key={index} className="bg-card rounded-xl border border-border p-8">
+              <div
+                key={index}
+                className="bg-card rounded-xl border border-border p-8"
+              >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                   <div>
                     <h3 className="text-2xl font-bold mb-2">{service.name}</h3>
-                    <p className="text-muted-foreground mb-4">{service.description}</p>
+                    <p className="text-muted-foreground mb-4">
+                      {service.description}
+                    </p>
                   </div>
                   <div className="text-right">
-                    <div className="text-3xl font-bold text-primary mb-1">{service.price}</div>
-                    <div className="text-sm text-muted-foreground">Timeline: {service.timeline}</div>
-                    <div className="text-sm font-medium text-foreground mt-1">{service.results}</div>
+                    <div className="text-3xl font-bold text-primary mb-1">
+                      {service.price}
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      Timeline: {service.timeline}
+                    </div>
+                    <div className="text-sm font-medium text-foreground mt-1">
+                      {service.results}
+                    </div>
                   </div>
                 </div>
 
@@ -238,19 +275,27 @@ export default function PerformanceOptimizationPage() {
                         {service.analyze.map((item) => (
                           <li key={item} className="flex items-start gap-2">
                             <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                            <span className="text-sm text-muted-foreground">{item}</span>
+                            <span className="text-sm text-muted-foreground">
+                              {item}
+                            </span>
                           </li>
                         ))}
                       </ul>
                     </div>
                   )}
                   <div>
-                    <h4 className="font-semibold mb-3">{service.analyze.length > 0 ? "What We Implement:" : "What's Included:"}</h4>
+                    <h4 className="font-semibold mb-3">
+                      {service.analyze.length > 0
+                        ? "What We Implement:"
+                        : "What's Included:"}
+                    </h4>
                     <ul className="space-y-2">
                       {service.implement.map((item) => (
                         <li key={item} className="flex items-start gap-2">
                           <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-sm text-muted-foreground">{item}</span>
+                          <span className="text-sm text-muted-foreground">
+                            {item}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -280,15 +325,15 @@ export default function PerformanceOptimizationPage() {
                   "Images too large (MB instead of KB)",
                   "Wrong formats (JPG instead of WebP)",
                   "No lazy loading",
-                  "No responsive images"
+                  "No responsive images",
                 ],
                 fixes: [
                   "Compress all images",
                   "Convert to WebP/AVIF",
                   "Implement lazy loading",
-                  "Responsive image serving"
+                  "Responsive image serving",
                 ],
-                impact: "2-4 second improvement"
+                impact: "2-4 second improvement",
               },
               {
                 title: "Too Many Apps",
@@ -297,15 +342,15 @@ export default function PerformanceOptimizationPage() {
                   "15+ apps installed",
                   "Unused apps still loading code",
                   "Overlapping functionality",
-                  "Heavy apps (reviews, popups)"
+                  "Heavy apps (reviews, popups)",
                 ],
                 fixes: [
                   "Audit all apps",
                   "Remove unused apps",
                   "Replace heavy apps",
-                  "Consolidate functionality"
+                  "Consolidate functionality",
                 ],
-                impact: "1-3 second improvement"
+                impact: "1-3 second improvement",
               },
               {
                 title: "Bloated Theme Code",
@@ -314,15 +359,15 @@ export default function PerformanceOptimizationPage() {
                   "Old theme with legacy code",
                   "Multiple unused features",
                   "Inefficient Liquid code",
-                  "Unminified CSS/JS"
+                  "Unminified CSS/JS",
                 ],
                 fixes: [
                   "Remove unused code",
                   "Optimize Liquid logic",
                   "Minify assets",
-                  "Lazy load JavaScript"
+                  "Lazy load JavaScript",
                 ],
-                impact: "1-2 second improvement"
+                impact: "1-2 second improvement",
               },
               {
                 title: "Third-Party Scripts",
@@ -331,52 +376,67 @@ export default function PerformanceOptimizationPage() {
                   "Google Analytics loading slowly",
                   "Facebook Pixel blocking render",
                   "Chat widgets",
-                  "All loading synchronously"
+                  "All loading synchronously",
                 ],
                 fixes: [
                   "Async loading",
                   "Defer non-critical scripts",
                   "Remove unnecessary scripts",
-                  "Optimize loading order"
+                  "Optimize loading order",
                 ],
-                impact: "0.5-1.5 second improvement"
-              }
+                impact: "0.5-1.5 second improvement",
+              },
             ].map((issue) => (
-              <div key={issue.title} className="bg-card rounded-xl border border-border p-6">
+              <div
+                key={issue.title}
+                className="bg-card rounded-xl border border-border p-6"
+              >
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="font-semibold text-lg">{issue.title}</h3>
-                  <span className="text-sm font-medium text-primary">{issue.percentage}</span>
+                  <span className="text-sm font-medium text-primary">
+                    {issue.percentage}
+                  </span>
                 </div>
 
                 <div className="space-y-4">
                   <div>
-                    <h4 className="text-sm font-semibold mb-2 text-muted-foreground">Problems:</h4>
+                    <h4 className="text-sm font-semibold mb-2 text-muted-foreground">
+                      Problems:
+                    </h4>
                     <ul className="space-y-1">
                       {issue.problems.map((problem) => (
                         <li key={problem} className="flex items-start gap-2">
                           <div className="rounded-full bg-muted p-1 mt-0.5">
                             <div className="w-1.5 h-1.5 rounded-full bg-muted-foreground" />
                           </div>
-                          <span className="text-sm text-muted-foreground">{problem}</span>
+                          <span className="text-sm text-muted-foreground">
+                            {problem}
+                          </span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   <div>
-                    <h4 className="text-sm font-semibold mb-2 text-foreground">Our Fix:</h4>
+                    <h4 className="text-sm font-semibold mb-2 text-foreground">
+                      Our Fix:
+                    </h4>
                     <ul className="space-y-1">
                       {issue.fixes.map((fix) => (
                         <li key={fix} className="flex items-start gap-2">
                           <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-sm text-muted-foreground">{fix}</span>
+                          <span className="text-sm text-muted-foreground">
+                            {fix}
+                          </span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   <div className="pt-4 border-t border-border">
-                    <span className="text-sm font-medium text-primary">Impact: {issue.impact}</span>
+                    <span className="text-sm font-medium text-primary">
+                      Impact: {issue.impact}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -396,19 +456,23 @@ export default function PerformanceOptimizationPage() {
             </h2>
 
             <p className="text-lg text-muted-foreground mb-8">
-              A fashion brand with beautiful imagery had 7.2-second page loads on mobile. High bounce rate (72%) and low mobile conversion (1.1%).
+              A fashion brand with beautiful imagery had 7.2-second page loads
+              on mobile. High bounce rate (72%) and low mobile conversion
+              (1.1%).
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div>
-                <h3 className="font-semibold text-lg mb-4">Performance Issues Found</h3>
+                <h3 className="font-semibold text-lg mb-4">
+                  Performance Issues Found
+                </h3>
                 <ul className="space-y-2">
                   {[
                     "Hero images: 4.2MB each",
                     "18 apps installed (6 unused)",
                     "No lazy loading",
                     "Unoptimized theme code",
-                    "Heavy JavaScript libraries"
+                    "Heavy JavaScript libraries",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2">
                       <AlertCircle className="h-5 w-5 text-destructive flex-shrink-0 mt-0.5" />
@@ -418,7 +482,9 @@ export default function PerformanceOptimizationPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="font-semibold text-lg mb-4">Optimizations Made</h3>
+                <h3 className="font-semibold text-lg mb-4">
+                  Optimizations Made
+                </h3>
                 <ul className="space-y-2">
                   {[
                     "Compressed and converted images to WebP",
@@ -426,7 +492,7 @@ export default function PerformanceOptimizationPage() {
                     "Implemented lazy loading",
                     "Cleaned up theme code",
                     "Deferred non-critical JavaScript",
-                    "Optimized mobile experience"
+                    "Optimized mobile experience",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2">
                       <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
@@ -439,15 +505,40 @@ export default function PerformanceOptimizationPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
               {[
-                { metric: "Page Load Time", value: "7.2s → 1.9s", detail: "74% improvement" },
-                { metric: "Bounce Rate", value: "72% → 51%", detail: "Significant drop" },
-                { metric: "Mobile Conversion", value: "+109%", detail: "1.1% → 2.3%" },
-                { metric: "Core Web Vitals", value: "All Green", detail: "Perfect scores" }
+                {
+                  metric: "Page Load Time",
+                  value: "7.2s → 1.9s",
+                  detail: "74% improvement",
+                },
+                {
+                  metric: "Bounce Rate",
+                  value: "72% → 51%",
+                  detail: "Significant drop",
+                },
+                {
+                  metric: "Mobile Conversion",
+                  value: "+109%",
+                  detail: "1.1% → 2.3%",
+                },
+                {
+                  metric: "Core Web Vitals",
+                  value: "All Green",
+                  detail: "Perfect scores",
+                },
               ].map((stat) => (
-                <div key={stat.metric} className="bg-card rounded-lg p-4 border border-border">
-                  <div className="text-2xl font-bold text-primary mb-1">{stat.value}</div>
-                  <div className="text-sm font-medium text-foreground">{stat.metric}</div>
-                  <div className="text-xs text-muted-foreground">{stat.detail}</div>
+                <div
+                  key={stat.metric}
+                  className="bg-card rounded-lg p-4 border border-border"
+                >
+                  <div className="text-2xl font-bold text-primary mb-1">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm font-medium text-foreground">
+                    {stat.metric}
+                  </div>
+                  <div className="text-xs text-muted-foreground">
+                    {stat.detail}
+                  </div>
                 </div>
               ))}
             </div>
@@ -458,7 +549,9 @@ export default function PerformanceOptimizationPage() {
                 <span className="font-semibold text-lg">ROI</span>
               </div>
               <p className="text-muted-foreground">
-                <strong className="text-foreground">$15K investment.</strong> Mobile revenue increased <strong className="text-primary">$18K/month</strong>
+                <strong className="text-foreground">$15K investment.</strong>{" "}
+                Mobile revenue increased{" "}
+                <strong className="text-primary">$18K/month</strong>
               </p>
             </div>
           </div>
@@ -478,30 +571,33 @@ export default function PerformanceOptimizationPage() {
             {[
               {
                 q: "How fast can you make our store?",
-                a: "We aim for <2 seconds on mobile. Typically achieve 1.5-2.5 seconds depending on starting point and content."
+                a: "We aim for <2 seconds on mobile. Typically achieve 1.5-2.5 seconds depending on starting point and content.",
               },
               {
                 q: "Will optimization break our theme?",
-                a: "No. We test thoroughly and maintain all functionality. Performance improvements should never break features."
+                a: "No. We test thoroughly and maintain all functionality. Performance improvements should never break features.",
               },
               {
                 q: "How long do improvements last?",
-                a: "Permanent, unless you add heavy apps or large unoptimized images. That's why we offer monitoring retainers."
+                a: "Permanent, unless you add heavy apps or large unoptimized images. That's why we offer monitoring retainers.",
               },
               {
                 q: "Can you optimize any theme?",
-                a: "Yes. Some themes are easier to optimize than others, but all can be improved significantly."
+                a: "Yes. Some themes are easier to optimize than others, but all can be improved significantly.",
               },
               {
                 q: "What if we keep adding content?",
-                a: "We can set up automated image optimization and provide guidelines for maintaining performance."
+                a: "We can set up automated image optimization and provide guidelines for maintaining performance.",
               },
               {
                 q: "Do you optimize apps?",
-                a: "We can't change app code, but we can remove heavy apps, find lighter alternatives, or optimize how apps load."
-              }
+                a: "We can't change app code, but we can remove heavy apps, find lighter alternatives, or optimize how apps load.",
+              },
             ].map((faq, index) => (
-              <div key={index} className="bg-card rounded-lg border border-border p-6">
+              <div
+                key={index}
+                className="bg-card rounded-lg border border-border p-6"
+              >
                 <h3 className="font-semibold text-lg mb-3">{faq.q}</h3>
                 <p className="text-muted-foreground">{faq.a}</p>
               </div>
@@ -526,7 +622,12 @@ export default function PerformanceOptimizationPage() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10" asChild>
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-transparent border-white text-white hover:bg-white/10"
+              asChild
+            >
               <Link href="/pricing">View All Services</Link>
             </Button>
           </div>

@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog/posts";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://scalefront.io";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.scalefront.io";
   const lastModified = new Date();
 
   const blogPosts = await getAllPosts();
@@ -78,12 +78,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${baseUrl}/services/backend-api`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/conversion-optimization`,
       lastModified: lastModified,
       changeFrequency: "monthly",
       priority: 0.9,
@@ -186,19 +180,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
       images: [`${baseUrl}/portfolio/maison-luxe/covers/cover.png`],
     },
+    // Showcase & Apps
+    {
+      url: `${baseUrl}/portfolio`,
+      lastModified: lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/upsell-cross-sell-app-shopify`,
+      lastModified: lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
     // Legal pages
-    {
-      url: `${baseUrl}/privacy-policy`,
-      lastModified: lastModified,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/terms-of-service`,
-      lastModified: lastModified,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
     {
       url: `${baseUrl}/upsell-cross-sell-app/privacy-policy`,
       lastModified: lastModified,

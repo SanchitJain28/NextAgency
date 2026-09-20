@@ -131,7 +131,7 @@ export default function NotFound() {
             </Link>
 
             <Link
-              href="/services/conversion-optimization"
+              href="/services/cro-optimization"
               className="group p-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] hover:bg-white shadow-[3px_3px_0_var(--sf-ink)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[5px_5px_0_var(--sf-ink)] transition-all flex items-start justify-between gap-3"
             >
               <div>
@@ -147,7 +147,7 @@ export default function NotFound() {
             </Link>
 
             <Link
-              href="/contact"
+              href="/contact-us"
               className="group p-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] hover:bg-white shadow-[3px_3px_0_var(--sf-ink)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[5px_5px_0_var(--sf-ink)] transition-all flex items-start justify-between gap-3"
             >
               <div>

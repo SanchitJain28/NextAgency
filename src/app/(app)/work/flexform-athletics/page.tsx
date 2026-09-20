@@ -22,24 +22,22 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title:
-    "FlexForm Athletics — Custom Shopify Activewear Storefront Case Study | ScaleFront",
+  title: "FlexForm Athletics — Store Case Study",
   description:
-    "An architectural case study of FlexForm Athletics: custom Shopify activewear theme development, visual category discovery, fit assurance modules, and an in-drawer upsell cart.",
+    "Case study: Custom Shopify activewear theme for FlexForm Athletics. Featuring visual category discovery, fit assurance, and in-drawer upsells.",
   alternates: {
-    canonical: "https://scalefront.io/work/flexform-athletics",
+    canonical: "/work/flexform-athletics",
   },
   openGraph: {
-    title:
-      "FlexForm Athletics — Custom Shopify Activewear Storefront Case Study | ScaleFront",
+    title: "FlexForm Athletics — Store Case Study | ScaleFront",
     description:
-      "An architectural case study of FlexForm Athletics: custom Shopify activewear theme development, visual category discovery, fit assurance modules, and an in-drawer upsell cart.",
-    url: "https://scalefront.io/work/flexform-athletics",
+      "Case study: Custom Shopify activewear theme for FlexForm Athletics. Featuring visual category discovery, fit assurance, and in-drawer upsells.",
+    url: "https://www.scalefront.io/work/flexform-athletics",
     siteName: "ScaleFront",
     type: "article",
     images: [
       {
-        url: "https://scalefront.io/portfolio/flexform-athletics/covers/cover.png",
+        url: "https://www.scalefront.io/portfolio/flexform-athletics/covers/cover.png",
         width: 1200,
         height: 675,
         alt: "FlexForm Athletics custom Shopify activewear storefront case study",
@@ -48,12 +46,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "FlexForm Athletics — Custom Shopify Activewear Storefront Case Study | ScaleFront",
+    title: "FlexForm Athletics — Store Case Study | ScaleFront",
     description:
       "Custom Shopify activewear storefront: visual category discovery, fit assurance modules, and in-drawer upsells.",
     images: [
-      "https://scalefront.io/portfolio/flexform-athletics/covers/cover.png",
+      "https://www.scalefront.io/portfolio/flexform-athletics/covers/cover.png",
     ],
   },
 };
@@ -332,9 +329,9 @@ export default function FlexFormAthleticsPage() {
                   />
                 </div>
                 <div className="p-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] shadow-[3px_3px_0_var(--sf-ink)]">
-                  <h4 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
+                  <h3 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
                     Tabbed &quot;Shop by Category&quot; Grid
-                  </h4>
+                  </h3>
                   <p className="text-xs text-[var(--sf-ink-soft)] leading-relaxed">
                     Interactive filter pills (<em>Tops</em>, <em>Sports Bras</em>, <em>Best Sellers</em>, <em>Leggings</em>) dynamically switching product grids with hover quick-add triggers.
                   </p>
@@ -352,9 +349,9 @@ export default function FlexFormAthleticsPage() {
                   />
                 </div>
                 <div className="p-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] shadow-[3px_3px_0_var(--sf-ink)]">
-                  <h4 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
+                  <h3 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
                     Community &amp; Lifestyle Lookbook
-                  </h4>
+                  </h3>
                   <p className="text-xs text-[var(--sf-ink-soft)] leading-relaxed">
                     Customer review spotlight paired with a 12-image UGC lifestyle gallery showcasing real styling and gym workouts.
                   </p>
@@ -487,9 +484,9 @@ export default function FlexFormAthleticsPage() {
                   />
                 </div>
                 <div className="p-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] shadow-[3px_3px_0_var(--sf-ink)]">
-                  <h4 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
+                  <h3 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
                     4 Performance Guarantees &amp; Activity Bar
-                  </h4>
+                  </h3>
                   <p className="text-xs text-[var(--sf-ink-soft)] leading-relaxed">
                     Addressing activewear concerns with explicit badges: <em>No Camel Toe Show</em>, <em>Anti-Slip</em>, <em>Squat Proof</em>, and <em>4-Way Stretch</em>.
                   </p>
@@ -507,9 +504,9 @@ export default function FlexFormAthleticsPage() {
                   />
                 </div>
                 <div className="p-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] shadow-[3px_3px_0_var(--sf-ink)]">
-                  <h4 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
+                  <h3 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-1">
                     Complementary Cross-Sells &amp; Reviews
-                  </h4>
+                  </h3>
                   <p className="text-xs text-[var(--sf-ink-soft)] leading-relaxed">
                     &quot;You may also like&quot; 4-item outfit builder grid paired with verified customer review distribution breakdowns.
                   </p>
@@ -669,7 +666,7 @@ export default function FlexFormAthleticsPage() {
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <Link
-                  href="/contact"
+                  href="/contact-us"
                   className="px-7 py-3.5 border-2 border-white bg-[var(--sf-primary)] hover:bg-[var(--sf-primary-deep)] text-white font-mono text-sm font-bold uppercase tracking-wider shadow-[4px_4px_0_#ffffff] transition-all hover:translate-x-0.5 hover:translate-y-0.5"
                 >
                   Discuss Your Project

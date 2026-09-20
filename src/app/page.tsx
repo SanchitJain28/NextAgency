@@ -13,21 +13,21 @@ import FAQ from "@/components/index/faq";
 import ContactCTA from "@/components/index/contact-cta";
 
 export const metadata: Metadata = {
-  title: "Shopify Development Agency India | ScaleFront",
+  title: "Shopify Development Agency & Experts",
   description:
-    "ScaleFront is an expert Shopify development agency based in India. We build custom Shopify apps, headless storefronts, and high-converting themes for DTC brands doing $1M+. Shopify Plus partners.",
-  alternates: { canonical: "https://scalefront.io/" },
+    "ScaleFront is an elite Shopify development agency. We engineer custom themes, private apps, headless stores, and CRO fixes for scaling brands.",
+  alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Shopify Development Agency India — ScaleFront",
+    title: "Shopify Development Agency & Experts | ScaleFront",
     description:
-      "Custom Shopify apps, headless commerce, theme development, CRO, and Shopify Plus migration for scaling brands.",
-    url: "https://scalefront.io",
+      "ScaleFront is an elite Shopify development agency. We engineer custom themes, private apps, headless stores, and CRO fixes for scaling brands.",
+    url: "https://www.scalefront.io",
     siteName: "ScaleFront",
     type: "website",
     images: [
       {
-        url: "https://scalefront.io/og-image.jpg",
+        url: "https://www.scalefront.io/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "ScaleFront — Shopify Development Agency",
@@ -36,10 +36,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shopify Development Agency India — ScaleFront",
+    title: "Shopify Development Agency & Experts | ScaleFront",
     description:
-      "Custom Shopify apps, headless commerce, and Shopify Plus development for DTC brands.",
-    images: ["https://scalefront.io/og-image.jpg"],
+      "ScaleFront is an elite Shopify development agency. We engineer custom themes, private apps, headless stores, and CRO fixes for scaling brands.",
+    images: ["https://www.scalefront.io/og-image.jpg"],
   },
 };
 
@@ -49,10 +49,10 @@ export default function HomePage() {
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://scalefront.io/#organization",
+        "@id": "https://www.scalefront.io/#organization",
         name: "ScaleFront",
-        url: "https://scalefront.io",
-        logo: "https://scalefront.io/logo/updated_logo.png",
+        url: "https://www.scalefront.io",
+        logo: "https://www.scalefront.io/logo/updated_logo.png",
         sameAs: [
           "https://twitter.com/scalefront",
           "https://linkedin.com/company/scalefront",

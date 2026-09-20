@@ -7,7 +7,7 @@ import { WhatsAppIcon } from "@/icons/whatsapp";
 import { CONTACT_INFO } from "@/hooks";
 
 export const metadata: Metadata = {
-  title: "Contact ScaleFront - Get Your Custom Shopify & Web Proposal",
+  title: "Contact Us — Get a Project Proposal",
   description:
     "Tell us about your Shopify store goals. Get a direct reply from our development team with clear steps, timelines, and pricing within 24 hours.",
   keywords: [
@@ -18,9 +18,11 @@ export const metadata: Metadata = {
     "Shopify agency contact",
   ],
   openGraph: {
-    title: "Contact ScaleFront - Shopify Development & Engineering",
+    title: "Contact Us — Get a Project Proposal | ScaleFront",
     description:
       "Direct developer response within 24 hours. Custom Shopify apps, custom theme builds, and speed optimization.",
+    url: "https://www.scalefront.io/contact-us",
+    siteName: "ScaleFront",
     type: "website",
   },
   alternates: {
@@ -29,12 +31,7 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  const {
-    displayPhone,
-    telInternational,
-    email,
-    waPrefilled,
-  } = CONTACT_INFO;
+  const { displayPhone, telInternational, email, waPrefilled } = CONTACT_INFO;
 
   return (
     <main className="min-h-screen w-full bg-[var(--sf-paper-sunken)] text-[var(--sf-ink)]">

@@ -20,19 +20,17 @@ import {
 import DottedSeparator from "@/components/seperators/DottedSeperator";
 
 export const metadata: Metadata = {
-  title:
-    "Industrial Supply Direct — Shopify B2B Development Case Study | ScaleFront",
+  title: "Industrial Supply Direct — B2B Case Study",
   description:
-    "A deep dive into building Industrial Supply Direct: custom Shopify B2B architecture, tabbed technical specifications, tiered volume pricing, and automated quote requests.",
+    "Case study: Industrial Supply Direct B2B transformation. 50k+ SKU catalog navigation, tiered pricing rules, and fast bulk ordering portal.",
   alternates: {
-    canonical: "https://scalefront.io/work/industrial-supply-direct",
+    canonical: "/work/industrial-supply-direct",
   },
   openGraph: {
-    title:
-      "Industrial Supply Direct — Shopify B2B Development Case Study | ScaleFront",
+    title: "Industrial Supply Direct — B2B Case Study | ScaleFront",
     description:
-      "A deep dive into building Industrial Supply Direct: custom Shopify B2B architecture, tabbed technical specifications, tiered volume pricing, and automated quote requests.",
-    url: "https://scalefront.io/work/industrial-supply-direct",
+      "Case study: Industrial Supply Direct B2B transformation. 50k+ SKU catalog navigation, tiered pricing rules, and fast bulk ordering portal.",
+    url: "https://www.scalefront.io/work/industrial-supply-direct",
     siteName: "ScaleFront",
     type: "article",
     images: [
@@ -46,8 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Industrial Supply Direct — Shopify B2B Development Case Study | ScaleFront",
+    title: "Industrial Supply Direct — B2B Case Study | ScaleFront",
     description:
       "Custom Shopify B2B architecture for technical procurement: tabbed specs, volume pricing, and seamless quote requests.",
     images: [
@@ -109,7 +106,7 @@ export default function IndustrialSupplyDirectPage() {
             </Link>
             <span>/</span>
             <Link
-              href="/portfolio"
+              href="/work"
               className="hover:text-[var(--sf-primary)] transition-colors"
             >
               Work
@@ -449,10 +446,10 @@ export default function IndustrialSupplyDirectPage() {
             </div>
 
             <div className="p-5 bg-[var(--sf-paper-sunken)] border-2 border-[var(--sf-ink)] space-y-3">
-              <h4 className="text-sm font-bold font-mono uppercase text-[var(--sf-ink)] flex items-center gap-2">
+              <h3 className="text-sm font-bold font-mono uppercase text-[var(--sf-ink)] flex items-center gap-2">
                 <Workflow className="w-4 h-4 text-[var(--sf-primary)]" />
                 How the Discount Rules Execute in Checkout:
-              </h4>
+              </h3>
               <p className="text-xs sm:text-sm text-[var(--sf-ink-soft)] leading-relaxed">
                 On standard Shopify stores, volume discount apps often create
                 dummy variant duplicates or require external script tags. In
@@ -673,9 +670,9 @@ export default function IndustrialSupplyDirectPage() {
             <span className="text-3xl font-black text-[var(--sf-primary)] font-mono block">
               0.6s
             </span>
-            <h4 className="text-sm font-bold text-[var(--sf-ink)]">
+            <h3 className="text-sm font-bold text-[var(--sf-ink)]">
               First Contentful Paint (FCP)
-            </h4>
+            </h3>
             <p className="text-xs text-[var(--sf-ink-soft)] leading-relaxed">
               Static Liquid rendering and zero external CSS frameworks ensure
               immediate browser paint.
@@ -686,9 +683,9 @@ export default function IndustrialSupplyDirectPage() {
             <span className="text-3xl font-black text-emerald-700 font-mono block">
               &lt; 0.01
             </span>
-            <h4 className="text-sm font-bold text-[var(--sf-ink)]">
+            <h3 className="text-sm font-bold text-[var(--sf-ink)]">
               Cumulative Layout Shift (CLS)
-            </h4>
+            </h3>
             <p className="text-xs text-[var(--sf-ink-soft)] leading-relaxed">
               Pre-allocated table bounding boxes prevent visual jumps while
               specification matrices load.
@@ -699,9 +696,9 @@ export default function IndustrialSupplyDirectPage() {
             <span className="text-3xl font-black text-[var(--sf-ink)] font-mono block">
               0 Apps
             </span>
-            <h4 className="text-sm font-bold text-[var(--sf-ink)]">
+            <h3 className="text-sm font-bold text-[var(--sf-ink)]">
               For Spec Tables & Tiers
-            </h4>
+            </h3>
             <p className="text-xs text-[var(--sf-ink-soft)] leading-relaxed">
               All tabular data, volume calculations, and RFQ forms execute
               natively inside the theme code.
@@ -712,9 +709,9 @@ export default function IndustrialSupplyDirectPage() {
             <span className="text-3xl font-black text-[var(--sf-gold)] font-mono block">
               100%
             </span>
-            <h4 className="text-sm font-bold text-[var(--sf-ink)]">
+            <h3 className="text-sm font-bold text-[var(--sf-ink)]">
               Direct Developer Access
-            </h4>
+            </h3>
             <p className="text-xs text-[var(--sf-ink-soft)] leading-relaxed">
               No account managers or middleman handoffs. You work directly with
               the developer building the store.
@@ -832,10 +829,10 @@ export default function IndustrialSupplyDirectPage() {
               </Link>
 
               <Link
-                href="/portfolio"
+                href="/work"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-transparent text-white text-sm font-mono font-bold uppercase tracking-wider border-2 border-white hover:bg-white hover:text-[var(--sf-ink)] transition-all"
               >
-                <span>View More Portfolio Builds</span>
+                <span>View More Case Studies</span>
               </Link>
             </div>
           </div>

@@ -14,17 +14,17 @@ import {
 import ComparisonTable from "@/components/shared/ComparisonTable";
 
 export const metadata: Metadata = {
-  title: "Custom Shopify App Development Services | ScaleFront",
+  title: "Custom Shopify App Development",
   description:
-    "We build private Shopify apps that connect your store to internal ERPs, warehouses, and custom workflows — plus public apps published to the Shopify App Store.",
+    "We build private Shopify apps connecting stores to internal ERPs, warehouses, and custom workflows, plus public apps published to the Shopify App Store.",
   alternates: {
-    canonical: "https://scalefront.io/services/custom-shopify-apps",
+    canonical: "/services/custom-shopify-apps",
   },
   openGraph: {
-    title: "Custom Shopify App Development Services | ScaleFront",
+    title: "Custom Shopify App Development",
     description:
-      "We build private Shopify apps that connect your store to internal ERPs, warehouses, and custom workflows — plus public apps published to the Shopify App Store.",
-    url: "https://scalefront.io/services/custom-shopify-apps",
+      "We build private Shopify apps connecting stores to internal ERPs, warehouses, and custom workflows, plus public apps published to the Shopify App Store.",
+    url: "https://www.scalefront.io/services/custom-shopify-apps",
     siteName: "ScaleFront",
     type: "website",
     images: [
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Custom Shopify App Development Services | ScaleFront",
+    title: "Custom Shopify App Development",
     description:
-      "We build private Shopify apps that connect your store to internal ERPs, warehouses, and custom workflows — plus public apps published to the Shopify App Store.",
+      "We build private Shopify apps connecting stores to internal ERPs, warehouses, and custom workflows, plus public apps published to the Shopify App Store.",
     images: ["https://scalefront.io/og-image.jpg"],
   },
 };

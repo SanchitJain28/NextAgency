@@ -5,22 +5,22 @@ import { ArrowRight } from "lucide-react";
 import ComparisonTable from "@/components/shared/ComparisonTable";
 
 export const metadata: Metadata = {
-  title: "Shopify Theme Development Services | ScaleFront",
+  title: "Shopify Theme Development Services",
   description:
     "We build custom Shopify themes in clean Liquid and Online Store 2.0. Tailored layouts, fast load speeds, and drag-and-drop merchant editing.",
   alternates: {
-    canonical: "https://scalefront.io/services/theme-development",
+    canonical: "/services/theme-development",
   },
   openGraph: {
-    title: "Shopify Theme Development Services | ScaleFront",
+    title: "Shopify Theme Development Services",
     description:
       "We build custom Shopify themes in clean Liquid and Online Store 2.0. Tailored layouts, fast load speeds, and drag-and-drop merchant editing.",
-    url: "https://scalefront.io/services/theme-development",
+    url: "https://www.scalefront.io/services/theme-development",
     siteName: "ScaleFront",
     type: "website",
     images: [
       {
-        url: "https://scalefront.io/og-image.jpg",
+        url: "https://www.scalefront.io/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Shopify Theme Development by ScaleFront",
@@ -29,10 +29,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shopify Theme Development Services | ScaleFront",
+    title: "Shopify Theme Development Services",
     description:
       "We build custom Shopify themes in clean Liquid and Online Store 2.0. Tailored layouts, fast load speeds, and drag-and-drop merchant editing.",
-    images: ["https://scalefront.io/og-image.jpg"],
+    images: ["https://www.scalefront.io/og-image.jpg"],
   },
 };
 
@@ -326,7 +326,8 @@ export default function ThemeDevelopmentPage() {
                         <span className="font-semibold text-emerald-800">
                           ✅ Coding and building the theme
                         </span>{" "}
-                        from scratch using clean Liquid, CSS, and native JavaScript.
+                        from scratch using clean Liquid, CSS, and native
+                        JavaScript.
                       </>
                     ),
                     excluded: (
@@ -352,7 +353,8 @@ export default function ThemeDevelopmentPage() {
                         <span className="font-semibold text-rose-700">
                           ❌ Relying on heavy drag-and-drop page builders
                         </span>{" "}
-                        (like PageFly or Shogun) that slow down mobile load times.
+                        (like PageFly or Shogun) that slow down mobile load
+                        times.
                       </>
                     ),
                   },
@@ -362,7 +364,8 @@ export default function ThemeDevelopmentPage() {
                         <span className="font-semibold text-emerald-800">
                           ✅ Building native product features
                         </span>{" "}
-                        (interactive drawer carts, custom bundle builders, size guides).
+                        (interactive drawer carts, custom bundle builders, size
+                        guides).
                       </>
                     ),
                     excluded: (
@@ -370,7 +373,8 @@ export default function ThemeDevelopmentPage() {
                         <span className="font-semibold text-rose-700">
                           ❌ Stacking 12+ third-party apps
                         </span>{" "}
-                        with expensive monthly fees and duplicate tracking scripts.
+                        with expensive monthly fees and duplicate tracking
+                        scripts.
                       </>
                     ),
                   },
@@ -388,7 +392,8 @@ export default function ThemeDevelopmentPage() {
                         <span className="font-semibold text-rose-700">
                           ❌ Forcing your product catalog
                         </span>{" "}
-                        into rigid layout boxes that were designed for a different industry.
+                        into rigid layout boxes that were designed for a
+                        different industry.
                       </>
                     ),
                   },
@@ -413,9 +418,9 @@ export default function ThemeDevelopmentPage() {
                 >
                   custom shopify development
                 </Link>
-                , a custom theme gives you a fast store that you can
-                manage effortlessly without depending on developers for daily
-                content updates.
+                , a custom theme gives you a fast store that you can manage
+                effortlessly without depending on developers for daily content
+                updates.
               </p>
             </div>
           </section>
@@ -645,7 +650,10 @@ export default function ThemeDevelopmentPage() {
 
             <div className="space-y-5 text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed mb-8">
               <p>
-                A successful custom theme project follows a structured engineering workflow. From initial planning to post-launch training, every stage is designed to ensure clean code, high speed, and effortless merchant control.
+                A successful custom theme project follows a structured
+                engineering workflow. From initial planning to post-launch
+                training, every stage is designed to ensure clean code, high
+                speed, and effortless merchant control.
               </p>
 
               <div className="space-y-8 my-6">
@@ -664,20 +672,31 @@ export default function ThemeDevelopmentPage() {
                     Discovery and Strategy
                   </h3>
                   <p className="text-base text-[var(--sf-ink-soft)] leading-relaxed mb-4">
-                    We start by analyzing how your business runs and what your buyers need before writing a single line of code.
+                    We start by analyzing how your business runs and what your
+                    buyers need before writing a single line of code.
                   </p>
                   <ul className="space-y-2 text-base text-[var(--sf-ink)]">
                     <li>
-                      <strong>Goal Clarification:</strong> We define your core business targets, whether that is improving mobile conversion, reducing cart drop-off, or supporting catalog expansion.
+                      <strong>Goal Clarification:</strong> We define your core
+                      business targets, whether that is improving mobile
+                      conversion, reducing cart drop-off, or supporting catalog
+                      expansion.
                     </li>
                     <li>
-                      <strong>Audience Analysis:</strong> We analyze how your customers browse, their mobile screen habits, and common points of hesitation during checkout.
+                      <strong>Audience Analysis:</strong> We analyze how your
+                      customers browse, their mobile screen habits, and common
+                      points of hesitation during checkout.
                     </li>
                     <li>
-                      <strong>Competitive Audit:</strong> We review competitor stores in your niche to identify UX shortcomings and design opportunities to make your brand stand out.
+                      <strong>Competitive Audit:</strong> We review competitor
+                      stores in your niche to identify UX shortcomings and
+                      design opportunities to make your brand stand out.
                     </li>
                     <li>
-                      <strong>Technical Requirements Gathering:</strong> We map out your product variant structures, custom data fields, required third-party apps, and backend inventory workflows.
+                      <strong>Technical Requirements Gathering:</strong> We map
+                      out your product variant structures, custom data fields,
+                      required third-party apps, and backend inventory
+                      workflows.
                     </li>
                   </ul>
                 </div>
@@ -697,23 +716,36 @@ export default function ThemeDevelopmentPage() {
                     UI/UX Design
                   </h3>
                   <p className="text-base text-[var(--sf-ink-soft)] leading-relaxed mb-4">
-                    We create intuitive storefront layouts focused on clear product presentation, fast navigation, and friction-free purchasing.
+                    We create intuitive storefront layouts focused on clear
+                    product presentation, fast navigation, and friction-free
+                    purchasing.
                   </p>
                   <ul className="space-y-2 text-base text-[var(--sf-ink)]">
                     <li>
-                      <strong>Wireframing:</strong> We establish page layout foundations for your homepage, collection grids, product detail pages, and slide-out carts.
+                      <strong>Wireframing:</strong> We establish page layout
+                      foundations for your homepage, collection grids, product
+                      detail pages, and slide-out carts.
                     </li>
                     <li>
-                      <strong>Mockups and Prototypes:</strong> We build pixel-precise visual designs in Figma showing typography scales, button states, spacing, and micro-interactions.
+                      <strong>Mockups and Prototypes:</strong> We build
+                      pixel-precise visual designs in Figma showing typography
+                      scales, button states, spacing, and micro-interactions.
                     </li>
                     <li>
-                      <strong>User Flow Mapping:</strong> We chart the path customers take from discovery to product selection, drawer cart interaction, and checkout.
+                      <strong>User Flow Mapping:</strong> We chart the path
+                      customers take from discovery to product selection, drawer
+                      cart interaction, and checkout.
                     </li>
                     <li>
-                      <strong>Content Structure Guidance:</strong> We advise on image dimensions, lifestyle photography layouts, video embeds, and product copy formatting for maximum visual clarity.
+                      <strong>Content Structure Guidance:</strong> We advise on
+                      image dimensions, lifestyle photography layouts, video
+                      embeds, and product copy formatting for maximum visual
+                      clarity.
                     </li>
                     <li>
-                      <strong>Stakeholder Review Cycles:</strong> We review Figma prototypes together, incorporating your direct feedback before frontend implementation starts.
+                      <strong>Stakeholder Review Cycles:</strong> We review
+                      Figma prototypes together, incorporating your direct
+                      feedback before frontend implementation starts.
                     </li>
                   </ul>
                 </div>
@@ -733,26 +765,41 @@ export default function ThemeDevelopmentPage() {
                     Development and Implementation
                   </h3>
                   <p className="text-base text-[var(--sf-ink-soft)] leading-relaxed mb-4">
-                    We code your theme from scratch using modern Liquid templating, clean CSS, and lightweight JavaScript.
+                    We code your theme from scratch using modern Liquid
+                    templating, clean CSS, and lightweight JavaScript.
                   </p>
                   <ul className="space-y-2 text-base text-[var(--sf-ink)]">
                     <li>
-                      <strong>Local Environment Setup:</strong> We configure a modern Shopify CLI development workflow with Git version control for transparent tracking.
+                      <strong>Local Environment Setup:</strong> We configure a
+                      modern Shopify CLI development workflow with Git version
+                      control for transparent tracking.
                     </li>
                     <li>
-                      <strong>Theme Scaffolding:</strong> We build a clean theme directory structure with organized Liquid templates, sections, snippets, and assets.
+                      <strong>Theme Scaffolding:</strong> We build a clean theme
+                      directory structure with organized Liquid templates,
+                      sections, snippets, and assets.
                     </li>
                     <li>
-                      <strong>Template and Section Development:</strong> We build native Online Store 2.0 sections and blocks so every layout element is easily customizable in the theme customizer.
+                      <strong>Template and Section Development:</strong> We
+                      build native Online Store 2.0 sections and blocks so every
+                      layout element is easily customizable in the theme
+                      customizer.
                     </li>
                     <li>
-                      <strong>Front-End and Liquid Coding:</strong> We write clean semantic HTML5, responsive CSS, and native JavaScript for fast interactive features without heavy dependencies.
+                      <strong>Front-End and Liquid Coding:</strong> We write
+                      clean semantic HTML5, responsive CSS, and native
+                      JavaScript for fast interactive features without heavy
+                      dependencies.
                     </li>
                     <li>
-                      <strong>Integration Development:</strong> We connect your third-party tools, ERP systems, email providers, and review platforms using Shopify APIs and webhooks.
+                      <strong>Integration Development:</strong> We connect your
+                      third-party tools, ERP systems, email providers, and
+                      review platforms using Shopify APIs and webhooks.
                     </li>
                     <li>
-                      <strong>Progressive Client Review:</strong> We share live staging preview links at each milestone so you can test real store features throughout development.
+                      <strong>Progressive Client Review:</strong> We share live
+                      staging preview links at each milestone so you can test
+                      real store features throughout development.
                     </li>
                   </ul>
                 </div>
@@ -772,20 +819,29 @@ export default function ThemeDevelopmentPage() {
                     Quality Assurance and Testing
                   </h3>
                   <p className="text-base text-[var(--sf-ink-soft)] leading-relaxed mb-4">
-                    Every section, button, and script is thoroughly tested across real devices and screen resolutions.
+                    Every section, button, and script is thoroughly tested
+                    across real devices and screen resolutions.
                   </p>
                   <ul className="space-y-2 text-base text-[var(--sf-ink)]">
                     <li>
-                      <strong>Functional Testing:</strong> We verify all interactive elements, such as variant pickers, multi-tier bundle calculations, search bars, and drawer carts.
+                      <strong>Functional Testing:</strong> We verify all
+                      interactive elements, such as variant pickers, multi-tier
+                      bundle calculations, search bars, and drawer carts.
                     </li>
                     <li>
-                      <strong>Performance Testing:</strong> We run Google PageSpeed Insights and WebPageTest audits to guarantee fast load times and zero layout shifts.
+                      <strong>Performance Testing:</strong> We run Google
+                      PageSpeed Insights and WebPageTest audits to guarantee
+                      fast load times and zero layout shifts.
                     </li>
                     <li>
-                      <strong>Cross-Browser and Responsive Testing:</strong> We test responsiveness across iPhone, Android, tablet, and desktop viewports on Chrome, Safari, Firefox, and Edge.
+                      <strong>Cross-Browser and Responsive Testing:</strong> We
+                      test responsiveness across iPhone, Android, tablet, and
+                      desktop viewports on Chrome, Safari, Firefox, and Edge.
                     </li>
                     <li>
-                      <strong>Usability Testing:</strong> We walk through the end-to-end shopping experience to ensure buttons are easy to tap and navigation is effortless.
+                      <strong>Usability Testing:</strong> We walk through the
+                      end-to-end shopping experience to ensure buttons are easy
+                      to tap and navigation is effortless.
                     </li>
                   </ul>
                 </div>
@@ -805,20 +861,31 @@ export default function ThemeDevelopmentPage() {
                     Launch and Deployment
                   </h3>
                   <p className="text-base text-[var(--sf-ink-soft)] leading-relaxed mb-4">
-                    We push your new theme live smoothly with zero downtime, full SEO protection, and complete admin handoff.
+                    We push your new theme live smoothly with zero downtime,
+                    full SEO protection, and complete admin handoff.
                   </p>
                   <ul className="space-y-2 text-base text-[var(--sf-ink)]">
                     <li>
-                      <strong>Theme Packaging and Migration:</strong> We publish the tested theme to your live store, connecting all menus, collections, and product metafields.
+                      <strong>Theme Packaging and Migration:</strong> We publish
+                      the tested theme to your live store, connecting all menus,
+                      collections, and product metafields.
                     </li>
                     <li>
-                      <strong>Technical SEO Implementation:</strong> We verify structured data schema, canonical links, Open Graph tags, and set up 301 redirects to protect organic search traffic.
+                      <strong>Technical SEO Implementation:</strong> We verify
+                      structured data schema, canonical links, Open Graph tags,
+                      and set up 301 redirects to protect organic search
+                      traffic.
                     </li>
                     <li>
-                      <strong>Performance Optimization:</strong> We perform live asset minification, cache checks, and script tag audits on production servers.
+                      <strong>Performance Optimization:</strong> We perform live
+                      asset minification, cache checks, and script tag audits on
+                      production servers.
                     </li>
                     <li>
-                      <strong>Handoff and Training:</strong> We walk your team through the Shopify admin editor, showing you how to add sections, update banners, and edit text without touching code.
+                      <strong>Handoff and Training:</strong> We walk your team
+                      through the Shopify admin editor, showing you how to add
+                      sections, update banners, and edit text without touching
+                      code.
                     </li>
                   </ul>
                 </div>

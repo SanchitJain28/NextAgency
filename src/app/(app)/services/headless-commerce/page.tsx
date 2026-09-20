@@ -5,17 +5,17 @@ import { ArrowRight, Terminal } from "lucide-react";
 import ComparisonTable from "@/components/shared/ComparisonTable";
 
 export const metadata: Metadata = {
-  title: "Headless Shopify Development Services | ScaleFront",
+  title: "Headless Shopify Development Services",
   description:
     "We build fast, custom storefronts using Next.js and Shopify Hydrogen — paired with clear advice on whether headless makes financial sense for your store.",
   alternates: {
-    canonical: "https://scalefront.io/services/headless-commerce",
+    canonical: "/services/headless-commerce",
   },
   openGraph: {
-    title: "Headless Shopify Development Services | ScaleFront",
+    title: "Headless Shopify Development Services",
     description:
       "We build fast, custom storefronts using Next.js and Shopify Hydrogen — paired with clear advice on whether headless makes financial sense for your store.",
-    url: "https://scalefront.io/services/headless-commerce",
+    url: "https://www.scalefront.io/services/headless-commerce",
     siteName: "ScaleFront",
     type: "website",
     images: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Headless Shopify Development Services | ScaleFront",
+    title: "Headless Shopify Development Services",
     description:
       "We build fast, custom storefronts using Next.js and Shopify Hydrogen — paired with clear advice on whether headless makes financial sense for your store.",
     images: ["https://scalefront.io/og-image.jpg"],
@@ -79,7 +79,8 @@ export default function HeadlessShopifyPage() {
         "Yes. You must pay for external frontend cloud hosting such as Vercel or Cloudflare, a headless content management system subscription, and retain experienced developers to maintain API integrations and frontend code dependencies.",
     },
     {
-      question: "Is headless Shopify good for search engine optimization (SEO)?",
+      question:
+        "Is headless Shopify good for search engine optimization (SEO)?",
       answer:
         "Yes, because modern frameworks use server-side rendering to deliver complete HTML to search crawlers. However, you must carefully configure canonical tags, dynamic XML sitemaps, structured schema data, and 301 redirect maps during launch.",
     },
@@ -144,84 +145,120 @@ export default function HeadlessShopifyPage() {
     {
       included: (
         <>
-          <strong className="text-[var(--sf-ink)] block mb-1">Higher Initial Build Investment</strong>
-          Requires dedicated full-stack software engineering across frontend frameworks, Storefront APIs, and CMS schemas.
+          <strong className="text-[var(--sf-ink)] block mb-1">
+            Higher Initial Build Investment
+          </strong>
+          Requires dedicated full-stack software engineering across frontend
+          frameworks, Storefront APIs, and CMS schemas.
         </>
       ),
       excluded: (
         <>
-          <strong className="text-[var(--sf-ink)] block mb-1">Lower Upfront Build Investment</strong>
-          Custom Liquid builds require fewer moving parts, lower initial engineering costs, and a much faster time to market.
+          <strong className="text-[var(--sf-ink)] block mb-1">
+            Lower Upfront Build Investment
+          </strong>
+          Custom Liquid builds require fewer moving parts, lower initial
+          engineering costs, and a much faster time to market.
         </>
       ),
     },
     {
       included: (
         <>
-          <strong className="text-[var(--sf-ink)] block mb-1">Separate Edge Infrastructure Overhead</strong>
-          Requires ongoing monthly cloud hosting (Vercel or Oxygen) and dedicated developer support for API and framework updates.
+          <strong className="text-[var(--sf-ink)] block mb-1">
+            Separate Edge Infrastructure Overhead
+          </strong>
+          Requires ongoing monthly cloud hosting (Vercel or Oxygen) and
+          dedicated developer support for API and framework updates.
         </>
       ),
       excluded: (
         <>
-          <strong className="text-[var(--sf-ink)] block mb-1">Zero Hosting &amp; Server Maintenance</strong>
-          Shopify manages all server infrastructure, SSL certificates, platform updates, and global CDN hosting automatically.
+          <strong className="text-[var(--sf-ink)] block mb-1">
+            Zero Hosting &amp; Server Maintenance
+          </strong>
+          Shopify manages all server infrastructure, SSL certificates, platform
+          updates, and global CDN hosting automatically.
         </>
       ),
     },
     {
       included: (
         <>
-          <strong className="text-[var(--sf-ink)] block mb-1">Custom API App Integrations</strong>
-          Standard App Store plugins cannot inject scripts automatically. Every review tool, search filter, and popup needs custom API connections.
+          <strong className="text-[var(--sf-ink)] block mb-1">
+            Custom API App Integrations
+          </strong>
+          Standard App Store plugins cannot inject scripts automatically. Every
+          review tool, search filter, and popup needs custom API connections.
         </>
       ),
       excluded: (
         <>
-          <strong className="text-[var(--sf-ink)] block mb-1">One-Click App Store Compatibility</strong>
-          Thousands of pre-built Shopify App Store plugins install and work directly inside your Liquid theme without developer intervention.
+          <strong className="text-[var(--sf-ink)] block mb-1">
+            One-Click App Store Compatibility
+          </strong>
+          Thousands of pre-built Shopify App Store plugins install and work
+          directly inside your Liquid theme without developer intervention.
         </>
       ),
     },
     {
       included: (
         <>
-          <strong className="text-[var(--sf-ink)] block mb-1">Sub-Second Global Edge Performance</strong>
-          Static generation, React Server Components, and edge CDN distribution produce sub-100ms page loads with zero theme script bloat.
+          <strong className="text-[var(--sf-ink)] block mb-1">
+            Sub-Second Global Edge Performance
+          </strong>
+          Static generation, React Server Components, and edge CDN distribution
+          produce sub-100ms page loads with zero theme script bloat.
         </>
       ),
       excluded: (
         <>
-          <strong className="text-[var(--sf-ink)] block mb-1">Fast When Cleanly Coded</strong>
-          Custom Liquid themes regularly score 90+ on mobile PageSpeed, but can slow down when merchants install too many third-party apps.
+          <strong className="text-[var(--sf-ink)] block mb-1">
+            Fast When Cleanly Coded
+          </strong>
+          Custom Liquid themes regularly score 90+ on mobile PageSpeed, but can
+          slow down when merchants install too many third-party apps.
         </>
       ),
     },
     {
       included: (
         <>
-          <strong className="text-[var(--sf-ink)] block mb-1">Dedicated Headless CMS Workflow</strong>
-          Non-technical marketing staff use structured visual studios like Sanity or Contentful with live visual previewing.
+          <strong className="text-[var(--sf-ink)] block mb-1">
+            Dedicated Headless CMS Workflow
+          </strong>
+          Non-technical marketing staff use structured visual studios like
+          Sanity or Contentful with live visual previewing.
         </>
       ),
       excluded: (
         <>
-          <strong className="text-[var(--sf-ink)] block mb-1">Native Shopify Theme Customizer</strong>
-          Visual drag-and-drop sections and blocks directly inside Shopify admin that your team already knows how to use.
+          <strong className="text-[var(--sf-ink)] block mb-1">
+            Native Shopify Theme Customizer
+          </strong>
+          Visual drag-and-drop sections and blocks directly inside Shopify admin
+          that your team already knows how to use.
         </>
       ),
     },
     {
       included: (
         <>
-          <strong className="text-[var(--sf-ink)] block mb-1">Unlimited Interactive Freedom</strong>
-          Any React component, WebGL 3D visualizer, custom bundle builder, or dynamic configurator runs natively without Liquid restrictions.
+          <strong className="text-[var(--sf-ink)] block mb-1">
+            Unlimited Interactive Freedom
+          </strong>
+          Any React component, WebGL 3D visualizer, custom bundle builder, or
+          dynamic configurator runs natively without Liquid restrictions.
         </>
       ),
       excluded: (
         <>
-          <strong className="text-[var(--sf-ink)] block mb-1">DOM &amp; Liquid Template Boundaries</strong>
-          Bound by Shopify Liquid template files. Complex multi-step configurators and real-time 3D models are difficult to run smoothly.
+          <strong className="text-[var(--sf-ink)] block mb-1">
+            DOM &amp; Liquid Template Boundaries
+          </strong>
+          Bound by Shopify Liquid template files. Complex multi-step
+          configurators and real-time 3D models are difficult to run smoothly.
         </>
       ),
     },
@@ -334,7 +371,9 @@ export default function HeadlessShopifyPage() {
                 Home
               </Link>
               <span className="text-[var(--sf-ink-mute)]">/</span>
-              <span className="text-[var(--sf-ink-mute)] uppercase">Services</span>
+              <span className="text-[var(--sf-ink-mute)] uppercase">
+                Services
+              </span>
               <span className="text-[var(--sf-ink-mute)]">/</span>
               <span className="text-[var(--sf-primary)] font-bold uppercase">
                 Headless Shopify Development
@@ -346,7 +385,10 @@ export default function HeadlessShopifyPage() {
         {/* MAIN CONTAINER */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           {/* HERO SECTION */}
-          <header id="hero" className="mb-16 pb-12 border-b-2 border-[var(--sf-ink)]">
+          <header
+            id="hero"
+            className="mb-16 pb-12 border-b-2 border-[var(--sf-ink)]"
+          >
             <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-[var(--sf-ink)] bg-[var(--sf-paper)] text-xs font-mono font-bold uppercase tracking-wider mb-6">
               <Terminal className="w-3.5 h-3.5 text-[var(--sf-primary)]" />
               <span>Decoupled Shopify Architecture</span>
@@ -360,7 +402,9 @@ export default function HeadlessShopifyPage() {
             </h1>
 
             <p className="text-xl sm:text-2xl text-[var(--sf-ink-soft)] leading-relaxed mb-8 max-w-3xl">
-              We build fast, custom storefronts using Next.js and Shopify Hydrogen — paired with clear advice on whether headless makes financial sense for your store.
+              We build fast, custom storefronts using Next.js and Shopify
+              Hydrogen — paired with clear advice on whether headless makes
+              financial sense for your store.
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
@@ -415,19 +459,36 @@ export default function HeadlessShopifyPage() {
 
             <div className="space-y-5 text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed">
               <p>
-                In a standard Shopify store, the frontend (what customers see) and the backend (where you manage inventory, payments, and orders) are bundled into a single system powered by Liquid templates. Every time a shopper loads a page, Shopify&apos;s servers render that Liquid code and send the finished HTML to the browser.
+                In a standard Shopify store, the frontend (what customers see)
+                and the backend (where you manage inventory, payments, and
+                orders) are bundled into a single system powered by Liquid
+                templates. Every time a shopper loads a page, Shopify&apos;s
+                servers render that Liquid code and send the finished HTML to
+                the browser.
+              </p>
+              <p>Headless architecture splits those two halves apart.</p>
+              <p>
+                Shopify remains your ecommerce engine. It continues to store
+                your products, track inventory across locations, process credit
+                cards, run fraud detection, and execute checkout. But instead of
+                using Shopify&apos;s default theme layer to display your
+                products, we build a completely custom frontend application
+                using modern web frameworks like Next.js or Shopify Hydrogen.
               </p>
               <p>
-                Headless architecture splits those two halves apart.
+                The two systems communicate continuously through Shopify’s
+                Storefront GraphQL API. When a customer lands on your site, the
+                custom frontend requests product details, prices, and variant
+                availability from Shopify behind the scenes and renders the page
+                instantly.
               </p>
               <p>
-                Shopify remains your ecommerce engine. It continues to store your products, track inventory across locations, process credit cards, run fraud detection, and execute checkout. But instead of using Shopify&apos;s default theme layer to display your products, we build a completely custom frontend application using modern web frameworks like Next.js or Shopify Hydrogen.
-              </p>
-              <p>
-                The two systems communicate continuously through Shopify’s Storefront GraphQL API. When a customer lands on your site, the custom frontend requests product details, prices, and variant availability from Shopify behind the scenes and renders the page instantly.
-              </p>
-              <p>
-                This decoupling gives you total control over how your store looks, behaves, and loads. You are no longer restricted by Liquid template boundaries or theme file conventions. However, separating your frontend from Shopify introduces real technical responsibilities that every merchant must understand before making the leap.
+                This decoupling gives you total control over how your store
+                looks, behaves, and loads. You are no longer restricted by
+                Liquid template boundaries or theme file conventions. However,
+                separating your frontend from Shopify introduces real technical
+                responsibilities that every merchant must understand before
+                making the leap.
               </p>
             </div>
           </section>
@@ -441,7 +502,8 @@ export default function HeadlessShopifyPage() {
               Headless Shopify vs. Traditional Liquid Themes
             </h2>
             <p className="text-base text-[var(--sf-ink-soft)] mb-8 max-w-3xl">
-              An objective comparison of investment requirements, maintenance overhead, app compatibility, and design freedom.
+              An objective comparison of investment requirements, maintenance
+              overhead, app compatibility, and design freedom.
             </p>
 
             <ComparisonTable
@@ -475,14 +537,17 @@ export default function HeadlessShopifyPage() {
             </h2>
 
             <p className="text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed mb-8">
-              Headless development is often marketed as the universal next step for every growing brand. That claim is misleading. For the vast majority of ecommerce businesses, a well-engineered{" "}
+              Headless development is often marketed as the universal next step
+              for every growing brand. That claim is misleading. For the vast
+              majority of ecommerce businesses, a well-engineered{" "}
               <Link
                 href="/services/theme-development"
                 className="text-[var(--sf-primary)] font-bold underline hover:text-[var(--sf-primary-deep)]"
               >
                 custom Shopify theme
               </Link>{" "}
-              provides identical loading speed and far better return on investment.
+              provides identical loading speed and far better return on
+              investment.
             </p>
 
             <div className="space-y-10">
@@ -495,16 +560,35 @@ export default function HeadlessShopifyPage() {
                 </h3>
                 <ul className="space-y-3 text-base text-[var(--sf-ink-soft)] list-disc list-inside">
                   <li>
-                    <strong>Complex Product Configurators and 3D Visualizers:</strong> If your catalog requires interactive custom builders — such as engraving previews, custom furniture modular assembly, or interactive technical sizing — Liquid&apos;s server-rendered model struggles. React-based frontends render complex state changes instantly without page refreshes.
+                    <strong>
+                      Complex Product Configurators and 3D Visualizers:
+                    </strong>{" "}
+                    If your catalog requires interactive custom builders — such
+                    as engraving previews, custom furniture modular assembly, or
+                    interactive technical sizing — Liquid&apos;s server-rendered
+                    model struggles. React-based frontends render complex state
+                    changes instantly without page refreshes.
                   </li>
                   <li>
-                    <strong>True Omnichannel Commerce:</strong> If you sell products through a web store, native mobile apps (iOS and Android), digital retail displays, and point-of-sale kiosks, headless allows all channels to pull from a single Shopify inventory and order database.
+                    <strong>True Omnichannel Commerce:</strong> If you sell
+                    products through a web store, native mobile apps (iOS and
+                    Android), digital retail displays, and point-of-sale kiosks,
+                    headless allows all channels to pull from a single Shopify
+                    inventory and order database.
                   </li>
                   <li>
-                    <strong>Multi-Region and Multi-Brand Complexity:</strong> High-growth international brands running multiple regional storefronts with localized pricing, distinct language catalogs, and customized regional delivery routing can serve everything from one codebase via edge routing.
+                    <strong>Multi-Region and Multi-Brand Complexity:</strong>{" "}
+                    High-growth international brands running multiple regional
+                    storefronts with localized pricing, distinct language
+                    catalogs, and customized regional delivery routing can serve
+                    everything from one codebase via edge routing.
                   </li>
                   <li>
-                    <strong>Heavy Editorial Storytelling:</strong> Brands that operate as publishing houses or media companies alongside their shop require deep editorial layouts, visual journals, and modular lookbooks that far exceed standard Shopify blog capabilities.
+                    <strong>Heavy Editorial Storytelling:</strong> Brands that
+                    operate as publishing houses or media companies alongside
+                    their shop require deep editorial layouts, visual journals,
+                    and modular lookbooks that far exceed standard Shopify blog
+                    capabilities.
                   </li>
                 </ul>
               </div>
@@ -518,13 +602,29 @@ export default function HeadlessShopifyPage() {
                 </h3>
                 <ul className="space-y-3 text-base text-[var(--sf-ink-soft)] list-disc list-inside">
                   <li>
-                    <strong>Your Store Has Not Outgrown Standard Liquid Capabilities:</strong> The initial engineering overhead and ongoing maintenance retainers will eat your profit margins without providing a proportional increase in sales.
+                    <strong>
+                      Your Store Has Not Outgrown Standard Liquid Capabilities:
+                    </strong>{" "}
+                    The initial engineering overhead and ongoing maintenance
+                    retainers will eat your profit margins without providing a
+                    proportional increase in sales.
                   </li>
                   <li>
-                    <strong>You Rely Heavily on Marketing Apps:</strong> If your marketing team regularly installs and tests new Shopify App Store plugins for countdown timers, loyalty points, or upsell popups, headless will frustrate you. None of these apps run out of the box; each requires developer hours to connect via APIs.
+                    <strong>You Rely Heavily on Marketing Apps:</strong> If your
+                    marketing team regularly installs and tests new Shopify App
+                    Store plugins for countdown timers, loyalty points, or
+                    upsell popups, headless will frustrate you. None of these
+                    apps run out of the box; each requires developer hours to
+                    connect via APIs.
                   </li>
                   <li>
-                    <strong>You Just Want a &ldquo;Faster Website&rdquo;:</strong> A cleanly written custom Shopify theme without excessive apps regularly scores 90+ on Google PageSpeed Insights. You do not need to rebuild your store on a headless stack simply to make your pages load quickly.
+                    <strong>
+                      You Just Want a &ldquo;Faster Website&rdquo;:
+                    </strong>{" "}
+                    A cleanly written custom Shopify theme without excessive
+                    apps regularly scores 90+ on Google PageSpeed Insights. You
+                    do not need to rebuild your store on a headless stack simply
+                    to make your pages load quickly.
                   </li>
                 </ul>
               </div>
@@ -541,7 +641,9 @@ export default function HeadlessShopifyPage() {
             </h2>
 
             <p className="text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed mb-6">
-              Building a reliable headless store requires battle-tested frameworks, rock-solid APIs, and fast global hosting networks. We do not experiment with unproven tools on client production stores.
+              Building a reliable headless store requires battle-tested
+              frameworks, rock-solid APIs, and fast global hosting networks. We
+              do not experiment with unproven tools on client production stores.
             </p>
 
             <div className="space-y-4 text-base text-[var(--sf-ink-soft)] leading-relaxed">
@@ -550,10 +652,16 @@ export default function HeadlessShopifyPage() {
                   1. Frontend Frameworks: Next.js &amp; Shopify Hydrogen
                 </strong>
                 <p>
-                  <strong>Next.js (React):</strong> The premier web framework for ecommerce. We use Next.js with React Server Components to pre-render product pages statically (SSG) and revalidate data incrementally (ISR) when catalog updates occur in Shopify.
+                  <strong>Next.js (React):</strong> The premier web framework
+                  for ecommerce. We use Next.js with React Server Components to
+                  pre-render product pages statically (SSG) and revalidate data
+                  incrementally (ISR) when catalog updates occur in Shopify.
                 </p>
                 <p className="mt-1">
-                  <strong>Shopify Hydrogen (Remix):</strong> Shopify’s official headless framework built on Remix. Hydrogen offers native hooks designed specifically for the Storefront API, optimistic cart updates, and direct deployment to Shopify Oxygen.
+                  <strong>Shopify Hydrogen (Remix):</strong> Shopify’s official
+                  headless framework built on Remix. Hydrogen offers native
+                  hooks designed specifically for the Storefront API, optimistic
+                  cart updates, and direct deployment to Shopify Oxygen.
                 </p>
               </div>
 
@@ -562,7 +670,12 @@ export default function HeadlessShopifyPage() {
                   2. Commerce Layer: Shopify Storefront GraphQL API
                 </strong>
                 <p>
-                  All storefront data flows through Shopify&apos;s Storefront API. This high-performance GraphQL interface allows our frontend application to request exact data objects — product titles, variant prices, inventory levels, and media galleries — with zero payload waste. Includes Customer Account API and edge Cart API.
+                  All storefront data flows through Shopify&apos;s Storefront
+                  API. This high-performance GraphQL interface allows our
+                  frontend application to request exact data objects — product
+                  titles, variant prices, inventory levels, and media galleries
+                  — with zero payload waste. Includes Customer Account API and
+                  edge Cart API.
                 </p>
               </div>
 
@@ -571,7 +684,12 @@ export default function HeadlessShopifyPage() {
                   3. Content Management: Sanity.io or Contentful
                 </strong>
                 <p>
-                  Because headless storefronts bypass Shopify&apos;s theme customizer, we integrate a dedicated headless Content Management System. Sanity gives your marketing team a collaborative visual studio where they can build landing pages, structure blog posts, and embed live Shopify products into editorial articles with zero technical knowledge.
+                  Because headless storefronts bypass Shopify&apos;s theme
+                  customizer, we integrate a dedicated headless Content
+                  Management System. Sanity gives your marketing team a
+                  collaborative visual studio where they can build landing
+                  pages, structure blog posts, and embed live Shopify products
+                  into editorial articles with zero technical knowledge.
                 </p>
               </div>
 
@@ -580,7 +698,10 @@ export default function HeadlessShopifyPage() {
                   4. Edge Hosting: Vercel, Cloudflare Pages, or Shopify Oxygen
                 </strong>
                 <p>
-                  Your frontend is deployed to global Content Delivery Networks (CDNs). Every visitor is served from an edge server closest to their physical location, reducing Time to First Byte (TTFB) to under 100 milliseconds worldwide.
+                  Your frontend is deployed to global Content Delivery Networks
+                  (CDNs). Every visitor is served from an edge server closest to
+                  their physical location, reducing Time to First Byte (TTFB) to
+                  under 100 milliseconds worldwide.
                 </p>
               </div>
 
@@ -589,7 +710,11 @@ export default function HeadlessShopifyPage() {
                   5. Secure Checkout: Native Shopify Checkout Extensibility
                 </strong>
                 <p>
-                  Shoppers browse on your fast custom frontend, but when they proceed to checkout, they transition to Shopify’s native checkout. This ensures payments, tax calculation, shipping validation, and fraud protection remain 100% PCI-compliant on Shopify&apos;s infrastructure.
+                  Shoppers browse on your fast custom frontend, but when they
+                  proceed to checkout, they transition to Shopify’s native
+                  checkout. This ensures payments, tax calculation, shipping
+                  validation, and fraud protection remain 100% PCI-compliant on
+                  Shopify&apos;s infrastructure.
                 </p>
               </div>
             </div>
@@ -605,52 +730,90 @@ export default function HeadlessShopifyPage() {
             </h2>
 
             <p className="text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed mb-8">
-              Migrating to a headless architecture is a software engineering engagement. We guide your store through a disciplined five-phase process to guarantee complete data continuity and zero downtime.
+              Migrating to a headless architecture is a software engineering
+              engagement. We guide your store through a disciplined five-phase
+              process to guarantee complete data continuity and zero downtime.
             </p>
 
             <div className="space-y-6">
               <div className="border-l-2 border-[var(--sf-primary)] pl-5">
-                <h3 className="text-lg font-bold text-[var(--sf-ink)] mb-1" style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}>
+                <h3
+                  className="text-lg font-bold text-[var(--sf-ink)] mb-1"
+                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                >
                   Phase I: Technical Audit &amp; Feasibility Scoping
                 </h3>
                 <p className="text-base text-[var(--sf-ink-soft)]">
-                  We review your complete catalog, current app stack, and operational workflows. We identify which third-party tools can be replaced by API integrations, define the content structure required inside the headless CMS, and determine whether Next.js or Hydrogen best aligns with your team&apos;s technical goals.
+                  We review your complete catalog, current app stack, and
+                  operational workflows. We identify which third-party tools can
+                  be replaced by API integrations, define the content structure
+                  required inside the headless CMS, and determine whether
+                  Next.js or Hydrogen best aligns with your team&apos;s
+                  technical goals.
                 </p>
               </div>
 
               <div className="border-l-2 border-[var(--sf-ink)] pl-5">
-                <h3 className="text-lg font-bold text-[var(--sf-ink)] mb-1" style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}>
+                <h3
+                  className="text-lg font-bold text-[var(--sf-ink)] mb-1"
+                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                >
                   Phase II: Component Design System &amp; UX Prototyping
                 </h3>
                 <p className="text-base text-[var(--sf-ink-soft)]">
-                  We design your storefront in Figma, building a cohesive component design system. We map out micro-interactions, mobile navigation flows, instant slide-out cart drawers, variant selection states, and filter panels before writing any code.
+                  We design your storefront in Figma, building a cohesive
+                  component design system. We map out micro-interactions, mobile
+                  navigation flows, instant slide-out cart drawers, variant
+                  selection states, and filter panels before writing any code.
                 </p>
               </div>
 
               <div className="border-l-2 border-[var(--sf-ink)] pl-5">
-                <h3 className="text-lg font-bold text-[var(--sf-ink)] mb-1" style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}>
-                  Phase III: Frontend Engineering &amp; Storefront API Integration
+                <h3
+                  className="text-lg font-bold text-[var(--sf-ink)] mb-1"
+                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                >
+                  Phase III: Frontend Engineering &amp; Storefront API
+                  Integration
                 </h3>
                 <p className="text-base text-[var(--sf-ink-soft)]">
-                  We scaffold the frontend codebase, connect the Shopify Storefront GraphQL endpoints, and configure static page generation. We implement state management for cart sessions, build real-time inventory checks, and integrate your chosen headless CMS for non-technical page editing.
+                  We scaffold the frontend codebase, connect the Shopify
+                  Storefront GraphQL endpoints, and configure static page
+                  generation. We implement state management for cart sessions,
+                  build real-time inventory checks, and integrate your chosen
+                  headless CMS for non-technical page editing.
                 </p>
               </div>
 
               <div className="border-l-2 border-[var(--sf-ink)] pl-5">
-                <h3 className="text-lg font-bold text-[var(--sf-ink)] mb-1" style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}>
+                <h3
+                  className="text-lg font-bold text-[var(--sf-ink)] mb-1"
+                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                >
                   Phase IV: Third-Party API Middleware Engineering
                 </h3>
                 <p className="text-base text-[var(--sf-ink-soft)]">
-                  Because traditional Shopify App Store plugins cannot inject frontend scripts into headless sites, we build custom API connections for your essential tools: customer reviews (Klaviyo, Yotpo, Judge.me), instant search (Algolia, Typesense), loyalty programs, and tracking pixels.
+                  Because traditional Shopify App Store plugins cannot inject
+                  frontend scripts into headless sites, we build custom API
+                  connections for your essential tools: customer reviews
+                  (Klaviyo, Yotpo, Judge.me), instant search (Algolia,
+                  Typesense), loyalty programs, and tracking pixels.
                 </p>
               </div>
 
               <div className="border-l-2 border-[var(--sf-ink)] pl-5">
-                <h3 className="text-lg font-bold text-[var(--sf-ink)] mb-1" style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}>
+                <h3
+                  className="text-lg font-bold text-[var(--sf-ink)] mb-1"
+                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                >
                   Phase V: SEO Migration, Edge Deployment &amp; Launch
                 </h3>
                 <p className="text-base text-[var(--sf-ink-soft)]">
-                  Before flipping the switch, we test the store against rigorous quality standards: comprehensive 301 URL redirect mapping from old Shopify URLs to the new architecture, verification of dynamic XML sitemaps, canonical tags, structured JSON-LD schema, test transactions, and team CMS training.
+                  Before flipping the switch, we test the store against rigorous
+                  quality standards: comprehensive 301 URL redirect mapping from
+                  old Shopify URLs to the new architecture, verification of
+                  dynamic XML sitemaps, canonical tags, structured JSON-LD
+                  schema, test transactions, and team CMS training.
                 </p>
               </div>
             </div>
@@ -666,16 +829,23 @@ export default function HeadlessShopifyPage() {
             </h2>
 
             <p className="text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed mb-6">
-              One of the biggest risks of an improperly built headless store is catastrophic SEO traffic loss. When developers build client-side rendered single-page applications, search engine crawlers see blank HTML shells instead of indexable content.
+              One of the biggest risks of an improperly built headless store is
+              catastrophic SEO traffic loss. When developers build client-side
+              rendered single-page applications, search engine crawlers see
+              blank HTML shells instead of indexable content.
             </p>
 
             <div className="space-y-6 text-base text-[var(--sf-ink-soft)] leading-relaxed">
               <div className="border-l-2 border-[var(--sf-ink)] pl-4">
                 <h3 className="text-lg font-bold text-[var(--sf-ink)] mb-1">
-                  1. Server-Side Rendering (SSR) &amp; Static Site Generation (SSG)
+                  1. Server-Side Rendering (SSR) &amp; Static Site Generation
+                  (SSG)
                 </h3>
                 <p>
-                  Every product, collection, and blog page is generated as full, static HTML on edge servers before a visitor or search bot requests it. When Googlebot crawls your site, it reads complete heading tags, body copy, and metadata immediately.
+                  Every product, collection, and blog page is generated as full,
+                  static HTML on edge servers before a visitor or search bot
+                  requests it. When Googlebot crawls your site, it reads
+                  complete heading tags, body copy, and metadata immediately.
                 </p>
               </div>
 
@@ -684,7 +854,11 @@ export default function HeadlessShopifyPage() {
                   2. Dynamic XML Sitemaps &amp; Canonical Preservation
                 </h3>
                 <p>
-                  Our headless applications generate dynamic XML sitemaps pulled directly from Shopify&apos;s Storefront API and the headless CMS whenever products are published. We maintain strict canonical URL structures to eliminate duplicate content risks across variant URLs.
+                  Our headless applications generate dynamic XML sitemaps pulled
+                  directly from Shopify&apos;s Storefront API and the headless
+                  CMS whenever products are published. We maintain strict
+                  canonical URL structures to eliminate duplicate content risks
+                  across variant URLs.
                 </p>
               </div>
 
@@ -693,7 +867,11 @@ export default function HeadlessShopifyPage() {
                   3. Structured JSON-LD Schema
                 </h3>
                 <p>
-                  We embed rich structured data schema directly into page templates: Product and Offer schema (with live price, availability, and SKU), AggregateRating and Review schema connected to your review provider&apos;s API, and BreadcrumbList schema for rich search result snippets.
+                  We embed rich structured data schema directly into page
+                  templates: Product and Offer schema (with live price,
+                  availability, and SKU), AggregateRating and Review schema
+                  connected to your review provider&apos;s API, and
+                  BreadcrumbList schema for rich search result snippets.
                 </p>
               </div>
             </div>
@@ -710,12 +888,38 @@ export default function HeadlessShopifyPage() {
 
             <div className="border-l-2 border-[var(--sf-primary)] pl-5 space-y-2 text-base text-[var(--sf-ink-soft)]">
               <ul className="space-y-2 list-disc list-inside">
-                <li><strong>Full-Cycle Headless Storefront Development:</strong> Complete architecture, UI/UX design, Next.js or Hydrogen frontend engineering, and production edge deployment.</li>
-                <li><strong>Monolithic Liquid to Headless Migration:</strong> Safe data migration from traditional Shopify themes to a headless stack with zero lost orders or broken customer links.</li>
-                <li><strong>Headless CMS Implementation:</strong> Data modeling, custom visual editing components, and workflow setup in Sanity.io or Contentful.</li>
-                <li><strong>Custom Third-Party API Integrations:</strong> Connecting customer reviews, fast search engines, loyalty portals, and analytics through dedicated serverless endpoints.</li>
-                <li><strong>Performance Tuning &amp; Core Web Vitals Audits:</strong> Diagnosing and optimizing API response payloads, image compression pipelines, and JavaScript bundle sizes.</li>
-                <li><strong>Ongoing Retainers &amp; Edge Maintenance:</strong> Proactive framework upgrades, API version maintenance, uptime monitoring, and ongoing feature development.</li>
+                <li>
+                  <strong>Full-Cycle Headless Storefront Development:</strong>{" "}
+                  Complete architecture, UI/UX design, Next.js or Hydrogen
+                  frontend engineering, and production edge deployment.
+                </li>
+                <li>
+                  <strong>Monolithic Liquid to Headless Migration:</strong> Safe
+                  data migration from traditional Shopify themes to a headless
+                  stack with zero lost orders or broken customer links.
+                </li>
+                <li>
+                  <strong>Headless CMS Implementation:</strong> Data modeling,
+                  custom visual editing components, and workflow setup in
+                  Sanity.io or Contentful.
+                </li>
+                <li>
+                  <strong>Custom Third-Party API Integrations:</strong>{" "}
+                  Connecting customer reviews, fast search engines, loyalty
+                  portals, and analytics through dedicated serverless endpoints.
+                </li>
+                <li>
+                  <strong>
+                    Performance Tuning &amp; Core Web Vitals Audits:
+                  </strong>{" "}
+                  Diagnosing and optimizing API response payloads, image
+                  compression pipelines, and JavaScript bundle sizes.
+                </li>
+                <li>
+                  <strong>Ongoing Retainers &amp; Edge Maintenance:</strong>{" "}
+                  Proactive framework upgrades, API version maintenance, uptime
+                  monitoring, and ongoing feature development.
+                </li>
               </ul>
             </div>
           </section>
@@ -760,7 +964,10 @@ export default function HeadlessShopifyPage() {
                 Ready to explore headless architecture for your Shopify store?
               </h2>
               <p className="text-lg sm:text-xl text-[var(--sf-ink-soft)] leading-relaxed mb-8">
-                Tell us about your product catalog, technical requirements, and custom features. We will review your store and provide an honest assessment of whether headless architecture is the right path forward.
+                Tell us about your product catalog, technical requirements, and
+                custom features. We will review your store and provide an honest
+                assessment of whether headless architecture is the right path
+                forward.
               </p>
 
               <div className="flex flex-wrap items-center gap-4">

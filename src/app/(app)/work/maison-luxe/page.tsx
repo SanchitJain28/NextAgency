@@ -19,24 +19,22 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title:
-    "Maison Luxe — Custom Scandinavian Home Decor Shopify Storefront Case Study | ScaleFront",
+  title: "Maison Luxe — Jewelry Store Case Study",
   description:
-    "An architectural breakdown of Maison Luxe: custom Scandinavian home decor Shopify theme development, 4-tab category filtering, dual PDP checkout funnels, and a 3-tier milestone drawer cart.",
+    "Case study: Maison Luxe luxury jewelry storefront. High-ticket custom Shopify theme with visual storytelling, metal selectors, and ring sizing.",
   alternates: {
-    canonical: "https://scalefront.io/work/maison-luxe",
+    canonical: "/work/maison-luxe",
   },
   openGraph: {
-    title:
-      "Maison Luxe — Custom Scandinavian Home Decor Shopify Storefront Case Study | ScaleFront",
+    title: "Maison Luxe — Jewelry Store Case Study | ScaleFront",
     description:
-      "An architectural breakdown of Maison Luxe: custom Scandinavian home decor Shopify theme development, 4-tab category filtering, dual PDP checkout funnels, and a 3-tier milestone drawer cart.",
-    url: "https://scalefront.io/work/maison-luxe",
+      "Case study: Maison Luxe luxury jewelry storefront. High-ticket custom Shopify theme with visual storytelling, metal selectors, and ring sizing.",
+    url: "https://www.scalefront.io/work/maison-luxe",
     siteName: "ScaleFront",
     type: "article",
     images: [
       {
-        url: "https://scalefront.io/portfolio/maison-luxe/covers/cover.png",
+        url: "https://www.scalefront.io/portfolio/maison-luxe/covers/cover.png",
         width: 1200,
         height: 675,
         alt: "Maison Luxe custom Scandinavian home decor Shopify storefront case study",
@@ -45,11 +43,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Maison Luxe — Custom Scandinavian Home Decor Shopify Storefront Case Study | ScaleFront",
+    title: "Maison Luxe — Jewelry Store Case Study | ScaleFront",
     description:
-      "Custom Scandinavian home decor Shopify theme: 4-tab category switching, editorial storytelling, in-line PDP cross-sells, and a 3-tier spend milestone cart.",
-    images: ["https://scalefront.io/portfolio/maison-luxe/covers/cover.png"],
+      "High-ticket custom Shopify theme with visual storytelling, metal selectors, and ring sizing.",
+    images: ["https://www.scalefront.io/portfolio/maison-luxe/covers/cover.png"],
   },
 };
 
@@ -290,27 +287,27 @@ export default function MaisonLuxePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="p-5 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)]">
-                <h4 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-2">
+                <h3 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-2">
                   Pale Stone Product Cards
-                </h4>
+                </h3>
                 <p className="text-xs sm:text-sm text-[var(--sf-ink-soft)] font-sans leading-relaxed">
                   Each product card uses a subtle sage-tinted background container (<code className="font-mono text-xs">#F4F6EE</code>) to frame ceramics and wood furniture cleanly.
                 </p>
               </div>
 
               <div className="p-5 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)]">
-                <h4 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-2">
+                <h3 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-2">
                   Clean Price Hierarchy
-                </h4>
+                </h3>
                 <p className="text-xs sm:text-sm text-[var(--sf-ink-soft)] font-sans leading-relaxed">
                   Prices are shown clearly in USD without fake strikethrough markups on regular inventory, maintaining brand trust.
                 </p>
               </div>
 
               <div className="p-5 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)]">
-                <h4 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-2">
+                <h3 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-2">
                   Solid Forest Green Actions
-                </h4>
+                </h3>
                 <p className="text-xs sm:text-sm text-[var(--sf-ink-soft)] font-sans leading-relaxed">
                   Full-width buttons provide an unambiguous tap target on both mobile screens and desktop viewports.
                 </p>
@@ -349,9 +346,9 @@ export default function MaisonLuxePage() {
                 <div className="text-xs font-mono font-bold text-[#1035E4] uppercase mb-1">
                   Story Block 1 // Cream
                 </div>
-                <h4 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-2">
+                <h3 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-2">
                   &quot;Curate your sanctuary with intention&quot;
-                </h4>
+                </h3>
                 <p className="text-xs sm:text-sm text-[var(--sf-ink-soft)] font-sans leading-relaxed">
                   Highlights solid oak desks and timeless furniture geometry with an electric Klein blue action button.
                 </p>
@@ -361,9 +358,9 @@ export default function MaisonLuxePage() {
                 <div className="text-xs font-mono font-bold text-[#0E3820] uppercase mb-1">
                   Story Block 2 // Pistachio
                 </div>
-                <h4 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-2">
+                <h3 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-2">
                   &quot;Where function meets stillness&quot;
-                </h4>
+                </h3>
                 <p className="text-xs sm:text-sm text-[var(--sf-ink-soft)] font-sans leading-relaxed">
                   Focuses on soft home goods and rust linen cushions paired with deep forest green typography.
                 </p>
@@ -373,9 +370,9 @@ export default function MaisonLuxePage() {
                 <div className="text-xs font-mono font-bold text-[#601C38] uppercase mb-1">
                   Story Block 3 // Terracotta
                 </div>
-                <h4 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-2">
+                <h3 className="font-serif font-bold text-base text-[var(--sf-ink)] mb-2">
                   &quot;This season: The art of less&quot;
-                </h4>
+                </h3>
                 <p className="text-xs sm:text-sm text-[var(--sf-ink-soft)] font-sans leading-relaxed">
                   Showcases charcoal matte stoneware pasta bowls on a warm clay background with plum styling.
                 </p>
@@ -440,10 +437,10 @@ export default function MaisonLuxePage() {
             {/* PDP BREAKDOWN DETAILS */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               <div className="p-6 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] shadow-[3px_3px_0_var(--sf-ink)]">
-                <h4 className="font-serif font-bold text-lg text-[var(--sf-ink)] mb-3 flex items-center gap-2">
+                <h3 className="font-serif font-bold text-lg text-[var(--sf-ink)] mb-3 flex items-center gap-2">
                   <ShoppingBag className="w-5 h-5 text-[var(--sf-primary)]" />
                   Dual Action Purchase Funnel
-                </h4>
+                </h3>
                 <p className="text-sm text-[var(--sf-ink-soft)] font-sans leading-relaxed mb-3">
                   Two distinct action buttons cater to different buying behaviors:
                 </p>
@@ -460,10 +457,10 @@ export default function MaisonLuxePage() {
               </div>
 
               <div className="p-6 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] shadow-[3px_3px_0_var(--sf-ink)]">
-                <h4 className="font-serif font-bold text-lg text-[var(--sf-ink)] mb-3 flex items-center gap-2">
+                <h3 className="font-serif font-bold text-lg text-[var(--sf-ink)] mb-3 flex items-center gap-2">
                   <PackageCheck className="w-5 h-5 text-[var(--sf-primary)]" />
                   Structured Stoneware Specifications
-                </h4>
+                </h3>
                 <p className="text-sm text-[var(--sf-ink-soft)] font-sans leading-relaxed mb-3">
                   Organized under tabbed <code className="font-mono text-xs">OVERVIEW</code> and <code className="font-mono text-xs">SPECS &amp; CARE</code>:
                 </p>
@@ -487,9 +484,9 @@ export default function MaisonLuxePage() {
             </div>
 
             <div className="p-6 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] shadow-[3px_3px_0_var(--sf-ink)]">
-              <h4 className="font-serif font-bold text-lg text-[var(--sf-ink)] mb-2">
+              <h3 className="font-serif font-bold text-lg text-[var(--sf-ink)] mb-2">
                 Faceted Reviews Architecture
-              </h4>
+              </h3>
               <p className="text-sm text-[var(--sf-ink-soft)] font-sans leading-relaxed">
                 Includes a 4.6★ summary across 108 reviews, 5-bar distribution chart, sorting dropdowns (<code className="font-mono text-xs">Sort by: Most recent</code>), and buyer verified badges indicating the exact purchased colorway and room collection.
               </p>

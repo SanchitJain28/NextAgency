@@ -1,0 +1,619 @@
+[
+  {
+    "severity": "critical",
+    "issueType": "broken-internal-link",
+    "issue": "Broken internal link",
+    "url": "https://www.scalefront.in/work/flexform-athletics",
+    "details": {
+      "targetUrl": "https://www.scalefront.in/contact",
+      "targetStatus": 404
+    },
+    "howToFix": "Update the link to point at the correct live URL, or remove it. If the target was moved, prefer linking directly to the new URL rather than relying on a redirect."
+  },
+  {
+    "severity": "critical",
+    "issueType": "broken-internal-link",
+    "issue": "Broken internal link",
+    "url": "https://www.scalefront.in/",
+    "details": {
+      "targetUrl": "https://www.scalefront.in/contact",
+      "targetStatus": 404
+    },
+    "howToFix": "Update the link to point at the correct live URL, or remove it. If the target was moved, prefer linking directly to the new URL rather than relying on a redirect."
+  },
+  {
+    "severity": "critical",
+    "issueType": "broken-internal-link",
+    "issue": "Broken internal link",
+    "url": "https://www.scalefront.in/work",
+    "details": {
+      "targetUrl": "https://www.scalefront.in/contact",
+      "targetStatus": 404
+    },
+    "howToFix": "Update the link to point at the correct live URL, or remove it. If the target was moved, prefer linking directly to the new URL rather than relying on a redirect."
+  },
+  {
+    "severity": "critical",
+    "issueType": "broken-internal-link",
+    "issue": "Broken internal link",
+    "url": "https://www.scalefront.in/work/recovrx",
+    "details": {
+      "targetUrl": "https://www.scalefront.in/contact",
+      "targetStatus": 404
+    },
+    "howToFix": "Update the link to point at the correct live URL, or remove it. If the target was moved, prefer linking directly to the new URL rather than relying on a redirect."
+  },
+  {
+    "severity": "critical",
+    "issueType": "broken-internal-link",
+    "issue": "Broken internal link",
+    "url": "https://www.scalefront.in/pricing",
+    "details": {
+      "targetUrl": "https://www.scalefront.in/contact?intent=book-call",
+      "targetStatus": 404
+    },
+    "howToFix": "Update the link to point at the correct live URL, or remove it. If the target was moved, prefer linking directly to the new URL rather than relying on a redirect."
+  },
+  {
+    "severity": "critical",
+    "issueType": "broken-internal-link",
+    "issue": "Broken internal link",
+    "url": "https://www.scalefront.in/pricing",
+    "details": {
+      "targetUrl": "https://www.scalefront.in/contact?intent=quote",
+      "targetStatus": 404
+    },
+    "howToFix": "Update the link to point at the correct live URL, or remove it. If the target was moved, prefer linking directly to the new URL rather than relying on a redirect."
+  },
+  {
+    "severity": "critical",
+    "issueType": "broken-internal-link",
+    "issue": "Broken internal link",
+    "url": "https://www.scalefront.in/pricing",
+    "details": {
+      "targetUrl": "https://www.scalefront.in/contact?intent=start-project",
+      "targetStatus": 404
+    },
+    "howToFix": "Update the link to point at the correct live URL, or remove it. If the target was moved, prefer linking directly to the new URL rather than relying on a redirect."
+  },
+  {
+    "severity": "warning",
+    "issueType": "broken-page",
+    "issue": "Page returns an error (4xx)",
+    "url": "https://www.scalefront.in/contact",
+    "details": {
+      "statusCode": 404
+    },
+    "howToFix": "If the page should exist, restore it. If it is intentionally gone, remove it from the sitemap and internal links, and consider a 301 redirect to the closest live page."
+  },
+  {
+    "severity": "warning",
+    "issueType": "broken-page",
+    "issue": "Page returns an error (4xx)",
+    "url": "https://www.scalefront.in/contact?intent=book-call",
+    "details": {
+      "statusCode": 404
+    },
+    "howToFix": "If the page should exist, restore it. If it is intentionally gone, remove it from the sitemap and internal links, and consider a 301 redirect to the closest live page."
+  },
+  {
+    "severity": "warning",
+    "issueType": "broken-page",
+    "issue": "Page returns an error (4xx)",
+    "url": "https://www.scalefront.in/contact?intent=quote",
+    "details": {
+      "statusCode": 404
+    },
+    "howToFix": "If the page should exist, restore it. If it is intentionally gone, remove it from the sitemap and internal links, and consider a 301 redirect to the closest live page."
+  },
+  {
+    "severity": "warning",
+    "issueType": "broken-page",
+    "issue": "Page returns an error (4xx)",
+    "url": "https://www.scalefront.in/contact?intent=start-project",
+    "details": {
+      "statusCode": 404
+    },
+    "howToFix": "If the page should exist, restore it. If it is intentionally gone, remove it from the sitemap and internal links, and consider a 301 redirect to the closest live page."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://www.scalefront.in/",
+    "details": {
+      "canonicalUrl": "https://scalefront.io/"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://www.scalefront.in/work",
+    "details": {
+      "canonicalUrl": "https://scalefront.io/work"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://www.scalefront.in/contact-us",
+    "details": {
+      "canonicalUrl": "https://scalefront.io/contact-us"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://www.scalefront.in/work/iron-crate",
+    "details": {
+      "canonicalUrl": "https://scalefront.io/work/iron-crate"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://www.scalefront.in/work/flexform-athletics",
+    "details": {
+      "canonicalUrl": "https://scalefront.io/work/flexform-athletics"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://www.scalefront.in/work/maison-luxe",
+    "details": {
+      "canonicalUrl": "https://scalefront.io/work/maison-luxe"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://www.scalefront.in/work/recovrx",
+    "details": {
+      "canonicalUrl": "https://scalefront.io/work/recovrx"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://www.scalefront.in/portfolio",
+    "details": {
+      "canonicalUrl": "https://scalefront.io/"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://www.scalefront.in/work/industrial-supply-direct",
+    "details": {
+      "canonicalUrl": "https://scalefront.io/work/industrial-supply-direct"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://www.scalefront.in/upsell-cross-sell-app-shopify",
+    "details": {
+      "canonicalUrl": "https://topcomsolutions.com/solllid"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://www.scalefront.in/services/conversion-optimization",
+    "details": {
+      "canonicalUrl": "https://scalefront.io/services/cro-optimization"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://www.scalefront.in/services/theme-development",
+    "details": {
+      "canonicalUrl": "https://scalefront.io/services/theme-development"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://www.scalefront.in/services/custom-shopify-apps",
+    "details": {
+      "canonicalUrl": "https://scalefront.io/services/custom-shopify-apps"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://www.scalefront.in/services/performance-optimization",
+    "details": {
+      "canonicalUrl": "https://scalefront.io/services/performance-optimization"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://www.scalefront.in/services/shopify-plus-migration",
+    "details": {
+      "canonicalUrl": "https://scalefront.io/services/shopify-plus-migration"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://www.scalefront.in/services/audit-consulting",
+    "details": {
+      "canonicalUrl": "https://scalefront.io/services/audit-consulting"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://www.scalefront.in/services/headless-commerce",
+    "details": {
+      "canonicalUrl": "https://scalefront.io/services/headless-commerce"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://www.scalefront.in/services/custom-shopify-development",
+    "details": {
+      "canonicalUrl": "https://scalefront.io/services/custom-shopify-development"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "canonicalized-page",
+    "issue": "Canonicalized to another URL",
+    "url": "https://www.scalefront.in/pricing",
+    "details": {
+      "canonicalUrl": "https://scalefront.io/"
+    },
+    "howToFix": "If this page should rank on its own, set its canonical to itself. Otherwise no action is needed."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://www.scalefront.in/work/flexform-athletics",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://www.scalefront.in/work/maison-luxe",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://www.scalefront.in/work/recovrx",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "heading-order-skip",
+    "issue": "Heading levels skip",
+    "url": "https://www.scalefront.in/work/industrial-supply-direct",
+    "details": null,
+    "howToFix": "Adjust heading levels so they descend one step at a time (H1 → H2 → H3) without skipping."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.scalefront.in/",
+    "details": {
+      "length": 195
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.scalefront.in/work/flexform-athletics",
+    "details": {
+      "length": 175
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.scalefront.in/work/maison-luxe",
+    "details": {
+      "length": 189
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.scalefront.in/work/industrial-supply-direct",
+    "details": {
+      "length": 170
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.scalefront.in/upsell-cross-sell-app-shopify",
+    "details": {
+      "length": 212
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.scalefront.in/services/audit-consulting",
+    "details": {
+      "length": 166
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-long",
+    "issue": "Meta description too long",
+    "url": "https://www.scalefront.in/pricing",
+    "details": {
+      "length": 187
+    },
+    "howToFix": "Trim the description to roughly 70–160 characters while keeping the core message and call to action."
+  },
+  {
+    "severity": "info",
+    "issueType": "meta-description-too-short",
+    "issue": "Meta description too short",
+    "url": "https://www.scalefront.in/portfolio",
+    "details": {
+      "length": 68
+    },
+    "howToFix": "Expand the description to roughly 70–160 characters that summarize the page and give a reason to click."
+  },
+  {
+    "severity": "warning",
+    "issueType": "missing-h1",
+    "issue": "Missing H1 heading",
+    "url": "https://www.scalefront.in/portfolio",
+    "details": null,
+    "howToFix": "Add a single H1 that states the page's main topic, consistent with the title tag."
+  },
+  {
+    "severity": "warning",
+    "issueType": "thin-content",
+    "issue": "Thin content",
+    "url": "https://www.scalefront.in/portfolio",
+    "details": {
+      "wordCount": 111
+    },
+    "howToFix": "Either expand the page with genuinely useful content, noindex it, or consolidate it into a stronger page. If the content exists but is rendered by JavaScript, ensure it is server-rendered or pre-rendered."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.scalefront.in/work",
+    "details": {
+      "length": 110
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.scalefront.in/contact-us",
+    "details": {
+      "length": 99
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.scalefront.in/work/iron-crate",
+    "details": {
+      "length": 113
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.scalefront.in/work/flexform-athletics",
+    "details": {
+      "length": 121
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.scalefront.in/work/maison-luxe",
+    "details": {
+      "length": 127
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.scalefront.in/work/recovrx",
+    "details": {
+      "length": 112
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.scalefront.in/portfolio",
+    "details": {
+      "length": 62
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.scalefront.in/work/industrial-supply-direct",
+    "details": {
+      "length": 114
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.scalefront.in/upsell-cross-sell-app-shopify",
+    "details": {
+      "length": 109
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.scalefront.in/services/conversion-optimization",
+    "details": {
+      "length": 104
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.scalefront.in/services/theme-development",
+    "details": {
+      "length": 87
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.scalefront.in/services/custom-shopify-apps",
+    "details": {
+      "length": 92
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.scalefront.in/services/performance-optimization",
+    "details": {
+      "length": 94
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.scalefront.in/services/shopify-plus-migration",
+    "details": {
+      "length": 100
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.scalefront.in/services/audit-consulting",
+    "details": {
+      "length": 116
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.scalefront.in/services/headless-commerce",
+    "details": {
+      "length": 90
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.scalefront.in/services/custom-shopify-development",
+    "details": {
+      "length": 88
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  },
+  {
+    "severity": "info",
+    "issueType": "title-too-long",
+    "issue": "Title too long",
+    "url": "https://www.scalefront.in/pricing",
+    "details": {
+      "length": 68
+    },
+    "howToFix": "Shorten the title to roughly 50–60 characters, front-loading the most important words."
+  }
+]

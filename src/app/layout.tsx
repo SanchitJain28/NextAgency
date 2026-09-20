@@ -11,9 +11,8 @@ import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: {
-    default:
-      "ScaleFront - Elite Shopify Development Agency | Custom Apps & Themes",
-    template: "%s | ScaleFront - Expert Shopify Solutions",
+    default: "ScaleFront | Elite Shopify Development Agency",
+    template: "%s | ScaleFront",
   },
   icons: {
     icon: [
@@ -49,16 +48,13 @@ export const metadata: Metadata = {
   authors: [{ name: "ScaleFront" }],
   creator: "ScaleFront",
   publisher: "ScaleFront",
-  metadataBase: new URL("https://scalefront.io"),
-  alternates: {
-    canonical: "/",
-  },
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://www.scalefront.io"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://scalefront.io",
+    url: "https://www.scalefront.io",
     siteName: "ScaleFront",
-    title: "ScaleFront - Elite Shopify Development Agency",
+    title: "ScaleFront | Elite Shopify Development Agency",
     description:
       "Transform your Shopify store with expert development services: custom apps, headless commerce, theme customization, and performance optimization.",
     images: [
@@ -72,7 +68,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ScaleFront - Elite Shopify Development Agency",
+    title: "ScaleFront | Elite Shopify Development Agency",
     description:
       "Expert Shopify development: custom apps, headless commerce, theme development, and performance optimization for growing brands.",
     images: ["/twitter-image.jpg"],
@@ -117,13 +113,13 @@ export default function RootLayout({
     "@graph": [
       {
         "@type": "ProfessionalService",
-        "@id": "https://scalefront.io/#organization",
+        "@id": "https://www.scalefront.io/#organization",
         name: "ScaleFront",
         description:
           "Elite Shopify development agency specializing in custom apps, headless commerce, theme development, and performance optimization",
-        url: "https://scalefront.io",
-        image: "https://scalefront.io/logo/updated_logo.png",
-        logo: "https://scalefront.io/logo/updated_logo.png",
+        url: "https://www.scalefront.io",
+        image: "https://www.scalefront.io/logo/updated_logo.png",
+        logo: "https://www.scalefront.io/logo/updated_logo.png",
         priceRange: "$$",
         telephone: "+919650296375",
         email: "hello@scalefront.io",

@@ -1,15 +1,24 @@
-import { Header } from "@/components/header-footer/Header";
 import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
 import Link from "next/link";
 import {
-  ArrowRight, CheckCircle2, ArrowUpCircle, Shield, Zap, Workflow,
-  Users, DollarSign, Globe, Code, TrendingUp, Settings
+  ArrowRight,
+  CheckCircle2,
+  ArrowUpCircle,
+  Shield,
+  Zap,
+  Workflow,
+  Users,
+  DollarSign,
+  Globe,
+  Code,
+  TrendingUp,
+  Settings,
 } from "lucide-react";
 import DottedSeparator from "@/components/seperators/DottedSeperator";
 
 export const metadata: Metadata = {
-  title: "Shopify Plus Migration Services | Enterprise Shopify Upgrade",
+  title: "Shopify Plus Migration Services",
   description:
     "Migrate to Shopify Plus for enterprise features, unlimited staff accounts, automation, and wholesale. Expert migration from $25K.",
   keywords: [
@@ -18,22 +27,30 @@ export const metadata: Metadata = {
     "Shopify Plus migration services",
     "enterprise Shopify migration",
     "Shopify Plus upgrade",
-    "Shopify enterprise"
+    "Shopify enterprise",
   ],
-  openGraph: {
-    title: "Shopify Plus Migration Services | Enterprise Shopify Upgrade",
-    description: "Migrate to Shopify Plus for enterprise features, unlimited staff accounts, automation, and wholesale.",
-  },
   alternates: {
     canonical: "/services/shopify-plus-migration",
+  },
+  openGraph: {
+    title: "Shopify Plus Migration Services",
+    description:
+      "Migrate to Shopify Plus for enterprise features, unlimited staff accounts, automation, and wholesale.",
+    url: "https://www.scalefront.io/services/shopify-plus-migration",
+    siteName: "ScaleFront",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shopify Plus Migration Services",
+    description:
+      "Migrate to Shopify Plus for enterprise features, unlimited staff accounts, automation, and wholesale.",
   },
 };
 
 export default function ShopifyPlusMigrationPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-
       {/* Schema.org markup */}
       <script
         type="application/ld+json"
@@ -41,18 +58,19 @@ export default function ShopifyPlusMigrationPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "name": "Shopify Plus Migration Services",
-            "description": "Scale your business with enterprise-grade Shopify. Migrate safely with zero downtime",
-            "provider": {
+            name: "Shopify Plus Migration Services",
+            description:
+              "Scale your business with enterprise-grade Shopify. Migrate safely with zero downtime",
+            provider: {
               "@type": "Organization",
-              "name": "ScaleFront"
+              name: "ScaleFront",
             },
-            "offers": {
+            offers: {
               "@type": "Offer",
-              "priceRange": "$25,000-150,000+",
-              "priceCurrency": "USD"
-            }
-          })
+              priceRange: "$25,000-150,000+",
+              priceCurrency: "USD",
+            },
+          }),
         }}
       />
 
@@ -69,24 +87,30 @@ export default function ShopifyPlusMigrationPage() {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-4">
-              Scale your business with enterprise-grade Shopify. Migrate safely with zero downtime.
+              Scale your business with enterprise-grade Shopify. Migrate safely
+              with zero downtime.
             </p>
 
             <p className="text-base text-muted-foreground mb-8">
-              When your business outgrows standard Shopify—hitting checkout customization limits, needing advanced automation, or managing B2B and wholesale—Shopify Plus provides the enterprise foundation you need.
+              When your business outgrows standard Shopify—hitting checkout
+              customization limits, needing advanced automation, or managing B2B
+              and wholesale—Shopify Plus provides the enterprise foundation you
+              need.
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" asChild className="bg-[#60DB36] hover:bg-[#50CB26]">
+              <Button
+                size="lg"
+                asChild
+                className="bg-[#60DB36] hover:bg-[#50CB26]"
+              >
                 <Link href="/contact-us">
                   Schedule a Migration Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link href="/contact-us">
-                  View Migration Checklist
-                </Link>
+                <Link href="/contact-us">View Migration Checklist</Link>
               </Button>
             </div>
 
@@ -107,47 +131,60 @@ export default function ShopifyPlusMigrationPage() {
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="bg-card rounded-xl border border-border p-8">
-              <h3 className="text-2xl font-semibold mb-6 text-primary">You Should Upgrade If:</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-primary">
+                You Should Upgrade If:
+              </h3>
               <div className="space-y-4">
                 {[
                   {
                     title: "You're Doing $5M+ Annual Revenue",
-                    description: "At this scale, the 0.15% transaction fee reduction often covers part of the Plus subscription. Plus, you need enterprise features to operate efficiently."
+                    description:
+                      "At this scale, the 0.15% transaction fee reduction often covers part of the Plus subscription. Plus, you need enterprise features to operate efficiently.",
                   },
                   {
                     title: "You Need Advanced Checkout Customization",
-                    description: "Want custom fields, modified checkout layout, one-page checkout, or post-purchase upsells? Plus unlocks checkout extensibility."
+                    description:
+                      "Want custom fields, modified checkout layout, one-page checkout, or post-purchase upsells? Plus unlocks checkout extensibility.",
                   },
                   {
                     title: "You Have Multiple Sales Channels",
-                    description: "Running B2B, wholesale, retail, and DTC? Plus lets you manage everything from one admin with custom pricing by channel."
+                    description:
+                      "Running B2B, wholesale, retail, and DTC? Plus lets you manage everything from one admin with custom pricing by channel.",
                   },
                   {
                     title: "You're Managing 50+ Staff Accounts",
-                    description: "Standard Shopify limits staff accounts. Plus offers unlimited staff with granular permissions—critical for large teams."
+                    description:
+                      "Standard Shopify limits staff accounts. Plus offers unlimited staff with granular permissions—critical for large teams.",
                   },
                   {
                     title: "You Need Automation at Scale",
-                    description: "Shopify Flow (Plus-exclusive) automates hundreds of workflows: fraud detection, inventory alerts, customer tagging, order routing."
-                  }
+                    description:
+                      "Shopify Flow (Plus-exclusive) automates hundreds of workflows: fraud detection, inventory alerts, customer tagging, order routing.",
+                  },
                 ].map((item) => (
                   <div key={item.title} className="space-y-1">
-                    <p className="font-semibold text-foreground">{item.title}</p>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                    <p className="font-semibold text-foreground">
+                      {item.title}
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      {item.description}
+                    </p>
                   </div>
                 ))}
               </div>
             </div>
 
             <div className="bg-secondary/20 rounded-xl border border-border p-8">
-              <h3 className="text-2xl font-semibold mb-6">You Should Wait If:</h3>
+              <h3 className="text-2xl font-semibold mb-6">
+                You Should Wait If:
+              </h3>
               <ul className="space-y-3">
                 {[
                   "Revenue under $3M annually (ROI unclear)",
                   "Standard Shopify features meet all your needs",
                   "You don't need B2B/wholesale capabilities",
                   "Staff account limits aren't an issue",
-                  "Budget is a primary constraint"
+                  "Budget is a primary constraint",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2">
                     <CheckCircle2 className="h-5 w-5 text-muted-foreground flex-shrink-0 mt-0.5" />
@@ -173,57 +210,73 @@ export default function ShopifyPlusMigrationPage() {
               {
                 icon: Code,
                 title: "Checkout Extensibility",
-                description: "Complete checkout control: add custom fields, modify layout, create dynamic rules, post-purchase upsells, and subscription checkouts."
+                description:
+                  "Complete checkout control: add custom fields, modify layout, create dynamic rules, post-purchase upsells, and subscription checkouts.",
               },
               {
                 icon: Workflow,
                 title: "Shopify Flow",
-                description: "Visual workflow automation for fraud detection, customer tagging, inventory management, order routing, and custom notifications."
+                description:
+                  "Visual workflow automation for fraud detection, customer tagging, inventory management, order routing, and custom notifications.",
               },
               {
                 icon: Users,
                 title: "B2B and Wholesale",
-                description: "Native B2B storefront with custom pricing per customer, volume discounts, net terms, company accounts, and custom catalogs."
+                description:
+                  "Native B2B storefront with custom pricing per customer, volume discounts, net terms, company accounts, and custom catalogs.",
               },
               {
                 icon: Shield,
                 title: "Unlimited Staff Accounts",
-                description: "Unlimited staff with granular permissions, custom roles, department access, and audit logs for compliance."
+                description:
+                  "Unlimited staff with granular permissions, custom roles, department access, and audit logs for compliance.",
               },
               {
                 icon: Zap,
                 title: "LaunchPad",
-                description: "Schedule product launches, automate flash sales, switch themes for campaigns, and manage high-volume events."
+                description:
+                  "Schedule product launches, automate flash sales, switch themes for campaigns, and manage high-volume events.",
               },
               {
                 icon: Globe,
                 title: "Expansion Stores",
-                description: "10 expansion stores at $250/month each for different markets, localized currency/language, and market-specific catalogs."
+                description:
+                  "10 expansion stores at $250/month each for different markets, localized currency/language, and market-specific catalogs.",
               },
               {
                 icon: Settings,
                 title: "Scripts & Functions",
-                description: "Custom logic engine for shipping rates, dynamic discounts, payment restrictions, line item modifications, and cart validation."
+                description:
+                  "Custom logic engine for shipping rates, dynamic discounts, payment restrictions, line item modifications, and cart validation.",
               },
               {
                 icon: TrendingUp,
                 title: "Enhanced API Limits",
-                description: "4x higher API rate limits, higher webhook limits, and better support for integrations and custom apps."
+                description:
+                  "4x higher API rate limits, higher webhook limits, and better support for integrations and custom apps.",
               },
               {
                 icon: DollarSign,
                 title: "Lower Transaction Fees",
-                description: "Reduced fees for high-volume stores and priority support with dedicated merchant success manager."
-              }
+                description:
+                  "Reduced fees for high-volume stores and priority support with dedicated merchant success manager.",
+              },
             ].map((feature) => {
               const Icon = feature.icon;
               return (
-                <div key={feature.title} className="bg-card rounded-xl border border-border p-6">
+                <div
+                  key={feature.title}
+                  className="bg-card rounded-xl border border-border p-6"
+                >
                   <div className="inline-flex rounded-lg bg-primary/10 p-3 mb-4">
                     <Icon className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
-                  <p className="text-sm text-muted-foreground">{feature.description}</p>
+                  <h3 className="font-semibold text-lg mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {feature.description}
+                  </p>
                 </div>
               );
             })}
@@ -250,7 +303,8 @@ export default function ShopifyPlusMigrationPage() {
                 name: "Basic Migration",
                 price: "$25,000-45,000",
                 timeline: "6-8 weeks",
-                description: "Straightforward migrations with minimal customization",
+                description:
+                  "Straightforward migrations with minimal customization",
                 features: [
                   "Pre-migration assessment and planning",
                   "Theme migration and setup",
@@ -259,8 +313,8 @@ export default function ShopifyPlusMigrationPage() {
                   "Checkout customization (basic)",
                   "5-10 Shopify Flow automations",
                   "Team training (2 sessions)",
-                  "2 weeks post-launch support"
-                ]
+                  "2 weeks post-launch support",
+                ],
               },
               {
                 name: "Standard Migration",
@@ -276,8 +330,8 @@ export default function ShopifyPlusMigrationPage() {
                   "Custom integrations migration",
                   "Theme performance optimization",
                   "Extended team training (5 sessions)",
-                  "4 weeks post-launch support"
-                ]
+                  "4 weeks post-launch support",
+                ],
               },
               {
                 name: "Enterprise Migration",
@@ -293,9 +347,9 @@ export default function ShopifyPlusMigrationPage() {
                   "Headless architecture (if needed)",
                   "White-glove migration management",
                   "Dedicated project manager",
-                  "8 weeks post-launch support"
-                ]
-              }
+                  "8 weeks post-launch support",
+                ],
+              },
             ].map((tier) => (
               <div
                 key={tier.name}
@@ -307,9 +361,15 @@ export default function ShopifyPlusMigrationPage() {
               >
                 <h3 className="text-xl font-bold mb-2">{tier.name}</h3>
                 <div className="mb-4">
-                  <p className="text-3xl font-bold text-primary mb-1">{tier.price}</p>
-                  <p className="text-sm text-muted-foreground mb-2">{tier.timeline}</p>
-                  <p className="text-sm text-muted-foreground italic">{tier.description}</p>
+                  <p className="text-3xl font-bold text-primary mb-1">
+                    {tier.price}
+                  </p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    {tier.timeline}
+                  </p>
+                  <p className="text-sm text-muted-foreground italic">
+                    {tier.description}
+                  </p>
                 </div>
                 <ul className="space-y-2 mb-6">
                   {tier.features.map((feature) => (
@@ -319,7 +379,10 @@ export default function ShopifyPlusMigrationPage() {
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full bg-[#60DB36] hover:bg-[#50CB26]" asChild>
+                <Button
+                  className="w-full bg-[#60DB36] hover:bg-[#50CB26]"
+                  asChild
+                >
                   <Link href="/contact-us">Get Started</Link>
                 </Button>
               </div>
@@ -334,7 +397,7 @@ export default function ShopifyPlusMigrationPage() {
                 "App subscription fees",
                 "Third-party service costs (email, SMS, etc.)",
                 "Ongoing maintenance (available as retainer)",
-                "Custom feature development beyond migration scope"
+                "Custom feature development beyond migration scope",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-muted-foreground mt-2 flex-shrink-0" />
@@ -355,27 +418,37 @@ export default function ShopifyPlusMigrationPage() {
               {
                 icon: Zap,
                 title: "Zero Downtime",
-                description: "Seamless migration with no interruption to your business"
+                description:
+                  "Seamless migration with no interruption to your business",
               },
               {
                 icon: Shield,
                 title: "Data Protection",
-                description: "Complete data backup and secure migration process"
+                description:
+                  "Complete data backup and secure migration process",
               },
               {
                 icon: CheckCircle2,
                 title: "SEO Preservation",
-                description: "Maintain your search rankings and organic traffic"
-              }
+                description:
+                  "Maintain your search rankings and organic traffic",
+              },
             ].map((guarantee) => {
               const Icon = guarantee.icon;
               return (
-                <div key={guarantee.title} className="bg-card rounded-xl border border-border p-6 text-center">
+                <div
+                  key={guarantee.title}
+                  className="bg-card rounded-xl border border-border p-6 text-center"
+                >
                   <div className="inline-flex rounded-lg bg-primary/10 p-4 mb-4">
                     <Icon className="h-8 w-8 text-primary" />
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">{guarantee.title}</h3>
-                  <p className="text-sm text-muted-foreground">{guarantee.description}</p>
+                  <h3 className="font-semibold text-lg mb-2">
+                    {guarantee.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {guarantee.description}
+                  </p>
                 </div>
               );
             })}
@@ -395,31 +468,39 @@ export default function ShopifyPlusMigrationPage() {
             {[
               {
                 question: "How long does a migration take?",
-                answer: "Basic migrations: 6-8 weeks. Standard: 8-12 weeks. Enterprise: 12-16 weeks. Timeline depends on store complexity, customizations, and integrations."
+                answer:
+                  "Basic migrations: 6-8 weeks. Standard: 8-12 weeks. Enterprise: 12-16 weeks. Timeline depends on store complexity, customizations, and integrations.",
               },
               {
                 question: "Will there be any downtime?",
-                answer: "No. We perform migrations with zero downtime. Your store remains operational throughout the entire process."
+                answer:
+                  "No. We perform migrations with zero downtime. Your store remains operational throughout the entire process.",
               },
               {
                 question: "What happens to my existing Shopify store?",
-                answer: "All your data (products, customers, orders, content) migrates to Shopify Plus. Your existing Shopify plan can be cancelled once migration is complete."
+                answer:
+                  "All your data (products, customers, orders, content) migrates to Shopify Plus. Your existing Shopify plan can be cancelled once migration is complete.",
               },
               {
                 question: "Can I keep my existing theme?",
-                answer: "Yes, in most cases. We'll ensure your theme is optimized for Plus features and performance."
+                answer:
+                  "Yes, in most cases. We'll ensure your theme is optimized for Plus features and performance.",
               },
               {
                 question: "Do I need to change my apps?",
-                answer: "Most apps work on Plus. We'll review your app stack for Plus compatibility and suggest better alternatives if needed."
+                answer:
+                  "Most apps work on Plus. We'll review your app stack for Plus compatibility and suggest better alternatives if needed.",
               },
               {
                 question: "What support do you provide after migration?",
-                answer: "All packages include post-launch support (2-8 weeks depending on tier). Extended support available via monthly retainers starting at $2,000/month."
-              }
+                answer:
+                  "All packages include post-launch support (2-8 weeks depending on tier). Extended support available via monthly retainers starting at $2,000/month.",
+              },
             ].map((faq) => (
               <div key={faq.question} className="space-y-2">
-                <h3 className="text-lg font-semibold text-foreground">{faq.question}</h3>
+                <h3 className="text-lg font-semibold text-foreground">
+                  {faq.question}
+                </h3>
                 <p className="text-muted-foreground">{faq.answer}</p>
               </div>
             ))}

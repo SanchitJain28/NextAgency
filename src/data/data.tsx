@@ -86,7 +86,7 @@ export const SERVICES: Service[] = [
     icon: <ShopifyPlusIcon />,
   },
   {
-    href: "/services/conversion-optimization",
+    href: "/services/cro-optimization",
     title: "CRO & A/B Testing",
     desc: "Data-driven conversion rate optimization with rigorous experimentation frameworks and checkout funnel analysis.",
     icon: <CROIcon />,
@@ -255,7 +255,7 @@ export const FOOTER_SERVICES = [
   { href: "/services/theme-development", label: "Theme Development" },
   { href: "/services/backend-api", label: "Backend & API" },
   {
-    href: "/services/conversion-optimization",
+    href: "/services/cro-optimization",
     label: "Conversion Optimization",
   },
   {
@@ -317,7 +317,7 @@ export const HEADER_SERVICES = [
     desc: "Node.js, GraphQL, Storefront API",
   },
   {
-    href: "/services/conversion-optimization",
+    href: "/services/cro-optimization",
     label: "Conversion Optimization",
     desc: "CRO, A/B testing, funnel audits",
   },

@@ -16,22 +16,22 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Our Work — Custom Shopify Themes, Apps & CRO Case Studies | ScaleFront",
+  title: "Shopify Case Studies & Featured Work",
   description:
-    "Explore our featured Shopify projects: custom theme architectures, high-converting checkout flows, B2B procurement portals, and bespoke Shopify apps.",
+    "Explore our featured Shopify projects: custom theme architectures, high-converting checkout flows, B2B procurement portals, and bespoke apps.",
   alternates: {
-    canonical: "https://scalefront.io/work",
+    canonical: "/work",
   },
   openGraph: {
-    title: "Our Work — Custom Shopify Themes, Apps & CRO Case Studies | ScaleFront",
+    title: "Shopify Case Studies & Featured Work | ScaleFront",
     description:
-      "Explore our featured Shopify projects: custom theme architectures, high-converting checkout flows, B2B procurement portals, and bespoke Shopify apps.",
-    url: "https://scalefront.io/work",
+      "Explore our featured Shopify projects: custom theme architectures, high-converting checkout flows, B2B procurement portals, and bespoke apps.",
+    url: "https://www.scalefront.io/work",
     siteName: "ScaleFront",
     type: "website",
     images: [
       {
-        url: "https://scalefront.io/og-image.jpg",
+        url: "https://www.scalefront.io/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "ScaleFront - Featured Shopify Work & Case Studies",
@@ -40,10 +40,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Work — Custom Shopify Themes, Apps & CRO Case Studies | ScaleFront",
+    title: "Shopify Case Studies & Featured Work | ScaleFront",
     description:
       "Featured Shopify projects: custom themes, B2B portals, and bespoke Shopify apps.",
-    images: ["https://scalefront.io/og-image.jpg"],
+    images: ["https://www.scalefront.io/og-image.jpg"],
   },
 };
 
@@ -144,11 +144,15 @@ export default function WorkIndexPage() {
 
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif font-extrabold tracking-tight text-[var(--sf-ink)] leading-[0.98] mb-6">
                 Built for speed. <br />
-                <span className="text-[var(--sf-primary)]">Engineered to convert.</span>
+                <span className="text-[var(--sf-primary)]">
+                  Engineered to convert.
+                </span>
               </h1>
 
               <p className="text-lg sm:text-2xl text-[var(--sf-ink-soft)] font-sans leading-snug mb-8 font-medium max-w-3xl">
-                A showcase of custom Shopify themes, specialized B2B procurement portals, native bundling engines, and bespoke applications built with zero third-party app bloat.
+                A showcase of custom Shopify themes, specialized B2B procurement
+                portals, native bundling engines, and bespoke applications built
+                with zero third-party app bloat.
               </p>
 
               {/* QUICK STATS CHIPS */}
@@ -202,7 +206,8 @@ export default function WorkIndexPage() {
                   <Zap className="w-4 h-4" /> 01. Zero App Bloat
                 </div>
                 <p className="text-xs text-neutral-300 font-sans leading-relaxed">
-                  Replacing monthly SaaS subscriptions with clean, native Liquid sections and lightweight Ajax APIs.
+                  Replacing monthly SaaS subscriptions with clean, native Liquid
+                  sections and lightweight Ajax APIs.
                 </p>
               </div>
 
@@ -211,7 +216,8 @@ export default function WorkIndexPage() {
                   <Gauge className="w-4 h-4" /> 02. Sub-Second CWV
                 </div>
                 <p className="text-xs text-neutral-300 font-sans leading-relaxed">
-                  Optimized for 95+ mobile Lighthouse scores, zero Cumulative Layout Shift (CLS), and lightning LCP.
+                  Optimized for 95+ mobile Lighthouse scores, zero Cumulative
+                  Layout Shift (CLS), and lightning LCP.
                 </p>
               </div>
 
@@ -220,7 +226,8 @@ export default function WorkIndexPage() {
                   <Boxes className="w-4 h-4" /> 03. Native Bundles
                 </div>
                 <p className="text-xs text-neutral-300 font-sans leading-relaxed">
-                  Atomic multi-SKU payloads, dynamic quantity breaks, and tiered-reward slide-out drawer carts.
+                  Atomic multi-SKU payloads, dynamic quantity breaks, and
+                  tiered-reward slide-out drawer carts.
                 </p>
               </div>
 
@@ -229,7 +236,8 @@ export default function WorkIndexPage() {
                   <Layers className="w-4 h-4" /> 04. Custom Design Systems
                 </div>
                 <p className="text-xs text-neutral-300 font-sans leading-relaxed">
-                  Bespoke editorial identities, high-contrast typography, and tactile micro-interactions that stand out.
+                  Bespoke editorial identities, high-contrast typography, and
+                  tactile micro-interactions that stand out.
                 </p>
               </div>
             </div>
@@ -264,14 +272,17 @@ export default function WorkIndexPage() {
                   Interactive Storefront Comparison Viewer
                 </h3>
                 <p className="text-sm sm:text-base font-sans text-[var(--sf-ink-soft)] leading-relaxed mb-6">
-                  Want to explore side-by-side interactive split-screen comparisons of before &amp; after storefront transformations? Try our full-screen comparison tool.
+                  Want to explore side-by-side interactive split-screen
+                  comparisons of before &amp; after storefront transformations?
+                  Try our full-screen comparison tool.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Link
                     href="/portfolio"
                     className="px-6 py-3 border-2 border-[var(--sf-ink)] bg-[var(--sf-ink)] text-white font-mono text-xs font-bold uppercase tracking-wider shadow-[3px_3px_0_var(--sf-primary)] hover:bg-neutral-800 transition-all flex items-center gap-2"
                   >
-                    Open Comparison Viewer <ExternalLink className="w-3.5 h-3.5" />
+                    Open Comparison Viewer{" "}
+                    <ExternalLink className="w-3.5 h-3.5" />
                   </Link>
                   <Link
                     href="/services/theme-development"
@@ -307,17 +318,19 @@ export default function WorkIndexPage() {
                 Ready to elevate your Shopify storefront?
               </h2>
               <p className="text-base sm:text-lg text-neutral-300 font-sans mb-8 leading-relaxed">
-                Whether you need a custom theme build, native bundling architecture, or a bespoke Shopify app, we engineer solutions that load fast, look distinct, and convert.
+                Whether you need a custom theme build, native bundling
+                architecture, or a bespoke Shopify app, we engineer solutions
+                that load fast, look distinct, and convert.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <Link
-                  href="/contact"
+                  href="/contact-us"
                   className="px-7 py-3.5 border-2 border-white bg-[var(--sf-primary)] hover:bg-[var(--sf-primary-deep)] text-white font-mono text-sm font-bold uppercase tracking-wider shadow-[4px_4px_0_#ffffff] transition-all hover:translate-x-0.5 hover:translate-y-0.5"
                 >
                   Start Your Project
                 </Link>
                 <Link
-                  href="/services/conversion-optimization"
+                  href="/services/cro-optimization"
                   className="px-7 py-3.5 border-2 border-white bg-transparent hover:bg-white hover:text-[var(--sf-ink)] text-white font-mono text-sm font-bold uppercase tracking-wider transition-colors"
                 >
                   Explore CRO Services
