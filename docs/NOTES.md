@@ -1,3 +1,5 @@
+# MY NOTES (NO AI ALLOWED)
+
 ## Index Page
 
 `NOTE : All Components should be server components to properly render on the server to improve SEO`
@@ -65,6 +67,71 @@
 11. Prestashop development -> custom theme
 12. Static websites (landing page)
 13. Custom admin dashboards , Api integrations
+14. Saas Dashboards
+15. Custom software develeopment
+16. AI Automations
+17. Shopify SEO service
+
+## Audit pages
+
+1. Free shopify CRO audit
+2. Earn tool
+3. SEO Audit tool
+4. Shopify name idea giver
+5. Shopify Speed test
+6. WordPress/WooCommerce to Shopify CSV Formatter
+
+## How to make blog pages
+
+### Rules :
+
+1. The hook / title of the blog should be catchy
+2. It should follow EEAT
+
+- Experience
+  -> Reaseach the topic , search on google read articles , search on reddit and shopify communities to get
+  some real insights
+- Authoritativeness
+- Trustworthiness
+
+3. should be 2000+ words
+4. Should use simple language , Refer to content-style skill in .agents
+5. The content should provide real value to the readers
+
+## Location pages
+
+1. Shopify development agency in bangalore
+2. Shopify development agency in gurgaon
+3. Shopify develeopment agency in mumbai
+
+## How to do AEO ?
+
+- What is AEO ?
+
+  ```
+  Answer engine optimization (AEO) is a set of marketing practices used to increase your brand’s visibility in AI-generated answers — like Google’s AI Mode and ChatGPT responses.
+  ```
+
+- Answer Questions in Ways AI Understands
+
+  ```
+  To get cited and mentioned by AI, you need to find and answer real questions. And structure your content so that machines can understand it.
+  Target the right questions
+  Make the answers easy for AI to parse
+  ```
+
+- Create Content That Demonstrates Experience & Expertise
+
+```
+
+LLMs seem to favor content that reflects real-world use, personal insights, and/or original research, which aligns with Google's E-E-A-T principles.
+Include first-person insights and practical takeaways
+Share original research
+Use author bios that highlight expertise and experience in the field
+Cite authoritative sources to back up claims
+```
+
+- Make comparision pages
 
 ## Service pages
 
@@ -127,14 +194,6 @@
 10. Easy scalability
 11. Unique brand identity
 ```
-
-## Audit pages
-
-1. Free shopify CRO audit
-2. Earn tool
-3. SEO Audit tool
-4. Shopify name idea giver
-5. Shopify Speed test
 
 ## Different pages
 
