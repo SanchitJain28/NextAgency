@@ -41,7 +41,7 @@ Most store owners skip CRO audits and jump straight to random optimizations: "Le
 
 **This is backwards.**
 
-A proper [CRO audit](/services/store-audit-consulting) tells you exactly what's broken, why it's broken, and what to fix first for maximum impact.
+A proper [CRO audit](/services/audit-consulting) tells you exactly what's broken, why it's broken, and what to fix first for maximum impact.
 
 Here's our 6-step framework for conducting a comprehensive ecommerce CRO audit that actually drives results.
 
@@ -1029,4 +1029,4 @@ Pick 3-5 high-impact changes. Implement. Test. Measure. Iterate.
 
 Need help conducting a CRO audit? We've completed 100+ audits and know exactly what to look for.
 
-[Schedule a free CRO audit](/services/store-audit-consulting) or [see our conversion optimization work](/services/conversion-optimization).
+[Schedule a free CRO audit](/services/audit-consulting) or [see our conversion optimization work](/services/cro-optimization).

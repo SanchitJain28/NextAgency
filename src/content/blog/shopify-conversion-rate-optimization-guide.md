@@ -745,4 +745,4 @@ Then work your way down the funnel systematically.
 
 And if you need help with any of this—AI search, recommendations, headless checkout—we've built this for dozens of stores.
 
-[See our conversion optimization services](/services/conversion-optimization)
+[See our conversion optimization services](/services/cro-optimization)

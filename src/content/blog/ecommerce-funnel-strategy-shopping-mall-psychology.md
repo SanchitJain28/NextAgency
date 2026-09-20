@@ -941,4 +941,4 @@ The stores that win online are applying the same psychology, adapted for digital
 
 Need help optimizing your funnel? We specialize in [custom Shopify development](/services/custom-shopify-apps) that's designed around your specific customer journey.
 
-[Schedule a funnel audit](/services/store-audit-consulting) or [see our conversion optimization work](/services/conversion-optimization).
+[Schedule a funnel audit](/services/audit-consulting) or [see our conversion optimization work](/services/cro-optimization).

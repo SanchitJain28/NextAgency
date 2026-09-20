@@ -87,7 +87,7 @@ GemPages is a Shopify app that replaces your theme's page editor with a powerful
 - Brands that A/B test regularly
 - Agencies managing multiple clients
 
-Need help setting up custom pages? Our [theme customization services](/services/theme-customization) include GemPages setup and optimization.
+Need help setting up custom pages? Our [theme customization services](/services/theme-development) include GemPages setup and optimization.
 
 ## What Types of Pages Can You Create?
 
@@ -670,7 +670,7 @@ Ready to go live?
 - [ ] Submit to Google for indexing
 - [ ] Share with team for review
 
-Need expert help with page optimization? Our [store audit and consulting services](/services/store-audit-consulting) include comprehensive CRO analysis.
+Need expert help with page optimization? Our [store audit and consulting services](/services/audit-consulting) include comprehensive CRO analysis.
 
 ## Optimization Best Practices
 
@@ -899,7 +899,7 @@ Page 5: Thank you (referral offer)
 - Upsell sequences
 - Lead generation
 
-Check out our [ecommerce funnel strategy guide](/blog/ecommerce-funnel-strategy-shopping-mall-psychology) for advanced funnel optimization.
+Check out our [ecommerce funnel strategy guide](/blog/ecommerce-funnel-strategy-shopping-mall-psychology-shopping-mall-psychology) for advanced funnel optimization.
 
 ### AI Image-to-Layout
 
@@ -1197,4 +1197,4 @@ Need help creating high-converting GemPages designs? We've built 100+ optimized 
 
 Our [custom Shopify app development services](/services/custom-shopify-apps) can extend GemPages with advanced functionality tailored to your unique needs.
 
-[Schedule a page design consultation](/services/store-audit-consulting) to discuss your conversion goals and page strategy.
+[Schedule a page design consultation](/services/audit-consulting) to discuss your conversion goals and page strategy.

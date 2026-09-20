@@ -641,8 +641,8 @@ Don't overthink it. Pick one, launch, and optimize based on real data—not hypo
 
 **Need help setting up subscriptions?** We've implemented these apps dozens of times and know what actually works (and what breaks).
 
-[See our custom Shopify app development services](/services/custom-shopify-apps) or [schedule a consultation](/services/store-audit-consulting) to discuss your subscription strategy.
+[See our custom Shopify app development services](/services/custom-shopify-apps) or [schedule a consultation](/services/audit-consulting) to discuss your subscription strategy.
 
-Want to maximize retention once subscriptions are running? Check out our [D2C conversion playbook](/blog/d2c-conversion-playbook-shopify) for retention strategies that actually work.
+Want to maximize retention once subscriptions are running? Check out our [D2C conversion playbook](/blog/d2c-conversion-playbook-20-strategies-increase-sales) for retention strategies that actually work.
 
 Looking to optimize your subscription product pages? Our [CRO audit guide](/blog/shopify-conversion-rate-optimization-guide) covers everything from A/B testing to checkout optimization.

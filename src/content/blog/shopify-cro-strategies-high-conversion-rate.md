@@ -690,6 +690,6 @@ And if you want to drive quality traffic to your optimized store, read our [comp
 
 **Need help implementing high-impact CRO improvements?** We've taken stores from 2% to 6%+ conversion rates and know exactly what moves the needle.
 
-Get a [free conversion audit](/services/store-audit-consulting) to see where your store is losing sales and how to fix it. Our team has helped dozens of Shopify stores systematically increase their conversion rates through data-driven optimization.
+Get a [free conversion audit](/services/audit-consulting) to see where your store is losing sales and how to fix it. Our team has helped dozens of Shopify stores systematically increase their conversion rates through data-driven optimization.
 
-[Learn more about our CRO services](/services/store-audit-consulting) →
+[Learn more about our CRO services](/services/audit-consulting) →

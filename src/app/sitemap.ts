@@ -188,12 +188,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/blog`,
+      lastModified: lastModified,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/upsell-cross-sell-app-shopify`,
       lastModified: lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     // Legal pages
+    {
+      url: `${baseUrl}/privacy-policy`,
+      lastModified: lastModified,
+      changeFrequency: "monthly",
+      priority: 0.4,
+    },
+    {
+      url: `${baseUrl}/terms-of-service`,
+      lastModified: lastModified,
+      changeFrequency: "monthly",
+      priority: 0.4,
+    },
     {
       url: `${baseUrl}/upsell-cross-sell-app/privacy-policy`,
       lastModified: lastModified,

@@ -43,13 +43,20 @@ export async function generateMetadata({
     };
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://scalefront.io";
+  const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.scalefront.io";
   const postUrl = `${siteUrl}/blog/${slug}`;
   const imageUrl = post.image || `${siteUrl}/og-image.png`;
 
+  const cleanDescription =
+    post.description && post.description.length > 158
+      ? post.description.slice(0, 155).trim().replace(/[.,;:\s]+\S*$/, "") + "..."
+      : post.description;
+
+  const pageTitle = post.title.length > 47 ? { absolute: post.title } : post.title;
+
   return {
-    title: post.title,
-    description: post.description,
+    title: pageTitle,
+    description: cleanDescription,
     keywords: post.tags || [],
     authors: [{ name: post.author }],
     creator: "ScaleFront",
@@ -61,11 +68,11 @@ export async function generateMetadata({
     },
     metadataBase: new URL(siteUrl),
     alternates: {
-      canonical: `/blog/${slug}`,
+      canonical: `${siteUrl}/blog/${slug}`,
     },
     openGraph: {
       title: post.title,
-      description: post.description,
+      description: cleanDescription,
       url: `/blog/${slug}`,
       siteName: "ScaleFront",
       images: [
@@ -86,7 +93,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title: post.title,
-      description: post.description,
+      description: cleanDescription,
       images: [imageUrl],
       creator: "@scalefront",
     },
@@ -113,7 +120,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const relatedPosts = await getRelatedPosts(slug, 3);
-  const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://scalefront.io";
+  const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.scalefront.io";
   const postUrl = `${siteUrl}/blog/${slug}`;
 
   const faqs = post.faqs || [];
@@ -185,6 +192,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <Link
                     key={tag}
                     href={`/blog?tag=${encodeURIComponent(tag)}`}
+                    rel="nofollow"
                     className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-[#6B6B6B] dark:text-gray-300 text-xs rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                   >
                     {tag}

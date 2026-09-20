@@ -687,6 +687,6 @@ And remember—every time you prevent a return, you just saved $200+ in shipping
 
 Our [custom Shopify development services](/services/custom-shopify-apps) include AR integration, 3D product configurators, and conversion optimization specifically for furniture stores.
 
-Want to ensure your store is optimized for maximum conversions? Get our [comprehensive CRO audit](/services/store-audit-consulting) to identify exactly what's holding your furniture store back.
+Want to ensure your store is optimized for maximum conversions? Get our [comprehensive CRO audit](/services/audit-consulting) to identify exactly what's holding your furniture store back.
 
-Ready to discuss your furniture ecommerce project? [Schedule a consultation](/services/store-audit-consulting) to learn how we can help you build a furniture store that actually converts.
+Ready to discuss your furniture ecommerce project? [Schedule a consultation](/services/audit-consulting) to learn how we can help you build a furniture store that actually converts.

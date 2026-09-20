@@ -378,7 +378,7 @@ Create a web of internal links. This helps Google understand your site structure
 
 **Target:** 2-5 internal links per page
 
-Need help optimizing your store's content structure? [Get a free SEO audit](/services/store-audit-consulting) to identify opportunities.
+Need help optimizing your store's content structure? [Get a free SEO audit](/services/audit-consulting) to identify opportunities.
 
 ## The Backlink Problem (And How to Actually Solve It)
 
@@ -635,7 +635,7 @@ Pick one paid tool, one Shopify app. Don't overdo it.
 
 Cost: $2,000-10,000/month for good agencies. Cheaper options exist but often deliver poor results.
 
-Want expert help? Our team has taken stores from zero traffic to page 1 rankings. [Check out our SEO work](/services/store-audit-consulting) or [get a free SEO audit](/services/store-audit-consulting).
+Want expert help? Our team has taken stores from zero traffic to page 1 rankings. [Check out our SEO work](/services/audit-consulting) or [get a free SEO audit](/services/audit-consulting).
 
 ## The Bottom Line
 

@@ -394,16 +394,16 @@ export default function EarnFooter() {
         <div className="max-w-7xl mx-auto px-6 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-gray-400">
-              © 2024 <a href="https://scalefront.io" className="text-blue-400 hover:text-blue-300">ScaleFront.io</a>.
+              © {new Date().getFullYear()} <a href="https://www.scalefront.io" className="text-blue-400 hover:text-blue-300">ScaleFront.io</a>.
               All rights reserved. |
               <span className="ml-1">Official Shopify Partners</span>
             </div>
 
             <div className="flex space-x-6 text-sm text-gray-400">
-              <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
-              <a href="https://scalefront.io" className="hover:text-white transition-colors">About Us</a>
-              <a href="https://scalefront.io/contact-us" className="hover:text-white transition-colors">Contact</a>
+              <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</a>
+              <a href="/about-us" className="hover:text-white transition-colors">About Us</a>
+              <a href="/contact-us" className="hover:text-white transition-colors">Contact</a>
             </div>
           </div>
 

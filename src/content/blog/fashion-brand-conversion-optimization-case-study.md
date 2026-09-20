@@ -678,7 +678,7 @@ If you're stuck at 1-2% conversion and want to see what's possible, we offer com
 
 We'll identify exactly what's holding your store back and provide a prioritized roadmap to fix it.
 
-[See our conversion optimization services](/services/conversion-optimization) or [Schedule a free store audit](/services/store-audit-consulting)
+[See our conversion optimization services](/services/cro-optimization) or [Schedule a free store audit](/services/audit-consulting)
 
 ---
 

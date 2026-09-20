@@ -54,7 +54,7 @@ The founder reached out with a specific problem:
 
 ## The Audit: What We Found
 
-We conducted a [comprehensive 5-day audit](/services/store-audit-consulting) across analytics, user behavior, and technical performance.
+We conducted a [comprehensive 5-day audit](/services/audit-consulting) across analytics, user behavior, and technical performance.
 
 ![Analytics dashboard showing ecommerce data](https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200)
 
@@ -297,7 +297,7 @@ Now let's see what we actually did for Harbor & Nest.
 
 ## The Solution: Funnel Optimization + Automation
 
-We implemented fixes in 4 phases over 5 months, leveraging our expertise in [conversion rate optimization](/services/conversion-optimization).
+We implemented fixes in 4 phases over 5 months, leveraging our expertise in [conversion rate optimization](/services/cro-optimization).
 
 ### Phase 1: Homepage Transformation (Weeks 1-3)
 
@@ -931,7 +931,7 @@ Investment paid back in first 2.5 months.
 
 **1. Audit First, Act Second**
 
-We spent 2 weeks auditing before changing anything. This ensured we fixed the right problems, not random things. Our [comprehensive store audit](/services/store-audit-consulting) process identifies the highest-impact opportunities.
+We spent 2 weeks auditing before changing anything. This ensured we fixed the right problems, not random things. Our [comprehensive store audit](/services/audit-consulting) process identifies the highest-impact opportunities.
 
 **2. Category-Specific Matters**
 
@@ -983,11 +983,11 @@ We conduct comprehensive audits, identify category-specific issues, and implemen
 
 Shopify Flow automation is our secret weapon—we typically set up 12-18 automated workflows that run 24/7 without manual intervention.
 
-Interested in similar results for your store? Explore our [conversion optimization services](/services/conversion-optimization) or check out our related case studies:
+Interested in similar results for your store? Explore our [conversion optimization services](/services/cro-optimization) or check out our related case studies:
 
-- [Day 15: Complete Guide to Conversion Rate Optimization](/blog/conversion-optimization-guide)
-- [Day 16: Fashion Brand Case Study](/blog/fashion-brand-case-study)
-- [Day 17: Ecommerce Funnel Strategy Deep Dive](/blog/ecommerce-funnel-strategy)
+- [Day 15: Complete Guide to Conversion Rate Optimization](/blog/shopify-conversion-rate-optimization-guide)
+- [Day 16: Fashion Brand Case Study](/blog/fashion-brand-conversion-optimization-case-study)
+- [Day 17: Ecommerce Funnel Strategy Deep Dive](/blog/ecommerce-funnel-strategy-shopping-mall-psychology)
 
 ---
 

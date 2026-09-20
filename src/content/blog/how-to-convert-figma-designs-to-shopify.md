@@ -320,7 +320,7 @@ Most Figma files miss 80% of these states.
 - What's not technically feasible
 - Questions for designer/client
 
-We offer a comprehensive [design review](/services/store-audit-consulting) to identify these issues early.
+We offer a comprehensive [design review](/services/audit-consulting) to identify these issues early.
 
 ### Phase 2: Component Breakdown (Week 1)
 

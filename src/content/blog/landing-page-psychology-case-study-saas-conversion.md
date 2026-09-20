@@ -233,7 +233,7 @@ Users didn't know which to choose, so they chose none.
 
 ## The Solution: Applying Psychology Strategically
 
-We rebuilt the landing page around 8 psychological principles. Learn more about these principles in our comprehensive [landing page psychology guide](/blog/landing-page-psychology-guide-boost-conversions).
+We rebuilt the landing page around 8 psychological principles. Learn more about these principles in our comprehensive [landing page psychology guide](/blog/landing-page-psychology-principles-that-drive-conversions).
 
 ### Fix #1: Passed the 5-Second Test
 
@@ -575,7 +575,7 @@ Transparency = trust.
 
 ## Which Principles Had Biggest Impact?
 
-We tracked [A/B testing](/services/conversion-optimization) to isolate each change:
+We tracked [A/B testing](/services/cro-optimization) to isolate each change:
 
 **1. Form reduction (8 fields → 2 fields)**
 Impact: +65% conversion
@@ -728,7 +728,7 @@ In hindsight, should have been 60% copy, 40% design.
 
 Words drive decisions.
 
-For more insights on [conversion optimization strategies](/blog/conversion-optimization-guide-ecommerce-saas), check out our comprehensive guide.
+For more insights on [conversion optimization strategies](/blog/shopify-conversion-rate-optimization-guide), check out our comprehensive guide.
 
 ## What Happens Next?
 
@@ -752,7 +752,7 @@ TaskFlow continues optimizing:
 
 The psychological principles aren't tricks. They're understanding how humans make decisions and removing friction from that process.
 
-Similar to what we achieved in our [fashion brand CRO case study](/blog/fashion-brand-cro-case-study-conversion-optimization), consistent optimization produces lasting results.
+Similar to what we achieved in our [fashion brand CRO case study](/blog/fashion-brand-conversion-optimization-case-study), consistent optimization produces lasting results.
 
 ## The Takeaway
 
@@ -780,4 +780,4 @@ Same traffic. Same product. Better psychology.
 
 Need help optimizing your landing pages? We apply these principles (and test rigorously) to build pages that actually convert.
 
-[Schedule a landing page audit](/services/store-audit-consulting) or [see our conversion optimization work](/services/conversion-optimization).
+[Schedule a landing page audit](/services/audit-consulting) or [see our conversion optimization work](/services/cro-optimization).

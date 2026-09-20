@@ -1246,8 +1246,8 @@ Small improvements compound into massive results.
 
 Need help implementing these strategies? We've optimized 100+ D2C stores and know what works.
 
-[Schedule a conversion audit](/services/store-audit-consulting) or [see our D2C optimization work](/services/conversion-optimization).
+[Schedule a conversion audit](/services/audit-consulting) or [see our D2C optimization work](/services/cro-optimization).
 
 Want to take your [conversion rate optimization](/blog/shopify-conversion-rate-optimization-guide) to the next level? Check out our guide on [how to do a complete CRO audit](/blog/how-to-do-ecommerce-cro-audit-complete-guide) and learn about [landing page psychology principles](/blog/landing-page-psychology-principles-that-drive-conversions).
 
-For technical implementations, explore our services for [headless commerce](/services/headless-commerce) and [custom store audits](/services/store-audit-consulting).
+For technical implementations, explore our services for [headless commerce](/services/headless-commerce) and [custom store audits](/services/audit-consulting).

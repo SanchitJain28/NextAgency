@@ -9,24 +9,26 @@ import Footer from "@/components/header-footer/Footer";
 import BlogPageClient from "./page_new";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.scalefront.io"),
   title: "Blog | ScaleFront - Shopify Growth & E-commerce Insights",
   description:
     "Learn how to grow your Shopify store with expert insights on e-commerce, conversion optimization, and store performance. Tips and strategies for online success.",
+  alternates: {
+    canonical: "https://www.scalefront.io/blog",
+    types: {
+      "application/rss+xml": "https://www.scalefront.io/blog/rss.xml",
+    },
+  },
   openGraph: {
     title: "ScaleFront Blog - E-commerce Growth Insights",
     description: "Expert tips and strategies for growing your Shopify store",
     type: "website",
-    url: "https://scalefront.io/blog",
+    url: "https://www.scalefront.io/blog",
   },
   twitter: {
     card: "summary_large_image",
     title: "ScaleFront Blog - E-commerce Growth Insights",
     description: "Expert tips and strategies for growing your Shopify store",
-  },
-  alternates: {
-    types: {
-      "application/rss+xml": "https://scalefront.io/blog/rss.xml",
-    },
   },
 };
 export default async function BlogPage() {

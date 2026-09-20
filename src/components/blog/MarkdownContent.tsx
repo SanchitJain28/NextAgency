@@ -83,9 +83,9 @@ export function MarkdownContent({ content }: { content: string }) {
             .replace(/[^a-z0-9]+/g, "-")
             .replace(/(^-|-$)/g, "");
           return (
-            <h1 id={id} {...props}>
+            <h2 id={id} {...props}>
               {children}
-            </h1>
+            </h2>
           );
         },
         h2: ({ children, ...props }) => {

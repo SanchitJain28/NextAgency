@@ -1005,7 +1005,7 @@ Here's how these principles work together:
 
 **Don't guess. Test.**
 
-What you need to know about our [conversion optimization](/services/conversion-optimization) approach is that data always beats assumptions.
+What you need to know about our [conversion optimization](/services/cro-optimization) approach is that data always beats assumptions.
 
 ![A/B testing and optimization](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop)
 
@@ -1114,4 +1114,4 @@ A landing page that converts 2% can become an 8% converter by applying these psy
 
 Need help optimizing your landing pages? We apply these principles (and test rigorously) to build pages that actually convert.
 
-[Schedule a landing page audit](/services/store-audit-consulting) or [see our conversion optimization work](/services/conversion-optimization).
+[Schedule a landing page audit](/services/audit-consulting) or [see our conversion optimization work](/services/cro-optimization).

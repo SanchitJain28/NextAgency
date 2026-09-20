@@ -142,7 +142,7 @@ Before writing any code, we spent 3 days auditing the Figma files.
 
 **Our recommendation:**
 
-Build [custom theme development](/services/theme-customization) (Approach #3 from our [Figma to Shopify conversion guide](/blog/how-to-convert-figma-designs-to-shopify)).
+Build [custom theme development](/services/theme-development) (Approach #3 from our [Figma to Shopify conversion guide](/blog/how-to-convert-figma-designs-to-shopify)).
 
 Why not headless? Pure Essence didn't need checkout customization or extreme performance. Custom theme could achieve 90% of design vision at half the cost of headless.
 
@@ -827,7 +827,7 @@ Areas where we compromised were approved by designer beforehand.
 Before: $42K monthly average
 After: $78K monthly average (+86%)
 
-The ingredient-focused design positioned them as educators, building trust that converted. This aligns with [conversion optimization best practices](/blog/conversion-optimization-shopify-stores) and effective [ecommerce funnel strategy](/blog/ecommerce-sales-funnel-strategy).
+The ingredient-focused design positioned them as educators, building trust that converted. This aligns with [conversion optimization best practices](/blog/shopify-conversion-rate-optimization) and effective [ecommerce funnel strategy](/blog/ecommerce-funnel-strategy-shopping-mall-psychology-shopping-mall-psychology).
 
 ### Qualitative Feedback
 
@@ -870,7 +870,7 @@ Ongoing benefit continues as traffic grows.
 
 **1. Design audit before coding is essential**
 
-3 days upfront saved weeks of rework. We identified unfeasible features before building, got designer buy-in on compromises. Our [design review](/services/store-audit-consulting) process is crucial for project success.
+3 days upfront saved weeks of rework. We identified unfeasible features before building, got designer buy-in on compromises. Our [design review](/services/audit-consulting) process is crucial for project success.
 
 **2. Mobile requires separate design thinking**
 
@@ -968,4 +968,4 @@ For Pure Essence, it was a no-brainer.
 
 Need help converting your Figma designs to Shopify? We've converted 50+ designs and know how to bridge the gap between design vision and technical reality.
 
-[Schedule a design review](/services/store-audit-consulting) or [see our Shopify development work](/services/custom-shopify-apps).
+[Schedule a design review](/services/audit-consulting) or [see our Shopify development work](/services/custom-shopify-apps).

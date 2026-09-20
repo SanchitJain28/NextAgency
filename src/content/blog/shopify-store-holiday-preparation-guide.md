@@ -907,4 +907,4 @@ By the time Black Friday hits, you'll be ready to execute while everyone else sc
 
 **Need help preparing your Shopify store for the holidays?** We've helped brands 2-3x their Q4 revenue with strategic holiday optimization.
 
-[Get a free holiday readiness audit](/services/store-audit-consulting) to identify exactly what your store needs before peak season hits.
+[Get a free holiday readiness audit](/services/audit-consulting) to identify exactly what your store needs before peak season hits.

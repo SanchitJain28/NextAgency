@@ -989,7 +989,7 @@ Best value at $14.99/month with good features and performance.
 
 Start with a free trial or free plan. Test 2-3 builders if unsure. You'll know within a day which feels right.
 
-Need help implementing your page builder or want custom [theme customization](/services/theme-customization)? Our team specializes in [Shopify development work](/services/custom-shopify-apps) and can help you create high-converting pages that match your brand perfectly. [Schedule a consultation](/services/store-audit-consulting) to discuss your store's design needs.
+Need help implementing your page builder or want custom [theme customization](/services/theme-development)? Our team specializes in [Shopify development work](/services/custom-shopify-apps) and can help you create high-converting pages that match your brand perfectly. [Schedule a consultation](/services/audit-consulting) to discuss your store's design needs.
 
 For more design and conversion optimization guidance, check out our guides on converting [Figma designs to Shopify](https://scalefront.com/blog), our [Figma to Shopify case study](https://scalefront.com/blog), and our comprehensive [CRO audit guide](https://scalefront.com/blog) to test your page performance.
 

@@ -562,6 +562,6 @@ Stop second-guessing. Build the store.
 
 **Need help naming or building your Shopify store?** We've helped dozens of brands launch and know what actually matters (hint: it's not agonizing over the perfect name for 6 months).
 
-Looking for help with your [Shopify work](/services/theme-customization)? Want expert guidance on your branding? [Schedule a branding consultation](/services/store-audit-consulting) with our team.
+Looking for help with your [Shopify work](/services/theme-development)? Want expert guidance on your branding? [Schedule a branding consultation](/services/audit-consulting) with our team.
 
 We've also got resources on [Shopify SEO](/blog/shopify-seo-guide-how-to-rank-google) to help your newly-named store actually get found, and guides on building niche stores like our [furniture store guide](/blog/how-to-build-furniture-shopify-store-complete-guide) that show what goes into successful branding. If you're building your store, check out our [best page builders](/blog/best-shopify-page-builders-complete-comparison-guide) comparison to get started right.
