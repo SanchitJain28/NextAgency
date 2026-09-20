@@ -2,7 +2,8 @@ import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog/posts";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.scalefront.io";
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL || "https://www.scalefront.io";
   const lastModified = new Date();
 
   const blogPosts = await getAllPosts();
@@ -199,7 +200,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly",
       priority: 0.8,
     },
-    // Legal pages
     {
       url: `${baseUrl}/privacy-policy`,
       lastModified: lastModified,
