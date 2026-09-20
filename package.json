@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check:titles": "tsx tools/check-title-length.ts",
+    "check:descriptions": "tsx tools/check-meta-description-length.ts",
+    "check:seo": "tsx tools/check-title-length.ts && tsx tools/check-meta-description-length.ts"
   },
   "dependencies": {
     "@fontsource/stack-sans-text": "^5.2.1",
@@ -82,6 +85,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.0.7",
     "tailwindcss": "^4",
+    "tsx": "^4.23.15",
     "tw-animate-css": "^1.3.7",
     "typescript": "^5"
   }

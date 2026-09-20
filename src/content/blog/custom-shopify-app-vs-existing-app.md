@@ -1,5 +1,5 @@
 ---
-title: "Custom Shopify App vs Existing App: When to Build (2025 Guide)"
+title: "Custom Shopify App vs App Store: When to Build (Guide)"
 description: "Paying ₹50k/month in app fees? Learn exactly when custom Shopify development makes sense vs using existing apps—with real cost comparisons and a decision framework."
 date: "2025-02-13"
 author: "ScaleFront Team"

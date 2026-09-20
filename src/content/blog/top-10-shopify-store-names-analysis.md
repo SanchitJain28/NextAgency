@@ -1,5 +1,5 @@
 ---
-title: "Top 10 Shopify Store Names That Actually Work (2026 Analysis)"
+title: "Top 10 Shopify Store Names That Actually Work (Analysis)"
 description: "Real analysis of successful Shopify store names like Gymshark, Allbirds, and Death Wish Coffee. Learn what makes a store name memorable and profitable."
 date: 2025-12-13
 author: "ScaleFront Team"

@@ -1,5 +1,5 @@
 ---
-title: "9 Best Upsell & Cross-Sell Apps for Shopify in 2025 (Tested & Compared)"
+title: "9 Best Shopify Upsell & Cross-Sell Apps (2026 Tested)"
 description: "We tested 20+ Shopify upsell apps. Here are the 9 best for increasing AOV—from AI-powered recommendations to one-click upsells. Includes pricing, pros/cons, and real results."
 date: "2025-02-11"
 author: "ScaleFront Team"

@@ -1,5 +1,5 @@
 ---
-title: "How to Create High-Converting Pages with GemPages: Complete Guide"
+title: "Create High-Converting Pages with GemPages: Full Guide"
 description: "Learn how to create custom landing pages, product pages, and collection pages with GemPages. Step-by-step guide with optimization tips and real examples for Shopify stores."
 date: 2025-12-09
 author: "ScaleFront Team"

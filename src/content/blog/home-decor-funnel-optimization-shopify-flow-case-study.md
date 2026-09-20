@@ -1,5 +1,5 @@
 ---
-title: "Case Study: How We Increased a Home Decor Store's Conversion Rate from 2.1% to 4.8% Using Funnel Optimization + Shopify Flow"
+title: "Case Study: Boosting Home Decor Conversions 2.1% to 4.8%"
 description: "Complete CRO case study: How we audited a home decor store, identified funnel leaks, and used Shopify Flow automation to increase conversion 129%. Includes Flow examples."
 date: 2025-12-05
 author: "ScaleFront Team"

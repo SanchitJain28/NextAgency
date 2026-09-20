@@ -1,5 +1,5 @@
 ---
-title: "Case Study: Shoe Store Increased Sales 34% with AI Recommendations"
+title: "Case Study: Shoe Store Lifted Sales 34% With AI Upsells"
 description: "See how a footwear D2C brand eliminated 15+ hours of manual work and increased AOV by 31% using AI-powered product recommendations. Real metrics, implementation details, and results."
 date: "2025-02-14"
 author: "ScaleFront Team"

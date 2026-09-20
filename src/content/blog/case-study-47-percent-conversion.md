@@ -1,5 +1,5 @@
 ---
-title: "Case Study: How We Increased a D2C Brand's Conversions by 47%"
+title: "Case Study: Increasing a D2C Store Conversion Rate by 47%"
 description: "Detailed case study: A fashion D2C brand was losing ₹1.2Cr yearly to poor UX. See the exact fixes—checkout optimization, mobile UX, speed improvements—that drove 47% more conversions."
 date: 2025-02-04
 author: "Rishabh Jain"

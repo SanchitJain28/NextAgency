@@ -1,5 +1,5 @@
 ---
-title: "Why We Built an AI-Powered Recommendation App for Shopify (Founder's Story)"
+title: "Why We Built an AI Recommendation App for Shopify Stores"
 description: "I spent 6 hours setting up product recommendations for 200 products. Then I added 10 new products and had to start over. Here's why we built an AI app that does it automatically."
 date: "2025-02-13"
 author: "ScaleFront Team"

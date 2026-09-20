@@ -1,5 +1,5 @@
 ---
-title: "Landing Page Psychology: 15 Principles That Actually Drive Conversions"
+title: "Landing Page Psychology: 15 Principles That Drive Sales"
 description: "Learn the psychology behind high-converting landing pages. Visual hierarchy, cognitive biases, trust signals, and proven principles that increase conversions. With real examples."
 date: 2025-12-07
 author: "ScaleFront Team"

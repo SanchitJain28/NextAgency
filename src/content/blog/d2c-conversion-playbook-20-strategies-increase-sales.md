@@ -1,5 +1,5 @@
 ---
-title: "The Complete D2C Conversion Playbook: 20 Strategies From Brands Doing $100M+"
+title: "D2C Conversion Playbook: 20 Strategies From $100M Stores"
 description: "Complete D2C conversion guide with 20 strategies from brands like Glossier, Allbirds, and Gymshark. Learn how to capture attention, reduce friction, and drive repeat purchases."
 date: 2025-12-09
 author: "ScaleFront Team"

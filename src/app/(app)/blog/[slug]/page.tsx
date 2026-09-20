@@ -39,20 +39,25 @@ export async function generateMetadata({
 
   if (!post) {
     return {
-      title: "Post Not Found",
+      title: { absolute: "Blog Article Not Found | ScaleFront Agency" },
     };
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.scalefront.io";
+  const siteUrl =
+    process.env.NEXT_PUBLIC_BASE_URL || "https://www.scalefront.io";
   const postUrl = `${siteUrl}/blog/${slug}`;
   const imageUrl = post.image || `${siteUrl}/og-image.png`;
 
   const cleanDescription =
     post.description && post.description.length > 158
-      ? post.description.slice(0, 155).trim().replace(/[.,;:\s]+\S*$/, "") + "..."
+      ? post.description
+          .slice(0, 155)
+          .trim()
+          .replace(/[.,;:\s]+\S*$/, "") + "..."
       : post.description;
 
-  const pageTitle = post.title.length > 47 ? { absolute: post.title } : post.title;
+  const pageTitle =
+    post.title.length > 47 ? { absolute: post.title } : post.title;
 
   return {
     title: pageTitle,
@@ -120,7 +125,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const relatedPosts = await getRelatedPosts(slug, 3);
-  const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.scalefront.io";
+  const siteUrl =
+    process.env.NEXT_PUBLIC_BASE_URL || "https://www.scalefront.io";
   const postUrl = `${siteUrl}/blog/${slug}`;
 
   const faqs = post.faqs || [];

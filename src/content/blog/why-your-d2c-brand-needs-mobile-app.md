@@ -1,5 +1,5 @@
 ---
-title: "Why Your D2C Brand Needs a Mobile App (And Why Most Shopify Apps Are Garbage)"
+title: "Why Your D2C Brand Needs a Native Mobile App on Shopify"
 description: "Stop paying ₹50-200 to reach the same customer twice. Learn why a real mobile app beats retargeting ads, and why 10-minute app builders are destroying your brand."
 date: "2025-01-31"
 author: "ScaleFront Team"

@@ -1,5 +1,5 @@
 ---
-title: "How to Integrate Shopify with Your Warehouse Management System"
+title: "How to Integrate Shopify with Warehouse Systems (WMS Guide)"
 description: "Learn how to connect Shopify with your WMS or 3PL. Covers Unicommerce, Vinculum, Increff integrations, inventory sync issues, order routing, and avoiding common mistakes."
 date: "2025-01-30"
 author: "ScaleFront Team"

@@ -1,5 +1,5 @@
 ---
-title: "AI vs Traditional Product Recommendations for Shopify: Complete Performance Comparison 2025"
+title: "AI vs Traditional Shopify Product Recommendations (2026)"
 description: "Discover how AI-powered text embeddings deliver 150-200% better performance than traditional Frequently Bought Together recommendations. Learn when to use AI vs manual curation for maximum Shopify revenue."
 date: "2025-02-05"
 author: "ScaleFront Team"

@@ -18,7 +18,7 @@ import {
 import DottedSeparator from "@/components/seperators/DottedSeperator";
 
 export const metadata: Metadata = {
-  title: "Shopify Store Audit & Consulting",
+  title: "Shopify Store Audit & Consulting Services",
   description:
     "Actionable Shopify store audits covering site speed, mobile UX, conversion friction, and technical SEO from certified Shopify engineering experts.",
   keywords: [

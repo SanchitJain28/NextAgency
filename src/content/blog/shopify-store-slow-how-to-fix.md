@@ -1,5 +1,5 @@
 ---
-title: "Why Your Shopify Store Is Slow (And How to Fix It in 48 Hours)"
+title: "Why Your Shopify Store Is Slow & How to Fix It Fast"
 description: "Is your Shopify store slow? Learn the 9 most common causes of poor Shopify performance and get step-by-step fixes you can implement in 48 hours. Free speed audit checklist included."
 date: "2025-01-27"
 author: "ScaleFront Team"

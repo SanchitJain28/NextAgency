@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Shopify Development Pricing & Plans",
+  title: "Shopify Development Pricing & Service Plans",
   description:
     "Transparent Shopify development pricing. Fixed rates for custom themes, bespoke Shopify apps, CRO audits, and headless commerce solutions.",
   alternates: {

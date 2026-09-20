@@ -24,7 +24,7 @@ import {
 import DottedSeparator from "@/components/seperators/DottedSeperator";
 
 export const metadata: Metadata = {
-  title: "Iron Crate — Custom Theme Case Study",
+  title: "Iron Crate — Custom Shopify Theme Case Study",
   description:
     "A deep dive into Iron Crate: custom Shopify theme architecture, interactive bundle builder, clinical dosage PDPs, and a tiered-reward cart.",
   alternates: {

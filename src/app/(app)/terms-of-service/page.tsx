@@ -3,7 +3,7 @@ import { Header } from "@/components/header-footer/Header";
 import Footer from "@/components/header-footer/Footer";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | ScaleFront",
+  title: "Terms of Service & Client Service Agreement | ScaleFront",
   description:
     "ScaleFront terms of service covering client engagements, Shopify development contracts, intellectual property, and service agreements.",
   alternates: {

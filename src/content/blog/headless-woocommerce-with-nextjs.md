@@ -1,5 +1,5 @@
 ---
-title: "Headless WooCommerce with Next.js 2025: Ultimate Migration Guide | 5x Faster Performance"
+title: "Headless WooCommerce with Next.js: Complete Migration Guide"
 description: "Complete guide to headless WooCommerce with Next.js in 2025. Boost your store's speed 5x, improve SEO rankings, and achieve 23% higher conversions. Step-by-step migration tutorial included."
 date: "2025-02-07"
 author: "ScaleFront Team"

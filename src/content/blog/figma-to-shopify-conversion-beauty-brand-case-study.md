@@ -1,5 +1,5 @@
 ---
-title: "Case Study: Converting Complex Figma Designs to Shopify for a Premium Beauty Brand"
+title: "Case Study: Converting Figma to Shopify for Beauty Brands"
 description: "Real case study: How we converted complex Figma designs to Shopify for a beauty brand. Challenges, solutions, code examples, and results. $38K investment, 9-week timeline."
 date: 2025-12-06
 author: "ScaleFront Team"

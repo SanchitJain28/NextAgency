@@ -1,5 +1,5 @@
 ---
-title: "Shopify SEO Guide 2026: How to Actually Rank on Google (Not Generic Tips)"
+title: "Shopify SEO Guide 2026: How to Actually Rank on Google"
 description: "Real Shopify SEO strategies that work in 2026. Technical optimization, speed fixes, content strategy, and what actually moves rankings. No fluff."
 date: 2025-12-13
 author: "ScaleFront Team"

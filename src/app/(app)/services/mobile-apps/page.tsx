@@ -6,7 +6,7 @@ import { ArrowRight, CheckCircle2, Smartphone, Tablet, Monitor, Clock, Zap, User
 import DottedSeparator from "@/components/seperators/DottedSeperator";
 
 export const metadata: Metadata = {
-  title: "Shopify Mobile App Development Services | iOS & Android | ScaleFront",
+  title: "Shopify Mobile App Development Services | ScaleFront",
   description:
     "Native iOS and Android mobile apps for your Shopify store. Enhanced shopping experience, push notifications, offline access. Starting $40K.",
   keywords: [

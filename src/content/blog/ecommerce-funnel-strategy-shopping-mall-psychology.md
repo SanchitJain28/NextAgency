@@ -1,5 +1,5 @@
 ---
-title: "Ecommerce Funnel Strategy: Apply Shopping Mall Psychology to Your Store"
+title: "Ecommerce Funnel Strategy: Shopping Mall Buyer Psychology"
 description: "Learn how to optimize every step of your ecommerce funnel using retail psychology. Why themes aren't enough and how to customize each touchpoint for maximum conversion."
 date: 2025-12-05
 author: "ScaleFront Team"

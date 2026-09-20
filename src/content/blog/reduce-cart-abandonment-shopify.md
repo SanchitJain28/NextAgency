@@ -1,5 +1,5 @@
 ---
-title: "How to Reduce Cart Abandonment on Shopify: 15 Fixes That Actually Work"
+title: "Reduce Shopify Cart Abandonment: 15 Tactics That Work"
 description: "70% of Shopify carts are abandoned. Learn the exact checkout fixes, trust signals, and recovery tactics Indian D2C brands use to recover ₹10-50 lakh in lost revenue monthly."
 date: "2025-01-29"
 author: "ScaleFront Team"

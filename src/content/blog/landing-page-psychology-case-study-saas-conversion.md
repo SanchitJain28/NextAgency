@@ -1,5 +1,5 @@
 ---
-title: "Case Study: How Landing Page Psychology Increased Conversion from 2.3% to 9.7%"
+title: "Case Study: Landing Page Psychology Lifted Sales to 9.7%"
 description: "Real case study: How we applied 8 psychological principles to transform a SaaS landing page. Increased conversion from 2.3% to 9.7% in 6 weeks. Before/after examples included."
 date: 2025-12-07
 author: "ScaleFront Team"

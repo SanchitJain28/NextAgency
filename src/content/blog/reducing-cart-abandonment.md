@@ -1,5 +1,5 @@
 ---
-title: "Complete Guide: Reducing Cart Abandonment with Smart Related Product Widgets"
+title: "Reducing Cart Abandonment with Related Product Widgets"
 description: "Learn how to reduce cart abandonment by 20-35% using AI-powered product recommendations. Discover proven strategies, psychology-backed tactics, and actionable implementation steps that increase conversion rates."
 date: 2025-02-11
 author: "ScaleFront Team"

@@ -6,7 +6,7 @@ import { ArrowRight, CheckCircle2, Plug2, Workflow, Link2, Database, Clock, Doll
 import DottedSeparator from "@/components/seperators/DottedSeperator";
 
 export const metadata: Metadata = {
-  title: "Shopify Third-Party Integration Services | API Integration | ScaleFront",
+  title: "Shopify Third-Party & API Integrations | ScaleFront",
   description:
     "Connect Shopify with ERP, WMS, CRM, accounting, and custom systems. Expert API integration services. Seamless data flow between platforms. Starting $15K.",
   keywords: [

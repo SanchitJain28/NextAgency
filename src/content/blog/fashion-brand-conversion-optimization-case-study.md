@@ -1,5 +1,5 @@
 ---
-title: "How a DTC Fashion Brand Increased Conversion Rate 127% (Real Case Study)"
+title: "Case Study: How a DTC Fashion Brand Lifted Conversions 127%"
 description: "Real conversion optimization case study: How a $1.8M fashion brand went from 1.6% to 3.6% conversion through AI search, checkout optimization, and smart targeting. Complete breakdown with metrics."
 date: 2025-12-04
 author: "ScaleFront Team"

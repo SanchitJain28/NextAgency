@@ -1,5 +1,5 @@
 ---
-title: "Headless WooCommerce with Next.js: Get Shopify Speed & Performance"
+title: "Headless WooCommerce with Next.js: Shopify Speed Guide"
 description: "Transform your WooCommerce store with a headless Next.js frontend. Achieve 2-5x faster page loads, Shopify-like UX, and better SEO while keeping WooCommerce's flexibility. Learn how the best of both platforms combine."
 date: "2025-02-06"
 author: "ScaleFront Team"

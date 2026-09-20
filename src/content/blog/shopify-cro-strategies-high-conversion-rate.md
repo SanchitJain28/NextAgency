@@ -1,5 +1,5 @@
 ---
-title: "How to Hit 6-7% Conversion Rate on Shopify: CRO Strategies That Work"
+title: "How to Hit 6-7% Conversion Rate on Shopify: CRO Tactics"
 description: "Complete CRO playbook for Shopify stores. Increase conversion rate to 6-7% and AOV to $75+ with gender-specific landing pages, checkout optimization, and trust elements."
 date: 2025-12-13
 author: "ScaleFront Team"

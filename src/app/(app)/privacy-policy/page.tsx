@@ -3,7 +3,7 @@ import { Header } from "@/components/header-footer/Header";
 import Footer from "@/components/header-footer/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | ScaleFront",
+  title: "Privacy Policy & Data Protection Guidelines | ScaleFront",
   description:
     "ScaleFront privacy policy outlining how we collect, use, and protect your personal information when using our ecommerce services and website.",
   alternates: {

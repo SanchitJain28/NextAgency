@@ -1,5 +1,5 @@
 ---
-title: "Headless Commerce Explained: Is Your D2C Brand Actually Ready for It?"
+title: "Headless Commerce Explained: Is Your Brand Ready to Scale?"
 description: "Headless commerce sounds exciting, but is your brand ready? We break down real costs, technical requirements, and when headless makes sense for Indian D2C brands doing ₹1Cr+."
 date: "2025-01-28"
 author: "ScaleFront Team"

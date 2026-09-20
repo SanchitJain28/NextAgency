@@ -1,5 +1,5 @@
 ---
-title: "Shopify Conversion Rate Optimization: The Ultimate 2025 Benchmark Guide"
+title: "Shopify CRO Benchmarks: Ultimate Conversion Guide (2026)"
 description: "Learn the real Shopify conversion benchmarks for 2025, discover why 98% of visitors don't buy, and implement proven strategies to boost your conversion rate from 1.4% to 4.7%+ with data-backed tactics."
 date: 2025-02-12
 author: "ScaleFront Team"

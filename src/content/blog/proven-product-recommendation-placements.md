@@ -1,5 +1,5 @@
 ---
-title: "7 Proven Product Recommendation Placements That Actually Convert (With Examples)"
+title: "7 Proven Product Recommendation Placements That Convert"
 description: "Discover the exact product recommendation placements that increase conversion rates by 15-30% and boost AOV by $40-80. Learn where to show AI-powered recommendations for maximum impact with real examples and data."
 date: 2025-02-10
 author: "ScaleFront Team"

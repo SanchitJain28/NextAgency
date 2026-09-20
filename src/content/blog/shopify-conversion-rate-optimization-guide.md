@@ -1,5 +1,5 @@
 ---
-title: "Shopify Conversion Rate Optimization: The Complete Guide (2025)"
+title: "Shopify Conversion Rate Optimization: Complete 2026 Guide"
 description: "Learn how top Shopify stores achieve 4%+ conversion rates through smart targeting, AI search, urgency tactics, and optimized checkout. Actionable strategies with real examples."
 date: 2025-12-04
 author: "ScaleFront Team"

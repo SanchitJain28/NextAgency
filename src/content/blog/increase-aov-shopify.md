@@ -1,5 +1,5 @@
 ---
-title: "How to Increase AOV on Shopify: 15 Proven Strategies for 2025"
+title: "How to Increase AOV on Shopify: 15 Proven Tactics (2026)"
 description: "Discover 15 battle-tested strategies to increase Average Order Value (AOV) on Shopify. Learn how AI-powered recommendations boost AOV by 20-35% with real case studies and actionable tactics."
 date: "2025-02-08"
 author: "ScaleFront Team"

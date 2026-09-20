@@ -1,5 +1,5 @@
 ---
-title: "Why Top Fashion Brands Are Going Headless in 2025"
+title: "Why Leading Fashion Brands Go Headless on Shopify (2026)"
 description: "Fashion brands are abandoning traditional ecommerce for headless. Learn why visual storytelling, lookbook experiences, and mobile speed are driving the shift—with real brand examples."
 date: 2025-02-03
 author: "Rishabh Jain"

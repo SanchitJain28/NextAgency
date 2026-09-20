@@ -1,5 +1,5 @@
 ---
-title: "How to Build a Furniture Shopify Store That Actually Sells (2025 Guide)"
+title: "Build a High-Converting Furniture Shopify Store (2026)"
 description: "Learn how to create a furniture ecommerce store on Shopify with AR visualization, 360° views, and room planning tools. Reduce returns by 40% and increase conversions."
 date: 2025-12-09
 author: "ScaleFront Team"

@@ -1,5 +1,5 @@
 ---
-title: "Holiday Shopify Store Prep Guide 2025: Bundles, Promos & Sales Strategy"
+title: "Holiday Shopify Store Prep Guide: Bundles & Sales Tactics"
 description: "Complete guide to preparing your Shopify store for holiday season. Create gift bundles, set up promo codes, optimize for peak traffic, and maximize Q4 sales."
 date: 2025-12-13
 author: "ScaleFront Team"

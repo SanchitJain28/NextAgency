@@ -1,5 +1,5 @@
 ---
-title: "Why a Next.js Headless Frontend is the Best Way to Scale Your Large WooCommerce Store"
+title: "Why Next.js Headless Frontends Scale WooCommerce Stores"
 description: "Discover how Next.js headless frontend transforms large WooCommerce stores with Shopify-level speed. Learn about 2-5x faster loading, better scalability, and the surprising benefits for Shopify users."
 date: 2025-02-09
 author: "ScaleFront Team"

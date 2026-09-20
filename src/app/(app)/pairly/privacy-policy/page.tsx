@@ -1,3 +1,13 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Pairly Shopify App Privacy Policy & Data Terms | ScaleFront",
+  description:
+    "Learn how Pairly protects merchant and customer data across Shopify bundle and discount app installations.",
+  alternates: {
+    canonical: "/pairly/privacy-policy",
+  },
+};
 
 export default function PrivacyPolicy() {
   return (
