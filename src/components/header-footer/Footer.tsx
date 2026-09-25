@@ -57,6 +57,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/services/shopify-migration-services" className="text-[var(--sf-ink-soft)] hover:text-[var(--sf-primary)]">
+                  Store Migration
+                </Link>
+              </li>
+              <li>
                 <Link href="/services/shopify-plus-migration" className="text-[var(--sf-ink-soft)] hover:text-[var(--sf-primary)]">
                   Shopify Plus Migration
                 </Link>

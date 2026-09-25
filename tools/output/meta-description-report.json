@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-09-20T11:03:21.335Z",
-  "totalPages": 78,
+  "timestamp": "2026-09-23T16:41:40.783Z",
+  "totalPages": 79,
   "summary": {
-    "optimal": 33,
+    "optimal": 34,
     "warnings": 4,
     "errors": 41
   },
@@ -698,6 +698,17 @@
       "pixelEstimate": 871,
       "status": "optimal",
       "message": "Optimal for desktop (151 chars, ~871px). (Note: mobile truncates around 105–120 chars).",
+      "isDuplicate": false,
+      "duplicateSources": []
+    },
+    {
+      "source": "/Users/sanchitjain/vscode_files/NextAgency/next-agency/src/app/(app)/services/shopify-migration-services/page.tsx",
+      "url": "/services/shopify-migration-services",
+      "description": "Migrate your store to Shopify from WooCommerce, Magento, or WordPress with zero order downtime. Full customer data, order history, and SEO redirects preserved.",
+      "charCount": 159,
+      "pixelEstimate": 938,
+      "status": "optimal",
+      "message": "Optimal for desktop (159 chars, ~938px). (Note: mobile truncates around 105–120 chars).",
       "isDuplicate": false,
       "duplicateSources": []
     },

@@ -34,6 +34,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/services/shopify-store-migration-services",
+        destination: "/services/shopify-migration-services",
+        permanent: true,
+      },
+      {
         source: "/blog/conversion-optimization-guide",
         destination: "/blog/shopify-conversion-rate-optimization-guide",
         permanent: true,

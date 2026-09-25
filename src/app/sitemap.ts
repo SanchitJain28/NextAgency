@@ -96,6 +96,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/services/shopify-migration-services`,
+      lastModified: lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/services/shopify-plus-migration`,
       lastModified: lastModified,
       changeFrequency: "monthly",

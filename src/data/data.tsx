@@ -80,6 +80,12 @@ export const SERVICES: Service[] = [
     icon: <PerformanceIcon />,
   },
   {
+    href: "/services/shopify-migration-services",
+    title: "Shopify Store Migration",
+    desc: "Replatform to Shopify from WooCommerce, Magento, or WordPress. Zero order downtime, full data fidelity, and SEO preserved.",
+    icon: <ShopifyPlusIcon />,
+  },
+  {
     href: "/services/shopify-plus-migration",
     title: "Shopify Plus Migration",
     desc: "Seamless replatforming from Magento, WooCommerce, or legacy setups — zero data loss, zero downtime guaranteed.",
@@ -262,6 +268,7 @@ export const FOOTER_SERVICES = [
     href: "/services/performance-optimization",
     label: "Performance Optimization",
   },
+  { href: "/services/shopify-migration-services", label: "Shopify Store Migration" },
   { href: "/services/shopify-plus-migration", label: "Shopify Plus Migration" },
   { href: "/services/integrations", label: "Third-Party Integrations" },
   { href: "/services/audit-consulting", label: "Store Audit & Consulting" },

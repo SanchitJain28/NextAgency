@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { getPostBySlug, getAllPosts, getRelatedPosts } from "@/lib/blog/posts";
 import { Header } from "@/components/header-footer/Header";
-import Footer from "@/components/header-footer/Footer";
 import { ReadingProgress } from "@/components/blog/ReadingProgress";
 import { Breadcrumbs } from "@/components/blog/Breadcrumbs";
 import { TableOfContents } from "@/components/blog/TableOfContents";
