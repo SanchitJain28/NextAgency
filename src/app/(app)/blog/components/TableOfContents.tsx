@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 
 interface Heading {
   id: string;
@@ -61,21 +60,23 @@ export function TableOfContents({ content }: TableOfContentsProps) {
   if (headings.length === 0) return null;
 
   return (
-    <div className="sticky top-24 bg-white border border-gray-200 rounded-lg p-6 mb-8">
-      <h2 className="text-[18px] font-bold text-[#292929] mb-4">Table of Contents</h2>
+    <div className="bg-white border border-neutral-200 p-6 mb-8">
+      <div className="font-mono text-xs font-bold uppercase tracking-wider text-neutral-900 pb-3 mb-4 border-b border-neutral-200">
+        Table of Contents
+      </div>
       <nav>
-        <ul className="space-y-2">
+        <ul className="space-y-2.5">
           {headings.map((heading) => (
             <li
               key={heading.id}
-              className={heading.level === 3 ? 'ml-4' : ''}
+              className={heading.level === 3 ? 'ml-3.5' : ''}
             >
               <a
                 href={`#${heading.id}`}
-                className={`block text-[14px] transition-colors hover:text-[#292929] ${
+                className={`block text-xs leading-relaxed transition-colors hover:text-neutral-900 ${
                   activeId === heading.id
-                    ? 'text-[#292929] font-medium'
-                    : 'text-[#6B6B6B]'
+                    ? 'text-[var(--sf-primary)] font-bold border-l-2 border-[var(--sf-primary)] pl-2 -ml-2'
+                    : 'text-neutral-500 hover:text-neutral-900'
                 }`}
                 onClick={(e) => {
                   e.preventDefault();

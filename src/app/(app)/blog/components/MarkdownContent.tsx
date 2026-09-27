@@ -40,31 +40,12 @@ function CodeBlock({
     <div className="relative group my-8">
       <button
         onClick={copyCode}
-        className="absolute right-3 top-3 px-3 py-1.5 bg-gray-700 hover:bg-gray-600 text-white text-[12px] rounded opacity-0 group-hover:opacity-100 transition-opacity z-10"
+        className="absolute right-3 top-3 px-2.5 py-1 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 font-mono text-[11px] uppercase tracking-wider border border-neutral-700 opacity-0 group-hover:opacity-100 transition-opacity z-10"
         aria-label="Copy code"
       >
-        {copied ? (
-          <span className="flex items-center gap-1">
-            <svg
-              className="w-3 h-3"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 13l4 4L19 7"
-              />
-            </svg>
-            Copied!
-          </span>
-        ) : (
-          "Copy"
-        )}
+        {copied ? "Copied!" : "Copy"}
       </button>
-      <pre className="!bg-[#1e1e1e] dark:!bg-gray-950 !text-gray-100 !p-6 !rounded !overflow-x-auto !text-[16px] !my-0">
+      <pre className="!bg-[#181310] !text-neutral-100 !p-6 !border !border-neutral-800 !overflow-x-auto !text-sm !my-0 !rounded-none">
         <code className={className}>{children}</code>
       </pre>
     </div>

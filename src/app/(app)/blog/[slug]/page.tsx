@@ -3,18 +3,13 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { getPostBySlug, getAllPosts, getRelatedPosts } from "@/lib/blog/posts";
-import { Header } from "@/components/header-footer/Header";
-import { ReadingProgress } from "@/components/blog/ReadingProgress";
-import { Breadcrumbs } from "@/components/blog/Breadcrumbs";
-import { TableOfContents } from "@/components/blog/TableOfContents";
-import { SocialShare } from "@/components/blog/SocialShare";
-import { MarkdownContent } from "@/components/blog/MarkdownContent";
-import { RelatedPosts } from "@/components/blog/RelatedPosts";
-import { AuthorBio } from "@/components/blog/AuthorBio";
-import { NewsletterSignup } from "@/components/blog/NewsletterSignup";
-import { FontSizeControl } from "@/components/blog/FontSizeControl";
-import { DarkModeToggle } from "@/components/blog/DarkModeToggle";
-import { SummarizeWithAI } from "@/components/blog/SummarizeWithAI";
+import { ReadingProgress } from "../components/ReadingProgress";
+import { Breadcrumbs } from "../components/Breadcrumbs";
+import { TableOfContents } from "../components/TableOfContents";
+import { MarkdownContent } from "../components/MarkdownContent";
+import { RelatedPosts } from "../components/RelatedPosts";
+import { AuthorBio } from "../components/AuthorBio";
+import { Clock, Calendar, ArrowLeft, ArrowRight, BookOpen } from "lucide-react";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -29,7 +24,6 @@ export async function generateStaticParams() {
   }));
 }
 
-//? this is for blog meta data
 export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
@@ -133,129 +127,127 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <>
       <ReadingProgress />
-      <Header />
 
-      <article className="min-h-screen bg-[#fafafa] dark:bg-gray-900">
-        <div className="bg-white border-b border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-          <div className="max-w-[680px] mx-auto px-6 py-16">
-            {/* ?Controls */}
-            <div className="flex items-center justify-between mb-8">
-              <Breadcrumbs
-                items={[
-                  { label: "Blog", href: "/blog" },
-                  {
-                    label: post.category,
-                    href: `/blog?category=${encodeURIComponent(post.category)}`,
-                  },
-                  { label: post.title },
-                ]}
-              />
-              <div className="flex items-center gap-3">
-                <FontSizeControl />
-                <DarkModeToggle />
-              </div>
+      <article className="min-h-screen bg-white text-neutral-900 antialiased">
+        {/* ── ARTICLE HEADER (FULL WIDTH & CLEAN) ── */}
+        <header className="border-b border-neutral-200 bg-[#faf9f6] pt-12 pb-12 sm:pt-16 sm:pb-14">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Breadcrumbs
+              items={[
+                { label: "Blog", href: "/blog" },
+                {
+                  label: post.category,
+                  href: `/blog?category=${encodeURIComponent(post.category)}`,
+                },
+                { label: post.title },
+              ]}
+            />
+
+            {/* Category & Read Time */}
+            <div className="flex flex-wrap items-center gap-3 mb-5 font-mono text-xs">
+              <span className="px-2.5 py-1 border border-neutral-200 bg-neutral-100 text-neutral-800 font-bold uppercase tracking-wider">
+                {post.category}
+              </span>
+              <span className="text-neutral-500 flex items-center gap-1">
+                <Clock className="w-3.5 h-3.5" />
+                {post.readingTime}
+              </span>
+              <span className="text-neutral-300">&bull;</span>
+              <span className="text-neutral-500 flex items-center gap-1">
+                <Calendar className="w-3.5 h-3.5" />
+                {new Date(post.date).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </span>
             </div>
 
-            {/* //? title */}
-            <h1 className="text-[42px] md:text-[52px] font-bold text-[#292929] dark:text-white mb-4 leading-[1.15] tracking-tight font-serif">
+            {/* Article Title */}
+            <h1
+              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-neutral-900 leading-[1.12] mb-6 max-w-5xl"
+              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            >
               {post.title}
             </h1>
 
-            {/* //? Description */}
-            <p className="text-[24px] text-[#6B6B6B] dark:text-gray-300 mb-10 leading-[1.4] font-serif">
+            {/* Article Description / Excerpt */}
+            <p className="text-lg sm:text-xl text-neutral-600 font-normal leading-relaxed max-w-4xl mb-8 font-sans">
               {post.description}
             </p>
 
-            {/* Meta Info */}
-            <div className="flex items-center justify-between pt-8 border-t border-gray-200 dark:border-gray-700">
-              <div className="flex items-center gap-3 text-[14px] text-[#6B6B6B] dark:text-gray-400">
-                <span className="font-medium text-[#292929] dark:text-white">
+            {/* Author Line & Tags */}
+            <div className="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-neutral-200">
+              <div className="flex items-center gap-2.5 font-mono text-xs">
+                <div className="w-7 h-7 bg-neutral-900 text-white font-bold flex items-center justify-center">
+                  {post.author?.charAt(0) || "S"}
+                </div>
+                <span className="font-bold text-neutral-800 uppercase">
                   {post.author}
                 </span>
-                <span>·</span>
-                <time dateTime={post.date}>
-                  {new Date(post.date).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </time>
-                <span>·</span>
-                <span>{post.readingTime}</span>
               </div>
-              <SocialShare
-                title={post.title}
-                url={postUrl}
-                description={post.description}
-              />
+
+              {post.tags && post.tags.length > 0 && (
+                <div className="flex flex-wrap gap-1.5 font-mono text-[11px]">
+                  {post.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2.5 py-0.5 border border-neutral-200 bg-white text-neutral-600 uppercase"
+                    >
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
-
-            {/* Tags */}
-            {post.tags && post.tags.length > 0 && (
-              <div className="flex flex-wrap gap-2 mt-6">
-                {post.tags.map((tag) => (
-                  <Link
-                    key={tag}
-                    href={`/blog?tag=${encodeURIComponent(tag)}`}
-                    rel="nofollow"
-                    className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-[#6B6B6B] dark:text-gray-300 text-xs rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-                  >
-                    {tag}
-                  </Link>
-                ))}
-              </div>
-            )}
           </div>
-        </div>
+        </header>
 
-        {/* Featured Image */}
+        {/* ── FEATURED HERO IMAGE (FULL WIDTH CONTAINER) ── */}
         {post.image && (
-          <div className="bg-white dark:bg-gray-900">
-            <div className="max-w-[1000px] mx-auto px-6 py-12">
-              <div className="relative aspect-[2/1] overflow-hidden rounded-lg">
+          <div className="border-b border-neutral-200 bg-white py-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="relative aspect-[21/9] sm:aspect-[16/7] overflow-hidden border border-neutral-200 bg-neutral-100">
                 <Image
                   src={post.image}
                   alt={post.title}
                   fill
                   className="object-cover"
                   priority
+                  sizes="(max-width: 1280px) 100vw, 1280px"
                 />
               </div>
             </div>
           </div>
         )}
 
-        <div className="bg-white dark:bg-gray-900">
-          <div className="max-w-[1400px] mx-auto px-6 py-12">
-            <div className="flex flex-col justify-center gap-12 lg:flex-row">
-              <div className="w-full lg:max-w-[680px] mx-auto lg:mx-0">
-                <div className="mb-8 lg:hidden">
-                  <TableOfContents content={post.content} />
-                </div>
-
-                <SummarizeWithAI content={post.content} title={post.title} />
-
+        {/* ── ARTICLE CONTENT & SIDEBAR (FULL RESPONSIVE GRID) ── */}
+        <div className="py-12 sm:py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col lg:flex-row gap-12 items-start">
+              {/* Main Content Column */}
+              <div className="flex-1 min-w-0 w-full">
                 <div
-                  className="medium-content
-                  [&>*]:text-[#292929] dark:[&>*]:text-white
-                  [&>*]:font-serif
-                  [&>h1]:text-[36px] [&>h1]:font-bold [&>h1]:mt-12 [&>h1]:mb-4 [&>h1]:leading-[1.25] [&>h1]:tracking-tight
-                  [&>h2]:text-[32px] [&>h2]:font-bold [&>h2]:mt-12 [&>h2]:mb-4 [&>h2]:leading-[1.25] [&>h2]:tracking-tight
-                  [&>h3]:text-[26px] [&>h3]:font-bold [&>h3]:mt-10 [&>h3]:mb-3 [&>h3]:leading-[1.3]
-                  [&>h4]:text-[22px] [&>h4]:font-bold [&>h4]:mt-8 [&>h4]:mb-3 [&>h4]:leading-[1.3]
-                  [&>p]:text-[21px] [&>p]:leading-[1.58] [&>p]:mb-8 [&>p]:text-[#292929] dark:[&>p]:text-gray-200 [&>p]:tracking-[-0.003em]
-                  [&>ul]:text-[21px] [&>ul]:leading-[1.58] [&>ul]:mb-8 [&>ul]:text-[#292929] dark:[&>ul]:text-gray-200
-                  [&>ol]:text-[21px] [&>ol]:leading-[1.58] [&>ol]:mb-8 [&>ol]:text-[#292929] dark:[&>ol]:text-gray-200
-                  [&>li]:mb-3 [&>li]:text-[#292929] dark:[&>li]:text-gray-200
-                  [&>blockquote]:border-l-[3px] [&>blockquote]:border-[#292929] dark:[&>blockquote]:border-gray-600 [&>blockquote]:pl-6 [&>blockquote]:italic [&>blockquote]:text-[#6B6B6B] dark:[&>blockquote]:text-gray-400 [&>blockquote]:text-[21px] [&>blockquote]:my-8
-                  [&>a]:text-[#292929] dark:[&>a]:text-blue-400 [&>a]:underline [&>a]:underline-offset-2
-                  [&>strong]:font-bold [&>strong]:text-[#292929] dark:[&>strong]:text-white
-                  [&_code]:text-[16px] [&_code]:bg-[#f5f5f5] dark:[&_code]:bg-gray-800 [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded [&_code]:font-mono [&_code]:text-[#292929] dark:[&_code]:text-gray-200
-                  [&>pre]:bg-[#292929] dark:[&>pre]:bg-gray-950 [&>pre]:text-gray-100 [&>pre]:p-6 [&>pre]:rounded [&>pre]:overflow-x-auto [&>pre]:my-8 [&>pre]:text-[16px]
-                  [&>table]:w-full [&>table]:border-collapse [&>table]:my-8 [&>table]:text-[18px]
-                  [&_th]:border [&_th]:border-gray-300 dark:[&_th]:border-gray-700 [&_th]:bg-gray-50 dark:[&_th]:bg-gray-800 [&_th]:p-4 [&_th]:text-left [&_th]:font-semibold [&_th]:text-[#292929] dark:[&_th]:text-white
-                  [&_td]:border [&_td]:border-gray-300 dark:[&_td]:border-gray-700 [&_td]:p-4 [&_td]:text-[#292929] dark:[&_td]:text-gray-200
-                  [&>img]:my-12 [&>img]:w-full [&>img]:rounded-lg
+                  className="
+                  prose prose-neutral max-w-none font-sans
+                  [&>*]:text-neutral-800
+                  [&>h1]:text-3xl sm:[&>h1]:text-4xl [&>h1]:font-extrabold [&>h1]:mt-12 [&>h1]:mb-4 [&>h1]:leading-[1.15] [&>h1]:tracking-tight [&>h1]:text-neutral-900 [&>h1]:[font-family:'Bricolage_Grotesque',sans-serif]
+                  [&>h2]:text-2xl sm:[&>h2]:text-3xl [&>h2]:font-bold [&>h2]:mt-12 [&>h2]:mb-4 [&>h2]:leading-[1.2] [&>h2]:tracking-tight [&>h2]:text-neutral-900 [&>h2]:[font-family:'Bricolage_Grotesque',sans-serif] [&>h2]:pt-6 [&>h2]:border-t [&>h2]:border-neutral-200
+                  [&>h3]:text-xl sm:[&>h3]:text-2xl [&>h3]:font-bold [&>h3]:mt-8 [&>h3]:mb-3 [&>h3]:leading-snug [&>h3]:text-neutral-900 [&>h3]:[font-family:'Bricolage_Grotesque',sans-serif]
+                  [&>h4]:text-lg [&>h4]:font-bold [&>h4]:mt-6 [&>h4]:mb-2 [&>h4]:text-neutral-900 [&>h4]:[font-family:'Bricolage_Grotesque',sans-serif]
+                  [&>p]:text-base sm:[&>p]:text-lg [&>p]:leading-[1.8] [&>p]:mb-6 [&>p]:text-neutral-700
+                  [&>ul]:text-base sm:[&>ul]:text-lg [&>ul]:leading-[1.8] [&>ul]:mb-6 [&>ul]:text-neutral-700 [&>ul]:list-disc [&>ul]:pl-6
+                  [&>ol]:text-base sm:[&>ol]:text-lg [&>ol]:leading-[1.8] [&>ol]:mb-6 [&>ol]:text-neutral-700 [&>ol]:list-decimal [&>ol]:pl-6
+                  [&>li]:mb-2 [&>li]:text-neutral-700
+                  [&>blockquote]:border-l-4 [&>blockquote]:border-[var(--sf-primary)] [&>blockquote]:pl-6 [&>blockquote]:py-2 [&>blockquote]:italic [&>blockquote]:text-neutral-700 [&>blockquote]:text-lg sm:[&>blockquote]:text-xl [&>blockquote]:my-8 [&>blockquote]:bg-[#faf9f6]
+                  [&>a]:text-[var(--sf-primary)] [&>a]:underline [&>a]:underline-offset-4 [&>a]:font-medium hover:[&>a]:text-[var(--sf-primary-deep)]
+                  [&>strong]:font-bold [&>strong]:text-neutral-900
+                  [&_code]:text-sm [&_code]:bg-neutral-100 [&_code]:border [&_code]:border-neutral-200 [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:font-mono [&_code]:text-neutral-800
+                  [&>pre]:bg-[#181310] [&>pre]:text-neutral-100 [&>pre]:p-6 [&>pre]:border [&>pre]:border-neutral-800 [&>pre]:overflow-x-auto [&>pre]:my-8 [&>pre]:text-sm
+                  [&>table]:w-full [&>table]:border-collapse [&>table]:my-8 [&>table]:text-sm
+                  [&_th]:border [&_th]:border-neutral-200 [&_th]:bg-neutral-100 [&_th]:p-3.5 [&_th]:text-left [&_th]:font-bold [&_th]:text-neutral-900
+                  [&_td]:border [&_td]:border-neutral-200 [&_td]:p-3.5 [&_td]:text-neutral-700
+                  [&>img]:my-10 [&>img]:w-full [&>img]:border [&>img]:border-neutral-200
                 "
                 >
                   <MarkdownContent content={post.content} />
@@ -263,33 +255,38 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
                 {/* FAQ Section */}
                 {faqs.length > 0 && (
-                  <div className="pt-12 mt-16 border-t border-gray-200 dark:border-gray-700">
-                    <h2 className="text-[32px] font-bold text-[#292929] dark:text-white mb-8 font-serif">
+                  <div className="pt-12 mt-16 border-t border-neutral-200">
+                    <div className="font-mono text-xs text-[var(--sf-primary)] uppercase tracking-widest font-bold mb-1">
+                      QUESTIONS &amp; ANSWERS
+                    </div>
+                    <h2
+                      className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-8"
+                      style={{
+                        fontFamily: "'Bricolage Grotesque', sans-serif",
+                      }}
+                    >
                       Frequently Asked Questions
                     </h2>
-                    <div className="space-y-6">
+                    <div className="space-y-4">
                       {faqs.map((faq, index) => (
                         <details
                           key={index}
-                          className="p-6 transition-colors rounded-lg cursor-pointer group bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-750"
+                          className="p-6 border border-neutral-200 bg-white group cursor-pointer"
                         >
-                          <summary className="flex items-start justify-between font-semibold text-[21px] text-[#292929] dark:text-white list-none">
-                            <span className="flex-1 pr-4">{faq.question}</span>
-                            <svg
-                              className="flex-shrink-0 w-6 h-6 transition-transform transform group-open:rotate-180"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
+                          <summary className="flex items-start justify-between font-bold text-lg text-neutral-900 list-none">
+                            <span
+                              className="flex-1 pr-4"
+                              style={{
+                                fontFamily: "'Bricolage Grotesque', sans-serif",
+                              }}
                             >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M19 9l-7 7-7-7"
-                              />
-                            </svg>
+                              {faq.question}
+                            </span>
+                            <span className="font-mono text-sm text-neutral-400 group-open:rotate-45 transition-transform">
+                              +
+                            </span>
                           </summary>
-                          <p className="mt-4 text-[18px] text-[#6B6B6B] dark:text-gray-300 leading-[1.6]">
+                          <p className="mt-4 text-base text-neutral-600 leading-relaxed font-sans">
                             {faq.answer}
                           </p>
                         </details>
@@ -301,68 +298,77 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {/* Author Bio */}
                 <AuthorBio author={post.author} />
 
-                {/* Newsletter */}
-                <NewsletterSignup />
-
-                {/* CTA Section */}
-                <div className="pt-12 mt-16 border-t border-gray-200 dark:border-gray-700">
-                  <div className="p-10 text-center rounded bg-gray-50 dark:bg-gray-800">
-                    <h3 className="text-[28px] font-bold text-[#292929] dark:text-white mb-4 font-serif">
-                      Need Expert Help with Your Shopify Store?
-                    </h3>
-                    <p className="text-[18px] text-[#6B6B6B] dark:text-gray-300 mb-8 leading-[1.6] font-serif">
-                      Get a free consultation with our Shopify optimization
-                      experts. We have helped dozens of brands improve their
-                      store performance and increase conversions.
-                    </p>
-                    <div className="flex flex-col justify-center gap-4 sm:flex-row">
-                      <Link
-                        href="/earn"
-                        className="inline-block px-8 py-3 bg-white dark:bg-gray-900 text-[#292929] dark:text-white font-medium rounded border border-gray-300 dark:border-gray-600 hover:border-[#292929] dark:hover:border-gray-400 transition-colors text-[16px]"
-                      >
-                        Free Store Audit
-                      </Link>
-                      <Link
-                        href="/contact-us"
-                        className="inline-block px-8 py-3 bg-[#292929] dark:bg-white text-white dark:text-[#292929] font-medium rounded hover:bg-black dark:hover:bg-gray-100 transition-colors text-[16px]"
-                      >
-                        Schedule Consultation
-                      </Link>
-                    </div>
+                {/* CTA Box (Matching /blog design) */}
+                <div className="mt-12 border border-neutral-200 bg-[#faf9f6] p-8 sm:p-10 text-center">
+                  <h3
+                    className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-3"
+                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  >
+                    Need Custom Shopify Architecture?
+                  </h3>
+                  <p className="text-sm sm:text-base text-neutral-600 max-w-xl mx-auto mb-6 leading-relaxed">
+                    We engineer bespoke Shopify themes, private apps, and
+                    headless storefronts designed for speed and conversion.
+                  </p>
+                  <div className="flex flex-wrap items-center justify-center gap-3">
+                    <Link
+                      href="/contact-us"
+                      className="px-6 py-3 bg-[var(--sf-primary)] hover:bg-[var(--sf-primary-deep)] text-white font-mono text-xs font-bold uppercase tracking-wider transition-colors"
+                    >
+                      Discuss Your Project
+                    </Link>
+                    <Link
+                      href="/earn"
+                      className="px-6 py-3 border border-neutral-300 bg-white hover:bg-neutral-100 text-neutral-900 font-mono text-xs font-bold uppercase tracking-wider transition-colors"
+                    >
+                      Free Store Audit
+                    </Link>
                   </div>
                 </div>
 
                 {/* Related Posts */}
                 <RelatedPosts posts={relatedPosts} />
 
-                {/* Back to Blog */}
-                <div className="mt-16 text-center">
+                {/* Back to Blog Button */}
+                <div className="mt-14 pt-8 border-t border-neutral-200 text-center">
                   <Link
                     href="/blog"
-                    className="inline-flex items-center gap-2 text-[#292929] dark:text-white hover:text-black dark:hover:text-gray-300 font-medium text-[16px]"
+                    className="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-neutral-700 hover:text-[var(--sf-primary)] transition-colors"
                   >
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                      />
-                    </svg>
-                    Back to all articles
+                    <ArrowLeft className="w-4 h-4" /> Back to all articles
                   </Link>
                 </div>
               </div>
 
-              {/* Sidebar - Desktop (Sticky on the right) */}
-              <aside className="flex-shrink-0 hidden lg:block lg:w-80">
-                <div className="sticky top-24">
+              {/* ── DESKTOP STICKY SIDEBAR ── */}
+              <aside className="hidden lg:block lg:w-80 shrink-0">
+                <div className="sticky top-28 space-y-6">
                   <TableOfContents content={post.content} />
+
+                  {/* Sidebar Strategy Card */}
+                  <div className="border border-neutral-200 bg-[#faf9f6] p-6">
+                    <div className="font-mono text-xs font-bold uppercase tracking-wider text-[var(--sf-primary)] mb-2">
+                      SCALEFRONT SERVICES
+                    </div>
+                    <h4
+                      className="text-base font-bold text-neutral-900 mb-2"
+                      style={{
+                        fontFamily: "'Bricolage Grotesque', sans-serif",
+                      }}
+                    >
+                      Scale Your Store with Experts
+                    </h4>
+                    <p className="text-xs text-neutral-600 leading-relaxed mb-4">
+                      Get a comprehensive technical review of your Shopify theme
+                      and app architecture.
+                    </p>
+                    <Link
+                      href="/contact-us"
+                      className="block w-full py-2.5 px-4 text-center bg-neutral-900 hover:bg-[var(--sf-primary)] text-white font-mono text-xs font-bold uppercase tracking-wider transition-colors"
+                    >
+                      Book Strategy Call
+                    </Link>
+                  </div>
                 </div>
               </aside>
             </div>

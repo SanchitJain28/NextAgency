@@ -257,3 +257,40 @@ Cite authoritative sources to back up claims
 ## Ideas
 
 1. We can also a make a custom service page for shopify api integration or backend integration
+
+## RECOVERY STARTING 26th Sept
+
+## Pages for review - ROUND 1
+
+/services/shopify-migration-services
+/services/shopify-plus-migration
+
+- ACTION : Merge into one page
+- REVIEW : Check for AI slope and humanly wrtie it
+
+/services/audit-consulting
+/services/backend-api
+
+- ACTION : REVIEW
+
+/services/conversion-optimization
+/services/cro-optimization
+
+- ACTION : REVIEW
+
+/servicescustom-features
+/services/custom-shopify-apps
+/services/custom-shopify-development
+
+- ACTION : REVIEW
+
+---
+
+/portfolio
+/studio
+
+- ACTION : DELETE OR REVIEW
+
+/servicepages
+
+- ACTION : DELETE
