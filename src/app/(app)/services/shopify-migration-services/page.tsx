@@ -1,30 +1,21 @@
-//! Problems in this page
-// !Generic SEO phrasing: e.g. “zero-downtime,” “strict 1:1 redirect mapping,” “enterprise-grade,” “comprehensive,” and “verified” appear repeatedly.
-// !Overly precise claims without supporting evidence: for example, “Shop Pay converting up to 36% higher,” “30% to 50%” cost reduction, and “99.99% uptime.”
-// !Template-like FAQ construction: many answers essentially restate earlier sections rather than introducing new information.
-// !Marketing claims are unusually polished compared with the actual specificity: it repeatedly says things like “verified scripts,” “line by line,” and “complete technical process,” but gives few concrete implementation details about the actual system.
-
-//! Changes
-//! Zero-Downtime Store Replatforming Tag
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, RefreshCw } from "lucide-react";
-import ComparisonTable from "@/components/shared/ComparisonTable";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Shopify Migration Service | Zero Downtime & SEO Preserved",
+    absolute: "Shopify Migration Services | WooCommerce, Magento & WordPress",
   },
   description:
-    "Migrate your store to Shopify from WooCommerce, Magento, or WordPress with zero order downtime. Full customer data, order history, and SEO redirects preserved.",
+    "Move your WooCommerce, Magento, or WordPress store to Shopify. We handle products, customers, orders, metafields, media, URLs, testing, and launch preparation.",
   alternates: {
     canonical: "/services/shopify-migration-services",
   },
   openGraph: {
-    title: "Shopify Migration Service | Zero Downtime & SEO Preserved",
+    title: "Shopify Migration Services | WooCommerce, Magento & WordPress",
     description:
-      "Migrate your store to Shopify from WooCommerce, Magento, or WordPress with zero order downtime. Full customer data, order history, and SEO redirects preserved.",
+      "Move your WooCommerce, Magento, or WordPress store to Shopify. We handle products, customers, orders, metafields, media, URLs, testing, and launch preparation.",
     url: "https://www.scalefront.io/services/shopify-migration-services",
     siteName: "ScaleFront",
     type: "website",
@@ -33,15 +24,15 @@ export const metadata: Metadata = {
         url: "https://scalefront.io/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Shopify Store Migration Services by ScaleFront",
+        alt: "Shopify Migration Services by ScaleFront",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shopify Migration Service | Zero Downtime & SEO Preserved",
+    title: "Shopify Migration Services | WooCommerce, Magento & WordPress",
     description:
-      "Migrate your store to Shopify from WooCommerce, Magento, or WordPress with zero order downtime. Full customer data, order history, and SEO redirects preserved.",
+      "Move your WooCommerce, Magento, or WordPress store to Shopify. We handle products, customers, orders, metafields, media, URLs, testing, and launch preparation.",
     images: ["https://scalefront.io/og-image.jpg"],
   },
 };
@@ -49,181 +40,44 @@ export const metadata: Metadata = {
 export default function ShopifyMigrationServicesPage() {
   const faqData = [
     {
-      question: "Will my store go offline during the migration?",
+      question: "Will my WooCommerce store go offline during the migration?",
       answer:
-        "No. Your existing store remains fully operational and continues taking orders on your current server throughout development. The final cutover occurs via DNS updates in minutes after all data has been verified.",
+        "Your WooCommerce store can remain live while the Shopify store is being prepared. We test the new store before launch and plan the final domain switch around the remaining migration work.",
     },
     {
-      question:
-        "Will moving to Shopify cause my store to lose search engine rankings?",
+      question: "Can you migrate my products and variants?",
       answer:
-        "Not when executed properly. We map every legacy URL to its new Shopify equivalent using strict 301 redirects, preserving historical page equity, metadata, and organic Google visibility without traffic drops.",
+        "Yes. We map WooCommerce products, variations, attributes, images, and related data to the appropriate Shopify products, variants, options, and metafields.",
     },
     {
-      question: "Can you migrate customer passwords from our old platform?",
+      question: "Can you migrate my customer data?",
       answer:
-        "No. Passwords cannot be exported because legacy databases store them as one-way encrypted hashes. We migrate all customer profiles and send automated activation emails so shoppers can set passwords in one click.",
+        "Yes. Customer profiles such as names, emails, addresses, and other supported fields can be migrated. Customer passwords cannot be transferred from WooCommerce to Shopify, so account access needs a separate setup process.",
     },
     {
-      question: "How long does a complete store migration typically take?",
+      question: "Can you migrate historical orders?",
       answer:
-        "Most standard migrations take 2 to 4 weeks. This covers catalog data extraction, custom Liquid theme configuration, payment setup, comprehensive checkout testing, and final delta data synchronization before launch.",
+        "Yes. Historical orders need separate handling because Shopify's normal product CSV doesn't provide a general CSV import for past orders. Depending on the store, we can use APIs or a migration application.",
     },
     {
-      question:
-        "Why hire an independent developer rather than a traditional migration agency?",
+      question: "What happens to my WooCommerce plugins?",
       answer:
-        "You communicate directly with the developer executing your database scripts and theme code. This eliminates account manager overhead, prevents technical misunderstandings, and delivers faster turnarounds at fixed rates.",
+        "We review each important plugin to understand what it does and what data or business process depends on it. Then we decide whether Shopify's native features, an app, or custom development is the right replacement.",
     },
     {
-      question: "Do you migrate customer reviews and product ratings?",
+      question: "Will my old URLs still work?",
       answer:
-        "Yes. We export your historical review database from plugins like WooCommerce Product Reviews or Yotpo and import them directly into Shopify-compatible platforms like Judge.me, Okendo, or Stamped with verified timestamps intact.",
+        "Important old URLs can be mapped to their new Shopify URLs using redirects. We review the existing URL structure before migration and test the redirects after the new store launches.",
     },
     {
-      question:
-        "What happens to active customer subscriptions during migration?",
+      question: "How long does a Shopify migration take?",
       answer:
-        "Active subscription tokens in Stripe or PayPal must be securely re-mapped. We connect customer payment tokens to Shopify subscription apps like Recharge or native Shopify Subscriptions to prevent billing interruptions.",
+        "It depends on the catalog size, data structure, integrations, custom functionality, and testing requirements. A simple migration can be relatively straightforward, while a complex store needs more planning and development time.",
     },
     {
-      question: "Can you handle products with more than 100 variants?",
+      question: "Do I need Shopify Plus for my migration?",
       answer:
-        "Yes. We either utilize Shopify GraphQL 2,000-variant capability or split complex catalogs into linked parent and child products connected seamlessly via visual color and size swatch selectors.",
-    },
-    {
-      question: "Can we redesign our storefront layout during the migration?",
-      answer:
-        "Yes. You can either replicate your current store design with pixel parity or rebuild your layout on an Online Store 2.0 theme optimized for mobile speed and conversion.",
-    },
-    {
-      question: "Do we need Shopify Plus for our store migration?",
-      answer:
-        "No. Standard migrations to Shopify Basic or Advanced handle full catalogs, orders, and customer accounts. Shopify Plus is only necessary for wholesale B2B portals, custom checkout scripts, or multipass login.",
-    },
-  ];
-
-  const comparisonRows = [
-    {
-      included: (
-        <>
-          <strong className="text-[var(--sf-ink)] block mb-1">
-            Zero Server Maintenance Overhead
-          </strong>
-          Fully managed global cloud infrastructure, automated security updates,
-          99.99% uptime, and zero PHP or Linux patch cycles.
-        </>
-      ),
-      excluded: (
-        <>
-          <strong className="text-[var(--sf-ink)] block mb-1">
-            High Maintenance &amp; Server Management
-          </strong>
-          Requires dedicated cloud hosting (AWS, DigitalOcean), PHP upgrades,
-          MySQL tuning, and constant server security patches.
-        </>
-      ),
-    },
-    {
-      included: (
-        <>
-          <strong className="text-[var(--sf-ink)] block mb-1">
-            Built-In PCI Level 1 Compliance
-          </strong>
-          Level 1 PCI-DSS compliant out of the box with enterprise DDoS
-          protection, free SSL certificates, and zero merchant compliance
-          liability.
-        </>
-      ),
-      excluded: (
-        <>
-          <strong className="text-[var(--sf-ink)] block mb-1">
-            Merchant Liability &amp; Security Risks
-          </strong>
-          Store owners bear full legal liability for payment data breaches, SQL
-          injection exploits, and outdated plugin vulnerabilities.
-        </>
-      ),
-    },
-    {
-      included: (
-        <>
-          <strong className="text-[var(--sf-ink)] block mb-1">
-            Industry-Leading Shop Pay Checkout
-          </strong>
-          One-click checkout with Shop Pay converting up to 36% higher than
-          traditional checkouts across 150M+ registered buyers.
-        </>
-      ),
-      excluded: (
-        <>
-          <strong className="text-[var(--sf-ink)] block mb-1">
-            High Checkout Friction &amp; Drop-Off
-          </strong>
-          Self-hosted checkouts suffer high abandonment from multi-step forms,
-          plugin conflicts, and slow database lookups on mobile.
-        </>
-      ),
-    },
-    {
-      included: (
-        <>
-          <strong className="text-[var(--sf-ink)] block mb-1">
-            Automatic Peak Traffic Scaling
-          </strong>
-          Handles thousands of orders per minute during flash sales and Black
-          Friday without server crashes or slow page responses.
-        </>
-      ),
-      excluded: (
-        <>
-          <strong className="text-[var(--sf-ink)] block mb-1">
-            Database Lockouts &amp; Server Crashes
-          </strong>
-          Flash sales and traffic surges easily overload PHP workers and lock
-          MySQL tables, causing cart crashes during peak promotions.
-        </>
-      ),
-    },
-    {
-      included: (
-        <>
-          <strong className="text-[var(--sf-ink)] block mb-1">
-            Predictable Monthly Investment
-          </strong>
-          Simple flat subscription covering hosting, CDN, security, and
-          checkout, cutting long-term operational costs by 30% to 50%.
-        </>
-      ),
-      excluded: (
-        <>
-          <strong className="text-[var(--sf-ink)] block mb-1">
-            Unpredictable Retainers &amp; Hosting Fees
-          </strong>
-          Monthly cloud hosting ($500–$5,000+), emergency developer retainers,
-          and costly plugin licenses create high recurring expenses.
-        </>
-      ),
-    },
-    {
-      included: (
-        <>
-          <strong className="text-[var(--sf-ink)] block mb-1">
-            Unified Global Markets
-          </strong>
-          Native multicurrency, localized languages, international domains, and
-          duty calculations managed from one single admin.
-        </>
-      ),
-      excluded: (
-        <>
-          <strong className="text-[var(--sf-ink)] block mb-1">
-            Fragile Multisite Installations
-          </strong>
-          Requires separate WordPress or Magento installations that
-          desynchronize stock counts and break currency conversions.
-        </>
-      ),
+        "No. Many stores can migrate to standard Shopify plans. Shopify Plus becomes relevant when the business has requirements that need Plus-specific features or enterprise-level configuration.",
     },
   ];
 
@@ -232,12 +86,11 @@ export default function ShopifyMigrationServicesPage() {
     "@graph": [
       {
         "@type": "Service",
-        "@id":
-          "https://scalefront.io/services/shopify-migration-services#service",
-        name: "Shopify Migration Service",
+        "@id": "https://scalefront.io/services/shopify-migration-services#service",
+        name: "Shopify Migration Services",
         serviceType: "Shopify Store Migration",
         description:
-          "Zero-downtime eCommerce store migration services to Shopify from WooCommerce, Magento, WordPress, and BigCommerce, including full catalog data, customer accounts, order history, and 1:1 SEO redirect preservation.",
+          "Move your WooCommerce, Magento, or WordPress store to Shopify. We handle products, customers, orders, metafields, media, integrations, URLs, testing, and launch preparation.",
         provider: {
           "@type": "Organization",
           name: "ScaleFront",
@@ -269,14 +122,14 @@ export default function ShopifyMigrationServicesPage() {
               "@type": "Offer",
               itemOffered: {
                 "@type": "Service",
-                name: "Shopify 2.0 Theme & Store Migration",
+                name: "WordPress to Shopify Migration",
               },
             },
             {
               "@type": "Offer",
               itemOffered: {
                 "@type": "Service",
-                name: "1:1 SEO 301 Redirect Architecture",
+                name: "301 Redirect Mapping & SEO Preservation",
               },
             },
           ],
@@ -312,7 +165,7 @@ export default function ShopifyMigrationServicesPage() {
           {
             "@type": "ListItem",
             position: 3,
-            name: "Shopify Migration Service",
+            name: "Shopify Migration Services",
             item: "https://scalefront.io/services/shopify-migration-services",
           },
         ],
@@ -331,6 +184,7 @@ export default function ShopifyMigrationServicesPage() {
         className="min-h-screen bg-[var(--sf-paper)] text-[var(--sf-ink)] selection:bg-[var(--sf-primary-soft)] selection:text-[var(--sf-ink)]"
         style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}
       >
+        {/* Top Breadcrumbs Bar */}
         <div className="border-b-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
             <div className="flex items-center gap-2">
@@ -352,10 +206,10 @@ export default function ShopifyMigrationServicesPage() {
             <div className="flex items-center gap-3">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[var(--sf-primary-soft)] border border-[var(--sf-primary)] text-[var(--sf-ink)] font-semibold">
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--sf-primary)] animate-pulse" />
-                Zero Downtime Guarantee
+                Data &amp; Workflow Continuity
               </span>
               <span className="hidden sm:inline-block text-[var(--sf-ink-mute)]">
-                1:1 301 SEO Mappings
+                Tested Before Launch
               </span>
             </div>
           </div>
@@ -370,7 +224,7 @@ export default function ShopifyMigrationServicesPage() {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-[var(--sf-ink)] bg-[var(--sf-paper)] text-xs font-mono font-bold uppercase tracking-wider mb-6">
               <RefreshCw className="w-3.5 h-3.5 text-[var(--sf-primary)]" />
-              <span>Zero-Downtime Store Replatforming</span>
+              <span>WooCommerce, Magento &amp; WordPress</span>
             </div>
 
             <h1
@@ -380,10 +234,12 @@ export default function ShopifyMigrationServicesPage() {
               Shopify Migration Services
             </h1>
 
-            <p className="text-xl sm:text-2xl text-[var(--sf-ink-soft)] leading-relaxed mb-8 max-w-3xl">
-              We move your store to Shopify from WooCommerce, Magento, or
-              WordPress with zero order downtime. Full customer data, order
-              history, and search engine rankings preserved.
+            <p className="text-xl sm:text-2xl text-[var(--sf-ink-soft)] leading-relaxed mb-4 max-w-3xl">
+              Move your WooCommerce, Magento, or WordPress store to Shopify without losing the data and workflows your business depends on.
+            </p>
+
+            <p className="text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed mb-8 max-w-3xl">
+              We handle product and variant data, customer records, order history, custom fields, media, integrations, and old URLs. We first map the existing store, test the migration, and verify the new Shopify store before launch.
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
@@ -402,7 +258,7 @@ export default function ShopifyMigrationServicesPage() {
                   height={18}
                   className="w-4 h-4 object-contain brightness-0 invert"
                 />
-                Book a Call
+                Plan Your Migration
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <a
@@ -427,418 +283,510 @@ export default function ShopifyMigrationServicesPage() {
             </div>
           </header>
 
-          {/* SECTION 1: WHAT A STORE MIGRATION ACTUALLY INVOLVES */}
-          <section id="what-it-means" className="mb-16 max-w-5xl">
+          {/* SECTION 1: WHAT A SHOPIFY MIGRATION ACTUALLY INVOLVES */}
+          <section id="what-it-involves" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
               style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
             >
-              What a store migration actually involves
+              What a Shopify migration actually involves
             </h2>
 
             <div className="space-y-5 text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed">
               <p>
-                Moving an online store is not like copying files between folders
-                on a computer. Every ecommerce platform organizes its database
-                differently.
+                A Shopify migration is more than exporting products from your old store and importing them into Shopify.
               </p>
               <p>
-                In WooCommerce, custom product details live inside a single
-                table called postmeta. In Magento, product data is distributed
-                across dozens of separate database tables using an
-                entity-attribute-value model. In Shopify, products follow a
-                structured format built around variants, collections, and
-                Metafields.
+                Your existing store may contain products and variants, customer records, order history, custom fields, images, URLs, and data created by plugins or other integrations. Not all of that maps directly to Shopify.
               </p>
               <p>
-                When you migrate, you cannot just export a CSV file from your
-                old store and import it into Shopify. If you try, images break,
-                product variations disconnect, customer passwords disappear, and
-                historical orders lose their associations.
+                The first step is to identify what your current store contains and decide where each piece of data belongs in Shopify.
               </p>
+              <p>For example:</p>
+
+              <div className="border-l-2 border-[var(--sf-primary)] pl-5 space-y-2 text-base text-[var(--sf-ink-soft)] my-6 font-mono">
+                <p>
+                  • <strong>WooCommerce product data</strong> → Shopify products and variants
+                </p>
+                <p>
+                  • <strong>Custom fields</strong> → Shopify metafields
+                </p>
+                <p>
+                  • <strong>Categories</strong> → Shopify collections and product data
+                </p>
+                <p>
+                  • <strong>Old URLs</strong> → Shopify URLs + redirects
+                </p>
+                <p>
+                  • <strong>Order history</strong> → API-based migration or another supported import method
+                </p>
+              </div>
+
               <p>
-                A proper technical migration extracts your raw database records,
-                cleans the fields, formats the information to match Shopify
-                schemas, and transfers it using verified scripts. At the same
-                time, we build your new storefront layout on Shopify Online
-                Store 2.0 and establish redirect maps so zero customer traffic
-                or Google ranking power is lost.
+                The exact approach depends on how your store is built. A simple catalog may need very little transformation, while a store with custom fields, complex products, subscriptions, or external integrations needs more planning.
+              </p>
+              <p className="font-bold text-[var(--sf-ink)]">
+                This is where the migration should start: understanding the existing store before moving the data.
               </p>
             </div>
           </section>
 
-          {/* SECTION 2: COMPARISON TABLE */}
-          <section id="comparison-table" className="mb-20">
-            <h2
-              className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-4"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
-            >
-              Modern Shopify vs. Legacy Self-Hosted Platforms
-            </h2>
-            <p className="text-base text-[var(--sf-ink-soft)] mb-8 max-w-3xl">
-              An objective comparison of maintenance overhead, checkout
-              conversion rates, security compliance, and long-term operating
-              costs.
-            </p>
-
-            <ComparisonTable
-              includedHeader={
-                <>
-                  Modern Shopify Architecture{" "}
-                  <span className="underline decoration-[var(--sf-primary)] decoration-2">
-                    (Fully Managed SaaS)
-                  </span>
-                </>
-              }
-              excludedHeader={
-                <>
-                  Legacy Self-Hosted Platforms{" "}
-                  <span className="underline decoration-rose-500 decoration-2">
-                    (WooCommerce / Magento / WordPress)
-                  </span>
-                </>
-              }
-              rows={comparisonRows}
-            />
-          </section>
-
-          {/* SECTION 3: PROTECTING SEARCH RANKINGS & TRAFFIC */}
-          <section id="seo-preservation" className="mb-16 max-w-5xl">
+          {/* SECTION 2: WOOCOMMERCE PRODUCTS -> SHOPIFY PRODUCTS AND VARIANTS */}
+          <section id="products-variants" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
               style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
             >
-              Protecting your search rankings and organic traffic
+              WooCommerce products → Shopify products and variants
             </h2>
 
-            <div className="space-y-5 text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed mb-8">
+            <div className="space-y-5 text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed">
               <p>
-                The biggest risk when migrating away from an established store
-                is losing search engine visibility. If product URLs change
-                without proper redirects, search engines encounter dead ends,
-                rankings drop, and buyers land on 404 pages.
+                WooCommerce and Shopify organize product data differently, so a product export cannot always be imported into Shopify without changes. WooCommerce supports product types such as simple, variable, grouped, external, virtual, and downloadable products, while Shopify uses a product-and-variant structure.
               </p>
               <p>
-                We protect your rankings through a strict technical process
-                called 1:1 redirect mapping. Before anything changes on your
-                live store, we crawl every URL on your website and analyze your
-                highest-converting pages from Google Search Console.
+                For a migration, we first identify how each WooCommerce product is structured and then map it to the closest Shopify structure.
               </p>
-            </div>
+              <p>For example:</p>
 
-            <div className="space-y-6 text-base text-[var(--sf-ink-soft)] leading-relaxed">
-              <div className="border-l-2 border-[var(--sf-primary)] pl-4">
-                <strong className="text-[var(--sf-ink)] font-mono uppercase text-sm block mb-1">
-                  1. Complete Pre-Launch URL Crawl &amp; Audit
-                </strong>
+              <div className="border-l-2 border-[var(--sf-ink)] pl-5 space-y-2 text-base text-[var(--sf-ink-soft)] my-6 font-mono">
                 <p>
-                  We crawl every legacy URL on your domain including products,
-                  categories, tags, blog articles, and legal documents. We
-                  correlate this with historical Google Search Console data to
-                  prioritize high-equity landing pages.
+                  • <strong>Simple product</strong> → Shopify product with a variant
+                </p>
+                <p>
+                  • <strong>Variable product</strong> → Shopify product with its variant options
+                </p>
+                <p>
+                  • <strong>Product attributes</strong> → Shopify options or metafields, depending on how they are used
+                </p>
+                <p>
+                  • <strong>WooCommerce product slug</strong> → Shopify product handle
+                </p>
+                <p>
+                  • <strong>Product images</strong> → Shopify product media
                 </p>
               </div>
 
-              <div className="border-l-2 border-[var(--sf-ink)] pl-4">
-                <strong className="text-[var(--sf-ink)] font-mono uppercase text-sm block mb-1">
-                  2. Strict 1:1 301 Permanent Redirect Mapping
-                </strong>
-                <p>
-                  Every legacy URL maps directly to its exact new equivalent on
-                  Shopify. We never use lazy wildcard redirects to the homepage.
-                  Page authority, ranking weight, and external backlinks
-                  transfer directly to the new product or collection page.
-                </p>
-              </div>
-
-              <div className="border-l-2 border-[var(--sf-ink)] pl-4">
-                <strong className="text-[var(--sf-ink)] font-mono uppercase text-sm block mb-1">
-                  3. Metadata &amp; On-Page Signal Continuity
-                </strong>
-                <p>
-                  We carry over your exact page titles, meta descriptions, image
-                  descriptions, and heading tags on high-traffic pages. Search
-                  crawlers find the new storefront faster and cleaner, but the
-                  core signals that earned your rankings stay intact.
-                </p>
-              </div>
-
-              <div className="border-l-2 border-[var(--sf-ink)] pl-4">
-                <strong className="text-[var(--sf-ink)] font-mono uppercase text-sm block mb-1">
-                  4. Day-One XML Sitemap Submission &amp; Search Console
-                  Monitoring
-                </strong>
-                <p>
-                  Immediately following DNS cutover, we submit new Shopify XML
-                  sitemaps to Google Search Console and begin daily crawl log
-                  monitoring to detect and resolve any unexpected 404 errors
-                  within minutes.
-                </p>
-              </div>
+              <p>
+                The important part is the <strong>variant mapping</strong>. A WooCommerce store may use attributes such as size, color, material, or finish to create variations. Those attributes need to be mapped into Shopify&apos;s product and variant structure rather than simply copied as separate fields.
+              </p>
+              <p>
+                Some products also need a different approach. Grouped or external products may not have a direct Shopify equivalent, while products with complex variation structures may need to be split, reorganized, or created programmatically.
+              </p>
+              <p className="font-bold text-[var(--sf-ink)]">
+                The goal is not just to move the product records. It is to make sure the products still behave correctly after the migration.
+              </p>
             </div>
           </section>
 
-          {/* SECTION 4: PLATFORMS WE MIGRATE FROM */}
-          <section id="platforms" className="mb-16 max-w-5xl">
+          {/* SECTION 3: WOOCOMMERCE CUSTOM FIELDS -> SHOPIFY METAFIELDS */}
+          <section id="custom-fields" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
               style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
             >
-              Platforms and scenarios we migrate from
+              WooCommerce custom fields → Shopify metafields
+            </h2>
+
+            <div className="space-y-5 text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed">
+              <p>
+                Customer and product data often contain information that is not part of the standard WooCommerce fields.
+              </p>
+              <p>For example, a WooCommerce store might have fields such as:</p>
+
+              <div className="my-6 p-5 border-2 border-[var(--sf-ink)] bg-white shadow-[3px_3px_0_var(--sf-ink)] font-mono text-sm text-[var(--sf-ink)] leading-relaxed max-w-md">
+                <pre>{`material
+technical_drawing
+care_instructions
+product_width
+product_height`}</pre>
+              </div>
+
+              <p>
+                These don&apos;t simply become ordinary Shopify product fields. We first decide what each field represents and then map it to the appropriate Shopify metafield.
+              </p>
+              <p>For example:</p>
+
+              <div className="my-6 p-5 border-2 border-[var(--sf-ink)] bg-white shadow-[3px_3px_0_var(--sf-ink)] font-mono text-sm text-[var(--sf-ink)] leading-relaxed max-w-md">
+                <pre>{`material
+        ↓
+custom.material
+
+product_width
+        ↓
+custom.product_width
+
+care_instructions
+        ↓
+custom.care_instructions`}</pre>
+              </div>
+
+              <p>
+                The metafield definitions need to be set up in Shopify before the corresponding data is imported. Simple product-level metafields can be handled through Shopify&apos;s CSV tools when they use supported data types, while more complex data or variant-level metafields may require programmatic processing through the Admin API.
+              </p>
+              <p className="font-bold text-[var(--sf-ink)]">
+                The important part is not just moving the values. We need to preserve what those fields are used for in the old store and make sure the new Shopify theme, apps, and workflows can use the migrated data correctly.
+              </p>
+            </div>
+          </section>
+
+          {/* SECTION 4: WOOCOMMERCE MEDIA -> SHOPIFY MEDIA */}
+          <section id="media" className="mb-16 max-w-5xl">
+            <h2
+              className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
+              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            >
+              WooCommerce media → Shopify media
+            </h2>
+
+            <div className="space-y-5 text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed">
+              <p>
+                Product images and other media are handled differently in WooCommerce and Shopify.
+              </p>
+              <p>
+                In WooCommerce, product images are usually stored on the WordPress server under <code className="px-1.5 py-0.5 bg-[var(--sf-paper-sunken)] border border-[var(--sf-ink)] font-mono text-sm">/wp-content/uploads/</code> and connected to products through the WordPress Media Library. Shopify handles product media through its own hosted media system.
+              </p>
+              <p>
+                During a migration, Shopify&apos;s CSV importer uses the image URL from the old store to fetch the image. The image needs to be available through a public HTTP or HTTPS URL so Shopify can retrieve it.
+              </p>
+              <p>For example:</p>
+
+              <div className="my-6 p-5 border-2 border-[var(--sf-ink)] bg-white shadow-[3px_3px_0_var(--sf-ink)] font-mono text-sm text-[var(--sf-ink)] leading-relaxed max-w-xl overflow-x-auto">
+                <pre>{`WooCommerce image
+/wp-content/uploads/2026/01/product-image.jpg
+        ↓
+Public image URL
+https://oldstore.com/wp-content/uploads/2026/01/product-image.jpg
+        ↓
+Shopify import
+        ↓
+Shopify-hosted product media`}</pre>
+              </div>
+
+              <p>
+                This is why the old WooCommerce store needs to remain available while the media is being imported. If Shopify cannot reach the source image, that image can fail to transfer.
+              </p>
+              <p>
+                For larger or programmatic migrations, media can also be handled through Shopify&apos;s API. In that case, the migration process needs to account for the fact that Shopify may still be processing an uploaded file before it can be attached to a product variant.
+              </p>
+              <p className="font-bold text-[var(--sf-ink)]">
+                The goal is to transfer the media itself as well as the connection between each image and the correct product or variant.
+              </p>
+            </div>
+          </section>
+
+          {/* SECTION 5: WOOCOMMERCE CUSTOMERS -> SHOPIFY CUSTOMERS */}
+          <section id="customers" className="mb-16 max-w-5xl">
+            <h2
+              className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
+              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            >
+              WooCommerce customers → Shopify customers
+            </h2>
+
+            <div className="space-y-5 text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed">
+              <p>
+                Customer data can be moved from WooCommerce to Shopify, but the process is more than copying names and email addresses.
+              </p>
+              <p>
+                Shopify supports importing customer profiles through CSV. The file can include information such as names, email addresses, phone numbers, addresses, marketing preferences, tags, and other supported fields.
+              </p>
+              <p>For example:</p>
+
+              <div className="my-6 p-5 border-2 border-[var(--sf-ink)] bg-white shadow-[3px_3px_0_var(--sf-ink)] font-mono text-sm text-[var(--sf-ink)] leading-relaxed max-w-md">
+                <pre>{`WooCommerce customer
+        ↓
+First name
+Last name
+Email
+Phone
+Address
+Tags
+Custom data
+        ↓
+Shopify customer profile`}</pre>
+              </div>
+
+              <p>
+                The main limitation is <strong>customer passwords</strong>. Shopify does not allow passwords from another ecommerce platform to be migrated through a customer CSV, so existing customers need to complete Shopify&apos;s supported sign-in or account setup process.
+              </p>
+              <p>
+                With Shopify&apos;s current customer account system, customers can sign in using a one-time verification code sent to their email instead of creating a traditional password.
+              </p>
+              <p>
+                For stores with additional customer data, we first identify which fields can be imported directly and which need to be mapped to Shopify metafields or handled through an API-based process.
+              </p>
+              <p className="font-bold text-[var(--sf-ink)]">
+                The goal is to move the customer profiles correctly while making sure customers can still access their accounts after the migration.
+              </p>
+            </div>
+          </section>
+
+          {/* SECTION 6: WOOCOMMERCE ORDERS -> SHOPIFY HISTORICAL ORDERS */}
+          <section id="orders" className="mb-16 max-w-5xl">
+            <h2
+              className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
+              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            >
+              WooCommerce orders → Shopify historical orders
+            </h2>
+
+            <div className="space-y-5 text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed">
+              <p>
+                Past orders are one of the parts of a WooCommerce to Shopify migration that usually needs more planning.
+              </p>
+              <p>
+                Shopify&apos;s normal product CSV can be used to import products, and customer data can also be imported separately. Historical orders are different. Shopify&apos;s migration documentation lists migration apps, the Order API, and the Transaction API as options for moving historical orders.
+              </p>
+              <p>
+                The migration also needs to happen in the right order. Products should be available before historical orders are connected to them, and customer records should be handled before importing orders that need to reference those customers.
+              </p>
+              <p>A simplified flow looks like this:</p>
+
+              <div className="my-6 p-5 border-2 border-[var(--sf-ink)] bg-white shadow-[3px_3px_0_var(--sf-ink)] font-mono text-sm text-[var(--sf-ink)] leading-relaxed max-w-md">
+                <pre>{`WooCommerce
+    ↓
+Products + variants
+    ↓
+Shopify products
+    ↓
+Customers
+    ↓
+Shopify customers
+    ↓
+Historical orders
+    ↓
+Shopify order records`}</pre>
+              </div>
+
+              <p>
+                The order data itself can contain much more than an order number. Depending on the store, we may need to account for line items, quantities, prices, taxes, discounts, customer information, payment information, fulfillment status, refunds, and order dates.
+              </p>
+              <p>
+                There is also an important difference between WooCommerce stores. Modern WooCommerce stores can use High-Performance Order Storage (HPOS), which stores order data in dedicated tables instead of the older WordPress post and postmeta structure. A migration process needs to determine which storage system the source store is using before extracting the order data.
+              </p>
+              <p>
+                For a small store, a migration app may be enough. For a store with a large order history or custom order data, an API-based migration can give more control over how the records are transformed and imported.
+              </p>
+              <p className="font-bold text-[var(--sf-ink)]">
+                The goal is not just to make the old orders appear in Shopify. The customer, products, dates, totals, and other important order information should remain connected and usable after the migration.
+              </p>
+            </div>
+          </section>
+
+          {/* SECTION 7: WOOCOMMERCE URLS -> SHOPIFY URLS AND SEO REDIRECTS */}
+          <section id="urls-redirects" className="mb-16 max-w-5xl">
+            <h2
+              className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
+              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            >
+              WooCommerce URLs → Shopify URLs and SEO redirects
+            </h2>
+
+            <div className="space-y-5 text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed">
+              <p>
+                Your existing WooCommerce store may have years of indexed product, category, blog, and other URLs. When you move to Shopify, the URL structure can change, so those old URLs need to be mapped to the correct new URLs.
+              </p>
+              <p>For example:</p>
+
+              <div className="my-6 p-5 border-2 border-[var(--sf-ink)] bg-white shadow-[3px_3px_0_var(--sf-ink)] font-mono text-sm text-[var(--sf-ink)] leading-relaxed max-w-md">
+                <pre>{`WooCommerce
+/shop/category/product-name
+        ↓
+Shopify
+/products/product-name`}</pre>
+              </div>
+
+              <p>
+                The old URL should not simply be deleted. Where the content has a suitable replacement, we create a <strong>301 redirect</strong> from the old URL to the new one. Shopify supports importing URL redirects through CSV, which can be useful when a store has a large number of URLs to migrate.
+              </p>
+              <p>Before the migration, we can build a URL mapping that looks like:</p>
+
+              <div className="my-6 overflow-x-auto border-2 border-[var(--sf-ink)] shadow-[4px_4px_0_var(--sf-ink)] bg-white">
+                <table className="w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)]">
+                      <th
+                        className="p-4 sm:p-5 text-sm sm:text-base font-bold text-[var(--sf-ink)] border-r-2 border-[var(--sf-ink)] w-2/5"
+                        style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                      >
+                        Old URL
+                      </th>
+                      <th
+                        className="p-4 sm:p-5 text-sm sm:text-base font-bold text-[var(--sf-ink)] border-r-2 border-[var(--sf-ink)] w-2/5"
+                        style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                      >
+                        New URL
+                      </th>
+                      <th
+                        className="p-4 sm:p-5 text-sm sm:text-base font-bold text-[var(--sf-ink)]"
+                        style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                      >
+                        Action
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y-2 divide-[var(--sf-ink)]/15 text-xs sm:text-sm font-mono text-[var(--sf-ink)]">
+                    <tr>
+                      <td className="p-4 sm:p-5 border-r-2 border-[var(--sf-ink)]/15 align-top">
+                        /shop/shoes/red-shoe
+                      </td>
+                      <td className="p-4 sm:p-5 border-r-2 border-[var(--sf-ink)]/15 align-top text-emerald-700 font-semibold">
+                        /products/red-shoe
+                      </td>
+                      <td className="p-4 sm:p-5 align-top font-bold text-[var(--sf-primary)]">
+                        301
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 sm:p-5 border-r-2 border-[var(--sf-ink)]/15 align-top">
+                        /category/shoes
+                      </td>
+                      <td className="p-4 sm:p-5 border-r-2 border-[var(--sf-ink)]/15 align-top text-emerald-700 font-semibold">
+                        /collections/shoes
+                      </td>
+                      <td className="p-4 sm:p-5 align-top font-bold text-[var(--sf-primary)]">
+                        301
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 sm:p-5 border-r-2 border-[var(--sf-ink)]/15 align-top">
+                        /about-us
+                      </td>
+                      <td className="p-4 sm:p-5 border-r-2 border-[var(--sf-ink)]/15 align-top text-emerald-700 font-semibold">
+                        /pages/about-us
+                      </td>
+                      <td className="p-4 sm:p-5 align-top font-bold text-[var(--sf-primary)]">
+                        301
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p>
+                Not every old URL should point to the homepage. If a relevant replacement exists, we map the old URL to that page. If there is no suitable replacement, the URL may need a different treatment rather than creating a large number of irrelevant redirects.
+              </p>
+              <p>
+                We also check the new URLs after launch to make sure the redirects work and important pages remain accessible to search engines.
+              </p>
+              <p className="font-bold text-[var(--sf-ink)]">
+                The goal is to make the URL change predictable: old visitors and search engines should be sent to the right new page instead of hitting a broken link.
+              </p>
+            </div>
+          </section>
+
+          {/* SECTION 8: WOOCOMMERCE PLUGINS AND INTEGRATIONS -> SHOPIFY APPS AND APIS */}
+          <section id="plugins-integrations" className="mb-16 max-w-5xl">
+            <h2
+              className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
+              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            >
+              WooCommerce plugins and integrations → Shopify apps and APIs
+            </h2>
+
+            <div className="space-y-5 text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed">
+              <p>
+                A WooCommerce store can rely on plugins for much more than the storefront. A plugin may handle subscriptions, reviews, shipping, inventory, email marketing, accounting, or a custom business process.
+              </p>
+              <p>
+                When moving to Shopify, those plugins cannot simply be copied to the new store. We first identify what each plugin does, what data it stores, and whether Shopify has a suitable app, native feature, or API-based alternative.
+              </p>
+              <p>For example:</p>
+
+              <div className="my-6 p-5 border-2 border-[var(--sf-ink)] bg-white shadow-[3px_3px_0_var(--sf-ink)] font-mono text-sm text-[var(--sf-ink)] leading-relaxed max-w-md">
+                <pre>{`WooCommerce plugin
+        ↓
+What does it actually do?
+        ↓
+Shopify native feature
+        OR
+Shopify app
+        OR
+Custom integration`}</pre>
+              </div>
+
+              <p>
+                A product review plugin might be replaced with a Shopify review app. A custom inventory integration may need to connect to Shopify through the Admin API. A system that receives order updates can use Shopify webhooks so it can react when relevant events occur. For unique business workflows, explore our{" "}
+                <Link
+                  href="/services/custom-shopify-development"
+                  className="text-[var(--sf-primary)] font-bold underline hover:text-[var(--sf-primary-deep)]"
+                >
+                  Custom Shopify Development
+                </Link>{" "}
+                services.
+              </p>
+              <p>
+                We also check whether the old integration stores important data that needs to be migrated. Removing a plugin without understanding its data can leave products, customers, or business workflows incomplete.
+              </p>
+              <p>
+                For each integration, we document what needs to move, what needs to be rebuilt, and what can be replaced rather than migrated.
+              </p>
+              <p className="font-bold text-[var(--sf-ink)]">
+                The goal is to make sure the systems around your store continue working after the move, instead of treating the Shopify storefront as the only part of the migration.
+              </p>
+            </div>
+          </section>
+
+          {/* SECTION 9: HOW WE TEST THE MIGRATION BEFORE LAUNCH */}
+          <section id="testing" className="mb-16 max-w-5xl">
+            <h2
+              className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
+              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            >
+              How we test the migration before launch
+            </h2>
+
+            <div className="space-y-5 text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed">
+              <p>
+                We don&apos;t wait until launch day to find out that a product, image, customer, or integration did not migrate correctly.
+              </p>
+              <p>
+                We first create the Shopify store and test the migration with a smaller part of the existing catalog. This lets us find mapping problems before the full migration.
+              </p>
+              <p>For example:</p>
+
+              <div className="my-6 p-5 border-2 border-[var(--sf-ink)] bg-white shadow-[3px_3px_0_var(--sf-ink)] font-mono text-sm text-[var(--sf-ink)] leading-relaxed max-w-xs">
+                <pre>{`Products        ✓
+Variants        ✓
+Images          ✓
+Metafields      ✓
+Customers       ✓
+Orders          ✓
+Redirects       ✓
+Integrations    ✓
+Checkout        ✓`}</pre>
+              </div>
+
+              <p>
+                We compare the migrated data with the original store and investigate anything that does not match.
+              </p>
+              <p>
+                For complex stores, this can include checking product options, custom fields, image associations, customer records, order information, and URLs before the final migration.
+              </p>
+              <p>
+                We also test the storefront itself. Product pages, collections, search, cart, checkout, account access, and important integrations should all work on the new store before the domain is switched.
+              </p>
+              <p>
+                After the final data sync, we run the same checks again so that changes made on the old store during development are not missed.
+              </p>
+              <p className="font-bold text-[var(--sf-ink)]">
+                The purpose of the test migration is simple: find problems while the old store is still running, not after the new store is live.
+              </p>
+            </div>
+          </section>
+
+          {/* SECTION 10: OUR SHOPIFY MIGRATION PROCESS */}
+          <section id="process" className="mb-16 max-w-5xl">
+            <h2
+              className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
+              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            >
+              Our Shopify migration process
             </h2>
 
             <p className="text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed mb-8">
-              Every platform has its own database idiosyncrasies. Here is how we
-              handle transitions from the most common systems:
-            </p>
-
-            <div className="space-y-10">
-              <div className="border-l-2 border-[var(--sf-primary)] pl-5">
-                <h3
-                  className="text-xl font-bold text-[var(--sf-ink)] mb-3"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
-                >
-                  1. WooCommerce and WordPress to Shopify
-                </h3>
-                <p className="text-base text-[var(--sf-ink-soft)] mb-4 leading-relaxed">
-                  WooCommerce works well for smaller shops. But as catalogs
-                  expand past a few hundred items and merchants stack plugins
-                  for shipping, subscriptions, reviews, and filters, performance
-                  degrades. A typical WordPress store runs 30 to 50 active
-                  plugins, creating security vulnerabilities and slow database
-                  response times on mobile devices.
-                </p>
-                <ul className="space-y-2.5 text-base text-[var(--sf-ink-soft)] list-disc list-inside">
-                  <li>
-                    <strong>Plugin Consolidation:</strong> We clean out plugin
-                    bloat by replacing dozens of third-party WordPress scripts
-                    with native Shopify features.
-                  </li>
-                  <li>
-                    <strong>Custom Fields to Metafields:</strong> Advanced
-                    Custom Fields (ACF) data—such as technical dimensions,
-                    materials, or PDF manuals—maps directly into native Shopify
-                    2.0 Metafields for clean editing.
-                  </li>
-                  <li>
-                    <strong>URL Structure Transformation:</strong> WooCommerce
-                    arbitrary URL schemes are cleanly mapped to Shopify fixed
-                    `/products/` and `/collections/` paths with permanent
-                    redirects.
-                  </li>
-                </ul>
-              </div>
-
-              <div className="border-l-2 border-[var(--sf-ink)] pl-5">
-                <h3
-                  className="text-xl font-bold text-[var(--sf-ink)] mb-3"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
-                >
-                  2. Magento (Adobe Commerce) to Shopify
-                </h3>
-                <p className="text-base text-[var(--sf-ink-soft)] mb-4 leading-relaxed">
-                  Merchants usually move away from Magento because
-                  infrastructure and ongoing maintenance have become
-                  unsustainable. A mid-sized Magento store often requires
-                  dedicated AWS cloud hosting costing thousands of dollars every
-                  month, paired with steep retainers for security patches and
-                  upgrade cycles.
-                </p>
-                <ul className="space-y-2.5 text-base text-[var(--sf-ink-soft)] list-disc list-inside">
-                  <li>
-                    <strong>Complex Catalog Simplification:</strong> We
-                    restructure complex configurable products with dozens of
-                    attribute sets into clean Shopify options or connected
-                    product sets.
-                  </li>
-                  <li>
-                    <strong>Elimination of Server Retainers:</strong> You
-                    migrate to fully managed SaaS infrastructure with 99.99%
-                    uptime, zero manual security patches, and automatic peak
-                    scaling.
-                  </li>
-                  <li>
-                    <strong>B2B &amp; Wholesale Rebuilding:</strong>{" "}
-                    Customer-specific price tiers and volume discounts are
-                    rebuilt using Shopify B2B tools or private API integrations.
-                  </li>
-                </ul>
-              </div>
-
-              <div className="border-l-2 border-[var(--sf-ink)] pl-5">
-                <h3
-                  className="text-xl font-bold text-[var(--sf-ink)] mb-3"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
-                >
-                  3. Upgrading to Shopify 2.0 &amp; Store Consolidations
-                </h3>
-                <p className="text-base text-[var(--sf-ink-soft)] mb-4 leading-relaxed">
-                  Many migrations happen within Shopify itself. Stores built
-                  prior to 2021 often run vintage hardcoded Liquid themes where
-                  marketing updates require code edits, or brands manage
-                  multiple international stores across fragmented accounts.
-                </p>
-                <ul className="space-y-2.5 text-base text-[var(--sf-ink-soft)] list-disc list-inside">
-                  <li>
-                    <strong>Online Store 2.0 Upgrades:</strong> Converting
-                    vintage Liquid themes to modern JSON templates gives your
-                    team drag-and-drop sections and blocks across every page
-                    without touching code.
-                  </li>
-                  <li>
-                    <strong>Shopify-to-Shopify Consolidations:</strong> Merging
-                    regional international stores into a single admin using
-                    Shopify Markets reduces software subscriptions and
-                    synchronizes inventory globally.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* SECTION 5: DATA MIGRATION MATRIX TABLE */}
-          <section id="data-migration" className="mb-20">
-            <h2
-              className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-4"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
-            >
-              What data gets migrated to Shopify
-            </h2>
-            <p className="text-base text-[var(--sf-ink-soft)] mb-8 max-w-3xl">
-              Every data entity is extracted via verified APIs, scrubbed of
-              database inconsistencies, and reconciled line by line before
-              launch.
-            </p>
-
-            <div className="overflow-x-auto border-2 border-[var(--sf-ink)] shadow-[4px_4px_0_var(--sf-ink)] bg-white">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr className="border-b-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)]">
-                    <th
-                      className="p-4 sm:p-5 text-base sm:text-lg font-bold text-[var(--sf-ink)] border-r-2 border-[var(--sf-ink)] w-1/4"
-                      style={{
-                        fontFamily: "'Bricolage Grotesque', sans-serif",
-                      }}
-                    >
-                      Asset Category
-                    </th>
-                    <th
-                      className="p-4 sm:p-5 text-base sm:text-lg font-bold text-[var(--sf-ink)] border-r-2 border-[var(--sf-ink)] w-2/5"
-                      style={{
-                        fontFamily: "'Bricolage Grotesque', sans-serif",
-                      }}
-                    >
-                      What Moves Over
-                    </th>
-                    <th
-                      className="p-4 sm:p-5 text-base sm:text-lg font-bold text-[var(--sf-ink)]"
-                      style={{
-                        fontFamily: "'Bricolage Grotesque', sans-serif",
-                      }}
-                    >
-                      How It Is Handled
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y-2 divide-[var(--sf-ink)]/15 text-sm sm:text-base text-[var(--sf-ink)]">
-                  <tr>
-                    <td className="p-4 sm:p-5 font-bold border-r-2 border-[var(--sf-ink)]/15 align-top">
-                      Products &amp; Variants
-                    </td>
-                    <td className="p-4 sm:p-5 border-r-2 border-[var(--sf-ink)]/15 align-top text-[var(--sf-ink-soft)]">
-                      Titles, descriptions, prices, sale prices, SKUs, inventory
-                      counts, weights, tags, and product images.
-                    </td>
-                    <td className="p-4 sm:p-5 align-top text-[var(--sf-ink-soft)]">
-                      Cleaned, formatted, and reconciled against the old
-                      database line by line.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 sm:p-5 font-bold border-r-2 border-[var(--sf-ink)]/15 align-top">
-                      Customer Profiles
-                    </td>
-                    <td className="p-4 sm:p-5 border-r-2 border-[var(--sf-ink)]/15 align-top text-[var(--sf-ink-soft)]">
-                      Names, email addresses, phone numbers, default shipping
-                      addresses, and order history associations.
-                    </td>
-                    <td className="p-4 sm:p-5 align-top text-[var(--sf-ink-soft)]">
-                      Customer records move over directly. Passwords cannot be
-                      copied due to encryption; customers receive a one-click
-                      activation link to set a password.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 sm:p-5 font-bold border-r-2 border-[var(--sf-ink)]/15 align-top">
-                      Order History
-                    </td>
-                    <td className="p-4 sm:p-5 border-r-2 border-[var(--sf-ink)]/15 align-top text-[var(--sf-ink-soft)]">
-                      Line items, quantities, historical prices, taxes, dates,
-                      and fulfillment states.
-                    </td>
-                    <td className="p-4 sm:p-5 align-top text-[var(--sf-ink-soft)]">
-                      Preserved as historical records so customer service can
-                      look up past orders and customer lifetime value stays
-                      accurate.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 sm:p-5 font-bold border-r-2 border-[var(--sf-ink)]/15 align-top">
-                      Collections &amp; Tags
-                    </td>
-                    <td className="p-4 sm:p-5 border-r-2 border-[var(--sf-ink)]/15 align-top text-[var(--sf-ink-soft)]">
-                      Product categories, brand groupings, and custom tags.
-                    </td>
-                    <td className="p-4 sm:p-5 align-top text-[var(--sf-ink-soft)]">
-                      Rebuilt as automated smart collections or manual
-                      collections with matching filters.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 sm:p-5 font-bold border-r-2 border-[var(--sf-ink)]/15 align-top">
-                      SEO 301 Redirects
-                    </td>
-                    <td className="p-4 sm:p-5 border-r-2 border-[var(--sf-ink)]/15 align-top text-[var(--sf-ink-soft)]">
-                      Every legacy product, category, blog, and informational
-                      page URL.
-                    </td>
-                    <td className="p-4 sm:p-5 align-top text-[var(--sf-ink-soft)]">
-                      Mapped 1:1 into Shopify URL redirect table to prevent
-                      broken links and ranking drops.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 sm:p-5 font-bold border-r-2 border-[var(--sf-ink)]/15 align-top">
-                      Blogs &amp; Static Pages
-                    </td>
-                    <td className="p-4 sm:p-5 border-r-2 border-[var(--sf-ink)]/15 align-top text-[var(--sf-ink-soft)]">
-                      Articles, published dates, author credits, images, and
-                      policy pages.
-                    </td>
-                    <td className="p-4 sm:p-5 align-top text-[var(--sf-ink-soft)]">
-                      Rebuilt in Shopify blog structure with proper heading
-                      hierarchy and clean formatting.
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          {/* SECTION 6: THE 5-PHASE LIFECYCLE */}
-          <section id="lifecycle" className="mb-16 max-w-5xl">
-            <h2
-              className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
-            >
-              The 5-phase zero-downtime migration lifecycle
-            </h2>
-
-            <p className="text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed mb-8">
-              Replatforming a live retail store is a disciplined software
-              engineering engagement. We guide your store through a five-phase
-              process so your existing site stays open and taking orders right
-              up to the final domain switch.
+              A migration is easier to manage when the work is done in stages. We start by understanding the existing store, test the new Shopify setup, and only switch the domain after the important data and store functions have been checked.
             </p>
 
             <div className="space-y-6">
@@ -847,13 +795,10 @@ export default function ShopifyMigrationServicesPage() {
                   className="text-lg font-bold text-[var(--sf-ink)] mb-1"
                   style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
                 >
-                  Phase I: Catalog Audit &amp; Technical Scoping
+                  1. Audit the existing store
                 </h3>
-                <p className="text-base text-[var(--sf-ink-soft)]">
-                  We inspect your current database, review active third-party
-                  plugins, and clean up duplicate customer accounts or missing
-                  SKUs. We run a complete crawl of your live domain to map every
-                  URL that needs a 301 redirect.
+                <p className="text-base text-[var(--sf-ink-soft)] leading-relaxed">
+                  We start by reviewing the current store and its data. This includes the product catalog, variants, customer data, order history, custom fields, plugins, integrations, and existing URLs. We also identify anything that needs special handling before the migration starts.
                 </p>
               </div>
 
@@ -862,13 +807,10 @@ export default function ShopifyMigrationServicesPage() {
                   className="text-lg font-bold text-[var(--sf-ink)] mb-1"
                   style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
                 >
-                  Phase II: Staging Environment Setup &amp; Test Migration
+                  2. Set up Shopify and test the migration
                 </h3>
-                <p className="text-base text-[var(--sf-ink-soft)]">
-                  We build a private, password-protected staging store on
-                  Shopify. We run a sample import on 10% to 20% of your product
-                  catalog to verify variant mapping, custom fields, and
-                  high-resolution photo loading before migrating the rest.
+                <p className="text-base text-[var(--sf-ink-soft)] leading-relaxed">
+                  We create the Shopify store and prepare the structures needed for the migration. Before moving the full catalog, we test a smaller set of products and related data. This helps us find problems with variants, metafields, images, and other mappings while the old store is still running.
                 </p>
               </div>
 
@@ -877,270 +819,125 @@ export default function ShopifyMigrationServicesPage() {
                   className="text-lg font-bold text-[var(--sf-ink)] mb-1"
                   style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
                 >
-                  Phase III: Theme &amp; Feature Rebuilding
+                  3. Rebuild the storefront and integrations
                 </h3>
-                <p className="text-base text-[var(--sf-ink-soft)]">
-                  We configure your new Online Store 2.0 theme with modular
-                  sections. We configure payment gateways, input shipping zones
-                  and rates, connect tax calculation tools, and integrate your
-                  email marketing and fulfillment services.
-                </p>
-              </div>
-
-              <div className="border-l-2 border-[var(--sf-ink)] pl-5">
-                <h3
-                  className="text-lg font-bold text-[var(--sf-ink)] mb-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
-                >
-                  Phase IV: Pre-Launch Delta Sync
-                </h3>
-                <p className="text-base text-[var(--sf-ink-soft)]">
-                  Because your old store continued taking orders during
-                  development, new customer accounts and order records were
-                  placed. Before flipping the switch, we run delta scripts that
-                  pull newly created data so zero transactions are lost.
-                </p>
-              </div>
-
-              <div className="border-l-2 border-[var(--sf-ink)] pl-5">
-                <h3
-                  className="text-lg font-bold text-[var(--sf-ink)] mb-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
-                >
-                  Phase V: Zero-Downtime DNS Cutover &amp; Post-Launch
-                  Verification
-                </h3>
-                <p className="text-base text-[var(--sf-ink-soft)]">
-                  We switch your domain DNS records during your lowest-traffic
-                  window with shortened TTL values. We upload the verified 301
-                  redirect map, submit your new XML sitemap to Google, and
-                  conduct live checkout tests across payment methods.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* SECTION 7: COMMON TECHNICAL CHALLENGES */}
-          <section id="edge-cases" className="mb-16 max-w-5xl">
-            <h2
-              className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
-            >
-              Common technical challenges and how we handle them
-            </h2>
-
-            <p className="text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed mb-6">
-              Replatforming has real technical rules and edge cases. Here is how
-              we handle the four most common ones:
-            </p>
-
-            <div className="space-y-6 text-base text-[var(--sf-ink-soft)] leading-relaxed">
-              <div className="border-l-2 border-[var(--sf-ink)] pl-4">
-                <h3 className="text-lg font-bold text-[var(--sf-ink)] mb-1">
-                  1. Customer Password Encryption Limits
-                </h3>
-                <p>
-                  Passwords cannot be exported because legacy databases store
-                  them as one-way encrypted hashes. We migrate all customer
-                  profiles and send automated activation emails so shoppers can
-                  set passwords in one click.
-                </p>
-              </div>
-
-              <div className="border-l-2 border-[var(--sf-ink)] pl-4">
-                <h3 className="text-lg font-bold text-[var(--sf-ink)] mb-1">
-                  2. Custom Order Statuses &amp; Fulfillment Mappings
-                </h3>
-                <p>
-                  WooCommerce and Magento allow custom order status names like
-                  &ldquo;Awaiting Cheque&rdquo; or &ldquo;Custom
-                  Assembly.&rdquo; We translate these into Shopify standard
-                  fulfillment states and attach granular historical notes as
-                  tags and order Metafields for complete customer service
-                  visibility.
-                </p>
-              </div>
-
-              <div className="border-l-2 border-[var(--sf-ink)] pl-4">
-                <h3 className="text-lg font-bold text-[var(--sf-ink)] mb-1">
-                  3. Products Exceeding the 100-Variant Limit
-                </h3>
-                <p>
-                  Standard Shopify products historically limit items to 100
-                  variants and 3 option dimensions. We structure complex
-                  multi-option items using linked parent and child products
-                  connected via visual swatches, use Shopify newer GraphQL APIs,
-                  or use line-item properties for custom options.
-                </p>
-              </div>
-
-              <div className="border-l-2 border-[var(--sf-ink)] pl-4">
-                <h3 className="text-lg font-bold text-[var(--sf-ink)] mb-1">
-                  4. Proprietary Custom Fields (ACF to Metafields)
-                </h3>
-                <p>
-                  We map custom database fields—like PDF spec sheets, dimension
-                  tables, or fabric care instructions—directly into native
-                  Shopify 2.0 Metafields. Your team can edit these fields
-                  cleanly in the Shopify admin without touching template code.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* SECTION 8: INDEPENDENT DEVELOPER VS AGENCY */}
-          <section id="developer-vs-agency" className="mb-16 max-w-5xl">
-            <h2
-              className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
-            >
-              Why work with an independent developer instead of an agency?
-            </h2>
-
-            <div className="space-y-5 text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed mb-6">
-              <p>
-                Large agencies often pitch migrations with a team of four or
-                five people: an account director, a project manager, a junior
-                designer, and an offshore developer.
-              </p>
-              <p>That setup introduces three real problems for store owners:</p>
-            </div>
-
-            <div className="border-l-2 border-[var(--sf-primary)] pl-5 space-y-3 text-base text-[var(--sf-ink-soft)]">
-              <p>
-                <strong>1. Information gets lost in transit:</strong> You
-                explain your business rules to an account manager, who writes an
-                internal ticket for a developer they may not work with directly.
-                Edge cases get missed and bugs show up right before launch.
-              </p>
-              <p>
-                <strong>2. You pay for agency overhead:</strong> A large portion
-                of your project fee pays for agency management, sales
-                commissions, and internal meetings rather than actual
-                engineering.
-              </p>
-              <p>
-                <strong>3. Fast, direct communication:</strong> When you work
-                with an independent senior developer, you communicate directly
-                with the person writing your database scripts, building your
-                theme sections, and verifying your 301 redirects.
-              </p>
-            </div>
-          </section>
-
-          {/* SECTION 9: SERVICES INCLUDED */}
-          <section id="services-included" className="mb-16 max-w-5xl">
-            <h2
-              className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
-            >
-              Services included in our Shopify migration engagements
-            </h2>
-
-            <div className="border-l-2 border-[var(--sf-primary)] pl-5 space-y-2 text-base text-[var(--sf-ink-soft)]">
-              <ul className="space-y-2 list-disc list-inside">
-                <li>
-                  <strong>Full Catalog &amp; Historical Data Migration:</strong>{" "}
-                  Products, variants, customer profiles, and completed order
-                  records transferred without data loss.
-                </li>
-                <li>
-                  <strong>
-                    Comprehensive 1:1 SEO 301 Redirect Architecture:
-                  </strong>{" "}
-                  Complete legacy URL crawl, mapping matrix, and Google Search
-                  Console submission.
-                </li>
-                <li>
-                  <strong>Online Store 2.0 Theme Configuration:</strong>{" "}
-                  Lightweight Liquid storefront setup with modular sections and
-                  fast mobile performance.
-                </li>
-                <li>
-                  <strong>Payment Gateway &amp; Checkout Setup:</strong> Shopify
-                  Payments, Shop Pay, PayPal, and regional shipping rates
-                  configured and tested.
-                </li>
-                <li>
-                  <strong>Third-Party Integration Re-engineering:</strong>{" "}
-                  Connecting email marketing (Klaviyo), review systems, and
-                  inventory tools via direct APIs.
-                </li>
-                <li>
-                  <strong>30-Day Post-Launch Support &amp; Monitoring:</strong>{" "}
-                  Daily traffic monitoring, 404 error tracking, and immediate
-                  developer fixes.
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          {/* SECTION 10: RELATED SERVICES */}
-          <section id="related-services" className="mb-16 max-w-5xl">
-            <h2
-              className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
-            >
-              Related services and next steps
-            </h2>
-
-            <p className="text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed mb-6">
-              A store migration often connects with other parts of your store
-              build:
-            </p>
-
-            <div className="border-l-2 border-[var(--sf-ink)] pl-5 space-y-2 text-base text-[var(--sf-ink-soft)]">
-              <ul className="space-y-2 list-disc list-inside">
-                <li>
-                  <strong>Theme Development:</strong> If you want a fresh
-                  storefront look alongside your migration, explore our{" "}
+                <p className="text-base text-[var(--sf-ink-soft)] leading-relaxed">
+                  Once the data structure is understood, we build or adapt the Shopify storefront on modern Online Store 2.0 standards (read about our{" "}
                   <Link
                     href="/services/theme-development"
                     className="text-[var(--sf-primary)] font-bold underline hover:text-[var(--sf-primary-deep)]"
                   >
                     Shopify Theme Development
                   </Link>{" "}
-                  service.
-                </li>
-                <li>
-                  <strong>Custom Logic &amp; Private Apps:</strong> For
-                  specialized business workflows or custom B2B rules, see our{" "}
-                  <Link
-                    href="/services/custom-shopify-development"
-                    className="text-[var(--sf-primary)] font-bold underline hover:text-[var(--sf-primary-deep)]"
-                  >
-                    Custom Shopify Development
-                  </Link>{" "}
-                  page.
-                </li>
-                <li>
-                  <strong>Large Catalog Structuring:</strong> To see how we
-                  structure high-SKU catalogs and B2B requirements, read our{" "}
-                  <Link
-                    href="/work/industrial-supply-direct"
-                    className="text-[var(--sf-primary)] font-bold underline hover:text-[var(--sf-primary-deep)]"
-                  >
-                    Industrial Supply Direct case study
-                  </Link>
-                  .
-                </li>
-                <li>
-                  <strong>Enterprise Shopify Plus:</strong> If your store needs
-                  wholesale portals, multi-store expansion, or custom checkout
-                  scripts, visit our dedicated{" "}
-                  <Link
-                    href="/services/shopify-plus-migration"
-                    className="text-[var(--sf-primary)] font-bold underline hover:text-[var(--sf-primary-deep)]"
-                  >
-                    Shopify Plus Migration
-                  </Link>{" "}
-                  page.
-                </li>
-              </ul>
+                  approach). We also configure the features and integrations that the old store depends on, such as payments, shipping, email marketing, reviews, inventory systems, or custom functionality.
+                </p>
+              </div>
+
+              <div className="border-l-2 border-[var(--sf-ink)] pl-5">
+                <h3
+                  className="text-lg font-bold text-[var(--sf-ink)] mb-1"
+                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                >
+                  4. Sync changes from the old store
+                </h3>
+                <p className="text-base text-[var(--sf-ink-soft)] leading-relaxed">
+                  Your existing store may continue receiving orders and customer activity while the Shopify store is being prepared. Before launch, we compare the new data with the latest data from the old store and transfer the changes that happened during development. This helps prevent new orders or customer records from being missed.
+                </p>
+              </div>
+
+              <div className="border-l-2 border-[var(--sf-ink)] pl-5">
+                <h3
+                  className="text-lg font-bold text-[var(--sf-ink)] mb-1"
+                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                >
+                  5. Launch and check the new store
+                </h3>
+                <p className="text-base text-[var(--sf-ink-soft)] leading-relaxed">
+                  Once the migration is ready, we switch the domain to Shopify. We then check the important parts of the new store, including redirects, product pages, customer accounts, checkout, integrations, and other critical workflows. The old store should remain available during the migration so we have a reliable source to compare against until the new store has been checked.
+                </p>
+              </div>
             </div>
+
+            <p className="font-bold text-[var(--sf-ink)] mt-6 text-base sm:text-lg">
+              The goal is simple: find and fix migration problems before they affect the live store.
+            </p>
           </section>
 
-          {/* SECTION 11: FAQS */}
+          {/* SECTION 11: COMMON PROBLEMS DURING A WOOCOMMERCE -> SHOPIFY MIGRATION */}
+          <section id="common-problems" className="mb-16 max-w-5xl">
+            <h2
+              className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
+              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            >
+              Common problems during a WooCommerce → Shopify migration
+            </h2>
+
+            <p className="text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed mb-6">
+              Not every WooCommerce store can be migrated by exporting the data and importing it into Shopify. The problems usually appear when the old store has custom data, complex products, or integrations that need to work differently on Shopify.
+            </p>
+
+            <div className="space-y-6 text-base text-[var(--sf-ink-soft)] leading-relaxed">
+              <div className="border-l-2 border-[var(--sf-ink)] pl-4">
+                <h3 className="text-lg font-bold text-[var(--sf-ink)] mb-1">
+                  1. Complex product data
+                </h3>
+                <p>
+                  A WooCommerce product can contain variations, custom attributes, plugin data, and other fields that don&apos;t have a direct Shopify equivalent. Before importing the catalog, we need to identify which fields can be mapped directly and which ones need to be converted into Shopify variants, options, or metafields.
+                </p>
+              </div>
+
+              <div className="border-l-2 border-[var(--sf-ink)] pl-4">
+                <h3 className="text-lg font-bold text-[var(--sf-ink)] mb-1">
+                  2. Customer passwords
+                </h3>
+                <p>
+                  Customer profiles can be imported, but passwords cannot be copied from WooCommerce into Shopify. Customers need to complete Shopify&apos;s supported account setup process after the migration. This means customer migration needs to include an account-activation plan rather than treating the customer CSV as a complete account migration.
+                </p>
+              </div>
+
+              <div className="border-l-2 border-[var(--sf-ink)] pl-4">
+                <h3 className="text-lg font-bold text-[var(--sf-ink)] mb-1">
+                  3. Historical orders
+                </h3>
+                <p>
+                  Historical orders need separate handling from product and customer imports. Shopify&apos;s migration guidance lists migration apps and APIs as methods for moving historical orders. The migration order also matters because orders may need to connect to products and customers that have already been migrated.
+                </p>
+              </div>
+
+              <div className="border-l-2 border-[var(--sf-ink)] pl-4">
+                <h3 className="text-lg font-bold text-[var(--sf-ink)] mb-1">
+                  4. Different WooCommerce order storage
+                </h3>
+                <p>
+                  Not every WooCommerce store stores orders in the same database structure. Modern WooCommerce stores can use High-Performance Order Storage (HPOS), which stores orders in dedicated tables instead of the older WordPress post and postmeta structure. A migration process needs to account for the source store&apos;s order storage setup.
+                </p>
+              </div>
+
+              <div className="border-l-2 border-[var(--sf-ink)] pl-4">
+                <h3 className="text-lg font-bold text-[var(--sf-ink)] mb-1">
+                  5. Old URLs don&apos;t match Shopify URLs
+                </h3>
+                <p>
+                  WooCommerce allows different permalink structures, while Shopify uses its own URL structure. Important old URLs therefore need to be mapped to the appropriate new URLs and redirected where a suitable replacement exists.
+                </p>
+              </div>
+
+              <div className="border-l-2 border-[var(--sf-ink)] pl-4">
+                <h3 className="text-lg font-bold text-[var(--sf-ink)] mb-1">
+                  6. Plugins and integrations
+                </h3>
+                <p>
+                  A WooCommerce plugin can&apos;t simply be copied into Shopify. We need to identify what the plugin actually does and what data or business process depends on it. Then we decide whether Shopify&apos;s native features, an app, or custom development is the right replacement.
+                </p>
+              </div>
+            </div>
+
+            <p className="font-bold text-[var(--sf-ink)] mt-6 text-base sm:text-lg">
+              The difficult part of migration is usually not moving the data. It&apos;s deciding how the old store&apos;s data and functionality should work in Shopify.
+            </p>
+          </section>
+
+          {/* SECTION 12: FREQUENTLY ASKED QUESTIONS */}
           <section id="faq" className="mb-20 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
@@ -1161,9 +958,25 @@ export default function ShopifyMigrationServicesPage() {
                   <p className="text-base text-[var(--sf-ink-soft)] leading-relaxed">
                     {faq.answer}
                   </p>
+                  {faq.question.includes("Shopify Plus") && (
+                    <p className="text-sm text-[var(--sf-ink-mute)] mt-2">
+                      Need wholesale portals or enterprise checkout scripting? See our dedicated{" "}
+                      <Link
+                        href="/services/shopify-plus-migration"
+                        className="text-[var(--sf-primary)] underline font-semibold"
+                      >
+                        Shopify Plus Migration
+                      </Link>{" "}
+                      overview.
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
+
+            <p className="font-bold text-[var(--sf-ink)] mt-6 text-base sm:text-lg">
+              The right migration plan depends on how your current store is built, not just how many products it has.
+            </p>
           </section>
 
           {/* FINAL CTA SECTION */}
@@ -1177,13 +990,13 @@ export default function ShopifyMigrationServicesPage() {
                 className="text-3xl sm:text-5xl font-bold tracking-tight text-[var(--sf-ink)] mb-4"
                 style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
               >
-                Ready to move your store to Shopify with protected search
-                rankings?
+                Planning a Shopify migration?
               </h2>
-              <p className="text-lg sm:text-xl text-[var(--sf-ink-soft)] leading-relaxed mb-8">
-                Share your current website URL and estimated catalog size. We
-                will review your database structure and deliver a clear
-                migration plan with exact milestone pricing.
+              <p className="text-lg sm:text-xl text-[var(--sf-ink-soft)] leading-relaxed mb-4">
+                Tell us about your current store, catalog size, and any custom features or integrations you rely on.
+              </p>
+              <p className="text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed mb-8">
+                We&apos;ll review what needs to be migrated, identify areas that need special handling, and outline the steps needed to move the store to Shopify.
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
@@ -1202,7 +1015,7 @@ export default function ShopifyMigrationServicesPage() {
                     height={18}
                     className="w-4 h-4 object-contain brightness-0 invert"
                   />
-                  Book a Call
+                  Plan Your Migration
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a

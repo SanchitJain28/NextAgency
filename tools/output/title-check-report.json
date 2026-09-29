@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-09-23T16:41:37.171Z",
+  "timestamp": "2026-09-29T15:03:52.616Z",
   "totalPages": 74,
   "summary": {
-    "optimal": 62,
-    "warnings": 12,
+    "optimal": 61,
+    "warnings": 13,
     "errors": 0
   },
   "passed": true,
@@ -731,12 +731,12 @@
     {
       "source": "/Users/sanchitjain/vscode_files/NextAgency/next-agency/src/app/(app)/services/shopify-migration-services/page.tsx",
       "url": "/services/shopify-migration-services",
-      "rawTitle": "Shopify Migration Service | Zero Downtime & SEO Preserved",
-      "renderedTitle": "Shopify Migration Service | Zero Downtime & SEO Preserved",
-      "charCount": 57,
-      "pixelEstimate": 497,
-      "status": "optimal",
-      "message": "Optimal length (50–60 characters)",
+      "rawTitle": "Shopify Migration Services | WooCommerce, Magento & WordPress",
+      "renderedTitle": "Shopify Migration Services | WooCommerce, Magento & WordPress",
+      "charCount": 61,
+      "pixelEstimate": 547,
+      "status": "warning",
+      "message": "Borderline length (61 chars, ~547px). Recommended sweet spot is 50–60 chars to prevent mobile truncation.",
       "isDuplicate": false,
       "duplicateSources": []
     },
