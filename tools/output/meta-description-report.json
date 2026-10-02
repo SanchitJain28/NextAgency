@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-09-29T15:03:57.091Z",
-  "totalPages": 79,
+  "timestamp": "2026-10-02T10:33:09.339Z",
+  "totalPages": 80,
   "summary": {
-    "optimal": 34,
+    "optimal": 35,
     "warnings": 4,
     "errors": 41
   },
@@ -456,6 +456,17 @@
       "pixelEstimate": 783,
       "status": "optimal",
       "message": "Optimal for desktop (133 chars, ~783px). (Note: mobile truncates around 105–120 chars).",
+      "isDuplicate": false,
+      "duplicateSources": []
+    },
+    {
+      "source": "/Users/sanchitjain/vscode_files/NextAgency/next-agency/src/app/(app)/blog/headless-woocommerce-vs-traditional-woocommerce/page.tsx",
+      "url": "/blog/headless-woocommerce-vs-traditional-woocommerce",
+      "description": "Headless WooCommerce vs Traditional WooCommerce: compare frontend flexibility, API communication, performance, SEO, checkout, and maintenance tradeoffs.",
+      "charCount": 152,
+      "pixelEstimate": 905,
+      "status": "optimal",
+      "message": "Optimal for desktop (152 chars, ~905px). (Note: mobile truncates around 105–120 chars).",
       "isDuplicate": false,
       "duplicateSources": []
     },

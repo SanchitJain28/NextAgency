@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-09-29T15:03:52.616Z",
-  "totalPages": 74,
+  "timestamp": "2026-10-02T10:33:05.444Z",
+  "totalPages": 75,
   "summary": {
-    "optimal": 61,
+    "optimal": 62,
     "warnings": 13,
     "errors": 0
   },
@@ -509,6 +509,18 @@
       "pixelEstimate": 359,
       "status": "warning",
       "message": "Slightly short (42 chars, ~359px). Target 50–60 characters to maximize keywords.",
+      "isDuplicate": false,
+      "duplicateSources": []
+    },
+    {
+      "source": "/Users/sanchitjain/vscode_files/NextAgency/next-agency/src/app/(app)/blog/headless-woocommerce-vs-traditional-woocommerce/page.tsx",
+      "url": "/blog/headless-woocommerce-vs-traditional-woocommerce",
+      "rawTitle": "Headless WooCommerce vs Traditional WooCommerce Guide",
+      "renderedTitle": "Headless WooCommerce vs Traditional WooCommerce Guide",
+      "charCount": 53,
+      "pixelEstimate": 477,
+      "status": "optimal",
+      "message": "Optimal length (50–60 characters)",
       "isDuplicate": false,
       "duplicateSources": []
     },

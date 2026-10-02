@@ -18,6 +18,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     ...blogUrls,
     {
+      url: `${baseUrl}/blog/headless-woocommerce-vs-traditional-woocommerce`,
+      lastModified: lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    {
       url: baseUrl,
       lastModified: lastModified,
       changeFrequency: "monthly",

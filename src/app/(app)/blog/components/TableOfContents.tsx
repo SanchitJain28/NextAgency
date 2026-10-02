@@ -12,28 +12,30 @@ interface TableOfContentsProps {
   content: string;
 }
 
+function parseHeadings(content: string): Heading[] {
+  const headingRegex = /^(#{2,3})\s+(.+)$/gm;
+  const extractedHeadings: Heading[] = [];
+  let match;
+
+  while ((match = headingRegex.exec(content)) !== null) {
+    const level = match[1].length;
+    const text = match[2].trim();
+    const id = text
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '');
+
+    extractedHeadings.push({ id, text, level });
+  }
+  return extractedHeadings;
+}
+
 export function TableOfContents({ content }: TableOfContentsProps) {
-  const [headings, setHeadings] = useState<Heading[]>([]);
+  const [headings, setHeadings] = useState<Heading[]>(() => parseHeadings(content));
   const [activeId, setActiveId] = useState<string>('');
 
   useEffect(() => {
-    // Extract headings from markdown content
-    const headingRegex = /^(#{2,3})\s+(.+)$/gm;
-    const extractedHeadings: Heading[] = [];
-    let match;
-
-    while ((match = headingRegex.exec(content)) !== null) {
-      const level = match[1].length;
-      const text = match[2].trim();
-      const id = text
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/(^-|-$)/g, '');
-
-      extractedHeadings.push({ id, text, level });
-    }
-
-    setHeadings(extractedHeadings);
+    setHeadings(parseHeadings(content));
   }, [content]);
 
   useEffect(() => {
