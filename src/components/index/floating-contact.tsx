@@ -140,7 +140,7 @@ export default function FloatingContact() {
           </span>
         </Link>
         <Link
-          href="mailto:hello@scalefront.io"
+          href="mailto:sanchit@scalefront.io"
           className="group flex items-center gap-2.5 no-underline"
         >
           <span

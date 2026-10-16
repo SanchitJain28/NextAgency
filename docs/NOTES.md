@@ -5,53 +5,6 @@
 `NOTE : All Components should be server components to properly render on the server to improve SEO`
 `NOTE : ALl Sections Should be content rich , should use normal language not any type of AI SLOP`
 
-### Please Refer to @seo/index/seo.md FOR SEO
-
-- Moving Marquee Section
-  - This will be about to get your free shopify store audit
-
-- Trust badges row
-
-- Simple article to add content on the page
-  - Heading
-  - Content
-
-- Hero Section (This would be mainly compose of shopify development agncy)
-  - Give CTA for Whatsapp message and to book a call
-  - Should be content rich to target specific keywords
-
-- Featured Work
-  - This will be cards section of portfolio projects and other works
-
-- Services Section
-  - Services we offer (mentioned below)
-  - This will have a hover cursor pointer from accernity UI
-  - These should be text rich to improve our SEO
-
-- Case Studies Section
-  - In the form of carousel
-  - Content rich
-  - 4 Case studies about different ecommerce stores
-
-- Stats
-  - Some stats about how many projects built
-  - How much revenue increased
-
-- Testimonials
-  - Real people pictures with text rich review
-  - 5 to 6 reviews
-
-- FAQs Section
-  - These should be text rich to improve our SEO
-  - It will have FAQs about shopify theme development / App development
-  - 10 Reviews
-
-- Before vs After section
-  - In this section , we will showcase , the store transformation of the shopify stores
-  - There will be 3 slides in form of carousel
-
-- CTA Section
-
 ## New portfolio pages
 
 1.  360 - Alpha (Premium clothing brand)
@@ -89,6 +42,19 @@
 15. Custom software develeopment
 16. AI Automations
 17. Shopify SEO service
+
+## Top Services about i will do SEO Around
+
+1. Custom Shopify Development
+2. Custom Shopify App development
+3. Medusa JS development
+4. Headless Shopify development And Woocommerce developement
+5. Prestashop development
+6. CRO Optimization
+7. SAAS Websites / Dashboards
+8. Portfolio websites
+9. OpenCart development
+10. Landing pages and custom page development
 
 ## Audit pages
 
@@ -294,3 +260,52 @@ Cite authoritative sources to back up claims
 /servicepages
 
 - ACTION : DELETE
+
+### Old things
+
+### Please Refer to @seo/index/seo.md FOR SEO
+
+- Moving Marquee Section
+  - This will be about to get your free shopify store audit
+
+- Trust badges row
+
+- Simple article to add content on the page
+  - Heading
+  - Content
+
+- Hero Section (This would be mainly compose of shopify development agncy)
+  - Give CTA for Whatsapp message and to book a call
+  - Should be content rich to target specific keywords
+
+- Featured Work
+  - This will be cards section of portfolio projects and other works
+
+- Services Section
+  - Services we offer (mentioned below)
+  - This will have a hover cursor pointer from accernity UI
+  - These should be text rich to improve our SEO
+
+- Case Studies Section
+  - In the form of carousel
+  - Content rich
+  - 4 Case studies about different ecommerce stores
+
+- Stats
+  - Some stats about how many projects built
+  - How much revenue increased
+
+- Testimonials
+  - Real people pictures with text rich review
+  - 5 to 6 reviews
+
+- FAQs Section
+  - These should be text rich to improve our SEO
+  - It will have FAQs about shopify theme development / App development
+  - 10 Reviews
+
+- Before vs After section
+  - In this section , we will showcase , the store transformation of the shopify stores
+  - There will be 3 slides in form of carousel
+
+- CTA Section
