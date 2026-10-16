@@ -19,7 +19,7 @@ export default function IntroArticle() {
         <h2
           className="mb-[24px] max-w-[900px] leading-[1.05] tracking-[-0.03em] text-[var(--sf-ink)]"
           style={{
-            fontFamily: "'Bricolage Grotesque', sans-serif",
+            fontFamily: "'Inter', sans-serif",
             fontWeight: 800,
             fontSize: "clamp(32px, 4vw, 48px)",
             textWrap: "balance",

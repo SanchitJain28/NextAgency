@@ -152,7 +152,7 @@ export default function Pricing() {
         <h2
           className="m-0 mb-3 leading-[1.02] tracking-[-0.03em] text-[var(--sf-ink)]"
           style={{
-            fontFamily: "'Bricolage Grotesque', sans-serif",
+            fontFamily: "'Inter', sans-serif",
             fontWeight: 700,
             fontSize: "clamp(32px, 4.4vw, 52px)",
           }}
@@ -216,7 +216,7 @@ export default function Pricing() {
               <div
                 className="text-[22px] tracking-[-0.02em]"
                 style={{
-                  fontFamily: "'Bricolage Grotesque', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontWeight: 700,
                 }}
               >
@@ -236,7 +236,7 @@ export default function Pricing() {
                 <span
                   className="text-[44px] tracking-[-0.04em]"
                   style={{
-                    fontFamily: "'Bricolage Grotesque', sans-serif",
+                    fontFamily: "'Inter', sans-serif",
                     fontWeight: 700,
                   }}
                 >
@@ -275,7 +275,7 @@ export default function Pricing() {
                   style={{
                     background: p.cta_bg,
                     color: p.cta_ink,
-                    fontFamily: "'Bricolage Grotesque', sans-serif",
+                    fontFamily: "'Inter', sans-serif",
                   }}
                 >
                   {p.cta} &rarr;

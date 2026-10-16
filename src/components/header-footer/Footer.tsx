@@ -12,7 +12,7 @@ export default function Footer() {
               href="/"
               className="flex items-center gap-[11px] text-[20px] tracking-[-0.02em] text-[var(--sf-ink)]"
               style={{
-                fontFamily: "'Bricolage Grotesque', sans-serif",
+                fontFamily: "'Inter', sans-serif",
                 fontWeight: 800,
               }}
             >

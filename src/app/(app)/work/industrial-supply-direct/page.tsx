@@ -142,14 +142,14 @@ export default function IndustrialSupplyDirectPage() {
 
           <h1
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-[-0.03em] leading-[1.02] text-[var(--sf-ink)] mb-6"
-            style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            style={{ fontFamily: "'Inter', sans-serif" }}
           >
             Industrial Supply Direct
           </h1>
 
           <h2
             className="text-xl sm:text-2xl md:text-3xl font-bold leading-snug text-[var(--sf-ink-soft)] tracking-[-0.01em] mb-8"
-            style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            style={{ fontFamily: "'Inter', sans-serif" }}
           >
             A self-initiated{" "}
             <span className="text-[var(--sf-primary)]">Shopify B2B</span> build
@@ -254,7 +254,7 @@ export default function IndustrialSupplyDirectPage() {
               </div>
               <h2
                 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-[var(--sf-ink)]"
-                style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 The friction in traditional B2B procurement
               </h2>
@@ -343,7 +343,7 @@ export default function IndustrialSupplyDirectPage() {
           </div>
           <h2
             className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-[var(--sf-ink)] mb-4"
-            style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            style={{ fontFamily: "'Inter', sans-serif" }}
           >
             Structuring technical catalogs with native Metaobjects
           </h2>
@@ -414,7 +414,7 @@ export default function IndustrialSupplyDirectPage() {
               </div>
               <h2
                 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-[var(--sf-ink)]"
-                style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 Tiered volume pricing with instant client-side calculation
               </h2>
@@ -471,7 +471,7 @@ export default function IndustrialSupplyDirectPage() {
           </div>
           <h2
             className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-[var(--sf-ink)] mb-4"
-            style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            style={{ fontFamily: "'Inter', sans-serif" }}
           >
             Hybrid procurement: Instant self-checkout meets automated RFQ
           </h2>
@@ -531,7 +531,7 @@ export default function IndustrialSupplyDirectPage() {
               </div>
               <h2
                 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-[var(--sf-ink)]"
-                style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 Industrial component cross-selling & AOV design
               </h2>
@@ -651,7 +651,7 @@ export default function IndustrialSupplyDirectPage() {
           </div>
           <h2
             className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--sf-ink)] mb-4"
-            style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            style={{ fontFamily: "'Inter', sans-serif" }}
           >
             Zero-App-Bloat Architecture & Core Web Vitals
           </h2>
@@ -728,7 +728,7 @@ export default function IndustrialSupplyDirectPage() {
           </div>
           <h2
             className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--sf-ink)] mb-4"
-            style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            style={{ fontFamily: "'Inter', sans-serif" }}
           >
             Engineering Shopify for B2B & Wholesale
           </h2>
@@ -807,7 +807,7 @@ export default function IndustrialSupplyDirectPage() {
 
             <h2
               className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.05]"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Ready to build high-performance B2B commerce on Shopify?
             </h2>

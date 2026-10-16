@@ -79,7 +79,7 @@ export default function CaseStudies() {
             <h2
               className="m-0 leading-[1.02] tracking-[-0.03em] text-[var(--sf-ink)]"
               style={{
-                fontFamily: "'Bricolage Grotesque', sans-serif",
+                fontFamily: "'Inter', sans-serif",
                 fontWeight: 700,
                 fontSize: "clamp(32px, 4.4vw, 52px)",
                 textWrap: "balance",
@@ -127,7 +127,7 @@ export default function CaseStudies() {
                   <h3
                     className="text-[22px] md:text-[26px] leading-[1.1] tracking-[-0.02em] text-[var(--sf-ink)]"
                     style={{
-                      fontFamily: "'Bricolage Grotesque', sans-serif",
+                      fontFamily: "'Inter', sans-serif",
                       fontWeight: 800,
                     }}
                   >
@@ -144,7 +144,7 @@ export default function CaseStudies() {
                     <span
                       className="text-[32px] font-black text-[var(--sf-ink)] tracking-[-0.04em] leading-none mb-1"
                       style={{
-                        fontFamily: "'Bricolage Grotesque', sans-serif",
+                        fontFamily: "'Inter', sans-serif",
                       }}
                     >
                       {cs.metric}

@@ -182,7 +182,7 @@ export default function ShopifyMigrationServicesPage() {
 
       <article
         className="min-h-screen bg-[var(--sf-paper)] text-[var(--sf-ink)] selection:bg-[var(--sf-primary-soft)] selection:text-[var(--sf-ink)]"
-        style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}
+        style={{ fontFamily: "'Inter', sans-serif" }}
       >
         {/* Top Breadcrumbs Bar */}
         <div className="border-b-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)]">
@@ -229,7 +229,7 @@ export default function ShopifyMigrationServicesPage() {
 
             <h1
               className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[var(--sf-ink)] leading-[1.05] mb-6 max-w-4xl"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Shopify Migration Services
             </h1>
@@ -247,7 +247,7 @@ export default function ShopifyMigrationServicesPage() {
                 href="/contact-us"
                 className="px-7 py-3.5 border-2 border-[var(--sf-ink)] bg-[var(--sf-primary)] hover:bg-[var(--sf-primary-deep)] text-white text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily: "'Geist Mono', monospace",
                   boxShadow: "var(--sf-shadow-sm)",
                 }}
               >
@@ -267,7 +267,7 @@ export default function ShopifyMigrationServicesPage() {
                 rel="noopener noreferrer"
                 className="px-7 py-3.5 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] hover:bg-white text-[var(--sf-ink)] text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily: "'Geist Mono', monospace",
                   boxShadow: "var(--sf-shadow-sm)",
                 }}
               >
@@ -287,7 +287,7 @@ export default function ShopifyMigrationServicesPage() {
           <section id="what-it-involves" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               What a Shopify migration actually involves
             </h2>
@@ -335,7 +335,7 @@ export default function ShopifyMigrationServicesPage() {
           <section id="products-variants" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               WooCommerce products → Shopify products and variants
             </h2>
@@ -383,7 +383,7 @@ export default function ShopifyMigrationServicesPage() {
           <section id="custom-fields" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               WooCommerce custom fields → Shopify metafields
             </h2>
@@ -434,7 +434,7 @@ custom.care_instructions`}</pre>
           <section id="media" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               WooCommerce media → Shopify media
             </h2>
@@ -479,7 +479,7 @@ Shopify-hosted product media`}</pre>
           <section id="customers" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               WooCommerce customers → Shopify customers
             </h2>
@@ -526,7 +526,7 @@ Shopify customer profile`}</pre>
           <section id="orders" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               WooCommerce orders → Shopify historical orders
             </h2>
@@ -578,7 +578,7 @@ Shopify order records`}</pre>
           <section id="urls-redirects" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               WooCommerce URLs → Shopify URLs and SEO redirects
             </h2>
@@ -608,19 +608,19 @@ Shopify
                     <tr className="border-b-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)]">
                       <th
                         className="p-4 sm:p-5 text-sm sm:text-base font-bold text-[var(--sf-ink)] border-r-2 border-[var(--sf-ink)] w-2/5"
-                        style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                        style={{ fontFamily: "'Inter', sans-serif" }}
                       >
                         Old URL
                       </th>
                       <th
                         className="p-4 sm:p-5 text-sm sm:text-base font-bold text-[var(--sf-ink)] border-r-2 border-[var(--sf-ink)] w-2/5"
-                        style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                        style={{ fontFamily: "'Inter', sans-serif" }}
                       >
                         New URL
                       </th>
                       <th
                         className="p-4 sm:p-5 text-sm sm:text-base font-bold text-[var(--sf-ink)]"
-                        style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                        style={{ fontFamily: "'Inter', sans-serif" }}
                       >
                         Action
                       </th>
@@ -680,7 +680,7 @@ Shopify
           <section id="plugins-integrations" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               WooCommerce plugins and integrations → Shopify apps and APIs
             </h2>
@@ -732,7 +732,7 @@ Custom integration`}</pre>
           <section id="testing" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               How we test the migration before launch
             </h2>
@@ -780,7 +780,7 @@ Checkout        ✓`}</pre>
           <section id="process" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Our Shopify migration process
             </h2>
@@ -793,7 +793,7 @@ Checkout        ✓`}</pre>
               <div className="border-l-2 border-[var(--sf-primary)] pl-5">
                 <h3
                   className="text-lg font-bold text-[var(--sf-ink)] mb-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   1. Audit the existing store
                 </h3>
@@ -805,7 +805,7 @@ Checkout        ✓`}</pre>
               <div className="border-l-2 border-[var(--sf-ink)] pl-5">
                 <h3
                   className="text-lg font-bold text-[var(--sf-ink)] mb-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   2. Set up Shopify and test the migration
                 </h3>
@@ -817,7 +817,7 @@ Checkout        ✓`}</pre>
               <div className="border-l-2 border-[var(--sf-ink)] pl-5">
                 <h3
                   className="text-lg font-bold text-[var(--sf-ink)] mb-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   3. Rebuild the storefront and integrations
                 </h3>
@@ -836,7 +836,7 @@ Checkout        ✓`}</pre>
               <div className="border-l-2 border-[var(--sf-ink)] pl-5">
                 <h3
                   className="text-lg font-bold text-[var(--sf-ink)] mb-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   4. Sync changes from the old store
                 </h3>
@@ -848,7 +848,7 @@ Checkout        ✓`}</pre>
               <div className="border-l-2 border-[var(--sf-ink)] pl-5">
                 <h3
                   className="text-lg font-bold text-[var(--sf-ink)] mb-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   5. Launch and check the new store
                 </h3>
@@ -867,7 +867,7 @@ Checkout        ✓`}</pre>
           <section id="common-problems" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Common problems during a WooCommerce → Shopify migration
             </h2>
@@ -941,7 +941,7 @@ Checkout        ✓`}</pre>
           <section id="faq" className="mb-20 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Frequently Asked Questions
             </h2>
@@ -951,7 +951,7 @@ Checkout        ✓`}</pre>
                 <div key={index} className="py-6">
                   <h3
                     className="text-lg sm:text-xl font-bold text-[var(--sf-ink)] mb-3"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     {faq.question}
                   </h3>
@@ -988,7 +988,7 @@ Checkout        ✓`}</pre>
             <div className="max-w-3xl">
               <h2
                 className="text-3xl sm:text-5xl font-bold tracking-tight text-[var(--sf-ink)] mb-4"
-                style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 Planning a Shopify migration?
               </h2>
@@ -1004,7 +1004,7 @@ Checkout        ✓`}</pre>
                   href="/contact-us"
                   className="px-7 py-3.5 border-2 border-[var(--sf-ink)] bg-[var(--sf-primary)] hover:bg-[var(--sf-primary-deep)] text-white text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                   style={{
-                    fontFamily: "'JetBrains Mono', monospace",
+                    fontFamily: "'Geist Mono', monospace",
                     boxShadow: "var(--sf-shadow-sm)",
                   }}
                 >
@@ -1024,7 +1024,7 @@ Checkout        ✓`}</pre>
                   rel="noopener noreferrer"
                   className="px-7 py-3.5 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] hover:bg-white text-[var(--sf-ink)] text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                   style={{
-                    fontFamily: "'JetBrains Mono', monospace",
+                    fontFamily: "'Geist Mono', monospace",
                     boxShadow: "var(--sf-shadow-sm)",
                   }}
                 >

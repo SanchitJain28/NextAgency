@@ -1,0 +1,125 @@
+.content { color: #404040; font-size: .9375rem; line-height: 1.65; letter-spacing: -.012em; overflow-wrap: break-word; }
+.content :is(h2,h3,h4) { font-family: "Inter",sans-serif; font-weight: 700; color: #171717; line-height: 1.22; letter-spacing: -.03em; scroll-margin-top: 6rem; }
+.content h2 { font-size: 1.5rem; margin: 2rem 0 .75rem; padding-top: 1.25rem; border-top: 1px solid #e5e5e5; }
+.content > h2:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.content h3 { font-size: 1.1875rem; margin: 1.5rem 0 .625rem; }
+.content h4 { font-size: 1.0625rem; margin: 1.25rem 0 .5rem; }
+.content p { margin: 0 0 1rem; }
+.content :is(ul,ol) { margin: 0 0 1rem; padding-left: 1.375rem; }
+.content ul { list-style: disc; }
+.content ol { list-style: decimal; }
+.content li + li { margin-top: .375rem; }
+.content li > p { margin-bottom: .5rem; }
+.content strong { font-weight: 700; color: #262626; }
+.content a { color: var(--sf-primary); text-decoration: underline; text-underline-offset: 3px; }
+.content a:hover { color: var(--sf-primary-deep); }
+.content blockquote { border-left: 3px solid var(--sf-primary); background: #faf9f6; margin: 1.5rem 0; padding: .75rem 1rem; font-style: italic; }
+.content blockquote p:last-child { margin-bottom: 0; }
+.content :not(pre) > code { font-size: .85em; font-family: var(--font-mono); letter-spacing: 0; background: #f5f5f5; color: #404040; border: 1px solid #e5e5e5; border-radius: 4px; padding: .125rem .3rem; overflow-wrap: anywhere; }
+.content table { display: block; overflow-x: auto; border-collapse: collapse; margin: 1.5rem 0; font-size: .875rem; }
+.content :is(th,td) { border: 1px solid #e5e5e5; padding: .625rem .75rem; text-align: left; }
+.content th { background: #f5f5f5; color: #262626; font-weight: 700; }
+.content img { margin: 1.75rem 0; max-width: 100%; height: auto; border: 1px solid #e5e5e5; }
+.content hr { margin: 1.75rem 0; border-color: #e5e5e5; }
+.codeBlock {
+  margin: 1.5rem 0;
+  border: 1px solid #2e2e2e;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0a0a0a;
+  letter-spacing: 0;
+}
+.codeHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 48px;
+  padding: .5rem 1rem;
+  background: #000;
+  border-bottom: 1px solid #2e2e2e;
+  color: #a1a1a1;
+  font-family: var(--font-sans);
+  font-size: .875rem;
+  line-height: 1.5;
+}
+.codeTitle { display: inline-flex; align-items: center; gap: .625rem; min-width: 0; }
+.codeTitle > span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.languageIcon {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  background: #a1a1a1;
+  color: #000;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 16px;
+}
+.copyButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 6px;
+  color: #a1a1a1;
+  background: transparent;
+  cursor: pointer;
+  transition: background 150ms, color 150ms;
+}
+.copyButton:hover { background: #1f1f1f; color: #ededed; }
+.copyButton:focus-visible, .codeBlock pre:focus-visible { outline: 2px solid #ededed; outline-offset: -3px; }
+.codeBlock pre {
+  margin: 0;
+  padding: 1.25rem;
+  overflow-x: auto;
+  background: transparent;
+  color: #ededed;
+  font-family: var(--font-mono);
+  font-size: .8125rem;
+  line-height: 1.65;
+  tab-size: 2;
+  white-space: pre;
+  overflow-wrap: normal;
+  scrollbar-width: thin;
+  scrollbar-color: #424242 transparent;
+}
+.codeBlock pre code {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  overflow: visible;
+}
+/* Vercel's dark syntax palette. Keep these scoped to article code blocks. */
+.codeBlock :global(.hljs-comment), .codeBlock :global(.hljs-quote) { color: #a1a1a1; }
+.codeBlock :global(.hljs-keyword), .codeBlock :global(.hljs-operator),
+.codeBlock :global(.hljs-selector-tag), .codeBlock :global(.hljs-meta) { color: #ff4d8d; }
+.codeBlock :global(.hljs-string), .codeBlock :global(.hljs-regexp),
+.codeBlock :global(.hljs-addition) { color: #00ca50; }
+.codeBlock :global(.hljs-title), .codeBlock :global(.hljs-built_in),
+.codeBlock :global(.hljs-type) { color: #c97aff; }
+.codeBlock :global(.hljs-variable), .codeBlock :global(.hljs-property),
+.codeBlock :global(.hljs-name), .codeBlock :global(.hljs-attr) { color: #47a8ff; }
+.codeBlock :global(.hljs-number), .codeBlock :global(.hljs-literal),
+.codeBlock :global(.hljs-symbol) { color: #f2a20d; }
+.codeBlock :global(.hljs-punctuation), .codeBlock :global(.hljs-params) { color: #ededed; }
+@media(min-width:640px) {
+  .content { font-size: 1rem; }
+  .content h2 { font-size: 1.625rem; }
+  .content h3 { font-size: 1.3125rem; }
+  .content h4 { font-size: 1.125rem; }
+  .codeHeader { padding-inline: 1.25rem; }
+  .codeBlock pre { padding: 1.25rem 1.5rem; font-size: .875rem; }
+}

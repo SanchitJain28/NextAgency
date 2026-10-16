@@ -52,7 +52,7 @@ export default function FAQ() {
           <h2
             className="m-0 leading-[1.02] tracking-[-0.03em] text-[var(--sf-ink)]"
             style={{
-              fontFamily: "'Bricolage Grotesque', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               fontWeight: 800,
               fontSize: "clamp(32px, 4.4vw, 52px)",
               textWrap: "balance",

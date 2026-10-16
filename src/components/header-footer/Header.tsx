@@ -29,7 +29,7 @@ export function Header() {
               <span
                 key={i}
                 className="inline-flex items-center gap-[22px] px-[22px] text-[12.5px] font-bold tracking-[0.16em] uppercase whitespace-nowrap"
-                style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 {text}
                 <span className="text-[var(--sf-gold)] text-[11px]">✦</span>
@@ -51,7 +51,7 @@ export function Header() {
             href="/"
             className="flex items-center gap-[11px] text-[23px] tracking-[-0.02em] text-[var(--sf-ink)]"
             style={{
-              fontFamily: "'Bricolage Grotesque', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               fontWeight: 800,
             }}
             onClick={() => setMobileOpen(false)}

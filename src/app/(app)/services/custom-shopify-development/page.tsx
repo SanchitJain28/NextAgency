@@ -185,7 +185,7 @@ export default function CustomShopifyDevelopmentPage() {
 
       <article
         className="min-h-screen bg-[var(--sf-paper)] text-[var(--sf-ink)] selection:bg-[var(--sf-primary-soft)] selection:text-[var(--sf-ink)]"
-        style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}
+        style={{ fontFamily: "'Inter', sans-serif" }}
       >
         {/* TOP STATUS & BREADCRUMB BAR */}
         <div className="border-b-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)]">
@@ -221,7 +221,7 @@ export default function CustomShopifyDevelopmentPage() {
           >
             <h1
               className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[var(--sf-ink)] leading-[1.05] mb-6 max-w-4xl"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Custom Shopify Development
             </h1>
@@ -236,7 +236,7 @@ export default function CustomShopifyDevelopmentPage() {
                 href="/contact-us"
                 className="px-7 py-3.5 border-2 border-[var(--sf-ink)] bg-[var(--sf-primary)] hover:bg-[var(--sf-primary-deep)] text-white text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily: "'Geist Mono', monospace",
                   boxShadow: "var(--sf-shadow-sm)",
                 }}
               >
@@ -256,7 +256,7 @@ export default function CustomShopifyDevelopmentPage() {
                 rel="noopener noreferrer"
                 className="px-7 py-3.5 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] hover:bg-white text-[var(--sf-ink)] text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily: "'Geist Mono', monospace",
                   boxShadow: "var(--sf-shadow-sm)",
                 }}
               >
@@ -276,7 +276,7 @@ export default function CustomShopifyDevelopmentPage() {
           <section id="what-is-custom-development" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               What is custom Shopify development?
             </h2>
@@ -328,7 +328,7 @@ export default function CustomShopifyDevelopmentPage() {
               <div className="lg:col-span-7">
                 <h2
                   className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   Custom Shopify theme development vs pre-made themes
                 </h2>
@@ -399,7 +399,7 @@ export default function CustomShopifyDevelopmentPage() {
                   />
                   <div
                     className="p-3 border-t-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)] text-xs text-[var(--sf-ink-mute)] font-mono"
-                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                    style={{ fontFamily: "'Geist Mono', monospace" }}
                   >
                     Maison Luxe: Custom home decor storefront with instant
                     collection filtering and clean Online Store 2.0 sections.
@@ -426,7 +426,7 @@ export default function CustomShopifyDevelopmentPage() {
                   />
                   <div
                     className="p-3 border-t-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)] text-xs text-[var(--sf-ink-mute)] font-mono"
-                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                    style={{ fontFamily: "'Geist Mono', monospace" }}
                   >
                     Industrial Supply Direct: Custom B2B catalog managing
                     50,000+ SKUs with volume pricing and custom quote requests.
@@ -437,7 +437,7 @@ export default function CustomShopifyDevelopmentPage() {
               <div className="lg:col-span-7 order-1 lg:order-2">
                 <h2
                   className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   Custom Shopify app development &amp; private integrations
                 </h2>
@@ -508,7 +508,7 @@ export default function CustomShopifyDevelopmentPage() {
           >
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Headless Shopify and custom storefronts
             </h2>
@@ -550,7 +550,7 @@ export default function CustomShopifyDevelopmentPage() {
                 <Link
                   href="/services/headless-commerce"
                   className="font-mono text-sm font-bold uppercase text-[var(--sf-primary)] hover:underline inline-flex items-center gap-1.5"
-                  style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                  style={{ fontFamily: "'Geist Mono', monospace" }}
                 >
                   Explore our Headless Commerce services &rarr;
                 </Link>
@@ -565,7 +565,7 @@ export default function CustomShopifyDevelopmentPage() {
           >
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Relevant Work: Custom builds in action
             </h2>
@@ -580,7 +580,7 @@ export default function CustomShopifyDevelopmentPage() {
                 <div>
                   <h3
                     className="text-xl font-bold text-[var(--sf-ink)] mb-1"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     <Link
                       href="/work/iron-crate"
@@ -600,7 +600,7 @@ export default function CustomShopifyDevelopmentPage() {
                 <div>
                   <h3
                     className="text-xl font-bold text-[var(--sf-ink)] mb-1"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     <Link
                       href="/work/industrial-supply-direct"
@@ -619,7 +619,7 @@ export default function CustomShopifyDevelopmentPage() {
                 <div>
                   <h3
                     className="text-xl font-bold text-[var(--sf-ink)] mb-1"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     <Link
                       href="/work/maison-luxe"
@@ -645,7 +645,7 @@ export default function CustomShopifyDevelopmentPage() {
           >
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Frequently Asked Questions
             </h2>
@@ -658,7 +658,7 @@ export default function CustomShopifyDevelopmentPage() {
                 >
                   <h3
                     className="text-lg sm:text-xl font-bold text-[var(--sf-ink)] mb-2"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     {faq.question}
                   </h3>
@@ -677,7 +677,7 @@ export default function CustomShopifyDevelopmentPage() {
           >
             <h2
               className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--sf-ink)] mb-4 max-w-2xl mx-auto"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Ready to build a custom Shopify store?
             </h2>
@@ -693,7 +693,7 @@ export default function CustomShopifyDevelopmentPage() {
                 href="/contact-us"
                 className="px-8 py-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-primary)] hover:bg-[var(--sf-primary-deep)] text-white text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily: "'Geist Mono', monospace",
                   boxShadow: "var(--sf-shadow-sm)",
                 }}
               >
@@ -713,7 +713,7 @@ export default function CustomShopifyDevelopmentPage() {
                 rel="noopener noreferrer"
                 className="px-8 py-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] hover:bg-white text-[var(--sf-ink)] text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily: "'Geist Mono', monospace",
                   boxShadow: "var(--sf-shadow-sm)",
                 }}
               >

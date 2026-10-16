@@ -19,7 +19,7 @@ export default function SecondaryArticle() {
         <h2
           className="mb-[24px] max-w-[900px] leading-[1.05] tracking-[-0.03em] text-white"
           style={{
-            fontFamily: "'Bricolage Grotesque', sans-serif",
+            fontFamily: "'Inter', sans-serif",
             fontWeight: 800,
             fontSize: "clamp(28px, 4vw, 44px)",
             textWrap: "balance",

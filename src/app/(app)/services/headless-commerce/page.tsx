@@ -358,7 +358,7 @@ export default function HeadlessShopifyPage() {
 
       <article
         className="min-h-screen bg-[var(--sf-paper)] text-[var(--sf-ink)] selection:bg-[var(--sf-primary-soft)] selection:text-[var(--sf-ink)]"
-        style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}
+        style={{ fontFamily: "'Inter', sans-serif" }}
       >
         {/* Top Breadcrumbs Bar */}
         <div className="border-b-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)]">
@@ -396,7 +396,7 @@ export default function HeadlessShopifyPage() {
 
             <h1
               className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[var(--sf-ink)] leading-[1.05] mb-6 max-w-4xl"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Headless Shopify Development Services
             </h1>
@@ -412,7 +412,7 @@ export default function HeadlessShopifyPage() {
                 href="/contact-us"
                 className="px-7 py-3.5 border-2 border-[var(--sf-ink)] bg-[var(--sf-primary)] hover:bg-[var(--sf-primary-deep)] text-white text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily: "'Geist Mono', monospace",
                   boxShadow: "var(--sf-shadow-sm)",
                 }}
               >
@@ -432,7 +432,7 @@ export default function HeadlessShopifyPage() {
                 rel="noopener noreferrer"
                 className="px-7 py-3.5 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] hover:bg-white text-[var(--sf-ink)] text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily: "'Geist Mono', monospace",
                   boxShadow: "var(--sf-shadow-sm)",
                 }}
               >
@@ -452,7 +452,7 @@ export default function HeadlessShopifyPage() {
           <section id="what-it-means" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               What headless Shopify development actually means
             </h2>
@@ -497,7 +497,7 @@ export default function HeadlessShopifyPage() {
           <section id="comparison-table" className="mb-20">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-4"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Headless Shopify vs. Traditional Liquid Themes
             </h2>
@@ -531,7 +531,7 @@ export default function HeadlessShopifyPage() {
           <section id="when-to-use" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               When you actually need headless (and when you definitely do not)
             </h2>
@@ -554,7 +554,7 @@ export default function HeadlessShopifyPage() {
               <div className="border-l-2 border-[var(--sf-primary)] pl-5">
                 <h3
                   className="text-xl font-bold text-[var(--sf-ink)] mb-3"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   When Headless Makes Genuine Business Sense
                 </h3>
@@ -596,7 +596,7 @@ export default function HeadlessShopifyPage() {
               <div className="border-l-2 border-[var(--sf-ink)] pl-5">
                 <h3
                   className="text-xl font-bold text-[var(--sf-ink)] mb-3"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   When You Should Avoid Headless (Honest Advisory)
                 </h3>
@@ -635,7 +635,7 @@ export default function HeadlessShopifyPage() {
           <section id="tech-stack" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Our modern headless technology stack
             </h2>
@@ -724,7 +724,7 @@ export default function HeadlessShopifyPage() {
           <section id="lifecycle" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               The 5-phase headless development and migration lifecycle
             </h2>
@@ -739,7 +739,7 @@ export default function HeadlessShopifyPage() {
               <div className="border-l-2 border-[var(--sf-primary)] pl-5">
                 <h3
                   className="text-lg font-bold text-[var(--sf-ink)] mb-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   Phase I: Technical Audit &amp; Feasibility Scoping
                 </h3>
@@ -756,7 +756,7 @@ export default function HeadlessShopifyPage() {
               <div className="border-l-2 border-[var(--sf-ink)] pl-5">
                 <h3
                   className="text-lg font-bold text-[var(--sf-ink)] mb-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   Phase II: Component Design System &amp; UX Prototyping
                 </h3>
@@ -771,7 +771,7 @@ export default function HeadlessShopifyPage() {
               <div className="border-l-2 border-[var(--sf-ink)] pl-5">
                 <h3
                   className="text-lg font-bold text-[var(--sf-ink)] mb-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   Phase III: Frontend Engineering &amp; Storefront API
                   Integration
@@ -788,7 +788,7 @@ export default function HeadlessShopifyPage() {
               <div className="border-l-2 border-[var(--sf-ink)] pl-5">
                 <h3
                   className="text-lg font-bold text-[var(--sf-ink)] mb-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   Phase IV: Third-Party API Middleware Engineering
                 </h3>
@@ -804,7 +804,7 @@ export default function HeadlessShopifyPage() {
               <div className="border-l-2 border-[var(--sf-ink)] pl-5">
                 <h3
                   className="text-lg font-bold text-[var(--sf-ink)] mb-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   Phase V: SEO Migration, Edge Deployment &amp; Launch
                 </h3>
@@ -823,7 +823,7 @@ export default function HeadlessShopifyPage() {
           <section id="seo" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Headless Shopify SEO: Preserving rankings and traffic
             </h2>
@@ -881,7 +881,7 @@ export default function HeadlessShopifyPage() {
           <section id="services-included" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Services included in our headless Shopify engagements
             </h2>
@@ -928,7 +928,7 @@ export default function HeadlessShopifyPage() {
           <section id="faq" className="mb-20 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Frequently Asked Questions
             </h2>
@@ -938,7 +938,7 @@ export default function HeadlessShopifyPage() {
                 <div key={index} className="py-6">
                   <h3
                     className="text-lg sm:text-xl font-bold text-[var(--sf-ink)] mb-3"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     {faq.question}
                   </h3>
@@ -959,7 +959,7 @@ export default function HeadlessShopifyPage() {
             <div className="max-w-3xl">
               <h2
                 className="text-3xl sm:text-5xl font-bold tracking-tight text-[var(--sf-ink)] mb-4"
-                style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 Ready to explore headless architecture for your Shopify store?
               </h2>
@@ -975,7 +975,7 @@ export default function HeadlessShopifyPage() {
                   href="/contact-us"
                   className="px-7 py-3.5 border-2 border-[var(--sf-ink)] bg-[var(--sf-primary)] hover:bg-[var(--sf-primary-deep)] text-white text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                   style={{
-                    fontFamily: "'JetBrains Mono', monospace",
+                    fontFamily: "'Geist Mono', monospace",
                     boxShadow: "var(--sf-shadow-sm)",
                   }}
                 >
@@ -995,7 +995,7 @@ export default function HeadlessShopifyPage() {
                   rel="noopener noreferrer"
                   className="px-7 py-3.5 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] hover:bg-white text-[var(--sf-ink)] text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                   style={{
-                    fontFamily: "'JetBrains Mono', monospace",
+                    fontFamily: "'Geist Mono', monospace",
                     boxShadow: "var(--sf-shadow-sm)",
                   }}
                 >

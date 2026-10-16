@@ -112,9 +112,10 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
 
       <article className="min-h-screen bg-white text-neutral-900 antialiased">
         {/* ── ARTICLE HEADER ── */}
-        <header className="border-b border-neutral-200 bg-[#faf9f6] pt-12 pb-12 sm:pt-16 sm:pb-14">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header className="border-b border-neutral-800 bg-black text-white pt-12 pb-12 sm:pt-16 sm:pb-14">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
             <Breadcrumbs
+              theme="dark"
               items={[
                 { label: "Blog", href: "/blog" },
                 {
@@ -129,7 +130,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
             />
 
             {/* Category & Read Time */}
-            <div className="flex flex-wrap items-center gap-3 mb-5 font-mono text-xs">
+            <div className="hidden">
               <span className="px-2.5 py-1 border border-neutral-200 bg-neutral-100 text-neutral-800 font-bold uppercase tracking-wider">
                 Headless Commerce
               </span>
@@ -146,19 +147,19 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
 
             {/* Article Title */}
             <h1
-              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-neutral-900 leading-[1.12] mb-6 max-w-5xl"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.12] mb-6"
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Headless WooCommerce vs Traditional WooCommerce: Which Setup Makes Sense?
             </h1>
 
             {/* Article Excerpt */}
-            <p className="text-lg sm:text-xl text-neutral-600 font-normal leading-relaxed max-w-4xl mb-8 font-sans">
+            <p className="text-lg sm:text-xl text-neutral-200 font-normal leading-relaxed font-sans">
               Headless WooCommerce separates the storefront from the WooCommerce backend so the frontend communicates through APIs. Compare frontend flexibility, performance, SEO, checkout, and maintenance tradeoffs before deciding.
             </p>
 
             {/* Author Line & Tags */}
-            <div className="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-neutral-200">
+            <div className="hidden">
               <div className="flex items-center gap-2.5 font-mono text-xs">
                 <div className="w-7 h-7 bg-neutral-900 text-white font-bold flex items-center justify-center">
                   S
@@ -186,7 +187,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
 
         {/* ── ARTICLE CONTENT & SIDEBAR ── */}
         <div className="py-12 sm:py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row gap-12 items-start">
               {/* Main Content Column */}
               <div className="flex-1 min-w-0 w-full">
@@ -195,7 +196,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                   <h2
                     id="what-is-headless-woocommerce"
                     className="text-2xl sm:text-3xl font-bold mt-12 mb-4 leading-[1.2] tracking-tight text-neutral-900 pt-6 border-t border-neutral-200 scroll-mt-24"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     What is Headless WooCommerce?
                   </h2>
@@ -220,7 +221,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                   <h2
                     id="what-will-change-when-you-shift-from-a-traditional-woocommerce-website-to-a-headless-woocommerce-website"
                     className="text-2xl sm:text-3xl font-bold mt-12 mb-4 leading-[1.2] tracking-tight text-neutral-900 pt-6 border-t border-neutral-200 scroll-mt-24"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     What will change when you shift from a traditional WooCommerce website to a headless WooCommerce website?
                   </h2>
@@ -237,7 +238,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                   <h3
                     id="frontend"
                     className="text-xl sm:text-2xl font-bold mt-8 mb-3 leading-snug text-neutral-900 scroll-mt-24"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     Frontend
                   </h3>
@@ -270,7 +271,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                   <h3
                     id="api-usage"
                     className="text-xl sm:text-2xl font-bold mt-8 mb-3 leading-snug text-neutral-900 scroll-mt-24"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     API Usage
                   </h3>
@@ -307,7 +308,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                   <h3
                     id="performance"
                     className="text-xl sm:text-2xl font-bold mt-8 mb-3 leading-snug text-neutral-900 scroll-mt-24"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     Performance
                   </h3>
@@ -361,7 +362,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                   <h3
                     id="seo"
                     className="text-xl sm:text-2xl font-bold mt-8 mb-3 leading-snug text-neutral-900 scroll-mt-24"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     SEO
                   </h3>
@@ -406,7 +407,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                   <h2
                     id="what-happens-to-woocommerce-plugins"
                     className="text-2xl sm:text-3xl font-bold mt-12 mb-4 leading-[1.2] tracking-tight text-neutral-900 pt-6 border-t border-neutral-200 scroll-mt-24"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     What happens to WooCommerce plugins?
                   </h2>
@@ -460,7 +461,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                   <h2
                     id="what-about-checkout"
                     className="text-2xl sm:text-3xl font-bold mt-12 mb-4 leading-[1.2] tracking-tight text-neutral-900 pt-6 border-t border-neutral-200 scroll-mt-24"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     What about checkout?
                   </h2>
@@ -497,7 +498,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                   <h2
                     id="what-about-content-editing"
                     className="text-2xl sm:text-3xl font-bold mt-12 mb-4 leading-[1.2] tracking-tight text-neutral-900 pt-6 border-t border-neutral-200 scroll-mt-24"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     What about content editing?
                   </h2>
@@ -530,7 +531,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                   <h2
                     id="when-does-headless-woocommerce-make-sense"
                     className="text-2xl sm:text-3xl font-bold mt-12 mb-4 leading-[1.2] tracking-tight text-neutral-900 pt-6 border-t border-neutral-200 scroll-mt-24"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     When does headless WooCommerce make sense?
                   </h2>
@@ -539,7 +540,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                   <h3
                     id="if-you-operate-across-multiple-channels"
                     className="text-xl sm:text-2xl font-bold mt-8 mb-3 leading-snug text-neutral-900 scroll-mt-24"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     If you operate across multiple channels
                   </h3>
@@ -560,7 +561,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                   <h3
                     id="if-you-need-a-highly-custom-frontend"
                     className="text-xl sm:text-2xl font-bold mt-8 mb-3 leading-snug text-neutral-900 scroll-mt-24"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     If you need a highly custom frontend
                   </h3>
@@ -585,7 +586,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                   <h3
                     id="if-your-team-already-works-with-react-and-next-js"
                     className="text-xl sm:text-2xl font-bold mt-8 mb-3 leading-snug text-neutral-900 scroll-mt-24"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     If your team already works with React and Next.js
                   </h3>
@@ -606,7 +607,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                   <h2
                     id="when-does-traditional-woocommerce-make-sense"
                     className="text-2xl sm:text-3xl font-bold mt-12 mb-4 leading-[1.2] tracking-tight text-neutral-900 pt-6 border-t border-neutral-200 scroll-mt-24"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     When does traditional WooCommerce make sense?
                   </h2>
@@ -615,7 +616,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                   <h3
                     id="for-most-normal-ecommerce-stores"
                     className="text-xl sm:text-2xl font-bold mt-8 mb-3 leading-snug text-neutral-900 scroll-mt-24"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     For most normal ecommerce stores
                   </h3>
@@ -636,7 +637,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                   <h3
                     id="when-you-rely-heavily-on-woocommerce-plugins"
                     className="text-xl sm:text-2xl font-bold mt-8 mb-3 leading-snug text-neutral-900 scroll-mt-24"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     When you rely heavily on WooCommerce plugins
                   </h3>
@@ -657,7 +658,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                   <h3
                     id="when-you-have-a-small-development-team"
                     className="text-xl sm:text-2xl font-bold mt-8 mb-3 leading-snug text-neutral-900 scroll-mt-24"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     When you have a small development team
                   </h3>
@@ -678,7 +679,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                   <h3
                     id="when-you-only-operate-one-storefront"
                     className="text-xl sm:text-2xl font-bold mt-8 mb-3 leading-snug text-neutral-900 scroll-mt-24"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     When you only operate one storefront
                   </h3>
@@ -695,7 +696,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                   <h2
                     id="so-which-one-should-you-choose"
                     className="text-2xl sm:text-3xl font-bold mt-12 mb-4 leading-[1.2] tracking-tight text-neutral-900 pt-6 border-t border-neutral-200 scroll-mt-24"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     So which one should you choose?
                   </h2>
@@ -748,7 +749,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                   <h2
                     id="final-thoughts"
                     className="text-2xl sm:text-3xl font-bold mt-12 mb-4 leading-[1.2] tracking-tight text-neutral-900 pt-6 border-t border-neutral-200 scroll-mt-24"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     Final thoughts
                   </h2>
@@ -785,7 +786,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                 <div className="mt-12 border border-neutral-200 bg-[#faf9f6] p-8 sm:p-10 text-center">
                   <h3
                     className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-3"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     Evaluating Headless Commerce for Your Store?
                   </h3>
@@ -823,8 +824,8 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
               </div>
 
               {/* ── DESKTOP STICKY SIDEBAR ── */}
-              <aside className="hidden lg:block lg:w-80 shrink-0">
-                <div className="sticky top-28 space-y-6">
+              <aside className="hidden lg:block lg:w-80 shrink-0 lg:sticky lg:top-28 lg:self-start">
+                <div className="space-y-6">
                   <TableOfContents content={tocMarkdown} />
 
                   {/* Sidebar Strategy Card */}
@@ -835,7 +836,7 @@ export default async function HeadlessVsTraditionalWooCommercePage() {
                     <h4
                       className="text-base font-bold text-neutral-900 mb-2"
                       style={{
-                        fontFamily: "'Bricolage Grotesque', sans-serif",
+                        fontFamily: "'Inter', sans-serif",
                       }}
                     >
                       Headless Commerce Consulting

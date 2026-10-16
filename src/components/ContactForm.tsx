@@ -290,7 +290,7 @@ export function ContactForm() {
           type="submit"
           disabled={isSubmitting}
           className="w-full md:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[var(--sf-primary)] hover:bg-[var(--sf-primary-deep)] text-white font-bold text-[16px] leading-none border-2 border-[var(--sf-ink)] shadow-[5px_5px_0_var(--sf-ink)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0_var(--sf-ink)] active:translate-x-[5px] active:translate-y-[5px] active:shadow-none transition-all cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
-          style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+          style={{ fontFamily: "'Inter', sans-serif" }}
         >
           {isSubmitting ? (
             <>
@@ -313,7 +313,7 @@ export function ContactForm() {
           <div>
             <h4
               className="text-[16px] font-bold text-[var(--sf-ink)] mb-1"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Inquiry Sent Successfully!
             </h4>
@@ -331,7 +331,7 @@ export function ContactForm() {
           <div>
             <h4
               className="text-[16px] font-bold text-[var(--sf-ink)] mb-1"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Submission Failed
             </h4>

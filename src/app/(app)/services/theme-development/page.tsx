@@ -186,7 +186,7 @@ export default function ThemeDevelopmentPage() {
 
       <article
         className="min-h-screen bg-[var(--sf-paper)] text-[var(--sf-ink)] selection:bg-[var(--sf-primary-soft)] selection:text-[var(--sf-ink)]"
-        style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}
+        style={{ fontFamily: "'Inter', sans-serif" }}
       >
         <div className="border-b-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
@@ -221,7 +221,7 @@ export default function ThemeDevelopmentPage() {
           >
             <h1
               className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[var(--sf-ink)] leading-[1.05] mb-6 max-w-4xl"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Shopify Theme Development Services
             </h1>
@@ -237,7 +237,7 @@ export default function ThemeDevelopmentPage() {
                 href="/contact-us"
                 className="px-7 py-3.5 border-2 border-[var(--sf-ink)] bg-[var(--sf-primary)] hover:bg-[var(--sf-primary-deep)] text-white text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily: "'Geist Mono', monospace",
                   boxShadow: "var(--sf-shadow-sm)",
                 }}
               >
@@ -257,7 +257,7 @@ export default function ThemeDevelopmentPage() {
                 rel="noopener noreferrer"
                 className="px-7 py-3.5 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] hover:bg-white text-[var(--sf-ink)] text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily: "'Geist Mono', monospace",
                   boxShadow: "var(--sf-shadow-sm)",
                 }}
               >
@@ -277,7 +277,7 @@ export default function ThemeDevelopmentPage() {
           <section id="what-is-theme-development" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               What custom theme development really means
             </h2>
@@ -434,7 +434,7 @@ export default function ThemeDevelopmentPage() {
               <div className="lg:col-span-7">
                 <h2
                   className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   Custom Shopify themes vs pre-made marketplace themes
                 </h2>
@@ -498,7 +498,7 @@ export default function ThemeDevelopmentPage() {
                   />
                   <div
                     className="p-3 border-t-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)] text-xs text-[var(--sf-ink-mute)] font-mono"
-                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                    style={{ fontFamily: "'Geist Mono', monospace" }}
                   >
                     Maison Luxe: Custom home decor storefront with instant
                     collection filtering and clean Online Store 2.0 sections.
@@ -525,7 +525,7 @@ export default function ThemeDevelopmentPage() {
                   />
                   <div
                     className="p-3 border-t-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)] text-xs text-[var(--sf-ink-mute)] font-mono"
-                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                    style={{ fontFamily: "'Geist Mono', monospace" }}
                   >
                     FlexForm Athletics: Custom activewear theme featuring visual
                     category strips, lookbook bundles, and instant drawer cart.
@@ -536,7 +536,7 @@ export default function ThemeDevelopmentPage() {
               <div className="lg:col-span-7 order-1 lg:order-2">
                 <h2
                   className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   Custom Shopify theme development built for conversion
                 </h2>
@@ -596,7 +596,7 @@ export default function ThemeDevelopmentPage() {
           >
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Shopify website development services focused on Core Web Vitals
             </h2>
@@ -643,7 +643,7 @@ export default function ThemeDevelopmentPage() {
           >
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               The custom Shopify theme development process
             </h2>
@@ -661,13 +661,13 @@ export default function ThemeDevelopmentPage() {
                 <div className="pl-4 sm:pl-6 border-l-2 border-[var(--sf-primary)]">
                   <div
                     className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--sf-primary)] mb-1"
-                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                    style={{ fontFamily: "'Geist Mono', monospace" }}
                   >
                     Phase I
                   </div>
                   <h3
                     className="text-xl sm:text-2xl font-bold text-[var(--sf-ink)] mb-3"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     Discovery and Strategy
                   </h3>
@@ -705,13 +705,13 @@ export default function ThemeDevelopmentPage() {
                 <div className="pl-4 sm:pl-6 border-l-2 border-[var(--sf-primary)]">
                   <div
                     className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--sf-primary)] mb-1"
-                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                    style={{ fontFamily: "'Geist Mono', monospace" }}
                   >
                     Phase II
                   </div>
                   <h3
                     className="text-xl sm:text-2xl font-bold text-[var(--sf-ink)] mb-3"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     UI/UX Design
                   </h3>
@@ -754,13 +754,13 @@ export default function ThemeDevelopmentPage() {
                 <div className="pl-4 sm:pl-6 border-l-2 border-[var(--sf-primary)]">
                   <div
                     className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--sf-primary)] mb-1"
-                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                    style={{ fontFamily: "'Geist Mono', monospace" }}
                   >
                     Phase III
                   </div>
                   <h3
                     className="text-xl sm:text-2xl font-bold text-[var(--sf-ink)] mb-3"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     Development and Implementation
                   </h3>
@@ -808,13 +808,13 @@ export default function ThemeDevelopmentPage() {
                 <div className="pl-4 sm:pl-6 border-l-2 border-[var(--sf-primary)]">
                   <div
                     className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--sf-primary)] mb-1"
-                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                    style={{ fontFamily: "'Geist Mono', monospace" }}
                   >
                     Phase IV
                   </div>
                   <h3
                     className="text-xl sm:text-2xl font-bold text-[var(--sf-ink)] mb-3"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     Quality Assurance and Testing
                   </h3>
@@ -850,13 +850,13 @@ export default function ThemeDevelopmentPage() {
                 <div className="pl-4 sm:pl-6 border-l-2 border-[var(--sf-primary)]">
                   <div
                     className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--sf-primary)] mb-1"
-                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                    style={{ fontFamily: "'Geist Mono', monospace" }}
                   >
                     Phase V
                   </div>
                   <h3
                     className="text-xl sm:text-2xl font-bold text-[var(--sf-ink)] mb-3"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     Launch and Deployment
                   </h3>
@@ -900,7 +900,7 @@ export default function ThemeDevelopmentPage() {
           >
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Relevant Work: Custom Shopify themes in action
             </h2>
@@ -915,7 +915,7 @@ export default function ThemeDevelopmentPage() {
                 <div>
                   <h3
                     className="text-xl font-bold text-[var(--sf-ink)] mb-1"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     <Link
                       href="/work/maison-luxe"
@@ -934,7 +934,7 @@ export default function ThemeDevelopmentPage() {
                 <div>
                   <h3
                     className="text-xl font-bold text-[var(--sf-ink)] mb-1"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     <Link
                       href="/work/flexform-athletics"
@@ -953,7 +953,7 @@ export default function ThemeDevelopmentPage() {
                 <div>
                   <h3
                     className="text-xl font-bold text-[var(--sf-ink)] mb-1"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     <Link
                       href="/work/iron-crate"
@@ -980,7 +980,7 @@ export default function ThemeDevelopmentPage() {
           >
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Frequently Asked Questions
             </h2>
@@ -993,7 +993,7 @@ export default function ThemeDevelopmentPage() {
                 >
                   <h3
                     className="text-lg sm:text-xl font-bold text-[var(--sf-ink)] mb-2"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     {faq.question}
                   </h3>
@@ -1012,7 +1012,7 @@ export default function ThemeDevelopmentPage() {
           >
             <h2
               className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--sf-ink)] mb-4 max-w-2xl mx-auto"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Ready to build a custom Shopify theme?
             </h2>
@@ -1028,7 +1028,7 @@ export default function ThemeDevelopmentPage() {
                 href="/contact-us"
                 className="px-8 py-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-primary)] hover:bg-[var(--sf-primary-deep)] text-white text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily: "'Geist Mono', monospace",
                   boxShadow: "var(--sf-shadow-sm)",
                 }}
               >
@@ -1048,7 +1048,7 @@ export default function ThemeDevelopmentPage() {
                 rel="noopener noreferrer"
                 className="px-8 py-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] hover:bg-white text-[var(--sf-ink)] text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily: "'Geist Mono', monospace",
                   boxShadow: "var(--sf-shadow-sm)",
                 }}
               >

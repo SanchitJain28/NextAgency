@@ -8,13 +8,14 @@ interface BreadcrumbItem {
 
 interface BreadcrumbsProps {
   items: BreadcrumbItem[];
+  theme?: 'light' | 'dark';
 }
 
-export function Breadcrumbs({ items }: BreadcrumbsProps) {
+export function Breadcrumbs({ items, theme = 'light' }: BreadcrumbsProps) {
   return (
     <nav aria-label="Breadcrumb" className="mb-6">
       <ol
-        className="flex flex-wrap items-center gap-2 font-mono text-xs text-neutral-500 uppercase tracking-wider"
+        className={`flex flex-wrap items-center gap-2 font-mono text-xs uppercase tracking-wider ${theme === 'dark' ? 'text-neutral-300' : 'text-neutral-500'}`}
         itemScope
         itemType="https://schema.org/BreadcrumbList"
       >
@@ -25,7 +26,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
         >
           <Link
             href="/"
-            className="hover:text-neutral-900 transition-colors"
+            className={`transition-colors ${theme === 'dark' ? 'hover:text-white' : 'hover:text-neutral-900'}`}
             itemProp="item"
           >
             <span itemProp="name">Home</span>
@@ -45,13 +46,13 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
             {item.href ? (
               <Link
                 href={item.href}
-                className="hover:text-neutral-900 transition-colors"
+                className={`transition-colors ${theme === 'dark' ? 'hover:text-white' : 'hover:text-neutral-900'}`}
                 itemProp="item"
               >
                 <span itemProp="name">{item.label}</span>
               </Link>
             ) : (
-              <span className="text-neutral-900 font-bold truncate max-w-[200px] sm:max-w-md" itemProp="name">
+              <span className={`font-bold truncate max-w-[200px] sm:max-w-md ${theme === 'dark' ? 'text-white' : 'text-neutral-900'}`} itemProp="name">
                 {item.label}
               </span>
             )}

@@ -30,7 +30,7 @@ export default function ContactCTA() {
             <h2
               className="m-0 mb-[18px] leading-none tracking-[-0.035em] text-white"
               style={{
-                fontFamily: "'Bricolage Grotesque', sans-serif",
+                fontFamily: "'Inter', sans-serif",
                 fontWeight: 700,
                 fontSize: "clamp(34px, 5vw, 60px)",
                 textWrap: "balance",
@@ -61,14 +61,14 @@ export default function ContactCTA() {
           <div className="p-[22px] bg-white/10 border border-white/30 backdrop-blur-sm">
             <div
               className="text-[12px] tracking-[0.05em] text-white/85 mb-4"
-              style={{ fontFamily: "'JetBrains Mono', monospace" }}
+              style={{ fontFamily: "'Geist Mono', monospace" }}
             >
               RESPONSE TIME
             </div>
             <div
               className="leading-none tracking-[-0.03em] text-[52px]"
               style={{
-                fontFamily: "'Bricolage Grotesque', sans-serif",
+                fontFamily: "'Inter', sans-serif",
                 fontWeight: 700,
               }}
             >

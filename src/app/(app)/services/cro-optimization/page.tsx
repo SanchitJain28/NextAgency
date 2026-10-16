@@ -188,7 +188,7 @@ export default function CroOptimizationPage() {
 
       <article
         className="min-h-screen bg-[var(--sf-paper)] text-[var(--sf-ink)] selection:bg-[var(--sf-primary-soft)] selection:text-[var(--sf-ink)]"
-        style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}
+        style={{ fontFamily: "'Inter', sans-serif" }}
       >
         {/* TOP STATUS & BREADCRUMB BAR */}
         <div className="border-b-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)]">
@@ -224,7 +224,7 @@ export default function CroOptimizationPage() {
           >
             <h1
               className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[var(--sf-ink)] leading-[1.05] mb-6 max-w-4xl"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Shopify Conversion Rate Optimization
             </h1>
@@ -240,7 +240,7 @@ export default function CroOptimizationPage() {
                 href="/contact-us"
                 className="px-7 py-3.5 border-2 border-[var(--sf-ink)] bg-[var(--sf-primary)] hover:bg-[var(--sf-primary-deep)] text-white text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily: "'Geist Mono', monospace",
                   boxShadow: "var(--sf-shadow-sm)",
                 }}
               >
@@ -260,7 +260,7 @@ export default function CroOptimizationPage() {
                 rel="noopener noreferrer"
                 className="px-7 py-3.5 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] hover:bg-white text-[var(--sf-ink)] text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily: "'Geist Mono', monospace",
                   boxShadow: "var(--sf-shadow-sm)",
                 }}
               >
@@ -280,7 +280,7 @@ export default function CroOptimizationPage() {
           <section id="what-is-cro" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               What conversion rate optimization actually means
             </h2>
@@ -458,7 +458,7 @@ export default function CroOptimizationPage() {
               <div className="lg:col-span-7">
                 <h2
                   className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   Where Shopify stores actually lose customers
                 </h2>
@@ -525,7 +525,7 @@ export default function CroOptimizationPage() {
                   />
                   <div
                     className="p-3 border-t-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)] text-xs text-[var(--sf-ink-mute)] font-mono"
-                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                    style={{ fontFamily: "'Geist Mono', monospace" }}
                   >
                     Iron Crate: Slide-out drawer cart with real-time spend
                     progress for free shipping and instant one-click upsells.
@@ -542,7 +542,7 @@ export default function CroOptimizationPage() {
           >
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Our step-by-step Shopify conversion optimization process
             </h2>
@@ -560,13 +560,13 @@ export default function CroOptimizationPage() {
                 <div className="pl-4 sm:pl-6 border-l-2 border-[var(--sf-primary)]">
                   <div
                     className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--sf-primary)] mb-1"
-                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                    style={{ fontFamily: "'Geist Mono', monospace" }}
                   >
                     Step 01
                   </div>
                   <h3
                     className="text-xl sm:text-2xl font-bold text-[var(--sf-ink)] mb-3"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     Funnel &amp; Session Recording Audit
                   </h3>
@@ -583,13 +583,13 @@ export default function CroOptimizationPage() {
                 <div className="pl-4 sm:pl-6 border-l-2 border-[var(--sf-primary)]">
                   <div
                     className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--sf-primary)] mb-1"
-                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                    style={{ fontFamily: "'Geist Mono', monospace" }}
                   >
                     Step 02
                   </div>
                   <h3
                     className="text-xl sm:text-2xl font-bold text-[var(--sf-ink)] mb-3"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     Diagnosing the Root Cause (Not Guessing)
                   </h3>
@@ -606,13 +606,13 @@ export default function CroOptimizationPage() {
                 <div className="pl-4 sm:pl-6 border-l-2 border-[var(--sf-primary)]">
                   <div
                     className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--sf-primary)] mb-1"
-                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                    style={{ fontFamily: "'Geist Mono', monospace" }}
                   >
                     Step 03
                   </div>
                   <h3
                     className="text-xl sm:text-2xl font-bold text-[var(--sf-ink)] mb-3"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     Prioritizing High-Impact Wins
                   </h3>
@@ -628,13 +628,13 @@ export default function CroOptimizationPage() {
                 <div className="pl-4 sm:pl-6 border-l-2 border-[var(--sf-primary)]">
                   <div
                     className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--sf-primary)] mb-1"
-                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                    style={{ fontFamily: "'Geist Mono', monospace" }}
                   >
                     Step 04
                   </div>
                   <h3
                     className="text-xl sm:text-2xl font-bold text-[var(--sf-ink)] mb-3"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     Native Liquid &amp; JavaScript Implementation
                   </h3>
@@ -651,13 +651,13 @@ export default function CroOptimizationPage() {
                 <div className="pl-4 sm:pl-6 border-l-2 border-[var(--sf-primary)]">
                   <div
                     className="text-xs font-mono font-bold uppercase tracking-wider text-[var(--sf-primary)] mb-1"
-                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                    style={{ fontFamily: "'Geist Mono', monospace" }}
                   >
                     Step 05
                   </div>
                   <h3
                     className="text-xl sm:text-2xl font-bold text-[var(--sf-ink)] mb-3"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     Live Metric Verification
                   </h3>
@@ -679,7 +679,7 @@ export default function CroOptimizationPage() {
           >
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               How we prioritize what to fix first (The P.I.E. method)
             </h2>
@@ -737,7 +737,7 @@ export default function CroOptimizationPage() {
                   />
                   <div
                     className="p-3 border-t-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)] text-xs text-[var(--sf-ink-mute)] font-mono"
-                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                    style={{ fontFamily: "'Geist Mono', monospace" }}
                   >
                     FlexForm Athletics: In-page coupon codes with 1-click copy
                     functionality and instant size filtering.
@@ -748,7 +748,7 @@ export default function CroOptimizationPage() {
               <div className="lg:col-span-7 order-1 lg:order-2">
                 <h2
                   className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   Real examples: Reducing friction across the buying journey
                 </h2>
@@ -806,7 +806,7 @@ export default function CroOptimizationPage() {
           >
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               The analytics and diagnostic tools we use
             </h2>
@@ -855,7 +855,7 @@ export default function CroOptimizationPage() {
           >
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               A/B testing, split URL testing, and multivariate: Which fits your
               store?
@@ -906,7 +906,7 @@ export default function CroOptimizationPage() {
           >
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Buying CRO apps vs building native theme features
             </h2>
@@ -960,7 +960,7 @@ export default function CroOptimizationPage() {
           >
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Store speed is a direct conversion factor
             </h2>
@@ -996,7 +996,7 @@ export default function CroOptimizationPage() {
           >
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Relevant Work: High-converting Shopify storefronts
             </h2>
@@ -1011,7 +1011,7 @@ export default function CroOptimizationPage() {
                 <div>
                   <h3
                     className="text-xl font-bold text-[var(--sf-ink)] mb-1"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     <Link
                       href="/work/iron-crate"
@@ -1030,7 +1030,7 @@ export default function CroOptimizationPage() {
                 <div>
                   <h3
                     className="text-xl font-bold text-[var(--sf-ink)] mb-1"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     <Link
                       href="/work/recovrx"
@@ -1049,7 +1049,7 @@ export default function CroOptimizationPage() {
                 <div>
                   <h3
                     className="text-xl font-bold text-[var(--sf-ink)] mb-1"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     <Link
                       href="/work/flexform-athletics"
@@ -1075,7 +1075,7 @@ export default function CroOptimizationPage() {
           >
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Frequently Asked Questions
             </h2>
@@ -1088,7 +1088,7 @@ export default function CroOptimizationPage() {
                 >
                   <h3
                     className="text-lg sm:text-xl font-bold text-[var(--sf-ink)] mb-2"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     {faq.question}
                   </h3>
@@ -1107,7 +1107,7 @@ export default function CroOptimizationPage() {
           >
             <h2
               className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--sf-ink)] mb-4 max-w-2xl mx-auto"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Ready to stop losing visitors on your Shopify store?
             </h2>
@@ -1123,7 +1123,7 @@ export default function CroOptimizationPage() {
                 href="/contact-us"
                 className="px-8 py-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-primary)] hover:bg-[var(--sf-primary-deep)] text-white text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily: "'Geist Mono', monospace",
                   boxShadow: "var(--sf-shadow-sm)",
                 }}
               >
@@ -1143,7 +1143,7 @@ export default function CroOptimizationPage() {
                 rel="noopener noreferrer"
                 className="px-8 py-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] hover:bg-white text-[var(--sf-ink)] text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily: "'Geist Mono', monospace",
                   boxShadow: "var(--sf-shadow-sm)",
                 }}
               >

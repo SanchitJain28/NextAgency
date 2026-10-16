@@ -300,7 +300,7 @@ export default function CustomShopifyAppsPage() {
 
       <article
         className="min-h-screen bg-[var(--sf-paper)] text-[var(--sf-ink)] selection:bg-[var(--sf-primary-soft)] selection:text-[var(--sf-ink)]"
-        style={{ fontFamily: "'Hanken Grotesk', sans-serif" }}
+        style={{ fontFamily: "'Inter', sans-serif" }}
       >
         <div className="border-b-2 border-[var(--sf-ink)] bg-[var(--sf-paper-sunken)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
@@ -330,7 +330,7 @@ export default function CustomShopifyAppsPage() {
           >
             <h1
               className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[var(--sf-ink)] leading-[1.05] mb-6 max-w-4xl"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Custom Shopify App Development Services
             </h1>
@@ -346,7 +346,7 @@ export default function CustomShopifyAppsPage() {
                 href="/contact-us"
                 className="px-7 py-3.5 border-2 border-[var(--sf-ink)] bg-[var(--sf-primary)] hover:bg-[var(--sf-primary-deep)] text-white text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily: "'Geist Mono', monospace",
                   boxShadow: "var(--sf-shadow-sm)",
                 }}
               >
@@ -366,7 +366,7 @@ export default function CustomShopifyAppsPage() {
                 rel="noopener noreferrer"
                 className="px-7 py-3.5 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] hover:bg-white text-[var(--sf-ink)] text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
+                  fontFamily: "'Geist Mono', monospace",
                   boxShadow: "var(--sf-shadow-sm)",
                 }}
               >
@@ -385,7 +385,7 @@ export default function CustomShopifyAppsPage() {
           <section id="what-it-means" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               What custom Shopify app development actually means
             </h2>
@@ -419,7 +419,7 @@ export default function CustomShopifyAppsPage() {
               <div className="border-l-2 border-[var(--sf-primary)] pl-5">
                 <h3
                   className="text-xl font-bold text-[var(--sf-ink)] mb-2"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   1. Private and Custom Apps (Built for One Store)
                 </h3>
@@ -454,7 +454,7 @@ export default function CustomShopifyAppsPage() {
               <div className="border-l-2 border-[var(--sf-ink)] pl-5">
                 <h3
                   className="text-xl font-bold text-[var(--sf-ink)] mb-2"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   2. Public and Commercial Apps (Built for the Shopify App
                   Store)
@@ -516,7 +516,7 @@ export default function CustomShopifyAppsPage() {
           <section id="why-custom-apps" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Why choose custom Shopify app development over pre-built App Store
               plugins
@@ -594,7 +594,7 @@ export default function CustomShopifyAppsPage() {
           <section id="comparison-table" className="mb-20">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-4"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Comparing Pre-Built App Store Plugins vs. Custom Shopify Apps
             </h2>
@@ -627,7 +627,7 @@ export default function CustomShopifyAppsPage() {
           <section id="types-of-apps" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Types of custom Shopify apps we develop
             </h2>
@@ -641,7 +641,7 @@ export default function CustomShopifyAppsPage() {
               <div className="border-l-2 border-[var(--sf-primary)] pl-5">
                 <h3
                   className="text-xl font-bold text-[var(--sf-ink)] mb-2"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   1. Shopify Functions &amp; Checkout Extensibility (Shopify
                   Plus)
@@ -687,7 +687,7 @@ export default function CustomShopifyAppsPage() {
               <div className="border-l-2 border-[var(--sf-ink)] pl-5">
                 <h3
                   className="text-xl font-bold text-[var(--sf-ink)] mb-2"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   2. ERP, WMS, and 3PL Warehouse Integrations
                 </h3>
@@ -721,7 +721,7 @@ export default function CustomShopifyAppsPage() {
               <div className="border-l-2 border-[var(--sf-ink)] pl-5">
                 <h3
                   className="text-xl font-bold text-[var(--sf-ink)] mb-2"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   3. Custom Customer Portals &amp; B2B Wholesale Tools
                 </h3>
@@ -748,7 +748,7 @@ export default function CustomShopifyAppsPage() {
               <div className="border-l-2 border-[var(--sf-ink)] pl-5">
                 <h3
                   className="text-xl font-bold text-[var(--sf-ink)] mb-2"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   4. Commercial Public Apps for SaaS Founders
                 </h3>
@@ -798,7 +798,7 @@ export default function CustomShopifyAppsPage() {
           <section id="tech-stack" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               The modern technology stack behind our Shopify apps
             </h2>
@@ -881,7 +881,7 @@ export default function CustomShopifyAppsPage() {
           <section id="lifecycle" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Our 5-phase app development lifecycle
             </h2>
@@ -897,7 +897,7 @@ export default function CustomShopifyAppsPage() {
               <div className="border-l-2 border-[var(--sf-primary)] pl-5">
                 <h3
                   className="text-lg font-bold text-[var(--sf-ink)] mb-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   Phase I: Technical Scoping &amp; Architecture Design
                 </h3>
@@ -913,7 +913,7 @@ export default function CustomShopifyAppsPage() {
               <div className="border-l-2 border-[var(--sf-ink)] pl-5">
                 <h3
                   className="text-lg font-bold text-[var(--sf-ink)] mb-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   Phase II: UI/UX &amp; Embedded Admin Interface
                 </h3>
@@ -929,7 +929,7 @@ export default function CustomShopifyAppsPage() {
               <div className="border-l-2 border-[var(--sf-ink)] pl-5">
                 <h3
                   className="text-lg font-bold text-[var(--sf-ink)] mb-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   Phase III: Core Backend Engineering &amp; API Integration
                 </h3>
@@ -945,7 +945,7 @@ export default function CustomShopifyAppsPage() {
               <div className="border-l-2 border-[var(--sf-ink)] pl-5">
                 <h3
                   className="text-lg font-bold text-[var(--sf-ink)] mb-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   Phase IV: Security, Webhook Verification &amp; Rigorous QA
                 </h3>
@@ -961,7 +961,7 @@ export default function CustomShopifyAppsPage() {
               <div className="border-l-2 border-[var(--sf-ink)] pl-5">
                 <h3
                   className="text-lg font-bold text-[var(--sf-ink)] mb-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   Phase V: Deployment, Monitoring &amp; Long-term Support
                 </h3>
@@ -980,7 +980,7 @@ export default function CustomShopifyAppsPage() {
           <section id="security" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Webhook reliability, HMAC security, and rate-limit engineering
             </h2>
@@ -1042,7 +1042,7 @@ export default function CustomShopifyAppsPage() {
           <section id="maintenance" className="mb-16 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Long-term maintenance and Shopify API version upgrades
             </h2>
@@ -1092,7 +1092,7 @@ export default function CustomShopifyAppsPage() {
           <section id="faq" className="mb-20 max-w-5xl">
             <h2
               className="text-2xl sm:text-4xl font-bold tracking-tight text-[var(--sf-ink)] mb-6"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Frequently Asked Questions
             </h2>
@@ -1102,7 +1102,7 @@ export default function CustomShopifyAppsPage() {
                 <div key={index} className="py-6">
                   <h3
                     className="text-lg sm:text-xl font-bold text-[var(--sf-ink)] mb-3"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     {faq.question}
                   </h3>
@@ -1123,7 +1123,7 @@ export default function CustomShopifyAppsPage() {
             <div className="max-w-3xl">
               <h2
                 className="text-3xl sm:text-5xl font-bold tracking-tight text-[var(--sf-ink)] mb-4"
-                style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 Ready to build custom functionality for your Shopify store?
               </h2>
@@ -1138,7 +1138,7 @@ export default function CustomShopifyAppsPage() {
                   href="/contact-us"
                   className="px-7 py-3.5 border-2 border-[var(--sf-ink)] bg-[var(--sf-primary)] hover:bg-[var(--sf-primary-deep)] text-white text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                   style={{
-                    fontFamily: "'JetBrains Mono', monospace",
+                    fontFamily: "'Geist Mono', monospace",
                     boxShadow: "var(--sf-shadow-sm)",
                   }}
                 >
@@ -1158,7 +1158,7 @@ export default function CustomShopifyAppsPage() {
                   rel="noopener noreferrer"
                   className="px-7 py-3.5 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] hover:bg-white text-[var(--sf-ink)] text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
                   style={{
-                    fontFamily: "'JetBrains Mono', monospace",
+                    fontFamily: "'Geist Mono', monospace",
                     boxShadow: "var(--sf-shadow-sm)",
                   }}
                 >

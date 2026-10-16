@@ -3,9 +3,6 @@ import Script from "next/script";
 import { Header } from "@/components/header-footer/Header";
 import Footer from "@/components/header-footer/Footer";
 import FloatingContact from "@/components/index/floating-contact";
-import "@fontsource/stack-sans-text/400.css";
-import "@fontsource/stack-sans-text/500.css";
-import "@fontsource/stack-sans-text/600.css";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 
@@ -170,9 +167,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300..800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+        <link rel="preload" href="/fonts/inter-variable.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}

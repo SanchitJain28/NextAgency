@@ -14,7 +14,7 @@ export default function DesignShowcase() {
           <h2
             className="m-0 mb-3 leading-[1.02] tracking-[-0.03em] text-[var(--sf-ink)]"
             style={{
-              fontFamily: "'Bricolage Grotesque', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               fontWeight: 700,
               fontSize: "clamp(30px, 4vw, 46px)",
             }}
@@ -29,7 +29,7 @@ export default function DesignShowcase() {
         <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1fr] gap-[22px]">
           {/* Palette */}
           <div className="bg-[var(--sf-paper-raised)] p-[22px]" style={{ boxShadow: "var(--sf-shadow-sm)" }}>
-            <div className="text-[12px] text-[var(--sf-ink-mute)] mb-[18px]" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+            <div className="text-[12px] text-[var(--sf-ink-mute)] mb-[18px]" style={{ fontFamily: "'Geist Mono', monospace" }}>
               01 — COLOR
             </div>
             <div className="grid grid-cols-3 gap-3">
@@ -43,7 +43,7 @@ export default function DesignShowcase() {
                     }}
                   />
                   <div className="mt-2 font-semibold text-[13px] text-[var(--sf-ink)]">{sw.name}</div>
-                  <div className="text-[11.5px] text-[var(--sf-ink-mute)]" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+                  <div className="text-[11.5px] text-[var(--sf-ink-mute)]" style={{ fontFamily: "'Geist Mono', monospace" }}>
                     {sw.hex}
                   </div>
                 </div>
@@ -53,20 +53,20 @@ export default function DesignShowcase() {
 
           {/* Type */}
           <div className="bg-[var(--sf-paper-raised)] p-[22px]" style={{ boxShadow: "var(--sf-shadow-sm)" }}>
-            <div className="text-[12px] text-[var(--sf-ink-mute)] mb-[18px]" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+            <div className="text-[12px] text-[var(--sf-ink-mute)] mb-[18px]" style={{ fontFamily: "'Geist Mono', monospace" }}>
               02 — TYPE
             </div>
             <div className="border-b-2 border-[var(--sf-ink)] pb-4 mb-4">
-              <div className="text-[12px] text-[var(--sf-ink-mute)] mb-1">Display — Bricolage Grotesque</div>
+              <div className="text-[12px] text-[var(--sf-ink-mute)] mb-1">Display — Inter</div>
               <div
                 className="text-[40px] leading-none tracking-[-0.03em] text-[var(--sf-ink)]"
-                style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 700 }}
+                style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700 }}
               >
                 Aa Scale
               </div>
             </div>
             <div>
-              <div className="text-[12px] text-[var(--sf-ink-mute)] mb-1.5">Body — Hanken Grotesk</div>
+              <div className="text-[12px] text-[var(--sf-ink-mute)] mb-1.5">Body — Inter</div>
               <p className="m-0 text-[16px] leading-[1.6] text-[var(--sf-ink-soft)]">
                 We design for the merchant on their phone at 11pm and the shopper who just wants to check out. Clarity first, always.
               </p>
@@ -76,7 +76,7 @@ export default function DesignShowcase() {
 
         {/* Components row */}
         <div className="bg-[var(--sf-paper-raised)] p-[22px] mt-[22px]" style={{ boxShadow: "var(--sf-shadow-sm)" }}>
-          <div className="text-[12px] text-[var(--sf-ink-mute)] mb-5" style={{ fontFamily: "'JetBrains Mono', monospace" }}>
+          <div className="text-[12px] text-[var(--sf-ink-mute)] mb-5" style={{ fontFamily: "'Geist Mono', monospace" }}>
             03 — COMPONENTS
           </div>
           <div className="flex flex-wrap gap-4 items-center">

@@ -35,7 +35,7 @@ export default function LogoMarquee() {
               key={i}
               className="whitespace-nowrap opacity-[0.72] text-[var(--sf-ink-soft)] text-2xl tracking-[-0.02em]"
               style={{
-                fontFamily: "'Bricolage Grotesque', sans-serif",
+                fontFamily: "'Inter', sans-serif",
                 fontWeight: 700,
               }}
             >

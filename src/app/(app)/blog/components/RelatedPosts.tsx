@@ -19,7 +19,7 @@ export function RelatedPosts({ posts }: RelatedPostsProps) {
           </div>
           <h2
             className="text-2xl sm:text-3xl font-bold text-neutral-900 tracking-tight"
-            style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            style={{ fontFamily: "'Inter', sans-serif" }}
           >
             Related Articles
           </h2>
@@ -69,7 +69,7 @@ export function RelatedPosts({ posts }: RelatedPostsProps) {
 
                 <h3
                   className="text-base font-bold text-neutral-900 group-hover:text-[var(--sf-primary)] transition-colors leading-snug mb-2 line-clamp-2"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   {post.title}
                 </h3>

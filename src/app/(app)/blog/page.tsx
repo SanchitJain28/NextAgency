@@ -85,7 +85,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           <div className="max-w-3xl">
             <h1
               className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-900 leading-[1.05] mb-4"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               The ScaleFront Blog
             </h1>
@@ -240,7 +240,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                     <h2
                       className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-neutral-900 group-hover:text-[var(--sf-primary)] transition-colors leading-tight mb-4"
                       style={{
-                        fontFamily: "'Bricolage Grotesque', sans-serif",
+                        fontFamily: "'Inter', sans-serif",
                       }}
                     >
                       {activeFeatured.title}
@@ -278,7 +278,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             <div className="flex flex-wrap items-center justify-between gap-4 mb-8 pb-4 border-b border-neutral-200">
               <h2
                 className="text-xl sm:text-2xl font-bold text-neutral-900"
-                style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 {selectedCategory
                   ? `${selectedCategory} (${filteredPosts.length})`
@@ -328,7 +328,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                       <h3
                         className="text-lg sm:text-xl font-bold text-neutral-900 group-hover:text-[var(--sf-primary)] transition-colors leading-snug mb-2 line-clamp-2"
                         style={{
-                          fontFamily: "'Bricolage Grotesque', sans-serif",
+                          fontFamily: "'Inter', sans-serif",
                         }}
                       >
                         {post.title}
@@ -360,7 +360,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
               <BookOpen className="w-10 h-10 text-neutral-400 mx-auto mb-3" />
               <h3
                 className="text-xl font-bold text-neutral-900 mb-2"
-                style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 No articles found
               </h3>
@@ -384,7 +384,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           <div className="border border-neutral-200 bg-white p-8 sm:p-12 text-center max-w-4xl mx-auto">
             <h2
               className="text-2xl sm:text-3xl font-bold text-neutral-900 tracking-tight mb-3"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Looking to scale your Shopify store?
             </h2>

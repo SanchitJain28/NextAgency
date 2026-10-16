@@ -36,7 +36,7 @@ export default function ResultsBand() {
           <h2
             className="m-0 leading-[1.02] tracking-[-0.03em] text-[var(--sf-paper-raised)]"
             style={{
-              fontFamily: "'Bricolage Grotesque', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               fontWeight: 700,
               fontSize: "clamp(32px, 4.4vw, 52px)",
             }}
@@ -58,7 +58,7 @@ export default function ResultsBand() {
               <div
                 className="leading-none text-[var(--sf-paper-raised)]"
                 style={{
-                  fontFamily: "'Bricolage Grotesque', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontWeight: 700,
                   fontSize: "clamp(38px, 5vw, 58px)",
                   letterSpacing: "-0.04em",

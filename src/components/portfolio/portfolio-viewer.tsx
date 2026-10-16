@@ -100,7 +100,7 @@ export function PortfolioViewer() {
       <aside
         className="w-full md:w-[280px] lg:w-[320px] flex-shrink-0 border-r-2 border-[var(--sf-ink)] bg-[var(--sf-paper-raised)] p-6 overflow-y-auto"
         style={{
-          fontFamily: "'Bricolage Grotesque', sans-serif",
+          fontFamily: "'Inter', sans-serif",
         }}
       >
         <div className="mb-8">

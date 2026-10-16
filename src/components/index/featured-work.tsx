@@ -103,7 +103,7 @@ export default function FeaturedWork() {
         <h2
           className="leading-[1.05] tracking-[-0.03em] text-[var(--sf-ink)]"
           style={{
-            fontFamily: "'Bricolage Grotesque', sans-serif",
+            fontFamily: "'Inter', sans-serif",
             fontWeight: 800,
             fontSize: "clamp(32px, 4vw, 48px)",
           }}
@@ -140,7 +140,7 @@ export default function FeaturedWork() {
               <h3
                 className="text-[20px] tracking-[-0.01em] text-[var(--sf-ink)] mb-2"
                 style={{
-                  fontFamily: "'Bricolage Grotesque', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontWeight: 800,
                 }}
               >

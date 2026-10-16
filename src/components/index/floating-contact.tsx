@@ -25,7 +25,7 @@ export default function FloatingContact() {
           <span
             className="bg-white border-2 border-[var(--sf-ink)] px-[11px] py-1.5 text-[11px] font-bold tracking-[0.08em] uppercase text-[var(--sf-ink)] whitespace-nowrap"
             style={{
-              fontFamily: "'Bricolage Grotesque', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               boxShadow: "3px 3px 0 var(--sf-ink)",
             }}
           >
@@ -68,7 +68,7 @@ export default function FloatingContact() {
           <span
             className="bg-white border-2 border-[var(--sf-ink)] px-[11px] py-1.5 text-[11px] font-bold tracking-[0.08em] uppercase text-[var(--sf-ink)] whitespace-nowrap"
             style={{
-              fontFamily: "'Bricolage Grotesque', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               boxShadow: "3px 3px 0 var(--sf-ink)",
             }}
           >
@@ -107,7 +107,7 @@ export default function FloatingContact() {
           <span
             className="bg-white border-2 border-[var(--sf-ink)] px-[11px] py-1.5 text-[11px] font-bold tracking-[0.08em] uppercase text-[var(--sf-ink)] whitespace-nowrap"
             style={{
-              fontFamily: "'Bricolage Grotesque', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               boxShadow: "3px 3px 0 var(--sf-ink)",
             }}
           >
@@ -146,7 +146,7 @@ export default function FloatingContact() {
           <span
             className="bg-white border-2 border-[var(--sf-ink)] px-[11px] py-1.5 text-[11px] font-bold tracking-[0.08em] uppercase text-[var(--sf-ink)] whitespace-nowrap"
             style={{
-              fontFamily: "'Bricolage Grotesque', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               boxShadow: "3px 3px 0 var(--sf-ink)",
             }}
           >

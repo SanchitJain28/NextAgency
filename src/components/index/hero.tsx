@@ -5,7 +5,7 @@ export default function Hero() {
     <section
       id="top"
       className="relative max-w-[1200px] mx-auto px-7 pt-[52px] pb-7"
-      style={{ fontFamily: "var(--font-body, 'Hanken Grotesk', sans-serif)" }}
+      style={{ fontFamily: "var(--font-body, 'Inter', sans-serif)" }}
     >
       <div className="relative z-[1] grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-10 items-center">
         <div>
@@ -30,7 +30,7 @@ export default function Hero() {
           <h1
             className="mb-[22px] leading-[0.98] tracking-[-0.035em] text-[var(--sf-ink)]"
             style={{
-              fontFamily: "'Bricolage Grotesque', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               fontWeight: 700,
               fontSize: "clamp(44px, 6.2vw, 80px)",
               textWrap: "balance",
@@ -87,7 +87,7 @@ export default function Hero() {
               <div
                 className="text-[32px] tracking-[-0.03em] text-[var(--sf-ink)]"
                 style={{
-                  fontFamily: "'Bricolage Grotesque', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontWeight: 700,
                 }}
               >
@@ -102,7 +102,7 @@ export default function Hero() {
               <div
                 className="text-[32px] tracking-[-0.03em] text-[var(--sf-ink)]"
                 style={{
-                  fontFamily: "'Bricolage Grotesque', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontWeight: 700,
                 }}
               >
@@ -117,7 +117,7 @@ export default function Hero() {
               <div
                 className="text-[32px] tracking-[-0.03em] text-[var(--sf-ink)]"
                 style={{
-                  fontFamily: "'Bricolage Grotesque', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontWeight: 700,
                 }}
               >
@@ -171,7 +171,7 @@ export default function Hero() {
               <span
                 className="text-white text-[19px] leading-[1.05] tracking-[-0.02em]"
                 style={{
-                  fontFamily: "'Bricolage Grotesque', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontWeight: 700,
                 }}
               >
@@ -190,7 +190,7 @@ export default function Hero() {
               <div
                 className="text-[var(--sf-primary)]"
                 style={{
-                  fontFamily: "'Bricolage Grotesque', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontWeight: 700,
                 }}
               >
@@ -220,7 +220,7 @@ export default function Hero() {
               <span
                 className="text-[30px] tracking-[-0.03em]"
                 style={{
-                  fontFamily: "'Bricolage Grotesque', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontWeight: 700,
                 }}
               >
@@ -259,7 +259,7 @@ export default function Hero() {
             <span
               className="text-[var(--sf-ink)] text-[13px] leading-none text-center"
               style={{
-                fontFamily: "'Bricolage Grotesque', sans-serif",
+                fontFamily: "'Inter', sans-serif",
                 fontWeight: 800,
               }}
             >

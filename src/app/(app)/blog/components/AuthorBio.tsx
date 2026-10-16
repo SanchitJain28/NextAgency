@@ -24,7 +24,7 @@ export function AuthorBio({
           </div>
           <h3
             className="text-lg font-bold text-neutral-900 mb-2"
-            style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            style={{ fontFamily: "'Inter', sans-serif" }}
           >
             {author}
           </h3>

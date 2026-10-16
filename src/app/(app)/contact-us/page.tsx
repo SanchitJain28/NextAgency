@@ -65,7 +65,7 @@ export default function ContactPage() {
         <header className="mb-10 text-center max-w-4xl mx-auto">
           <h1
             className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[var(--sf-ink)] leading-[1.05] tracking-[-0.035em] mb-5"
-            style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+            style={{ fontFamily: "'Inter', sans-serif" }}
           >
             Tell us about your store.
           </h1>
@@ -100,7 +100,7 @@ export default function ContactPage() {
                 </div>
                 <h2
                   className="text-2xl font-extrabold text-[var(--sf-ink)]"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   Send Project Details
                 </h2>
@@ -118,7 +118,7 @@ export default function ContactPage() {
                 </span>
                 <h2
                   className="text-2xl font-extrabold text-[var(--sf-ink)] mt-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   Prefer to Talk Directly?
                 </h2>
@@ -139,7 +139,7 @@ export default function ContactPage() {
                   </div>
                   <h3
                     className="font-bold text-[15px] text-[var(--sf-ink)] mb-0.5"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     WhatsApp Chat
                   </h3>
@@ -160,7 +160,7 @@ export default function ContactPage() {
                   </div>
                   <h3
                     className="font-bold text-[15px] text-[var(--sf-ink)] mb-0.5"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     {email}
                   </h3>
@@ -181,7 +181,7 @@ export default function ContactPage() {
                   </div>
                   <h3
                     className="font-bold text-[15px] text-[var(--sf-ink)] mb-0.5"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     {displayPhone}
                   </h3>
@@ -199,7 +199,7 @@ export default function ContactPage() {
                 </span>
                 <h2
                   className="text-2xl font-extrabold text-[var(--sf-ink)] mt-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   How ScaleFront Can Help
                 </h2>
@@ -262,7 +262,7 @@ export default function ContactPage() {
                       <h3
                         className="font-bold text-[16px] text-[var(--sf-ink)] mb-2 group-hover:text-[var(--sf-primary)] transition-colors"
                         style={{
-                          fontFamily: "'Bricolage Grotesque', sans-serif",
+                          fontFamily: "'Inter', sans-serif",
                         }}
                       >
                         {service.title}
@@ -287,7 +287,7 @@ export default function ContactPage() {
                 </span>
                 <h2
                   className="text-2xl font-extrabold text-[var(--sf-ink)] mt-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   Frequently Asked Questions
                 </h2>
@@ -319,7 +319,7 @@ export default function ContactPage() {
                     <summary
                       className="font-bold text-[15px] text-[var(--sf-ink)] list-none flex items-center justify-between focus:outline-none"
                       style={{
-                        fontFamily: "'Bricolage Grotesque', sans-serif",
+                        fontFamily: "'Inter', sans-serif",
                       }}
                     >
                       <span className="pr-4">{faq.q}</span>

@@ -62,23 +62,24 @@ export function TableOfContents({ content }: TableOfContentsProps) {
   if (headings.length === 0) return null;
 
   return (
-    <div className="bg-white border border-neutral-200 p-6 mb-8">
-      <div className="font-mono text-xs font-bold uppercase tracking-wider text-neutral-900 pb-3 mb-4 border-b border-neutral-200">
-        Table of Contents
-      </div>
-      <nav>
-        <ul className="space-y-2.5">
+    <div className="mb-6">
+      <nav
+        aria-label="Table of contents"
+        tabIndex={0}
+        className="h-80 max-h-[50vh] overflow-y-auto overscroll-contain pr-2 [scrollbar-width:thin] [scrollbar-color:#d4d4d4_transparent] focus-visible:outline-2 focus-visible:outline-black"
+      >
+        <ul className="space-y-1">
           {headings.map((heading) => (
             <li
               key={heading.id}
-              className={heading.level === 3 ? 'ml-3.5' : ''}
+              className={heading.level === 3 ? 'ml-2.5' : ''}
             >
               <a
                 href={`#${heading.id}`}
-                className={`block text-xs leading-relaxed transition-colors hover:text-neutral-900 ${
+                className={`block border-l-2 py-0.5 pl-2 text-[11px] leading-[1.4] tracking-[-0.01em] transition-colors hover:text-neutral-900 ${
                   activeId === heading.id
-                    ? 'text-[var(--sf-primary)] font-bold border-l-2 border-[var(--sf-primary)] pl-2 -ml-2'
-                    : 'text-neutral-500 hover:text-neutral-900'
+                    ? 'text-black font-semibold border-black'
+                    : 'border-transparent text-neutral-500 hover:text-neutral-900'
                 }`}
                 onClick={(e) => {
                   e.preventDefault();

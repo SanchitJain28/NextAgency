@@ -44,7 +44,7 @@ export default function ComparisonTable({
             <th
               className="p-4 sm:p-5 text-base sm:text-lg font-bold text-[var(--sf-ink)] border-r-2 border-[var(--sf-ink)] w-1/2"
               style={{
-                fontFamily: "'Bricolage Grotesque', sans-serif",
+                fontFamily: "'Inter', sans-serif",
               }}
             >
               {includedHeader}
@@ -52,7 +52,7 @@ export default function ComparisonTable({
             <th
               className="p-4 sm:p-5 text-base sm:text-lg font-bold text-[var(--sf-ink)] w-1/2"
               style={{
-                fontFamily: "'Bricolage Grotesque', sans-serif",
+                fontFamily: "'Inter', sans-serif",
               }}
             >
               {excludedHeader}

@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { getPostBySlug, getAllPosts, getRelatedPosts } from "@/lib/blog/posts";
 import { ReadingProgress } from "../components/ReadingProgress";
 import { Breadcrumbs } from "../components/Breadcrumbs";
@@ -130,9 +129,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       <article className="min-h-screen bg-white text-neutral-900 antialiased">
         {/* ── ARTICLE HEADER (FULL WIDTH & CLEAN) ── */}
-        <header className="border-b border-neutral-200 bg-[#faf9f6] pt-12 pb-12 sm:pt-16 sm:pb-14">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header className="border-b border-neutral-800 bg-black text-white pt-12 pb-12 sm:pt-16 sm:pb-14">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
             <Breadcrumbs
+              theme="dark"
               items={[
                 { label: "Blog", href: "/blog" },
                 {
@@ -144,7 +144,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             />
 
             {/* Category & Read Time */}
-            <div className="flex flex-wrap items-center gap-3 mb-5 font-mono text-xs">
+            <div className="hidden">
               <span className="px-2.5 py-1 border border-neutral-200 bg-neutral-100 text-neutral-800 font-bold uppercase tracking-wider">
                 {post.category}
               </span>
@@ -165,19 +165,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
             {/* Article Title */}
             <h1
-              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-neutral-900 leading-[1.12] mb-6 max-w-5xl"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.12] mb-6"
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               {post.title}
             </h1>
 
             {/* Article Description / Excerpt */}
-            <p className="text-lg sm:text-xl text-neutral-600 font-normal leading-relaxed max-w-4xl mb-8 font-sans">
+            <p className="text-lg sm:text-xl text-neutral-200 font-normal leading-relaxed font-sans">
               {post.description}
             </p>
 
             {/* Author Line & Tags */}
-            <div className="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-neutral-200">
+            <div className="hidden">
               <div className="flex items-center gap-2.5 font-mono text-xs">
                 <div className="w-7 h-7 bg-neutral-900 text-white font-bold flex items-center justify-center">
                   {post.author?.charAt(0) || "S"}
@@ -203,53 +203,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </header>
 
-        {/* ── FEATURED HERO IMAGE (FULL WIDTH CONTAINER) ── */}
-        {post.image && (
-          <div className="border-b border-neutral-200 bg-white py-10">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="relative aspect-[21/9] sm:aspect-[16/7] overflow-hidden border border-neutral-200 bg-neutral-100">
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 1280px) 100vw, 1280px"
-                />
-              </div>
-            </div>
-          </div>
-        )}
-
         {/* ── ARTICLE CONTENT & SIDEBAR (FULL RESPONSIVE GRID) ── */}
         <div className="py-12 sm:py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row gap-12 items-start">
               {/* Main Content Column */}
               <div className="flex-1 min-w-0 w-full">
-                <div
-                  className="
-                  prose prose-neutral max-w-none font-sans
-                  [&>*]:text-neutral-800
-                  [&>h1]:text-3xl sm:[&>h1]:text-4xl [&>h1]:font-extrabold [&>h1]:mt-12 [&>h1]:mb-4 [&>h1]:leading-[1.15] [&>h1]:tracking-tight [&>h1]:text-neutral-900 [&>h1]:[font-family:'Bricolage_Grotesque',sans-serif]
-                  [&>h2]:text-2xl sm:[&>h2]:text-3xl [&>h2]:font-bold [&>h2]:mt-12 [&>h2]:mb-4 [&>h2]:leading-[1.2] [&>h2]:tracking-tight [&>h2]:text-neutral-900 [&>h2]:[font-family:'Bricolage_Grotesque',sans-serif] [&>h2]:pt-6 [&>h2]:border-t [&>h2]:border-neutral-200
-                  [&>h3]:text-xl sm:[&>h3]:text-2xl [&>h3]:font-bold [&>h3]:mt-8 [&>h3]:mb-3 [&>h3]:leading-snug [&>h3]:text-neutral-900 [&>h3]:[font-family:'Bricolage_Grotesque',sans-serif]
-                  [&>h4]:text-lg [&>h4]:font-bold [&>h4]:mt-6 [&>h4]:mb-2 [&>h4]:text-neutral-900 [&>h4]:[font-family:'Bricolage_Grotesque',sans-serif]
-                  [&>p]:text-base sm:[&>p]:text-lg [&>p]:leading-[1.8] [&>p]:mb-6 [&>p]:text-neutral-700
-                  [&>ul]:text-base sm:[&>ul]:text-lg [&>ul]:leading-[1.8] [&>ul]:mb-6 [&>ul]:text-neutral-700 [&>ul]:list-disc [&>ul]:pl-6
-                  [&>ol]:text-base sm:[&>ol]:text-lg [&>ol]:leading-[1.8] [&>ol]:mb-6 [&>ol]:text-neutral-700 [&>ol]:list-decimal [&>ol]:pl-6
-                  [&>li]:mb-2 [&>li]:text-neutral-700
-                  [&>blockquote]:border-l-4 [&>blockquote]:border-[var(--sf-primary)] [&>blockquote]:pl-6 [&>blockquote]:py-2 [&>blockquote]:italic [&>blockquote]:text-neutral-700 [&>blockquote]:text-lg sm:[&>blockquote]:text-xl [&>blockquote]:my-8 [&>blockquote]:bg-[#faf9f6]
-                  [&>a]:text-[var(--sf-primary)] [&>a]:underline [&>a]:underline-offset-4 [&>a]:font-medium hover:[&>a]:text-[var(--sf-primary-deep)]
-                  [&>strong]:font-bold [&>strong]:text-neutral-900
-                  [&_code]:text-sm [&_code]:bg-neutral-100 [&_code]:border [&_code]:border-neutral-200 [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:font-mono [&_code]:text-neutral-800
-                  [&>pre]:bg-[#181310] [&>pre]:text-neutral-100 [&>pre]:p-6 [&>pre]:border [&>pre]:border-neutral-800 [&>pre]:overflow-x-auto [&>pre]:my-8 [&>pre]:text-sm
-                  [&>table]:w-full [&>table]:border-collapse [&>table]:my-8 [&>table]:text-sm
-                  [&_th]:border [&_th]:border-neutral-200 [&_th]:bg-neutral-100 [&_th]:p-3.5 [&_th]:text-left [&_th]:font-bold [&_th]:text-neutral-900
-                  [&_td]:border [&_td]:border-neutral-200 [&_td]:p-3.5 [&_td]:text-neutral-700
-                  [&>img]:my-10 [&>img]:w-full [&>img]:border [&>img]:border-neutral-200
-                "
-                >
+                <div className="max-w-none font-sans">
                   <MarkdownContent content={post.content} />
                 </div>
 
@@ -262,7 +222,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     <h2
                       className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-8"
                       style={{
-                        fontFamily: "'Bricolage Grotesque', sans-serif",
+                        fontFamily: "'Inter', sans-serif",
                       }}
                     >
                       Frequently Asked Questions
@@ -277,7 +237,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                             <span
                               className="flex-1 pr-4"
                               style={{
-                                fontFamily: "'Bricolage Grotesque', sans-serif",
+                                fontFamily: "'Inter', sans-serif",
                               }}
                             >
                               {faq.question}
@@ -302,7 +262,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <div className="mt-12 border border-neutral-200 bg-[#faf9f6] p-8 sm:p-10 text-center">
                   <h3
                     className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-3"
-                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+                    style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     Need Custom Shopify Architecture?
                   </h3>
@@ -341,8 +301,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
 
               {/* ── DESKTOP STICKY SIDEBAR ── */}
-              <aside className="hidden lg:block lg:w-80 shrink-0">
-                <div className="sticky top-28 space-y-6">
+              <aside className="hidden lg:block lg:w-80 shrink-0 lg:sticky lg:top-28 lg:self-start">
+                <div className="space-y-6">
                   <TableOfContents content={post.content} />
 
                   {/* Sidebar Strategy Card */}
@@ -353,7 +313,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     <h4
                       className="text-base font-bold text-neutral-900 mb-2"
                       style={{
-                        fontFamily: "'Bricolage Grotesque', sans-serif",
+                        fontFamily: "'Inter', sans-serif",
                       }}
                     >
                       Scale Your Store with Experts

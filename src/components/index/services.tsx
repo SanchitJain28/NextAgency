@@ -127,7 +127,7 @@ export default function Services() {
           <h2
             className="m-0 leading-[1.02] tracking-[-0.03em]"
             style={{
-              fontFamily: "'Bricolage Grotesque', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               fontWeight: 700,
               fontSize: "clamp(32px, 4.4vw, 52px)",
               textWrap: "balance",
@@ -156,7 +156,7 @@ export default function Services() {
                 style={{
                   background: svc.tint,
                   color: svc.ink,
-                  fontFamily: "'Bricolage Grotesque', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontWeight: 800,
                 }}
               >
@@ -164,7 +164,7 @@ export default function Services() {
               </span>
               <span
                 className="text-[13px] text-[var(--sf-ink-mute)]"
-                style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                style={{ fontFamily: "'Geist Mono', monospace" }}
               >
                 {svc.no}
               </span>
@@ -172,7 +172,7 @@ export default function Services() {
             <h3
               className="m-0 mb-[9px] text-[21px] tracking-[-0.02em] leading-[1.15]"
               style={{
-                fontFamily: "'Bricolage Grotesque', sans-serif",
+                fontFamily: "'Inter', sans-serif",
                 fontWeight: 700,
               }}
             >

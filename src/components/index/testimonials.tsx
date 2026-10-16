@@ -198,7 +198,7 @@ export default function Testimonials() {
             <h2
               className="m-0 leading-[1.02] tracking-[-0.03em] text-[var(--sf-ink)]"
               style={{
-                fontFamily: "'Bricolage Grotesque', sans-serif",
+                fontFamily: "'Inter', sans-serif",
                 fontWeight: 700,
                 fontSize: "clamp(32px, 4.4vw, 52px)",
                 textWrap: "balance",
@@ -231,7 +231,7 @@ export default function Testimonials() {
               <blockquote
                 className="m-0 leading-[1.45] tracking-[-0.01em] flex-1"
                 style={{
-                  fontFamily: "'Bricolage Grotesque', sans-serif",
+                  fontFamily: "'Inter', sans-serif",
                   fontWeight: 600,
                   fontSize: "19px",
                   color: t.ink,
