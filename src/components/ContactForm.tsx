@@ -44,7 +44,13 @@ export function ContactForm() {
     }));
   }, [defaultCountryCode]);
 
-  const { submitContact, isSubmitting, status, error } = useContact();
+  const {
+    submitContact,
+    isSubmitting,
+    status,
+    error,
+    email: contactEmail,
+  } = useContact();
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -337,7 +343,7 @@ export function ContactForm() {
             </h4>
             <p className="text-[14px] text-[var(--sf-ink-soft)] leading-relaxed">
               {error ||
-                "Something went wrong while sending your message. Please try again or reach us at hello@scalefront.io"}
+                `Something went wrong while sending your message. Please try again or reach us at ${contactEmail}`}
             </p>
           </div>
         </div>

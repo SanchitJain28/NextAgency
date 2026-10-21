@@ -1,3 +1,4 @@
+import { CONTACT_INFO } from "@/config/contact";
 import { ContactFormData } from "@/types/contact";
 
 const SF = {
@@ -323,7 +324,7 @@ export function generateVisitorConfirmationEmail(
                 High-Performance Shopify &amp; Full-Stack Web Development
               </p>
               <p style="font-family: ${SF.fontMono}; font-size: 11px; color: #FAF8F5; opacity: 0.6; margin: 0;">
-                Have urgent questions? Email us directly at <a href="mailto:hello@scalefront.io" style="color: ${SF.primarySoft}; text-decoration: underline;">hello@scalefront.io</a>
+                Have urgent questions? Email us directly at <a href="mailto:${CONTACT_INFO.email}" style="color: ${SF.primarySoft}; text-decoration: underline;">${CONTACT_INFO.email}</a>
               </p>
             </td>
           </tr>

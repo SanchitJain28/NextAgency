@@ -1,9 +1,11 @@
 "use client";
 
+import { useContact } from "@/hooks/useContact";
 import { useState } from "react";
 import Link from "next/link";
 
 export default function FloatingContact() {
+  const { email, telInternational, waBase, instagram } = useContact();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -17,7 +19,7 @@ export default function FloatingContact() {
         }}
       >
         <Link
-          href="https://instagram.com/scalefront"
+          href={instagram}
           target="_blank"
           rel="noopener"
           className="group flex items-center gap-2.5 no-underline"
@@ -60,7 +62,7 @@ export default function FloatingContact() {
           </span>
         </Link>
         <Link
-          href="https://wa.me/919650296375"
+          href={waBase}
           target="_blank"
           rel="noopener noreferrer"
           className="group flex items-center gap-2.5 no-underline"
@@ -101,7 +103,7 @@ export default function FloatingContact() {
           </span>
         </Link>
         <Link
-          href="tel:+919650296375"
+          href={`tel:${telInternational}`}
           className="group flex items-center gap-2.5 no-underline"
         >
           <span
@@ -140,7 +142,7 @@ export default function FloatingContact() {
           </span>
         </Link>
         <Link
-          href="mailto:sanchit@scalefront.io"
+          href={`mailto:${email}`}
           className="group flex items-center gap-2.5 no-underline"
         >
           <span

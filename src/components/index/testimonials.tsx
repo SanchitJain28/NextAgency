@@ -1,4 +1,5 @@
 import CarouselArrows from "./carousel-arrows";
+import { homepageDefaults, type HomepageContent } from "@/content/homepage";
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -63,137 +64,18 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
-const TESTIMONIALS = [
-  {
-    id: 1,
-    rating: 5,
-    quote:
-      "They rebuilt our storefront in six weeks and our conversion rate jumped 38% the first month. No agency has ever moved this fast.",
-    name: "Priya Sundaram",
-    role: "Founder, Verdant Skincare",
-    image: "https://i.pravatar.cc/150?u=1",
-    bg: "var(--sf-paper-raised)",
-    ink: "var(--sf-ink)",
-    mute: "var(--sf-ink-mute)",
-  },
-  {
-    id: 2,
-    rating: 4.5,
-    quote:
-      "The headless migration felt scary until Scalefront made it boring — in the best way. Flawless launch, instant pages.",
-    name: "Marcus Hale",
-    role: "CTO, Tidalwear",
-    image: "https://i.pravatar.cc/150?u=2",
-    bg: "var(--sf-paper-deep)",
-    ink: "var(--sf-paper-raised)",
-    mute: "color-mix(in srgb, var(--sf-paper) 70%, transparent)",
-  },
-  {
-    id: 3,
-    rating: 5,
-    quote:
-      "It's rare to find people who care about both the pixels and the P&L. We've hired them for three projects and counting.",
-    name: "Elena Rossi",
-    role: "VP Ecommerce, Lumen",
-    image: "https://i.pravatar.cc/150?u=3",
-    bg: "var(--sf-paper-raised)",
-    ink: "var(--sf-ink)",
-    mute: "var(--sf-ink-mute)",
-  },
-  {
-    id: 4,
-    rating: 4,
-    quote:
-      "They cleaned up our messy Shopify Plus theme and backend setup. The code is structured properly now and our load times dropped in half.",
-    name: "David Chen",
-    role: "Director of Ops, Elevate",
-    image: "https://i.pravatar.cc/150?u=4",
-    bg: "var(--sf-paper-raised)",
-    ink: "var(--sf-ink)",
-    mute: "var(--sf-ink-mute)",
-  },
-  {
-    id: 5,
-    rating: 5,
-    quote:
-      "From custom app development to theme design, they handled everything. Our holiday sales volume didn't break a single integration.",
-    name: "Sarah Jenkins",
-    role: "CEO, CozyHome",
-    image: "https://i.pravatar.cc/150?u=5",
-    bg: "var(--sf-paper-deep)",
-    ink: "var(--sf-paper-raised)",
-    mute: "color-mix(in srgb, var(--sf-paper) 70%, transparent)",
-  },
-  {
-    id: 6,
-    rating: 4.5,
-    quote:
-      "The CRO audit paid for itself in exactly 4 days. The changes they recommended and implemented were purely data-driven.",
-    name: "Michael Torres",
-    role: "Growth Lead, Alpha Gear",
-    image: "https://i.pravatar.cc/150?u=6",
-    bg: "var(--sf-paper-raised)",
-    ink: "var(--sf-ink)",
-    mute: "var(--sf-ink-mute)",
-  },
-  {
-    id: 7,
-    rating: 5,
-    quote:
-      "They built a custom subscription portal that our customers actually enjoy using. Churn dropped by 12% in the first quarter.",
-    name: "Amanda Wright",
-    role: "Founder, BrewBox",
-    image: "https://i.pravatar.cc/150?u=7",
-    bg: "var(--sf-paper-raised)",
-    ink: "var(--sf-ink)",
-    mute: "var(--sf-ink-mute)",
-  },
-  {
-    id: 8,
-    rating: 4,
-    quote:
-      "True Shopify experts are hard to find in India. Scalefront operates with total transparency and direct developer communication.",
-    name: "Vikram Mehta",
-    role: "Managing Director, Luxe India",
-    image: "https://i.pravatar.cc/150?u=8",
-    bg: "var(--sf-paper-deep)",
-    ink: "var(--sf-paper-raised)",
-    mute: "color-mix(in srgb, var(--sf-paper) 70%, transparent)",
-  },
-  {
-    id: 9,
-    rating: 4.5,
-    quote:
-      "The transition from WooCommerce to Shopify Plus was smooth and fast. We experienced zero downtime and kept all our Google rankings.",
-    name: "Jessica Ford",
-    role: "Ecommerce Manager, PetSupply",
-    image: "https://i.pravatar.cc/150?u=9",
-    bg: "var(--sf-paper-raised)",
-    ink: "var(--sf-ink)",
-    mute: "var(--sf-ink-mute)",
-  },
-  {
-    id: 10,
-    rating: 5,
-    quote:
-      "The Medusa.js headless build they delivered is clean and fast. We finally have full control over our code to expand into new regions.",
-    name: "Thomas Berg",
-    role: "CTO, Norda",
-    image: "https://i.pravatar.cc/150?u=10",
-    bg: "var(--sf-paper-raised)",
-    ink: "var(--sf-ink)",
-    mute: "var(--sf-ink-mute)",
-  },
-];
-
-export default function Testimonials() {
+export default function Testimonials({
+  content = homepageDefaults.testimonials,
+}: {
+  content?: HomepageContent["testimonials"];
+}) {
   return (
     <section className="py-16 lg:py-24 overflow-hidden bg-[var(--sf-paper-sunken)] border-t-2 border-[var(--sf-ink)]">
       <div className="max-w-[1200px] mx-auto px-7 mb-10">
         <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6">
           <div className="max-w-[640px]">
             <div className="text-[13px] font-semibold tracking-[0.14em] uppercase text-[var(--sf-primary)] mb-[14px]">
-              Kind words
+              {content.kindWords}
             </div>
             <h2
               className="m-0 leading-[1.02] tracking-[-0.03em] text-[var(--sf-ink)]"
@@ -204,7 +86,7 @@ export default function Testimonials() {
                 textWrap: "balance",
               }}
             >
-              Founders who came back for round two.
+              {content.foundersWhoCameBackFor}
             </h2>
           </div>
           <CarouselArrows targetId="testimonials-scroll" />
@@ -217,7 +99,7 @@ export default function Testimonials() {
         style={{ scrollPaddingLeft: "1.75rem" }}
       >
         <div className="flex gap-6 w-max pr-7">
-          {TESTIMONIALS.map((t) => (
+          {content.items.map((t) => (
             <figure
               key={t.id}
               className="w-[85vw] md:w-[450px] flex-shrink-0 snap-start m-0 border-2 border-[var(--sf-ink)] p-8 flex flex-col gap-[24px] hover:-translate-y-1 hover:shadow-[10px_10px_0_var(--sf-ink)] transition-all duration-300"

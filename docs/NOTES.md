@@ -5,6 +5,10 @@
 `NOTE : All Components should be server components to properly render on the server to improve SEO`
 `NOTE : ALl Sections Should be content rich , should use normal language not any type of AI SLOP`
 
+## Things by priority
+
+1. [x] Make a Cookies consent modal (which appears only once) - Completed in src/components/shared/CookieConsent.tsx
+
 ## New portfolio pages
 
 1.  360 - Alpha (Premium clothing brand)

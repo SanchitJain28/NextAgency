@@ -3,19 +3,8 @@
 import { ContactFormData, ContactResponse } from "@/types/contact";
 import { useState, useCallback } from "react";
 
-export const CONTACT_INFO = {
-  phoneE164: "919650296375",
-  displayPhone: "+91-965-029-6375",
-  telInternational: "+919650296375",
-  email: "hello@scalefront.io",
-  linkedin: "https://www.linkedin.com/in/sanchitjain28/",
-  waBase: "https://wa.me/919650296375",
-  waPrefilled: `https://wa.me/919650296375?text=${encodeURIComponent(
-    "Hi ScaleFront team! I'd like to discuss a Shopify development project.",
-  )}`,
-} as const;
-
-export type ContactInfo = typeof CONTACT_INFO;
+import { CONTACT_INFO } from "@/config/contact";
+export { CONTACT_INFO, type ContactInfo } from "@/config/contact";
 
 export interface UseContactOptions {
   onSuccess?: (data: ContactResponse) => void;
@@ -100,13 +89,7 @@ export function useContact(options?: UseContactOptions) {
     error,
     data,
     reset,
-    phoneE164: CONTACT_INFO.phoneE164,
-    displayPhone: CONTACT_INFO.displayPhone,
-    telInternational: CONTACT_INFO.telInternational,
-    email: CONTACT_INFO.email,
-    linkedin: CONTACT_INFO.linkedin,
-    waBase: CONTACT_INFO.waBase,
-    waPrefilled: CONTACT_INFO.waPrefilled,
+    ...CONTACT_INFO,
     contactInfo: CONTACT_INFO,
   };
 }

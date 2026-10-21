@@ -1,70 +1,12 @@
 import Link from "next/link";
 import CarouselArrows from "./carousel-arrows";
+import { homepageDefaults, type HomepageContent } from "@/content/homepage";
 
-type CaseStudy = {
-  id: string;
-  brand: string;
-  industry: string;
-  headline: string;
-  metric: string;
-  metricLabel: string;
-  description: string;
-  imagePlaceholder: string;
-  link: string;
-};
-
-const CASE_STUDIES: CaseStudy[] = [
-  {
-    id: "cs-1",
-    brand: "Iron Crate",
-    industry: "Sports & Fitness",
-    headline: "Custom 3-step bundle builder and drawer cart.",
-    metric: "+42%",
-    metricLabel: "Increase in AOV",
-    description:
-      "We replaced a generic theme with a custom build featuring a 3-tier supplement stack builder, clinical dosage tabs, and a slide-out cart with live free-shipping rewards.",
-    imagePlaceholder: "/portfolio/iron-crate/covers/cover.png",
-    link: "/work/iron-crate",
-  },
-  {
-    id: "cs-2",
-    brand: "RecovrX",
-    industry: "Athletic Recovery",
-    headline: "Clean product layouts for high-ticket recovery gear.",
-    metric: "+28%",
-    metricLabel: "Conversion Rate",
-    description:
-      "Selling high-ticket recovery tools requires clear information. We built technical spec tables, video dosage accordions, and a 1-click cart drawer to help buyers choose with confidence.",
-    imagePlaceholder: "/portfolio/recovrx/covers/cover.png",
-    link: "/work/recovrx",
-  },
-  {
-    id: "cs-3",
-    brand: "Maison Luxe",
-    industry: "Luxury Home Decor",
-    headline: "Editorial lifestyle storefront with instant filters.",
-    metric: "1.2s",
-    metricLabel: "Page Load Time",
-    description:
-      "We removed 12 slow marketplace apps and built native Liquid 2.0 sections with room lookbook tagging and instant AJAX category filtering.",
-    imagePlaceholder: "/portfolio/maison-luxe/covers/cover.png",
-    link: "/portfolio",
-  },
-  {
-    id: "cs-4",
-    brand: "Industrial Supply",
-    industry: "B2B Manufacturing",
-    headline: "50,000 SKU catalog with tiered volume pricing.",
-    metric: "3x",
-    metricLabel: "Faster Quote Generation",
-    description:
-      "We structured a dense industrial catalog with automated spec sheet downloads, tiered bulk discount tables, and online quote submissions.",
-    imagePlaceholder: "/portfolio/industrial-supply-direct/covers/cover.png",
-    link: "/work/industrial-supply-direct",
-  },
-];
-
-export default function CaseStudies() {
+export default function CaseStudies({
+  content = homepageDefaults.caseStudies,
+}: {
+  content?: HomepageContent["caseStudies"];
+}) {
   return (
     <section
       id="case-studies"
@@ -74,7 +16,7 @@ export default function CaseStudies() {
         <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6">
           <div className="max-w-[640px]">
             <div className="text-[13px] font-semibold tracking-[0.14em] uppercase text-[var(--sf-primary)] mb-[14px]">
-              Proven Results
+              {content.provenResults}
             </div>
             <h2
               className="m-0 leading-[1.02] tracking-[-0.03em] text-[var(--sf-ink)]"
@@ -85,7 +27,7 @@ export default function CaseStudies() {
                 textWrap: "balance",
               }}
             >
-              Case studies that move the needle.
+              {content.caseStudiesThatMoveThe}
             </h2>
           </div>
 
@@ -100,7 +42,7 @@ export default function CaseStudies() {
         style={{ scrollPaddingLeft: "1.75rem" }}
       >
         <div className="flex gap-6 w-max pr-7">
-          {CASE_STUDIES.map((cs) => (
+          {content.items.map((cs) => (
             <article
               key={cs.id}
               className="w-[85vw] md:w-[600px] lg:w-[700px] flex-shrink-0 snap-start bg-white border-2 border-[var(--sf-ink)] flex flex-col md:flex-row group hover:-translate-y-1 hover:shadow-[10px_10px_0_var(--sf-ink)] transition-all duration-300"

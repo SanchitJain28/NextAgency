@@ -1,3 +1,4 @@
+import { CONTACT_INFO } from "@/config/contact";
 import { Metadata } from "next";
 import { Header } from "@/components/header-footer/Header";
 import Footer from "@/components/header-footer/Footer";
@@ -78,8 +79,8 @@ export default function PrivacyPolicyPage() {
               </h2>
               <p>
                 If you have questions regarding this Privacy Policy or your data rights, please contact our privacy officer at{" "}
-                <a href="mailto:hello@scalefront.io" className="text-blue-600 dark:text-blue-400 underline">
-                  hello@scalefront.io
+                <a href={`mailto:${CONTACT_INFO.email}`} className="text-blue-600 dark:text-blue-400 underline">
+                  {CONTACT_INFO.email}
                 </a>.
               </p>
             </section>

@@ -1,27 +1,10 @@
-const STATS = [
-  {
-    value: "50+",
-    label: "Custom Shopify stores and storefronts launched",
-    delay: "0ms",
-  },
-  {
-    value: "90+",
-    label: "Mobile Core Web Vitals score on custom Liquid builds",
-    delay: "80ms",
-  },
-  {
-    value: "100%",
-    label: "Direct developer communication. No account manager layers.",
-    delay: "160ms",
-  },
-  {
-    value: "Zero",
-    label: "Unused marketplace apps. Clean code written for your catalog.",
-    delay: "240ms",
-  },
-];
+import { homepageDefaults, type HomepageContent } from "@/content/homepage";
 
-export default function ResultsBand() {
+export default function ResultsBand({
+  content = homepageDefaults.results,
+}: {
+  content?: HomepageContent["results"];
+}) {
   return (
     <section
       id="work"
@@ -31,7 +14,7 @@ export default function ResultsBand() {
       <div className="max-w-[1200px] mx-auto px-7 py-[52px]">
         <div className="max-w-[620px] mb-8">
           <div className="text-[13px] font-semibold tracking-[0.14em] uppercase text-[var(--sf-gold)] mb-[14px]">
-            The receipts
+            {content.theReceipts}
           </div>
           <h2
             className="m-0 leading-[1.02] tracking-[-0.03em] text-[var(--sf-paper-raised)]"
@@ -41,12 +24,12 @@ export default function ResultsBand() {
               fontSize: "clamp(32px, 4.4vw, 52px)",
             }}
           >
-            We don&apos;t just build looks. We build for speed and conversion.
+            {content.weDonTJustBuild}
           </h2>
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-[22px]">
-          {STATS.map((st) => (
+          {content.items.map((st) => (
             <div
               key={st.value}
               className="pt-5"

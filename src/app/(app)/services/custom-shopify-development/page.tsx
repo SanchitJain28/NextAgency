@@ -1,3 +1,5 @@
+import { ContactLink } from "@/components/contact/ContactLink";
+import { CONTACT_INFO } from "@/config/contact";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
@@ -106,8 +108,8 @@ export default function CustomShopifyDevelopmentPage() {
           name: "ScaleFront",
           url: "https://scalefront.io",
           logo: "https://scalefront.io/logo/updated_logo.png",
-          email: "hello@scalefront.io",
-          telephone: "+919650296375",
+          email: CONTACT_INFO.email,
+          telephone: CONTACT_INFO.telInternational,
         },
         areaServed: "Worldwide",
         hasOfferCatalog: {
@@ -250,8 +252,7 @@ export default function CustomShopifyDevelopmentPage() {
                 Book a Call
                 <ArrowRight className="w-4 h-4" />
               </Link>
-              <a
-                href="https://wa.me/919650296375"
+              <ContactLink channel="whatsapp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-7 py-3.5 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] hover:bg-white text-[var(--sf-ink)] text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
@@ -268,7 +269,7 @@ export default function CustomShopifyDevelopmentPage() {
                   className="w-4.5 h-4.5 object-contain"
                 />
                 Chat on WhatsApp
-              </a>
+              </ContactLink>
             </div>
           </header>
 
@@ -707,8 +708,7 @@ export default function CustomShopifyDevelopmentPage() {
                 Schedule a Call
                 <ArrowRight className="w-4 h-4" />
               </Link>
-              <a
-                href="https://wa.me/919650296375"
+              <ContactLink channel="whatsapp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 border-2 border-[var(--sf-ink)] bg-[var(--sf-paper)] hover:bg-white text-[var(--sf-ink)] text-sm font-bold uppercase tracking-wider transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 inline-flex items-center gap-2.5"
@@ -725,7 +725,7 @@ export default function CustomShopifyDevelopmentPage() {
                   className="w-4.5 h-4.5 object-contain"
                 />
                 Chat on WhatsApp
-              </a>
+              </ContactLink>
             </div>
           </section>
         </div>

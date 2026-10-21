@@ -1,0 +1,2524 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "payload.cms_users_sessions": {
+      "name": "cms_users_sessions",
+      "schema": "payload",
+      "columns": {
+        "_order": {
+          "name": "_order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "_parent_id": {
+          "name": "_parent_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "id": {
+          "name": "id",
+          "type": "varchar",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp(3) with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "expires_at": {
+          "name": "expires_at",
+          "type": "timestamp(3) with time zone",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {
+        "cms_users_sessions_order_idx": {
+          "name": "cms_users_sessions_order_idx",
+          "columns": [
+            {
+              "expression": "_order",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "cms_users_sessions_parent_id_idx": {
+          "name": "cms_users_sessions_parent_id_idx",
+          "columns": [
+            {
+              "expression": "_parent_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "cms_users_sessions_parent_id_fk": {
+          "name": "cms_users_sessions_parent_id_fk",
+          "tableFrom": "cms_users_sessions",
+          "tableTo": "cms_users",
+          "schemaTo": "payload",
+          "columnsFrom": [
+            "_parent_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "payload.cms_users": {
+      "name": "cms_users",
+      "schema": "payload",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp(3) with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp(3) with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "email": {
+          "name": "email",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "reset_password_token": {
+          "name": "reset_password_token",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "reset_password_expiration": {
+          "name": "reset_password_expiration",
+          "type": "timestamp(3) with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "salt": {
+          "name": "salt",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hash": {
+          "name": "hash",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "reset_password_requested_at": {
+          "name": "reset_password_requested_at",
+          "type": "timestamp(3) with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "login_attempts": {
+          "name": "login_attempts",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 0
+        },
+        "lock_until": {
+          "name": "lock_until",
+          "type": "timestamp(3) with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {
+        "cms_users_updated_at_idx": {
+          "name": "cms_users_updated_at_idx",
+          "columns": [
+            {
+              "expression": "updated_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "cms_users_created_at_idx": {
+          "name": "cms_users_created_at_idx",
+          "columns": [
+            {
+              "expression": "created_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "cms_users_email_idx": {
+          "name": "cms_users_email_idx",
+          "columns": [
+            {
+              "expression": "email",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "payload.payload_kv": {
+      "name": "payload_kv",
+      "schema": "payload",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "key": {
+          "name": "key",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "data": {
+          "name": "data",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {
+        "payload_kv_key_idx": {
+          "name": "payload_kv_key_idx",
+          "columns": [
+            {
+              "expression": "key",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "payload.payload_locked_documents": {
+      "name": "payload_locked_documents",
+      "schema": "payload",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "global_slug": {
+          "name": "global_slug",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp(3) with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp(3) with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "payload_locked_documents_global_slug_idx": {
+          "name": "payload_locked_documents_global_slug_idx",
+          "columns": [
+            {
+              "expression": "global_slug",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "payload_locked_documents_updated_at_idx": {
+          "name": "payload_locked_documents_updated_at_idx",
+          "columns": [
+            {
+              "expression": "updated_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "payload_locked_documents_created_at_idx": {
+          "name": "payload_locked_documents_created_at_idx",
+          "columns": [
+            {
+              "expression": "created_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "payload.payload_locked_documents_rels": {
+      "name": "payload_locked_documents_rels",
+      "schema": "payload",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "order": {
+          "name": "order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "parent_id": {
+          "name": "parent_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "path": {
+          "name": "path",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "cms_users_id": {
+          "name": "cms_users_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {
+        "payload_locked_documents_rels_order_idx": {
+          "name": "payload_locked_documents_rels_order_idx",
+          "columns": [
+            {
+              "expression": "order",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "payload_locked_documents_rels_parent_idx": {
+          "name": "payload_locked_documents_rels_parent_idx",
+          "columns": [
+            {
+              "expression": "parent_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "payload_locked_documents_rels_path_idx": {
+          "name": "payload_locked_documents_rels_path_idx",
+          "columns": [
+            {
+              "expression": "path",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "payload_locked_documents_rels_cms_users_id_idx": {
+          "name": "payload_locked_documents_rels_cms_users_id_idx",
+          "columns": [
+            {
+              "expression": "cms_users_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "payload_locked_documents_rels_parent_fk": {
+          "name": "payload_locked_documents_rels_parent_fk",
+          "tableFrom": "payload_locked_documents_rels",
+          "tableTo": "payload_locked_documents",
+          "schemaTo": "payload",
+          "columnsFrom": [
+            "parent_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "payload_locked_documents_rels_cms_users_fk": {
+          "name": "payload_locked_documents_rels_cms_users_fk",
+          "tableFrom": "payload_locked_documents_rels",
+          "tableTo": "cms_users",
+          "schemaTo": "payload",
+          "columnsFrom": [
+            "cms_users_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "payload.payload_preferences": {
+      "name": "payload_preferences",
+      "schema": "payload",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "key": {
+          "name": "key",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "value": {
+          "name": "value",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp(3) with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp(3) with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "payload_preferences_key_idx": {
+          "name": "payload_preferences_key_idx",
+          "columns": [
+            {
+              "expression": "key",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "payload_preferences_updated_at_idx": {
+          "name": "payload_preferences_updated_at_idx",
+          "columns": [
+            {
+              "expression": "updated_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "payload_preferences_created_at_idx": {
+          "name": "payload_preferences_created_at_idx",
+          "columns": [
+            {
+              "expression": "created_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "payload.payload_preferences_rels": {
+      "name": "payload_preferences_rels",
+      "schema": "payload",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "order": {
+          "name": "order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "parent_id": {
+          "name": "parent_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "path": {
+          "name": "path",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "cms_users_id": {
+          "name": "cms_users_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {
+        "payload_preferences_rels_order_idx": {
+          "name": "payload_preferences_rels_order_idx",
+          "columns": [
+            {
+              "expression": "order",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "payload_preferences_rels_parent_idx": {
+          "name": "payload_preferences_rels_parent_idx",
+          "columns": [
+            {
+              "expression": "parent_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "payload_preferences_rels_path_idx": {
+          "name": "payload_preferences_rels_path_idx",
+          "columns": [
+            {
+              "expression": "path",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "payload_preferences_rels_cms_users_id_idx": {
+          "name": "payload_preferences_rels_cms_users_id_idx",
+          "columns": [
+            {
+              "expression": "cms_users_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "payload_preferences_rels_parent_fk": {
+          "name": "payload_preferences_rels_parent_fk",
+          "tableFrom": "payload_preferences_rels",
+          "tableTo": "payload_preferences",
+          "schemaTo": "payload",
+          "columnsFrom": [
+            "parent_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "payload_preferences_rels_cms_users_fk": {
+          "name": "payload_preferences_rels_cms_users_fk",
+          "tableFrom": "payload_preferences_rels",
+          "tableTo": "cms_users",
+          "schemaTo": "payload",
+          "columnsFrom": [
+            "cms_users_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "payload.payload_migrations": {
+      "name": "payload_migrations",
+      "schema": "payload",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "batch": {
+          "name": "batch",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp(3) with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp(3) with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "payload_migrations_updated_at_idx": {
+          "name": "payload_migrations_updated_at_idx",
+          "columns": [
+            {
+              "expression": "updated_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "payload_migrations_created_at_idx": {
+          "name": "payload_migrations_created_at_idx",
+          "columns": [
+            {
+              "expression": "created_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "payload.homepage_logos_items": {
+      "name": "homepage_logos_items",
+      "schema": "payload",
+      "columns": {
+        "_order": {
+          "name": "_order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "_parent_id": {
+          "name": "_parent_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "id": {
+          "name": "id",
+          "type": "varchar",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "value": {
+          "name": "value",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {
+        "homepage_logos_items_order_idx": {
+          "name": "homepage_logos_items_order_idx",
+          "columns": [
+            {
+              "expression": "_order",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "homepage_logos_items_parent_id_idx": {
+          "name": "homepage_logos_items_parent_id_idx",
+          "columns": [
+            {
+              "expression": "_parent_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "homepage_logos_items_parent_id_fk": {
+          "name": "homepage_logos_items_parent_id_fk",
+          "tableFrom": "homepage_logos_items",
+          "tableTo": "homepage",
+          "schemaTo": "payload",
+          "columnsFrom": [
+            "_parent_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "payload.homepage_projects_items_tags": {
+      "name": "homepage_projects_items_tags",
+      "schema": "payload",
+      "columns": {
+        "_order": {
+          "name": "_order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "_parent_id": {
+          "name": "_parent_id",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "id": {
+          "name": "id",
+          "type": "varchar",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "value": {
+          "name": "value",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {
+        "homepage_projects_items_tags_order_idx": {
+          "name": "homepage_projects_items_tags_order_idx",
+          "columns": [
+            {
+              "expression": "_order",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "homepage_projects_items_tags_parent_id_idx": {
+          "name": "homepage_projects_items_tags_parent_id_idx",
+          "columns": [
+            {
+              "expression": "_parent_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "homepage_projects_items_tags_parent_id_fk": {
+          "name": "homepage_projects_items_tags_parent_id_fk",
+          "tableFrom": "homepage_projects_items_tags",
+          "tableTo": "homepage_projects_items",
+          "schemaTo": "payload",
+          "columnsFrom": [
+            "_parent_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "payload.homepage_projects_items": {
+      "name": "homepage_projects_items",
+      "schema": "payload",
+      "columns": {
+        "_order": {
+          "name": "_order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "_parent_id": {
+          "name": "_parent_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "id": {
+          "name": "id",
+          "type": "varchar",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "title": {
+          "name": "title",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Iron Crate'"
+        },
+        "category": {
+          "name": "category",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Storefront'"
+        },
+        "description": {
+          "name": "description",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'A custom sports nutrition store featuring an interactive 3-step supplement bundle builder, clear dosage accordions, and an AJAX drawer cart with real-time spend rewards.'"
+        },
+        "image_placeholder": {
+          "name": "image_placeholder",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'/portfolio/iron-crate/covers/cover.png'"
+        },
+        "link": {
+          "name": "link",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'/work/iron-crate'"
+        }
+      },
+      "indexes": {
+        "homepage_projects_items_order_idx": {
+          "name": "homepage_projects_items_order_idx",
+          "columns": [
+            {
+              "expression": "_order",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "homepage_projects_items_parent_id_idx": {
+          "name": "homepage_projects_items_parent_id_idx",
+          "columns": [
+            {
+              "expression": "_parent_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "homepage_projects_items_parent_id_fk": {
+          "name": "homepage_projects_items_parent_id_fk",
+          "tableFrom": "homepage_projects_items",
+          "tableTo": "homepage",
+          "schemaTo": "payload",
+          "columnsFrom": [
+            "_parent_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "payload.homepage_services_items": {
+      "name": "homepage_services_items",
+      "schema": "payload",
+      "columns": {
+        "_order": {
+          "name": "_order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "_parent_id": {
+          "name": "_parent_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "id": {
+          "name": "id",
+          "type": "varchar",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "no": {
+          "name": "no",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'01'"
+        },
+        "icon": {
+          "name": "icon",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'{ }'"
+        },
+        "title": {
+          "name": "title",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Custom Shopify development'"
+        },
+        "blurb": {
+          "name": "blurb",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'We build custom Shopify themes, private apps, and API integrations that match how you actually manage products and fulfill orders.'"
+        }
+      },
+      "indexes": {
+        "homepage_services_items_order_idx": {
+          "name": "homepage_services_items_order_idx",
+          "columns": [
+            {
+              "expression": "_order",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "homepage_services_items_parent_id_idx": {
+          "name": "homepage_services_items_parent_id_idx",
+          "columns": [
+            {
+              "expression": "_parent_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "homepage_services_items_parent_id_fk": {
+          "name": "homepage_services_items_parent_id_fk",
+          "tableFrom": "homepage_services_items",
+          "tableTo": "homepage",
+          "schemaTo": "payload",
+          "columnsFrom": [
+            "_parent_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "payload.homepage_case_studies_items": {
+      "name": "homepage_case_studies_items",
+      "schema": "payload",
+      "columns": {
+        "_order": {
+          "name": "_order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "_parent_id": {
+          "name": "_parent_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "id": {
+          "name": "id",
+          "type": "varchar",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "brand": {
+          "name": "brand",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Iron Crate'"
+        },
+        "industry": {
+          "name": "industry",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Sports & Fitness'"
+        },
+        "headline": {
+          "name": "headline",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Custom 3-step bundle builder and drawer cart.'"
+        },
+        "metric": {
+          "name": "metric",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'+42%'"
+        },
+        "metric_label": {
+          "name": "metric_label",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Increase in AOV'"
+        },
+        "description": {
+          "name": "description",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'We replaced a generic theme with a custom build featuring a 3-tier supplement stack builder, clinical dosage tabs, and a slide-out cart with live free-shipping rewards.'"
+        },
+        "image_placeholder": {
+          "name": "image_placeholder",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'/portfolio/iron-crate/covers/cover.png'"
+        },
+        "link": {
+          "name": "link",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'/work/iron-crate'"
+        }
+      },
+      "indexes": {
+        "homepage_case_studies_items_order_idx": {
+          "name": "homepage_case_studies_items_order_idx",
+          "columns": [
+            {
+              "expression": "_order",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "homepage_case_studies_items_parent_id_idx": {
+          "name": "homepage_case_studies_items_parent_id_idx",
+          "columns": [
+            {
+              "expression": "_parent_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "homepage_case_studies_items_parent_id_fk": {
+          "name": "homepage_case_studies_items_parent_id_fk",
+          "tableFrom": "homepage_case_studies_items",
+          "tableTo": "homepage",
+          "schemaTo": "payload",
+          "columnsFrom": [
+            "_parent_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "payload.homepage_results_items": {
+      "name": "homepage_results_items",
+      "schema": "payload",
+      "columns": {
+        "_order": {
+          "name": "_order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "_parent_id": {
+          "name": "_parent_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "id": {
+          "name": "id",
+          "type": "varchar",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "value": {
+          "name": "value",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'50+'"
+        },
+        "label": {
+          "name": "label",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Custom Shopify stores and storefronts launched'"
+        }
+      },
+      "indexes": {
+        "homepage_results_items_order_idx": {
+          "name": "homepage_results_items_order_idx",
+          "columns": [
+            {
+              "expression": "_order",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "homepage_results_items_parent_id_idx": {
+          "name": "homepage_results_items_parent_id_idx",
+          "columns": [
+            {
+              "expression": "_parent_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "homepage_results_items_parent_id_fk": {
+          "name": "homepage_results_items_parent_id_fk",
+          "tableFrom": "homepage_results_items",
+          "tableTo": "homepage",
+          "schemaTo": "payload",
+          "columnsFrom": [
+            "_parent_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "payload.homepage_testimonials_items": {
+      "name": "homepage_testimonials_items",
+      "schema": "payload",
+      "columns": {
+        "_order": {
+          "name": "_order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "_parent_id": {
+          "name": "_parent_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "id": {
+          "name": "id",
+          "type": "varchar",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "rating": {
+          "name": "rating",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 5
+        },
+        "quote": {
+          "name": "quote",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'They rebuilt our storefront in six weeks and our conversion rate jumped 38% the first month. No agency has ever moved this fast.'"
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Priya Sundaram'"
+        },
+        "role": {
+          "name": "role",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Founder, Verdant Skincare'"
+        },
+        "image": {
+          "name": "image",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'https://i.pravatar.cc/150?u=1'"
+        }
+      },
+      "indexes": {
+        "homepage_testimonials_items_order_idx": {
+          "name": "homepage_testimonials_items_order_idx",
+          "columns": [
+            {
+              "expression": "_order",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "homepage_testimonials_items_parent_id_idx": {
+          "name": "homepage_testimonials_items_parent_id_idx",
+          "columns": [
+            {
+              "expression": "_parent_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "homepage_testimonials_items_parent_id_fk": {
+          "name": "homepage_testimonials_items_parent_id_fk",
+          "tableFrom": "homepage_testimonials_items",
+          "tableTo": "homepage",
+          "schemaTo": "payload",
+          "columnsFrom": [
+            "_parent_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "payload.homepage_pricing_items_features": {
+      "name": "homepage_pricing_items_features",
+      "schema": "payload",
+      "columns": {
+        "_order": {
+          "name": "_order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "_parent_id": {
+          "name": "_parent_id",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "id": {
+          "name": "id",
+          "type": "varchar",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "value": {
+          "name": "value",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {
+        "homepage_pricing_items_features_order_idx": {
+          "name": "homepage_pricing_items_features_order_idx",
+          "columns": [
+            {
+              "expression": "_order",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "homepage_pricing_items_features_parent_id_idx": {
+          "name": "homepage_pricing_items_features_parent_id_idx",
+          "columns": [
+            {
+              "expression": "_parent_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "homepage_pricing_items_features_parent_id_fk": {
+          "name": "homepage_pricing_items_features_parent_id_fk",
+          "tableFrom": "homepage_pricing_items_features",
+          "tableTo": "homepage_pricing_items",
+          "schemaTo": "payload",
+          "columnsFrom": [
+            "_parent_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "payload.homepage_pricing_items": {
+      "name": "homepage_pricing_items",
+      "schema": "payload",
+      "columns": {
+        "_order": {
+          "name": "_order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "_parent_id": {
+          "name": "_parent_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "id": {
+          "name": "id",
+          "type": "varchar",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Starter'"
+        },
+        "tagline": {
+          "name": "tagline",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Perfect for emerging brands needing a professional launch.'"
+        },
+        "price_i_n_r": {
+          "name": "price_i_n_r",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'₹25,000'"
+        },
+        "price_u_s_d": {
+          "name": "price_u_s_d",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'$490'"
+        },
+        "unit": {
+          "name": "unit",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'1-2 weeks'"
+        },
+        "featured": {
+          "name": "featured",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false,
+          "default": false
+        },
+        "cta": {
+          "name": "cta",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Start here'"
+        }
+      },
+      "indexes": {
+        "homepage_pricing_items_order_idx": {
+          "name": "homepage_pricing_items_order_idx",
+          "columns": [
+            {
+              "expression": "_order",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "homepage_pricing_items_parent_id_idx": {
+          "name": "homepage_pricing_items_parent_id_idx",
+          "columns": [
+            {
+              "expression": "_parent_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "homepage_pricing_items_parent_id_fk": {
+          "name": "homepage_pricing_items_parent_id_fk",
+          "tableFrom": "homepage_pricing_items",
+          "tableTo": "homepage",
+          "schemaTo": "payload",
+          "columnsFrom": [
+            "_parent_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "payload.homepage_faq_items": {
+      "name": "homepage_faq_items",
+      "schema": "payload",
+      "columns": {
+        "_order": {
+          "name": "_order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "_parent_id": {
+          "name": "_parent_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "id": {
+          "name": "id",
+          "type": "varchar",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "q": {
+          "name": "q",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'How much does it cost to build a custom Shopify store in India?'"
+        },
+        "a": {
+          "name": "a",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Custom Shopify store development starts at ₹25,000 for standard theme setups. Full custom Liquid themes range between ₹50,000 and ₹75,000, while complex headless builds start at ₹1,00,000 depending on integrations and catalog size.'"
+        }
+      },
+      "indexes": {
+        "homepage_faq_items_order_idx": {
+          "name": "homepage_faq_items_order_idx",
+          "columns": [
+            {
+              "expression": "_order",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "homepage_faq_items_parent_id_idx": {
+          "name": "homepage_faq_items_parent_id_idx",
+          "columns": [
+            {
+              "expression": "_parent_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "homepage_faq_items_parent_id_fk": {
+          "name": "homepage_faq_items_parent_id_fk",
+          "tableFrom": "homepage_faq_items",
+          "tableTo": "homepage",
+          "schemaTo": "payload",
+          "columnsFrom": [
+            "_parent_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "payload.homepage": {
+      "name": "homepage",
+      "schema": "payload",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "hero_shopify_partner_based_in_gurgaon": {
+          "name": "hero_shopify_partner_based_in_gurgaon",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Shopify Partner · Based in Gurgaon'"
+        },
+        "hero_hire_shopify": {
+          "name": "hero_hire_shopify",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Hire Shopify'"
+        },
+        "hero_developer": {
+          "name": "hero_developer",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Developer'"
+        },
+        "hero_based_in_gurgaon_working_with": {
+          "name": "hero_based_in_gurgaon_working_with",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Based in Gurgaon, working with Shopify brands across India. We build fast custom stores, private apps, and headless storefronts designed to convert.'"
+        },
+        "hero_href_contact_us": {
+          "name": "hero_href_contact_us",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'/contact-us'"
+        },
+        "hero_src_icons_call_png": {
+          "name": "hero_src_icons_call_png",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'/icons/call.png'"
+        },
+        "hero_alt_call_icon": {
+          "name": "hero_alt_call_icon",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Call icon'"
+        },
+        "hero_book_a_call": {
+          "name": "hero_book_a_call",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Book a call →'"
+        },
+        "hero_href_https_wa_me919650296375": {
+          "name": "hero_href_https_wa_me919650296375",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'https://wa.me/919650296375'"
+        },
+        "hero_src_icons_whatsapp_png": {
+          "name": "hero_src_icons_whatsapp_png",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'/icons/whatsapp.png'"
+        },
+        "hero_alt_whatsapp_icon": {
+          "name": "hero_alt_whatsapp_icon",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'WhatsApp icon'"
+        },
+        "hero_whatsapp_us": {
+          "name": "hero_whatsapp_us",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'WhatsApp Us'"
+        },
+        "hero_text41": {
+          "name": "hero_text41",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'+41%'"
+        },
+        "hero_avg_conversion_lift": {
+          "name": "hero_avg_conversion_lift",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'avg. conversion lift'"
+        },
+        "hero_text180": {
+          "name": "hero_text180",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'180+'"
+        },
+        "hero_stores_shipped": {
+          "name": "hero_stores_shipped",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'stores shipped'"
+        },
+        "hero_text49": {
+          "name": "hero_text49",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'4.9'"
+        },
+        "hero_client_rating": {
+          "name": "hero_client_rating",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'client rating'"
+        },
+        "hero_nomad": {
+          "name": "hero_nomad",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Nomad'"
+        },
+        "hero_coffee_co": {
+          "name": "hero_coffee_co",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Coffee Co.'"
+        },
+        "hero_reserve_blend": {
+          "name": "hero_reserve_blend",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Reserve blend'"
+        },
+        "hero_single_origin": {
+          "name": "hero_single_origin",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Single origin'"
+        },
+        "hero_text24": {
+          "name": "hero_text24",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'$24'"
+        },
+        "hero_add_to_cart": {
+          "name": "hero_add_to_cart",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Add to cart'"
+        },
+        "hero_revenue_visit": {
+          "name": "hero_revenue_visit",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Revenue / visit'"
+        },
+        "hero_text482": {
+          "name": "hero_text482",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'$4.82'"
+        },
+        "hero_text28": {
+          "name": "hero_text28",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'▲ 28%'"
+        },
+        "hero_a": {
+          "name": "hero_a",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'A+'"
+        },
+        "hero_cwv": {
+          "name": "hero_cwv",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'CWV'"
+        },
+        "logos_trusted_by_brands_scaling_on": {
+          "name": "logos_trusted_by_brands_scaling_on",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Trusted by brands scaling on Shopify'"
+        },
+        "intro_shopify_engineering": {
+          "name": "intro_shopify_engineering",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Shopify Engineering'"
+        },
+        "intro_shopify_development_in": {
+          "name": "intro_shopify_development_in",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Shopify development in'"
+        },
+        "intro_india": {
+          "name": "intro_india",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'India'"
+        },
+        "intro_focused_on_technical_precision": {
+          "name": "intro_focused_on_technical_precision",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'focused on technical precision.'"
+        },
+        "intro_based_in_gurgaon_we_provide": {
+          "name": "intro_based_in_gurgaon_we_provide",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Based in Gurgaon, we provide dedicated'"
+        },
+        "intro_shopify_development_services": {
+          "name": "intro_shopify_development_services",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Shopify development services'"
+        },
+        "intro_to_fast_growing_dtc_brands": {
+          "name": "intro_to_fast_growing_dtc_brands",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'to fast-growing DTC brands. Instead of installing pre-made templates, we build storefronts from the ground up using custom Liquid sections, Metaobjects, and the Storefront API to match how you actually sell.'"
+        },
+        "intro_from_custom_private_apps_to": {
+          "name": "intro_from_custom_private_apps_to",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'From custom private apps to dedicated'"
+        },
+        "intro_shopify_theme_development": {
+          "name": "intro_shopify_theme_development",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Shopify theme development'"
+        },
+        "intro_the_focus_is_on_writing": {
+          "name": "intro_the_focus_is_on_writing",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "', the focus is on writing clean, lightweight code. Building native features directly into your theme removes the need for 10+ slow third-party apps. This reduces your monthly app fees, speeds up mobile page loads, and gives you total control over your store.'"
+        },
+        "intro_when_you": {
+          "name": "intro_when_you",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'When you'"
+        },
+        "intro_hire_a_shopify_expert": {
+          "name": "intro_hire_a_shopify_expert",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'hire a Shopify expert'"
+        },
+        "intro_you_work_directly_with_the": {
+          "name": "intro_you_work_directly_with_the",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "', you work directly with the developer building your store — no account managers or telephone games. Just direct technical work for theme redesigns, headless storefronts, catalog migrations, and custom ERP connections.'"
+        },
+        "projects_recent_work": {
+          "name": "projects_recent_work",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Recent Work'"
+        },
+        "projects_featured": {
+          "name": "projects_featured",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Featured '"
+        },
+        "projects_projects": {
+          "name": "projects_projects",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Projects'"
+        },
+        "projects_view_project": {
+          "name": "projects_view_project",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'View Project →'"
+        },
+        "services_what_we_do": {
+          "name": "services_what_we_do",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'What we do'"
+        },
+        "services_everything_your_store_needs_under": {
+          "name": "services_everything_your_store_needs_under",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Everything your store needs, under one roof.'"
+        },
+        "services_href_contact_us": {
+          "name": "services_href_contact_us",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'/contact-us'"
+        },
+        "services_discuss_your_project": {
+          "name": "services_discuss_your_project",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Discuss your project →'"
+        },
+        "case_studies_proven_results": {
+          "name": "case_studies_proven_results",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Proven Results'"
+        },
+        "case_studies_case_studies_that_move_the": {
+          "name": "case_studies_case_studies_that_move_the",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Case studies that move the needle.'"
+        },
+        "results_the_receipts": {
+          "name": "results_the_receipts",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'The receipts'"
+        },
+        "results_we_don_t_just_build": {
+          "name": "results_we_don_t_just_build",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'We don''t just build looks. We build for speed and conversion.'"
+        },
+        "testimonials_kind_words": {
+          "name": "testimonials_kind_words",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Kind words'"
+        },
+        "testimonials_founders_who_came_back_for": {
+          "name": "testimonials_founders_who_came_back_for",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Founders who came back for round two.'"
+        },
+        "secondary_direct_technical_work": {
+          "name": "secondary_direct_technical_work",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Direct Technical Work'"
+        },
+        "secondary_why_brands_choose_a_dedicated": {
+          "name": "secondary_why_brands_choose_a_dedicated",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Why brands choose a dedicated'"
+        },
+        "secondary_shopify_development_partner_in_india": {
+          "name": "secondary_shopify_development_partner_in_india",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Shopify development partner in India'"
+        },
+        "secondary_when_merchants_look_into": {
+          "name": "secondary_when_merchants_look_into",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'When merchants look into'"
+        },
+        "secondary_ecommerce_website_development_cost_in": {
+          "name": "secondary_ecommerce_website_development_cost_in",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'ecommerce website development cost in India'"
+        },
+        "secondary_the_real_benefit_goes_beyond": {
+          "name": "secondary_the_real_benefit_goes_beyond",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "', the real benefit goes beyond rates. It is working directly with experienced developers who understand store speed, Liquid code, and checkout conversion.'"
+        },
+        "secondary_when_you": {
+          "name": "secondary_when_you",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'When you'"
+        },
+        "secondary_hire_shopify_developers_in_india": {
+          "name": "secondary_hire_shopify_developers_in_india",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'hire Shopify developers in India'"
+        },
+        "secondary_through_scalefront_you_talk_directly": {
+          "name": "secondary_through_scalefront_you_talk_directly",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'through ScaleFront, you talk directly with the developer writing your code. There are no middle layers, account managers, or miscommunication. If a cart feature needs an update or a product feed breaks, you get it fixed right away.'"
+        },
+        "secondary_from_erp_inventory_syncing_and": {
+          "name": "secondary_from_erp_inventory_syncing_and",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'From ERP inventory syncing and warehouse connections to custom Online Store 2.0 themes and Next.js headless storefronts, we focus on clean code that holds up under high traffic. Your store stays fast during sales and peak seasons without surprise crashes.'"
+        },
+        "pricing_engagements": {
+          "name": "pricing_engagements",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Engagements'"
+        },
+        "pricing_ways_to_work_together": {
+          "name": "pricing_ways_to_work_together",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Ways to work together.'"
+        },
+        "pricing_fixed_scope_or_embedded_every": {
+          "name": "pricing_fixed_scope_or_embedded_every",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Fixed-scope or embedded — every engagement starts with a free store audit.'"
+        },
+        "pricing_inr": {
+          "name": "pricing_inr",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'🇮🇳 INR (₹)'"
+        },
+        "pricing_usd": {
+          "name": "pricing_usd",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'🌎 USD ($)'"
+        },
+        "pricing_most_picked": {
+          "name": "pricing_most_picked",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Most picked'"
+        },
+        "pricing_from": {
+          "name": "pricing_from",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'from'"
+        },
+        "pricing_href_contact_us": {
+          "name": "pricing_href_contact_us",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'/contact-us'"
+        },
+        "pricing_rarr": {
+          "name": "pricing_rarr",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'&rarr;'"
+        },
+        "faq_faq": {
+          "name": "faq_faq",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'FAQ'"
+        },
+        "faq_frequently_asked_questions": {
+          "name": "faq_frequently_asked_questions",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Frequently asked questions'"
+        },
+        "faq_common_questions_about_pricing_timelines": {
+          "name": "faq_common_questions_about_pricing_timelines",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Common questions about pricing, timelines, custom themes, and our development process.'"
+        },
+        "contact_let_s_build_the_store": {
+          "name": "contact_let_s_build_the_store",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Let''s build the store your brand deserves.'"
+        },
+        "contact_tell_us_where_you_are": {
+          "name": "contact_tell_us_where_you_are",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Tell us where you are today. We''ll send back a free audit with the three highest-impact wins — no pitch deck, no fluff.'"
+        },
+        "contact_href_contact_us": {
+          "name": "contact_href_contact_us",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'/contact-us'"
+        },
+        "contact_get_your_free_audit": {
+          "name": "contact_get_your_free_audit",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Get your free audit →'"
+        },
+        "contact_href_contact_us2": {
+          "name": "contact_href_contact_us2",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'/contact-us'"
+        },
+        "contact_book_a_call": {
+          "name": "contact_book_a_call",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Book a call'"
+        },
+        "contact_response_time": {
+          "name": "contact_response_time",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'RESPONSE TIME'"
+        },
+        "contact_text24h": {
+          "name": "contact_text24h",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'< 24h'"
+        },
+        "contact_every_inquiry_gets_a_direct": {
+          "name": "contact_every_inquiry_gets_a_direct",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Every inquiry gets a direct reply from a developer — never a bot.'"
+        },
+        "contact_based_in": {
+          "name": "contact_based_in",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Based in'"
+        },
+        "contact_gurgaon_india": {
+          "name": "contact_gurgaon_india",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Gurgaon · India'"
+        },
+        "contact_availability": {
+          "name": "contact_availability",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Availability'"
+        },
+        "contact_open_for_new_builds": {
+          "name": "contact_open_for_new_builds",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Open for new builds'"
+        },
+        "seo_title": {
+          "name": "seo_title",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'Shopify Development Agency & Experts'"
+        },
+        "seo_description": {
+          "name": "seo_description",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'ScaleFront is an elite Shopify development agency. We engineer custom themes, private apps, headless stores, and CRO fixes for scaling brands.'"
+        },
+        "seo_image": {
+          "name": "seo_image",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'https://www.scalefront.io/og-image.jpg'"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp(3) with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp(3) with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {
+    "payload": "payload"
+  },
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "id": "7bfbc586-5a96-40b5-b797-3b9583c71df3",
+  "prevId": "00000000-0000-0000-0000-000000000000"
+}

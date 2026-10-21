@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-10-02T10:33:05.444Z",
+  "timestamp": "2026-10-19T17:09:13.187Z",
   "totalPages": 75,
   "summary": {
-    "optimal": 62,
+    "optimal": 60,
     "warnings": 13,
-    "errors": 0
+    "errors": 2
   },
-  "passed": true,
+  "passed": false,
   "results": [
     {
       "source": "/Users/sanchitjain/vscode_files/NextAgency/next-agency/src/content/blog/ai-vs-traditional-product-recommendations-shopify.md",
@@ -179,12 +179,12 @@
     {
       "source": "/Users/sanchitjain/vscode_files/NextAgency/next-agency/src/content/blog/headless-woocommerce-with-nextjs.md",
       "url": "/blog/headless-woocommerce-with-nextjs",
-      "rawTitle": "Headless WooCommerce with Next.js: Complete Migration Guide",
-      "renderedTitle": "Headless WooCommerce with Next.js: Complete Migration Guide",
-      "charCount": 59,
-      "pixelEstimate": 507,
-      "status": "optimal",
-      "message": "Optimal length (50–60 characters)",
+      "rawTitle": "Headless WooCommerce with Next.js: Architecture, Setup and Migration Guide",
+      "renderedTitle": "Headless WooCommerce with Next.js: Architecture, Setup and Migration Guide",
+      "charCount": 74,
+      "pixelEstimate": 629,
+      "status": "error",
+      "message": "Too long (74 chars, ~629px). Google almost always truncates or rewrites titles over 70 chars.",
       "isDuplicate": false,
       "duplicateSources": []
     },
@@ -597,6 +597,30 @@
       "duplicateSources": []
     },
     {
+      "source": "/Users/sanchitjain/vscode_files/NextAgency/next-agency/src/app/(app)/portfolio/page.tsx",
+      "url": "/portfolio",
+      "rawTitle": "Shopify Storefront & App Portfolio",
+      "renderedTitle": "Shopify Storefront & App Portfolio | ScaleFront",
+      "charCount": 47,
+      "pixelEstimate": 392,
+      "status": "warning",
+      "message": "Slightly short (47 chars, ~392px). Target 50–60 characters to maximize keywords.",
+      "isDuplicate": false,
+      "duplicateSources": []
+    },
+    {
+      "source": "/Users/sanchitjain/vscode_files/NextAgency/next-agency/src/app/(app)/preview/homepage/page.tsx",
+      "url": "/preview/homepage",
+      "rawTitle": "Homepage Preview",
+      "renderedTitle": "Homepage Preview | ScaleFront",
+      "charCount": 29,
+      "pixelEstimate": 253,
+      "status": "error",
+      "message": "Too short (29 chars, ~253px). Absolute minimum is 30 chars. Wasting valuable SERP real estate.",
+      "isDuplicate": false,
+      "duplicateSources": []
+    },
+    {
       "source": "/Users/sanchitjain/vscode_files/NextAgency/next-agency/src/app/(app)/pricing/page.tsx",
       "url": "/pricing",
       "rawTitle": "Shopify Development Pricing & Service Plans",
@@ -881,30 +905,6 @@
       "pixelEstimate": 421,
       "status": "warning",
       "message": "Slightly short (48 chars, ~421px). Target 50–60 characters to maximize keywords.",
-      "isDuplicate": false,
-      "duplicateSources": []
-    },
-    {
-      "source": "/Users/sanchitjain/vscode_files/NextAgency/next-agency/src/app/page.tsx",
-      "url": "/",
-      "rawTitle": "Shopify Development Agency & Experts",
-      "renderedTitle": "Shopify Development Agency & Experts | ScaleFront",
-      "charCount": 49,
-      "pixelEstimate": 431,
-      "status": "warning",
-      "message": "Slightly short (49 chars, ~431px). Target 50–60 characters to maximize keywords.",
-      "isDuplicate": false,
-      "duplicateSources": []
-    },
-    {
-      "source": "/Users/sanchitjain/vscode_files/NextAgency/next-agency/src/app/portfolio/page.tsx",
-      "url": "/portfolio",
-      "rawTitle": "Shopify Store Transformations Portfolio",
-      "renderedTitle": "Shopify Store Transformations Portfolio | ScaleFront",
-      "charCount": 52,
-      "pixelEstimate": 428,
-      "status": "optimal",
-      "message": "Optimal length (50–60 characters)",
       "isDuplicate": false,
       "duplicateSources": []
     }

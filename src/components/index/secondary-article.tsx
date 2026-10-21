@@ -1,4 +1,9 @@
-export default function SecondaryArticle() {
+import { homepageDefaults, type HomepageContent } from "@/content/homepage";
+export default function SecondaryArticle({
+  content = homepageDefaults.secondary,
+}: {
+  content?: HomepageContent["secondary"];
+}) {
   return (
     <section className="max-w-[1200px] mx-auto px-7 py-16 lg:py-24">
       <div
@@ -13,7 +18,7 @@ export default function SecondaryArticle() {
         />
 
         <div className="text-[13px] font-semibold tracking-[0.14em] uppercase text-[var(--sf-gold)] mb-[16px]">
-          Direct Technical Work
+          {content.directTechnicalWork}
         </div>
 
         <h2
@@ -25,39 +30,29 @@ export default function SecondaryArticle() {
             textWrap: "balance",
           }}
         >
-          Why brands choose a dedicated{" "}
+          {content.whyBrandsChooseADedicated}{" "}
           <span className="text-[var(--sf-primary)]">
-            Shopify development partner in India
+            {content.shopifyDevelopmentPartnerInIndia}
           </span>
           .
         </h2>
 
         <div className="space-y-6 max-w-[800px] text-[15px] md:text-[17px] leading-[1.6] text-[color-mix(in_srgb,var(--sf-paper)_80%,transparent)] font-medium">
           <p>
-            When merchants look into{" "}
+            {content.whenMerchantsLookInto}{" "}
             <strong className="text-white font-bold">
-              ecommerce website development cost in India
+              {content.ecommerceWebsiteDevelopmentCostIn}
             </strong>
-            , the real benefit goes beyond rates. It is working directly with
-            experienced developers who understand store speed, Liquid code, and
-            checkout conversion.
+            {content.theRealBenefitGoesBeyond}
           </p>
           <p>
-            When you{" "}
+            {content.whenYou}{" "}
             <strong className="text-white font-bold">
-              hire Shopify developers in India
+              {content.hireShopifyDevelopersInIndia}
             </strong>{" "}
-            through ScaleFront, you talk directly with the developer writing
-            your code. There are no middle layers, account managers, or
-            miscommunication. If a cart feature needs an update or a product
-            feed breaks, you get it fixed right away.
+            {content.throughScalefrontYouTalkDirectly}
           </p>
-          <p>
-            From ERP inventory syncing and warehouse connections to custom
-            Online Store 2.0 themes and Next.js headless storefronts, we focus
-            on clean code that holds up under high traffic. Your store stays
-            fast during sales and peak seasons without surprise crashes.
-          </p>
+          <p>{content.fromErpInventorySyncingAnd}</p>
         </div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+import { CONTACT_INFO } from "@/config/contact";
 import { FullAuditResults } from '../types';
 
 interface EmailOptions {
@@ -23,7 +24,7 @@ export async function sendEmail(options: EmailOptions): Promise<boolean> {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: process.env.EMAIL_FROM || 'Earn Auditor <audit@scalefront.io>',
+        from: process.env.EMAIL_FROM || `Earn Auditor <${CONTACT_INFO.auditSenderEmail}>`,
         to: options.to,
         subject: options.subject,
         html: options.html,

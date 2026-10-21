@@ -1,6 +1,12 @@
+import { ContactLink } from "@/components/contact/ContactLink";
 import Link from "next/link";
+import { homepageDefaults, type HomepageContent } from "@/content/homepage";
 
-export default function Hero() {
+export default function Hero({
+  content = homepageDefaults.hero,
+}: {
+  content?: HomepageContent["hero"];
+}) {
   return (
     <section
       id="top"
@@ -22,7 +28,7 @@ export default function Hero() {
               />
             </span>
             <span className="text-[13px] font-semibold tracking-[0.02em] text-[var(--sf-ink-soft)]">
-              Shopify Partner · Based in Gurgaon
+              {content.shopifyPartnerBasedInGurgaon}
             </span>
           </div>
 
@@ -36,9 +42,9 @@ export default function Hero() {
               textWrap: "balance",
             }}
           >
-            Hire Shopify{" "}
+            {content.hireShopify}{" "}
             <span className="relative whitespace-nowrap text-[var(--sf-primary)]">
-              Developer
+              {content.developer}
               <span
                 className="absolute left-0 right-0 bottom-[6px] h-3 -z-[1]"
                 style={{
@@ -51,35 +57,34 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p className="mb-[34px] max-w-[520px] text-[19px] leading-[1.42] text-[var(--sf-ink-soft)]">
-            Based in Gurgaon, working with Shopify brands across India. We build
-            fast custom stores, private apps, and headless storefronts designed to convert.
+            {content.basedInGurgaonWorkingWith}
           </p>
 
           <div className="flex flex-wrap gap-[14px] items-center">
             <Link
-              href="/contact-us"
+              href={content.hrefContactUs}
               className="group inline-flex items-center gap-2.5 bg-[var(--sf-primary)] text-white font-semibold text-[16px] leading-none px-[26px] py-[15px] border-2 border-[var(--sf-ink)] transition-all duration-100 hover:translate-x-[2px] hover:translate-y-[2px] shadow-[5px_5px_0_var(--sf-ink)] hover:shadow-[3px_3px_0_var(--sf-ink)] hover:bg-[var(--sf-primary-deep)]"
             >
               <img
-                src="/icons/call.png"
-                alt="Call icon"
+                src={content.srcIconsCallPng}
+                alt={content.altCallIcon}
                 className="w-4 h-4 object-contain brightness-0 invert"
               />
-              Book a call →
+              {content.bookACall}
             </Link>
-            <Link
-              href="https://wa.me/919650296375"
+            <ContactLink
+              channel="whatsapp"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 bg-[#1FA855] text-white border-2 border-[var(--sf-ink)] font-semibold text-[16px] leading-none px-6 py-[15px] transition-all duration-100 hover:translate-x-[2px] hover:translate-y-[2px] shadow-[5px_5px_0_var(--sf-ink)] hover:shadow-[3px_3px_0_var(--sf-ink)]"
             >
               <img
-                src="/icons/whatsapp.png"
-                alt="WhatsApp icon"
+                src={content.srcIconsWhatsappPng}
+                alt={content.altWhatsappIcon}
                 className="w-4.5 h-4.5 object-contain"
               />
-              WhatsApp Us
-            </Link>
+              {content.whatsappUs}
+            </ContactLink>
           </div>
 
           <div className="flex gap-9 mt-7 flex-wrap">
@@ -91,10 +96,10 @@ export default function Hero() {
                   fontWeight: 700,
                 }}
               >
-                +41%
+                {content.text41}
               </div>
               <div className="text-[13.5px] text-[var(--sf-ink-mute)] font-medium">
-                avg. conversion lift
+                {content.avgConversionLift}
               </div>
             </div>
             <div className="w-px bg-[var(--sf-line)]" />
@@ -106,10 +111,10 @@ export default function Hero() {
                   fontWeight: 700,
                 }}
               >
-                180+
+                {content.text180}
               </div>
               <div className="text-[13.5px] text-[var(--sf-ink-mute)] font-medium">
-                stores shipped
+                {content.storesShipped}
               </div>
             </div>
             <div className="w-px bg-[var(--sf-line)]" />
@@ -121,11 +126,11 @@ export default function Hero() {
                   fontWeight: 700,
                 }}
               >
-                4.9
+                {content.text49}
                 <span className="text-[18px] text-[var(--sf-gold)]">★</span>
               </div>
               <div className="text-[13.5px] text-[var(--sf-ink-mute)] font-medium">
-                client rating
+                {content.clientRating}
               </div>
             </div>
           </div>
@@ -175,16 +180,16 @@ export default function Hero() {
                   fontWeight: 700,
                 }}
               >
-                Nomad
+                {content.nomad}
                 <br />
-                Coffee Co.
+                {content.coffeeCo}
               </span>
             </div>
             <div className="flex justify-between items-center mt-[11px]">
               <div>
-                <div className="font-bold text-sm">Reserve blend</div>
+                <div className="font-bold text-sm">{content.reserveBlend}</div>
                 <div className="text-xs text-[var(--sf-ink-mute)]">
-                  Single origin
+                  {content.singleOrigin}
                 </div>
               </div>
               <div
@@ -194,11 +199,11 @@ export default function Hero() {
                   fontWeight: 700,
                 }}
               >
-                $24
+                {content.text24}
               </div>
             </div>
             <div className="mt-[10px] bg-[var(--sf-ink)] text-white text-center text-[12.5px] font-semibold py-[9px]">
-              Add to cart
+              {content.addToCart}
             </div>
           </div>
 
@@ -214,7 +219,7 @@ export default function Hero() {
             }
           >
             <div className="text-xs font-semibold tracking-[0.04em] uppercase text-[var(--sf-ink-mute)]">
-              Revenue / visit
+              {content.revenueVisit}
             </div>
             <div className="flex items-baseline gap-2 mt-[6px]">
               <span
@@ -224,10 +229,10 @@ export default function Hero() {
                   fontWeight: 700,
                 }}
               >
-                $4.82
+                {content.text482}
               </span>
               <span className="text-[var(--sf-sage)] font-bold text-[13px]">
-                ▲ 28%
+                {content.text28}
               </span>
             </div>
             <div className="flex gap-1 items-end h-9 mt-[10px]">
@@ -263,9 +268,9 @@ export default function Hero() {
                 fontWeight: 800,
               }}
             >
-              A+
+              {content.a}
               <br />
-              <span className="text-[8px] font-semibold">CWV</span>
+              <span className="text-[8px] font-semibold">{content.cwv}</span>
             </span>
           </div>
         </div>

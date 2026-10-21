@@ -1,9 +1,11 @@
+import { CONTACT_INFO } from "@/config/contact";
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Header } from "@/components/header-footer/Header";
 import Footer from "@/components/header-footer/Footer";
 import FloatingContact from "@/components/index/floating-contact";
-import "./globals.css";
+import CookieConsent from "@/components/shared/CookieConsent";
+import "../globals.css";
 import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
@@ -91,7 +93,7 @@ export const metadata: Metadata = {
     "geo.region": "IN",
     "geo.country": "India",
     "geo.placename": "India",
-    contact: "hello@scalefront.io",
+    contact: CONTACT_INFO.email,
     distribution: "global",
   },
 };
@@ -118,23 +120,23 @@ export default function RootLayout({
         image: "https://www.scalefront.io/logo/updated_logo.png",
         logo: "https://www.scalefront.io/logo/updated_logo.png",
         priceRange: "$$",
-        telephone: "+919650296375",
-        email: "hello@scalefront.io",
+        telephone: CONTACT_INFO.telInternational,
+        email: CONTACT_INFO.email,
         address: {
           "@type": "PostalAddress",
           addressCountry: "IN",
         },
         contactPoint: {
           "@type": "ContactPoint",
-          telephone: "+919650296375",
+          telephone: CONTACT_INFO.telInternational,
           contactType: "customer service",
-          email: "hello@scalefront.io",
+          email: CONTACT_INFO.email,
           availableLanguage: ["English", "Hindi"],
         },
         sameAs: [
-          "https://linkedin.com/company/scalefront",
-          "https://twitter.com/scalefront",
-          "https://github.com/scalefront",
+          CONTACT_INFO.companyLinkedin,
+          CONTACT_INFO.twitter,
+          CONTACT_INFO.github,
         ],
         makesOffer: [
           {
@@ -179,6 +181,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <FloatingContact />
+        <CookieConsent />
         <Analytics />
 
         {process.env.NODE_ENV === "production" &&

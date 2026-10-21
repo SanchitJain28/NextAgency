@@ -1,3 +1,4 @@
+import { CONTACT_INFO } from "@/config/contact";
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { createContact } from "@/lib/db";
@@ -33,7 +34,7 @@ export async function POST(request: NextRequest) {
     if (process.env.RESEND_API_KEY) {
       try {
         const senderFrom =
-          process.env.EMAIL_FROM || "ScaleFront <contact@scalefront.io>";
+          process.env.EMAIL_FROM || `ScaleFront <${CONTACT_INFO.contactSenderEmail}>`;
         const adminTo =
           process.env.CONTACT_NOTIFICATION_EMAIL || "mythichuman28@gmail.com";
         const appUrl =

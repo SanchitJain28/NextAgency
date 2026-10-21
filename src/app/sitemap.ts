@@ -157,6 +157,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     // Individual project pages & Case Studies
     {
+      url: `${baseUrl}/work/360-alpha`,
+      lastModified: lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      images: [
+        `${baseUrl}/portfolio/360-alpha/covers/cover.png`,
+        `${baseUrl}/portfolio/360-alpha/collection/collection-1.png`,
+        `${baseUrl}/portfolio/360-alpha/product/product-1.png`,
+        `${baseUrl}/portfolio/360-alpha/product/product-2.png`,
+        `${baseUrl}/portfolio/360-alpha/cart/cart-1.png`,
+      ],
+    },
+    {
       url: `${baseUrl}/work/industrial-supply-direct`,
       lastModified: lastModified,
       changeFrequency: "monthly",

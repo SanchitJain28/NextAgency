@@ -11,6 +11,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           '/blog?*',
           '/private/',
+          '/preview/',
           '/admin/',
           '/api/',
           '/dashboard/',
@@ -22,6 +23,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           '/blog?*',
           '/private/',
+          '/preview/',
           '/admin/',
           '/api/',
           '/dashboard/',

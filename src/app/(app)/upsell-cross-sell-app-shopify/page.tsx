@@ -1,3 +1,4 @@
+import { CONTACT_INFO } from "@/config/contact";
 import { Metadata } from "next";
 import LandingPageClient from "./LandingPageClient";
 
@@ -95,7 +96,7 @@ export default function Page() {
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Customer Support",
-      email: "support@scalefront.io",
+      email: CONTACT_INFO.supportEmail,
     },
   };
 

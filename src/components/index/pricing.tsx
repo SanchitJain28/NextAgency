@@ -2,152 +2,20 @@
 
 import Link from "next/link";
 import { useGeo } from "@/hooks";
+import { homepageDefaults, type HomepageContent } from "@/content/homepage";
 
-const PRICING = [
-  {
-    name: "Starter",
-    tagline: "Perfect for emerging brands needing a professional launch.",
-    priceINR: "₹25,000",
-    priceUSD: "$490",
-    unit: "1-2 weeks",
-    featured: false,
-    cta: "Start here",
-    features: [
-      "Up to 4 core pages (Home, Product, Collection, About)",
-      "Standard eCommerce functionality",
-      "Premium template setup & configuration",
-      "Basic CRO optimization",
-      "1 week post-launch support",
-      "3 revisions free",
-      "Content upload",
-      "Number of products: 10",
-      "Social media icons",
-      "Payment integration",
-    ],
-    bg: "var(--sf-paper-raised)",
-    ink: "var(--sf-ink)",
-    mute: "var(--sf-ink-mute)",
-    feat: "var(--sf-ink-soft)",
-    border: "var(--sf-line)",
-    shadow: "var(--sf-shadow-sm)",
-    check: "var(--sf-sage-soft)",
-    checkink: "var(--sf-sage-deep)",
-    cta_bg: "var(--sf-ink)",
-    cta_ink: "#fff",
-  },
-  {
-    name: "Growth",
-    tagline: "Custom design and development for scaling DTC brands.",
-    priceINR: "₹50,000",
-    priceUSD: "$990",
-    unit: "2-3 weeks",
-    featured: true,
-    cta: "Book Growth",
-    features: [
-      "Custom Figma-to-Shopify conversion",
-      "Custom Liquid & CSS frontend design",
-      "Interactive cart & PDP animations",
-      "Speed & Core Web Vitals optimization",
-      "1 month post-launch support",
-      "5 revisions free",
-      "Payment gateway integration",
-      "Content upload",
-      "Number of products: 25",
-      "Speed optimization",
-      "Hosting setup and domain connect",
-      "Social media icons",
-      "Shopify app configuration",
-    ],
-    bg: "var(--sf-ink)",
-    ink: "#fff",
-    mute: "rgba(255,255,255,.66)",
-    feat: "rgba(255,255,255,.86)",
-    border: "var(--sf-ink)",
-    shadow: "var(--sf-shadow-lg)",
-    check: "rgba(224,162,51,.2)",
-    checkink: "var(--sf-gold)",
-    cta_bg: "var(--sf-gold)",
-    cta_ink: "var(--sf-ink)",
-  },
-  {
-    name: "Scale",
-    tagline:
-      "Complex functionality and custom features for high-volume stores.",
-    priceINR: "₹75,000",
-    priceUSD: "$1,490",
-    unit: "3-4 weeks",
-    featured: false,
-    cta: "Talk to us",
-    features: [
-      "Everything in Growth, plus:",
-      "Custom product features (Subscriptions, Bundles, Box Builders)",
-      "Advanced API & ERP integrations",
-      "Custom Shopify App development if required",
-      "3 months dedicated website support",
-      "10 revisions free",
-      "Payment gateway integration",
-      "Content upload",
-      "Number of products: 50",
-      "Speed optimization",
-      "Hosting setup and domain connect",
-      "Social media icons",
-      "Shopify app configuration",
-    ],
-    bg: "var(--sf-paper-raised)",
-    ink: "var(--sf-ink)",
-    mute: "var(--sf-ink-mute)",
-    feat: "var(--sf-ink-soft)",
-    border: "var(--sf-line)",
-    shadow: "var(--sf-shadow-sm)",
-    check: "var(--sf-sage-soft)",
-    checkink: "var(--sf-sage-deep)",
-    cta_bg: "var(--sf-ink)",
-    cta_ink: "#fff",
-  },
-  {
-    name: "Enterprise",
-    tagline: "Headless storefronts built with Next.js and Shopify.",
-    priceINR: "₹1,00,000+",
-    priceUSD: "$2,490+",
-    unit: "4-6+ weeks",
-    featured: false,
-    cta: "Talk to us",
-    features: [
-      "Headless storefront (Next.js or Medusa.js)",
-      "Sub-second page load times",
-      "Custom URL structures & international routing",
-      "Full Data & SEO Migration (zero downtime)",
-      "3 months post-launch support",
-      "Unlimited revisions",
-      "Payment gateway integration",
-      "Content upload",
-      "Number of products: 100+",
-      "Speed optimization",
-      "Hosting setup and domain connect",
-      "Social media icons",
-      "Shopify app configuration",
-    ],
-    bg: "var(--sf-paper-raised)",
-    ink: "var(--sf-ink)",
-    mute: "var(--sf-ink-mute)",
-    feat: "var(--sf-ink-soft)",
-    border: "var(--sf-line)",
-    shadow: "var(--sf-shadow-sm)",
-    check: "var(--sf-sage-soft)",
-    checkink: "var(--sf-sage-deep)",
-    cta_bg: "var(--sf-ink)",
-    cta_ink: "#fff",
-  },
-];
-
-export default function Pricing() {
+export default function Pricing({
+  content = homepageDefaults.pricing,
+}: {
+  content?: HomepageContent["pricing"];
+}) {
   const { isIndia, setManualCountry } = useGeo();
 
   return (
     <section id="pricing" className="max-w-[1200px] mx-auto px-7 py-[60px]">
       <div className="text-center max-w-[640px] mx-auto mb-8">
         <div className="text-[13px] font-semibold tracking-[0.14em] uppercase text-[var(--sf-primary)] mb-[14px]">
-          Engagements
+          {content.engagements}
         </div>
         <h2
           className="m-0 mb-3 leading-[1.02] tracking-[-0.03em] text-[var(--sf-ink)]"
@@ -157,11 +25,10 @@ export default function Pricing() {
             fontSize: "clamp(32px, 4.4vw, 52px)",
           }}
         >
-          Ways to work together.
+          {content.waysToWorkTogether}
         </h2>
         <p className="m-0 text-[17px] text-[var(--sf-ink-soft)] leading-[1.6] mb-5">
-          Fixed-scope or embedded — every engagement starts with a free store
-          audit.
+          {content.fixedScopeOrEmbeddedEvery}
         </p>
 
         {/* Currency Switcher Badge */}
@@ -175,7 +42,7 @@ export default function Pricing() {
                 : "hover:bg-black/5 text-[var(--sf-ink)]"
             }`}
           >
-            🇮🇳 INR (₹)
+            {content.inr}
           </button>
           <button
             type="button"
@@ -186,13 +53,13 @@ export default function Pricing() {
                 : "hover:bg-black/5 text-[var(--sf-ink)]"
             }`}
           >
-            🌎 USD ($)
+            {content.usd}
           </button>
         </div>
       </div>
 
       <div className="flex md:grid md:grid-cols-2 gap-5 overflow-x-auto snap-x snap-mandatory pb-4 md:pb-0 brutal-scrollbar scroll-pl-7 -mx-7 px-7 md:mx-0 md:px-0 md:scroll-pl-0">
-        {PRICING.map((p, i) => {
+        {content.items.map((p, i) => {
           const currentPrice = isIndia ? p.priceINR : p.priceUSD;
 
           return (
@@ -209,7 +76,7 @@ export default function Pricing() {
             >
               {p.featured && (
                 <span className="absolute top-[22px] right-[22px] bg-[var(--sf-gold)] text-[var(--sf-ink)] text-[12px] font-bold tracking-[0.03em] px-3 py-1.5 uppercase">
-                  Most picked
+                  {content.mostPicked}
                 </span>
               )}
 
@@ -231,7 +98,7 @@ export default function Pricing() {
 
               <div className="flex items-baseline gap-1.5 my-6 mb-1">
                 <span className="text-[15px]" style={{ color: p.mute }}>
-                  from
+                  {content.from}
                 </span>
                 <span
                   className="text-[44px] tracking-[-0.04em]"
@@ -270,7 +137,7 @@ export default function Pricing() {
 
               <div className="mt-auto">
                 <Link
-                  href="/contact-us"
+                  href={content.hrefContactUs}
                   className="block w-full text-center py-3 px-4 font-bold text-[14px] tracking-[0.02em] transition-transform hover:-translate-y-0.5 active:translate-y-0"
                   style={{
                     background: p.cta_bg,
@@ -278,7 +145,7 @@ export default function Pricing() {
                     fontFamily: "'Inter', sans-serif",
                   }}
                 >
-                  {p.cta} &rarr;
+                  {p.cta} {content.rarr}
                 </Link>
               </div>
             </article>

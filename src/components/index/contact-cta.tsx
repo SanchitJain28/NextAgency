@@ -1,6 +1,11 @@
 import Link from "next/link";
+import { homepageDefaults, type HomepageContent } from "@/content/homepage";
 
-export default function ContactCTA() {
+export default function ContactCTA({
+  content = homepageDefaults.contact,
+}: {
+  content?: HomepageContent["contact"];
+}) {
   return (
     <section
       id="contact"
@@ -36,24 +41,23 @@ export default function ContactCTA() {
                 textWrap: "balance",
               }}
             >
-              Let&apos;s build the store your brand deserves.
+              {content.letSBuildTheStore}
             </h2>
             <p className="m-0 mb-[30px] text-[18px] leading-[1.6] max-w-[480px] text-white/90">
-              Tell us where you are today. We&apos;ll send back a free audit
-              with the three highest-impact wins — no pitch deck, no fluff.
+              {content.tellUsWhereYouAre}
             </p>
             <div className="flex flex-wrap gap-3.5">
               <Link
-                href="/contact-us"
+                href={content.hrefContactUs}
                 className="inline-flex items-center gap-2.5 bg-white text-[var(--sf-primary-deep)] font-bold text-[16px] leading-none px-7 py-[15px] border-2 border-[var(--sf-ink)] transition-all duration-100 shadow-[5px_5px_0_var(--sf-ink)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0_var(--sf-ink)]"
               >
-                Get your free audit →
+                {content.getYourFreeAudit}
               </Link>
               <Link
-                href="/contact-us"
+                href={content.hrefContactUs2}
                 className="inline-flex items-center gap-2.5 bg-white/10 text-white font-semibold text-[16px] leading-none px-[26px] py-[14px] border-2 border-white transition-all duration-100 shadow-[4px_4px_0_rgba(0,0,0,.35)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_rgba(0,0,0,.35)] hover:bg-[rgba(255,255,255,.26)]"
               >
-                Book a call
+                {content.bookACall}
               </Link>
             </div>
           </div>
@@ -63,7 +67,7 @@ export default function ContactCTA() {
               className="text-[12px] tracking-[0.05em] text-white/85 mb-4"
               style={{ fontFamily: "'Geist Mono', monospace" }}
             >
-              RESPONSE TIME
+              {content.responseTime}
             </div>
             <div
               className="leading-none tracking-[-0.03em] text-[52px]"
@@ -72,19 +76,19 @@ export default function ContactCTA() {
                 fontWeight: 700,
               }}
             >
-              &lt; 24h
+              {content.text24h}
             </div>
             <div className="text-[14.5px] text-white/85 mt-2 leading-[1.5]">
-              Every inquiry gets a direct reply from a developer — never a bot.
+              {content.everyInquiryGetsADirect}
             </div>
             <div className="h-px bg-white/25 my-[22px]" />
             <div className="flex justify-between text-[14px]">
-              <span className="text-white/80">Based in</span>
-              <span className="font-semibold">Gurgaon · India</span>
+              <span className="text-white/80">{content.basedIn}</span>
+              <span className="font-semibold">{content.gurgaonIndia}</span>
             </div>
             <div className="flex justify-between text-[14px] mt-2.5">
-              <span className="text-white/80">Availability</span>
-              <span className="font-semibold">Open for new builds</span>
+              <span className="text-white/80">{content.availability}</span>
+              <span className="font-semibold">{content.openForNewBuilds}</span>
             </div>
           </div>
         </div>

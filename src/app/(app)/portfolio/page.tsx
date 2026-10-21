@@ -1,28 +1,28 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PortfolioViewer } from "@/components/portfolio/portfolio-viewer";
-import { ArrowRight, CheckCircle2, Zap, Layout, ShieldCheck, Sparkles } from "lucide-react";
+import FeaturedWork from "@/components/index/featured-work";
+import { ArrowRight, Zap, Layout, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Shopify Store Transformations Portfolio",
+  title: "Shopify Storefront & App Portfolio",
   description:
-    "Explore before-and-after Shopify transformations, custom theme builds, and performance case studies engineered by the ScaleFront development team.",
+    "Explore ScaleFront's Shopify storefronts and apps, including custom themes, bundle builders, B2B stores, and product recommendation tools.",
   alternates: {
     canonical: "/portfolio",
   },
   openGraph: {
-    title: "Shopify Store Transformations Portfolio",
+    title: "Shopify Storefront & App Portfolio",
     description:
-      "Explore before-and-after Shopify transformations, custom theme builds, and performance case studies engineered by the ScaleFront development team.",
+      "Explore ScaleFront's Shopify storefronts and apps, including custom themes, bundle builders, B2B stores, and product recommendation tools.",
     url: "https://www.scalefront.io/portfolio",
     siteName: "ScaleFront",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shopify Store Transformations Portfolio",
+    title: "Shopify Storefront & App Portfolio",
     description:
-      "Explore before-and-after Shopify transformations, custom theme builds, and performance case studies engineered by the ScaleFront development team.",
+      "Explore ScaleFront's Shopify storefronts and apps, including custom themes, bundle builders, B2B stores, and product recommendation tools.",
   },
 };
 
@@ -42,22 +42,21 @@ export default function PortfolioPage() {
 
           <div className="space-y-3 max-w-4xl">
             <span className="inline-block px-3 py-1 bg-[var(--sf-gold-soft)] text-[var(--sf-ink)] text-xs font-mono font-bold uppercase tracking-wider border border-[var(--sf-ink)] shadow-[2px_2px_0_var(--sf-ink)]">
-              Before & After Case Studies
+              Shopify Storefronts & Apps
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight uppercase leading-tight">
-              Shopify Store Transformations & Visual Portfolio
+              Our Shopify Project Portfolio
             </h1>
             <p className="text-base sm:text-lg text-[var(--sf-ink-soft)] leading-relaxed">
-              Compare real-world merchant transformations before and after partnering with ScaleFront. We eliminate third-party app bloat, re-engineer bespoke Liquid architectures, and design high-converting e-commerce experiences engineered for sub-second page loads.
+              Explore our Shopify storefronts and apps, from custom themes and interactive bundle builders to B2B catalogs and product recommendation tools.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Interactive Drag-to-Compare Visual Showcase */}
-      <section className="border-b-2 border-[var(--sf-ink)]">
-        <PortfolioViewer />
-      </section>
+      <div className="border-b-2 border-[var(--sf-ink)]">
+        <FeaturedWork layout="grid" />
+      </div>
 
       {/* In-Depth Engineering Highlights */}
       <section className="max-w-[1200px] mx-auto px-6 py-16">

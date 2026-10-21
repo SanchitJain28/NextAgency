@@ -1,4 +1,9 @@
-export default function IntroArticle() {
+import { homepageDefaults, type HomepageContent } from "@/content/homepage";
+export default function IntroArticle({
+  content = homepageDefaults.intro,
+}: {
+  content?: HomepageContent["intro"];
+}) {
   return (
     <section className="max-w-[1200px] mx-auto px-7 py-16 lg:py-24">
       <div
@@ -13,7 +18,7 @@ export default function IntroArticle() {
         />
 
         <div className="text-[13px] font-semibold tracking-[0.14em] uppercase text-[var(--sf-primary)] mb-[16px]">
-          Shopify Engineering
+          {content.shopifyEngineering}
         </div>
 
         <h2
@@ -25,41 +30,32 @@ export default function IntroArticle() {
             textWrap: "balance",
           }}
         >
-          Shopify development in{" "}
-          <span className="text-[var(--sf-primary)]">India</span> focused on
-          technical precision.
+          {content.shopifyDevelopmentIn}{" "}
+          <span className="text-[var(--sf-primary)]">{content.india}</span>{" "}
+          {content.focusedOnTechnicalPrecision}
         </h2>
 
         <div className="space-y-6 max-w-[800px] text-[15px] md:text-[17px] leading-[1.5] text-[var(--sf-ink-soft)] font-medium">
           <p>
-            Based in Gurgaon, we provide dedicated{" "}
+            {content.basedInGurgaonWeProvide}{" "}
             <strong className="text-[var(--sf-ink)] font-bold">
-              Shopify development services
+              {content.shopifyDevelopmentServices}
             </strong>{" "}
-            to fast-growing DTC brands. Instead of installing pre-made
-            templates, we build storefronts from the ground up using custom
-            Liquid sections, Metaobjects, and the Storefront API to match
-            how you actually sell.
+            {content.toFastGrowingDtcBrands}
           </p>
           <p>
-            From custom private apps to dedicated{" "}
+            {content.fromCustomPrivateAppsTo}{" "}
             <strong className="text-[var(--sf-ink)] font-bold">
-              Shopify theme development
+              {content.shopifyThemeDevelopment}
             </strong>
-            , the focus is on writing clean, lightweight code. Building native
-            features directly into your theme removes the need for 10+ slow
-            third-party apps. This reduces your monthly app fees, speeds up
-            mobile page loads, and gives you total control over your store.
+            {content.theFocusIsOnWriting}
           </p>
           <p>
-            When you{" "}
+            {content.whenYou}{" "}
             <strong className="text-[var(--sf-ink)] font-bold">
-              hire a Shopify expert
+              {content.hireAShopifyExpert}
             </strong>
-            , you work directly with the developer building your store — no
-            account managers or telephone games. Just direct technical work
-            for theme redesigns, headless storefronts, catalog migrations, and
-            custom ERP connections.
+            {content.youWorkDirectlyWithThe}
           </p>
         </div>
       </div>

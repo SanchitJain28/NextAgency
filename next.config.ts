@@ -1,6 +1,20 @@
+import { withPayload } from "@payloadcms/next/withPayload";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async headers() {
+    return [
+      {
+        source: "/preview/:path*",
+        headers: [
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Content-Security-Policy", value: "frame-ancestors 'self'" },
+          { key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" },
+          { key: "Cache-Control", value: "private, no-store, max-age=0" },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       {
@@ -65,7 +79,8 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/blog/landing-page-psychology-guide-boost-conversions",
-        destination: "/blog/landing-page-psychology-principles-that-drive-conversions",
+        destination:
+          "/blog/landing-page-psychology-principles-that-drive-conversions",
         permanent: true,
       },
       {
@@ -90,7 +105,8 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/blog/d2c-conversion-playbook-shopify",
-        destination: "/blog/d2c-conversion-playbook-20-strategies-increase-sales",
+        destination:
+          "/blog/d2c-conversion-playbook-20-strategies-increase-sales",
         permanent: true,
       },
     ];
@@ -112,4 +128,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withPayload(nextConfig);
