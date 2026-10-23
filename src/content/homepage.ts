@@ -70,6 +70,16 @@ export const homepageDefaults = {
   projects: {
     items: [
       {
+        id: "aesthetika",
+        title: "Aesthetika",
+        category: "Storefront",
+        description:
+          "Frontend development for a Shopify rakhi and jewellery store, with product metafields, collection filters, infinite scroll, cart drawer customization, checkout integration, and SEO.",
+        tags: ["Jewellery & Accessories", "Shopify", "Cart Drawer"],
+        imagePlaceholder: "/portfolio/aesthetica/covers/cover.png",
+        link: "/work/aesthetika",
+      },
+      {
         id: "iron-crate",
         title: "Iron Crate",
         category: "Storefront",

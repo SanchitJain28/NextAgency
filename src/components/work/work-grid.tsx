@@ -33,6 +33,24 @@ export type ProjectItem = {
 
 const PROJECTS: ProjectItem[] = [
   {
+    id: "aesthetika",
+    title: "Aesthetika",
+    tagline: "Shopify Frontend Development for Rakhis & Jewellery",
+    category: "Storefront",
+    vertical: "Rakhis, Jewellery & Accessories",
+    description:
+      "Shopify frontend development and backend integration, with custom product metafields, collection filters, infinite scroll, a cart drawer, checkout integration, and SEO.",
+    highlights: [
+      "Dynamic Product Pages & Custom Metafields",
+      "Collection Filtering & Infinite Scroll",
+      "Cart Drawer, Checkout Integration & Product SEO",
+    ],
+    tags: ["Jewellery", "Shopify", "Collection Filters", "Cart Drawer"],
+    image: "/portfolio/aesthetica/covers/cover.png",
+    link: "/work/aesthetika",
+    hasCaseStudy: true,
+  },
+  {
     id: "recovrx",
     title: "RecovrX",
     tagline: "High-Ticket CRO & Athletic Recovery Storefront",

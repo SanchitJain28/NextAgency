@@ -157,6 +157,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     // Individual project pages & Case Studies
     {
+      url: `${baseUrl}/work/aesthetika`,
+      lastModified: lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      images: [
+        `${baseUrl}/portfolio/aesthetica/covers/cover.png`,
+        `${baseUrl}/portfolio/aesthetica/home/home-1.png`,
+        `${baseUrl}/portfolio/aesthetica/home/home-2.png`,
+        `${baseUrl}/portfolio/aesthetica/home/home-3.png`,
+        `${baseUrl}/portfolio/aesthetica/collection/collection-1.png`,
+        `${baseUrl}/portfolio/aesthetica/collection/collection-2.png`,
+        `${baseUrl}/portfolio/aesthetica/product/product-1.png`,
+        `${baseUrl}/portfolio/aesthetica/product/product-2.png`,
+        `${baseUrl}/portfolio/aesthetica/cart/cart.png`,
+      ],
+    },
+    {
       url: `${baseUrl}/work/360-alpha`,
       lastModified: lastModified,
       changeFrequency: "monthly",
