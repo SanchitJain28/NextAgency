@@ -1,0 +1,28 @@
+.section { margin-top: 4rem; padding-top: 2.5rem; border-top: 1px solid #e5e5e5; font-family: var(--font-sans); }
+.eyebrow { margin-bottom: .625rem; color: #737373; font-family: var(--font-mono); font-size: .6875rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+.heading { margin: 0 0 1.75rem; color: #171717; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 750; line-height: 1.2; letter-spacing: -.03em; }
+.list { border-top: 1px solid #d4d4d4; }
+.item { border-bottom: 1px solid #d4d4d4; background: #fff; transition: background-color 180ms ease; }
+.item[data-open="true"] { background: #fafafa; }
+.question { margin: 0; }
+.trigger { display: flex; align-items: flex-start; gap: .875rem; width: 100%; padding: 1.25rem .625rem; border: 0; background: transparent; color: #171717; font: inherit; text-align: left; cursor: pointer; }
+.trigger:hover { background: #f5f5f5; }
+.trigger:focus-visible { outline: 2px solid #171717; outline-offset: -2px; border-radius: 4px; }
+.number { padding-top: .2rem; color: #737373; font-family: var(--font-mono); font-size: .6875rem; line-height: 1.5; }
+.label { flex: 1; min-width: 0; font-size: 1rem; font-weight: 650; line-height: 1.5; letter-spacing: -.015em; }
+.icon { display: grid; place-items: center; flex-shrink: 0; width: 26px; height: 26px; border: 1px solid #d4d4d4; border-radius: 50%; color: #525252; transition: transform 280ms ease, background-color 180ms ease, color 180ms ease; }
+.item[data-open="true"] .icon { transform: rotate(45deg); background: #171717; border-color: #171717; color: #fff; }
+.panel { display: grid; grid-template-rows: 0fr; opacity: 0; visibility: hidden; transition: grid-template-rows 300ms cubic-bezier(.22,1,.36,1), opacity 200ms ease, visibility 300ms; }
+.item[data-open="true"] .panel { grid-template-rows: 1fr; opacity: 1; visibility: visible; }
+.clip { min-height: 0; overflow: hidden; }
+.answer { padding: 0 1rem 1.5rem 2.5rem; color: #404040; font-size: 1rem; line-height: 1.65; letter-spacing: -.012em; overflow-wrap: break-word; }
+.answer p { margin: 0; }
+.answer p + p { margin-top: .875rem; }
+@media (min-width: 640px) {
+  .trigger { gap: 1rem; padding: 1.375rem 1rem; }
+  .label { font-size: 1.125rem; }
+  .answer { padding-left: 3rem; padding-right: 3.5rem; font-size: 1.25rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .item, .icon, .panel { transition: none; }
+}

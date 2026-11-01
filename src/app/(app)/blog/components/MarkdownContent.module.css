@@ -1,4 +1,4 @@
-.content { color: #404040; font-size: .9375rem; line-height: 1.65; letter-spacing: -.012em; overflow-wrap: break-word; }
+.content { color: #404040; font-size: 1rem; line-height: 1.65; letter-spacing: -.012em; overflow-wrap: break-word; }
 .content :is(h2,h3,h4) { font-family: "Inter",sans-serif; font-weight: 700; color: #171717; line-height: 1.22; letter-spacing: -.03em; scroll-margin-top: 6rem; }
 .content h2 { font-size: 1.5rem; margin: 2rem 0 .75rem; padding-top: 1.25rem; border-top: 1px solid #e5e5e5; }
 .content > h2:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
@@ -116,7 +116,7 @@
 .codeBlock :global(.hljs-symbol) { color: #f2a20d; }
 .codeBlock :global(.hljs-punctuation), .codeBlock :global(.hljs-params) { color: #ededed; }
 @media(min-width:640px) {
-  .content { font-size: 1rem; }
+  .content { font-size: 1.25rem; }
   .content h2 { font-size: 1.625rem; }
   .content h3 { font-size: 1.3125rem; }
   .content h4 { font-size: 1.125rem; }

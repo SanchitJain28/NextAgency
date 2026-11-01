@@ -8,6 +8,7 @@ import { TableOfContents } from "../components/TableOfContents";
 import { MarkdownContent } from "../components/MarkdownContent";
 import { RelatedPosts } from "../components/RelatedPosts";
 import { AuthorBio } from "../components/AuthorBio";
+import { BlogFAQs } from "../components/BlogFAQs";
 import { Clock, Calendar, ArrowLeft, ArrowRight, BookOpen } from "lucide-react";
 
 interface BlogPostPageProps {
@@ -213,47 +214,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <MarkdownContent content={post.content} />
                 </div>
 
-                {/* FAQ Section */}
-                {faqs.length > 0 && (
-                  <div className="pt-12 mt-16 border-t border-neutral-200">
-                    <div className="font-mono text-xs text-[var(--sf-primary)] uppercase tracking-widest font-bold mb-1">
-                      QUESTIONS &amp; ANSWERS
-                    </div>
-                    <h2
-                      className="text-2xl sm:text-3xl font-bold text-neutral-900 mb-8"
-                      style={{
-                        fontFamily: "'Inter', sans-serif",
-                      }}
-                    >
-                      Frequently Asked Questions
-                    </h2>
-                    <div className="space-y-4">
-                      {faqs.map((faq, index) => (
-                        <details
-                          key={index}
-                          className="p-6 border border-neutral-200 bg-white group cursor-pointer"
-                        >
-                          <summary className="flex items-start justify-between font-bold text-lg text-neutral-900 list-none">
-                            <span
-                              className="flex-1 pr-4"
-                              style={{
-                                fontFamily: "'Inter', sans-serif",
-                              }}
-                            >
-                              {faq.question}
-                            </span>
-                            <span className="font-mono text-sm text-neutral-400 group-open:rotate-45 transition-transform">
-                              +
-                            </span>
-                          </summary>
-                          <p className="mt-4 text-base text-neutral-600 leading-relaxed font-sans">
-                            {faq.answer}
-                          </p>
-                        </details>
-                      ))}
-                    </div>
-                  </div>
-                )}
+                <BlogFAQs faqs={faqs} />
 
                 {/* Author Bio */}
                 <AuthorBio author={post.author} />
