@@ -1,3 +1,4 @@
+import { ProjectInquirySheet } from "@/components/contact/ProjectInquirySheet";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -126,6 +127,22 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const faqs = post.faqs || [];
   const headerImage = slug === "custom-shopify-app-vs-existing-app" ? post.image : undefined;
 
+  const strategyCall = (
+    <ProjectInquirySheet
+      triggerLabel="Book Strategy Call"
+      className="block w-full cursor-pointer bg-neutral-900 px-4 py-2.5 text-center font-mono text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-[var(--sf-primary)]"
+      title={slug === "custom-shopify-app-vs-existing-app" ? "Plan your Shopify app" : "Tell us about your Shopify project"}
+      description="Share what you’re working on and we’ll follow up to discuss the next step."
+      projectTypes={slug === "custom-shopify-app-vs-existing-app"
+        ? ["Custom app for my store", "Public Shopify App Store app", "Improve or replace an existing app", "Connect Shopify to another system", "Not sure yet"]
+        : ["Custom Shopify app", "Store or theme development", "Store migration", "Performance review", "Something else"]}
+      detailsPrompt={slug === "custom-shopify-app-vs-existing-app"
+        ? "What should the app do? Tell us what your current setup is missing."
+        : "What would you like to build or improve?"}
+      source={postUrl}
+    />
+  );
+
   return (
     <>
       <ReadingProgress />
@@ -245,6 +262,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
                 <BlogFAQs faqs={faqs} />
 
+                <div className="mt-8 lg:hidden">{strategyCall}</div>
+
                 {/* Author Bio */}
                 <AuthorBio author={post.author} />
 
@@ -312,12 +331,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       Get a comprehensive technical review of your Shopify theme
                       and app architecture.
                     </p>
-                    <Link
-                      href="/contact-us"
-                      className="block w-full py-2.5 px-4 text-center bg-neutral-900 hover:bg-[var(--sf-primary)] text-white font-mono text-xs font-bold uppercase tracking-wider transition-colors"
-                    >
-                      Book Strategy Call
-                    </Link>
+                    {strategyCall}
                   </div>
                 </div>
               </aside>
