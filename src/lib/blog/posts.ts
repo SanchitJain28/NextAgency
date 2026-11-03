@@ -16,6 +16,7 @@ export interface BlogPost {
   title: string;
   description: string;
   date: string;
+  updatedAt?: string;
   author: string;
   image?: string;
   category: string;
@@ -30,6 +31,7 @@ export interface BlogPostMetadata {
   title: string;
   description: string;
   date: string;
+  updatedAt?: string;
   author: string;
   image?: string;
   category: string;
@@ -55,6 +57,7 @@ function getMDPosts(): BlogPostMetadata[] {
       title: data.title,
       description: data.description,
       date: data.date,
+      updatedAt: data.updatedAt,
       author: data.author || "ScaleFront Team",
       image: data.image,
       category: data.category || "Uncategorized",
@@ -137,6 +140,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
       title: data.title,
       description: data.description,
       date: data.date,
+      updatedAt: data.updatedAt,
       author: data.author || "ScaleFront Team",
       image: data.image,
       category: data.category || "Uncategorized",

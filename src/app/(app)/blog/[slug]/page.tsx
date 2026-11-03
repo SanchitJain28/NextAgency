@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { getPostBySlug, getAllPosts, getRelatedPosts } from "@/lib/blog/posts";
 import { ReadingProgress } from "../components/ReadingProgress";
 import { Breadcrumbs } from "../components/Breadcrumbs";
@@ -84,7 +85,7 @@ export async function generateMetadata({
       locale: "en_US",
       type: "article",
       publishedTime: post.date,
-      modifiedTime: post.date,
+      modifiedTime: post.updatedAt ?? post.date,
       authors: [post.author],
       tags: post.tags || [],
     },
@@ -123,6 +124,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const postUrl = `${siteUrl}/blog/${slug}`;
 
   const faqs = post.faqs || [];
+  const headerImage = slug === "custom-shopify-app-vs-existing-app" ? post.image : undefined;
 
   return (
     <>
@@ -130,75 +132,102 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       <article className="min-h-screen bg-white text-neutral-900 antialiased">
         {/* ── ARTICLE HEADER (FULL WIDTH & CLEAN) ── */}
-        <header className="border-b border-neutral-800 bg-black text-white pt-12 pb-12 sm:pt-16 sm:pb-14">
-          <div className="w-full px-4 sm:px-6 lg:px-8">
-            <Breadcrumbs
-              theme="dark"
-              items={[
-                { label: "Blog", href: "/blog" },
-                {
-                  label: post.category,
-                  href: `/blog?category=${encodeURIComponent(post.category)}`,
-                },
-                { label: post.title },
-              ]}
-            />
+        <header className="border-b border-neutral-800 bg-black text-white">
+          <div className="w-full">
+            <div className={headerImage ? "grid lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]" : undefined}>
+              <div className="min-w-0 self-center px-4 py-12 sm:px-6 sm:pt-16 sm:pb-14 lg:px-8">
+                <Breadcrumbs
+                  theme="dark"
+                  items={[
+                    { label: "Blog", href: "/blog" },
+                    {
+                      label: post.category,
+                      href: `/blog?category=${encodeURIComponent(post.category)}`,
+                    },
+                    { label: post.title },
+                  ]}
+                />
 
-            {/* Category & Read Time */}
-            <div className="hidden">
-              <span className="px-2.5 py-1 border border-neutral-200 bg-neutral-100 text-neutral-800 font-bold uppercase tracking-wider">
-                {post.category}
-              </span>
-              <span className="text-neutral-500 flex items-center gap-1">
-                <Clock className="w-3.5 h-3.5" />
-                {post.readingTime}
-              </span>
-              <span className="text-neutral-300">&bull;</span>
-              <span className="text-neutral-500 flex items-center gap-1">
-                <Calendar className="w-3.5 h-3.5" />
-                {new Date(post.date).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </span>
-            </div>
-
-            {/* Article Title */}
-            <h1
-              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.12] mb-6"
-              style={{ fontFamily: "'Inter', sans-serif" }}
-            >
-              {post.title}
-            </h1>
-
-            {/* Article Description / Excerpt */}
-            <p className="text-lg sm:text-xl text-neutral-200 font-normal leading-relaxed font-sans">
-              {post.description}
-            </p>
-
-            {/* Author Line & Tags */}
-            <div className="hidden">
-              <div className="flex items-center gap-2.5 font-mono text-xs">
-                <div className="w-7 h-7 bg-neutral-900 text-white font-bold flex items-center justify-center">
-                  {post.author?.charAt(0) || "S"}
+                {/* Category & Read Time */}
+                <div className="hidden">
+                  <span className="px-2.5 py-1 border border-neutral-200 bg-neutral-100 text-neutral-800 font-bold uppercase tracking-wider">
+                    {post.category}
+                  </span>
+                  <span className="text-neutral-500 flex items-center gap-1">
+                    <Clock className="w-3.5 h-3.5" />
+                    {post.readingTime}
+                  </span>
+                  <span className="text-neutral-300">&bull;</span>
+                  <span className="text-neutral-500 flex items-center gap-1">
+                    <Calendar className="w-3.5 h-3.5" />
+                    {new Date(post.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </span>
                 </div>
-                <span className="font-bold text-neutral-800 uppercase">
-                  {post.author}
-                </span>
+
+                {/* Article Title */}
+                <h1
+                  className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-[1.12] mb-6"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  {post.title}
+                </h1>
+
+                {/* Article Description / Excerpt */}
+                <p className="text-lg sm:text-xl text-neutral-200 font-normal leading-relaxed font-sans">
+                  {post.description}
+                </p>
+
+                {post.updatedAt && (
+                  <p className="mt-4 text-sm text-neutral-300">
+                    Last updated:{" "}
+                    <time dateTime={post.updatedAt}>
+                      {new Date(post.updatedAt).toLocaleDateString("en-US", {
+                        dateStyle: "long",
+                        timeZone: "UTC",
+                      })}
+                    </time>
+                  </p>
+                )}
+
+                {/* Author Line & Tags */}
+                <div className="hidden">
+                  <div className="flex items-center gap-2.5 font-mono text-xs">
+                    <div className="w-7 h-7 bg-neutral-900 text-white font-bold flex items-center justify-center">
+                      {post.author?.charAt(0) || "S"}
+                    </div>
+                    <span className="font-bold text-neutral-800 uppercase">
+                      {post.author}
+                    </span>
+                  </div>
+
+                  {post.tags && post.tags.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5 font-mono text-[11px]">
+                      {post.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-2.5 py-0.5 border border-neutral-200 bg-white text-neutral-600 uppercase"
+                        >
+                          #{tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
 
-              {post.tags && post.tags.length > 0 && (
-                <div className="flex flex-wrap gap-1.5 font-mono text-[11px]">
-                  {post.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2.5 py-0.5 border border-neutral-200 bg-white text-neutral-600 uppercase"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
+              {headerImage && (
+                <Image
+                  src={headerImage}
+                  alt="Decision flowchart for choosing built-in Shopify features, an existing app, or custom development"
+                  width={1376}
+                  height={768}
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="block h-auto w-full lg:h-full lg:object-cover"
+                />
               )}
             </div>
           </div>
@@ -307,7 +336,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               description: post.description,
               image: post.image || `${siteUrl}/og-image.png`,
               datePublished: post.date,
-              dateModified: post.date,
+              dateModified: post.updatedAt ?? post.date,
               author: {
                 "@type": "Organization",
                 name: post.author,

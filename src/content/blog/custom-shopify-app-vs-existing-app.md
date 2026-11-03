@@ -10,7 +10,8 @@ tags:
   - "Shopify app development"
   - "Shopify integrations"
 date: "2025-02-13"
-image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop"
+updatedAt: "2026-11-03"
+image: "/blog/custom-shopify-app-vs-existing-app/cover.jpg"
 faqs:
   - question: "When should I build a custom Shopify app instead of installing an existing app?"
     answer: "Build a custom app when a business workflow matters and neither Shopify's built-in features nor an existing app can handle it reliably. Write down the exact rule or data field that's missing and test it with a real example. If an existing app covers the requirement with acceptable setup and support, use it. If the gap is just a product-page field or a layout change, a metafield and a theme edit may be enough."
@@ -163,6 +164,8 @@ The aim isn't to have the fewest apps or the most custom code. It's to have a se
 
 Start by writing down the problem you are trying to solve, not the type of app you want to buy or build.
 
+![Decision flowchart for choosing built-in Shopify features, an existing app, a small custom integration, or a custom Shopify app](/blog/custom-shopify-app-vs-existing-app/cover.jpg)
+
 1. **Check Shopify's native features.** Can a theme change, metafield, metaobject, or built-in setting handle the requirement?
 2. **Evaluate existing apps.** Do any of them support the important parts of your workflow, not just the basic feature name?
 3. **Identify the actual gaps.** Are you missing a field, a specific business rule, a system integration, or a complete workflow?
@@ -188,8 +191,6 @@ Consider a custom app when your business has a specific workflow or integration 
 You can also use both: keep reliable apps for common features and build custom software only where it solves a real gap.
 
 If you're evaluating a specific workflow, [contact Scalefront](/contact-us) to discuss whether an existing app, a smaller integration, or custom development makes sense.
-
----
 
 ## Technical references
 
