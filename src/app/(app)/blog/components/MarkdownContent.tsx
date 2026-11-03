@@ -4,6 +4,7 @@ import { useState, type ReactNode, isValidElement } from "react";
 import { Check, Copy } from "lucide-react";
 import type { Element, RootContent } from "hast";
 import styles from "./MarkdownContent.module.css";
+import { useGeo } from "@/hooks/useGeo";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
@@ -79,12 +80,21 @@ function CodeBlock({
 }
 
 export function MarkdownContent({ content }: { content: string }) {
+  const { isIndia } = useGeo();
+
   return (
     <div className={styles.content}>
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
       rehypePlugins={[rehypeHighlight, rehypeRaw]}
       components={{
+        span: ({ node, children, ...props }) => {
+          const region = node?.properties.dataPriceRegion;
+          if ((region === "in" && !isIndia) || (region === "intl" && isIndia)) {
+            return null;
+          }
+          return <span {...props}>{children}</span>;
+        },
         h1: ({ children, ...props }) => {
           const id = String(children)
             .toLowerCase()
