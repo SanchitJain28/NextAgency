@@ -1,264 +1,121 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog/posts";
 
+type Entry = MetadataRoute.Sitemap[number];
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL || "https://www.scalefront.io";
-  const lastModified = new Date();
+
+  const ownImage = (src?: string): string[] =>
+    src && src.startsWith("/") ? [`${baseUrl}${src}`] : [];
+
+  const page = (
+    path: string,
+    priority: number,
+    changeFrequency: Entry["changeFrequency"] = "monthly",
+    images?: string[],
+  ): Entry => ({
+    url: `${baseUrl}${path}`,
+    changeFrequency,
+    priority,
+    ...(images?.length ? { images: images.map((i) => `${baseUrl}${i}`) } : {}),
+  });
 
   const blogPosts = await getAllPosts();
+  const blogUrls: MetadataRoute.Sitemap = blogPosts.map((post) => {
+    const images = ownImage(post.image);
+    return {
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: new Date(post.updatedAt || post.date),
+      changeFrequency: "weekly",
+      priority: 0.7,
+      ...(images.length ? { images } : {}),
+    };
+  });
 
-  const blogUrls = blogPosts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
-    changeFrequency: "weekly" as const,
-    priority: 0.7,
-  }));
+  const latestPostDate = blogPosts.length
+    ? new Date(blogPosts[0].updatedAt || blogPosts[0].date)
+    : undefined;
 
   return [
-    ...blogUrls,
-    {
-      url: `${baseUrl}/blog/headless-woocommerce-vs-traditional-woocommerce`,
-      lastModified: lastModified,
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    },
-    {
-      url: baseUrl,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 1,
-      images: [`${baseUrl}/images/og-headless-woocommerce.png`],
-    },
-    // About page with profile image
-    {
-      url: `${baseUrl}/about-us`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-      images: [`${baseUrl}/images/og-headless-woocommerce.png`],
-    },
-    // Services page with service images
-    {
-      url: `${baseUrl}/pricing`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-      images: [`${baseUrl}/images/og-headless-woocommerce.png`],
-    },
-    // Individual Service Pages (High Priority for SEO)
-    {
-      url: `${baseUrl}/services/custom-shopify-development`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/headless-commerce`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/performance-optimization`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/custom-shopify-apps`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/mobile-apps`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/theme-development`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/backend-api`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/cro-optimization`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/custom-features`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/shopify-migration-services`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/shopify-plus-migration`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/integrations`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/audit-consulting`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    // Earn page (Shopify auditor)
-    {
-      url: `${baseUrl}/earn`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    // Contact page
-    {
-      url: `${baseUrl}/contact-us`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    // Blog main page
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    // Dynamically generated blog posts
+    // Core pages
+    page("/", 1),
+    page("/about-us", 0.8),
+    page("/pricing", 0.8),
+    page("/contact-us", 0.7),
+    page("/earn", 0.8),
 
-    // Work / Portfolio Hub
-    {
-      url: `${baseUrl}/work`,
-      lastModified: lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    // Individual project pages & Case Studies
-    {
-      url: `${baseUrl}/work/aesthetika`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-      images: [
-        `${baseUrl}/portfolio/aesthetica/covers/cover.png`,
-        `${baseUrl}/portfolio/aesthetica/home/home-1.png`,
-        `${baseUrl}/portfolio/aesthetica/home/home-2.png`,
-        `${baseUrl}/portfolio/aesthetica/home/home-3.png`,
-        `${baseUrl}/portfolio/aesthetica/collection/collection-1.png`,
-        `${baseUrl}/portfolio/aesthetica/collection/collection-2.png`,
-        `${baseUrl}/portfolio/aesthetica/product/product-1.png`,
-        `${baseUrl}/portfolio/aesthetica/product/product-2.png`,
-        `${baseUrl}/portfolio/aesthetica/cart/cart.png`,
-      ],
-    },
-    {
-      url: `${baseUrl}/work/360-alpha`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-      images: [
-        `${baseUrl}/portfolio/360-alpha/covers/cover.png`,
-        `${baseUrl}/portfolio/360-alpha/collection/collection-1.png`,
-        `${baseUrl}/portfolio/360-alpha/product/product-1.png`,
-        `${baseUrl}/portfolio/360-alpha/product/product-2.png`,
-        `${baseUrl}/portfolio/360-alpha/cart/cart-1.png`,
-      ],
-    },
-    {
-      url: `${baseUrl}/work/industrial-supply-direct`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-      images: [
-        `${baseUrl}/portfolio/industrial-supply-direct/covers/cover.png`,
-      ],
-    },
-    {
-      url: `${baseUrl}/work/iron-crate`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-      images: [`${baseUrl}/portfolio/iron-crate/covers/cover.png`],
-    },
-    {
-      url: `${baseUrl}/work/recovrx`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-      images: [`${baseUrl}/portfolio/recovrx/covers/cover.png`],
-    },
-    {
-      url: `${baseUrl}/work/flexform-athletics`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-      images: [`${baseUrl}/portfolio/flexform-athletics/covers/cover.png`],
-    },
-    {
-      url: `${baseUrl}/work/maison-luxe`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-      images: [`${baseUrl}/portfolio/maison-luxe/covers/cover.png`],
-    },
+    page("/services/custom-shopify-development", 0.9),
+    page("/services/headless-commerce", 0.9),
+    page("/services/performance-optimization", 0.9),
+    page("/services/custom-shopify-apps", 0.9),
+    page("/services/mobile-apps", 0.9),
+    page("/services/theme-development", 0.9),
+    page("/services/backend-api", 0.9),
+    page("/services/cro-optimization", 0.9),
+    page("/services/custom-features", 0.9),
+    page("/services/shopify-migration-services", 0.9),
+    page("/services/shopify-plus-migration", 0.9),
+    page("/services/integrations", 0.9),
+    page("/services/audit-consulting", 0.9),
+
+    // Blog
+    { ...page("/blog", 0.9, "weekly"), lastModified: latestPostDate },
+    ...blogUrls,
+    // Static (non-markdown) blog page
+    page(
+      "/blog/headless-woocommerce-vs-traditional-woocommerce",
+      0.8,
+      "weekly",
+    ),
+
+    page("/work", 0.9, "weekly"),
+    page("/work/aesthetika", 0.8, "monthly", [
+      "/portfolio/aesthetica/covers/cover.png",
+      "/portfolio/aesthetica/home/home-1.png",
+      "/portfolio/aesthetica/home/home-2.png",
+      "/portfolio/aesthetica/home/home-3.png",
+      "/portfolio/aesthetica/collection/collection-1.png",
+      "/portfolio/aesthetica/collection/collection-2.png",
+      "/portfolio/aesthetica/product/product-1.png",
+      "/portfolio/aesthetica/product/product-2.png",
+      "/portfolio/aesthetica/cart/cart.png",
+    ]),
+    page("/work/360-alpha", 0.8, "monthly", [
+      "/portfolio/360-alpha/covers/cover.png",
+      "/portfolio/360-alpha/collection/collection-1.png",
+      "/portfolio/360-alpha/product/product-1.png",
+      "/portfolio/360-alpha/product/product-2.png",
+      "/portfolio/360-alpha/cart/cart-1.png",
+    ]),
+    page("/work/industrial-supply-direct", 0.8, "monthly", [
+      "/portfolio/industrial-supply-direct/covers/cover.png",
+    ]),
+    page("/work/iron-crate", 0.8, "monthly", [
+      "/portfolio/iron-crate/covers/cover.png",
+    ]),
+    page("/work/recovrx", 0.8, "monthly", [
+      "/portfolio/recovrx/covers/cover.png",
+    ]),
+    page("/work/flexform-athletics", 0.8, "monthly", [
+      "/portfolio/flexform-athletics/covers/cover.png",
+    ]),
+    page("/work/maison-luxe", 0.8, "monthly", [
+      "/portfolio/maison-luxe/covers/cover.png",
+    ]),
+
     // Showcase & Apps
-    {
-      url: `${baseUrl}/portfolio`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: lastModified,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/upsell-cross-sell-app-shopify`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/privacy-policy`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.4,
-    },
-    {
-      url: `${baseUrl}/terms-of-service`,
-      lastModified: lastModified,
-      changeFrequency: "monthly",
-      priority: 0.4,
-    },
-    {
-      url: `${baseUrl}/upsell-cross-sell-app/privacy-policy`,
-      lastModified: lastModified,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
+    page("/portfolio", 0.8),
+    page("/upsell-cross-sell-app-shopify", 0.8),
+    page("/upsell-cross-sell-app-shopify/faq", 0.6),
+    page("/pairly/faq", 0.6),
+
+    // Legal
+    page("/privacy-policy", 0.4, "yearly"),
+    page("/terms-of-service", 0.4, "yearly"),
+    page("/upsell-cross-sell-app/privacy-policy", 0.3, "yearly"),
+    page("/upsell-cross-sell-app-shopify/privacy-policy", 0.3, "yearly"),
+    page("/pairly/privacy-policy", 0.3, "yearly"),
   ];
 }

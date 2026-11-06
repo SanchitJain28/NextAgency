@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
+import { cache } from "react";
 import { prisma } from "../db";
 
 const postsDirectory = path.join(process.cwd(), "src/content/blog");
@@ -69,10 +70,18 @@ function getMDPosts(): BlogPostMetadata[] {
 }
 
 async function getDBPosts(): Promise<BlogPostMetadata[]> {
-  const posts = await prisma.blog.findMany({
-    where: { status: "published" },
-    orderBy: { publishedAt: "desc" },
-  });
+  let posts;
+  try {
+    posts = await prisma.blog.findMany({
+      where: { status: "published" },
+      orderBy: { publishedAt: "desc" },
+    });
+  } catch (error) {
+    // Don't let a slow/unreachable DB break listings, related posts or the
+    // sitemap - markdown posts are still returned.
+    console.warn("[blog] Could not load DB posts, using markdown only:", error);
+    return [];
+  }
 
   return posts.map((post) => ({
     slug: post.slug,
@@ -88,7 +97,9 @@ async function getDBPosts(): Promise<BlogPostMetadata[]> {
   }));
 }
 
-export async function getAllPosts(): Promise<BlogPostMetadata[]> {
+// Wrapped in React `cache` so repeated calls within one render
+// (generateMetadata + page + related posts) share a single DB query.
+export const getAllPosts = cache(async (): Promise<BlogPostMetadata[]> => {
   const mdPosts = getMDPosts();
   const dbPosts = await getDBPosts();
 
@@ -97,14 +108,30 @@ export async function getAllPosts(): Promise<BlogPostMetadata[]> {
   return combined.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
+});
+
+function readMDFile(slug: string): string | null {
+  for (const ext of [".md", ".mdx"]) {
+    const fullPath = path.join(postsDirectory, `${slug}${ext}`);
+    if (fs.existsSync(fullPath)) return fs.readFileSync(fullPath, "utf8");
+  }
+  return null;
 }
 
-export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
-  const dbPost = await prisma.blog.findUnique({
-    where: { slug, status: "published" },
-  });
+export const getPostBySlug = cache(
+  async (slug: string): Promise<BlogPost | null> => {
+    // Markdown posts are resolved from disk first, so they never need the DB.
+    const fileContents = readMDFile(slug);
+    if (fileContents) return parseMDPost(slug, fileContents);
 
-  if (dbPost) {
+    // Otherwise it must be a DB post. Errors are intentionally NOT swallowed
+    // here, otherwise a DB hiccup would be cached as a 404 page.
+    const dbPost = await prisma.blog.findUnique({
+      where: { slug, status: "published" },
+    });
+
+    if (!dbPost) return null;
+
     return {
       slug: dbPost.slug,
       title: dbPost.title,
@@ -118,20 +145,11 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
       readingTime: dbPost.readingTime ?? "5 min read",
       faqs: (dbPost.faqs as unknown as FAQ[]) || [],
     };
-  }
+  },
+);
 
-  // Fallback to MD files (existing posts)
+function parseMDPost(slug: string, fileContents: string): BlogPost | null {
   try {
-    const fullPath = path.join(postsDirectory, `${slug}.md`);
-    let fileContents;
-
-    try {
-      fileContents = fs.readFileSync(fullPath, "utf8");
-    } catch {
-      const mdxPath = path.join(postsDirectory, `${slug}.mdx`);
-      fileContents = fs.readFileSync(mdxPath, "utf8");
-    }
-
     const { data, content } = matter(fileContents);
     const { text } = readingTime(content);
 
