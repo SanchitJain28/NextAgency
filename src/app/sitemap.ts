@@ -1,11 +1,43 @@
+import fs from "fs";
+import path from "path";
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog/posts";
+
+const IMAGE_EXT = /\.(png|jpe?g|webp|gif|avif)$/i;
 
 type Entry = MetadataRoute.Sitemap[number];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL || "https://www.scalefront.io";
+
+  // Absolute URLs of all images under public/portfolio/<folder>, recursively.
+  const portfolioImages = (folder: string): string[] => {
+    const walk = (dir: string): string[] =>
+      fs.existsSync(dir)
+        ? fs.readdirSync(dir, { withFileTypes: true }).flatMap((e) => {
+            const full = path.join(dir, e.name);
+            return e.isDirectory() ? walk(full) : [full];
+          })
+        : [];
+    const publicDir = path.join(process.cwd(), "public");
+    return walk(path.join(publicDir, "portfolio", folder))
+      .filter((f) => IMAGE_EXT.test(f))
+      .sort()
+      .map((f) => "/" + path.relative(publicDir, f).split(path.sep).join("/"));
+  };
+
+  // Self-hosted images referenced in a markdown post (e.g. /blog/<slug>/x.webp).
+  const bodyImages = (slug: string): string[] => {
+    const file = path.join(process.cwd(), "src/content/blog", `${slug}.md`);
+    if (!fs.existsSync(file)) return [];
+    const matches = fs
+      .readFileSync(file, "utf8")
+      .match(/\/[A-Za-z0-9_\-./]+\.(?:png|jpe?g|webp|gif|avif)/gi);
+    return (matches ?? [])
+      .filter((p) => fs.existsSync(path.join(process.cwd(), "public", p)))
+      .map((p) => `${baseUrl}${p}`);
+  };
 
   const ownImage = (src?: string): string[] =>
     src && src.startsWith("/") ? [`${baseUrl}${src}`] : [];
@@ -24,7 +56,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const blogPosts = await getAllPosts();
   const blogUrls: MetadataRoute.Sitemap = blogPosts.map((post) => {
-    const images = ownImage(post.image);
+    // Cover image + any self-hosted image used inside the post body.
+    const images = Array.from(
+      new Set([...ownImage(post.image), ...bodyImages(post.slug)]),
+    );
     return {
       url: `${baseUrl}/blog/${post.slug}`,
       lastModified: new Date(post.updatedAt || post.date),
@@ -71,39 +106,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ),
 
     page("/work", 0.9, "weekly"),
-    page("/work/aesthetika", 0.8, "monthly", [
-      "/portfolio/aesthetica/covers/cover.png",
-      "/portfolio/aesthetica/home/home-1.png",
-      "/portfolio/aesthetica/home/home-2.png",
-      "/portfolio/aesthetica/home/home-3.png",
-      "/portfolio/aesthetica/collection/collection-1.png",
-      "/portfolio/aesthetica/collection/collection-2.png",
-      "/portfolio/aesthetica/product/product-1.png",
-      "/portfolio/aesthetica/product/product-2.png",
-      "/portfolio/aesthetica/cart/cart.png",
-    ]),
-    page("/work/360-alpha", 0.8, "monthly", [
-      "/portfolio/360-alpha/covers/cover.png",
-      "/portfolio/360-alpha/collection/collection-1.png",
-      "/portfolio/360-alpha/product/product-1.png",
-      "/portfolio/360-alpha/product/product-2.png",
-      "/portfolio/360-alpha/cart/cart-1.png",
-    ]),
-    page("/work/industrial-supply-direct", 0.8, "monthly", [
-      "/portfolio/industrial-supply-direct/covers/cover.png",
-    ]),
-    page("/work/iron-crate", 0.8, "monthly", [
-      "/portfolio/iron-crate/covers/cover.png",
-    ]),
-    page("/work/recovrx", 0.8, "monthly", [
-      "/portfolio/recovrx/covers/cover.png",
-    ]),
-    page("/work/flexform-athletics", 0.8, "monthly", [
-      "/portfolio/flexform-athletics/covers/cover.png",
-    ]),
-    page("/work/maison-luxe", 0.8, "monthly", [
-      "/portfolio/maison-luxe/covers/cover.png",
-    ]),
+    // Case studies: every image in public/portfolio/<folder> is picked up
+    // automatically (new screenshots need no sitemap change).
+    page("/work/aesthetika", 0.8, "monthly", portfolioImages("aesthetica")),
+    page("/work/360-alpha", 0.8, "monthly", portfolioImages("360-alpha")),
+    page(
+      "/work/industrial-supply-direct",
+      0.8,
+      "monthly",
+      portfolioImages("industrial-supply-direct"),
+    ),
+    page("/work/iron-crate", 0.8, "monthly", portfolioImages("iron-crate")),
+    page("/work/recovrx", 0.8, "monthly", portfolioImages("recovrx")),
+    page(
+      "/work/flexform-athletics",
+      0.8,
+      "monthly",
+      portfolioImages("flexform-athletics"),
+    ),
+    page("/work/maison-luxe", 0.8, "monthly", portfolioImages("maison-luxe")),
 
     // Showcase & Apps
     page("/portfolio", 0.8),

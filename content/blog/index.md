@@ -8,3 +8,5 @@
 6. Freshness signals. Add a visible “last updated” date,
 7. Add a visual. A helpful image such as (flowchart or any other helpful image) would beat the numbered list and can win featured-snippet or image traffic.
 8. Add a prompt for each section in next-agency/content/blog/[blog-slug]/image-prompts-by-section , I will generate these images from google flow , Also specify the dimensions
+9. For technical blogs , Add Code Snippets , Show the actual code implemenatation not any sample one.
+10. Each blog should have an FAQ Section with FAQPage JSON-LD Schema
