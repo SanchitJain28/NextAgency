@@ -125,7 +125,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const postUrl = `${siteUrl}/blog/${slug}`;
 
   const faqs = post.faqs || [];
-  const headerImage = slug === "custom-shopify-app-vs-existing-app" ? post.image : undefined;
+  const headerImage = ["custom-shopify-app-vs-existing-app", "shopify-store-slow-how-to-fix"].includes(slug) ? post.image : undefined;
 
   const strategyCall = (
     <ProjectInquirySheet
@@ -239,11 +239,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               {headerImage && (
                 <Image
                   src={headerImage}
-                  alt="Decision flowchart for choosing built-in Shopify features, an existing app, or custom development"
+                  alt={slug === "shopify-store-slow-how-to-fix"
+                    ? "Shopify speed diagnosis workflow for loading, interactions, and layout shifts"
+                    : "Decision flowchart for choosing built-in Shopify features, an existing app, or custom development"}
                   width={1376}
                   height={768}
                   sizes="(min-width: 1024px) 40vw, 100vw"
-                  className="block h-auto w-full lg:h-full lg:object-cover"
+                  className={slug === "shopify-store-slow-how-to-fix"
+                    ? "block h-auto w-full bg-white lg:h-full lg:object-contain"
+                    : "block h-auto w-full lg:h-full lg:object-cover"}
                 />
               )}
             </div>

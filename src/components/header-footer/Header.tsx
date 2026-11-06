@@ -146,7 +146,7 @@ export function Header() {
             aria-controls={navigationId}
             aria-haspopup="dialog"
             onClick={() => setMobileOpen(true)}
-            className="xl:hidden flex shrink-0 items-center justify-center w-10 h-10 text-[var(--sf-ink)] border-2 border-[var(--sf-ink)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--sf-primary)]"
+            className="xl:hidden flex shrink-0 items-center justify-center w-10 h-10 text-[var(--sf-ink)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--sf-primary)]"
           >
             <MenuIcon className="w-6 h-6" />
           </button>

@@ -1,30 +1,45 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 export function ReadingProgress() {
-  const [progress, setProgress] = useState(0);
+  const barRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const article = document.querySelector('article');
+    if (!article) return;
+    let frame = 0;
+
     const updateProgress = () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollProgress = (scrollTop / docHeight) * 100;
-      setProgress(scrollProgress);
+      frame = 0;
+      const bounds = article.getBoundingClientRect();
+      const distance = bounds.height - window.innerHeight;
+      const progress = distance > 0
+        ? Math.min(1, Math.max(0, -bounds.top / distance))
+        : bounds.top <= 0 ? 1 : 0;
+      if (barRef.current) barRef.current.style.transform = `scaleX(${progress})`;
+    };
+    const scheduleUpdate = () => {
+      if (!frame) frame = requestAnimationFrame(updateProgress);
     };
 
-    window.addEventListener('scroll', updateProgress);
+    const observer = new ResizeObserver(scheduleUpdate);
+    observer.observe(article);
+    window.addEventListener('scroll', scheduleUpdate, { passive: true });
+    window.addEventListener('resize', scheduleUpdate);
     updateProgress();
 
-    return () => window.removeEventListener('scroll', updateProgress);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', scheduleUpdate);
+      window.removeEventListener('resize', scheduleUpdate);
+      cancelAnimationFrame(frame);
+    };
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 h-1 bg-gray-200">
-      <div
-        className="h-full bg-[#292929] transition-all duration-150 ease-out"
-        style={{ width: `${progress}%` }}
-      />
+    <div aria-hidden="true" data-reading-progress className="pointer-events-none fixed inset-x-0 top-0 z-[200] h-1 bg-neutral-200/30">
+      <div ref={barRef} className="h-full origin-left bg-[var(--sf-primary)] opacity-80" style={{ transform: 'scaleX(0)' }} />
     </div>
   );
 }
