@@ -19,6 +19,13 @@ interface BlogPostPageProps {
   }>;
 }
 
+const headerImageAltBySlug: Partial<Record<string, string>> = {
+  "custom-shopify-app-vs-existing-app": "Decision flowchart for choosing built-in Shopify features, an existing app, or custom development",
+  "shopify-store-slow-how-to-fix": "Shopify speed diagnosis workflow for loading, interactions, and layout shifts",
+  "woocommerce-to-shopify-migration-problems": "WooCommerce to Shopify migration overview: map data, test the store, and plan redirects",
+  "headless-woocommerce-with-nextjs": "A Next.js storefront connects to a WooCommerce backend that manages products, inventory, and orders",
+};
+
 export async function generateStaticParams() {
   const posts = await getAllPosts();
   return posts.map((post) => ({
@@ -125,7 +132,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const postUrl = `${siteUrl}/blog/${slug}`;
 
   const faqs = post.faqs || [];
-  const headerImage = ["custom-shopify-app-vs-existing-app", "shopify-store-slow-how-to-fix", "woocommerce-to-shopify-migration-problems"].includes(slug) ? post.image : undefined;
+  const headerImageAlt = Object.hasOwn(headerImageAltBySlug, slug) ? headerImageAltBySlug[slug] : undefined;
+  const headerImage = headerImageAlt ? post.image : undefined;
 
   const strategyCall = (
     <ProjectInquirySheet
@@ -236,14 +244,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
               </div>
 
-              {headerImage && (
+              {headerImage && headerImageAlt && (
                 <Image
                   src={headerImage}
-                  alt={slug === "woocommerce-to-shopify-migration-problems"
-                    ? "WooCommerce to Shopify migration overview: map data, test the store, and plan redirects"
-                    : slug === "shopify-store-slow-how-to-fix"
-                    ? "Shopify speed diagnosis workflow for loading, interactions, and layout shifts"
-                    : "Decision flowchart for choosing built-in Shopify features, an existing app, or custom development"}
+                  alt={headerImageAlt}
                   width={1376}
                   height={768}
                   sizes="(min-width: 1024px) 40vw, 100vw"

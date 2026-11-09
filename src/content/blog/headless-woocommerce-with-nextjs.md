@@ -2,10 +2,11 @@
 title: "Headless WooCommerce with Next.js: Architecture, Setup and Migration Guide"
 description: "Learn how headless WooCommerce works with Next.js, including API choices, storefront setup, cart sessions, checkout, SEO, and migration planning."
 date: "2025-02-07"
+updatedAt: "2026-11-09"
 author: "ScaleFront Team"
 category: "Ecommerce Development"
 tags: ["headless WooCommerce", "Next.js ecommerce", "WooCommerce migration", "headless commerce", "WooCommerce performance", "ecommerce SEO"]
-image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop"
+image: "/blog/headless-woocommerce-with-nextjs/cover.webp"
 faqs:
   - question: "What is headless WooCommerce with Next.js?"
     answer: "Headless WooCommerce is an ecommerce setup where the frontend and backend of your store are separated. WooCommerce continues handling the core commerce operations while Next.js controls the customer-facing interface."
@@ -30,6 +31,8 @@ In a traditional WooCommerce store, WordPress handles both the backend and the f
 In a headless setup, WooCommerce still handles the backend operations, but the customer-facing website is built using a separate frontend framework such as Next.js, SvelteKit, or another suitable technology.
 
 Suppose you have a jewelry ecommerce store built with WooCommerce. You can continue adding products, changing prices, managing inventory, and viewing customer orders from your existing WordPress dashboard. However, instead of displaying these products through a WordPress theme, your customers interact with a storefront built using Next.js.
+
+![A shopper browses a Next.js product page. Next.js requests product details from WooCommerce, which returns the data for the page](/blog/headless-woocommerce-with-nextjs/01-headless-architecture.webp)
 
 This frontend is responsible for displaying product pages, categories, shopping carts, wishlists, and other customer-facing features. WooCommerce continues to handle the underlying ecommerce data and business operations.
 
@@ -204,6 +207,8 @@ You don't have to use only one API. In fact, using different APIs for different 
 | WooCommerce REST API   | Backend operations, inventory updates, order management, external integrations |
 | WooCommerce Store API  | Product listings, cart management, checkout                                    |
 | WPGraphQL + WooGraphQL | Custom product queries, related data, WordPress content                        |
+
+![Three API options compared by task: Store API for shopping, REST API for protected admin operations, and WPGraphQL with WooGraphQL for field-specific queries](/blog/headless-woocommerce-with-nextjs/02-woocommerce-api-options.webp)
 
 A Next.js storefront could use the Store API for shopping operations while using GraphQL to retrieve content or complex product information. The authenticated REST API can handle administrative integrations separately.
 
@@ -383,6 +388,8 @@ You also need to handle customer-specific information differently. Shopping cart
 
 Caching can improve performance, but you need to decide which data should be cached, when it should be updated, and which information must always remain private.
 
+![Public catalog data can be cached, price and stock updates need a freshness plan, and customer data stays out of the shared cache](/blog/headless-woocommerce-with-nextjs/03-caching-and-revalidation.webp)
+
 ### Final Recommendation
 
 Start with a working product listing before building the complete ecommerce experience. Once you can reliably fetch and display products from WooCommerce, move to product detail pages, variations, and shopping cart functionality.
@@ -452,6 +459,8 @@ Your application can use this endpoint to submit checkout information and initia
 Some payment methods require additional frontend integration, payment tokens, customer verification, or specific data formats. You need to check whether your payment gateway supports the Store API checkout process and implement its required payment flow.
 
 For payment information, use the gateway's supported secure payment components rather than building your own system for collecting sensitive card details.
+
+![A cart session uses a Cart Token for later requests. Checkout can stay in WooCommerce with a session handoff or use a Next.js interface with a compatible gateway](/blog/headless-woocommerce-with-nextjs/04-cart-and-checkout.webp)
 
 ### Shipping, Taxes and Order Management
 
@@ -586,6 +595,8 @@ Make a technical checklist of the features your existing store uses before choos
 ## Step-by-Step Headless WooCommerce Migration Checklist
 
 If you already have a live WooCommerce store, moving to Next.js should be treated as a migration project, not just a new frontend design. Your current orders, plugins, URLs, and customers still matter while the new storefront is being built.
+
+![A migration checklist covering the store audit, staging, shopping tests, SEO, launch, and rollback](/blog/headless-woocommerce-with-nextjs/05-migration-checklist.webp)
 
 ### 1. Audit the Current Store
 

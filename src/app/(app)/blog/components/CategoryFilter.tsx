@@ -1,37 +1,50 @@
-'use client';
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 interface CategoryFilterProps {
-  categories: string[];
-  selectedCategory: string | null;
-  onSelectCategory: (category: string | null) => void;
+  categories: { label: string; count: number }[];
+  total: number;
+  selectedCategory: string;
+  onSelectCategory: (category: string) => void;
 }
 
-export function CategoryFilter({ categories, selectedCategory, onSelectCategory }: CategoryFilterProps) {
+export function CategoryFilter({
+  categories,
+  total,
+  selectedCategory,
+  onSelectCategory,
+}: CategoryFilterProps) {
+  const options = [{ label: "", count: total }, ...categories];
+
   return (
-    <div className="flex flex-wrap gap-2">
-      <button
-        onClick={() => onSelectCategory(null)}
-        className={`px-4 py-2 rounded-full text-[14px] font-medium transition-colors ${
-          selectedCategory === null
-            ? 'bg-[#292929] dark:bg-white text-white dark:text-[#292929]'
-            : 'bg-gray-100 dark:bg-gray-800 text-[#6B6B6B] dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
-        }`}
-      >
-        All Posts
-      </button>
-      {categories.map((category) => (
-        <button
-          key={category}
-          onClick={() => onSelectCategory(category)}
-          className={`px-4 py-2 rounded-full text-[14px] font-medium transition-colors ${
-            selectedCategory === category
-              ? 'bg-[#292929] dark:bg-white text-white dark:text-[#292929]'
-              : 'bg-gray-100 dark:bg-gray-800 text-[#6B6B6B] dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
-          }`}
-        >
-          {category}
-        </button>
-      ))}
+    <div
+      role="group"
+      aria-label="Filter by category"
+      className="-mx-1 flex gap-2 overflow-x-auto px-1 py-1 md:flex-wrap"
+    >
+      {options.map(({ label, count }) => {
+        const isSelected = selectedCategory.toLowerCase() === label.toLowerCase();
+
+        return (
+          <Button
+            key={label}
+            type="button"
+            variant="outline"
+            aria-pressed={isSelected}
+            onClick={() => onSelectCategory(isSelected ? "" : label)}
+            className={cn(
+              "rounded-md px-3 text-sm font-medium shadow-none focus-visible:border-white focus-visible:ring-white/50",
+              isSelected
+                ? "border-white bg-white text-neutral-900 hover:bg-neutral-200 hover:text-neutral-900"
+                : "border-neutral-700 bg-neutral-900 text-neutral-200 hover:border-neutral-500 hover:bg-neutral-800 hover:text-white",
+            )}
+          >
+            {label || "All articles"} ({count})
+          </Button>
+        );
+      })}
     </div>
   );
 }

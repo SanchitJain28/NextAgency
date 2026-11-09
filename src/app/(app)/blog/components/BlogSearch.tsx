@@ -1,58 +1,49 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useRef } from "react";
+import { Search, X } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 interface BlogSearchProps {
+  query: string;
   onSearch: (query: string) => void;
-  placeholder?: string;
 }
 
-export function BlogSearch({ onSearch, placeholder = "Search articles..." }: BlogSearchProps) {
-  const [query, setQuery] = useState('');
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    onSearch(query);
-  };
-
-  const handleClear = () => {
-    setQuery('');
-    onSearch('');
-  };
+export function BlogSearch({ query, onSearch }: BlogSearchProps) {
+  const inputRef = useRef<HTMLInputElement>(null);
 
   return (
-    <form onSubmit={handleSubmit} className="relative">
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder={placeholder}
-        className="w-full px-4 py-3 pl-12 pr-12 border border-gray-300 dark:border-gray-700 rounded-lg text-[15px] bg-white dark:bg-gray-900 text-[#292929] dark:text-white placeholder:text-[#6B6B6B] dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#292929] dark:focus:ring-gray-600 focus:border-transparent"
+    <div role="search" aria-label="Blog search" className="relative w-full max-w-lg">
+      <Search
+        aria-hidden="true"
+        className="pointer-events-none absolute top-1/2 left-4 size-4 -translate-y-1/2 text-neutral-400"
       />
-      <svg
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#6B6B6B] dark:text-gray-500"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-        />
-      </svg>
+      <Input
+        ref={inputRef}
+        type="search"
+        aria-label="Search articles"
+        value={query}
+        onChange={(event) => onSearch(event.currentTarget.value)}
+        placeholder="Search articles by title, topic, or tag"
+        className="h-12 rounded-md border-neutral-600 bg-neutral-900 pr-12 pl-11 text-white placeholder:text-neutral-400 focus-visible:border-white focus-visible:ring-white/35 [&::-webkit-search-cancel-button]:hidden"
+      />
       {query && (
-        <button
+        <Button
           type="button"
-          onClick={handleClear}
-          className="absolute right-4 top-1/2 -translate-y-1/2 text-[#6B6B6B] dark:text-gray-500 hover:text-[#292929] dark:hover:text-white"
+          variant="ghost"
+          size="icon"
+          aria-label="Clear search"
+          className="absolute top-1/2 right-1 -translate-y-1/2 rounded-md text-neutral-300 hover:bg-neutral-800 hover:text-white focus-visible:ring-white/50"
+          onClick={() => {
+            onSearch("");
+            inputRef.current?.focus();
+          }}
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
+          <X aria-hidden="true" />
+        </Button>
       )}
-    </form>
+    </div>
   );
 }
