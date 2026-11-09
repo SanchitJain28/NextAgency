@@ -20,7 +20,7 @@ interface BlogPostPageProps {
 }
 
 const headerImageAltBySlug: Partial<Record<string, string>> = {
-  "custom-shopify-app-vs-existing-app": "Decision flowchart for choosing built-in Shopify features, an existing app, or custom development",
+  "custom-shopify-app-vs-existing-app": "Comparison of built-in Shopify features, an existing App Store app, and a custom Shopify app",
   "shopify-store-slow-how-to-fix": "Shopify speed diagnosis workflow for loading, interactions, and layout shifts",
   "woocommerce-to-shopify-migration-problems": "WooCommerce to Shopify migration overview: map data, test the store, and plan redirects",
   "headless-woocommerce-with-nextjs": "A Next.js storefront connects to a WooCommerce backend that manages products, inventory, and orders",
@@ -251,9 +251,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   width={1376}
                   height={768}
                   sizes="(min-width: 1024px) 40vw, 100vw"
-                  className={slug !== "custom-shopify-app-vs-existing-app"
-                    ? "block h-auto w-full bg-white lg:h-full lg:object-contain"
-                    : "block h-auto w-full lg:h-full lg:object-cover"}
+                  className="block h-auto w-full bg-white lg:h-full lg:object-contain"
                 />
               )}
             </div>

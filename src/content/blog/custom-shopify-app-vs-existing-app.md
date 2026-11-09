@@ -11,7 +11,7 @@ tags:
   - "Shopify integrations"
 date: "2025-02-13"
 updatedAt: "2026-11-03"
-image: "/blog/custom-shopify-app-vs-existing-app/cover.jpg"
+image: "/blog/custom-shopify-app-vs-existing-app/cover.webp"
 faqs:
   - question: "When should I build a custom Shopify app instead of installing an existing app?"
     answer: "Build a custom app when a business workflow matters and neither Shopify's built-in features nor an existing app can handle it reliably. Write down the exact rule or data field that's missing and test it with a real example. If an existing app covers the requirement with acceptable setup and support, use it. If the gap is just a product-page field or a layout change, a metafield and a theme edit may be enough."
@@ -68,6 +68,8 @@ Not every feature needs an app. If you want to add product specifications, a siz
 
 A similar approach applies to simple store design changes. You might only need a [custom theme section](/services/theme-development) or a small amount of Liquid code rather than a separate application with its own database and hosting.
 
+![A product page example shows how structured product information and a theme section can meet a storefront requirement](/blog/custom-shopify-app-vs-existing-app/01-check-built-in-features.webp)
+
 This is worth checking first because every additional tool creates something else to configure, test, and maintain. But don't force a native solution where it cannot meet the requirement. Shopify's built-in features also have limits, and availability can differ by plan.
 
 ## When an existing Shopify app is the better choice
@@ -90,6 +92,8 @@ Custom development becomes useful when the existing options cannot support an im
 
 Think about a store that uses a warehouse system with its own inventory rules. Orders might need to be split across locations, certain products may require special handling, and stock changes must be synchronized with Shopify. If an available connector cannot represent those rules correctly, a [custom Shopify integration](/services/backend-api) could be more suitable.
 
+![A warehouse integration evaluates location and handling rules before routing orders and syncing inventory back to Shopify](/blog/custom-shopify-app-vs-existing-app/02-when-custom-development-fits.webp)
+
 Another case is a made-to-order business. A customer may select custom measurements, and the order then moves through design approval, production, and delivery stages. You might be able to combine several existing tools, but a purpose-built system can be easier to operate if the workflow is central to the business.
 
 A custom app is not always needed for a custom storefront feature. Sometimes a theme customization, a small external service, or an existing app with an API can solve the problem. The right solution may be smaller than an entire application.
@@ -107,6 +111,8 @@ A fair comparison should include:
 - The quoted development cost for a custom replacement.
 - Hosting, maintenance, monitoring, and future feature changes.
 - The effort and risk involved in moving data from the existing app.
+
+![A cost comparison includes subscriptions, usage fees, and manual work for an existing app and development, hosting, and upkeep for a custom app](/blog/custom-shopify-app-vs-existing-app/03-compare-full-costs.webp)
 
 Compare these costs over a period that makes sense for your business. Also consider what you gain: fewer manual steps, better data accuracy, or a workflow that wasn't possible before. You don't need an invented break-even figure or a revenue threshold to make this decision.
 
@@ -132,6 +138,8 @@ Not automatically. An existing app can slow down a storefront if it loads unnece
 
 It also matters what the app does. An app that synchronizes orders in the background may have little direct effect on customer-facing page speed. A product recommendation widget that runs in the browser can have more impact because it adds frontend code and network requests.
 
+![A background order sync and a browser widget illustrate why storefront performance depends on what an app loads and runs](/blog/custom-shopify-app-vs-existing-app/04-measure-storefront-performance.webp)
+
 Before replacing an app because of performance, measure what is actually slowing down the store. Check the Network and Performance panels in browser developer tools, review scripts loaded on important pages, and compare results using Shopify's performance reports or other testing tools.
 
 Our [Shopify performance guide](/blog/shopify-performance-developer-guide) explains what to measure. Then decide whether the problem can be fixed by changing settings, removing unused features, improving theme integration, or replacing the app. Custom development should follow evidence, not an assumption that custom code is always lighter.
@@ -155,6 +163,8 @@ Custom apps and public apps also use Shopify APIs subject to permissions, rate l
 ## Sometimes the best choice is a combination
 
 You don't have to replace your entire app stack with custom software. A store might keep an established reviews app and email tool, while building one custom integration for its warehouse system.
+
+![A Shopify store keeps existing reviews and email apps while a custom integration connects its warehouse](/blog/custom-shopify-app-vs-existing-app/05-combine-existing-and-custom.webp)
 
 Or an existing app may provide most of the user-facing functionality, while a small custom service handles a missing data transformation between that app and an internal system. This can be more practical than rebuilding the whole application.
 
