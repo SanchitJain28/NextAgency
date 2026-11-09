@@ -23,6 +23,8 @@ The main stages are product and collection migration, blogs and other pages, cus
 
 Products are the core of the store, so this is usually the first data migration task. You'll need to move product names, descriptions, images, prices, SKUs, inventory information, and variations. WooCommerce categories also need to be mapped to Shopify collections. They are not the same system, especially if your existing store uses nested categories.
 
+![Mapping WooCommerce categories, variation attributes, and extra product data to Shopify collections, options, and metafields](/blog/woocommerce-to-shopify-migration-problems/01-products-and-collections.webp)
+
 For a small store with straightforward products, a CSV-based migration may be enough. Let's say your products use Size and Color as options, and there are no special product types or complicated custom fields. You can export product data from WooCommerce, prepare it in the format Shopify expects, import a small sample, and check the results before importing everything. Shopify also has a Store Migration app for WooCommerce product and customer CSVs. This does not mean you can upload any WooCommerce CSV unchanged into every Shopify importer; the method you choose determines the required format.
 
 The situation is different with complex products. Shopify currently supports **up to three options and 2,048 variants per product**, with **up to 250 media items per product**. A WooCommerce product with four variation options cannot be moved into a standard Shopify product without changing its structure. The Shopify Store Migration app may import that product without its variants, so it is important to check the import report instead of assuming everything was transferred correctly.
@@ -73,6 +75,8 @@ Before importing customer data, validate email addresses, find duplicate profile
 
 Historical orders contain more information than a product and a price. They can include customer details, line items, tax, shipping, discounts, refunds, fulfillment status, and notes. This is one reason you should not treat order migration like a normal product CSV import.
 
+![Clean customer records, import customers before historical orders, and verify customer-order links](/blog/woocommerce-to-shopify-migration-problems/02-customers-and-orders.webp)
+
 **Shopify's native CSV import workflow does not import historical orders.** The 15 MB customer CSV limit sometimes mentioned in migration guides is not a historical order import limit. For existing orders, Shopify recommends a migration app. Developers can also evaluate the Shopify GraphQL Admin API, including the `orderCreate` mutation, when a custom import is needed.
 
 A custom API import gives you more control, but it still comes with API limits and data-model restrictions. It is not an unlimited import method. Certain historical details may need special mapping, and imported orders may not behave exactly like orders originally placed through Shopify checkout. You should check the current API and the migration tool documentation before deciding which fields can be preserved.
@@ -88,6 +92,8 @@ If your WooCommerce store has active subscriptions, this stage needs separate pl
 WooCommerce subscription renewals depend on the subscription plugin and payment gateway you're using. Shopify subscriptions depend on compatible subscription apps and supported payment arrangements. In some cases, existing payment methods can be migrated through a supported remote gateway process. In other cases, customers may need to update their payment details or accept a new subscription arrangement.
 
 This is where mistakes can affect recurring revenue. A customer may be unable to renew if the payment method is not connected properly. There is also a risk of duplicate charges if the old WooCommerce subscription system continues running scheduled renewals after the new Shopify subscription starts.
+
+![Check gateway support, review renewal dates, test renewals, and coordinate the subscription billing cutover](/blog/woocommerce-to-shopify-migration-problems/03-subscription-cutover.webp)
 
 Before migrating subscriptions, make a record of active plans, next renewal dates, billing intervals, gateway types, and cancellation or pause states. Coordinate with the subscription app and payment provider, test renewals, and confirm when billing on the old store will stop. Don't turn off the old system blindly before confirming the new system can process renewals.
 
@@ -127,6 +133,8 @@ Suppose your old product URL is:
 And the new Shopify product URL becomes:
 
 `/products/red-running-shoes`
+
+![A 301 redirect from an old WooCommerce product URL to the relevant Shopify product URL](/blog/woocommerce-to-shopify-migration-problems/04-seo-redirect-map.webp)
 
 A redirect should take people and search engines from the old URL directly to the new one. Avoid redirecting all old URLs to your homepage. If a page no longer exists, choose a relevant replacement only when it really serves the same purpose.
 
@@ -190,6 +198,8 @@ These are planning estimates, not a fixed quote or a guaranteed completion date.
 For example, a store with a small catalog can still need more work if its products use a custom configurator or its subscriptions require a separate billing migration. I recommend auditing the existing store before confirming the price and launch date. Also confirm whether migration tool fees, Shopify plans, and ongoing app subscriptions are included in the quote.
 
 ## Short WooCommerce to Shopify Migration Checklist
+
+![Five migration phases from audit and testing to final synchronization, launch, and monitoring](/blog/woocommerce-to-shopify-migration-problems/05-migration-launch-checklist.webp)
 
 This is the process I would follow before launching the new store.
 

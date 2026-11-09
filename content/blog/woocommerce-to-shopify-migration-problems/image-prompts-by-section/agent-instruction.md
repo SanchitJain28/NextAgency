@@ -1,0 +1,1 @@
+Keep text minimal and let visuals do most of the explaining. Use short, readable labels instead of paragraphs. Follow the approved labels and any word limit in the individual image prompt. Do not add captions, subtitles, legends, or extra explanatory text inside the image. Use generous whitespace and a clear visual hierarchy so the diagram is easy to understand at a glance.
