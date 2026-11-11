@@ -20,6 +20,7 @@ interface BlogPostPageProps {
 }
 
 const headerImageAltBySlug: Partial<Record<string, string>> = {
+  "shopify-custom-product-configurator": "Three Shopify product configurator examples: an engraving field, a gift hamper builder, and a furniture preview",
   "custom-shopify-app-vs-existing-app": "Comparison of built-in Shopify features, an existing App Store app, and a custom Shopify app",
   "shopify-store-slow-how-to-fix": "Shopify speed diagnosis workflow for loading, interactions, and layout shifts",
   "woocommerce-to-shopify-migration-problems": "WooCommerce to Shopify migration overview: map data, test the store, and plan redirects",

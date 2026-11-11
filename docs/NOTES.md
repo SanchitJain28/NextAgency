@@ -47,6 +47,10 @@
 16. AI Automations
 17. Shopify SEO service
 
+## Blog topics in my mind
+
+- How to use claude code / codex to implement a custom feature in your shopify store or improve the UI.
+
 ## Top Services about i will do SEO Around
 
 1. Custom Shopify Development
