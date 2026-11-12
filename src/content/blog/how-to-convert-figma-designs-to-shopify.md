@@ -1,1004 +1,667 @@
 ---
-title: "How to Convert Figma Designs to Shopify: The Complete Guide"
-description: "Learn how to convert Figma designs to Shopify themes. Step-by-step process, tools, code examples, and best practices from professional developers. Custom vs theme approaches."
-date: 2025-12-05
-author: "ScaleFront Team"
-category: "Development"
-tags: ["Figma to Shopify", "Shopify development", "theme customization", "web development", "design to code"]
-image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2000&auto=format&fit=crop"
+title: 'Figma to Shopify: How to Convert Designs into a Custom Shopify Theme'
+description: >-
+  Learn how to convert Figma designs into editable Shopify themes using Liquid
+  sections, blocks, JSON templates and responsive CSS, with a complete section
+  implementation.
+slug: how-to-convert-figma-designs-to-shopify
+author: Scalefront Team
+category: Shopify Theme Customization
+date: '2025-12-05'
+updatedAt: '2026-11-12'
 faqs:
-  - question: "How long does it take to convert Figma designs to Shopify?"
-    answer: "Timeline depends on complexity: Theme customization takes 3-5 weeks, custom sections 5-8 weeks, full custom theme 8-12 weeks, and headless development 12-20 weeks. This includes design review, development, testing, and QA. Rush projects can be expedited with additional cost."
-  - question: "How much does it cost to convert Figma to Shopify?"
-    answer: "Costs range from $5,000-15,000 for theme customization, $15,000-30,000 for custom sections, $30,000-60,000 for full custom themes, and $50,000-150,000+ for headless builds. Cost varies based on design complexity, number of templates, custom functionality, and timeline."
-  - question: "Can I convert Figma to Shopify myself?"
-    answer: "Yes, if designs are relatively simple and you're comfortable with HTML/CSS. However, complex designs, custom functionality, or tight timelines usually require professional developers. Many businesses do basic setup themselves and hire developers for complex sections."
-  - question: "What's the difference between modifying a theme vs building custom?"
-    answer: "Modifying a theme is faster ($5K-15K, 3-5 weeks) but limited by theme structure—you'll achieve 70-80% match to Figma. Custom builds are slower ($30K-60K, 8-12 weeks) but allow 95%+ design accuracy and complete control over functionality."
-  - question: "Do I need mobile designs in Figma or can developers figure it out?"
-    answer: "Developers can create mobile layouts, but it's better to have mobile designs in Figma to ensure design intent is preserved. 70% of ecommerce traffic is mobile, so mobile experience is critical. Without mockups, developers make assumptions that might not align with brand vision."
-  - question: "Can Shopify handle any design from Figma?"
-    answer: "Most designs are possible, but some require compromises: Standard Shopify doesn't allow checkout customization (need Plus or headless), heavy animations impact performance, and overlapping layers don't match Shopify's section structure. Review designs with developers before building."
-  - question: "What file format should designers export for Shopify development?"
-    answer: "Export SVG for icons/logos, PNG or WebP for photos, and use Figma Dev Mode or Zeplin for developer handoff. Include all states (hover, loading, error), document spacing system, and specify web fonts. Properly named and organized layers help developers work faster."
-  - question: "Do I need Shopify Plus to build custom designs?"
-    answer: "No, you can build custom designs on standard Shopify. However, Shopify Plus ($2,000/month) is needed for: checkout customization, Shopify Flow automation, B2B features, and higher API limits. Most custom designs work fine on standard Shopify."
+  - question: Can you convert Figma to Shopify automatically?
+    answer: >-
+      There is no reliable one-click conversion from a Figma file to a
+      production Shopify theme. Export tools and AI can help with assets,
+      layout, and starter code. The theme still needs editable sections, real
+      product and collection data, responsive layouts, and working variant
+      selection and cart behavior.
+  - question: Can I use an existing Shopify theme for my Figma design?
+    answer: >-
+      Yes. Compare the design against the theme’s existing product templates,
+      sections, and editor settings first. If most of the structure works and
+      only a few areas differ, keep the theme and build custom sections for
+      those areas. If most templates need to be rebuilt, scope a custom theme
+      before piling on overrides.
+  - question: Can I paste Figma-exported HTML into a Shopify theme?
+    answer: >-
+      You can reuse portions of the HTML and CSS as a starting point. To make
+      the result useful in Shopify, move repeated markup into Liquid sections or
+      snippets, define section settings and blocks, and connect the templates to
+      store data. A static Add to Cart button also needs to submit the selected
+      variant through the theme’s product form.
+  - question: What should a designer include in a Figma handoff for Shopify?
+    answer: >-
+      Provide desktop and mobile layouts, reusable components, design tokens,
+      image assets, and examples of long or missing content. Include states such
+      as sold-out variants, cart errors, and empty collections. Mark the text,
+      images, links, and layouts merchants need to change in the Theme Editor.
+  - question: Can Claude Code use Figma MCP to build Shopify theme sections?
+    answer: >-
+      Yes, as an assisted workflow. Figma MCP gives Claude Code design context
+      from the selected frame, and the Shopify AI Toolkit can supply Liquid
+      documentation and validation. Ask for one section that fits the existing
+      theme, review the code and schema, and test its layout and behavior in an
+      unpublished theme.
+  - question: How do I test a Figma-based Shopify theme without changing my live store?
+    answer: >-
+      Duplicate the current theme for a baseline, then work on a feature branch
+      and use Shopify CLI to preview your changes with store data. Upload the
+      reviewed code to an unpublished theme for stakeholder testing. Check Theme
+      Editor controls, real products, mobile layouts, and cart interactions
+      before publishing the approved theme.
+  - question: What is the difference between shopify theme dev and shopify theme push?
+    answer: >-
+      Use shopify theme dev for an interactive preview that updates as you edit
+      local theme files. Use shopify theme push to upload files to a theme in
+      the store’s theme library. For a separate review copy, push to a new
+      unpublished theme and use the preview link Shopify CLI returns.
+  - question: How should a team use GitHub for Shopify theme changes?
+    answer: >-
+      Start from the current theme code, work in feature branches, and review
+      changes in pull requests. Shopify’s GitHub integration syncs a connected
+      theme with its branch and can commit changes made in Shopify Admin back to
+      that branch. Connect a staging branch to an unpublished theme and pull its
+      latest changes before editing the same files.
+  - question: Will merchants be able to edit the new sections in Shopify?
+    answer: >-
+      Yes, if the developer exposes the right controls through the section
+      schema. For a promotional grid, the heading and spacing can be section
+      settings, while images, links, and copy belong on editable card blocks.
+      Test adding, deleting, and reordering blocks with the merchant’s own
+      content.
+  - question: How much does it cost to convert Figma designs to Shopify?
+    answer: >-
+      Price depends on how much of the existing theme can be reused, how many
+      unique sections and templates need development, and whether product forms,
+      cart behavior, or apps need custom integration. Ask for a quote that lists
+      the included templates, review rounds, testing, handoff, and any theme or
+      app fees separately.
+  - question: How long does a Figma-to-Shopify project take?
+    answer: >-
+      A few sections on a compatible theme generally take less time than a
+      custom build that replaces multiple templates. Confirm the designs and
+      assets are ready, then account for mobile layouts, app integrations,
+      merchant review, and launch testing. Agree on what starts the delivery
+      window and what needs approval before launch.
+  - question: Do I need a headless storefront to match my Figma design?
+    answer: >-
+      Most unique storefront layouts can be built with Liquid, JSON templates,
+      CSS, and JavaScript. Consider headless when the storefront needs
+      architecture that a theme cannot adequately support, such as shared
+      routing with a larger app or a separate content system. Include hosting,
+      cart integration, accounts, and SEO in that decision.
+tags:
+  - Figma to Shopify
+  - Shopify development
+  - theme customization
+  - web development
+  - design to code
+image: "/blog/how-to-convert-figma-designs-to-shopify/cover.webp"
 ---
 
-You hired a designer. They delivered beautiful Figma mockups. Your brand looks premium, the UX is thoughtful, everything is perfect.
+Converting a Figma design into Shopify is not as simple as exporting the HTML and CSS from Figma and uploading it to Shopify. Figma gives you the design of a page, but Shopify needs a working theme where products, collections, images, prices and other content come from your store data.
 
-Now comes the hard part: **turning those static designs into a working Shopify store.**
+**Can you convert Figma to Shopify automatically?** No, there is no reliable one-click conversion to a production Shopify theme. Export tools and AI can help with assets and starter code, but you still need to connect the layout to store data, make it editable, and test how variants, cart, and mobile layouts work.
 
-This is where most projects hit a wall.
+Suppose your designer creates a product page with a product gallery, different color options, a custom size chart and an Add to Cart button. In Figma, all these elements can be placed using sample images and text. But when you build the page in Shopify, the gallery should show the correct product images, the price should change with the selected variant, and Add to Cart should submit the correct variant. It should also work when a product has no images, when a variant is sold out, and when the customer opens the store on mobile.
 
-Designers hand off Figma files. Developers look at them and say "this will take 8 weeks and cost $40,000." Business owners are confused: "It's just copying the design, right?"
+There are different approaches to converting a Figma design into Shopify. You can customize an existing theme, develop custom Liquid sections, build a new theme, or use a headless frontend. Let's discuss which approach makes sense, how the development works, and the problems you should check before publishing the theme.
 
-No. It's not.
+## Different Ways to Convert Figma Designs to Shopify
 
-Here's what actually happens when you convert Figma to Shopify—the process, the challenges, the approaches, and what you need to know before you start.
+### 1. Customize an existing Shopify theme
 
-![Design to code workspace](https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=2000&auto=format&fit=crop)
+This is the first approach I recommend checking. If your Figma design follows a common ecommerce layout, you may not need to develop an entire theme from scratch.
 
-## Why This Is Harder Than It Looks
+Shopify themes such as [Dawn](https://themes.shopify.com/themes/dawn/styles/default) and other themes from the [Shopify Theme Store](https://themes.shopify.com/) already include product templates, collection pages, navigation, cart functionality and mobile layouts. You can change colors, typography, spacing and the order of available sections through the Theme Editor. For more specific changes, a developer can modify the theme's Liquid, CSS and JavaScript.
 
-Let me show you why "just make it look like Figma" is more complicated than it seems.
+Suppose your Figma homepage has an image banner, a featured collection, a text-and-image section and customer testimonials. If an existing theme already supports most of this layout, modifying it is usually more practical than rebuilding every component.
 
-### Figma Is Static. Shopify Is Dynamic.
+**Recommendation:** Use an existing theme when the design is close to its current structure and the required functionality already works. Before buying a paid theme, check its demo and available section settings against the Figma file. A design that needs extensive structural changes may be harder to maintain if it is implemented only through CSS overrides.
 
-**In Figma:**
-- You design one perfect homepage with 6 featured products
-- You create one product page with sample content
-- Everything is manually positioned
-- Text is exactly as long as you want it
-- Images are perfectly sized and cropped
-- Nothing moves, nothing changes
+### 2. Build custom sections on an existing theme
 
-**In Shopify:**
-- Homepage needs to work with 6 products OR 60 products
-- Product pages need to handle 1 image OR 15 images
-- Product titles can be 5 words or 25 words
-- Descriptions can be 3 sentences or 30 paragraphs
-- Merchants add content, and it might break your perfect layout
-- Everything is responsive (mobile, tablet, desktop)
+Sometimes the design is mostly standard, but a few sections are unique. In that case, I recommend keeping the existing theme and creating custom Liquid sections for those specific areas.
 
-**The challenge:** You need to build a system that looks perfect no matter what content merchants add.
+For instance, a fashion store might use a standard product template but need a custom homepage section with an unusual promotional grid. A developer can create that grid as a new Shopify section, add configurable images and links, and make it available in the Theme Editor.
 
-### Figma Shows Best Case. Shopify Needs Worst Case.
+This approach is especially useful because the merchant can update the content later without asking the developer to change the code every time a new campaign starts.
 
-**What designers show in Figma:**
-- Product with perfect 5-word title
-- Description that's exactly 3 lines
-- Reviews showing 5 stars
-- "In Stock" badge
-- Professional product photo
+There are also visual page-building tools, including [Replo](https://www.replo.app/), [PageFly](https://pagefly.io/) and [Instant](https://instant.so/). They may be worth evaluating for campaign pages or when a team needs frequent visual changes. However, check how the generated content is hosted, how much of it can be edited without the app, and how it affects page performance. An app-built page is not automatically equivalent to native Shopify section code.
 
-**What actually happens in Shopify:**
-- Product title: "Women's Organic Cotton Blend Relaxed Fit Casual Summer Dress with Pockets and Adjustable Straps Available in Multiple Colors"
-- Description: Empty (merchant forgot to add it)
-- Reviews: 2.5 stars with angry customer complaints
-- Out of stock for 6 weeks
-- Product photo: Blurry mirror selfie from someone's bedroom
+### 3. Build a completely custom Shopify theme
 
-**The challenge:** Your design needs to handle all these edge cases gracefully.
+If most pages require a different layout or the existing theme has to be rewritten heavily, building a custom theme may make more sense.
 
-![Figma design interface](https://images.unsplash.com/photo-1609921212029-bb5a28e60960?q=80&w=2000&auto=format&fit=crop)
+Shopify themes use Liquid for dynamic content, JSON templates to arrange sections, and CSS and JavaScript for presentation and interactions. A custom theme can use the same Shopify products, collections and checkout while providing a different storefront design.
 
-### Figma Is One Page. Shopify Is a System.
+It is important to keep the theme editable. A custom theme should not mean hardcoding every product title, banner and button into Liquid files. If a merchant has to contact a developer just to change a homepage image, the implementation is unnecessarily difficult to manage.
 
-**What you design in Figma:**
-- Homepage
-- Collection page
-- Product page
-- Cart
-- Maybe checkout
+Custom theme development gives more control over the storefront, but it also means your team must maintain the code and test it when Shopify, apps or store requirements change. It does not remove Shopify's platform restrictions.
 
-**What you actually need to build in Shopify:**
-- Homepage (multiple layouts for different campaigns)
-- Collection pages (12+ different collection types)
-- Product pages (simple, variant, bundled, pre-order, out-of-stock states)
-- Cart (empty state, full state, upsells, free shipping threshold)
-- Account pages (login, register, order history, addresses)
-- 404 error page
-- Search results
-- Blog (if applicable)
-- Policy pages
-- Email templates (order confirmation, shipping, etc.)
+### 4. Build a headless Shopify storefront
 
-Most Figma files only show 5-6 screens. Real Shopify stores need 30+ templates.
+Another option is headless development, where Shopify handles commerce data and a separate frontend—such as a React-based application—handles the storefront.
 
-**This is why "converting Figma to Shopify" is more complex than it looks.**
+I would not recommend headless simply because the Figma design looks different from an existing Shopify theme. Liquid themes can support a wide range of custom layouts, animations and interactions.
 
-## The 4 Approaches to Figma-to-Shopify Conversion
+Consider headless when there is a specific architectural requirement, such as combining commerce with a larger web application, using a separate content architecture, or needing routing and frontend behavior that is difficult to achieve with Shopify themes. You will also need to plan for cart behavior, customer accounts, SEO, hosting and app integrations that might otherwise work directly in a Liquid theme.
 
-There are 4 ways to convert Figma designs to Shopify. Each has trade-offs.
+For most design-to-Shopify projects, **an existing theme with custom sections or a well-built custom Liquid theme is the better starting point**.
 
-### Approach 1: Modify an Existing Theme
+![Four Figma-to-Shopify approaches compared by how much of the storefront needs to change](/blog/how-to-convert-figma-designs-to-shopify/01-conversion-approaches.webp)
 
-**What this means:**
-- Start with a Shopify theme (Dawn, Refresh, or premium theme)
-- Customize CSS to match Figma designs
-- Keep theme structure but change appearance
+## Why You Cannot Simply Export Figma to Shopify
 
-**Best for:**
-- Designs that are relatively standard
-- Budget under $15,000
-- Need to launch quickly (3-5 weeks)
-- Don't need custom functionality
+The important difference is that Figma represents what the page should look like, while Shopify must decide what content to show and how the page behaves.
 
-**Pros:**
-- Fastest approach
-- Most affordable ($5,000-15,000)
-- Built-in responsive design
-- Easier to maintain
-
-**Cons:**
-- Limited by theme structure
-- Can't achieve pixel-perfect match to Figma
-- Some design elements won't be possible
-- Might need to compromise on design vision
-
-![Web development coding](https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2000&auto=format&fit=crop)
-
-**Real example:**
-
-A fashion brand had beautiful Figma designs with unique hover animations and custom product page layouts.
-
-We started with Shopify's Dawn theme:
-- Customized color palette, typography, spacing
-- Modified product page layout with CSS
-- Added custom sections for homepage
-- 70-80% match to Figma designs
-- Cost: $8,000
-- Timeline: 4 weeks
-
-They had to compromise on some custom animations and exact spacing, but got a beautiful store quickly.
-
-### Approach 2: Build Custom Sections on Existing Theme
-
-**What this means:**
-- Use a theme as foundation
-- Build custom Liquid sections for unique designs
-- Mix theme sections with custom sections
-
-**Best for:**
-- Designs with some unique elements but mostly standard
-- Budget: $15,000-30,000
-- Timeline: 5-8 weeks
-- Want flexibility without full custom build
-
-**Pros:**
-- More design flexibility than pure theme customization
-- Still benefits from theme's responsive framework
-- Can achieve 85-90% match to Figma
-- Maintainable by developers
-
-**Cons:**
-- More expensive than pure theme customization
-- Some technical limitations remain
-- Need developer for updates
-
-**Real example:**
-
-A home goods brand had Figma designs with custom collection layouts and unique product filtering.
+Take a featured-product card. In Figma, the designer might specify one product image, one title, one price and a button. In Shopify, that card should load actual product data. If the merchant changes the product image or price in Admin, the storefront should update without editing the theme.
 
-We used Dawn theme as base:
-- Built 8 custom sections (hero, featured collections, testimonials, etc.)
-- Created custom collection template with advanced filtering
-- Used theme sections for standard pages (cart, account, etc.)
-- 85% match to Figma designs
-- Cost: $22,000
-- Timeline: 7 weeks
+The same issue applies to other parts of the store. A collection grid needs to work with different product counts. A product page needs to support available and unavailable variants. A testimonial section may contain three blocks this month and five next month.
 
-Homepage looked exactly like Figma. Some secondary pages used theme defaults.
+A Figma-to-code tool can sometimes generate HTML and CSS that resembles the design, but that is only one part of the job. It does not necessarily create Shopify schema settings, dynamic content connections, product forms or reusable theme components.
 
-### Approach 3: Full Custom Theme Development
+## How Shopify Theme Architecture Works
 
-**What this means:**
-- Build entire theme from scratch
-- Every template custom-coded in Liquid
-- Pixel-perfect match to Figma (or close to it)
+Before converting the design, it helps to understand a few important folders in a Shopify theme.
 
-**Best for:**
-- Unique designs that can't be achieved with themes
-- Budget: $30,000-60,000
-- Timeline: 8-12 weeks
-- Brand needs custom functionality
-
-**Pros:**
-- Complete design control
-- 95%+ match to Figma possible
-- Custom functionality built-in
-- No theme limitations
+| Theme folder | What it is used for                                                           |
+| ------------ | ----------------------------------------------------------------------------- |
+| `layout/`    | The shared HTML layout, including `theme.liquid`                              |
+| `templates/` | JSON templates for product, collection, homepage and other page types         |
+| `sections/`  | Editable sections such as banners, featured collections and promotional grids |
+| `blocks/`    | Reusable theme blocks supported by modern Shopify themes                      |
+| `snippets/`  | Reusable Liquid markup called from other theme files                          |
+| `assets/`    | CSS, JavaScript and theme assets                                              |
+| `config/`    | Theme settings and their saved values                                         |
+| `locales/`   | Translation files                                                             |
 
-**Cons:**
-- Expensive
-- Longer timeline
-- Requires ongoing developer support
-- More complex maintenance
-
-![Shopify dashboard](https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop)
-
-**Real example:**
-
-A luxury skincare brand had completely unique Figma designs—nothing like existing themes.
-
-We built custom theme from scratch:
-- Custom homepage with scroll-triggered animations
-- Unique product page with ingredient spotlight
-- Custom collection grid with filter overlays
-- Mobile-first responsive design
-- 95% match to Figma (some adjustments for technical feasibility)
-- Cost: $48,000
-- Timeline: 11 weeks
+The distinction between sections, blocks and snippets is important.
 
-Pixel-perfect execution of their brand vision.
+A **section** is usually a larger area of the page, such as a hero banner or product recommendations section. A **section block** is an editable item defined inside one section, like a single testimonial card. Modern **theme blocks** live in the `blocks/` folder and can be reused across compatible sections. A **snippet** is useful for repeated markup or logic but does not have its own merchant-facing schema settings.
 
-### Approach 4: Headless with Custom Frontend
-
-**What this means:**
-- Shopify handles products, checkout, orders (backend only)
-- Build completely custom frontend with React/Next.js
-- Design freedom limited only by web standards
-
-**Best for:**
-- Highly unique designs requiring complete control
-- Budget: $50,000-150,000+
-- Timeline: 12-20 weeks
-- Need app-like performance and interactions
-
-**Pros:**
-- Unlimited design possibilities
-- Can match Figma 100% (if design is technically feasible)
-- Best performance
-- Custom functionality without constraints
-
-**Cons:**
-- Very expensive
-- Long timeline
-- Requires specialized developers
-- Ongoing maintenance critical
+Shopify also supports nesting compatible theme blocks. That can be useful when the Figma design has reusable elements inside other elements, although not every existing theme uses this newer architecture.
 
-**Real example:**
+Your main goal should be to map the Figma design to sections and blocks that merchants can actually manage. Shopify's [theme architecture documentation](https://shopify.dev/docs/storefronts/themes/architecture) explains these components in detail.
 
-A fashion brand had Figma designs with custom product configurator, 3D viewer, and unique navigation patterns.
+## Preparing the Figma File Before Development
 
-We built [headless store](/services/headless-commerce):
-- Next.js frontend
-- Shopify backend via Storefront API
-- 100% match to Figma designs
-- Custom animations and interactions
-- Cost: $95,000
-- Timeline: 16 weeks
-
-Achieved everything from Figma, plus some enhancements.
-
-## The Conversion Process: Step-by-Step
-
-Regardless of approach, here's the actual process we follow.
-
-![Developer workspace setup](https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2000&auto=format&fit=crop)
-
-### Phase 1: Design Audit & Technical Review (Week 1)
-
-Before writing code, we audit Figma files.
-
-**What we check:**
-
-**1. Responsive Design**
-- Are there mobile mockups? (most Figma files only show desktop)
-- How should layouts adapt at 768px, 425px?
-- What happens to navigation on mobile?
-- Does card grid work on small screens?
-
-**2. Interactive States**
-- Hover states for buttons, links, products
-- Loading states (what happens while page loads?)
-- Error states (out of stock, form errors)
-- Empty states (empty cart, no search results)
-
-Most Figma files miss 80% of these states.
-
-**3. Content Variability**
-- How does design handle long product titles?
-- What if product has 1 image vs 10 images?
-- What if there are 6 products vs 60?
-- What if description is empty?
-
-**4. Shopify Constraints**
-- Does design require checkout customization? (need Shopify Plus)
-- Are there features Shopify doesn't support natively?
-- Does design conflict with Shopify's structure?
-
-**5. Technical Feasibility**
-- Can animations be built with CSS/JS?
-- Are custom fonts optimized for web?
-- Is design performant? (image-heavy designs slow sites)
-
-**Output:** Technical specification document listing:
-- What can be built exactly as designed
-- What needs slight modifications
-- What's not technically feasible
-- Questions for designer/client
-
-We offer a comprehensive [design review](/services/audit-consulting) to identify these issues early.
-
-### Phase 2: Component Breakdown (Week 1)
-
-We break Figma designs into reusable components.
-
-**Example breakdown:**
-
-**Homepage might include:**
-- Hero section (multiple layout variants)
-- Featured collection grid (2-column, 3-column, 4-column)
-- Testimonial carousel
-- Newsletter signup
-- Featured products slider
-- Instagram feed
-- Text + image block (left/right variants)
-
-**Product page might include:**
-- Image gallery (slider, grid, stacked variants)
-- Product information (title, price, description)
-- Variant selector (dropdowns, swatches, buttons)
-- Add-to-cart section
-- Accordion (details, shipping, returns)
-- Reviews section
-- Recommended products
-
-Each component becomes a Liquid section or block.
-
-![Typography and fonts](https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=2000&auto=format&fit=crop)
-
-### Phase 3: Style System Setup (Week 1-2)
-
-Before building pages, we establish the design system in code.
-
-**What we set up:**
-
-**1. Typography**
-```css
-/* Extract from Figma */
---font-heading: 'Montserrat', sans-serif;
---font-body: 'Inter', sans-serif;
-
-/* Sizes (Figma uses px, we convert to rem for accessibility) */
---text-xs: 0.75rem;    /* 12px */
---text-sm: 0.875rem;   /* 14px */
---text-base: 1rem;     /* 16px */
---text-lg: 1.125rem;   /* 18px */
---text-xl: 1.25rem;    /* 20px */
---text-2xl: 1.5rem;    /* 24px */
---text-3xl: 1.875rem;  /* 30px */
-
-/* Weights */
---font-normal: 400;
---font-medium: 500;
---font-semibold: 600;
---font-bold: 700;
+I recommend reviewing the complete Figma file before writing any Liquid code. Doing this can prevent a lot of rework later.
+
+First, check whether the designs include mobile layouts. If the file only contains desktop screens, the developer still has to decide how the navigation, banners, product grids and interactive components should behave on smaller devices. These decisions should be agreed upon rather than guessed during development.
+
+Next, identify repeated components. If the same image-and-text design appears on several pages, it may be better to build one configurable Shopify section instead of copying the same markup into multiple templates.
+
+Also check the different states of each component. Product cards need to handle long names, missing images and sold-out products. Forms need error and loading states. Collection layouts should not break when only one product is returned.
+
+For developer handoff, [Figma Dev Mode](https://www.figma.com/dev-mode/) can help inspect dimensions, spacing, styles and assets. But the measurements are still a starting point. They need to be translated into flexible CSS rather than copied as fixed pixel positions everywhere.
+
+I would also decide which settings should be editable by the merchant. A banner's image, heading, link and spacing might need Theme Editor controls. The underlying responsive grid and interaction logic usually should remain part of the theme code.
+
+## Develop on a Duplicate Theme With Shopify CLI and Git
+
+Start in Shopify Admin under **Online Store → Themes** and [duplicate the current theme](https://help.shopify.com/en/manual/online-store/themes/managing-themes/duplicating-themes). Keep the duplicate as a baseline for the redesign. If the theme already has a Git repository, start from its current branch and check whether any recent Theme Editor changes need to be brought into Git. If there is no repository, pull the duplicate into an empty project directory and commit that starting point before changing it.
+
+```bash
+# Start from the duplicate in a new, empty project directory.
+# Replace the store domain and theme ID with your own values.
+SHOPIFY_THEME_STORE="example.myshopify.com"
+shopify theme list --store "$SHOPIFY_THEME_STORE"
+shopify theme pull --store "$SHOPIFY_THEME_STORE" --theme 123456789
+
+git init -b main
+git add .
+git commit -m "Capture the current Shopify theme"
+git switch -c figma-promo-grid
+
+# Start a development preview that reloads as local files change.
+shopify theme dev --store "$SHOPIFY_THEME_STORE"
 ```
 
-**2. Color Palette**
-```css
-/* Extract exact colors from Figma */
---color-primary: #2C5F2D;
---color-primary-hover: #1F4420;
---color-secondary: #97BC62;
---color-text: #1A1A1A;
---color-text-light: #6B6B6B;
---color-background: #FFFFFF;
---color-surface: #F5F5F5;
---color-border: #E5E5E5;
---color-error: #DC2626;
---color-success: #059669;
+Once the promotional grid below is in your working copy, open the preview URL and add the section in the development theme's Theme Editor. Check it with real products and merchant content. If you make Theme Editor changes that should ship with the code, bring the relevant template and settings changes into the working copy and review them alongside the section code before uploading the review theme.
+
+```bash
+# From the theme directory, after implementing and reviewing the changes.
+shopify theme check
+git add sections/figma-promo-grid.liquid
+git commit -m "Add editable promotional grid section"
+
+# Create a separate review theme and share the preview URL from the output.
+shopify theme push --store example.myshopify.com --unpublished --theme "Figma redesign review"
 ```
 
-**3. Spacing Scale**
-```css
-/* Figma spacing values converted to consistent scale */
---space-xs: 0.25rem;   /* 4px */
---space-sm: 0.5rem;    /* 8px */
---space-md: 1rem;      /* 16px */
---space-lg: 1.5rem;    /* 24px */
---space-xl: 2rem;      /* 32px */
---space-2xl: 3rem;     /* 48px */
---space-3xl: 4rem;     /* 64px */
-```
+Use the returned theme ID for later uploads to that same unpublished review theme. Confirm the ID before each push. Once the merchant approves the review theme, publish it from the theme library and keep the previous theme available if you need to switch back.
 
-**4. Component Styles**
-```css
-/* Buttons extracted from Figma */
-.btn-primary {
-  background: var(--color-primary);
-  color: white;
-  padding: var(--space-md) var(--space-xl);
-  border-radius: 4px;
-  font-weight: var(--font-semibold);
-  transition: background 0.2s;
-}
+If the team uses the [Shopify GitHub integration](https://shopify.dev/docs/storefronts/themes/tools/github), connect a staging branch to an unpublished theme and use pull requests to review updates. Shopify syncs changes from that branch to the connected theme and commits saved Admin edits back to the branch. Pull those changes before editing the same settings locally. For a connected review theme, use the branch as the delivery path for code changes.
 
-.btn-primary:hover {
-  background: var(--color-primary-hover);
-}
-```
+![A duplicate theme provides a baseline, a Git branch holds changes, and Shopify CLI creates development and unpublished review previews](/blog/how-to-convert-figma-designs-to-shopify/02-duplicate-theme-cli-git.webp)
 
-This style system ensures consistency across all pages.
+For the command options and preview behavior, see [Shopify CLI for themes](https://shopify.dev/docs/storefronts/themes/tools/cli), [theme dev](https://shopify.dev/docs/api/shopify-cli/theme/theme-dev), and [theme push](https://shopify.dev/docs/api/shopify-cli/theme/theme-push).
 
-### Phase 4: Template Development (Weeks 2-8)
+## Actual Implementation: Convert a Figma Promotional Grid into a Shopify Section
 
-Now we build actual templates.
+Suppose your Figma homepage has a heading and a row of promotional cards. Each card contains an image, a title, some text and a button. The merchant wants to add or remove cards later and choose where each button links.
 
-**Development order (prioritized by importance):**
+We can build this as a Shopify Liquid section without installing a page-builder app. The example below is a **complete, self-contained section** using section blocks, which are supported by standard Online Store 2.0 themes.
 
-**Week 2-3: Core Pages**
-1. Homepage
-2. Collection page
-3. Product page
-4. Cart
+### Step 1: Create the section file
 
-**Week 4-5: Secondary Pages**
-5. Search results
-6. Account pages (login, register, orders)
-7. 404 page
-8. Blog (if applicable)
+In your local theme project, create `sections/figma-promo-grid.liquid` and add the code below. If you are using Shopify Admin instead of the CLI workflow, open **Online Store → Themes → Edit code** on the duplicate theme and create the same file there.
 
-**Week 6-7: Checkout (if custom)**
-9. Checkout customization (Shopify Plus only)
-10. Thank you page
-
-**Week 8: Polish**
-11. Animations
-12. Microinteractions
-13. Loading states
-14. Error handling
-
-![Code editor with development work](https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2000&auto=format&fit=crop)
-
-**Example: Building a Product Page**
-
-Here's what actually goes into coding a product page from Figma:
-
-**HTML Structure (Liquid):**
 ```liquid
-<div class="product-page">
-  <div class="product-gallery">
-    {% for image in product.images %}
-      <img src="{{ image | img_url: '800x' }}" alt="{{ image.alt }}">
-    {% endfor %}
-  </div>
-
-  <div class="product-info">
-    <h1 class="product-title">{{ product.title }}</h1>
-
-    <div class="product-price">
-      {% if product.compare_at_price > product.price %}
-        <span class="price-compare">{{ product.compare_at_price | money }}</span>
-      {% endif %}
-      <span class="price-current">{{ product.price | money }}</span>
-    </div>
-
-    {% if product.available %}
-      <form action="/cart/add" method="post">
-        <!-- Variant selector -->
-        <!-- Quantity selector -->
-        <button type="submit">Add to Cart</button>
-      </form>
-    {% else %}
-      <button disabled>Out of Stock</button>
+<section class="figma-promo figma-promo--{{ section.id }}">
+  <div class="figma-promo__inner">
+    {% if section.settings.heading != blank %}
+      <h2 class="figma-promo__heading">
+        {{ section.settings.heading | escape }}
+      </h2>
     {% endif %}
 
-    <div class="product-description">
-      {{ product.description }}
+    {% if section.settings.description != blank %}
+      <div class="figma-promo__intro rte">
+        {{ section.settings.description }}
+      </div>
+    {% endif %}
+
+    <div class="figma-promo__grid">
+      {% for block in section.blocks %}
+        <article class="figma-promo__card" {{ block.shopify_attributes }}>
+          {% if block.settings.image != blank %}
+            <div class="figma-promo__media">
+              {% liquid
+                assign image_loading = 'eager'
+                if section.index > 2 or forloop.index > 2
+                  assign image_loading = 'lazy'
+                endif
+              %}
+              {{ block.settings.image
+                | image_url: width: 1200
+                | image_tag:
+                  widths: '320, 480, 640, 900, 1200',
+                  sizes: '(min-width: 990px) 33vw, (min-width: 650px) 50vw, 100vw',
+                  loading: image_loading,
+                  class: 'figma-promo__image'
+              }}
+            </div>
+          {% endif %}
+
+          <div class="figma-promo__content">
+            {% if block.settings.heading != blank %}
+              <h3>{{ block.settings.heading | escape }}</h3>
+            {% endif %}
+
+            {% if block.settings.text != blank %}
+              <p>{{ block.settings.text | escape }}</p>
+            {% endif %}
+
+            {% if block.settings.link != blank and block.settings.button_label != blank %}
+              <a class="figma-promo__link" href="{{ block.settings.link }}">
+                {{ block.settings.button_label | escape }}
+              </a>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
     </div>
   </div>
-</div>
-```
+</section>
 
-**CSS (matching Figma styles):**
-```css
-.product-page {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-2xl);
-  padding: var(--space-2xl);
-}
-
-.product-title {
-  font-family: var(--font-heading);
-  font-size: var(--text-3xl);
-  font-weight: var(--font-bold);
-  color: var(--color-text);
-  margin-bottom: var(--space-md);
-}
-
-/* Responsive design not in Figma but necessary */
-@media (max-width: 768px) {
-  .product-page {
-    grid-template-columns: 1fr;
+{% style %}
+  .figma-promo--{{ section.id }} {
+    padding: {{ section.settings.padding_y }}px 20px;
   }
-}
-```
 
-**JavaScript (for interactions):**
-```javascript
-// Variant selection
-const variantSelectors = document.querySelectorAll('[name^="option"]');
-variantSelectors.forEach(selector => {
-  selector.addEventListener('change', updateVariant);
-});
-
-function updateVariant() {
-  // Update price based on selected variant
-  // Update images based on selected variant
-  // Update add-to-cart button state
-}
-
-// Image gallery
-const images = document.querySelectorAll('.product-gallery img');
-images.forEach(image => {
-  image.addEventListener('click', openLightbox);
-});
-```
-
-This one page requires:
-- Liquid templates (for dynamic content)
-- CSS (for styling matching Figma)
-- JavaScript (for interactions)
-- Responsive design (not in Figma)
-- Edge case handling (out of stock, no images, etc.)
-
-![Mobile responsive design](https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2000&auto=format&fit=crop)
-
-### Phase 5: Responsiveness (Throughout Development)
-
-Figma usually shows desktop only. We need to design mobile experience.
-
-**Our mobile-first approach:**
-
-**1. Start with Mobile**
-Design mobile layout first (even if not in Figma), then enhance for desktop.
-
-**2. Breakpoint Strategy**
-```css
-/* Mobile first */
-.hero {
-  padding: 2rem 1rem;
-}
-
-/* Tablet */
-@media (min-width: 768px) {
-  .hero {
-    padding: 3rem 2rem;
+  .figma-promo--{{ section.id }} .figma-promo__inner {
+    max-width: 1200px;
+    margin-inline: auto;
   }
-}
 
-/* Desktop */
-@media (min-width: 1024px) {
-  .hero {
-    padding: 4rem 3rem;
+  .figma-promo--{{ section.id }} .figma-promo__heading {
+    font-size: clamp(1.75rem, 3vw, 2.75rem);
+    line-height: 1.2;
+    margin: 0 0 12px;
   }
-}
-```
 
-**3. Component Adaptation**
+  .figma-promo--{{ section.id }} .figma-promo__intro {
+    max-width: 65ch;
+    margin-bottom: 28px;
+  }
 
-**Navigation:**
-- Desktop: Horizontal menu
-- Mobile: Hamburger menu
+  .figma-promo--{{ section.id }} .figma-promo__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
 
-**Product Grid:**
-- Desktop: 4 columns
-- Tablet: 3 columns
-- Mobile: 2 columns (or 1 for large images)
+  .figma-promo--{{ section.id }} .figma-promo__card {
+    min-width: 0;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    overflow: hidden;
+  }
 
-**Hero Section:**
-- Desktop: Large text, side-by-side layout
-- Mobile: Stacked layout, smaller text
+  .figma-promo--{{ section.id }} .figma-promo__media {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+  }
 
-### Phase 6: Testing & QA (Week 9-10)
+  .figma-promo--{{ section.id }} .figma-promo__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-Before launch, extensive testing.
+  .figma-promo--{{ section.id }} .figma-promo__content {
+    padding: 20px;
+  }
 
-**What we test:**
+  .figma-promo--{{ section.id }} .figma-promo__content h3 {
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+  }
 
-**1. Visual QA**
-- Compare every page to Figma side-by-side
-- Check spacing, colors, fonts, borders
-- Verify hover states, animations
+  .figma-promo--{{ section.id }} .figma-promo__content p {
+    margin: 0 0 16px;
+  }
 
-**2. Functional Testing**
-- Add to cart from every page type
-- Test variant selection
-- Verify cart updates correctly
-- Complete checkout flow
-- Test all forms (contact, newsletter, account)
+  .figma-promo--{{ section.id }} .figma-promo__link {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+  }
 
-**3. Responsive Testing**
-Test on actual devices:
-- iPhone 12, 13, 14 (Safari)
-- Samsung Galaxy (Chrome)
-- iPad (Safari)
-- Desktop (Chrome, Firefox, Safari)
+  .figma-promo--{{ section.id }} .figma-promo__link:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 3px;
+  }
 
-![Performance testing dashboard](https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop)
+  @media (max-width: 989px) {
+    .figma-promo--{{ section.id }} .figma-promo__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
 
-**4. Content Testing**
-Test with real-world content:
-- Product with 50-word title
-- Product with 1 image
-- Product with 15 images
-- Collection with 200+ products
-- Empty cart, full cart
+  @media (max-width: 649px) {
+    .figma-promo--{{ section.id }} .figma-promo__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+{% endstyle %}
 
-**5. Performance Testing**
-- Page load times (target: <2s)
-- Largest Contentful Paint (target: <2.5s)
-- First Input Delay (target: <100ms)
-- Cumulative Layout Shift (target: <0.1)
-
-### Phase 7: Launch & Handoff (Week 10)
-
-**Pre-launch checklist:**
-- All templates built and tested
-- Responsive design verified
-- Performance optimized
-- SEO tags configured
-- Analytics installed
-- Favicon and meta images set
-- 404 page customized
-- Test orders completed successfully
-
-**Handoff includes:**
-- Theme files (source code)
-- Documentation (how to edit, where things are)
-- Training (video walkthrough for client)
-- Support period (typically 30 days)
-
-## Common Challenges & Solutions
-
-Here are problems we encounter on every Figma-to-Shopify project.
-
-### Challenge #1: Figma Has Fixed Layouts, Shopify Needs Flexibility
-
-**The problem:**
-
-Designer creates homepage with 6 featured products in perfect grid.
-
-Merchant wants to feature 8 products one month, 4 the next.
-
-Fixed layout breaks.
-
-**The solution:**
-
-Build flexible sections with settings.
-
-```liquid
 {% schema %}
 {
-  "name": "Featured Products",
+  "name": "Figma promo grid",
   "settings": [
     {
-      "type": "range",
-      "id": "products_per_row",
-      "label": "Products per row",
-      "min": 2,
-      "max": 5,
-      "step": 1,
-      "default": 4
+      "type": "text",
+      "id": "heading",
+      "label": "Section heading",
+      "default": "Explore our collections"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
     },
     {
       "type": "range",
-      "id": "products_to_show",
-      "label": "Number of products",
-      "min": 4,
-      "max": 20,
-      "step": 2,
-      "default": 8
+      "id": "padding_y",
+      "label": "Vertical spacing",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 48
+    }
+  ],
+  "blocks": [
+    {
+      "type": "promo_card",
+      "name": "Promo card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Card heading"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Card text"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Shop now"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Button link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Figma promo grid",
+      "blocks": [
+        { "type": "promo_card" },
+        { "type": "promo_card" },
+        { "type": "promo_card" }
+      ]
     }
   ]
 }
 {% endschema %}
 ```
 
-Now merchant can adjust without breaking design.
+### Step 2: Add the section in Shopify Theme Editor
 
-### Challenge #2: Figma Shows Perfect Images, Reality Is Messy
+After saving the file, open the Theme Editor, select the page you want to customize, and choose **Add section → Figma promo grid**. The preset creates three editable card blocks.
 
-**The problem:**
+You can now upload images, change card headings, add text, set button links and reorder or delete the cards. The vertical spacing control is also available without changing the code.
 
-Figma shows perfect 1:1 square product images.
+This is the main benefit of converting Figma components into proper Shopify sections: the layout is developed once, but the content remains editable.
 
-Merchant uploads mix of vertical, horizontal, and square images.
+### Step 3: Understand what the code actually does
 
-Layout breaks.
+The code uses three important Shopify features.
 
-**The solution:**
+First, `{% schema %}` creates the settings that appear in the Theme Editor. Without the schema, the merchant would not be able to manage the section's heading or promotional cards through these controls.
 
-CSS object-fit to handle any aspect ratio:
+Second, `{% for block in section.blocks %}` renders however many cards the merchant has added. `{{ block.shopify_attributes }}` helps Shopify identify the correct card when the merchant selects it in the editor.
 
-```css
-.product-image {
-  width: 100%;
-  height: 400px;
-  object-fit: cover; /* Crop to fit */
-  object-position: center;
-}
-```
+Third, the section uses Shopify's `image_url` and `image_tag` filters rather than old `img_url` markup. This provides responsive image sources and image dimensions. The loading strategy makes early cards eager in sections near the top of the page and lazy-loads later cards. For an actual store, check which image becomes the LCP element before setting a high fetch priority or adding preloads.
 
-Or use Shopify's image filters:
+The CSS uses a three-column desktop grid, a two-column tablet layout and a single-column mobile layout. You would replace the styling values with the actual Figma design tokens and test the result at different widths.
 
-```liquid
-<img src="{{ product.featured_image | img_url: '600x600', crop: 'center' }}">
-```
+This is usable section code rather than pseudocode, but it still needs to be checked in the target theme. Fonts, global styles, link appearance and other components may differ between themes. Run Shopify Theme Check and preview the section before publishing.
 
-### Challenge #3: Figma Animations Don't Translate to Code
+For source documentation, see [Shopify sections](https://shopify.dev/docs/storefronts/themes/architecture/sections), [section schema](https://shopify.dev/docs/storefronts/themes/architecture/sections/section-schema), and [image filter guidance](https://shopify.dev/docs/storefronts/themes/best-practices/performance/use-shopify-image-filters-efficiently).
 
-**The problem:**
+![The Figma promotional grid becomes a Liquid section with editable heading, spacing, and card blocks](/blog/how-to-convert-figma-designs-to-shopify/03-editable-promotional-grid.webp)
 
-Designer creates complex animation in Figma (fade + slide + scale).
+## When Should You Use Theme Blocks Instead?
 
-Expectation: Developer will "just copy it."
+The example uses **section blocks**, which belong to a single section. This is enough when the promotional card is only needed in that grid.
 
-Reality: Animation requires custom JavaScript and impacts performance.
+Modern Shopify also supports **theme blocks** in separate files under `blocks/`. If the same content component needs to be reused across several sections, theme blocks may be a better solution. These can be nested inside compatible blocks, giving merchants more control over page composition.
 
-**The solution:**
+There is one architectural rule worth remembering: a section generally uses either locally defined section blocks or Shopify's theme block system. You should not mix both approaches inside the same section schema as if they were interchangeable.
 
-**Option 1: Simplify animation**
-Use CSS-only animations (performant, easy to maintain):
+For a larger Figma design system, I would plan reusable components before converting every screen. Otherwise the codebase can end up with several slightly different versions of the same card, button or content section.
 
-```css
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 0.5s ease-in forwards;
-}
+Read [Shopify's theme block documentation](https://shopify.dev/docs/storefronts/themes/architecture/blocks) for the current implementation pattern.
 
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-```
+## Building Product and Collection Pages from Figma
 
-**Option 2: Use lightweight library**
-For complex animations, use GSAP or Framer Motion (adds ~20kb).
+The promotional grid is a useful starting point, but product and collection pages need more care because they contain live store functionality.
 
-**Option 3: Compromise**
-Implement simplified version of animation that captures essence without complexity.
+### Product pages
 
-### Challenge #4: Typography Doesn't Match Figma
+A Figma product page may show the image gallery, price, size selector, stock status and Add to Cart button. In the live theme, these elements must stay connected to the selected product and variant.
 
-**The problem:**
+A common mistake is hardcoding the displayed price in the template or updating only the text when a customer changes a variant. That can make the interface look correct while the form still adds a different variant to the cart.
 
-Figma uses custom font that looks perfect.
+When implementing a product page, use the theme's existing product form and variant-selection architecture where possible. If you replace it, ensure that variant IDs, availability, prices, images and form submission are all updated together.
 
-Web version looks slightly different (line-height, spacing, rendering).
+Shopify supports products with up to **2,048 variants**, but some older theme patterns were built around much smaller arrays. Shopify's `product.variants` Liquid array has additional limitations; a design requiring a large number of variants needs a selector that follows Shopify's current option-value and section-rendering approach instead of assuming every variant is present in one JSON array.
 
-**The solution:**
+A design can also request more than three independent native variant options. Shopify's standard product model still has a three-option limit. Additional customer inputs may need line item properties, separate products or an options app, depending on whether those choices affect SKU, inventory and price.
 
-**1. Use actual web fonts during design** (designers should design with web fonts, not desktop fonts)
+**Recommendation:** Before implementing a custom variant picker from Figma, test the design with the largest and most complicated product in the catalog—not just the sample product used in the mockup.
 
-**2. Adjust CSS properties**
-```css
-.heading {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
-  line-height: 1.2; /* Adjust for web rendering */
-  letter-spacing: -0.02em; /* Tighten if needed */
-  font-feature-settings: 'liga' 1; /* Enable ligatures */
-  -webkit-font-smoothing: antialiased; /* Better rendering */
-}
-```
+### Collection pages
 
-**3. Load fonts properly**
-```html
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap">
-```
+Collection pages should use Shopify's real collection and filter data. If the Figma design includes filters for size, color or material, those filters need to be connected to supported Shopify storefront filtering rather than being treated as decorative buttons.
 
-### Challenge #5: Shopify Sections Don't Work Like Figma Layers
+The developer should also test empty results, long product titles, sold-out products, pagination and mobile filter controls.
 
-**The problem:**
+For more advanced filtering and search requirements, Shopify's [Search & Discovery](https://help.shopify.com/en/manual/online-store/search-and-discovery) app is a reasonable starting point before building a custom filtering system.
 
-Designer creates complex overlapping layouts in Figma (easy to do).
+### Cart drawers and AJAX interactions
 
-Shopify sections are stackable blocks, not overlapping layers.
+A custom cart drawer should show the actual cart state after a customer adds a product. Shopify provides an [Ajax Cart API](https://shopify.dev/docs/api/ajax/reference/cart) and a [Section Rendering API](https://shopify.dev/docs/api/ajax/section-rendering) for these workflows.
 
-**The solution:**
-
-**Option 1: Use negative margins**
-```css
-.overlap-section {
-  margin-top: -5rem; /* Pull up to overlap */
-  position: relative;
-  z-index: 10;
-}
-```
-
-**Option 2: Use absolute positioning within section**
-```css
-.section-wrapper {
-  position: relative;
-}
-
-.overlap-element {
-  position: absolute;
-  top: -3rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
-```
+Avoid hardcoding `/cart/add.js` in a custom storefront script if the store uses localized URLs or international market subfolders. Shopify provides `window.Shopify.routes.root` to construct locale-aware Ajax paths. Also, theme-specific cart drawers depend on their existing markup and JavaScript, so copying a cart script from a different theme is not guaranteed to work.
 
-**Option 3: Redesign slightly**
-Work with designer to adjust layout to work with Shopify's section system.
+## Responsive Design: The Figma File Is Not the Final Layout
 
-![Team collaboration on design project](https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000&auto=format&fit=crop)
-
-## Tools We Use
+A Figma design often contains one desktop frame and one mobile frame. But real devices have many widths between those two designs.
 
-**Design Handoff:**
-- **Figma Dev Mode** - Extract CSS, spacing, colors
-- **Zeplin** (alternative) - Design specs for developers
-- **Avocode** (alternative) - Design-to-code handoff
-
-**Development:**
-- **Shopify CLI** - Local development, faster iteration
-- **Theme Kit** (legacy) - Alternative to CLI
-- **VS Code** - Code editor with Liquid extension
-- **Browser DevTools** - Debug and perfect styling
-
-**Asset Optimization:**
-- **TinyPNG** - Compress images
-- **SVGOMG** - Optimize SVG files
-- **Google Fonts Helper** - Self-host fonts for performance
-
-**Testing:**
-- **BrowserStack** - Cross-browser testing
-- **LambdaTest** (alternative) - Device testing
-- **Lighthouse** - Performance testing
-- **Responsively App** - Test multiple screen sizes simultaneously
+Instead of trying to preserve exactly the same pixel positions at every width, developers should decide how the layout changes: when the navigation collapses, when product grids lose a column, and how images are cropped.
 
-## Best Practices for Designers (To Make Conversion Easier)
+For typography, CSS `clamp()` can help headings scale between smaller and larger screens without creating separate rules for every device. For images, Shopify's responsive image filters help browsers select an appropriate file size.
 
-If you're a designer creating Figma files for Shopify development:
+There is also a performance issue that appears frequently in Figma-to-Shopify projects: the developer creates two separate hero images and hides one with CSS for mobile. This may lead to unnecessary downloads depending on how the images are referenced. When separate mobile and desktop crops are required, a `<picture>` element with media queries is generally a better approach.
 
-**1. Design Mobile First**
-Show mobile layouts, not just desktop. 70% of traffic is mobile.
+Keep accessibility in mind as well. Buttons and links must remain keyboard accessible, text needs sufficient contrast, and animations should respect reduced-motion preferences. A visually accurate page is not a successful conversion if shoppers cannot use it.
 
-**2. Use Auto Layout**
-Figma's Auto Layout mimics CSS flexbox/grid. Makes developer handoff easier.
+## Common Problems When Converting Figma to Shopify
 
-**3. Include All States**
-- Hover states for interactive elements
-- Loading states
-- Error states (out of stock, form errors)
-- Empty states (empty cart, no search results)
+### Problem 1: Everything is hardcoded
 
-**4. Use Web-Safe Fonts**
-Or at least specify which web font service you're using (Google Fonts, Adobe Fonts).
+This happens when the developer treats each Figma frame as a fixed HTML page. The store looks close to the design at launch, but merchants cannot change content without editing code.
 
-**5. Document Spacing System**
-Use consistent spacing (4px, 8px, 16px, 24px, 32px, etc.). Don't use random values.
+Use sections, blocks and settings for content that will need regular updates. Use metafields and metaobjects for structured product-specific content, such as size guides or material specifications.
 
-**6. Show Content Variability**
-- Product with long title
-- Product with short title
-- Many images vs one image
-- Grid with odd number of items
+### Problem 2: The design works with sample content but breaks with real products
 
-**7. Export Assets Properly**
-- SVG for icons and logos
-- PNG/WebP for photos
-- Optimize before handing off
+A card might look fine with a short product title but become uneven when the product name occupies several lines. A product gallery might work with five images but not with one.
 
-**8. Consider Shopify Constraints**
-Understand what Shopify can/can't do natively. Work with developers early.
+Test with actual store data, including missing or unusual content. The layout should be flexible enough to handle normal changes without being rebuilt.
 
-![E-commerce website design](https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=2000&auto=format&fit=crop)
+### Problem 3: Too much JavaScript is added for visual effects
 
-## DIY vs Hiring Developers
+Figma prototypes can include animations, transitions and interactions that look attractive in a demonstration. But not every effect needs a large JavaScript library.
 
-**Can you do this yourself?**
+I recommend using CSS where it can handle the interaction appropriately. For more complex effects, measure the impact on mobile devices and keep the animation optional when reduced motion is requested.
 
-**You can DIY if:**
-- Designs are relatively simple
-- You're comfortable with HTML/CSS
-- You have 4-6 weeks to dedicate
-- You're using approach #1 (theme customization)
-- Budget is under $5,000
+### Problem 4: Product forms stop working after customization
 
-**You should hire developers if:**
-- Designs are complex or unique
-- You need custom functionality
-- Timeline is critical
-- You're using approach #2, #3, or #4
-- You want ongoing support
+This is more serious than a visual mismatch. Replacing a product section may accidentally remove variant selection, inventory checks, accelerated checkout controls or accessibility behavior.
 
-**Hybrid approach:**
+If you customize an existing theme, preserve its working commerce logic unless you have a clear reason to replace it. Test the entire buying process after making changes.
 
-Many businesses do basic setup themselves, then hire developer for:
-- Complex sections
-- Custom functionality
-- Performance optimization
-- Mobile responsiveness polish
+### Problem 5: The theme becomes difficult to maintain
 
-For [custom Shopify development](/services/custom-shopify-apps) needs, consider working with experienced developers who understand both design and Shopify's technical requirements.
+If every campaign page uses a separate copied section with slightly different code, fixing one component will not automatically fix the others.
 
-## Realistic Budgets & Timelines
+Build shared components where it makes sense, name settings clearly and document unusual parts of the theme. The goal is not only to match the Figma design today but to keep the store usable when the merchant changes content later.
 
-Here's what to actually expect:
+## Practical Tools for Figma-to-Shopify Development
 
-| Approach | Timeline | Cost | Best For |
-|----------|----------|------|----------|
-| **Theme Customization** | 3-5 weeks | $5K-15K | Standard designs |
-| **Custom Sections + Theme** | 5-8 weeks | $15K-30K | Some unique elements |
-| **Full Custom Theme** | 8-12 weeks | $30K-60K | Completely unique design |
-| **Headless** | 12-20 weeks | $50K-150K+ | Complex, custom functionality |
+You do not need an expensive or complicated stack for every project. Start with the tools required by the actual workflow.
 
-**What affects cost:**
+| Tool                                                                                              | When I recommend it                                              |
+| ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| [Figma Dev Mode](https://www.figma.com/dev-mode/)                                                 | Inspecting design measurements, assets and component details     |
+| [Shopify Theme Editor](https://help.shopify.com/en/manual/online-store/themes/customizing-themes) | Merchant-editable settings and section layouts                   |
+| [Shopify CLI](https://shopify.dev/docs/storefronts/themes/tools/cli)                              | Developing and previewing Liquid theme changes locally           |
+| [Shopify Theme Check](https://shopify.dev/docs/storefronts/themes/tools/theme-check)              | Checking Liquid syntax, schema issues and outdated code patterns |
+| [Chrome DevTools](https://developer.chrome.com/docs/devtools/)                                    | Testing responsive layouts, JavaScript and browser performance   |
+| [PageSpeed Insights](https://pagespeed.web.dev/)                                                  | Comparing field and lab performance after changes                |
 
-**Higher cost:**
-- Complex animations
-- Custom functionality
-- Many templates/page types
-- Tight deadline (rush fee)
-- Ongoing support included
+## What AI Can Do in a Figma-to-Shopify Workflow
 
-**Lower cost:**
-- Simple, clean design
-- Flexible timeline
-- Fewer custom pages
-- Standard functionality
-- Self-service after launch
+[Figma MCP for Claude Code](https://help.figma.com/hc/en-us/articles/39888612464151-Claude-Code-and-Figma-Set-up-the-MCP-server) gives the agent access to layout, components, and design variables from Figma. The [Shopify AI Toolkit](https://shopify.dev/docs/apps/build/ai-toolkit) gives it Shopify documentation and tools that can validate Liquid. For a practical example, see this [October 2026 walkthrough of using Claude Code to build Shopify theme sections from design files](https://beljic.dev/blog/figma-pdf-screenshot-shopify-theme-claude-code).
 
-![Custom Shopify theme example](https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=2000&auto=format&fit=crop)
+I would start with one frame and the existing theme code. For the promotional grid above, ask the agent to map the design to an editable Shopify Liquid section, reuse the theme's CSS variables where appropriate, and make each card a block. Give it the expected mobile layout and explain what the merchant must be able to change. Review its plan before asking it to edit the theme.
 
-## Red Flags (When to Push Back on Designs)
+AI can draft the Liquid, CSS, and schema. The Figma file usually leaves out what happens with missing data, sold-out variants, app blocks, or invalid cart requests. Test those cases yourself. Run Theme Check and preview the result in an unpublished theme, then verify that merchants can edit the section and shoppers can use it with real store data.
 
-Sometimes Figma designs aren't feasible for Shopify. Here's when to challenge:
+![Figma MCP supplies design context, Shopify AI Toolkit supplies developer resources, and a developer reviews and tests the drafted section](/blog/how-to-convert-figma-designs-to-shopify/04-ai-assisted-theme-workflow.webp)
 
-**"This needs to look exactly like this video"**
-Video/motion design is different from web implementation. Translation required.
+## How to Test the Theme Before Publishing
 
-**Checkout completely redesigned**
-Standard Shopify doesn't allow checkout customization. Needs Plus ($2,000/month) or headless (expensive).
+Once the design is converted, compare it with the Figma file, but do not stop at visual comparison.
 
-**Every page is completely unique**
-Hard to maintain. Merchants can't add new pages without developer.
+Test the homepage, product pages, collection pages and cart on both desktop and mobile. Check what happens when content is missing, when a product is unavailable, and when a customer changes a variant.
 
-**Heavily image-dependent designs**
-Dozens of large images = slow site = lost sales.
+Run Shopify Theme Check to identify structural errors. Use Chrome DevTools to look for broken scripts and unexpected layout changes. Review PageSpeed Insights and real-user Core Web Vitals where enough data is available, but do not treat a single Lighthouse score as the final measure of quality.
 
-**Relies on auto-playing video backgrounds**
-Performance nightmare, especially mobile.
+It is also important to test the Theme Editor itself. Can the merchant edit text, replace images, reorder sections and remove blocks without breaking the layout? If not, the development may be too hardcoded even if the visual result is accurate.
 
-**Pixel-perfect spacing at all screen sizes**
-Responsive design requires flexibility, not fixed pixel values.
+Finally, complete a test purchase using the store's supported payment testing workflow before publishing major product-form or cart changes. Make sure the selected variant and any line item properties reach the order correctly.
 
-## Final Thoughts
+![Prelaunch checks cover the storefront, theme editor, code, and a test purchase](/blog/how-to-convert-figma-designs-to-shopify/05-prelaunch-theme-checklist.webp)
 
-Converting Figma to Shopify isn't just "copying the design."
+## When Should You Hire a Shopify Developer?
 
-It's:
-- Understanding web constraints
-- Building flexible systems
-- Handling edge cases
-- Optimizing performance
-- Creating maintainable code
-- Ensuring responsiveness
-- Testing extensively
+You can handle smaller design changes yourself if your theme already offers the required settings. Changing colors, adjusting typography or arranging existing sections usually does not require a completely new theme.
 
-**The gap between Figma and Shopify is real.** But with the right approach, you can build stores that are:
-- Beautiful (matching design vision)
-- Functional (actually working for real content)
-- Performant (fast loading)
-- Maintainable (merchants can update without breaking)
+A developer becomes useful when the design requires new Liquid sections, custom product templates, advanced variant interactions, unique collection filtering or changes to the cart. These features need more than just matching the CSS to Figma.
 
-Whether you DIY or hire developers, understanding this process helps you:
-- Set realistic expectations
-- Budget appropriately
-- Make informed decisions
-- Collaborate effectively
+Before hiring someone, share the Figma file, explain which elements must be editable, and identify the integrations or existing apps the store depends on. This makes it easier to decide whether you should customize a theme, add new sections or build a custom theme.
 
----
+I would avoid agreeing to a full theme rebuild before checking what your current theme can already do. Reusing a working foundation may reduce development and maintenance work, as long as it does not force major compromises in the design or functionality.
 
-Need help converting your Figma designs to Shopify? We've built 100+ custom themes and know how to bridge the design-to-code gap. Our team specializes in [custom Shopify development](/services/custom-shopify-apps) and can help you turn your design vision into reality.
+## Figma-to-Shopify Cost and Delivery Ranges
 
-Schedule a design review to discuss your project and get expert guidance on the best approach for your specific needs.
+The cost and delivery window depend on how much of the current theme we can reuse, how many unique templates and sections need to be built, and what needs to happen in the product form, cart, and app integrations.
+
+| Scope                                      | What the work covers                                                                                   | Agency price range                  | Delivery range    |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ----------------------------------- | ----------------- |
+| Customize an existing theme                | Adapt typography, spacing, and layouts using existing templates and sections                           | Rs25000 to 50000 (300$ - 600$)      | 7 days - 10 days  |
+| Build custom sections on an existing theme | Develop and test new editable sections while reusing the rest of the theme                             | Rs40000 to 60000 (500$ - 750$)      | 10 days - 14 days |
+| Build a custom Liquid theme                | Develop the agreed templates, sections, and storefront interactions, then test and hand over the theme | ₹70,000–₹90,000 ($900–$1,200)   | 14 days - 21 days |
+| Build a headless storefront                | Scope a separate frontend, data and cart integrations, hosting, and testing                            | Rs100000 to 120000 (1500$ to 2000$) | 21 days - 30 days |
+
+To scope the work, share the Figma file, the list of unique page templates, the current theme, and the apps or integrations you need to keep. Confirm when the delivery window starts and how much time to allow for design feedback, merchant review, and launch testing.
+
+## Final Recommendation
+
+Converting Figma to Shopify is about making the design work with real Shopify data, not just making the page look similar to a mockup.
+
+For standard layouts, start by checking an existing Shopify theme. If only a few parts of the design are different, build custom sections for those areas. Consider a full custom theme when most of the storefront needs a different structure. Headless should be reserved for projects with a genuine architectural requirement, not simply a unique Figma design.
+
+The important part is that product pages, collection filters, cart interactions and merchant editing all work correctly after the design is converted. A theme that looks accurate but breaks when a merchant changes content is not a finished implementation.
+
+If you need help converting a Figma design into an editable Shopify theme, see our [Shopify theme development service](/services/theme-development) or [contact Scalefront](/contact-us) to discuss whether theme customization or custom theme development is the right approach for your store.
+
+## Technical References
+
+- [Shopify theme architecture](https://shopify.dev/docs/storefronts/themes/architecture)
+- [Shopify sections](https://shopify.dev/docs/storefronts/themes/architecture/sections)
+- [Shopify section schema](https://shopify.dev/docs/storefronts/themes/architecture/sections/section-schema)
+- [Shopify theme blocks](https://shopify.dev/docs/storefronts/themes/architecture/blocks)
+- [Shopify JSON templates](https://shopify.dev/docs/storefronts/themes/architecture/templates/json-templates)
+- [Shopify image filter best practices](https://shopify.dev/docs/storefronts/themes/best-practices/performance/use-shopify-image-filters-efficiently)
+- [Shopify product variant limit](https://shopify.dev/changelog/posts/the-product-variant-limit-is-now-2048-for-all-merchants)
+- [Shopify Ajax Cart API](https://shopify.dev/docs/api/ajax/reference/cart)
+- [Shopify Section Rendering API](https://shopify.dev/docs/api/ajax/section-rendering)
+- [Shopify CLI](https://shopify.dev/docs/storefronts/themes/tools/cli)
+- [Shopify Theme Check](https://shopify.dev/docs/storefronts/themes/tools/theme-check)

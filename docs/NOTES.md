@@ -50,6 +50,11 @@
 ## Blog topics in my mind
 
 - How to use claude code / codex to implement a custom feature in your shopify store or improve the UI.
+- How to make a design system for your ecommerce website in shopify / wordpress .
+
+## Things to implement
+
+- Make a live shopify renderer here to show that actual code works
 
 ## Top Services about i will do SEO Around
 

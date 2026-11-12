@@ -20,6 +20,7 @@ interface BlogPostPageProps {
 }
 
 const headerImageAltBySlug: Partial<Record<string, string>> = {
+  "how-to-convert-figma-designs-to-shopify": "A Figma design becomes a Shopify Liquid theme with store data and merchant-editable sections",
   "shopify-custom-product-configurator": "Three Shopify product configurator examples: an engraving field, a gift hamper builder, and a furniture preview",
   "custom-shopify-app-vs-existing-app": "Comparison of built-in Shopify features, an existing App Store app, and a custom Shopify app",
   "shopify-store-slow-how-to-fix": "Shopify speed diagnosis workflow for loading, interactions, and layout shifts",
