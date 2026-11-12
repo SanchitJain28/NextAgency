@@ -1,97 +1,65 @@
-"use client";
-
-import { useState, type ReactNode, isValidElement } from "react";
-import { Check, Copy } from "lucide-react";
 import type { Element, RootContent } from "hast";
+import type { BundledLanguage } from "shiki";
 import styles from "./MarkdownContent.module.css";
-import { useGeo } from "@/hooks/useGeo";
+import { CodeBlock, type CodeExample } from "./CodeBlock";
+import { RegionalPrice } from "./RegionalPrice";
+import { blogCodeTheme, getBlogHighlighter, getFence, rehypeCodeVariants } from "./codeHighlighting";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import rehypeHighlight from "rehype-highlight";
 import rehypeRaw from "rehype-raw";
 
-function getNodeText(node: RootContent | undefined): string {
-  if (!node) return "";
+const languageLabels: Record<string, [string, string?]> = {
+  js: ["JavaScript", "JS"], javascript: ["JavaScript", "JS"], jsx: ["JavaScript", "JS"],
+  ts: ["TypeScript", "TS"], typescript: ["TypeScript", "TS"], tsx: ["TypeScript", "TS"],
+  html: ["HTML"], xml: ["XML"], css: ["CSS", "#"], scss: ["SCSS", "#"],
+  liquid: ["Liquid"], bash: ["Terminal", ">_"], sh: ["Terminal", ">_"], shell: ["Terminal", ">_"],
+  json: ["JSON", "{}"], env: ["Environment variables", "$"], text: ["Plain text"],
+};
+
+function getNodeText(node: RootContent): string {
   if (node.type === "text") return node.value;
-  if ("children" in node) return node.children.map(getNodeText).join("");
-  return "";
+  return "children" in node ? node.children.map(getNodeText).join("") : "";
 }
 
-function CodeBlock({
-  node,
-  className,
-  filename,
-  children,
-}: {
-  node: RootContent | undefined;
-  className?: string;
-  filename?: string;
-  children: ReactNode;
-}) {
-  const [copied, setCopied] = useState(false);
-  const language = className?.match(/language-([\w-]+)/)?.[1] ?? "code";
-  const languageLabels: Record<string, [string, string]> = {
-    js: ["JS", "JavaScript"], javascript: ["JS", "JavaScript"],
-    ts: ["TS", "TypeScript"], typescript: ["TS", "TypeScript"],
-    tsx: ["TS", "TypeScript"], jsx: ["JS", "JavaScript"],
-    bash: [">_", "Terminal"], shell: [">_", "Terminal"],
-    json: ["{}", "JSON"], css: ["#", "CSS"],
-    env: ["$", "Environment variables"], text: ["≡", "Plain text"],
-  };
-  const [languageIcon, languageLabel] = languageLabels[language] ?? ["</>", language];
-  const [copyFailed, setCopyFailed] = useState(false);
-  const codeString = getNodeText(node).replace(/\n$/, "");
+export async function MarkdownContent({ content }: { content: string }) {
+  const highlighter = await getBlogHighlighter();
+  const supportedLanguages = new Set(highlighter.getLoadedLanguages());
+  const lines = content.split("\n");
 
-  const copyCode = async () => {
-    try {
-      await navigator.clipboard.writeText(codeString);
-      setCopyFailed(false);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      setCopyFailed(true);
-      console.error("Failed to copy:", err);
-    }
-  };
-
-  return (
-    <div className={styles.codeBlock}>
-      <div className={styles.codeHeader}>
-        <span className={styles.codeTitle}>
-          <span className={styles.languageIcon} aria-hidden="true">{languageIcon}</span>
-          <span>{filename || languageLabel}</span>
+  function exampleFor(node: Element): CodeExample {
+    const fence = getFence(node, content);
+    const language = fence?.language || "text";
+    const [label, icon] = Object.hasOwn(languageLabels, language) ? languageLabels[language] : [language];
+    const source = getNodeText(fence?.code ?? node).replace(/\n$/, "");
+    const startLine = node.position?.start.line;
+    const introduction = startLine
+      ? lines.slice(Math.max(0, startLine - 5), startLine - 1).join("\n")
+      : "";
+    const fileReferences = [...introduction.matchAll(/`([\w./[\]-]+\.(?:liquid|html?|tsx?|jsx?|json|css|scss|ya?ml|md|local|env))`/g)];
+    const filename = fence?.meta.match(/(?:^|\s)filename=(?:"([^"]+)"|'([^']+)'|(\S+))/)?.slice(1).find(Boolean)
+      ?? fileReferences.at(-1)?.[1];
+    const highlightLanguage = language === "shell" ? "bash" : language;
+    const code = supportedLanguages.has(highlightLanguage)
+      ? highlighter.codeToTokens(source, { lang: highlightLanguage as BundledLanguage, theme: blogCodeTheme }).tokens.map((tokens, row) => (
+        <span key={row}>
+          {row > 0 && "\n"}
+          {tokens.map((token) => <span key={token.offset} style={{ color: token.color }}>{token.content}</span>)}
         </span>
-        <button
-          type="button"
-          onClick={copyCode}
-          className={styles.copyButton}
-          aria-label={copyFailed ? "Copy failed. Try again" : copied ? "Code copied" : "Copy code"}
-          title={copyFailed ? "Copy failed. Try again" : copied ? "Copied!" : "Copy code"}
-        >
-          {copied ? <Check size={18} aria-hidden="true" /> : <Copy size={18} aria-hidden="true" />}
-          <span className="sr-only" aria-live="polite">{copyFailed ? "Copy failed. Try again" : copied ? "Code copied" : "Copy code"}</span>
-        </button>
-      </div>
-      <pre tabIndex={0} aria-label={`${language} code example`}>
-        <code className={className}>{children}</code>
-      </pre>
-    </div>
-  );
-}
-
-export function MarkdownContent({ content }: { content: string }) {
-  const { isIndia } = useGeo();
+      ))
+      : source;
+    return { language, label, icon, filename, code };
+  }
 
   return (
     <div className={styles.content}>
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
-      rehypePlugins={[rehypeHighlight, rehypeRaw]}
+      rehypePlugins={[rehypeRaw, [rehypeCodeVariants, content]]}
       components={{
         span: ({ node, children, ...props }) => {
           const region = node?.properties.dataPriceRegion;
-          if ((region === "in" && !isIndia) || (region === "intl" && isIndia)) {
-            return null;
+          if (region === "in" || region === "intl") {
+            return <RegionalPrice {...props} region={region}>{children}</RegionalPrice>;
           }
           return <span {...props}>{children}</span>;
         },
@@ -128,25 +96,17 @@ export function MarkdownContent({ content }: { content: string }) {
             </h3>
           );
         },
-        pre: ({ node, children }) => {
-          const startLine = node?.position?.start.line;
-          const introduction = startLine
-            ? content.split("\n").slice(Math.max(0, startLine - 5), startLine - 1).join("\n")
-            : "";
-          const fileReferences = [...introduction.matchAll(/`([\w./[\]-]+\.(?:tsx?|jsx?|json|css|ya?ml|md|local|env))`/g)];
-          const filename = fileReferences.at(-1)?.[1];
-          const codeEl = isValidElement<{ className?: string; children?: ReactNode }>(children)
-            ? children
-            : undefined;
-          return (
-            <CodeBlock
-              node={(node as Element | undefined)?.children?.[0]}
-              className={codeEl?.props?.className}
-              filename={filename}
-            >
-              {codeEl?.props?.children}
-            </CodeBlock>
-          );
+        pre: ({ node, children }) => node
+          ? <CodeBlock examples={[exampleFor(node)]} />
+          : <pre>{children}</pre>,
+        div: ({ node, children, ...props }) => {
+          if (node?.properties.dataCodeVariants === true) {
+            const examples = node.children
+              .filter((child): child is Element => child.type === "element" && child.tagName === "pre")
+              .map(exampleFor);
+            if (examples.length > 1) return <CodeBlock examples={examples} />;
+          }
+          return <div {...props}>{children}</div>;
         },
       }}
     >

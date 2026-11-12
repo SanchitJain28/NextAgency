@@ -22,104 +22,127 @@
 .content img { margin: 1.75rem 0; max-width: 100%; height: auto; border: 1px solid #e5e5e5; }
 .content hr { margin: 1.75rem 0; border-color: #e5e5e5; }
 .codeBlock {
-  margin: 1.5rem 0;
+  min-width: 0;
+  margin: 1rem 0;
   border: 1px solid #2e2e2e;
-  border-radius: 12px;
+  border-radius: 0;
   overflow: hidden;
   background: #0a0a0a;
+  color-scheme: dark;
   letter-spacing: 0;
 }
 .codeHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  min-height: 48px;
-  padding: .5rem 1rem;
+  gap: .5rem;
+  height: 40px;
+  padding-inline: 16px 5px;
   background: #000;
   border-bottom: 1px solid #2e2e2e;
   color: #a1a1a1;
   font-family: var(--font-sans);
-  font-size: .875rem;
-  line-height: 1.5;
+  font-size: 13px;
+  line-height: 20px;
 }
-.codeTitle { display: inline-flex; align-items: center; gap: .625rem; min-width: 0; }
-.codeTitle > span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.languageIcon {
+.codeTitle {
   display: inline-flex;
-  align-items: flex-end;
-  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.codeTitle > span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.languageIcon {
+  display: inline-grid;
+  place-items: center;
   flex-shrink: 0;
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
   border-radius: 2px;
   background: #a1a1a1;
   color: #000;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
-  line-height: 16px;
+  line-height: 1;
 }
-.copyButton {
+.codeActions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 12px;
+}
+.languageSwitcher {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 32px;
-  height: 32px;
+}
+.languageSwitcher select {
+  max-width: 9rem;
+  appearance: none;
   border: 0;
   border-radius: 6px;
-  color: #a1a1a1;
+  background: transparent;
+  padding: 4px 24px 4px 8px;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.languageSwitcher select option { background: #171717; }
+.languageSwitcher svg {
+  position: absolute;
+  right: 6px;
+  pointer-events: none;
+}
+.copyButton {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 6px;
+  color: inherit;
   background: transparent;
   cursor: pointer;
   transition: background 150ms, color 150ms;
 }
-.copyButton:hover { background: #1f1f1f; color: #ededed; }
-.copyButton:focus-visible, .codeBlock pre:focus-visible { outline: 2px solid #ededed; outline-offset: -3px; }
+.copyButton:hover, .languageSwitcher select:hover { background: #1f1f1f; color: #ededed; }
+.copyButton:focus-visible, .languageSwitcher select:focus-visible, .codeBlock pre:focus-visible {
+  outline: 2px solid #ededed;
+  outline-offset: -2px;
+}
 .codeBlock pre {
   margin: 0;
-  padding: 1.25rem;
+  padding: 16px 20px;
   overflow-x: auto;
   background: transparent;
   color: #ededed;
   font-family: var(--font-mono);
-  font-size: .8125rem;
-  line-height: 1.65;
+  font-size: 13px;
+  line-height: 20px;
   tab-size: 2;
   white-space: pre;
   overflow-wrap: normal;
+  font-variant-ligatures: none;
   scrollbar-width: thin;
   scrollbar-color: #424242 transparent;
 }
 .codeBlock pre code {
   display: block;
+  min-width: max-content;
   padding: 0;
   border: 0;
   background: transparent;
   color: inherit;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  overflow: visible;
+  font: inherit;
 }
-/* Vercel's dark syntax palette. Keep these scoped to article code blocks. */
-.codeBlock :global(.hljs-comment), .codeBlock :global(.hljs-quote) { color: #a1a1a1; }
-.codeBlock :global(.hljs-keyword), .codeBlock :global(.hljs-operator),
-.codeBlock :global(.hljs-selector-tag), .codeBlock :global(.hljs-meta) { color: #ff4d8d; }
-.codeBlock :global(.hljs-string), .codeBlock :global(.hljs-regexp),
-.codeBlock :global(.hljs-addition) { color: #00ca50; }
-.codeBlock :global(.hljs-title), .codeBlock :global(.hljs-built_in),
-.codeBlock :global(.hljs-type) { color: #c97aff; }
-.codeBlock :global(.hljs-variable), .codeBlock :global(.hljs-property),
-.codeBlock :global(.hljs-name), .codeBlock :global(.hljs-attr) { color: #47a8ff; }
-.codeBlock :global(.hljs-number), .codeBlock :global(.hljs-literal),
-.codeBlock :global(.hljs-symbol) { color: #f2a20d; }
-.codeBlock :global(.hljs-punctuation), .codeBlock :global(.hljs-params) { color: #ededed; }
 @media(min-width:640px) {
   .content { font-size: 1.25rem; }
   .content h2 { font-size: 1.625rem; }
   .content h3 { font-size: 1.3125rem; }
   .content h4 { font-size: 1.125rem; }
-  .codeHeader { padding-inline: 1.25rem; }
-  .codeBlock pre { padding: 1.25rem 1.5rem; font-size: .875rem; }
 }
