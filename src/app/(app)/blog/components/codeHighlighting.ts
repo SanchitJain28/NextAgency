@@ -41,11 +41,13 @@ export function getFence(node: Element | undefined, source: string) {
   return { code, language, meta };
 }
 
-function isSwitcher(meta: string) {
-  return /(?:^|\s)switcher(?:\s|$)/.test(meta);
+function codeGroup(meta: string) {
+  const fileGroup = meta.match(/(?:^|\s)group=([\w-]+)(?=\s|$)/)?.[1];
+  if (fileGroup) return { mode: "files", name: fileGroup };
+  if (/(?:^|\s)switcher(?:\s|$)/.test(meta)) return { mode: "languages", name: "" };
 }
 
-// Adjacent fences marked "switcher" form one snippet with language variants.
+// An explicit group shares a file viewer. Switchers still group language variants.
 export function rehypeCodeVariants(source: string) {
   return (tree: Root) => {
     function group(parent: Root | Element) {
@@ -53,7 +55,8 @@ export function rehypeCodeVariants(source: string) {
         const first = parent.children[index];
         if (first.type !== "element") continue;
         const fence = getFence(first, source);
-        if (!fence?.language || !isSwitcher(fence.meta)) {
+        const groupInfo = fence && codeGroup(fence.meta);
+        if (!fence?.language || !groupInfo) {
           group(first);
           continue;
         }
@@ -65,7 +68,9 @@ export function rehypeCodeVariants(source: string) {
           if (sibling.type === "text" && !sibling.value.trim()) continue;
           if (sibling.type !== "element") break;
           const variant = getFence(sibling, source);
-          if (!variant?.language || !isSwitcher(variant.meta) || languages.has(variant.language)) break;
+          const nextGroup = variant && codeGroup(variant.meta);
+          if (!variant?.language || nextGroup?.mode !== groupInfo.mode || nextGroup.name !== groupInfo.name) break;
+          if (groupInfo.mode === "languages" && languages.has(variant.language)) break;
           languages.add(variant.language);
           examples.push(sibling);
           end = next + 1;
@@ -74,7 +79,7 @@ export function rehypeCodeVariants(source: string) {
           parent.children.splice(index, end - index, {
             type: "element",
             tagName: "div",
-            properties: { dataCodeVariants: true },
+            properties: { dataCodeVariants: groupInfo.mode },
             children: examples,
           });
         }

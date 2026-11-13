@@ -19,7 +19,14 @@
 .content table { display: block; overflow-x: auto; border-collapse: collapse; margin: 1.5rem 0; font-size: .875rem; }
 .content :is(th,td) { border: 1px solid #e5e5e5; padding: .625rem .75rem; text-align: left; }
 .content th { background: #f5f5f5; color: #262626; font-weight: 700; }
-.content img { margin: 1.75rem 0; max-width: 100%; height: auto; border: 1px solid #e5e5e5; }
+.content img { margin: 1.75rem 0; max-width: 100%; height: auto; border: 1px solid var(--sf-primary); }
+@media (width < 40rem) {
+  .content img {
+    width: calc(100% + 2 * var(--blog-mobile-gutter, 0px));
+    max-width: none;
+    margin-inline: calc(-1 * var(--blog-mobile-gutter, 0px));
+  }
+}
 .content hr { margin: 1.75rem 0; border-color: #e5e5e5; }
 .codeBlock {
   min-width: 0;
@@ -97,6 +104,33 @@
   position: absolute;
   right: 6px;
   pointer-events: none;
+}
+.fileTabs {
+  display: flex;
+  overflow-x: auto;
+  background: #000;
+  border-bottom: 1px solid #2e2e2e;
+  scrollbar-width: thin;
+}
+.fileTabs button {
+  flex-shrink: 0;
+  padding: 8px 14px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: #a1a1a1;
+  font: 13px/20px var(--font-sans);
+  white-space: nowrap;
+  cursor: pointer;
+}
+.fileTabs button:hover { color: #ededed; }
+.fileTabs button[aria-selected="true"] {
+  border-bottom-color: #ededed;
+  color: #ededed;
+}
+.fileTabs button:focus-visible {
+  outline: 2px solid #ededed;
+  outline-offset: -2px;
 }
 .copyButton {
   display: inline-grid;

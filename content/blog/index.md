@@ -10,6 +10,7 @@
 8. Add image prompts in next-agency/content/blog/[blog-slug]/image-prompts-by-section for the cover image and the top 5 most important sections only.
    I will use these prompts in Google Flow, so specify the recommended dimensions for each image.
    Include descriptive labels and short explanations within the visuals. Avoid blanket instructions to minimize text; use meaningful text where it adds clarity.
+   Keep the prompt files focused on the image itself. Put dimensions and other technical settings in `image-config.json` in the same `image-prompts-by-section` directory. Use the shared [image configuration schema](image-config.schema.json) for every blog.
 9. For technical blogs , Add Code Snippets , Show the actual code implemenatation not any sample one , the code snippets must be detailed for technical blogs
 10. Each blog should have an FAQ Section with FAQPage JSON-LD Schema
 11. Give real life examples ,if the blog is about any particular service then give real life example , it can be tools with links or services the reader can use practically , also give recommendations on which one to use

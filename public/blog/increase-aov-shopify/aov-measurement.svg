@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 386" role="img" aria-labelledby="title description">
+  <title id="title">A higher AOV can bring in less revenue</title>
+  <desc id="description">In a hypothetical example with 1,000 visits in each version, AOV rises from 80 to 100 dollars, conversion falls from 3 to 2 percent, and product revenue falls from 2,400 to 2,000 dollars.</desc>
+  <rect width="800" height="386" fill="#fff"/>
+  <g font-family="system-ui, sans-serif" fill="#171717">
+    <text x="32" y="51" font-size="32" font-weight="700">A higher AOV can bring in less revenue</text>
+    <text x="32" y="87" fill="#525252" font-size="22">Hypothetical example · 1,000 visits in each version</text>
+    <rect x="32" y="114" width="736" height="230" fill="#faf9f6" stroke="#d4d4d4"/>
+    <path d="M32 167H768 M32 225H768 M32 283H768" stroke="#d4d4d4"/>
+    <g font-size="22" font-weight="700">
+      <text x="436" y="149" text-anchor="middle">Before the upsell</text>
+      <text x="646" y="149" text-anchor="middle">After the upsell</text>
+    </g>
+    <g font-size="26">
+      <text x="54" y="205">Average order value</text>
+      <text x="54" y="263">Conversion rate</text>
+      <text x="54" y="321" font-weight="700">Product revenue</text>
+      <g text-anchor="middle">
+        <text x="436" y="205">$80</text>
+        <text x="646" y="205" fill="#a53012" font-weight="700">$100</text>
+        <text x="436" y="263">3%</text>
+        <text x="646" y="263">2%</text>
+        <text x="436" y="321">$2,400</text>
+        <text x="646" y="321" fill="#a53012" font-weight="700">$2,000</text>
+      </g>
+    </g>
+  </g>
+</svg>

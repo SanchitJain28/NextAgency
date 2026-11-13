@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Blog image configuration",
+  "description": "Google Flow image settings and publication metadata for a cover and five section images.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "googleFlow",
+    "cover",
+    "sections"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "googleFlow": {
+      "type": "object",
+      "description": "Image generation settings to select in Google Flow.",
+      "additionalProperties": false,
+      "required": [
+        "agentInstructionsFile",
+        "confirmBeforeGenerating",
+        "model",
+        "aspectRatio",
+        "variations"
+      ],
+      "properties": {
+        "agentInstructionsFile": {
+          "$ref": "#/definitions/markdownFilename"
+        },
+        "confirmBeforeGenerating": {
+          "enum": [
+            "always",
+            "never"
+          ]
+        },
+        "model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "aspectRatio": {
+          "enum": [
+            "16:9",
+            "4:3",
+            "1:1",
+            "3:4",
+            "9:16"
+          ]
+        },
+        "variations": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        }
+      }
+    },
+    "cover": {
+      "$ref": "#/definitions/image"
+    },
+    "sections": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/definitions/image"
+      }
+    }
+  },
+  "definitions": {
+    "markdownFilename": {
+      "type": "string",
+      "description": "A Markdown filename in the same directory as the image config.",
+      "pattern": "^[a-z0-9][a-z0-9-]*\\.md$"
+    },
+    "image": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "promptFile",
+        "dimensions",
+        "placement",
+        "altText"
+      ],
+      "properties": {
+        "promptFile": {
+          "$ref": "#/definitions/markdownFilename"
+        },
+        "dimensions": {
+          "type": "object",
+          "description": "Recommended publication dimensions in pixels.",
+          "additionalProperties": false,
+          "required": [
+            "width",
+            "height"
+          ],
+          "properties": {
+            "width": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "height": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "placement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "altText": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

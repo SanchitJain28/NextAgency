@@ -20,6 +20,7 @@ interface BlogPostPageProps {
 }
 
 const headerImageAltBySlug: Partial<Record<string, string>> = {
+  "increase-aov-shopify": "A shopping basket connects three ways to increase average order value: bundles, complementary products, and a free shipping threshold",
   "how-to-convert-figma-designs-to-shopify": "A Figma design becomes a Shopify Liquid theme with store data and merchant-editable sections",
   "shopify-custom-product-configurator": "Three Shopify product configurator examples: an engraving field, a gift hamper builder, and a furniture preview",
   "custom-shopify-app-vs-existing-app": "Comparison of built-in Shopify features, an existing App Store app, and a custom Shopify app",
@@ -262,7 +263,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
         {/* ── ARTICLE CONTENT & SIDEBAR (FULL RESPONSIVE GRID) ── */}
         <div className="py-12 sm:py-16">
-          <div className="w-full px-4 sm:px-6 lg:px-8">
+          <div className="w-full [--blog-mobile-gutter:1rem] px-[var(--blog-mobile-gutter)] sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row gap-12 items-start">
               {/* Main Content Column */}
               <div className="flex-1 min-w-0 w-full">

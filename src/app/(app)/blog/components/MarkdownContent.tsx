@@ -100,11 +100,12 @@ export async function MarkdownContent({ content }: { content: string }) {
           ? <CodeBlock examples={[exampleFor(node)]} />
           : <pre>{children}</pre>,
         div: ({ node, children, ...props }) => {
-          if (node?.properties.dataCodeVariants === true) {
+          const mode = node?.properties.dataCodeVariants;
+          if (node && (mode === "files" || mode === "languages")) {
             const examples = node.children
               .filter((child): child is Element => child.type === "element" && child.tagName === "pre")
               .map(exampleFor);
-            if (examples.length > 1) return <CodeBlock examples={examples} />;
+            if (examples.length > 1) return <CodeBlock examples={examples} fileTabs={mode === "files"} />;
           }
           return <div {...props}>{children}</div>;
         },

@@ -1,0 +1,66 @@
+{
+  "$schema": "../../image-config.schema.json",
+  "googleFlow": {
+    "agentInstructionsFile": "agent-instruction.md",
+    "confirmBeforeGenerating": "always",
+    "model": "Nano Banana 2.1",
+    "aspectRatio": "16:9",
+    "variations": 2
+  },
+  "cover": {
+    "promptFile": "00-cover.md",
+    "dimensions": {
+      "width": 1600,
+      "height": 900
+    },
+    "placement": "Article header and blog card.",
+    "altText": "A Shopify basket grows through a bundle, a compatible add-on, or a shipping offer."
+  },
+  "sections": [
+    {
+      "promptFile": "01-product-bundles.md",
+      "dimensions": {
+        "width": 1600,
+        "height": 1000
+      },
+      "placement": "After the bundle types in “1. Create Product Bundles”.",
+      "altText": "Fixed bundles, multipacks, and mix-and-match bundles differ in who chooses the items and how they are grouped."
+    },
+    {
+      "promptFile": "02-complementary-products.md",
+      "dimensions": {
+        "width": 1600,
+        "height": 1000
+      },
+      "placement": "After the Search & Discovery setup in “2. Add Complementary Product Recommendations”.",
+      "altText": "Search & Discovery connects a product to manually chosen accessories that appear on its product page."
+    },
+    {
+      "promptFile": "03-cart-drawer-upsells.md",
+      "dimensions": {
+        "width": 1600,
+        "height": 1000
+      },
+      "placement": "After the cart drawer example in “3. Add Upsells to Product Pages and Cart Drawers”.",
+      "altText": "A cart drawer shows one useful add-on and keeps checkout easy to find."
+    },
+    {
+      "promptFile": "04-free-shipping-thresholds.md",
+      "dimensions": {
+        "width": 1600,
+        "height": 1000
+      },
+      "placement": "After the progress bar example in “4. Use Free Shipping Thresholds”.",
+      "altText": "A sample order at $65 is $10 away from a $75 free shipping threshold, subject to actual shipping eligibility."
+    },
+    {
+      "promptFile": "05-measure-aov-and-conversion.md",
+      "dimensions": {
+        "width": 1600,
+        "height": 1000
+      },
+      "placement": "After the before-and-after calculation in “An Example of Why AOV Alone Can Be Misleading”.",
+      "altText": "A hypothetical offer increases AOV from $80 to $100 but reduces conversion and total product revenue."
+    }
+  ]
+}
